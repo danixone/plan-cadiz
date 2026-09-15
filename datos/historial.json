@@ -211,6 +211,38 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-09-15",
+      "sesion": "Arsenal · fuerza (A, B, D, H)",
+      "series": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "lastreKg": 10,
+      "lastradas": 15,
+      "total": 15,
+      "descanso": "3 min",
+      "contexto": "Sesión de fuerza del Arsenal, 20:43 a 21:35 hora local. Poco tiempo: empezó tarde y el gimnasio cierra a las 22:00. Ejecutó la versión reducida que marca el plan.",
+      "otrosEjercicios": {
+        "calentamientoHombro": "1 suspensión de 20 s y 2 × 8 retracciones escapulares registradas en el reloj",
+        "jalonPecho": "4 × 6 con 40 kg",
+        "sentadilla": "4 × 6 con barra de 20 kg",
+        "core": "Elevación de piernas colgado + plancha (H): hecho, pero no registrado porque aún no está en el reloj"
+      },
+      "noHechos": [
+        "C remo con barra",
+        "E peso muerto rumano",
+        "F fondos",
+        "G pájaros o face pull"
+      ],
+      "fcMedia": 100,
+      "fcMax": 122,
+      "resultado": "5 × 3 con 10 kg completadas, subidas y bajadas muy lentas y controladas. En la última repetición de la última serie quedaba 1 en reserva. Jalón y sentadilla bien de cantidad y peso.",
+      "valoracion": "Válida como sesión de fuerza; no mide nada. La lastrada salió, pero con 1 repetición en reserva y no las 2 que pide la regla para subir peso: el 22 se repite con 10 kg, como ya estaba en el plan. Las repeticiones muy lentas hacen la serie más dura de lo que dice el número, así que el dato no preocupa. Primera sesión de sentadilla: mañana, atención a si hay agujetas que se noten al correr."
+    },
+    {
       "fecha": "2026-09-14",
       "series": [
         5,
@@ -292,6 +324,22 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-09-15",
+      "duracion": "7h26",
+      "puntuacion": 83,
+      "calidad": "Bueno",
+      "fcReposo": 49,
+      "vfc": 55,
+      "profundo": "1h12",
+      "rem": "1h06",
+      "despierto": "5m",
+      "bodyBattery": "+66",
+      "estresMedio": 16,
+      "spo2Media": "98%",
+      "spo2Minimo": "82% (lectura puntual)",
+      "vfc7dias": "Equilibrado"
+    },
     {
       "fecha": "2026-09-14",
       "duracion": "6h41",
@@ -398,6 +446,22 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-15",
+      "ventanaFocoCarga": "18 ago – 15 sep",
+      "anaerobica": 127,
+      "aerobicaAlta": 759,
+      "aerobicaBaja": 157,
+      "mensaje": "Parece que tu Carga de entreno se centra demasiado en las actividades de alta intensidad. Considera incluir más actividades aeróbicas de intensidad baja.",
+      "vfcEstado": "Equilibrado",
+      "estado": "No productivo",
+      "vfc": 60,
+      "cargaAguda": 190,
+      "cargaAgudaEstado": "Baja",
+      "ratioCargaAguda": 0.7,
+      "vo2max": 54,
+      "valoracion": "Carga aguda por debajo del intervalo óptimo por primera vez (190, ratio 0,7): es la descarga de la semana de control, deliberada. El foco de carga no se mueve con la fuerza; solo con rodajes suaves."
+    },
     {
       "fecha": "2026-09-14",
       "estado": "No productivo",

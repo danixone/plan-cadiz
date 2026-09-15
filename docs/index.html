@@ -927,6 +927,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <tr><td>3 sep</td><td class="n">4 × 5<br>desc. 1 min</td><td>Última al borde del fallo, explicado por el descanso de un minuto, no por pérdida de fuerza</td></tr>
       <tr><td>9 sep</td><td class="n">4 × 5<br>desc. 3 min</td><td>Pulso tranquilo, 105–127: esta vez sí se respetaron los descansos</td></tr>
       <tr><td>14 sep</td><td class="n">3 × 5<br>antes de correr</td><td>Habituación hecha como estaba pautada. FC media 127, pico 169</td></tr>
+      <tr><td>15 sep</td><td class="n">5 × 3 con 10 kg<br>desc. 3 min</td><td>Primera sesión de fuerza del Arsenal, versión corta por tiempo (A, B, D, H). Lastradas muy lentas y controladas, <strong>1 repetición en reserva</strong> al acabar: el 22 se repite con 10 kg. Jalón 4 × 6 a 40 kg, sentadilla 4 × 6 con barra vacía</td></tr>
       <tr class="r-ok"><td>10 sep</td><td class="n">29 totales<br>14 con 10 kg</td><td><strong>El mejor dato hasta ahora.</strong> 14 repeticiones con 10 kg pesando 67,4 apuntan a un máximo en fresco con lastre de unas 6, que suele corresponder a <strong>13–15 a peso corporal</strong></td></tr>
       <tr class="r-ok"><td>10 sep</td><td class="n">Circuito<br><strong>9,9 s</strong></td><td><strong>Cambió la estrategia entera.</strong> Al 60 %, contando pasos entre conos y sin saber que le cronometraban. A tope debería andar por 9,0–9,4</td></tr>
     </table>
@@ -1131,7 +1132,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     {d:'9 sep',  h:7.93, s:91, q:'Excelente', fc:46},
     {d:'11 sep', h:7.68, s:88, q:'Bueno', fc:47},
     {d:'12 sep', h:7.38, s:95, q:'Excelente', fc:45},
-    {d:'14 sep', h:6.68, s:77, q:'Aceptable', fc:48}
+    {d:'14 sep', h:6.68, s:77, q:'Aceptable', fc:48},
+    {d:'15 sep', h:7.43, s:83, q:'Bueno', fc:49}
   ];
   function drawSueno() {
     var host = document.getElementById('ch-sueno'); if (!host) return;
@@ -1170,9 +1172,10 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '6 sept':  { anaerobica:111, alta:648, baja:75, estado:'No productivo', vfc:'56 ms equilibrada', aguda:384 },
     '9 sept':  { anaerobica:111, alta:759, baja:90, estado:'Sobrecarga',    vfc:'54 ms desequilibrada', aguda:381 },
     '12 sept': { anaerobica:111, alta:759, baja:129, estado:'No productivo', vfc:'58 ms equilibrado', aguda:252 },
-    '14 sept': { anaerobica:127, alta:759, baja:162, estado:'No productivo', vfc:'57 ms equilibrado', aguda:227 }
+    '14 sept': { anaerobica:127, alta:759, baja:162, estado:'No productivo', vfc:'57 ms equilibrado', aguda:227 },
+    '15 sept': { anaerobica:127, alta:759, baja:157, estado:'No productivo', vfc:'60 ms equilibrado', aguda:'190 (baja, ratio 0,7)' }
   };
-  var cargaSel = '14 sept';
+  var cargaSel = '15 sept';
   function drawCarga() {
     var host = document.getElementById('ch-carga'); if (!host) return;
     host.innerHTML = ''; var tip = attachTip(host);
@@ -1299,7 +1302,9 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     { d:'3 sep',  total:20, mejor:5,  n:'4 × 5 con solo 1 min de descanso, con resfriado' },
     { d:'6 sep',  total:10, mejor:5,  n:'2 × 5 opcionales después del rodaje' },
     { d:'9 sep',  total:20, mejor:5,  n:'4 × 5 con 3 min. Pulso tranquilo, 105–127' },
-    { d:'10 sep', total:29, mejor:14, n:'Escalera con 10 kg (14 lastradas) + escalera sin lastre' }
+    { d:'10 sep', total:29, mejor:14, n:'Escalera con 10 kg (14 lastradas) + escalera sin lastre' },
+    { d:'14 sep', total:15, mejor:5,  n:'3 × 5 de habituación antes del rodaje, con 3 min' },
+    { d:'15 sep', total:15, mejor:3,  n:'5 × 3 con 10 kg, muy lentas y controladas. 1 en reserva al final' }
   ];
   var domShow = { total:true, mejor:true };
   function drawDom() {
@@ -1380,7 +1385,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     { key:'6 sept', label:'6 sept', color:C.muted },
     { key:'9 sept', label:'9 sept', color:C.alert },
     { key:'12 sept', label:'12 sept', color:C.blue },
-    { key:'14 sept', label:'14 sept', color:C.ok }
+    { key:'14 sept', label:'14 sept', color:C.ok },
+    { key:'15 sept', label:'15 sept', color:C.warn }
   ], function(k){ cargaSel = k; drawCarga();
     document.querySelectorAll('#lg-carga button').forEach(function(b){
       b.setAttribute('aria-pressed', b.textContent.trim()===k ? 'true':'false');
@@ -2766,7 +2772,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '2026-09-12': DET.rodaje(35) ,
     '2026-09-13': DET.descanso('Descanso. Solo el mantenimiento de hombro.') + DET.hombro(),
     '2026-09-14': DET.rodaje(40) + DOMI,
-    '2026-09-15': DET.fuerza('10 kg'),
+    '2026-09-15': DET.fuerza('10 kg') + '<div class="bq"><b>Hecho (15 sep):</b> A, B, D y H, la versión corta, porque empezaste a las 20:43 y el Arsenal cierra a las 22:00. Lastradas 5 × 3 con 10 kg, muy lentas, con <b>1 repetición en reserva</b> al final: el 22 se repite peso. Jalón 4 × 6 a 40 kg y sentadilla 4 × 6 con barra de 20 kg, bien de cantidad y peso.</div>',
     '2026-09-16': DET.rodaje(45) + '<div class="bq">Añade <b>6 progresivos de 80 m</b> al terminar.</div>' + DOMI,
     '2026-09-17': DET.circuito(),
     '2026-09-18': DET.descanso(),
