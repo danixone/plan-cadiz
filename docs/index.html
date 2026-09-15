@@ -282,6 +282,30 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .ddet .figc{background:var(--band);border-color:var(--rule2)}
 .vlink{display:inline-block;font-size:.84rem;font-weight:600;color:var(--blue);text-decoration:none;padding:8px 14px;border:1px solid var(--rule2);border-radius:8px;margin:2px 0 10px}
 .vlink:hover{border-color:var(--blue);background:var(--band)}
+.fotos{display:grid;gap:14px;margin:6px 0 14px}
+.fo{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:9px;overflow:hidden}
+.anim{position:relative;background:#fff;aspect-ratio:4/3}
+.anim img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.anim .im0{animation:cf 2.6s ease-in-out infinite}
+.anim .im1{animation:cf 2.6s ease-in-out infinite reverse}
+@keyframes cf{0%,38%{opacity:1}50%,88%{opacity:0}100%{opacity:1}}
+.anim .et{position:absolute;left:8px;top:8px;font-size:.68rem;font-weight:600;background:rgba(22,32,43,.85);color:#fff;padding:2px 9px;border-radius:20px;z-index:3}
+.anim .et:after{content:'Inicio → Final';animation:etf 2.6s step-end infinite}
+@keyframes etf{0%{content:'Inicio'}50%{content:'Final'}}
+.anim .tg{position:absolute;right:8px;top:8px;z-index:3;width:28px;height:28px;border-radius:50%;border:none;background:rgba(22,32,43,.8);color:#fff;font-size:.9rem;cursor:pointer;line-height:1}
+.anim .tg:hover{background:var(--ink)}
+.anim.lado{aspect-ratio:8/3}
+.anim.lado img{animation:none;opacity:1;width:50%}
+.anim.lado .im0{left:0;right:auto}
+.anim.lado .im1{left:50%;right:auto;border-left:1px solid var(--rule)}
+.anim.lado .et:after{content:'Inicio  ·  Final';animation:none}
+@media(prefers-reduced-motion:reduce){.anim img{animation:none}.anim .im1{opacity:0}.anim .et:after{animation:none;content:'Inicio'}}
+.fo figcaption{padding:10px 12px}
+.fo figcaption b{display:block;font-size:.88rem;margin-bottom:3px}
+.fo figcaption em{display:block;font-style:normal;font-size:.76rem;color:var(--muted);line-height:1.4}
+.fo figcaption em+em{margin-top:2px}
+.fo figcaption em:before{content:'· '}
+@media(min-width:760px){.fotos{grid-template-columns:1fr 1fr}}
 footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-bottom) + 34px);color:var(--faint);font-size:.82rem}
 
 @media(max-width:700px){
@@ -765,6 +789,13 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <p><strong>Regla de las dos repeticiones.</strong> Si fallas el objetivo por más de 3 s en dos repeticiones seguidas, la sesión se acabó. Si pasa dos semanas seguidas, el problema son los ritmos y hay que bajarlos.</p>
     </div></details>
   </section>
+
+  <div class="box">
+    <p class="hd">Sobre las ilustraciones</p>
+    <p>Las <strong>fotos de posición</strong> vienen de Free Exercise DB, una base de datos de dominio público. Cada ejercicio trae la posición de inicio y la de final, y <strong>la página las alterna sola</strong>: eso es exactamente lo que hace un gif de ejercicio, y así ves el recorrido completo. Con el botón <strong>⇄</strong> las pones una al lado de la otra si prefieres compararlas.</p>
+    <p>Los <strong>monigotes animados</strong> son dibujo propio y sirven para otra cosa: ver el gesto en movimiento, sobre todo en los ejercicios de carrera, que en foto no se entienden.</p>
+    <p>Y el <strong>botón de vídeo</strong> abre una búsqueda de YouTube ya afinada. No enlazo vídeos concretos porque no puedo comprobar que la técnica que enseñan sea correcta ni que sigan existiendo dentro de un mes.</p>
+  </div>
 
   <section class="blk">
     <h3>Meter las sesiones en el Forerunner 265</h3>
@@ -2763,6 +2794,46 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
   });
 
 
+
+  // ---------- fotos de posición · free-exercise-db, dominio público ----------
+  var FOTO_BASE = 'https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/';
+  var FOTOS = {
+    'Dominadas lastradas':      [['Pullups','Dominada','Extensión completa abajo','Barbilla por encima de la barra']],
+    'Jalón al pecho':           [['Wide-Grip_Lat_Pulldown','Jalón al pecho','Brazos extendidos, pecho alto','Barra al pecho, codos atrás y abajo']],
+    'Remo con barra':           [['Bent_Over_Barbell_Row','Remo con barra','Bisagra de cadera, espalda neutra','Barra al ombligo, omóplatos apretados']],
+    'Sentadilla y peso muerto rumano': [
+      ['Barbell_Full_Squat','Sentadilla','Barra en el trapecio, pies a la anchura de los hombros','Muslo paralelo, talón pegado al suelo'],
+      ['Romanian_Deadlift','Peso muerto rumano','De pie, rodilla ligeramente flexionada','Cadera atrás, barra pegada a los muslos']],
+    'Glúteo medio, fondos, pájaros y core': [
+      ['Dips_-_Triceps_Version','Fondos en paralelas','Brazos extendidos, hombros abajo','Hombro a la altura del codo. No bajes más'],
+      ['Reverse_Flyes','Pájaros','Tronco inclinado, codos fijos','Brazos a la línea de los hombros'],
+      ['Plank','Plancha','Codos bajo los hombros','Glúteo apretado, cadera ni cae ni sube'],
+      ['Hanging_Leg_Raise','Elevación de piernas colgado','Colgado, hombro activo','Pelvis hacia arriba, no solo cadera']],
+    'Elevación de talón y saltos': [
+      ['Standing_Calf_Raises','Elevación de talón','Talón por debajo del escalón, pausa de 1 s','Arriba del todo, otro segundo de pausa'],
+      ['Box_Jump_Multiple_Response','Salto','Semisentadilla, brazos atrás','Aterrizaje suave, rodilla flexionada']]
+  };
+  function fotos(ls) {
+    var h = '<div class="fotos">';
+    ls.forEach(function (e) {
+      h += '<figure class="fo"><div class="anim" data-ex="' + e[0] + '">' +
+           '<img loading="lazy" class="im0" src="' + FOTO_BASE + e[0] + '/0.jpg" alt="' + e[1] + ', posición inicial">' +
+           '<img loading="lazy" class="im1" src="' + FOTO_BASE + e[0] + '/1.jpg" alt="' + e[1] + ', posición final">' +
+           '<span class="et"></span><button type="button" class="tg" title="Ver las dos a la vez">⇄</button>' +
+           '</div><figcaption><b>' + e[1] + '</b><em>' + e[2] + '</em><em>' + e[3] + '</em></figcaption></figure>';
+    });
+    return h + '</div>';
+  }
+  function bindFotos(root) {
+    root.querySelectorAll('.anim').forEach(function (a) {
+      if (a.__b) return; a.__b = 1;
+      a.querySelector('.tg').addEventListener('click', function (e) {
+        e.stopPropagation();
+        a.classList.toggle('lado');
+      });
+    });
+  }
+
   // ---------- figuras y vídeo en las fichas de técnica ----------
   var FICHAS = {
     'Dominadas lastradas':      {f:[['dominada','Dominada','Barbilla por encima, sin balanceo']], v:'dominadas tecnica correcta agarre pronado'},
@@ -2782,10 +2853,13 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       t = t.replace(/[+–]$/, '').trim();
       var fc = FICHAS[t]; if (!fc) return;
       var box = d.querySelector('.in'); if (!box) return;
-      var h = figs(fc.f);
+      var h = '';
+      if (FOTOS[t]) h += fotos(FOTOS[t]);
+      h += figs(fc.f);
       h += '<a class="vlink" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=' +
            encodeURIComponent(fc.v) + '">Ver en vídeo cómo se ejecuta →</a>';
       box.insertAdjacentHTML('beforeend', h);
+      bindFotos(box);
     });
   })();
 
