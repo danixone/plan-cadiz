@@ -52,6 +52,8 @@ Dilo claramente y **no la uses para reestimar nada**. Ya ha pasado cuatro veces 
 
 **`datos/plan.json`** — solo si cambia algo real: una marca, una estimación, un objetivo, una medida corporal, una circunstancia suya.
 
+El historial vive **solo** en `historial.json`. No copies sesiones, sueño, lecturas del Garmin ni la evolución de la estimación dentro de `plan.json`: una copia deja de estar al día y acaba contradiciendo al original.
+
 ## Paso 4 · Valorar si cambia el entrenamiento
 
 **No cambies el plan por una sesión suelta.** Cambia cuando:
