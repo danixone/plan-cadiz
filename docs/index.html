@@ -241,6 +241,22 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 @keyframes ar{0%,12%{transform:scaleY(1)}45%,62%{transform:scaleY(.2)}95%,100%{transform:scaleY(1)}}
 .fg .rise{animation:ri 2.2s ease-in-out infinite}
 @keyframes ri{0%,10%{transform:translateY(6px)}45%,60%{transform:translateY(-8px)}92%,100%{transform:translateY(6px)}}
+.fg .sq{animation:sq 2.2s ease-in-out infinite}
+@keyframes sq{0%,12%{transform:translateY(0)}45%,60%{transform:translateY(16px)}92%,100%{transform:translateY(0)}}
+.fg .hinge{animation:hi 2.4s ease-in-out infinite}
+@keyframes hi{0%,12%{transform:rotate(0deg)}48%,62%{transform:rotate(-38deg)}92%,100%{transform:rotate(0deg)}}
+.fg .dip{animation:dp 2.2s ease-in-out infinite}
+@keyframes dp{0%,12%{transform:translateY(0)}45%,60%{transform:translateY(14px)}92%,100%{transform:translateY(0)}}
+.fg .arml path,.fg .armr path{animation:dparm 2.2s ease-in-out infinite}
+@keyframes dparm{0%,12%{transform:scaleY(1)}45%,60%{transform:scaleY(1.6)}92%,100%{transform:scaleY(1)}}
+.fg .pullh{animation:ph 1.8s ease-in-out infinite}
+@keyframes ph{0%,15%{transform:translateY(14px)}50%,65%{transform:translateY(0)}92%,100%{transform:translateY(14px)}}
+.fg .pulld{animation:pd 2s ease-in-out infinite}
+@keyframes pd{0%,15%{transform:scaleY(1)}50%,65%{transform:scaleY(1.45)}92%,100%{transform:scaleY(1)}}
+.fg .abd{animation:ab 1.8s ease-in-out infinite;transform-box:view-box}
+@keyframes ab{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-30deg)}}
+.fg .jump{animation:ju 1.8s ease-in-out infinite}
+@keyframes ju{0%,20%{transform:translateY(10px)}45%,55%{transform:translateY(-14px)}85%,100%{transform:translateY(10px)}}
 @media(prefers-reduced-motion:reduce){.fg *{animation:none!important}}
 .figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:12px;margin:10px 0 14px}
 .figc{text-align:center;background:var(--panel);border:1px solid var(--rule);border-radius:9px;padding:10px 6px}
@@ -264,6 +280,8 @@ svg{display:block;width:100%;height:auto;overflow:visible}
 .ddet .bq p{margin:0 0 6px}.ddet .bq p:last-child{margin:0}
 .ddet table{margin-bottom:10px}
 .ddet .figc{background:var(--band);border-color:var(--rule2)}
+.vlink{display:inline-block;font-size:.84rem;font-weight:600;color:var(--blue);text-decoration:none;padding:8px 14px;border:1px solid var(--rule2);border-radius:8px;margin:2px 0 10px}
+.vlink:hover{border-color:var(--blue);background:var(--band)}
 footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-bottom) + 34px);color:var(--faint);font-size:.82rem}
 
 @media(max-width:700px){
@@ -745,6 +763,52 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <p><strong>Umbral.</strong> Continuo a 166–172 ppm, cómodamente incómodo. Prueba del habla: frases de cinco o seis palabras, no una conversación. Los dos primeros minutos la FC va por detrás: ajusta a partir del minuto 3.</p>
       <p><strong>Kilómetro partido.</strong> 600 m + 45 s de pausa + 400 m a ritmo objetivo, 6 min entre series. <strong>Es la sesión más importante del plan:</strong> ataca directamente tu punto débil, el tramo del 600 al 1.000.</p>
       <p><strong>Regla de las dos repeticiones.</strong> Si fallas el objetivo por más de 3 s en dos repeticiones seguidas, la sesión se acabó. Si pasa dos semanas seguidas, el problema son los ritmos y hay que bajarlos.</p>
+    </div></details>
+  </section>
+
+  <section class="blk">
+    <h3>Meter las sesiones en el Forerunner 265</h3>
+    <p>Si el reloj te lleva la sesión, dejas de contar repeticiones y de mirar la pantalla. Te avisa por vibración en cada cambio.</p>
+
+    <h4>Lo más cómodo: crearlas en el móvil</h4>
+    <p>En la app Garmin Connect: <strong>Más</strong> (los tres puntos abajo a la derecha) → <strong>Entreno y planificación</strong> → <strong>Sesiones de entrenamiento</strong> → <strong>Crear una sesión de entrenamiento</strong> → <strong>Carrera</strong>.</p>
+    <p>Ahí montas los pasos —calentamiento, intervalo, recuperación, repetición, enfriamiento— y a cada uno le pones <strong>duración</strong> (tiempo o distancia) y <strong>objetivo</strong> (ritmo o zona de frecuencia cardíaca). Al guardar, pulsa <strong>Enviar al dispositivo</strong>. Aparecerá en el reloj tras la siguiente sincronización.</p>
+    <p>En el reloj, para usarla: <strong>START → Carrera → UP → Entreno → Mis sesiones de entrenamiento</strong>, la eliges y START.</p>
+
+    <h4>Tus cuatro sesiones</h4>
+    <table>
+      <tr><th>Sesión</th><th>Pasos</th><th class="n">Objetivo de cada paso</th></tr>
+      <tr><td><strong>Rodaje suave</strong></td><td>Un único paso: tiempo, 40 min</td><td class="n">FC personalizada, máx. 145</td></tr>
+      <tr class="r-gl"><td><strong>Umbral</strong></td><td>Calentamiento 10 min → repetir ×4: intervalo 8 min + recuperación 2 min → enfriamiento 10 min</td><td class="n">intervalo: FC 166–172<br>recuperación: sin objetivo</td></tr>
+      <tr><td><strong>Series cortas</strong></td><td>Calentamiento abierto → repetir ×10: intervalo 200 m + recuperación 90 s → enfriamiento 10 min</td><td class="n">intervalo: ritmo 4:25–4:35 /km<br>recuperación: sin objetivo</td></tr>
+      <tr><td><strong>Series largas</strong></td><td>Calentamiento abierto → repetir ×5: intervalo 400 m + recuperación 90 s → enfriamiento 10 min</td><td class="n">intervalo: ritmo 3:35–3:45 /km</td></tr>
+    </table>
+
+    <div class="box al">
+      <p class="hd">Dos cosas que importan al configurarlas</p>
+      <p><strong>Los intervalos, por distancia, no por tiempo.</strong> Es lo único que garantiza que tus 200 sean 200. Los «41 segundos» del 24 de agosto eran 175 metros.</p>
+      <p><strong>En el rodaje y en el umbral, el objetivo va por pulsaciones; en las series, por ritmo.</strong> En repeticiones cortas la frecuencia cardíaca llega tarde y no sirve para regular.</p>
+    </div>
+
+    <details class="acc"><summary>Alternativa rápida: intervalos desde el propio reloj</summary><div class="in">
+      <p>Para un día suelto, sin pasar por el móvil: <strong>START → Carrera → UP → Entreno → Intervalos → Repeticiones estructuradas → START → Editar</strong>.</p>
+      <ul>
+        <li><strong>Intervalo:</strong> tipo distancia o tiempo, y su duración.</li>
+        <li><strong>Descanso:</strong> igual.</li>
+        <li><strong>Repetir:</strong> el número de veces.</li>
+        <li><strong>Calentamiento</strong> y <strong>Enfriamiento:</strong> actívalos y quedan abiertos, los cierras tú con el botón.</li>
+      </ul>
+      <p>El reloj guarda solo una sesión de este tipo: al crear otra, se sobrescribe. Para tener varias guardadas, hay que hacerlas en Connect.</p>
+    </div></details>
+
+    <details class="acc"><summary>Las alertas, para cuando no uses sesión estructurada</summary><div class="in">
+      <p>Desde la pantalla de la actividad y sin arrancar: <strong>UP → Ajustes de la actividad → Alertas</strong>.</p>
+      <ul>
+        <li><strong>Rodajes:</strong> alerta de frecuencia cardíaca con <strong>máximo 145</strong> y sin mínimo. Te avisa solo cuando te pasas, que es lo único que importa esos días.</li>
+        <li><strong>Umbral:</strong> alerta de frecuencia cardíaca con <strong>mínimo 166 y máximo 172</strong>.</li>
+      </ul>
+      <p>No pongas alerta de ritmo en los rodajes: manda el pulso, y una alerta de ritmo te empuja justo a lo contrario.</p>
+      <p>Si la alerta no vibra: comprueba que el reloj no esté en No molestar, y mira <strong>UP → Sistema → Sonido y vibración</strong>, que el tono y la vibración son dos ajustes separados.</p>
     </div></details>
   </section>
 
@@ -2524,6 +2588,13 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     skipping:'<svg viewBox="0 0 80 100" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M14 92h52" stroke-width="2" opacity=".3"/><circle cx="40" cy="14" r="8" fill="currentColor" stroke="none"/><path d="M40 22v30"/><g class="sw-a" style="transform-origin:40px 30px"><path d="M40 30l-14 10"/></g><g class="sw-b" style="transform-origin:40px 30px"><path d="M40 30l14 10"/></g><g class="sw-a" style="transform-origin:40px 52px"><path d="M40 52l-9 17M31 69l-3 15"/></g><g class="sw-b" style="transform-origin:40px 52px"><path d="M40 52l9 17M49 69l3 15"/></g></g></svg>',
     talones:'<svg viewBox="0 0 80 100" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M14 92h52" stroke-width="2" opacity=".3"/><circle cx="38" cy="14" r="8" fill="currentColor" stroke="none"/><path d="M38 22v30"/><path d="M38 30l-13 9M38 30l13 5"/><path d="M38 52l-2 18"/><g class="kick-a" style="transform-origin:36px 70px"><path d="M36 70l-2 16"/></g><path d="M38 52l4 18"/><g class="kick-b" style="transform-origin:42px 70px"><path d="M42 70l2 16"/></g></g></svg>',
     zancada:'<svg viewBox="0 0 90 100" class="fg"><g class="bounce"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><circle cx="44" cy="16" r="8" fill="currentColor" stroke="none"/><path d="M44 24v26"/><g class="sw-a" style="transform-origin:44px 30px"><path d="M44 30l-16 6"/></g><g class="sw-b" style="transform-origin:44px 30px"><path d="M44 30l16-6"/></g><g class="sw-a" style="transform-origin:44px 50px"><path d="M44 50l-15 14M29 64l-8 14"/></g><g class="sw-b" style="transform-origin:44px 50px"><path d="M44 50l15 9M59 59l6 19"/></g></g></g><path d="M10 92h70" stroke="currentColor" stroke-width="2" opacity=".3" fill="none"/></svg>',
+    sentadilla:'<svg viewBox="0 0 90 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M8 100h74" stroke-width="2" opacity=".3"/><g class="sq"><circle cx="40" cy="16" r="8" fill="currentColor" stroke="none"/><path d="M40 24v26"/><path d="M18 26h44" stroke-width="4"/><path d="M40 50l-10 22M30 72l-2 24"/><path d="M40 50l12 20M52 70l2 26"/></g></g></svg>',
+    pesomuerto:'<svg viewBox="0 0 100 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M10 100h80" stroke-width="2" opacity=".3"/><g class="hinge" style="transform-origin:46px 52px"><circle cx="24" cy="30" r="8" fill="currentColor" stroke="none"/><path d="M31 34l15 18"/><path d="M34 40v26M30 66h10" stroke-width="3"/></g><path d="M46 52l2 24M48 76l-2 22"/><path d="M46 52l8 22M54 74l2 24"/></g></svg>',
+    fondos:'<svg viewBox="0 0 100 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M18 26h64" stroke-width="4"/><g class="dip"><circle cx="50" cy="40" r="8" fill="currentColor" stroke="none"/><path d="M50 48v26"/><path d="M50 74l-6 24M50 74l6 24"/></g><g class="arml"><path d="M26 26v22" style="transform-origin:26px 26px"/></g><g class="armr"><path d="M74 26v22" style="transform-origin:74px 26px"/></g></g></svg>',
+    remo:'<svg viewBox="0 0 110 90" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M8 80h94" stroke-width="2" opacity=".3"/><circle cx="26" cy="26" r="8" fill="currentColor" stroke="none"/><path d="M34 30h40"/><path d="M74 30l4 26M78 56l-2 22"/><path d="M74 30l8 24M82 54l4 24"/><g class="pullh"><path d="M56 30v16M44 46h24" stroke-width="3"/></g></g></svg>',
+    jalon:'<svg viewBox="0 0 90 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M14 12h62" stroke-width="4"/><circle cx="45" cy="52" r="8" fill="currentColor" stroke="none"/><path d="M45 60v22"/><path d="M45 82l-12 16M45 82l12 16"/><g class="pulld"><path d="M30 14v26M60 14v26"/><path d="M30 40l15 8M60 40l-15 8"/></g></g></svg>',
+    abduccion:'<svg viewBox="0 0 120 70" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M8 60h104" stroke-width="2" opacity=".3"/><circle cx="24" cy="44" r="8" fill="currentColor" stroke="none"/><path d="M32 46h34"/><path d="M66 46l16 10M82 56l16 2"/><g class="abd" style="transform-origin:66px 46px"><path d="M66 46l18 4M84 50l16 0"/></g></g></svg>',
+    saltovert:'<svg viewBox="0 0 80 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M10 100h60" stroke-width="2" opacity=".3"/><g class="jump"><circle cx="40" cy="22" r="8" fill="currentColor" stroke="none"/><path d="M40 30v24"/><path d="M40 34l-14-8M40 34l14-8"/><path d="M40 54l-8 20M32 74l-2 18"/><path d="M40 54l8 20M48 74l2 18"/></g></g></svg>',
     progresivo:'<svg viewBox="0 0 120 70" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M6 62h108" stroke-width="2" opacity=".3"/><g class="dash"><path d="M10 32h28M14 41h32M20 50h30" stroke-width="2" opacity=".35"/></g><circle cx="78" cy="14" r="7" fill="currentColor" stroke="none"/><path d="M78 21l-4 20"/><g class="sw-a" style="transform-origin:77px 26px"><path d="M77 26l-16 3"/></g><g class="sw-b" style="transform-origin:77px 26px"><path d="M77 26l16-6"/></g><g class="sw-a" style="transform-origin:74px 41px"><path d="M74 41l-13 12M61 53l-9 8"/></g><g class="sw-b" style="transform-origin:74px 41px"><path d="M74 41l13 8M87 49l6 12"/></g></g></svg>',
     dominada:'<svg viewBox="0 0 80 110" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M8 14h64" stroke-width="4"/><g class="pull"><circle cx="40" cy="44" r="8" fill="currentColor" stroke="none"/><path d="M40 52v26"/><path d="M40 78l-8 22M40 78l8 22"/></g><g class="arm-l"><path d="M28 14v22" style="transform-origin:28px 14px"/></g><g class="arm-r"><path d="M52 14v22" style="transform-origin:52px 14px"/></g></g></svg>',
     talon:'<svg viewBox="0 0 80 100" class="fg"><g stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"><path d="M14 84h32v9H14z" fill="none" stroke-width="2" opacity=".4"/><path d="M46 84h22" stroke-width="2" opacity=".3"/><g class="rise"><circle cx="40" cy="14" r="8" fill="currentColor" stroke="none"/><path d="M40 22v30"/><path d="M40 28l-12 11M40 28l12 11"/><path d="M40 52l-3 24M37 76l-4 8"/><path d="M40 52l6 22M46 74l2 10"/></g></g></svg>',
@@ -2691,7 +2762,34 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     });
   });
 
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('nav.tabs button'));
+
+  // ---------- figuras y vídeo en las fichas de técnica ----------
+  var FICHAS = {
+    'Dominadas lastradas':      {f:[['dominada','Dominada','Barbilla por encima, sin balanceo']], v:'dominadas tecnica correcta agarre pronado'},
+    'Jalón al pecho':           {f:[['jalon','Jalón al pecho','Empieza bajando los omóplatos']], v:'jalon al pecho tecnica correcta espalda'},
+    'Remo con barra':           {f:[['remo','Remo con barra','Bisagra de cadera, espalda neutra']], v:'remo con barra tecnica correcta bisagra cadera'},
+    'Sentadilla y peso muerto rumano': {f:[['sentadilla','Sentadilla','Muslo paralelo, talón pegado'],['pesomuerto','Peso muerto rumano','Cadera atrás, rodilla casi fija']], v:'sentadilla y peso muerto rumano tecnica correcta'},
+    'Glúteo medio, fondos, pájaros y core': {f:[['abduccion','Abducción tumbado','Sin rotar la cadera hacia atrás'],['fondos','Fondos en paralelas','No bajes de 90°'],['plancha','Plancha','Glúteo apretado, costillas abajo']], v:'gluteo medio abduccion monster walk ejercicios'},
+    'Elevación de talón y saltos': {f:[['talon','Elevación de talón','Pausa de 1 s arriba y abajo'],['saltovert','Salto vertical','Aterrizaje suave']], v:'elevacion de talon a una pierna soleo tecnica'},
+    'Correr: progresivos, series, umbral y kilómetro partido': {f:[['progresivo','Progresivo','De menos a más, relajado'],['skipping','Skipping bajo','Frecuencia, no altura'],['talones','Talones al glúteo','El talón sube por detrás'],['zancada','Zancada','Amplitud y brazo contrario']], v:'tecnica de carrera skipping talones al gluteo zancada'},
+    'Calentamiento estándar':   {f:[['skipping','Skipping bajo','Contacto corto y rápido'],['zancada','Zancada','Busca amplitud'],['progresivo','Progresivo','Acaba a ritmo de 400']], v:'calentamiento antes de correr series movilidad dinamica'}
+  };
+  (function () {
+    var v = document.getElementById('v-ejercicios'); if (!v) return;
+    v.querySelectorAll('details.acc').forEach(function (d) {
+      var t = (d.querySelector('summary') || {}).textContent;
+      if (!t) return;
+      t = t.replace(/[+–]$/, '').trim();
+      var fc = FICHAS[t]; if (!fc) return;
+      var box = d.querySelector('.in'); if (!box) return;
+      var h = figs(fc.f);
+      h += '<a class="vlink" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=' +
+           encodeURIComponent(fc.v) + '">Ver en vídeo cómo se ejecuta →</a>';
+      box.insertAdjacentHTML('beforeend', h);
+    });
+  })();
+
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('nav.tabs button'));
   var views = {};
   tabs.forEach(function (b) { views[b.dataset.v] = document.getElementById('v-' + b.dataset.v); });
   function show(k) {
