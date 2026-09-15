@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "actualizado": "2026-09-15",
+    "nota": "Añade cada sesión nueva al final del array que corresponda. No borres nada."
+  },
+  "carrera": [
+    {
+      "fecha": "2026-09-14",
+      "sesion": "Rodaje 40 min",
+      "valida": true,
+      "resultado": {
+        "duracion": "40:00",
+        "km": 5.01,
+        "ritmo": "7:59/km",
+        "fcMedia": 142,
+        "fcMax": 151,
+        "cadencia": 154,
+        "zancadaMm": 805,
+        "contactoMs": 307,
+        "desnivelPos": 53,
+        "franjas": {
+          "130-140": "20%",
+          "140-145": "65%",
+          "145-155": "14%",
+          ">155": "0%"
+        }
+      },
+      "valoracion": "Segunda seguida clavada en zona y con la forma correcta: prácticamente sin deriva, sale a 8:00 y termina a 7:50. Más lenta de media por 53 m de desnivel, 5 min más y las dominadas 20 min antes. Respiración nasal toda la sesión."
+    },
+    {
+      "fecha": "2026-09-12",
+      "sesion": "Rodaje 35 min · primer día con banda",
+      "valida": true,
+      "resultado": {
+        "duracion": "35:00",
+        "km": 4.56,
+        "ritmo": "7:40/km",
+        "fcMedia": 141,
+        "fcMax": 154,
+        "cadencia": 158,
+        "franjas": {
+          "130-145": "90%",
+          ">155": "0%"
+        }
+      },
+      "valoracion": "Primera sesión ejecutada exactamente como estaba pautada. A 140 ppm corre a 7:00/km pero deriva a 8:30 en el último tercio: 90 s/km de deriva cuando lo normal con base asentada son 5-10."
+    },
+    {
+      "fecha": "2026-09-09",
+      "sesion": "4 × 8 min umbral",
+      "valida": true,
+      "resultado": {
+        "ritmos": [
+          "5:32",
+          "5:53",
+          "5:53",
+          "5:53"
+        ],
+        "fc": [
+          163,
+          167,
+          168,
+          168
+        ],
+        "terreno": "llano"
+      },
+      "valoracion": "Ejecución impecable, resultado concluyente. El criterio para correr el control era 4:25-4:45; salió 5:53. Control aplazado del 12 al 19."
+    },
+    {
+      "fecha": "2026-09-07",
+      "sesion": "Subida a Teror (día de descanso)",
+      "valida": false,
+      "resultado": {
+        "duracion": "5h03",
+        "km": 13.76,
+        "desnivelPos": 545,
+        "horario": "20:12 a 01:15",
+        "fcMedia": 105
+      },
+      "valoracion": "Causa de la sobrecarga posterior. Toda la fatiga, casi nada del crédito: al reloj le entraron 15 puntos de aeróbica baja por cinco horas."
+    },
+    {
+      "fecha": "2026-09-06",
+      "sesion": "Rodaje 40 min",
+      "valida": true,
+      "resultado": {
+        "ritmo": "6:01/km",
+        "fcMedia": 165,
+        "desnivelPos": 103
+      },
+      "valoracion": "Superó el techo, pero mejora real frente al 31/08: 159-160 en llano contra 171."
+    },
+    {
+      "fecha": "2026-09-03",
+      "sesion": "10 × 200 m, rec. 90 s",
+      "valida": false,
+      "resultado": {
+        "media": "45,1 s",
+        "fcRecuperaciones": "174-184"
+      },
+      "valoracion": "Media clavada, pero entrenó con el pecho cargado y tos. Bandera roja: la FC no bajó de 174 en ninguna recuperación."
+    },
+    {
+      "fecha": "2026-08-31",
+      "sesion": "600 m a tope (control)",
+      "valida": true,
+      "hito": true,
+      "resultado": {
+        "tiempo": "2:12",
+        "parciales200": [
+          "43,0",
+          "43,9",
+          "45,0"
+        ],
+        "fcMedia": 179,
+        "fcMax": 191
+      },
+      "valoracion": "Muy bien corrido. Solo 2 s entre el primer 200 y el último: quedaba reserva. Con 4h09 de sueño, tres días tras doble extracción de muelas y 7 h sin comer. Es un suelo."
+    },
+    {
+      "fecha": "2026-08-26",
+      "sesion": "3 × 8 min umbral",
+      "valida": false,
+      "resultado": {
+        "ritmos": [
+          "4:55",
+          "4:51",
+          "4:59"
+        ],
+        "fc": [
+          177,
+          186,
+          189
+        ],
+        "fcMax": 195
+      },
+      "valoracion": "Ritmo mal calibrado. Con 3h17 de sueño. Aquí apareció el dato clave: FC máx ≥ 195."
+    },
+    {
+      "fecha": "2026-08-24",
+      "sesion": "8 × 200 m",
+      "valida": false,
+      "resultado": {
+        "rango": "40-43 s",
+        "cronometraje": "móvil"
+      },
+      "valoracion": "La distancia eran unos 175 m, no 200. Desde aquí, todo medido por el reloj."
+    },
+    {
+      "fecha": "2026-08-21",
+      "sesion": "4 × 1.000 m",
+      "valida": false,
+      "resultado": {
+        "tiempos": [
+          "4:32,7",
+          "4:25,9",
+          "4:22,0",
+          "4:34,2"
+        ],
+        "fcMedia": [
+          159,
+          162,
+          167,
+          162
+        ],
+        "fcPico": 177
+      },
+      "valoracion": "No válida. Sin calentamiento, sin hidratos, tras un día de trabajo y tres horas de compras. Descansos reales de 5:30-6:54."
+    }
+  ],
+  "dominadas": [
+    {
+      "fecha": "2026-09-14",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "descanso": "3 min",
+      "contexto": "antes de correr",
+      "valoracion": "Habituación como estaba pautada. FC media 127, pico 169."
+    },
+    {
+      "fecha": "2026-09-10",
+      "series": "Escalera con 10 kg: 1-2-3-4-(4+fallo) + escalera sin lastre 5-4-3-2-1",
+      "total": 29,
+      "lastradas": 14,
+      "descanso": "30 s",
+      "hito": true,
+      "valoracion": "El mejor dato hasta ahora. 14 repeticiones con 10 kg pesando 67,4 apuntan a un máximo en fresco con lastre de unas 6, que corresponde a 13-15 a peso corporal."
+    },
+    {
+      "fecha": "2026-09-09",
+      "series": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "total": 20,
+      "descanso": "3 min",
+      "valoracion": "Pulso tranquilo 105-127: esta vez sí se respetaron los descansos."
+    },
+    {
+      "fecha": "2026-09-06",
+      "series": [
+        5,
+        5
+      ],
+      "total": 10,
+      "descanso": "3 min",
+      "valoracion": "Opcionales tras el rodaje."
+    },
+    {
+      "fecha": "2026-09-03",
+      "series": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "total": 20,
+      "descanso": "1 min",
+      "valoracion": "Última al borde del fallo, explicado por el descanso de un minuto."
+    },
+    {
+      "fecha": "2026-08-24",
+      "series": [
+        10,
+        7,
+        4
+      ],
+      "total": 21,
+      "descanso": "3,5-4 min",
+      "valoracion": "Caída del 60 % con descanso completo: falta reserva de fuerza."
+    }
+  ],
+  "circuito": [
+    {
+      "fecha": "2026-09-10",
+      "segundos": 9.9,
+      "condiciones": "al 60 %, contando pasos entre conos, sin saber que le cronometraban",
+      "puntos": 6,
+      "valoracion": "Cambió la estrategia entera. A tope debería andar por 9,0-9,4."
+    }
+  ],
+  "sueno": [
+    {
+      "fecha": "2026-09-14",
+      "duracion": "6h41",
+      "puntuacion": 77,
+      "calidad": "Aceptable",
+      "fcReposo": 48,
+      "vfc": 54
+    },
+    {
+      "fecha": "2026-09-12",
+      "duracion": "7h23",
+      "puntuacion": 95,
+      "calidad": "Excelente",
+      "fcReposo": 45,
+      "vfc": 65
+    },
+    {
+      "fecha": "2026-09-11",
+      "duracion": "7h41",
+      "puntuacion": 88,
+      "calidad": "Bueno",
+      "fcReposo": 47,
+      "vfc": 60
+    },
+    {
+      "fecha": "2026-09-09",
+      "duracion": "7h56",
+      "puntuacion": 91,
+      "calidad": "Excelente",
+      "fcReposo": 46,
+      "vfc": 67
+    },
+    {
+      "fecha": "2026-09-03",
+      "duracion": "6h30",
+      "puntuacion": 78,
+      "calidad": "Aceptable",
+      "fcReposo": 48,
+      "vfc": 53
+    },
+    {
+      "fecha": "2026-08-25/31",
+      "duracion": "media 4h14",
+      "puntuacion": "6 de 7 noches deficientes",
+      "fcReposo": "46-52"
+    }
+  ],
+  "necesidadSueno": "8h50",
+  "garmin": [
+    {
+      "fecha": "2026-09-14",
+      "estado": "No productivo",
+      "vfc": 57,
+      "vfcEstado": "Equilibrado",
+      "cargaAguda": 227,
+      "anaerobica": 127,
+      "aerobicaAlta": 759,
+      "aerobicaBaja": 162,
+      "predisposicion": 60
+    },
+    {
+      "fecha": "2026-09-12",
+      "estado": "No productivo",
+      "vfc": 58,
+      "vfcEstado": "Equilibrado",
+      "cargaAguda": 252,
+      "aerobicaBaja": 129
+    },
+    {
+      "fecha": "2026-09-11",
+      "estado": "No productivo",
+      "vfc": 56,
+      "vfcEstado": "Equilibrado",
+      "cargaAguda": 273,
+      "aerobicaBaja": 90,
+      "predisposicion": 91
+    },
+    {
+      "fecha": "2026-09-09",
+      "estado": "Sobrecarga",
+      "vfc": 54,
+      "vfcEstado": "Desequilibrada",
+      "cargaAguda": 381,
+      "aerobicaAlta": 759,
+      "aerobicaBaja": 90
+    },
+    {
+      "fecha": "2026-09-06",
+      "estado": "No productivo",
+      "vfc": 56,
+      "vfcEstado": "Equilibrada",
+      "cargaAguda": 384,
+      "aerobicaAlta": 648,
+      "aerobicaBaja": 75
+    }
+  ],
+  "evolucionEstimacion": [
+    {
+      "fecha": "2026-08-21",
+      "estimacion": "≈4:00",
+      "motivo": "Primera lectura sobre unas series no válidas"
+    },
+    {
+      "fecha": "2026-08-24",
+      "estimacion": "3:45-3:55",
+      "motivo": "Corregida por el ayuno y la fatiga"
+    },
+    {
+      "fecha": "2026-08-26",
+      "estimacion": "4:05-4:20",
+      "motivo": "Sobrecorrección: la sesión se hizo con 3h17 de sueño"
+    },
+    {
+      "fecha": "2026-08-31",
+      "estimacion": "3:48-3:56",
+      "motivo": "Primera medición real: 600 m en 2:12",
+      "vigente": true
+    }
+  ]
+}

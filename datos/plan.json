@@ -1,0 +1,1714 @@
+{
+  "meta": {
+    "generado": "2026-09-15",
+    "origen": "Conversación en Claude.ai del 21 ago al 15 sep de 2026",
+    "idioma": "es-ES",
+    "nota": "Estado vivo del plan. Claude Code actualiza historial.json y este archivo tras cada sesión."
+  },
+  "atleta": {
+    "nombre": "Daniel",
+    "pesoKg": 67.4,
+    "fcMaxima": 195,
+    "fcMaximaMedidaEl": "2026-08-26",
+    "fcReposo": 45,
+    "vo2maxEstimadoGarmin": 54,
+    "reloj": "Garmin Forerunner 265",
+    "zapatillas": "Asics Magic Speed 5 para todo, con plantillas 3D de ICOT dentro. Sin segunda zapatilla por coste",
+    "ubicacion": "Gran Canaria",
+    "lastreDisponible": "Chaleco lastrado Decathlon; cinturón de lastre en el gimnasio del Arsenal",
+    "estaturaCm": 172,
+    "edad": 24,
+    "fechaNacimiento": "2001-11-06",
+    "composicion": {
+      "fecha": "2026-09-11",
+      "imc": 22.8,
+      "grasaPct": 14.3,
+      "grasaSubcutaneaPct": 12.5,
+      "grasaVisceral": 5,
+      "aguaPct": 61.9,
+      "masaMuscularKg": 54.9,
+      "masaOseaKg": 2.89,
+      "metabolismoBasalKcal": 1617,
+      "edadMetabolica": 20
+    },
+    "banda": "Garmin HRM 200, comprada el 11/09/2026, confirmada activa en los FIT desde el 12/09",
+    "horario": "Vacaciones hasta el 25/09. Desde el 28/09, trabajo de 7:30 a 14:00",
+    "gimnasios": [
+      "Arsenal de Las Palmas (martes)",
+      "Gimnasio del preparador (jueves, circuito)"
+    ],
+    "pista": "Solo Telde. La Ciudad Deportiva de Gran Canaria está en obras hasta enero de 2027"
+  },
+  "objetivo": {
+    "oposicion": "Policía Nacional · Escala Básica",
+    "pruebasFisicas": {
+      "lugar": "Cádiz",
+      "fecha": "Última semana de octubre de 2026",
+      "fechaReferencia": "2026-10-26"
+    },
+    "examenEscrito": "2026-09-26",
+    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero.",
+    "aviso": "Baremo del Anexo II de 2025. Verificar en las bases de la convocatoria (BOE de 10 de julio de 2026). Los puntos 9, 7, 6, 4 y 1 están interpolados entre los tramos conocidos."
+  },
+  "baremo": {
+    "sexo": "hombres",
+    "mil_metros": [
+      {
+        "puntos": 10,
+        "desde": "0:00",
+        "hasta": "2:54"
+      },
+      {
+        "puntos": 8,
+        "desde": "3:07",
+        "hasta": "3:12"
+      },
+      {
+        "puntos": 5,
+        "desde": "3:19",
+        "hasta": "3:24"
+      },
+      {
+        "puntos": 3,
+        "desde": "3:31",
+        "hasta": "3:36"
+      },
+      {
+        "puntos": 2,
+        "desde": "3:37",
+        "hasta": "3:42"
+      },
+      {
+        "puntos": 1,
+        "desde": "3:43",
+        "hasta": "3:48"
+      },
+      {
+        "puntos": 0,
+        "desde": "3:49",
+        "hasta": null,
+        "elimina": true
+      }
+    ],
+    "dominadas": [
+      {
+        "puntos": 10,
+        "repeticiones": 17,
+        "operador": ">="
+      },
+      {
+        "puntos": 8,
+        "repeticiones": 15,
+        "operador": "="
+      },
+      {
+        "puntos": 5,
+        "repeticiones": 10,
+        "operador": ">=",
+        "hasta": 11
+      },
+      {
+        "puntos": 3,
+        "repeticiones": 8,
+        "operador": "="
+      },
+      {
+        "puntos": 2,
+        "repeticiones": 7,
+        "operador": "="
+      },
+      {
+        "puntos": 0,
+        "repeticiones": 4,
+        "operador": "<=",
+        "elimina": true
+      }
+    ],
+    "circuito_agilidad": [
+      {
+        "puntos": 10,
+        "hastaSegundos": 8.2
+      },
+      {
+        "puntos": 8,
+        "desdeSegundos": 8.9,
+        "hastaSegundos": 9.3
+      },
+      {
+        "puntos": 5,
+        "desdeSegundos": 10.2,
+        "hastaSegundos": 10.5
+      },
+      {
+        "puntos": 3,
+        "desdeSegundos": 10.9,
+        "hastaSegundos": 11.2
+      },
+      {
+        "puntos": 2,
+        "desdeSegundos": 11.3,
+        "hastaSegundos": 11.4
+      },
+      {
+        "puntos": 0,
+        "desdeSegundos": 11.7,
+        "elimina": true
+      }
+    ]
+  },
+  "marcasActuales": {
+    "mil_metros": {
+      "estimacion": "3:52",
+      "rango": [
+        "3:48",
+        "3:56"
+      ],
+      "base": "600 m en 2:12 el 31/08",
+      "puntos": "0-1"
+    },
+    "dominadas": {
+      "maximoConfirmado": 12,
+      "estimacion": [
+        13,
+        15
+      ],
+      "aConfirmarEl": "2026-09-19"
+    },
+    "circuito": {
+      "segundos": 9.9,
+      "fecha": "2026-09-10",
+      "condiciones": "al 60 % y sin saber que le cronometraban",
+      "puntosEstimados": 6
+    },
+    "objetivoMinimo": {
+      "mil": "< 3:45",
+      "dominadas": 15,
+      "circuito": "< 9,5 s",
+      "razon": "Con circuito en 6-8 puntos y 15 dominadas, el kilómetro ya no necesita 3:36"
+    }
+  },
+  "diagnostico": {
+    "resumen": "Velocidad de sobra, falta sostenerla. Corre 200 m en 43 s sin problema pero se cae cuando lleva tres minutos a ese ritmo.",
+    "limitanteEspecifico": "El tramo del metro 600 al 1.000",
+    "focoCargaGarmin": "Carga aeróbica de intensidad baja insuficiente. Todo lo que corre cae en aeróbico alto, por eso hay carga sin adaptación.",
+    "termometro": "El ritmo a 140 ppm en el minuto 5 frente al del minuto 30. 12/09: 7:00 contra 8:30. 14/09: 8:00 contra 7:50. Cuando salga rápido y no derive, la base sube."
+  },
+  "zonasFC": {
+    "metodo": "% de frecuencia cardíaca de reserva (FCR) · máxima 195 · reposo 46",
+    "configurarEnGarmin": "Mantén UP → Perfil del usuario → Frecuencia cardiaca y zonas de potencia → Frec. cardiaca → Zonas → Según → % FCR",
+    "zonas": [
+      {
+        "zona": 1,
+        "min": 120,
+        "max": 135,
+        "uso": "Trote de recuperación entre series"
+      },
+      {
+        "zona": 2,
+        "min": 135,
+        "max": 150,
+        "uso": "Rodajes. Media objetivo 135–140, techo 145"
+      },
+      {
+        "zona": 3,
+        "min": 150,
+        "max": 165,
+        "uso": "Tierra de nadie: no se entrena aquí a propósito"
+      },
+      {
+        "zona": 4,
+        "min": 165,
+        "max": 180,
+        "uso": "Umbral de los miércoles: 166–172"
+      },
+      {
+        "zona": 5,
+        "min": 180,
+        "max": 195,
+        "uso": "Controles y día de la prueba"
+      }
+    ],
+    "termometros": [
+      {
+        "nombre": "Ritmo a 170 ppm",
+        "normal": "4:25–4:45 /km descansado",
+        "alarma": "Si necesita 5:00 o más lento, no ha recuperado"
+      },
+      {
+        "nombre": "Pulso trotando a 6:00 /km",
+        "normal": "130–140 ppm",
+        "alarma": "Si marca 170, ese día no se entrena duro"
+      }
+    ]
+  },
+  "ritmos": [
+    {
+      "clave": "RS",
+      "nombre": "Rodaje suave",
+      "gobernadoPor": "pulso",
+      "techoFC": 145,
+      "mediaFC": [
+        135,
+        140
+      ],
+      "ritmoEsperado": "6:45–7:15 /km"
+    },
+    {
+      "clave": "TR",
+      "nombre": "Trote de recuperación",
+      "ritmoKm": "6:00–6:30"
+    },
+    {
+      "clave": "UMB",
+      "nombre": "Umbral",
+      "gobernadoPor": "pulso",
+      "rangoFC": [
+        166,
+        172
+      ]
+    },
+    {
+      "clave": "K1",
+      "nombre": "Ritmo kilómetro bloque 1",
+      "objetivo1000": "3:50",
+      "ritmoKm": "3:50",
+      "m200": "0:45",
+      "m300": "1:08",
+      "m400": "1:31",
+      "m600": "2:17"
+    },
+    {
+      "clave": "K2",
+      "nombre": "Ritmo kilómetro bloque 2",
+      "objetivo1000": "3:42",
+      "ritmoKm": "3:42",
+      "m200": "0:44",
+      "m300": "1:06",
+      "m400": "1:28",
+      "m600": "2:13"
+    },
+    {
+      "clave": "K3",
+      "nombre": "Ritmo kilómetro bloque 3",
+      "objetivo1000": "3:34",
+      "ritmoKm": "3:34",
+      "m200": "0:42",
+      "m300": "1:04",
+      "m400": "1:25",
+      "m600": "2:08"
+    },
+    {
+      "clave": "VEL",
+      "nombre": "Velocidad",
+      "ritmoKm": "3:20–3:25",
+      "m200": "0:40–0:41",
+      "m300": "1:00–1:02",
+      "m400": "1:20–1:22"
+    }
+  ],
+  "estructuraSemanal": [
+    {
+      "dia": "Lunes",
+      "tipo": "carrera",
+      "contenido": "Series (calidad 1). 3 × 5 dominadas dentro del calentamiento"
+    },
+    {
+      "dia": "Martes",
+      "tipo": "fuerza",
+      "contenido": "Gimnasio del Arsenal: tirón, piernas y core. Único día de fuerza completo (~65 min)"
+    },
+    {
+      "dia": "Miércoles",
+      "tipo": "carrera",
+      "contenido": "Umbral por pulsaciones (calidad 2). 3 × 5 dominadas dentro del calentamiento"
+    },
+    {
+      "dia": "Jueves",
+      "tipo": "circuito",
+      "contenido": "Mañana libre. 21:30 circuito con el preparador, fresco y cronometrado"
+    },
+    {
+      "dia": "Viernes",
+      "tipo": "descanso",
+      "contenido": "Descanso"
+    },
+    {
+      "dia": "Sábado",
+      "tipo": "carrera",
+      "contenido": "Rodaje largo, control o simulacro. 10 min de gemelo, saltos y core al terminar"
+    },
+    {
+      "dia": "Domingo",
+      "tipo": "descanso",
+      "contenido": "Descanso"
+    }
+  ],
+  "sesionesTipo": {
+    "calentamientoEstandar": {
+      "duracionMin": 30,
+      "duracionConDominadasMin": 42,
+      "pasos": [
+        "Trote suave 12–15 min a 5:45–6:15 /km, respirando por la nariz",
+        "Movilidad dinámica 5 min: balanceos de pierna adelante-atrás y lateral (15 por lado), zancadas caminando (10 por pierna), rotaciones de tobillo, círculos de cadera",
+        "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso). Antes, 2 suspensiones pasivas de 20 s y 2 × 8 retracciones escapulares",
+        "Técnica: 2 × 20 m de skipping bajo, talones al glúteo, zancada y carrera lateral",
+        "5 progresivos de 80 m; los dos últimos terminan a ritmo K",
+        "Pausa de 3–4 min y a la primera serie"
+      ]
+    },
+    "calentamientoCorto": {
+      "duracionMin": 20,
+      "uso": "Sesiones de umbral",
+      "pasos": [
+        "Trote 10 min",
+        "Movilidad",
+        "Dominadas del día",
+        "Técnica",
+        "3 progresivos"
+      ]
+    },
+    "vueltaALaCalma": {
+      "duracionMin": 10,
+      "detalle": "Trote muy suave + 3–4 min de estiramiento de gemelo, isquiotibial y cuádriceps. Siempre."
+    },
+    "martesFuerza": {
+      "lugar": "Gimnasio del Arsenal de Las Palmas",
+      "duracionMin": 65,
+      "calentamiento": "8–10 min de remo o bici + movilidad de hombro + 2 suspensiones de 20 s + 2 × 8 retracciones escapulares",
+      "prioridad": "A es la sesión. Si falta tiempo: A, B, D y a casa.",
+      "bloques": [
+        {
+          "clave": "A",
+          "ejercicio": "Dominadas lastradas",
+          "series": 5,
+          "reps": 3,
+          "peso": "10 kg",
+          "descanso": "3 min",
+          "principal": true
+        },
+        {
+          "clave": "B",
+          "ejercicio": "Jalón al pecho",
+          "series": 4,
+          "reps": 6,
+          "peso": "40–45 kg",
+          "descanso": "2 min"
+        },
+        {
+          "clave": "C",
+          "ejercicio": "Remo con barra",
+          "series": 4,
+          "reps": 8,
+          "peso": "20 kg",
+          "descanso": "2 min"
+        },
+        {
+          "clave": "D",
+          "ejercicio": "Sentadilla",
+          "series": 4,
+          "reps": 6,
+          "peso": "barra vacía (20 kg) la 1ª semana",
+          "descanso": "2–3 min"
+        },
+        {
+          "clave": "E",
+          "ejercicio": "Peso muerto rumano",
+          "series": 3,
+          "reps": 8,
+          "peso": "20–25 kg",
+          "descanso": "2 min"
+        },
+        {
+          "clave": "F",
+          "ejercicio": "Fondos en paralelas",
+          "series": 3,
+          "reps": "6–8",
+          "peso": "peso corporal",
+          "descanso": "2 min"
+        },
+        {
+          "clave": "G",
+          "ejercicio": "Pájaros o face pull",
+          "series": 3,
+          "reps": 12,
+          "peso": "5–7 kg por mano",
+          "descanso": "60 s"
+        },
+        {
+          "clave": "H",
+          "ejercicio": "Elevación de piernas colgado + plancha",
+          "series": 3,
+          "reps": "10 / 45 s",
+          "peso": "peso corporal",
+          "descanso": "45 s"
+        }
+      ]
+    },
+    "juevesCircuito": {
+      "hora": "21:30",
+      "lugar": "Con el preparador",
+      "regla": "Solo el circuito y fresco. Nada de piernas por la mañana ese día.",
+      "porQue": "El circuito vale hasta 10 puntos y aún no se conoce el tiempo real. Hacerlo cansado impide medirlo.",
+      "bloques": [
+        {
+          "ejercicio": "Calentamiento estándar",
+          "duracionMin": 20
+        },
+        {
+          "ejercicio": "Circuito de agilidad cronometrado",
+          "series": "3–4",
+          "descanso": "3–4 min de recuperación completa. El mejor tiempo es el que cuenta"
+        },
+        {
+          "ejercicio": "Vuelta a la calma",
+          "duracionMin": 10
+        }
+      ]
+    },
+    "sabadoComplemento": {
+      "duracionMin": 10,
+      "cuando": "Después del rodaje",
+      "bloques": [
+        {
+          "ejercicio": "Elevación de talón a una pierna",
+          "series": 3,
+          "reps": 15,
+          "para": "Protege el Aquiles y el sóleo según sube el volumen de carrera"
+        },
+        {
+          "ejercicio": "Saltos al cajón",
+          "series": 3,
+          "reps": 5,
+          "para": "Potencia para el circuito. Calidad, no cansancio"
+        },
+        {
+          "ejercicio": "Plancha lateral",
+          "series": 3,
+          "reps": "30 s por lado"
+        }
+      ],
+      "nota": "Sin dominadas los sábados. Esa carga ya está el martes."
+    }
+  },
+  "protocoloDominadas": {
+    "puntoDePartida": "Máximo 11–12. Objetivo 15–17.",
+    "diagnostico": "El 24/08 hizo 10 · 7 · 4 con casi 4 min de descanso. Conservar solo el 40 % de la primera serie con descanso completo significa falta de reserva de fuerza, no de aguante. Por eso más repeticiones a peso corporal no suben el techo: lo que lo sube es la fuerza máxima relativa.",
+    "cuando": [
+      {
+        "dia": "Lunes",
+        "tipo": "habituación",
+        "prescripcion": "3 × 5, descanso 3 min, muy por debajo del fallo",
+        "donde": "Paso 3 del calentamiento, antes de correr"
+      },
+      {
+        "dia": "Martes",
+        "tipo": "fuerza",
+        "prescripcion": "5 × 3 lastradas + resto de la sesión del Arsenal",
+        "donde": "Es la sesión entera"
+      },
+      {
+        "dia": "Miércoles",
+        "tipo": "habituación",
+        "prescripcion": "3 × 5, descanso 3 min",
+        "donde": "Paso 3 del calentamiento, antes de correr"
+      },
+      {
+        "dia": "Jueves",
+        "tipo": "ninguna"
+      },
+      {
+        "dia": "Sábado",
+        "tipo": "ninguna",
+        "nota": "Esa carga ya está el martes"
+      }
+    ],
+    "porQueAntesDeCorrer": "Es el orden del examen: llegas a la carrera con dorsales y antebrazo cargados, igual que en Cádiz. Son 15 repeticiones fáciles que no quitan nada a la sesión de series.",
+    "progresion": [
+      {
+        "semana": "2026-09-15",
+        "habituacion": "3 × 5",
+        "fuerza": "5 × 3 con 10 kg"
+      },
+      {
+        "semana": "2026-09-22",
+        "habituacion": "3 × 5",
+        "fuerza": "5 × 3 con 10 kg"
+      },
+      {
+        "semana": "2026-09-29",
+        "habituacion": "3 × 5",
+        "fuerza": "5 × 3 con 12,5 kg"
+      },
+      {
+        "semana": "2026-10-06",
+        "habituacion": "3 × 5",
+        "fuerza": "5 × 3 con 12,5 kg"
+      },
+      {
+        "semana": "2026-10-13",
+        "habituacion": "3 × 5",
+        "fuerza": "4 × 3 con 15 kg"
+      },
+      {
+        "semana": "2026-10-20",
+        "habituacion": "3 × 4",
+        "fuerza": "4 × 3 con 10 kg · descarga"
+      },
+      {
+        "semana": "semana de pruebas",
+        "habituacion": "3 × 4 muy suaves",
+        "fuerza": "—"
+      }
+    ],
+    "reglas": [
+      "Tres minutos de descanso, sin excepciones. Con un minuto no se repone el fosfágeno y la cuarta serie deja de ser submáxima.",
+      "Criterio de repeticiones en reserva: al acabar la última serie deben quedar 3 o 4 dentro. Si queda solo una, esa sesión se baja a series de 4.",
+      "Solo se sube el lastre si la quinta serie dejó 2 repeticiones en reserva. Si costó, se repite peso otra semana.",
+      "Nunca al fallo con lastre: ahí se lesionan el codo y el hombro, no el músculo.",
+      "Test máximo solo en los controles: 19 sep, 10 oct y 24 oct."
+    ],
+    "tecnicaExamen": "Palmas al frente, brazos totalmente extendidos abajo, barbilla por encima de la barra arriba, sin balanceo. Una repetición que el tribunal no da por buena vale lo mismo que no haberla hecho.",
+    "lastre": "Para dominadas, un cinturón es mejor que un chaleco: el chaleco se sube y estorba justo al buscar la barbilla sobre la barra. El chaleco, para el parque y las búlgaras."
+  },
+  "justificacionPesos": [
+    {
+      "ejercicio": "Dominadas lastradas 10 kg",
+      "tipo": "dato real",
+      "base": "El 10/09 hizo 14 repeticiones con 10 kg en escalera ascendente con 30 s de descanso, fallando la quinta de la quinta serie. Sitúa su máximo en fresco con 10 kg en unas 6 repeticiones. Series de 3 son el 50 % del máximo: intensidad correcta para 5 × 3."
+    },
+    {
+      "ejercicio": "Jalón al pecho 40–45 kg",
+      "tipo": "estimado",
+      "base": "Maneja 30–40 kg a 10 repeticiones. Con 6 repeticiones deberían entrar 40–45. Probar 50."
+    },
+    {
+      "ejercicio": "Remo con barra 20 kg",
+      "tipo": "corregido",
+      "base": "Primera estimación de 35–40 kg era demasiado alta. Se mantiene el disco de 20 kg que ya maneja y se sube desde ahí."
+    },
+    {
+      "ejercicio": "Fondos peso corporal",
+      "tipo": "ajustado",
+      "base": "Sin lastre. Si 3 × 8 quema demasiado, bajar a 3 × 6."
+    },
+    {
+      "ejercicio": "Sentadilla y peso muerto rumano",
+      "tipo": "sin datos",
+      "base": "No hay historial de pierna en sus rutinas. Se empieza por la barra vacía por seguridad. Subir 5–10 kg por semana solo si la sesión anterior no dejó agujetas que se notaran al correr."
+    }
+  ],
+  "calibracion": "Primera sesión: una serie con el peso propuesto contando cuántas repeticiones se podrían haber hecho de más. Si son 4 o más, subir un 10 %. Si es 1 o ninguna, bajar un 10 %. El punto bueno es terminar con 2 o 3 repeticiones en reserva.",
+  "ejercicios": [
+    {
+      "id": "dominadas-lastradas",
+      "nombre": "Dominadas lastradas",
+      "grupo": "tirón",
+      "material": [
+        "barra",
+        "cinturón de lastre o chaleco"
+      ],
+      "tecnica": [
+        "Agarre pronado, palmas al frente, manos algo más anchas que los hombros. Igual que en el examen: entrena siempre como vas a competir.",
+        "Cuelga en extensión completa pero con el hombro activo, no colgado muerto de los ligamentos. Antes de tirar con el brazo, baja los omóplatos: ese es el inicio del movimiento.",
+        "Tira llevando los codos hacia las costillas y el pecho hacia la barra, no la barbilla.",
+        "Arriba, la barbilla claramente por encima de la barra. Sin estirar el cuello para llegar.",
+        "Bajada controlada en 2 segundos hasta la extensión completa. La bajada es donde se construye la fuerza.",
+        "Sin balanceo y sin impulso de piernas. El tribunal lo anula y además es la repetición que no te hace más fuerte."
+      ]
+    },
+    {
+      "id": "jalon-pecho",
+      "nombre": "Jalón al pecho",
+      "grupo": "tirón",
+      "material": [
+        "polea alta"
+      ],
+      "tecnica": [
+        "Muslos fijados bajo el rodillo, pecho alto, tronco 10–15° hacia atrás y quieto durante toda la serie.",
+        "Agarre pronado, algo más ancho que los hombros.",
+        "Empieza bajando los omóplatos, no doblando el codo. Si arrancas con el brazo, trabajas bíceps en lugar de dorsal.",
+        "Barra al pecho alto, codos hacia atrás y abajo. Nunca por detrás de la nuca.",
+        "Subida controlada dejando que los omóplatos suban del todo al final.",
+        "Si tienes que balancear el tronco para completar la serie, pesa demasiado."
+      ]
+    },
+    {
+      "id": "remo-barra",
+      "nombre": "Remo con barra",
+      "grupo": "tirón",
+      "material": [
+        "barra",
+        "discos"
+      ],
+      "tecnica": [
+        "Pies a la anchura de la cadera, rodillas ligeramente flexionadas.",
+        "Bisagra de cadera —culo atrás, espalda neutra— hasta que el tronco quede a unos 45° o menos. La espalda no se redondea en ningún momento.",
+        "Tira la barra hacia el ombligo o la parte baja del esternón, con los codos pegados al cuerpo.",
+        "Arriba, aprieta los omóplatos un instante.",
+        "Baja controlado. El tronco no se mueve: si tienes que impulsarte con la espalda, baja el peso."
+      ]
+    },
+    {
+      "id": "fondos-paralelas",
+      "nombre": "Fondos en paralelas",
+      "grupo": "empuje",
+      "material": [
+        "paralelas"
+      ],
+      "tecnica": [
+        "Brazos extendidos, hombros abajo, no encogidos hacia las orejas.",
+        "Tronco ligeramente inclinado hacia delante.",
+        "Baja hasta que el hombro quede a la altura del codo, unos 90°. No bajes más: por debajo de ahí el hombro se estresa mucho y no ganas nada.",
+        "Sube hasta extender, sin bloquear de golpe."
+      ]
+    },
+    {
+      "id": "pajaros",
+      "nombre": "Pájaros y face pull",
+      "grupo": "hombro",
+      "material": [
+        "mancuernas ligeras o polea con cuerda"
+      ],
+      "tecnica": [
+        "Pájaros: tronco inclinado casi 90°, mancuernas colgando, codos ligeramente flexionados y fijos. Abre los brazos en arco hasta la línea de los hombros. Peso ligero: si encoges el cuello, pesa demasiado.",
+        "Face pull: polea con cuerda a la altura de la cara, tiras hacia la frente separando las manos, codos altos y por fuera.",
+        "Los dos son salud de hombro, no fuerza. Van lentos y sin buscar carga."
+      ]
+    },
+    {
+      "id": "elevacion-piernas",
+      "nombre": "Elevación de piernas colgado y plancha",
+      "grupo": "core",
+      "material": [
+        "barra"
+      ],
+      "tecnica": [
+        "Colgado con el hombro activo, sube las rodillas hacia el pecho llevando la pelvis hacia arriba, no solo doblando la cadera. Baja controlado, sin balancearte.",
+        "Plancha: codos bajo los hombros, glúteo apretado y costillas hacia abajo. Ni la cadera cae ni se levanta el culo."
+      ]
+    },
+    {
+      "id": "sentadilla",
+      "nombre": "Sentadilla",
+      "grupo": "pierna",
+      "material": [
+        "barra",
+        "rack"
+      ],
+      "tecnica": [
+        "Barra apoyada en la parte alta de la espalda, sobre el trapecio. Nunca en el cuello. Si te toca la vértebra que sobresale, está demasiado arriba: bájala dos dedos hasta notar el colchón del músculo.",
+        "Pies a la anchura de los hombros, puntas ligeramente hacia fuera. Las rodillas siguen la dirección de los pies.",
+        "Baja como si te sentaras hacia atrás, controlando, hasta que el muslo quede paralelo al suelo o algo por debajo.",
+        "Espalda neutra, pecho arriba, mirada al frente. El talón no se despega.",
+        "Sube empujando con todo el pie, sin adelantar la cadera antes que el pecho."
+      ]
+    },
+    {
+      "id": "peso-muerto-rumano",
+      "nombre": "Peso muerto rumano",
+      "grupo": "pierna",
+      "material": [
+        "barra"
+      ],
+      "tecnica": [
+        "De pie con la barra, rodillas ligeramente flexionadas y fijas durante todo el movimiento.",
+        "Lleva la cadera hacia atrás manteniendo la espalda recta y la barra pegada a los muslos.",
+        "Baja solo hasta notar el estiramiento en el isquiotibial, normalmente a media espinilla. Si la espalda se redondea, ya has bajado demasiado.",
+        "Sube empujando la cadera hacia delante y apretando el glúteo.",
+        "No es una sentadilla: la rodilla casi no se mueve. El movimiento es de cadera."
+      ]
+    },
+    {
+      "id": "bulgara-zancadas",
+      "nombre": "Búlgara y zancadas",
+      "grupo": "pierna",
+      "material": [
+        "banco",
+        "mancuernas opcionales"
+      ],
+      "tecnica": [
+        "Búlgara: pie de atrás sobre un banco a la altura de la rodilla, pie de delante lo bastante adelantado para que la rodilla no pase mucho de la punta del pie. Baja vertical hasta que la rodilla de atrás casi toque. El peso, en el talón del pie delantero.",
+        "Zancadas caminando: paso largo, tronco vertical, bajas hasta que la rodilla de atrás casi toque el suelo. Empujas con el talón delantero para dar el siguiente paso."
+      ]
+    },
+    {
+      "id": "elevacion-talon",
+      "nombre": "Elevación de talón a una pierna",
+      "grupo": "pierna",
+      "material": [
+        "escalón"
+      ],
+      "tecnica": [
+        "Antepié en el borde de un escalón, la otra pierna recogida.",
+        "Baja el talón todo lo que puedas y aguanta 1 segundo abajo.",
+        "Sube al máximo y aguanta 1 segundo arriba.",
+        "Lento y sin rebote. Es el ejercicio que más protege el tendón de Aquiles y el sóleo cuando subes volumen de carrera."
+      ]
+    },
+    {
+      "id": "saltos-cajon",
+      "nombre": "Saltos al cajón",
+      "grupo": "potencia",
+      "material": [
+        "cajón 40–50 cm"
+      ],
+      "tecnica": [
+        "Cajón a una altura que puedas aterrizar cómodo, 40–50 cm. No busques altura.",
+        "Salta ayudándote de los brazos y aterriza suave, con la rodilla flexionada, en el centro del cajón.",
+        "Baja andando, nunca saltando. El aterrizaje desde arriba es la parte lesiva y no aporta nada.",
+        "Criterio de calidad: si el aterrizaje suena, baja la altura. Si notas cansancio, se acabó la serie."
+      ]
+    },
+    {
+      "id": "progresivos",
+      "nombre": "Progresivos (strides)",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "Aceleraciones de 80–100 m que van de menos a más: empiezas a ritmo de rodaje y terminas los últimos 20 m a ritmo de 400.",
+        "No son sprints. Si acabas con la cara descompuesta, has ido demasiado.",
+        "Vuelta caminando, 60–90 s entre uno y otro, hombros sueltos y mandíbula floja.",
+        "Referencia: 80 m en 16–18 s, 100 m en 20–23 s. Orientativo, no un objetivo: aquí importa la mecánica, no el cronómetro."
+      ]
+    },
+    {
+      "id": "tecnica-carrera",
+      "nombre": "Ejercicios de técnica de carrera",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "Skipping bajo: rodilla a la altura de la cadera, contacto rápido con el suelo, cadencia alta. No busques altura, busca frecuencia.",
+        "Talones al glúteo: el talón sube por detrás sin que la rodilla se adelante. Trabaja el reciclado de la pierna.",
+        "Zancada (bounding): pasos largos y saltados, brazo contrario a pierna, buscando amplitud.",
+        "Carrera lateral: 10 m hacia cada lado cruzando pies. Prepara cadera y aductores.",
+        "20 m de cada uno, vuelta caminando. No se cronometran."
+      ]
+    },
+    {
+      "id": "series-cortas",
+      "nombre": "Series cortas (200 y 300 m)",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "Salida de pie desde parado, sin agacharte. Acelera en los primeros 20 m y a partir de ahí sostén.",
+        "Recuperación al trote suave (6:00–6:30 /km), nunca parado: parar enfría las piernas y falsea la sesión."
+      ]
+    },
+    {
+      "id": "series-largas",
+      "nombre": "Series largas (400 y 600 m)",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "Primera mitad y segunda mitad al mismo tiempo. Un 400 en 1:28 son 44 + 44, no 41 + 47.",
+        "Comprueba el paso por el 200."
+      ]
+    },
+    {
+      "id": "umbral",
+      "nombre": "Umbral (bloques de minutos)",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "Ritmo continuo gobernado por pulsaciones: 166–172 ppm. Cómodamente incómodo.",
+        "Prueba del habla: frases de cinco o seis palabras, no una conversación.",
+        "Recuperación trotando, no parado.",
+        "Los dos primeros minutos la FC va por detrás del esfuerzo: ajusta a partir del minuto 3."
+      ]
+    },
+    {
+      "id": "kilometro-partido",
+      "nombre": "Kilómetro partido",
+      "grupo": "carrera",
+      "material": [],
+      "tecnica": [
+        "600 m + 45 s de pausa + 400 m, ambos a ritmo objetivo. Entre serie y serie, 6 min.",
+        "Es la sesión más importante del plan: ataca directamente el punto débil, el tramo del 600 al 1.000."
+      ]
+    },
+    {
+      "id": "simulacro",
+      "nombre": "Simulacro completo",
+      "grupo": "prueba",
+      "material": [],
+      "tecnica": [
+        "Las tres pruebas seguidas en el orden real: circuito → dominadas → 1.000 m, con las mismas esperas del día del examen.",
+        "La mejor opción es hacerlo un jueves en el gimnasio: circuito al principio de la sesión, dominadas al máximo y salir a correr el 1.000 al terminar."
+      ]
+    },
+    {
+      "id": "prep-hombro",
+      "nombre": "Preparación específica del hombro",
+      "grupo": "movilidad",
+      "material": [
+        "barra"
+      ],
+      "tecnica": [
+        "2 suspensiones pasivas de 20 s.",
+        "2 × 8 retracciones escapulares colgado, sin doblar el codo, solo bajando los hombros.",
+        "Obligatorio antes de cualquier trabajo lastrado en barra. Subirse con 8 kg y el hombro frío es la vía rápida a una tendinopatía."
+      ]
+    }
+  ],
+  "calendario": [
+    {
+      "semana": "2026-09-14/2026-09-20",
+      "titulo": "Descarga y control",
+      "dias": [
+        {
+          "fecha": "2026-09-14",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas en el calentamiento + rodaje 40 min",
+          "objetivo": "techo 145 ppm"
+        },
+        {
+          "fecha": "2026-09-15",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: sesión completa A–H",
+          "objetivo": "lastradas 5 × 3 con 10 kg"
+        },
+        {
+          "fecha": "2026-09-16",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + rodaje 45 min + 6 progresivos de 80 m",
+          "objetivo": "techo 145 ppm"
+        },
+        {
+          "fecha": "2026-09-17",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito cronometrado",
+          "objetivo": "3–4 intentos · sin piernas ese día"
+        },
+        {
+          "fecha": "2026-09-18",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-09-19",
+          "dia": "Sáb",
+          "tipo": "control",
+          "sesion": "CONTROL: dominadas al máximo + 1.000 m a tope",
+          "objetivo": "≤ 3:50 · dominadas ≥ 12",
+          "clave": true
+        },
+        {
+          "fecha": "2026-09-20",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        }
+      ]
+    },
+    {
+      "semana": "2026-09-21/2026-09-27",
+      "titulo": "Examen escrito el sábado 26",
+      "nota": "Carga reducida a propósito. Esa semana la carrera es secundaria.",
+      "dias": [
+        {
+          "fecha": "2026-09-21",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 6 × 300 m, rec. 2 min",
+          "objetivo": "1:06"
+        },
+        {
+          "fecha": "2026-09-22",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: sesión completa",
+          "objetivo": "lastradas 5 × 3 con 10 kg"
+        },
+        {
+          "fecha": "2026-09-23",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas esta semana",
+          "objetivo": "techo 145 ppm"
+        },
+        {
+          "fecha": "2026-09-24",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito a ritmo, sin cronometrar. O descanso si prefiere estudiar"
+        },
+        {
+          "fecha": "2026-09-25",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-09-26",
+          "dia": "Sáb",
+          "tipo": "examen",
+          "sesion": "EXAMEN ESCRITO. Descanso total",
+          "clave": true
+        },
+        {
+          "fecha": "2026-09-27",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Opcional: 30 min muy suaves"
+        }
+      ]
+    },
+    {
+      "semana": "2026-09-28/2026-10-04",
+      "titulo": "Trabajo específico",
+      "dias": [
+        {
+          "fecha": "2026-09-28",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 6 × 400 m, rec. 90 s",
+          "objetivo": "1:28 · las 6 dentro de 3 s"
+        },
+        {
+          "fecha": "2026-09-29",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: sesión completa",
+          "objetivo": "lastradas 5 × 3 con 12,5 kg"
+        },
+        {
+          "fecha": "2026-09-30",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min",
+          "objetivo": "600 en 2:13 · 400 en 1:28",
+          "clave": true
+        },
+        {
+          "fecha": "2026-10-01",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito cronometrado"
+        },
+        {
+          "fecha": "2026-10-02",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-10-03",
+          "dia": "Sáb",
+          "tipo": "carrera",
+          "sesion": "Rodaje 55 min + 10 min de gemelo, saltos y core",
+          "objetivo": "techo 145 ppm · sin dominadas"
+        },
+        {
+          "fecha": "2026-10-04",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        }
+      ]
+    },
+    {
+      "semana": "2026-10-05/2026-10-11",
+      "titulo": "Afilado y simulacro completo",
+      "dias": [
+        {
+          "fecha": "2026-10-05",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
+          "objetivo": "1:25"
+        },
+        {
+          "fecha": "2026-10-06",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: sesión completa",
+          "objetivo": "lastradas 5 × 3 con 12,5 kg"
+        },
+        {
+          "fecha": "2026-10-07",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
+          "objetivo": "2:08"
+        },
+        {
+          "fecha": "2026-10-08",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito · o el simulacro completo aquí, que es la mejor opción"
+        },
+        {
+          "fecha": "2026-10-09",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-10-10",
+          "dia": "Sáb",
+          "tipo": "control",
+          "sesion": "SIMULACRO COMPLETO: circuito → dominadas al máximo → 1.000 m",
+          "objetivo": "1.000 m ≤ 3:40 · circuito ≤ 9,5 s · dominadas ≥ 13",
+          "clave": true
+        },
+        {
+          "fecha": "2026-10-11",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        }
+      ]
+    },
+    {
+      "semana": "2026-10-12/2026-10-18",
+      "titulo": "Velocidad específica",
+      "dias": [
+        {
+          "fecha": "2026-10-12",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
+          "objetivo": "0:41 · las 8 entre 0:40 y 0:42"
+        },
+        {
+          "fecha": "2026-10-13",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: sesión completa",
+          "objetivo": "lastradas 4 × 3 con 15 kg"
+        },
+        {
+          "fecha": "2026-10-14",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
+          "objetivo": "600 en 2:08 · 200 en 0:41"
+        },
+        {
+          "fecha": "2026-10-15",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito cronometrado"
+        },
+        {
+          "fecha": "2026-10-16",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-10-17",
+          "dia": "Sáb",
+          "tipo": "carrera",
+          "sesion": "Rodaje 45 min + 10 min de gemelo, saltos y core",
+          "objetivo": "techo 145 ppm · sin dominadas"
+        },
+        {
+          "fecha": "2026-10-18",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        }
+      ]
+    },
+    {
+      "semana": "2026-10-19/2026-10-25",
+      "titulo": "Llegar entero",
+      "nota": "Nada de 1.000 a tope esta semana. El objetivo ya no es medir, es llegar entero.",
+      "dias": [
+        {
+          "fecha": "2026-10-19",
+          "dia": "Lun",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 4 × 400 m, rec. 2:30",
+          "objetivo": "1:25 clavados, sin sufrir de más"
+        },
+        {
+          "fecha": "2026-10-20",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Arsenal: descarga · solo A, B y D",
+          "objetivo": "lastradas 4 × 3 con 10 kg"
+        },
+        {
+          "fecha": "2026-10-21",
+          "dia": "Mié",
+          "tipo": "carrera",
+          "sesion": "3 × 5 dominadas + 600 m + 400 m, rec. 5 min",
+          "objetivo": "2:08 y 1:24, ambas al primer intento"
+        },
+        {
+          "fecha": "2026-10-22",
+          "dia": "Jue",
+          "tipo": "circuito",
+          "sesion": "21:30 circuito a ritmo, sin cronometrar"
+        },
+        {
+          "fecha": "2026-10-23",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        },
+        {
+          "fecha": "2026-10-24",
+          "dia": "Sáb",
+          "tipo": "control",
+          "sesion": "SIMULACRO LIGERO: circuito + dominadas al máximo + 600 m a ritmo de prueba",
+          "objetivo": "600 m en 2:08 · acaba con sensación de sobra",
+          "clave": true
+        },
+        {
+          "fecha": "2026-10-25",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso"
+        }
+      ]
+    },
+    {
+      "semana": "2026-10-26/2026-11-01",
+      "titulo": "Afinamiento y prueba",
+      "nota": "Ajustar según la fecha exacta del llamamiento.",
+      "dias": [
+        {
+          "dia": "−5 días",
+          "tipo": "carrera",
+          "sesion": "3 × 4 dominadas muy suaves + 3 × 200 m a 0:42, rec. 3 min. Y a casa"
+        },
+        {
+          "dia": "−2 días",
+          "tipo": "carrera",
+          "sesion": "15 min suaves + 3 progresivos de 100 m + estiramientos"
+        },
+        {
+          "dia": "−1 día",
+          "tipo": "descanso",
+          "sesion": "Descanso, o 15 min muy suaves"
+        },
+        {
+          "dia": "Prueba",
+          "tipo": "prueba",
+          "sesion": "Calentamiento estándar completo, el de siempre. No inventar nada nuevo ese día",
+          "clave": true
+        }
+      ]
+    }
+  ],
+  "planDeCarrera": {
+    "control19sep": {
+      "200": "0:45",
+      "400": "1:31",
+      "600": "2:16",
+      "800": "3:02",
+      "meta": "3:50",
+      "nota": "El paso por el 600 va cuatro segundos más lento que el control del 31 de agosto. Es deliberado: si llega al 600 en 2:12 no le queda nada para los últimos 400."
+    },
+    "examen": {
+      "200": "0:42–0:43",
+      "400": "1:25–1:27",
+      "800": "2:51–2:55",
+      "meta": "< 3:45",
+      "consejos": [
+        "Salir por el interior de la calle 1 y pelear el sitio en los primeros 30 m. Cuanto más afuera, más metros.",
+        "Los primeros 200 m son la trampa: la salida es en grupo y el pelotón sale disparado. El primer 200 va en 0:42–0:43, no en 0:37.",
+        "Desde el 800, todo lo que quede.",
+        "Al cruzar la meta, colocarse en fila y no dejar que nadie adelante: el tribunal asigna los tiempos por orden de llegada."
+      ]
+    }
+  },
+  "escenariosNota": [
+    {
+      "nombre": "Conservador",
+      "mil": "3:45",
+      "milPuntos": 1,
+      "dominadas": 15,
+      "dominadasPuntos": 8,
+      "circuito": 9.5,
+      "circuitoPuntos": 7,
+      "media": 5.3,
+      "resultado": "apto"
+    },
+    {
+      "nombre": "Realista",
+      "mil": "3:40",
+      "milPuntos": 2,
+      "dominadas": 15,
+      "dominadasPuntos": 8,
+      "circuito": 9.2,
+      "circuitoPuntos": 8,
+      "media": 6.0,
+      "resultado": "apto"
+    },
+    {
+      "nombre": "Bueno",
+      "mil": "3:35",
+      "milPuntos": 3,
+      "dominadas": 17,
+      "dominadasPuntos": 10,
+      "circuito": 9.0,
+      "circuitoPuntos": 8,
+      "media": 7.0,
+      "resultado": "apto"
+    },
+    {
+      "nombre": "Con un cero",
+      "mil": "3:50",
+      "milPuntos": 0,
+      "media": null,
+      "resultado": "eliminado"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "comer",
+      "titulo": "Comer antes de entrenar",
+      "texto": "3–4 horas antes: 80–100 g de hidratos (arroz, patata, quinoa, pasta sin gluten certificada) más proteína. 60–90 min antes: algo ligero de digestión rápida (plátano, dátiles, tortitas de arroz).",
+      "origen": "El 21/08 entrenó con un filete de pollo y nada más. El 31/08, con una comida a las 13:30 y un café. Las dos veces se notó en los números."
+    },
+    {
+      "id": "cuello",
+      "titulo": "Regla del cuello para entrenar con catarro",
+      "texto": "Síntomas por encima del cuello (mocos, garganta, estornudos): se puede entrenar suave. Por debajo (pecho cargado, tos persistente, fiebre, dolor muscular): no se entrena. Ojo con los antigripales tipo Frenadol: paracetamol y dextrometorfano tapan la fiebre y la tos, así que se entrena sin poder leer las propias señales. Fiarse del pulso, no de la sensación.",
+      "origen": "Sesión del 03/09 con el pecho cargado: la FC no bajó de 174 en ninguna recuperación."
+    },
+    {
+      "id": "descanso",
+      "titulo": "Descanso significa descanso",
+      "texto": "Un día de descanso en el plan no son cinco horas subiendo a 600 metros.",
+      "origen": "La subida a Teror del 07/09, en un día pautado de descanso, provocó el estado de sobrecarga y el aplazamiento del control."
+    },
+    {
+      "id": "dia-torcido",
+      "titulo": "Si el día viene torcido, cambia la sesión",
+      "texto": "Jornada dura, mala noche o recados de tres horas: cambiar la calidad por 40 min de rodaje y moverla. Una sesión perdida no cuesta nada; una hecha en mal estado deja datos falsos y la moral tocada."
+    },
+    {
+      "id": "dormir",
+      "titulo": "Dormir",
+      "texto": "Acostarse antes de las 00:30. No hace falta llegar a nueve horas: pasar de 4h15 a 6h30 ya cambia el cuadro por completo.",
+      "origen": "Del 25 al 31 de agosto durmió una media de 4h14 frente a una necesidad de 8h50. Desde el 3 de septiembre, tres noches por encima de 6h30 y la VFC de 7 días volvió a equilibrio."
+    },
+    {
+      "id": "no-testear",
+      "titulo": "No testear de más",
+      "texto": "Solo los controles marcados: 19 de septiembre, 10 y 24 de octubre, y el examen. Testear cada semana desgasta y no informa."
+    },
+    {
+      "id": "dos-repeticiones",
+      "titulo": "Regla de las dos repeticiones",
+      "texto": "Si falla el tiempo objetivo por más de 3 s en dos repeticiones seguidas, la sesión se acabó: vuelta a la calma y a casa. Si pasa dos semanas seguidas, el problema son los ritmos y hay que bajarlos."
+    },
+    {
+      "id": "medir-distancias",
+      "titulo": "Medir las distancias con el reloj",
+      "texto": "La pista del parque tiene rectas largas y curvas cortas, sin marcas fiables. Programar las sesiones en Garmin Connect con las repeticiones por distancia y desactivar el Auto Lap.",
+      "origen": "Los 41 segundos del 24/08 eran en realidad unos 175 metros, no 200."
+    }
+  ],
+  "historial": {
+    "carrera": [
+      {
+        "fecha": "2026-08-21",
+        "sesion": "4 × 1.000 m en circuito de ida y vuelta",
+        "objetivo": "1:38–1:40 / 400 m",
+        "resultado": {
+          "repeticiones": [
+            "4:32.7",
+            "4:25.9",
+            "4:22.0",
+            "4:34.2"
+          ],
+          "fcMedia": [
+            159,
+            162,
+            167,
+            162
+          ],
+          "fcPico": 177,
+          "descansosReales": [
+            "5:30",
+            "6:54",
+            "6:09"
+          ]
+        },
+        "valida": false,
+        "valoracion": "No válida. Sin calentamiento (FC 87 al empezar), sin hidratos, tras un día de trabajo y tres horas de compras. El giro de 180° del metro 500 costó ~3 s más 5–7 de reaceleración."
+      },
+      {
+        "fecha": "2026-08-24",
+        "sesion": "8 × 200 m, rec. 90 s",
+        "objetivo": "0:46",
+        "resultado": {
+          "rango": "40–43 s",
+          "cronometraje": "manual con móvil"
+        },
+        "valida": false,
+        "valoracion": "Buen perfil (bajón en la 4 y 5, remontada en 6-7-8) pero la distancia no eran 200 m sino unos 175. Desde aquí, todo medido por el reloj."
+      },
+      {
+        "fecha": "2026-08-26",
+        "sesion": "3 × 8 min de umbral",
+        "objetivo": "4:25 /km",
+        "resultado": {
+          "ritmos": [
+            "4:55",
+            "4:51",
+            "4:59"
+          ],
+          "fcMedia": [
+            177,
+            186,
+            189
+          ],
+          "fcPico": 195
+        },
+        "valoracion": "Ritmo mal calibrado: a 4:55 iba al 95–97 % de su máxima. Se hizo con 3h17 de sueño. Aquí apareció el dato clave: FC máx ≥ 195."
+      },
+      {
+        "fecha": "2026-08-31",
+        "sesion": "600 m a tope (control)",
+        "objetivo": "medición",
+        "resultado": {
+          "tiempo": "2:12",
+          "parciales200": [
+            "43.0",
+            "43.9",
+            "45.0"
+          ],
+          "parciales100": [
+            "20.8",
+            "22.2",
+            "21.0",
+            "22.9",
+            "22.5",
+            "22.5"
+          ],
+          "fcMedia": 179,
+          "fcPico": 191
+        },
+        "hito": true,
+        "valoracion": "Muy bien corrido: solo 2 s entre el primer 200 y el último, demasiado regular para un esfuerzo vaciado, así que quedaba reserva. Sin remate final. Con 4h09 de sueño, tres días tras doble extracción de muelas y siete horas sin comer. Es un suelo, no un techo."
+      },
+      {
+        "fecha": "2026-09-03",
+        "sesion": "10 × 200 m, rec. 90 s",
+        "objetivo": "0:45 · rec. a 6:00–6:30",
+        "resultado": {
+          "repeticiones": [
+            "46.6",
+            "46.4",
+            "47.8",
+            "47.1",
+            "46.1",
+            "43.0",
+            "43.0",
+            "42.9",
+            "43.9",
+            "44.7"
+          ],
+          "media": "45.1",
+          "fcEnRecuperaciones": "174–184",
+          "ritmoRecuperaciones": "6:18 → 7:55 /km"
+        },
+        "valoracion": "Media clavada en el objetivo y distancias por fin medidas por el reloj. Bandera roja: la FC no bajó de 174 en ninguna recuperación. Entrenó con el pecho cargado y tos. No aporta información sobre el kilómetro."
+      },
+      {
+        "fecha": "2026-09-06",
+        "sesion": "Rodaje de recuperación 40 min",
+        "objetivo": "≤ 155 ppm",
+        "resultado": {
+          "distanciaKm": 6.64,
+          "ritmo": "6:01 /km",
+          "fcMedia": 165,
+          "fcMax": 184,
+          "desnivelPositivo": 103,
+          "tiempoBajo155": "16 %"
+        },
+        "valoracion": "Superó el techo, pero mejora real: el 31/08 trotaba a 6:04 con 171 y aquí, en llano, 159–160. Once pulsaciones menos en seis días. Las cuestas justifican del km 3 al 6, no los dos primeros."
+      },
+      {
+        "fecha": "2026-09-07",
+        "sesion": "Subida a Teror a pie (día pautado de descanso)",
+        "objetivo": "—",
+        "resultado": {
+          "duracion": "5h03",
+          "distanciaKm": 13.76,
+          "desnivelPositivo": 545,
+          "altitud": "231 → 633 m",
+          "horario": "20:12 → 01:15",
+          "fcMedia": 105,
+          "fcMax": 157,
+          "tiempoSobre120ppm": "30 min"
+        },
+        "valida": false,
+        "valoracion": "La causa de todo lo que vino después. Carga muscular enorme y la noche perdida. Al reloj le entraron 15 puntos de carga aeróbica baja por cinco horas de esfuerzo: toda la fatiga, casi nada del crédito."
+      },
+      {
+        "fecha": "2026-09-09",
+        "sesion": "4 × 8 min de umbral, terreno llano",
+        "objetivo": "166–172 ppm",
+        "resultado": {
+          "ritmos": [
+            "5:32",
+            "5:53",
+            "5:53",
+            "5:53"
+          ],
+          "fcMedia": [
+            163,
+            167,
+            168,
+            168
+          ],
+          "desnivelPorBloque": "10–12 m"
+        },
+        "hito": true,
+        "valoracion": "Ejecución impecable, resultado concluyente. El criterio para correr el control era 4:25–4:45 /km; salió 5:53. Control aplazado del 12 al 19."
+      },
+      {
+        "fecha": "2026-09-11",
+        "sesion": "Sin entrenar · estado de recuperación",
+        "objetivo": "—",
+        "resultado": {
+          "cargaAguda": "381 → 273",
+          "predisposicion": "91/100"
+        },
+        "valoracion": "La descarga funcionó en dos días. Fuera de sobrecarga, VFC de vuelta al equilibrio. Sigue en No productivo: el foco de carga no cambia hasta que haya volumen suave de verdad."
+      }
+    ],
+    "dominadas": [
+      {
+        "fecha": "2026-08-24",
+        "series": [
+          10,
+          7,
+          4
+        ],
+        "total": 21,
+        "descanso": "3,5–4 min",
+        "contexto": "4 min después de 8 × 200",
+        "valoracion": "Caída del 60 % con descanso completo: falta reserva de fuerza. La primera serie al fallo condiciona las otras dos."
+      },
+      {
+        "fecha": "2026-09-03",
+        "series": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "total": 20,
+        "descanso": "1 min",
+        "contexto": "Antes de correr, con resfriado",
+        "valoracion": "Última repetición al borde del fallo, explicado por el descanso de un minuto, no por pérdida de fuerza. Corregido a 3 min."
+      },
+      {
+        "fecha": "2026-09-06",
+        "series": [
+          5,
+          5
+        ],
+        "total": 10,
+        "descanso": "3 min",
+        "contexto": "Opcionales, después del rodaje",
+        "valoracion": "Completadas."
+      },
+      {
+        "fecha": "2026-09-09",
+        "series": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "total": 20,
+        "descanso": "3 min",
+        "contexto": "Sesión aparte de 11 min, FC 105–127",
+        "valoracion": "Pulso tranquilo: esta vez sí se respetaron los descansos."
+      },
+      {
+        "fecha": "2026-09-10",
+        "series": "Escalera con 10 kg: 1-2-3-4-(4+fallo). Luego sin lastre, tras 3 min: 5-4-3-2-1 con 30 s",
+        "total": 29,
+        "lastradas": 14,
+        "descanso": "30 s dentro de cada escalera",
+        "hito": true,
+        "valoracion": "El mejor dato de dominadas hasta ahora. 14 repeticiones con 10 kg pesando ~65 apuntan a un máximo en fresco con lastre de unas 6, que suele corresponder a 13–15 a peso corporal. Dos avisos: fue al fallo con lastre y 30 s de descanso lo convierte en densidad, no en fuerza máxima."
+      }
+    ],
+    "circuito": [
+      {
+        "fecha": "2026-09-10",
+        "tiempoSegundos": 9.9,
+        "condiciones": "Al 60 %, contando pasos entre conos, sin saber que le cronometraban",
+        "puntosEstimados": 6,
+        "hito": true,
+        "valoracion": "Cambia la estrategia entera. A tope debería andar por 9,0–9,4, que son 7–8 puntos. Cronometrarlo en serio al principio de una sesión."
+      }
+    ],
+    "sueno": [
+      {
+        "fecha": "2026-08-25",
+        "duracion": "4h17",
+        "puntuacion": 52,
+        "calidad": "Deficiente",
+        "fcReposo": 51
+      },
+      {
+        "fecha": "2026-08-26",
+        "duracion": "3h17",
+        "puntuacion": 38,
+        "calidad": "Deficiente",
+        "fcReposo": 48
+      },
+      {
+        "fecha": "2026-08-27",
+        "duracion": "4h05",
+        "puntuacion": 47,
+        "calidad": "Deficiente",
+        "fcReposo": 47
+      },
+      {
+        "fecha": "2026-08-28",
+        "duracion": "3h08",
+        "puntuacion": 37,
+        "calidad": "Deficiente",
+        "fcReposo": 46
+      },
+      {
+        "fecha": "2026-08-29",
+        "duracion": "6h08",
+        "puntuacion": 75,
+        "calidad": "Aceptable",
+        "fcReposo": 47
+      },
+      {
+        "fecha": "2026-08-30",
+        "duracion": "4h35",
+        "puntuacion": 49,
+        "calidad": "Deficiente",
+        "fcReposo": 52
+      },
+      {
+        "fecha": "2026-08-31",
+        "duracion": "4h09",
+        "puntuacion": 52,
+        "calidad": "Deficiente",
+        "fcReposo": 49
+      },
+      {
+        "fecha": "2026-09-03",
+        "duracion": "6h30",
+        "puntuacion": 78,
+        "calidad": "Aceptable",
+        "fcReposo": 48,
+        "profundo": "1h49",
+        "rem": "48m",
+        "vfcNocturna": 53
+      },
+      {
+        "fecha": "2026-09-09",
+        "duracion": "7h56",
+        "puntuacion": 91,
+        "calidad": "Excelente",
+        "fcReposo": 46,
+        "profundo": "1h24",
+        "rem": "1h14",
+        "vfcNocturna": 67,
+        "bodyBattery": "+72"
+      },
+      {
+        "fecha": "2026-09-11",
+        "duracion": "7h41",
+        "puntuacion": 88,
+        "calidad": "Bueno",
+        "fcReposo": 47,
+        "profundo": "1h09",
+        "rem": "1h21",
+        "vfcNocturna": 60,
+        "bodyBattery": "+70"
+      }
+    ],
+    "necesidadSuenoEstimada": "8h50",
+    "garmin": [
+      {
+        "fecha": "2026-09-06",
+        "estado": "No productivo",
+        "vfc": 56,
+        "vfcEstado": "Equilibrada",
+        "cargaAguda": 384,
+        "anaerobica": 111,
+        "aerobicaAlta": 648,
+        "aerobicaBaja": 75,
+        "vo2max": 54
+      },
+      {
+        "fecha": "2026-09-09",
+        "estado": "Sobrecarga",
+        "vfc": 54,
+        "vfcEstado": "Desequilibrada",
+        "cargaAguda": 381,
+        "anaerobica": 111,
+        "aerobicaAlta": 759,
+        "aerobicaBaja": 90,
+        "vo2max": 54,
+        "mensaje": "Tu forma física está empeorando y el estado de VFC indica que a tu cuerpo le está costando recuperarse."
+      },
+      {
+        "fecha": "2026-09-11",
+        "estado": "No productivo",
+        "vfc": 56,
+        "vfcEstado": "Equilibrado",
+        "cargaAguda": 273,
+        "cargaAgudaEstado": "Óptimo",
+        "predisposicion": 91,
+        "tiempoRecuperacion": "0h",
+        "estresReciente": "Bajo",
+        "vo2max": 54
+      }
+    ]
+  },
+  "evolucionEstimacion1000": [
+    {
+      "fecha": "2026-08-21",
+      "estimacion": "≈ 4:00",
+      "motivo": "Primera lectura sobre las series de 1.000, que resultaron no ser válidas"
+    },
+    {
+      "fecha": "2026-08-24",
+      "estimacion": "3:45–3:55",
+      "motivo": "Corregida por el estado de ayuno y fatiga de aquel día"
+    },
+    {
+      "fecha": "2026-08-26",
+      "estimacion": "4:05–4:20",
+      "motivo": "Sobrecorrección: la sesión de umbral se hizo con 3h17 de sueño"
+    },
+    {
+      "fecha": "2026-08-31",
+      "estimacion": "3:48–3:56",
+      "motivo": "Primera medición real: 600 m en 2:12",
+      "vigente": true
+    }
+  ],
+  "contextoDelUsuario": {
+    "situacion": "Militar en activo. Compagina trabajo, temario de la oposición y entrenamiento.",
+    "gimnasios": [
+      "Gimnasio del preparador (jueves, circuito)",
+      "Gimnasio del Arsenal de Las Palmas, nuevo y con mucha variedad"
+    ],
+    "diasQueCorre": "Solo dispone de un parque de calistenia con barra de dominadas y barra de paralelas",
+    "pista": "Circuito del parque con rectas largas y curvas cortas, no es pista de atletismo convencional",
+    "circuitoAnterior": "Circuito de ida y vuelta de 500 m con giro de 180° en el metro 500. Solo para rodajes suaves.",
+    "dieta": "Sin gluten"
+  },
+  "lesiones": {
+    "cintillo": "Cintillo iliotibial en la rodilla izquierda, resuelto con fisio. Nota tirantez al apretar 10-15 min por encima del umbral. NO se cambian sesiones por esto: el umbral de los miércoles es EN umbral, no por encima. Se añade glúteo medio los martes. Regla de parada: si pasa de 'lo noto' a 'me molesta al correr', esa sesión se acaba.",
+    "pies": "Pies planos y propensión a fascitis plantar. Plantillas 3D de ICOT. Elevaciones de talón a una pierna innegociables los sábados. Señal de alarma: dolor de talón en los primeros pasos de la mañana."
+  }
+}
