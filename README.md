@@ -7,7 +7,8 @@ CLAUDE.md             instrucciones para Claude Code
 datos/plan.json       baremo, zonas, ritmos, calendario, protocolos, dieta, lesiones
 datos/historial.json  todas las sesiones, sueño y lecturas del Garmin
 docs/index.html       la web · GitHub Pages publica desde esta carpeta
-archivos-garmin/      deja aquí los .fit y .csv que vayas exportando (no se sube al repo)
+herramientas/         analizar.py, el guion que procesa los archivos del Garmin
+archivos-garmin/      deja aquí los .fit y .csv que exportes (no se suben al repo)
 ```
 
 ---
@@ -16,14 +17,21 @@ archivos-garmin/      deja aquí los .fit y .csv que vayas exportando (no se sub
 
 ```bash
 cd plan-cadiz
+pip install fitdecode --break-system-packages
 claude
 ```
 
 Primer mensaje: **«Lee CLAUDE.md y los dos archivos de datos.»**
 
-A partir de ahí, arrastra el `.fit` de cada entrenamiento y él analiza, registra, decide si hay que cambiar algo y actualiza la web.
+A partir de ahí, deja el `.zip` o el `.fit` en `archivos-garmin/` y dile **«analiza el entrenamiento de hoy»**. Él ejecuta el guion de análisis, decide si la sesión es válida, la registra, valora si hay que cambiar el plan, actualiza la web y te responde.
 
----
+## Analizar un entrenamiento a mano
+
+```bash
+python3 herramientas/analizar.py archivos-garmin/24363177380.zip
+```
+
+Acepta `.fit`, `.tcx`, `.zip` y el `.csv` de sueño, varios a la vez. Saca minuto a minuto, franjas de pulso, deriva cardíaca, cadencia, desnivel real y series de fuerza.
 
 ## Publicar en GitHub Pages
 
