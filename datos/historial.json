@@ -1,9 +1,91 @@
 {
   "meta": {
-    "actualizado": "2026-09-15",
+    "actualizado": "2026-09-16",
     "nota": "Añade cada sesión nueva al principio del array que corresponda. No borres nada."
   },
   "carrera": [
+    {
+      "fecha": "2026-09-16",
+      "sesion": "Rodaje 45 min + 6 progresivos de 80 m",
+      "objetivo": "media 135–140 · techo 145",
+      "valida": true,
+      "resultado": {
+        "duracion": "45:00",
+        "km": 5.8,
+        "ritmo": "7:46/km",
+        "fcMedia": 143,
+        "fcMax": 153,
+        "cadencia": 156,
+        "zancadaMm": 819,
+        "contactoMs": 301,
+        "desnivelPos": 13,
+        "terreno": "llano",
+        "franjas": {
+          "<130": "1%",
+          "130-140": "10%",
+          "140-145": "71%",
+          "145-155": "18%",
+          ">155": "0%"
+        },
+        "deriva": {
+          "min5a10": "7:35/km a 142 ppm",
+          "min40a45": "8:14/km a 144 ppm",
+          "sKm": 38,
+          "pct": 8,
+          "referenciaBaseAsentada": "por debajo del 5 %"
+        },
+        "horaInicioLocal": "21:10",
+        "progresivos": {
+          "n": 6,
+          "distanciaM": 80,
+          "tiemposS": [
+            18.2,
+            17.3,
+            16.3,
+            16.5,
+            14.7,
+            14.8
+          ],
+          "pausasS": 90,
+          "pausaAndando": "112–118 m en 90 s",
+          "fcMaxPorPaso": [
+            130,
+            158,
+            159,
+            157,
+            158,
+            160
+          ],
+          "nota": "Programado en el reloj como pasos de 80 m con 90 s de pausa: distancias y pausas exactas. Los cuatro primeros dentro de la referencia de 16–18 s; los dos últimos, a 14,7 y 14,8 s, van por encima del ritmo de 400 (3:05/km frente a 3:20). No son sprints: el sábado antes del control, no."
+        },
+        "bloques5min": {
+          "ritmos": [
+            "7:08",
+            "7:35",
+            "7:56",
+            "7:45",
+            "7:41",
+            "7:49",
+            "7:52",
+            "8:02",
+            "8:14"
+          ],
+          "fc": [
+            141,
+            142,
+            144,
+            142,
+            143,
+            143,
+            144,
+            144,
+            144
+          ],
+          "nota": "Llano: ±5 m por bloque. El pulso se queda entre 141 y 144 los 45 minutos y el ritmo cae de forma continua, no solo al final."
+        }
+      },
+      "valoracion": "Válida como rodaje; no reestima nada. Ejecución del pulso, bien: 71 % del tiempo entre 140 y 145, máximo 153, ni un segundo por encima de 155. La media, 143, va tres pulsaciones por encima del objetivo 135–140 porque sale a 7:08 los cinco primeros minutos y la FC se planta en 142–144 desde ahí. Deriva: del bloque 5–10 (7:35 a 142) al 40–45 (8:14 a 144) son 38 s/km, un 8 % de desacople en 40 minutos, con el ritmo cayendo de forma continua. La referencia habitual de base asentada es menos del 5 %. Serie de tres rodajes con banda: 12 sep 90 s/km en 35 min; 14 sep cero, pero con 53 m de desnivel y 40 min; 16 sep 38 s/km en 45 min en llano. Tres puntos no hacen tendencia; lo único que se puede decir es que el 12 parece el peor día y no el estado normal. Factores de hoy que empeoran la deriva y no son forma: primera sentadilla y jalón el día anterior, salida a 7:08, 45 min en vez de 35–40, empezar a las 21:10 tras las dominadas. Progresivos: 6 × 80 m exactos con 90 s de pausa, programados en el reloj; los dos últimos, a 14,7 y 14,8 s, más rápidos que el ritmo de 400. Al acabar, a las 22:09, el reloj pedía 37 h de recuperación, hasta el viernes a mediodía. El control del sábado queda fuera de esa ventana."
+    },
     {
       "fecha": "2026-09-14",
       "sesion": "Rodaje 40 min",
@@ -211,6 +293,18 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-09-16",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "descanso": "3 min",
+      "contexto": "antes de correr, 20:50 hora local",
+      "valoracion": "Habituación como estaba pautada. FC media 116, pico 153. Series de 16 a 32 s."
+    },
+    {
       "fecha": "2026-09-15",
       "sesion": "Arsenal · fuerza (A, B, D, H)",
       "series": [
@@ -324,6 +418,23 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-09-16",
+      "duracion": "7h20",
+      "puntuacion": 79,
+      "calidad": "Aceptable",
+      "fcReposo": 46,
+      "vfc": 61,
+      "profundo": "1h39",
+      "rem": "35m",
+      "inquietud": 51,
+      "bodyBattery": "+74",
+      "estresMedio": 12,
+      "spo2Media": "97%",
+      "spo2Minimo": "82% (segunda noche seguida; lectura puntual de muñeca)",
+      "vfc7dias": "Equilibrado",
+      "nota": "REM muy corto (35 min frente a 1h06–1h21 las noches anteriores) y 51 momentos de inquietud."
+    },
     {
       "fecha": "2026-09-15",
       "duracion": "7h26",
@@ -446,6 +557,28 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-16",
+      "estado": "No productivo",
+      "mensaje": "La carga de entreno general parece adecuada, pero tu forma física está empeorando.",
+      "vo2max": 53,
+      "vfc": 59,
+      "vfcEstado": "Equilibrado",
+      "cargaAguda": 275,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 0.9,
+      "ventanaFocoCarga": "19 ago – 16 sep",
+      "focoCarga": "Aeróbica alta",
+      "anaerobica": 159,
+      "aerobicaAlta": 759,
+      "aerobicaBaja": 218,
+      "predisposicion": 45,
+      "predisposicionEstado": "Bajo (medida a las 22:09, justo después de la sesión)",
+      "tiempoRecuperacion": "37h",
+      "estresReciente": "Medio",
+      "fcReposoRango": "51 ppm (rango 46–59)",
+      "valoracion": "El VO2 máx baja de 54 a 53 y el reloj lo lee como pérdida de forma. Es el método: el reloj lo estima cruzando ritmo y pulso, y tres rodajes a 7:45 con 143 ppm bajan la estimación aunque no haya cambiado nada. La aeróbica baja sube de 157 a 218 con el rodaje de 45 min y el foco cambia de etiqueta a «Aeróbica alta». La predisposición de 45 y las 37 h de recuperación están medidas justo después de entrenar: el dato que vale es el de mañana por la mañana."
+    },
     {
       "fecha": "2026-09-15",
       "ventanaFocoCarga": "18 ago – 15 sep",
