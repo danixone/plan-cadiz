@@ -26,6 +26,8 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**.
 
 Cuando te pase un archivo de entrenamiento, ejecuta esto entero sin que te lo pidan.
 
+**Esto vale para todo lo que me mande, no solo para los archivos de carrera:** archivos `.fit`, `.zip` o `.tcx`, el `.csv` de sueño, capturas del reloj o de Garmin Connect (estado de entrenamiento, foco de carga, predisposición, recuperación, VFC) y cualquier otro dato. Cada envío se analiza de forma minuciosa, no solo se registra: se cruza con el historial, se dice qué se mide y qué se supone, y **siempre se valora si cambia algo de los entrenos futuros** (Paso 4), diciéndolo de forma explícita aunque la respuesta sea que no cambia nada.
+
 ## Paso 1 · Analizar
 
 ```bash
@@ -170,18 +172,20 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 | Mié 16 sep | 3 × 5 dominadas + rodaje 45 min, techo 145 ppm |
 | Jue 17 sep | 21:30 circuito cronometrado, sin piernas ese día |
 | Vie 18 sep | Descanso |
-| **Sáb 19 sep** | **CONTROL 1.000 m en Telde, por la mañana.** Dominadas al máximo → 20 min → 1.000 m |
+| **Sáb 19 sep** | **CONTROL 1.000 m en la pista del parque San Cristóbal (Las Palmas).** Dominadas al máximo → 20 min → 1.000 m. Telde es inaccesible ese día; el cambio de pista es inamovible |
 
 **Reparto del control:** 200 en 0:45 · 400 en 1:31 · 600 en 2:16 · 800 en 3:02 · meta 3:50
 
 Es la sesión más importante que queda antes de Cádiz: de ese número dependen los ritmos de los bloques siguientes. El resto del calendario está en `datos/plan.json`.
+
+**Pista de San Cristóbal:** pista de atletismo de 400 m con rectas largas y curvas cortas, en el parque San Cristóbal (Las Palmas). Es donde hizo los 6 × 80 m del 16 de septiembre. Para los controles: actividad **Carrera en pista** del Forerunner 265, calle 1, calentamiento de al menos cuatro vueltas para que calibre la distancia (manual del FR265). Si el reloj no reconoce la pista por su geometría, la referencia es la propia pista: 1.000 m son dos vueltas y media.
 
 ---
 
 # PENDIENTE
 
 - Fecha exacta de las pruebas y minutos entre ellas, cuando llegue el llamamiento.
-- Confirmar el horario de la pista de Telde.
+- Telde queda descartada para los sábados. Si algún control cae entre semana, confirmar su horario.
 - Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT.
 - Cronometrar el circuito en serio, fresco y al principio de una sesión.
 - Segunda zapatilla de rodaje, aplazada por coste.

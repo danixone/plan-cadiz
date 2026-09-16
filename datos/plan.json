@@ -37,7 +37,7 @@
       "Arsenal de Las Palmas (martes)",
       "Gimnasio del preparador (jueves, circuito)"
     ],
-    "pista": "Solo Telde. La Ciudad Deportiva de Gran Canaria está en obras hasta enero de 2027"
+    "pista": "Parque San Cristóbal (Las Palmas): pista de atletismo de 400 m con rectas largas y curvas cortas, accesible cualquier día. Telde solo entre semana, inaccesible los sábados. La Ciudad Deportiva de Gran Canaria está en obras hasta enero de 2027"
   },
   "objetivo": {
     "oposicion": "Policía Nacional · Escala Básica",
@@ -893,9 +893,10 @@
           "fecha": "2026-09-19",
           "dia": "Sáb",
           "tipo": "control",
-          "sesion": "CONTROL: dominadas al máximo + 1.000 m a tope",
+          "sesion": "CONTROL: dominadas al máximo + 1.000 m a tope en San Cristóbal",
           "objetivo": "≤ 3:50 · dominadas ≥ 12",
-          "clave": true
+          "clave": true,
+          "lugar": "Pista del parque San Cristóbal, 400 m, calle 1"
         },
         {
           "fecha": "2026-09-20",
@@ -1206,7 +1207,9 @@
       "600": "2:16",
       "800": "3:02",
       "meta": "3:50",
-      "nota": "El paso por el 600 va cuatro segundos más lento que el control del 31 de agosto. Es deliberado: si llega al 600 en 2:12 no le queda nada para los últimos 400."
+      "nota": "El paso por el 600 va cuatro segundos más lento que el control del 31 de agosto. Es deliberado: si llega al 600 en 2:12 no le queda nada para los últimos 400.",
+      "pista": "Parque San Cristóbal, pista de 400 m: 1.000 m son dos vueltas y media, salida en la línea de 200 si está marcada. Actividad Carrera en pista del reloj, calle 1, calentamiento de cuatro vueltas o más para calibrar.",
+      "reloj": "Pantalla con tiempo transcurrido y distancia en grande para leer el paso por cada 200 sin pulsar nada. Los parciales de 200 se sacan después del archivo."
     },
     "examen": {
       "200": "0:42–0:43",
@@ -1317,7 +1320,7 @@
       "Gimnasio del Arsenal de Las Palmas, nuevo y con mucha variedad"
     ],
     "diasQueCorre": "Solo dispone de un parque de calistenia con barra de dominadas y barra de paralelas",
-    "pista": "Circuito del parque con rectas largas y curvas cortas, no es pista de atletismo convencional",
+    "pista": "Pista de atletismo de 400 m del parque San Cristóbal, con rectas largas y curvas cortas. Donde se hacen los progresivos y los controles",
     "circuitoAnterior": "Circuito de ida y vuelta de 500 m con giro de 180° en el metro 500. Solo para rodajes suaves.",
     "dieta": "Sin gluten"
   },
