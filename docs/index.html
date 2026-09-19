@@ -1241,9 +1241,10 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '12 sept': { anaerobica:111, alta:759, baja:129, estado:'No productivo', vfc:'58 ms equilibrado', aguda:252 },
     '14 sept': { anaerobica:127, alta:759, baja:162, estado:'No productivo', vfc:'57 ms equilibrado', aguda:227 },
     '15 sept': { anaerobica:127, alta:759, baja:157, estado:'No productivo', vfc:'60 ms equilibrado', aguda:'190 (baja, ratio 0,7)' },
-    '16 sept': { anaerobica:159, alta:759, baja:218, estado:'No productivo', vfc:'59 ms equilibrado', aguda:'275 (óptimo, ratio 0,9)' }
+    '16 sept': { anaerobica:159, alta:759, baja:218, estado:'No productivo', vfc:'59 ms equilibrado', aguda:'275 (óptimo, ratio 0,9)' },
+    '19 sept': { anaerobica:233, alta:736, baja:182, estado:'No productivo', vfc:'62 ms equilibrado', aguda:'384 (óptimo, ratio 1,2)' }
   };
-  var cargaSel = '16 sept';
+  var cargaSel = '19 sept';
   function drawCarga() {
     var host = document.getElementById('ch-carga'); if (!host) return;
     host.innerHTML = ''; var tip = attachTip(host);
@@ -1459,7 +1460,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     { key:'12 sept', label:'12 sept', color:C.blue },
     { key:'14 sept', label:'14 sept', color:C.ok },
     { key:'15 sept', label:'15 sept', color:C.warn },
-    { key:'16 sept', label:'16 sept', color:C.ink }
+    { key:'16 sept', label:'16 sept', color:C.ink },
+    { key:'19 sept', label:'19 sept', color:C.alert }
   ], function(k){ cargaSel = k; drawCarga();
     document.querySelectorAll('#lg-carga button').forEach(function(b){
       b.setAttribute('aria-pressed', b.textContent.trim()===k ? 'true':'false');
