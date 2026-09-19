@@ -10,15 +10,21 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 
 24 años, 67,4 kg, 172 cm, FC máxima 195, FC en reposo 45. Militar en activo en Gran Canaria. Compagina trabajo, temario y entrenamiento. Garmin Forerunner 265 con banda pectoral HRM 200.
 
-| Prueba | Ahora | Objetivo | **Elimina** |
-|---|---|---|---|
-| 1.000 m | 3:52 estimado | < 3:45 | **≥ 3:49** |
-| Dominadas | 13–15 estimado | 15–17 | ≤ 4 |
-| Circuito | 9,9 s al 60 % | < 9,5 s | ≥ 11,7 s |
+| Prueba | Ahora | Puntos | Objetivo | **Elimina** |
+|---|---|---|---|---|
+| 1.000 m | **3:34 medido el 19-9** (banda 3:30–3:38) | 3 | 3:32–3:36 | **≥ 3:49** |
+| Dominadas | 11 autoinformado el 19-9 | 5 | 15 (suelo 12) | ≤ 4 |
+| Circuito | 9,9 s al 60 %, sin medir en serio | 6 | ≤ 9,3 s (suelo 9,7) | ≥ 11,7 s |
 
 La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**.
 
-**El diagnóstico, que gobierna todas las decisiones:** velocidad le sobra, le falta sostenerla. Corre 200 m en 43 s sin despeinarse y se cae a los tres minutos. Su limitante es la base aeróbica, no la potencia.
+**Con las marcas de hoy la media es 4,67 y NO aprueba.** Falta un punto. Los tres más baratos: una dominada más (11 → 12), dos décimas de circuito (9,9 → 9,7) o cuatro segundos en el kilómetro (3:34 → 3:30).
+
+**Baremo verificado el 19-9-2026** en BOE-A-2026-15055 (BOE núm. 167 de 10-07-2026). Corrigió errores del anterior: 8-9 dominadas son 4 puntos (no 3) y 7 son 3 (no 2). Ya no quedan tramos interpolados.
+
+**El diagnóstico, que gobierna todas las decisiones:** velocidad le sobra, le falta sostenerla. Su limitante es la base aeróbica, no la potencia. El control del 19-9 lo confirma y a la vez sube el suelo: corrió el kilómetro en 3:34 cuando la estimación era 3:52, y pasó el 600 en 2:08, cuatro segundos más rápido que su 600 a tope del 31 de agosto. El agujero sigue siendo el mismo: carga aeróbica baja 182 frente a 736 de aeróbica alta, que el reloj marca insuficiente. Solo la mueven los rodajes largos.
+
+**FC máxima: ≥ 202**, medida el 19-9 con banda en esfuerzo máximo. El 195 anterior venía de una sesión no válida y era un suelo. Zonas por FCR con reposo 45: 124-139 / 139-155 / 155-171 / 171-186 / 186-202. **El techo de rodaje sigue en 145 y el umbral en 166-172: no suben.**
 
 ---
 
@@ -169,23 +175,49 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 
 | Día | Sesión |
 |---|---|
-| Mié 16 sep | 3 × 5 dominadas + rodaje 45 min, techo 145 ppm |
-| Jue 17 sep | 21:30 circuito cronometrado, sin piernas ese día |
-| Vie 18 sep | Descanso |
-| **Sáb 19 sep** | **CONTROL 1.000 m en la pista del parque San Cristóbal (Las Palmas).** Dominadas al máximo → 20 min → 1.000 m. Telde es inaccesible ese día; el cambio de pista es inamovible |
+| Lun 21 sep | 3 × 5 dominadas + 6 × 300 m a 1:05, rec. 2 min |
+| Mar 22 sep | Arsenal. Lastradas 5 × 3 con 10 kg, **sin subir peso**. Grabar una serie en vídeo |
+| Mié 23 sep | Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas |
+| **Jue 24 sep** | **21:30 circuito: 2 intentos CRONOMETRADOS de verdad.** Es el número que falta desde el 10 de septiembre y el punto más barato del plan |
+| Vie 25 sep | Descanso |
+| Sáb 26 sep | **EXAMEN ESCRITO.** Descanso total |
 
-**Reparto del control:** 200 en 0:45 · 400 en 1:31 · 600 en 2:16 · 800 en 3:02 · meta 3:50
+**Ritmos recalibrados sobre el 3:34 real.** Bloque A (21 sep – 4 oct): 200 en 0:43,5 · 300 en 1:05 · 400 en 1:27 · 600 en 2:11. Bloque B (5 – 18 oct): 0:43 · 1:26 · 2:08. Bloque C (prueba): 0:42,5 · 1:25 · 2:07, meta 3:32–3:36.
 
-Es la sesión más importante que queda antes de Cádiz: de ese número dependen los ritmos de los bloques siguientes. El resto del calendario está en `datos/plan.json`.
+**Reparto del examen:** 200 en 0:43 · 400 en 1:26 · 600 en 2:09 · 800 en 2:52 · meta 3:32–3:36. Si pasas el 600 por delante de 2:07, has salido demasiado rápido.
 
-**Pista de San Cristóbal:** pista de atletismo de 400 m con rectas largas y curvas cortas, en el parque San Cristóbal (Las Palmas). Es donde hizo los 6 × 80 m del 16 de septiembre. Para los controles: actividad **Carrera en pista** del Forerunner 265, calle 1, calentamiento de al menos cuatro vueltas para que calibre la distancia (manual del FR265). Si el reloj no reconoce la pista por su geometría, la referencia es la propia pista: 1.000 m son dos vueltas y media.
+El resto del calendario está en `datos/plan.json`.
+
+**Pista de San Cristóbal:** bucle de atletismo **NO homologado**. Rectas de ~170 m y curvas de radio ~8,5 m; una calle 1 homologada tiene rectas de 84,4 m y radio 36,5 m. **Perímetro sin medir: entre 392 y 400 m** según el ajuste del GPS, y el método no los distingue. Por eso toda marca medida ahí lleva ±1-2 % de escala. **No usar la calibración de cuatro vueltas del FR265:** el manual la condiciona a una pista estándar de 400 m. Antes del control del 10 de octubre hay que medir el anillo con rueda o cinta, o llevar el control a una pista homologada.
 
 ---
 
 # PENDIENTE
 
-- Fecha exacta de las pruebas y minutos entre ellas, cuando llegue el llamamiento.
-- Telde queda descartada para los sábados. Si algún control cae entre semana, confirmar su horario.
+- **Medir el perímetro de San Cristóbal** con rueda o cinta, o llevar el control del 10 de octubre a una pista homologada. Mientras no se haga, ninguna marca de ahí es una marca de baremo.
+- **Reconfigurar el reloj:** máxima 202 y reposo 45. Sigue con 195, reposo 46 y un umbral de 180 que no sale de ninguna medición. Al cambiarlo, el foco de carga deja de ser comparable con la ventana actual.
+- **Cronometrar el circuito en serio** el jueves 24, fresco y al principio de la sesión. Es el punto más barato que queda.
+- Fecha exacta de las pruebas, hora y minutos entre ellas, cuando llegue el llamamiento. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
+- **Hora fija para los controles del 10 y del 24 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.
 - Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT.
-- Cronometrar el circuito en serio, fresco y al principio de una sesión.
 - Segunda zapatilla de rodaje, aplazada por coste.
+
+---
+
+# ERRORES CORREGIDOS EL 19-9-2026
+
+Auditoría del plan tras el primer control. Lo que estaba mal:
+
+1. **El calentamiento prescribía 5:45-6:15 /km** cuando el rodaje suave va a 6:45-7:30 con techo 145. Mandaba calentar más rápido de lo que rueda. **Ahora el trote del calentamiento va por pulso, techo 145.** Él lo señaló y tenía razón.
+2. **La FC máxima (195)** venía de una sesión marcada no válida y su propia nota decía «≥ 195»: era un suelo, no una medida.
+3. **La estimación de 3:52** salía del 600 de 2:12 del 31-8, una sesión que el Paso 2 del propio plan prohíbe usar para reestimar. Falló por 14-22 s.
+4. **El «máximo confirmado 12» de dominadas** no aparece en ninguna sesión del historial: la mejor serie registrada eran 10. La estimación de 13-15 salía de una escalera con 30 s de descanso, que mide densidad y no fuerza.
+5. **El baremo de dominadas estaba mal:** daba 3 puntos a 8 repeticiones y 2 a 7. Lo oficial es 4 con 8-9 y 3 con 7.
+6. **Los ritmos de septiembre estaban lentos:** 300 en 1:06, 400 en 1:28 y 600 en 2:13 son ritmo de 3:40-3:42, más lento que su ritmo real de 1.000. Los de octubre ya estaban bien.
+7. **El miércoles se llamaba «umbral»** y del 21 de septiembre al 25 de octubre no hay ninguna sesión de umbral programada. Renombrado a «calidad 2». No se añade umbral: el déficit medido es aeróbica baja.
+8. **La progresión de lastre** fijaba 12,5 y 15 kg sin respetar su propia regla de las dos repeticiones en reserva. Ahora es condicional.
+9. **El guion del control omitió el prep-hombro**, que el plan marca obligatorio antes de cualquier trabajo en barra. Encaja con «no supe activar los omóplatos» y los bíceps hinchados.
+10. **Al cambiar el control de Telde a San Cristóbal el 17-9 se quitó el «por la mañana»** (que estaba por el horario de acceso de Telde) y no se sustituyó por ninguna advertencia sobre la hora. Corrió a las 13:01. **Error del entrenador, no suyo.**
+11. **La temperatura del reloj es del sensor de muñeca**, no ambiental. Sirve para comparar sesiones entre sí, no como dato meteorológico.
+
+**Protocolo nuevo:** toda serie máxima de dominadas se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena. Técnica oficial (BOE): palmas al frente, brazos completamente extendidos, barbilla claramente por encima de la barra, sin balanceo. **Un solo intento.**

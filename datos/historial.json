@@ -1,9 +1,198 @@
 {
   "meta": {
-    "actualizado": "2026-09-16",
+    "actualizado": "2026-09-19",
     "nota": "Añade cada sesión nueva al principio del array que corresponda. No borres nada."
   },
   "carrera": [
+    {
+      "fecha": "2026-09-19",
+      "sesion": "CONTROL 1.000 m · pista del parque San Cristóbal",
+      "valida": true,
+      "hito": true,
+      "horaLocal": "13:01 a 13:59 hora canaria",
+      "condiciones": {
+        "pista": "Bucle de atletismo NO homologado. Ajuste de estadio por mínimos cuadrados sobre 218 puntos GPS: recta completa 170 m, radio de curva 8,4-8,5 m, error 1,0-1,8 m. Una calle 1 homologada tiene recta de 84,4 m y radio 36,5 m: forzar ese radio da 28 m de error. Perímetro sin medir: entre 392 y 400 m según el ajuste, y el método no los distingue.",
+        "actividadReloj": "Carrera en pista (sub_sport=track), una sola actividad con pausas",
+        "temperaturaSensorMunecaC": {
+          "media": 31,
+          "max": 34,
+          "min": 29,
+          "lecturas": 3142,
+          "aviso": "Es el sensor de muñeca del reloj, no un termómetro ambiental: brazo, sol y sudor de por medio. Sirve para comparar sesiones entre sí, no como dato meteorológico. La curva baja a 29 durante el kilómetro (más aire) y vuelve a subir andando. Comparación con el mismo reloj: 28,1 °C de media a las 21:10 del 16 de septiembre frente a 31,0 a las 13:01 del 19.",
+          "temperaturaAmbiente": "NO VERIFICADA. No se ha podido consultar el dato de AEMET."
+        }
+      },
+      "resultado": {
+        "vueltaFIT": {
+          "distanciaM": 1010,
+          "tiempoS": 217.0,
+          "tiempo": "3:37,0"
+        },
+        "logroGrabadoPorElReloj": {
+          "distanciaM": 1000,
+          "tiempoS": 214.118,
+          "tiempo": "3:34,1",
+          "campo": "unknown_113 del FIT"
+        },
+        "interpolacionLineal1000": "3:34,9",
+        "distanciaAcumuladaReloj": 1016.2,
+        "sumaTramosGPS": 1014.3,
+        "vueltasRecorridas": 2.58,
+        "pasosPorLaSalida": [
+          {
+            "tS": 81,
+            "metrosReloj": 396.9
+          },
+          {
+            "tS": 171,
+            "metrosReloj": 786.9
+          }
+        ],
+        "parciales200": {
+          "tiempos": [
+            "0:40,0",
+            "1:22,0",
+            "2:08,0",
+            "2:54,0",
+            "3:35,0"
+          ],
+          "tramosS": [
+            40.0,
+            42.0,
+            46.0,
+            46.0,
+            41.0
+          ],
+          "objetivoDado": [
+            "0:45",
+            "1:31",
+            "2:16",
+            "3:02",
+            "3:50"
+          ]
+        },
+        "fcPorTramo": [
+          178,
+          190,
+          194,
+          196,
+          199
+        ],
+        "fcMedia": 192,
+        "fcMax": 202,
+        "potenciaPorTramoW": [
+          400,
+          434,
+          435,
+          395,
+          443
+        ],
+        "potenciaMediaW": 434,
+        "potenciaMaxW": 497,
+        "contactoSueloMs": [
+          186.7,
+          200.2,
+          210.1,
+          225.5,
+          199.2
+        ],
+        "cadenciaPorTramo": [
+          160.2,
+          178.9,
+          177.2,
+          171.6,
+          183.7
+        ],
+        "zancadaMm": [
+          1663.6,
+          1608.2,
+          1519.3,
+          1481.4,
+          1532.6
+        ],
+        "respiracionRpm": [
+          26.6,
+          36.5,
+          42.9,
+          43.9,
+          43.2
+        ],
+        "recuperacionFC": {
+          "30s": -14,
+          "60s": -25,
+          "90s": -39,
+          "120s": -46,
+          "180s": -63
+        },
+        "ritmoInstantaneo": "arranca a 3:05-3:13/km, se degrada hasta 3:55-3:58 en el metro 700-805 y remata a 3:20-3:35 desde el metro 830"
+      },
+      "calentamiento": {
+        "troteMin1a5": {
+          "ritmos": [
+            "6:10",
+            "7:03",
+            "7:45",
+            "7:58",
+            "8:16"
+          ],
+          "fcMedia": [
+            147,
+            154,
+            155,
+            159,
+            156
+          ]
+        },
+        "andando": "10 min a 11:05/km, FC media 144",
+        "movilidad": "2:19 con FC media 164",
+        "comparacionMismoRitmo": {
+          "7:00-7:30": {
+            "16sep": 143.8,
+            "19sep": 160.6
+          },
+          "7:30-8:00": {
+            "16sep": 143.0,
+            "19sep": 157.5
+          },
+          "8:00-8:30": {
+            "16sep": 142.8,
+            "19sep": 161.2
+          }
+        },
+        "progresivos": {
+          "registrados": 4,
+          "distanciasM": [
+            100,
+            90,
+            90,
+            90
+          ],
+          "tiemposS": [
+            19.5,
+            20.8,
+            16.5,
+            16.6
+          ],
+          "recuperacionesS": [
+            94.4,
+            97.6,
+            108.7,
+            360.6
+          ],
+          "nota": "Él recordaba 5 progresivos de 80 m con 1:30 y 3 min hasta el kilómetro. El archivo registra 4, de 90-100 m, y 6 min desde el último hasta la salida"
+        }
+      },
+      "comida": {
+        "despertar": "10:00",
+        "desayuno": "yogur + 40 g de gofio + 30 g de proteína (≈40 g de hidratos)",
+        "dosHorasDespues": "5 dátiles (≈20 g)",
+        "reglaDelPlan": "80-100 g de hidratos 3-4 h antes",
+        "cumplida": false
+      },
+      "relato": "Se notó frío, lento y sin fuerza todo el día. No pudo hacer el trote del calentamiento: se le disparaba el pulso a 150 y anduvo 10-12 min. En el 600 casi abandona. Acabó con náuseas e hiperventilando.",
+      "valoracion": "Válida y es el mejor dato de la serie. TIEMPO DEFENDIBLE: 3:34, banda 3:30-3:38. Lo medido con precisión es el intervalo de 217,048 s entre dos pulsaciones manuales de vuelta, sin pausas ni Auto Lap. Los tres recortes sobre el stream de distancia del reloj (logro 214,118 s, desde t=0 214,35 s, con los 1010 m de la vuelta 214,9 s) difieren solo 0,8 s: discusión menor. El margen real es la escala de la pista, ±1-2 % y sin signo determinado, porque el anillo no está homologado ni medido. El 3:49 que elimina queda excluido con holgura: para llegar ahí el GPS tendría que errar un 7-8 % en el perímetro, y la dispersión entre estimaciones del mismo óvalo es del 1,7-1,8 %. Margen a la eliminación: 11 a 19 s. AVISO: el 3:34,1 del logro no es una segunda medición independiente; es la ventana móvil más rápida dentro del mismo stream de distancia. EJECUCIÓN: salió en 40,0 el primer 200 con un reparto que pedía 45, pero el reparto estaba calculado sobre una estimación de 3:52 que era 14-22 s más lenta que su forma real. No fue un error suyo de ritmo: fue un reparto mal calibrado. El tramo 600-800 fue el de menor potencia (395 W), mayor contacto (225 ms) y menor cadencia (172), pero tardó 46,0 s, exactamente lo mismo que el 400-600: hubo caída de sensación, no de ritmo. El último 200 en 41,0 s con potencia máxima (443 W) y cadencia máxima (184) fue el segundo más rápido de la carrera: quedaba reserva. CONTEXTO: corrió a las 13:01 con el sensor de muñeca 3 °C por encima del rodaje nocturno del 16, y al mismo ritmo de trote iba a 157-161 ppm frente a 143 el día 16. El sueño previo fue el mejor de la serie (7h59, VFC 66), así que la sensación de debilidad no viene del estado: apunta a hora y calor, que es una inferencia razonable pero no una medición.",
+      "notaHora": "El plan no fijaba hora para el 19. Cuando el control era en Telde, CLAUDE.md y la web decían «por la mañana», pero por el horario de acceso de Telde. Al cambiar a San Cristóbal el 17 se quitó esa frase y no se sustituyó por ninguna advertencia sobre la hora ni el calor. Error del entrenador, no incumplimiento suyo."
+    },
     {
       "fecha": "2026-09-16",
       "sesion": "Rodaje 45 min + 6 progresivos de 80 m",
@@ -293,6 +482,22 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-09-19",
+      "sesion": "CONTROL · una serie al máximo",
+      "series": [
+        11
+      ],
+      "total": 11,
+      "maximo": 11,
+      "contexto": "Dentro del control, con el timer del reloj parado 4:52. No hay registro en el FIT: dato del atleta. A 31 °C, tras el calentamiento con el pulso disparado y con ~40 g de hidratos desde el desayuno.",
+      "previsionDelPlan": "13-15, extrapolada de 14 repeticiones con 10 kg en escalera con 30 s de descanso el 10 de septiembre",
+      "maximoAnteriorConfirmado": 12,
+      "relato": "Se notó muy débil, no supo activar los omóplatos, fue lento, cada repetición le costó y acabó con los bíceps muy hinchados.",
+      "valoracion": "11 repeticiones AUTOINFORMADAS, sin registro en el FIT: el timer estuvo parado 4:52 y no llevaba la actividad de fuerza. La previsión de 13-15 estaba mal fundada: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza máxima, y la propia valoración del 10 de septiembre ya lo avisaba. El «máximo confirmado 12» no aparece en ninguna sesión del historial: la mejor serie única registrada antes del 19 son 10, el 24 de agosto. El propio plan ya decía en otro sitio «Máximo 11-12». El pulso NO explica la repetición perdida: ya ha hecho dominadas a 153 ppm el 16 y a 169 el 14, y el 19 llegó a la barra con la FC bajada a 146-148. Lo que sí encaja con su relato: se saltó el prep-hombro, que el plan marca obligatorio antes de cualquier trabajo en barra. Bíceps hinchados y omóplatos sin activar es el patrón de iniciar el tirón con el codo en lugar de con la escápula. A partir de ahora toda serie máxima se graba en vídeo, de frente y de lado, para contarlas y para auditar si el tribunal las daría por buenas.",
+      "hito": true,
+      "maximoConfirmado": "11 autoinformado el 19-9-2026. El 12 que figuraba en el plan no tiene respaldo en el historial."
+    },
+    {
       "fecha": "2026-09-16",
       "series": [
         5,
@@ -418,6 +623,24 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-09-19",
+      "duracion": "7h59",
+      "puntuacion": 89,
+      "calidad": "Bueno",
+      "fcReposo": 45,
+      "vfc": 66,
+      "profundo": "1h30",
+      "rem": "1h43",
+      "despierto": "24m",
+      "inquietud": 57,
+      "bodyBattery": "+71",
+      "estresMedio": 10,
+      "spo2Media": "98%",
+      "spo2Minimo": "88%",
+      "vfc7dias": "Equilibrado",
+      "nota": "La mejor noche de la serie: VFC de 66 ms, FC en reposo de 45 y casi 8 h. El estado previo NO explica la sensación de debilidad del día."
+    },
     {
       "fecha": "2026-09-16",
       "duracion": "7h20",
@@ -557,6 +780,31 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-19",
+      "estado": "No productivo",
+      "vo2max": 53,
+      "vfc": 62,
+      "vfcEstado": "Equilibrado",
+      "cargaAguda": 384,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.2,
+      "tiempoRecuperacion": "55h",
+      "predisposicion": 28,
+      "predisposicionEstado": "Bajo (medida a las 13:59, justo al acabar el control)",
+      "estresReciente": "Bajo",
+      "puntuacionSueno": 89,
+      "ventanaFocoCarga": "22 ago – 19 sep",
+      "focoCarga": "Carga aeróbica de intensidad baja: insuficiente",
+      "anaerobica": 233,
+      "aerobicaAlta": 736,
+      "aerobicaBaja": 182,
+      "efectoEntrenamiento": {
+        "aerobico": 3.4,
+        "anaerobico": 3.4
+      },
+      "valoracion": "La carga aguda sube de 190 a 384 con el control y entra en óptimo (ratio 1,2). La anaeróbica salta de 159 a 233 por el kilómetro. La aeróbica baja sigue siendo el agujero: 182 frente a un óptimo de varios cientos. Las 55 h de recuperación y la predisposición de 28 están medidas al acabar el esfuerzo máximo."
+    },
     {
       "fecha": "2026-09-16",
       "estado": "No productivo",

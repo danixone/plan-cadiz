@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generado": "2026-09-15",
+    "generado": "2026-09-19",
     "origen": "Conversación en Claude.ai del 21 ago al 15 sep de 2026",
     "idioma": "es-ES",
-    "nota": "Estado vivo del plan. Claude Code actualiza historial.json y este archivo tras cada sesión."
+    "nota": "Estado vivo del plan. Revisado a fondo el 19-9-2026 tras el primer control de 1.000 m."
   },
   "atleta": {
     "nombre": "Daniel",
     "pesoKg": 67.4,
-    "fcMaxima": 195,
-    "fcMaximaMedidaEl": "2026-08-26",
+    "fcMaxima": 202,
+    "fcMaximaMedidaEl": "2026-09-19",
     "fcReposo": 45,
     "vo2maxEstimadoGarmin": 54,
     "reloj": "Garmin Forerunner 265",
@@ -37,7 +37,8 @@
       "Arsenal de Las Palmas (martes)",
       "Gimnasio del preparador (jueves, circuito)"
     ],
-    "pista": "Parque San Cristóbal (Las Palmas): pista de atletismo de 400 m con rectas largas y curvas cortas, accesible cualquier día. Telde solo entre semana, inaccesible los sábados. La Ciudad Deportiva de Gran Canaria está en obras hasta enero de 2027"
+    "pista": "Parque San Cristóbal (Las Palmas): bucle de atletismo NO homologado, recta de ~170 m y curvas de radio ~8,5 m. Perímetro SIN MEDIR, entre 392 y 400 m según el ajuste del GPS. Accesible cualquier día. Telde solo entre semana. La Ciudad Deportiva está en obras hasta enero de 2027.",
+    "fcMaximaNota": "≥ 202, medida el 19-9-2026 en esfuerzo máximo con banda HRM 200 (2 muestras a 202, 29 por encima de 199, 112 s por encima de 195). El 195 anterior venía de la sesión del 26-8, marcada no válida por 3h17 de sueño, con lectura de muñeca, y su propia valoración decía «≥ 195»: era un suelo, no una medida. Sigue siendo un suelo: acabó con náuseas e hiperventilando."
   },
   "objetivo": {
     "oposicion": "Policía Nacional · Escala Básica",
@@ -48,10 +49,17 @@
     },
     "examenEscrito": "2026-09-26",
     "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero.",
-    "aviso": "Baremo del Anexo II de 2025. Verificar en las bases de la convocatoria (BOE de 10 de julio de 2026). Los puntos 9, 7, 6, 4 y 1 están interpolados entre los tramos conocidos."
+    "aviso": "Baremo VERIFICADO el 19-9-2026 en BOE-A-2026-15055 (Resolución de 7 de julio de 2026, BOE núm. 167 de 10-07-2026). Ya no hay tramos interpolados: las tres tablas están completas. Corrige errores del baremo anterior en dominadas.",
+    "objetivosRevisados": {
+      "mil": "3:32-3:36 el día de la prueba, suelo 3:36 → 3 puntos",
+      "dominadas": "15 el día de la prueba, suelo 12 → 8 puntos con 15, 6 con 12",
+      "circuito": "≤ 9,3 s a tope, suelo 9,7 → 8 puntos con 9,3, 7 con 9,7",
+      "mediaEsperada": "5,67 realista · 6,67 si sale todo"
+    }
   },
   "baremo": {
     "sexo": "hombres",
+    "fuente": "BOE-A-2026-15055, Anexo · verificado el 19-9-2026",
     "mil_metros": [
       {
         "puntos": 10,
@@ -59,14 +67,34 @@
         "hasta": "2:54"
       },
       {
+        "puntos": 9,
+        "desde": "2:55",
+        "hasta": "3:00"
+      },
+      {
         "puntos": 8,
+        "desde": "3:01",
+        "hasta": "3:06"
+      },
+      {
+        "puntos": 7,
         "desde": "3:07",
         "hasta": "3:12"
+      },
+      {
+        "puntos": 6,
+        "desde": "3:13",
+        "hasta": "3:18"
       },
       {
         "puntos": 5,
         "desde": "3:19",
         "hasta": "3:24"
+      },
+      {
+        "puntos": 4,
+        "desde": "3:25",
+        "hasta": "3:30"
       },
       {
         "puntos": 3,
@@ -93,99 +121,129 @@
     "dominadas": [
       {
         "puntos": 10,
-        "repeticiones": 17,
-        "operador": ">="
+        "reps": "17 o más"
+      },
+      {
+        "puntos": 9,
+        "reps": "16"
       },
       {
         "puntos": 8,
-        "repeticiones": 15,
-        "operador": "="
+        "reps": "15"
+      },
+      {
+        "puntos": 7,
+        "reps": "14"
+      },
+      {
+        "puntos": 6,
+        "reps": "12-13"
       },
       {
         "puntos": 5,
-        "repeticiones": 10,
-        "operador": ">=",
-        "hasta": 11
+        "reps": "10-11"
+      },
+      {
+        "puntos": 4,
+        "reps": "8-9"
       },
       {
         "puntos": 3,
-        "repeticiones": 8,
-        "operador": "="
+        "reps": "7"
       },
       {
         "puntos": 2,
-        "repeticiones": 7,
-        "operador": "="
+        "reps": "6"
+      },
+      {
+        "puntos": 1,
+        "reps": "5"
       },
       {
         "puntos": 0,
-        "repeticiones": 4,
-        "operador": "<=",
+        "reps": "0-4",
         "elimina": true
       }
     ],
     "circuito_agilidad": [
       {
         "puntos": 10,
-        "hastaSegundos": 8.2
+        "seg": "8,2 o menos"
+      },
+      {
+        "puntos": 9,
+        "seg": "8,3-8,8"
       },
       {
         "puntos": 8,
-        "desdeSegundos": 8.9,
-        "hastaSegundos": 9.3
+        "seg": "8,9-9,3"
+      },
+      {
+        "puntos": 7,
+        "seg": "9,4-9,7"
+      },
+      {
+        "puntos": 6,
+        "seg": "9,8-10,1"
       },
       {
         "puntos": 5,
-        "desdeSegundos": 10.2,
-        "hastaSegundos": 10.5
+        "seg": "10,2-10,5"
+      },
+      {
+        "puntos": 4,
+        "seg": "10,6-10,9"
       },
       {
         "puntos": 3,
-        "desdeSegundos": 10.9,
-        "hastaSegundos": 11.2
+        "seg": "11,0-11,2"
       },
       {
         "puntos": 2,
-        "desdeSegundos": 11.3,
-        "hastaSegundos": 11.4
+        "seg": "11,3-11,4"
+      },
+      {
+        "puntos": 1,
+        "seg": "11,5-11,6"
       },
       {
         "puntos": 0,
-        "desdeSegundos": 11.7,
+        "seg": "11,7 o más",
         "elimina": true
       }
-    ]
+    ],
+    "erroresCorregidos": "El baremo anterior daba 3 puntos a 8 dominadas y 2 a 7. El oficial da 4 puntos a 8-9 y 3 a 7. También faltaban los tramos 12-13 (6 puntos), 14 (7) y 16 (9).",
+    "normasEjecucion": "Dominadas: palmas al frente (agarre prono), brazos completamente extendidos, la barbilla debe superar claramente la barra, sin oscilaciones, balanceos ni impulso. UN SOLO INTENTO. Circuito: un intento; solo hay segundo intento si el primero es nulo."
   },
   "marcasActuales": {
     "mil_metros": {
-      "estimacion": "3:52",
-      "rango": [
-        "3:48",
-        "3:56"
+      "marca": "3:34",
+      "banda": [
+        "3:30",
+        "3:38"
       ],
-      "base": "600 m en 2:12 el 31/08",
-      "puntos": "0-1"
+      "medidoEl": "2026-09-19",
+      "puntos": 3,
+      "base": "Control en San Cristóbal. 1010 m en 217,0 s entre dos pulsaciones manuales de vuelta; logro del reloj 1000 m en 214,118 s.",
+      "margen": "±4 s. El margen no es el cronómetro, es la escala de la pista: ±1-2 % sin signo determinado porque el anillo no está homologado ni medido.",
+      "margenALaEliminacion": "11 a 19 s. Para llegar a 3:49 el GPS tendría que errar un 7-8 % en el perímetro; la dispersión entre estimaciones del mismo óvalo es del 1,7-1,8 %.",
+      "supera": "La estimación anterior de 3:52 (rango 3:48-3:56) falló por 14 a 22 s. Salía del 600 de 2:12 del 31-8, una sesión que el Paso 2 del propio plan prohíbe usar para reestimar (4h09 de sueño, 7 h sin comer, tres días tras una doble extracción). Lo que falló no fue el 600: fue el modelo que lo convirtió en 3:52."
     },
     "dominadas": {
-      "maximoConfirmado": 12,
-      "estimacion": [
-        13,
-        15
-      ],
-      "aConfirmarEl": "2026-09-19"
+      "marca": "11 autoinformado el 19-9-2026, sin registro en el FIT",
+      "puntos": 5,
+      "maximoRegistrado": "10, el 24-8-2026 (y fueron 4 min después de 8 × 200)",
+      "aviso": "El «máximo confirmado 12» del plan anterior no aparece en ninguna sesión del historial. La estimación de 13-15 se retira: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza máxima.",
+      "protocolo": "Toda serie máxima se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena."
     },
     "circuito": {
-      "segundos": 9.9,
+      "marca": "9,9 s",
       "fecha": "2026-09-10",
-      "condiciones": "al 60 % y sin saber que le cronometraban",
-      "puntosEstimados": 6
+      "puntos": 6,
+      "condiciones": "al 60 %, contando pasos entre conos y sin saber que le cronometraban",
+      "urgente": "Es el único dato y no es una medición seria. Cronometrarlo fresco y a tope es la prioridad más barata del plan."
     },
-    "objetivoMinimo": {
-      "mil": "< 3:45",
-      "dominadas": 15,
-      "circuito": "< 9,5 s",
-      "razon": "Con circuito en 6-8 puntos y 15 dominadas, el kilómetro ya no necesita 3:36"
-    }
+    "notaImportante": "CON LAS MARCAS DE HOY (3:34 = 3 puntos, 11 dominadas = 5, circuito 9,9 = 6) la media es 4,67 y NO APRUEBA. Hace falta un punto más de donde sea. Los tres más baratos: una dominada más (11→12 = +1 punto), dos décimas en el circuito (9,9→9,7 = +1 punto) o cuatro segundos en el kilómetro (3:34→3:30 = +1 punto)."
   },
   "diagnostico": {
     "resumen": "Velocidad de sobra, falta sostenerla. Corre 200 m en 43 s sin problema pero se cae cuando lleva tres minutos a ese ritmo.",
@@ -194,52 +252,59 @@
     "termometro": "El ritmo a 140 ppm en el minuto 5 frente al del minuto 30. 12/09: 7:00 contra 8:30. 14/09: 8:00 contra 7:50. Cuando salga rápido y no derive, la base sube."
   },
   "zonasFC": {
-    "metodo": "% de frecuencia cardíaca de reserva (FCR) · máxima 195 · reposo 45",
+    "metodo": "% de frecuencia cardíaca de reserva (FCR) · máxima ≥202 medida el 19-9 · reposo 45 · reserva 157",
     "configurarEnGarmin": "Mantén UP → Perfil del usuario → Frecuencia cardiaca y zonas de potencia → Frec. cardiaca → Zonas → Según → % FCR",
     "zonas": [
       {
         "zona": 1,
-        "min": 120,
-        "max": 135,
+        "min": 124,
+        "max": 139,
         "uso": "Trote de recuperación entre series"
       },
       {
         "zona": 2,
-        "min": 135,
-        "max": 150,
-        "uso": "Rodajes. Media objetivo 135–140, techo 145"
+        "min": 139,
+        "max": 155,
+        "uso": "Rodajes. OJO: se siguen gobernando por el techo de 145, que NO sube"
       },
       {
         "zona": 3,
-        "min": 150,
-        "max": 165,
+        "min": 155,
+        "max": 171,
         "uso": "Tierra de nadie: no se entrena aquí a propósito"
       },
       {
         "zona": 4,
-        "min": 165,
-        "max": 180,
-        "uso": "Umbral de los miércoles: 166–172"
+        "min": 171,
+        "max": 186,
+        "uso": "Zona alta"
       },
       {
         "zona": 5,
-        "min": 180,
-        "max": 195,
+        "min": 186,
+        "max": 202,
         "uso": "Controles y día de la prueba"
       }
     ],
     "termometros": [
       {
-        "nombre": "Ritmo a 170 ppm",
-        "normal": "4:25–4:45 /km descansado",
-        "alarma": "Si necesita 5:00 o más lento, no ha recuperado"
+        "nombre": "Ritmo a 145 ppm en rodaje",
+        "normal": "7:40-8:00 /km medido con banda el 12, 14 y 16 de septiembre",
+        "alarma": "Si a 145 ppm va a más de 8:30, ese día no está recuperado"
+      },
+      {
+        "nombre": "Deriva cardíaca",
+        "normal": "menos del 5 % en 40 min con base asentada",
+        "medido": "90 s/km el 12-9, ~0 el 14-9 con desnivel, 38 s/km (8 %) el 16-9 en llano",
+        "alarma": "Por encima del 10 % en llano"
       },
       {
         "nombre": "Pulso trotando a 6:00 /km",
-        "normal": "130–140 ppm",
-        "alarma": "Si marca 170, ese día no se entrena duro"
+        "estado": "NO VERIFICADO con banda. Lo único medido es el 19-9: 147 ppm a 6:10 el primer minuto y 154 de media en la franja 6:00-6:30, en un día con el pulso desplazado. La banda 130-140 del plan anterior no tiene respaldo."
       }
-    ]
+    ],
+    "porQueNoSubeElTecho": "El techo de rodaje se queda en 145 y el umbral en 166-172 aunque las zonas suban. Subirlos contradice el foco de carga medido (aeróbica baja 182 frente a aeróbica alta 736, marcada insuficiente) y la deriva de 38 s/km del 16-9 a pulso constante. La FC de umbral se mide aparte y no hay medición nueva: el 180 que tiene configurado el reloj no procede de ninguna medición.",
+    "accionPendiente": "Reconfigurar el reloj, que sigue con máxima 195, reposo 46 y umbral 180. Al hacerlo, el foco de carga deja de ser comparable con la ventana 22 ago - 19 sep."
   },
   "ritmos": [
     {
@@ -251,12 +316,13 @@
         135,
         140
       ],
-      "ritmoEsperado": "6:45–7:15 /km"
+      "ritmoEsperado": "6:45-7:30 /km, el que salga",
+      "aplicaTambienA": "El trote del calentamiento. ANTES iba prescrito a 5:45-6:15 /km, que es más rápido de lo que rueda y lo ponía por encima del techo antes de empezar. Corregido el 19-9."
     },
     {
       "clave": "TR",
       "nombre": "Trote de recuperación",
-      "ritmoKm": "6:00–6:30"
+      "ritmoKm": "6:00-6:30"
     },
     {
       "clave": "UMB",
@@ -265,45 +331,46 @@
       "rangoFC": [
         166,
         172
-      ]
+      ],
+      "aviso": "No sube con la máxima nueva: la FC de umbral se mide aparte y no hay medición nueva. Del 21 de septiembre al 25 de octubre el calendario no contiene ninguna sesión de umbral."
     },
     {
-      "clave": "K1",
-      "nombre": "Ritmo kilómetro bloque 1",
-      "objetivo1000": "3:50",
-      "ritmoKm": "3:50",
-      "m200": "0:45",
-      "m300": "1:08",
-      "m400": "1:31",
-      "m600": "2:17"
+      "clave": "A",
+      "nombre": "Ritmo kilómetro bloque A",
+      "objetivo1000": "3:38",
+      "m200": "0:43,5",
+      "m300": "1:05",
+      "m400": "1:27",
+      "m600": "2:11",
+      "cuando": "21 sep - 4 oct",
+      "porQue": "Anclado al extremo LENTO de la banda medida, no al centro, porque la distancia no está verificada. Sustituye a K1 (3:50), que era más lento que su ritmo real de 1.000 y no entrenaba nada."
     },
     {
-      "clave": "K2",
-      "nombre": "Ritmo kilómetro bloque 2",
-      "objetivo1000": "3:42",
-      "ritmoKm": "3:42",
-      "m200": "0:44",
-      "m300": "1:06",
-      "m400": "1:28",
-      "m600": "2:13"
-    },
-    {
-      "clave": "K3",
-      "nombre": "Ritmo kilómetro bloque 3",
+      "clave": "B",
+      "nombre": "Ritmo kilómetro bloque B",
       "objetivo1000": "3:34",
-      "ritmoKm": "3:34",
-      "m200": "0:42",
-      "m300": "1:04",
+      "m200": "0:43",
+      "m400": "1:26",
+      "m600": "2:08",
+      "cuando": "5 - 18 oct",
+      "porQue": "Anclado al centro de la banda medida. La diferencia con A es 0,8 s por 200, menos que el ruido de una repetición suelta: lo que cambia de verdad no es el ritmo, es la exigencia de regularidad."
+    },
+    {
+      "clave": "C",
+      "nombre": "Ritmo de prueba",
+      "objetivo1000": "3:32",
+      "m200": "0:42,5",
       "m400": "1:25",
-      "m600": "2:08"
+      "m600": "2:07",
+      "cuando": "19-25 oct y día de la prueba"
     },
     {
       "clave": "VEL",
       "nombre": "Velocidad",
-      "ritmoKm": "3:20–3:25",
-      "m200": "0:40–0:41",
-      "m300": "1:00–1:02",
-      "m400": "1:20–1:22"
+      "ritmoKm": "3:20-3:25",
+      "m200": "0:40-0:41",
+      "m400": "1:20-1:22",
+      "porQue": "SIN CAMBIOS: 0:40-0:41 es exactamente su máximo medido de 200, el que abrió el 19-9. En los archivos no hay ni un 200 por debajo de 40 s."
     }
   ],
   "estructuraSemanal": [
@@ -320,7 +387,8 @@
     {
       "dia": "Miércoles",
       "tipo": "carrera",
-      "contenido": "Umbral por pulsaciones (calidad 2). 3 × 5 dominadas dentro del calentamiento"
+      "contenido": "Calidad 2: kilómetro partido o series largas. 3 × 5 dominadas dentro del calentamiento",
+      "nota": "Antes se llamaba «umbral por pulsaciones», pero del 21 de septiembre al 25 de octubre no hay ninguna sesión de umbral programada. La banda 166-172 se conserva documentada como techo para los días en que aplique. NO se añade umbral: el déficit medido es aeróbica baja (182 frente a 736 de alta), y más aeróbica alta empeora el agujero."
     },
     {
       "dia": "Jueves",
@@ -348,19 +416,20 @@
       "duracionMin": 30,
       "duracionConDominadasMin": 42,
       "pasos": [
-        "Trote suave 12–15 min a 5:45–6:15 /km, respirando por la nariz",
+        "Trote suave 12-15 min GOBERNADO POR PULSO: techo 145 ppm, saldrá a 6:45-7:30 /km. Respirando por la nariz. (Antes decía 5:45-6:15 /km: era más rápido de lo que rueda y lo ponía por encima del techo antes de empezar.)",
         "Movilidad dinámica 5 min: balanceos de pierna adelante-atrás y lateral (15 por lado), zancadas caminando (10 por pierna), rotaciones de tobillo, círculos de cadera",
         "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso). Antes, 2 suspensiones pasivas de 20 s y 2 × 8 retracciones escapulares",
         "Técnica: 2 × 20 m de skipping bajo, talones al glúteo, zancada y carrera lateral",
         "5 progresivos de 80 m; los dos últimos terminan a ritmo K",
         "Pausa de 3–4 min y a la primera serie"
-      ]
+      ],
+      "obligatorio": "El prep-hombro (2 suspensiones pasivas de 20 s + 2 × 8 retracciones escapulares) es OBLIGATORIO antes de cualquier trabajo en barra, también en los controles. El 19-9 se saltó."
     },
     "calentamientoCorto": {
       "duracionMin": 20,
       "uso": "Sesiones de umbral",
       "pasos": [
-        "Trote 10 min",
+        "Trote 10 min por pulso, techo 145 ppm",
         "Movilidad",
         "Dominadas del día",
         "Técnica",
@@ -491,7 +560,7 @@
     }
   },
   "protocoloDominadas": {
-    "puntoDePartida": "Máximo 11–12. Objetivo 15–17.",
+    "puntoDePartida": "11 autoinformado el 19-9-2026. Objetivo 15 (8 puntos), suelo 12 (6 puntos).",
     "diagnostico": "El 24/08 hizo 10 · 7 · 4 con casi 4 min de descanso. Conservar solo el 40 % de la primera serie con descanso completo significa falta de reserva de fuerza, no de aguante. Por eso más repeticiones a peso corporal no suben el techo: lo que lo sube es la fuerza máxima relativa.",
     "cuando": [
       {
@@ -525,29 +594,25 @@
     "porQueAntesDeCorrer": "Es el orden del examen: llegas a la carrera con dorsales y antebrazo cargados, igual que en Cádiz. Son 15 repeticiones fáciles que no quitan nada a la sesión de series.",
     "progresion": [
       {
-        "semana": "2026-09-15",
-        "habituacion": "3 × 5",
-        "fuerza": "5 × 3 con 10 kg"
-      },
-      {
         "semana": "2026-09-22",
         "habituacion": "3 × 5",
-        "fuerza": "5 × 3 con 10 kg"
+        "fuerza": "5 × 3 con 10 kg",
+        "porQue": "NO sube: el 15-9 quedó 1 repetición en reserva y la regla pide 2"
       },
       {
         "semana": "2026-09-29",
         "habituacion": "3 × 5",
-        "fuerza": "5 × 3 con 12,5 kg"
+        "fuerza": "12,5 kg SOLO si la quinta serie del 22 dejó 2 repeticiones en reserva; si no, se repiten los 10 kg"
       },
       {
         "semana": "2026-10-06",
         "habituacion": "3 × 5",
-        "fuerza": "5 × 3 con 12,5 kg"
+        "fuerza": "El peso lo decide la quinta serie del 29"
       },
       {
         "semana": "2026-10-13",
         "habituacion": "3 × 5",
-        "fuerza": "4 × 3 con 15 kg"
+        "fuerza": "4 × 3. El peso lo decide la quinta serie del 6"
       },
       {
         "semana": "2026-10-20",
@@ -565,9 +630,11 @@
       "Criterio de repeticiones en reserva: al acabar la última serie deben quedar 3 o 4 dentro. Si queda solo una, esa sesión se baja a series de 4.",
       "Solo se sube el lastre si la quinta serie dejó 2 repeticiones en reserva. Si costó, se repite peso otra semana.",
       "Nunca al fallo con lastre: ahí se lesionan el codo y el hombro, no el músculo.",
-      "Test máximo solo en los controles: 19 sep, 10 oct y 24 oct."
+      "Test máximo solo en los controles: 19 sep, 10 oct y 24 oct.",
+      "Toda serie máxima se graba en vídeo, de frente y de lado. Un 11 contado por ti puede ser un 9 para el tribunal.",
+      "El prep-hombro es obligatorio antes de la barra, también en controles. El 19-9 se saltó y el relato fue «no supe activar los omóplatos» con los bíceps hinchados: patrón de tirar con el codo en vez de con la escápula."
     ],
-    "tecnicaExamen": "Palmas al frente, brazos totalmente extendidos abajo, barbilla por encima de la barra arriba, sin balanceo. Una repetición que el tribunal no da por buena vale lo mismo que no haberla hecho.",
+    "tecnicaExamen": "BOE-A-2026-15055: palmas al frente (agarre prono), brazos completamente extendidos, la barbilla debe superar claramente la barra, sin oscilaciones, balanceos ni impulso. UN SOLO INTENTO.",
     "lastre": "Para dominadas, un cinturón es mejor que un chaleco: el chaleco se sube y estorba justo al buscar la barbilla sobre la barra. El chaleco, para el parque y las búlgaras."
   },
   "justificacionPesos": [
@@ -904,7 +971,8 @@
           "tipo": "descanso",
           "sesion": "Descanso"
         }
-      ]
+      ],
+      "nota": "Semana cerrada con el control del 19. El resto del calendario se revisó ese día con la marca real de 3:34."
     },
     {
       "semana": "2026-09-21/2026-09-27",
@@ -916,27 +984,28 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 6 × 300 m, rec. 2 min",
-          "objetivo": "1:06"
+          "objetivo": "1:05 (bloque A)"
         },
         {
           "fecha": "2026-09-22",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastradas 5 × 3 con 10 kg"
+          "objetivo": "lastradas 5 × 3 con 10 kg · NO se sube peso · grabar una serie en vídeo"
         },
         {
           "fecha": "2026-09-23",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas esta semana",
-          "objetivo": "techo 145 ppm"
+          "objetivo": "trote y rodaje por pulso, techo 145"
         },
         {
           "fecha": "2026-09-24",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito a ritmo, sin cronometrar. O descanso si prefiere estudiar"
+          "sesion": "21:30 circuito: 2 intentos CRONOMETRADOS con recuperación completa",
+          "objetivo": "por fin el número real del circuito"
         },
         {
           "fecha": "2026-09-25",
@@ -968,21 +1037,21 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 6 × 400 m, rec. 90 s",
-          "objetivo": "1:28 · las 6 dentro de 3 s"
+          "objetivo": "1:27 · las 6 dentro de 3 s"
         },
         {
           "fecha": "2026-09-29",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastradas 5 × 3 con 12,5 kg"
+          "objetivo": "lastre condicionado a las 2 repeticiones en reserva del día 22"
         },
         {
           "fecha": "2026-09-30",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min",
-          "objetivo": "600 en 2:13 · 400 en 1:28",
+          "objetivo": "600 en 2:11 · 400 en 1:27 (bloque A)",
           "clave": true
         },
         {
@@ -1021,21 +1090,21 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
-          "objetivo": "1:25"
+          "objetivo": "1:26"
         },
         {
           "fecha": "2026-10-06",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastradas 5 × 3 con 12,5 kg"
+          "objetivo": "lastre condicionado a la quinta serie del 29"
         },
         {
           "fecha": "2026-10-07",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08"
+          "objetivo": "2:08 (bloque B) · primera lectura con las zonas nuevas"
         },
         {
           "fecha": "2026-10-08",
@@ -1054,8 +1123,10 @@
           "dia": "Sáb",
           "tipo": "control",
           "sesion": "SIMULACRO COMPLETO: circuito → dominadas al máximo → 1.000 m",
-          "objetivo": "1.000 m ≤ 3:40 · circuito ≤ 9,5 s · dominadas ≥ 13",
-          "clave": true
+          "objetivo": "1.000 ≤ 3:36 · circuito ≤ 9,5 s · dominadas ≥ 12",
+          "clave": true,
+          "hora": "09:30-10:00, la misma que el 24 de octubre",
+          "protocolo": "Antes: medir el perímetro del anillo con rueda o cinta, o llevarlo a una pista homologada. Sin calibración de cuatro vueltas del reloj (el manual la condiciona a pista estándar). El 1.000 se marca a mano con el botón de vuelta, salida y meta en el mismo punto. Dominadas grabadas en vídeo. Reparto del bloque B: 0:43 / 1:26 / 2:08."
         },
         {
           "fecha": "2026-10-11",
@@ -1081,7 +1152,7 @@
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastradas 4 × 3 con 15 kg"
+          "objetivo": "4 × 3, peso según la quinta serie del 6"
         },
         {
           "fecha": "2026-10-14",
@@ -1141,7 +1212,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:08 y 1:24, ambas al primer intento"
+          "objetivo": "2:07 y 1:25 (bloque C), ambas al primer intento"
         },
         {
           "fecha": "2026-10-22",
@@ -1160,8 +1231,10 @@
           "dia": "Sáb",
           "tipo": "control",
           "sesion": "SIMULACRO LIGERO: circuito + dominadas al máximo + 600 m a ritmo de prueba",
-          "objetivo": "600 m en 2:08 · acaba con sensación de sobra",
-          "clave": true
+          "objetivo": "600 m en 2:07 · acaba con sensación de sobra",
+          "clave": true,
+          "hora": "la misma que el 10 de octubre",
+          "protocolo": "Dominadas al máximo grabadas en vídeo."
         },
         {
           "fecha": "2026-10-25",
@@ -1184,7 +1257,7 @@
         {
           "dia": "−2 días",
           "tipo": "carrera",
-          "sesion": "15 min suaves + 3 progresivos de 100 m + estiramientos"
+          "sesion": "15 min suaves + 3 progresivos de 100 m por mecánica (referencia 100 m en 20-23 s), NO a ritmo K"
         },
         {
           "dia": "−1 día",
@@ -1201,69 +1274,73 @@
     }
   ],
   "planDeCarrera": {
-    "control19sep": {
-      "200": "0:45",
-      "400": "1:31",
-      "600": "2:16",
-      "800": "3:02",
-      "meta": "3:50",
-      "nota": "El paso por el 600 va cuatro segundos más lento que el control del 31 de agosto. Es deliberado: si llega al 600 en 2:12 no le queda nada para los últimos 400.",
-      "pista": "Parque San Cristóbal, pista de 400 m: 1.000 m son dos vueltas y media, salida en la línea de 200 si está marcada. Actividad Carrera en pista del reloj, calle 1, calentamiento de cuatro vueltas o más para calibrar.",
-      "reloj": "Pantalla con tiempo transcurrido y distancia en grande para leer el paso por cada 200 sin pulsar nada. Los parciales de 200 se sacan después del archivo."
-    },
     "examen": {
-      "200": "0:42–0:43",
-      "400": "1:25–1:27",
-      "800": "2:51–2:55",
-      "meta": "< 3:45",
+      "reparto": {
+        "200": "0:43",
+        "400": "1:26",
+        "600": "2:09",
+        "800": "2:52",
+        "meta": "3:32-3:36"
+      },
+      "suelo": "3:36",
+      "elimina": "3:49",
+      "margenPrevisto": "13 a 17 s sobre la eliminación",
+      "reglaDeSalida": "Si pasas el 600 por delante de 2:07, has salido demasiado rápido. El primer 200 va en 0:43, no en los 0:40 del 19-9 ni en 0:37.",
       "consejos": [
-        "Salir por el interior de la calle 1 y pelear el sitio en los primeros 30 m. Cuanto más afuera, más metros.",
-        "Los primeros 200 m son la trampa: la salida es en grupo y el pelotón sale disparado. El primer 200 va en 0:42–0:43, no en 0:37.",
-        "Desde el 800, todo lo que quede.",
-        "Al cruzar la meta, colocarse en fila y no dejar que nadie adelante: el tribunal asigna los tiempos por orden de llegada."
-      ]
+        "Salir por el interior de la calle 1 y pelear el sitio en los primeros 30 m.",
+        "Los primeros 200 m son la trampa: el pelotón sale disparado.",
+        "Desde el 800, todo lo que quede. El 19-9 el último 200 fue el segundo más rápido de la carrera: hay remate.",
+        "Al cruzar la meta, colocarse en fila: el tribunal asigna los tiempos por orden de llegada."
+      ],
+      "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
+      "orden": "circuito → dominadas → 1.000 m",
+      "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz."
     }
   },
   "escenariosNota": [
     {
-      "nombre": "Conservador",
-      "mil": "3:45",
-      "milPuntos": 1,
-      "dominadas": 15,
-      "dominadasPuntos": 8,
-      "circuito": 9.5,
-      "circuitoPuntos": 7,
-      "media": 5.3,
-      "resultado": "apto"
+      "nombre": "Marcas de hoy",
+      "mil": "3:34",
+      "milPuntos": 3,
+      "dominadas": 11,
+      "dominadasPuntos": 5,
+      "circuito": 9.9,
+      "circuitoPuntos": 6,
+      "media": 4.67,
+      "resultado": "NO APTO"
+    },
+    {
+      "nombre": "Mínimo para aprobar",
+      "mil": "3:34",
+      "milPuntos": 3,
+      "dominadas": 12,
+      "dominadasPuntos": 6,
+      "circuito": 9.9,
+      "circuitoPuntos": 6,
+      "media": 5.0,
+      "resultado": "apto justo"
     },
     {
       "nombre": "Realista",
-      "mil": "3:40",
-      "milPuntos": 2,
+      "mil": "3:34",
+      "milPuntos": 3,
+      "dominadas": 14,
+      "dominadasPuntos": 7,
+      "circuito": 9.7,
+      "circuitoPuntos": 7,
+      "media": 5.67,
+      "resultado": "apto"
+    },
+    {
+      "nombre": "Objetivo",
+      "mil": "3:30",
+      "milPuntos": 4,
       "dominadas": 15,
       "dominadasPuntos": 8,
-      "circuito": 9.2,
+      "circuito": 9.3,
       "circuitoPuntos": 8,
-      "media": 6.0,
+      "media": 6.67,
       "resultado": "apto"
-    },
-    {
-      "nombre": "Bueno",
-      "mil": "3:35",
-      "milPuntos": 3,
-      "dominadas": 17,
-      "dominadasPuntos": 10,
-      "circuito": 9.0,
-      "circuitoPuntos": 8,
-      "media": 7.0,
-      "resultado": "apto"
-    },
-    {
-      "nombre": "Con un cero",
-      "mil": "3:50",
-      "milPuntos": 0,
-      "media": null,
-      "resultado": "eliminado"
     }
   ],
   "reglas": [
@@ -1320,7 +1397,7 @@
       "Gimnasio del Arsenal de Las Palmas, nuevo y con mucha variedad"
     ],
     "diasQueCorre": "Solo dispone de un parque de calistenia con barra de dominadas y barra de paralelas",
-    "pista": "Pista de atletismo de 400 m del parque San Cristóbal, con rectas largas y curvas cortas. Donde se hacen los progresivos y los controles",
+    "pista": "Bucle de atletismo no homologado del parque San Cristóbal: rectas largas y curvas muy cerradas. Perímetro sin medir.",
     "circuitoAnterior": "Circuito de ida y vuelta de 500 m con giro de 180° en el metro 500. Solo para rodajes suaves.",
     "dieta": "Sin gluten"
   },
