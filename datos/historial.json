@@ -919,8 +919,18 @@
     {
       "fecha": "2026-08-31",
       "estimacion": "3:48-3:56",
-      "motivo": "Primera medición real: 600 m en 2:12",
-      "vigente": true
+      "motivo": "Sobre el 600 de 2:12. Era una sesión que el Paso 2 del propio plan prohíbe usar para reestimar: 4h09 de sueño, 7 h sin comer y tres días tras una doble extracción."
+    },
+    {
+      "fecha": "2026-09-19",
+      "estimacion": "3:34",
+      "banda": [
+        "3:30",
+        "3:38"
+      ],
+      "vigente": true,
+      "medido": true,
+      "motivo": "MEDIDO, ya no es estimación. Control de 1.000 m en San Cristóbal. La estimación anterior (3:52) falló por 14-22 s y la realidad quedó fuera del rango entero. Lo que falló no fue el 600 de 2:12: fue el modelo que lo convirtió en 3:52."
     }
   ]
 }

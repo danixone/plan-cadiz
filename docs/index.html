@@ -114,7 +114,7 @@ details.acc .when{font-size:.74rem;color:var(--muted);font-weight:400;margin-lef
 .day.hoy .d small,.day.hoy .t{color:#A9BCCC}
 .day.hoy .d{color:#fff}
 .day.pasado{opacity:.32}
-.day.key{background:#F3F7FA;border-radius:6px;padding:10px 12px;margin:4px -12px;border-bottom:none}
+.day.key{background:#F3F7FA;border-radius:6px;padding:10px 12px;margin:4px -12px;border-bottom:none}.day.done{background:var(--ok-bg);border-color:#BFE3CE;opacity:.85}
 
 .pill{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--band);color:var(--muted)}
 .pill.ok{background:var(--ok-bg);color:var(--ok)} .pill.al{background:var(--alert-bg);color:var(--alert)}
@@ -486,8 +486,9 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
   </div>
 
   <div class="box ok">
-    <p class="hd">El 9,9 del circuito te quitó presión del kilómetro</p>
-    <p>Ese tiempo, hecho al 60 % y sin saber que había cronómetro, vale unos 6 puntos. Con eso <strong>ya no necesitas 3:36: te vale con 3:45.</strong> Lo único innegociable sigue siendo no tocar el 3:49.</p>
+    <p class="hd">Dónde está cada punto</p>
+    <p><strong>El circuito es la palanca barata.</strong> Sus tramos miden de 3 a 5 décimas: de 9,9 a 9,7 ganas un punto entero, y de 9,9 a 9,3 ganas dos. El kilómetro necesita 6 segundos por punto y las dominadas, entre una y dos repeticiones.</p>
+    <p><strong>En dominadas, de 11 a 12 ganas un punto. De 12 a 13, nada.</strong> El siguiente escalón está en 14, y luego en 15. Si llegas a 12, el objetivo pasa directamente a 14.</p>
   </div>
 
   <section class="blk">
@@ -523,12 +524,13 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
 
   <details class="acc"><summary>Plan de carrera para el examen</summary><div class="in">
     <table>
-      <tr><th class="n">200</th><th class="n">400</th><th class="n">800</th><th class="n">meta</th></tr>
-      <tr><td class="n">0:42–0:43</td><td class="n">1:25–1:27</td><td class="n">2:51–2:55</td><td class="n">&lt; 3:45</td></tr>
+      <tr><th class="n">200</th><th class="n">400</th><th class="n">600</th><th class="n">800</th><th class="n">meta</th></tr>
+      <tr><td class="n">0:43</td><td class="n">1:26</td><td class="n">2:09</td><td class="n">2:52</td><td class="n"><strong>3:32–3:36</strong></td></tr>
     </table>
     <ul>
       <li>Sal por el interior de la calle 1 y pelea el sitio en los primeros 30 m. Los 1.000 se miden en esa calle: cuanto más afuera, más metros recorres.</li>
-      <li><strong>Los primeros 200 son la trampa.</strong> La salida es en grupo y el pelotón sale disparado. Tu primer 200 va en 0:42–0:43, no en 0:37.</li>
+      <li><strong>Los primeros 200 son la trampa.</strong> La salida es en grupo y el pelotón sale disparado. Tu primer 200 va en 0:43, no en los 0:40 del control del 19 ni en 0:37.</li>
+      <li><strong>Regla de salida:</strong> si pasas el 600 por delante de 2:07, has salido demasiado rápido.</li>
       <li>Desde el 800, todo lo que quede.</li>
       <li>Al cruzar la meta, colócate en fila y <strong>no dejes que nadie te adelante</strong>: el tribunal asigna los tiempos por orden de llegada.</li>
       <li>Superficie de tartán. Prohibido correr descalzo o con clavos.</li>
@@ -606,7 +608,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <div class="day"><div class="d">Mié 16</div><div class="w">3 × 5 dominadas + rodaje 45 min + 6 progresivos de 80 m<div class="t">techo 145 ppm</div></div></div>
       <div class="day"><div class="d">Jue 17</div><div class="w">21:30 circuito cronometrado con el preparador<div class="t">3–4 intentos · sin piernas ese día</div></div></div>
       <div class="day rest"><div class="d">Vie 18</div><div class="w">Descanso total</div></div>
-      <div class="day key"><div class="d">Sáb 19</div><div class="w"><strong>CONTROL:</strong> dominadas al máximo + 1.000 m en la pista de San Cristóbal<div class="t">≤ 3:50 · dominadas ≥ 12</div></div></div>
+      <div class="day key done"><div class="d">Sáb 19</div><div class="w"><strong>CONTROL HECHO:</strong> 1.000 m en <strong>3:34</strong> y 11 dominadas<div class="t">≤ 3:50 · dominadas ≥ 12</div></div></div>
       <div class="day rest"><div class="d">Dom 20</div><div class="w">Descanso</div></div>
     </div></details>
 
@@ -922,7 +924,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <tr class="r-ok"><td>Banda de frecuencia cardíaca</td><td><strong>Resuelto: Garmin HRM 200.</strong> ANT+ y Bluetooth, mide también variabilidad cardíaca. Estrenarla el miércoles 16, no el día del control</td></tr>
       <tr class="r-ok"><td>Cinturón de lastre</td><td>Resuelto: hay en el Arsenal. Mejor que el chaleco, que se sube y estorba al buscar la barbilla</td></tr>
       <tr class="r-ok"><td>Cronómetro para el circuito</td><td>Resuelto: lo tiene el instructor</td></tr>
-      <tr><td>Pista de atletismo</td><td>Parque San Cristóbal, 400 m con rectas largas y curvas cortas, cualquier día. Telde solo entre semana. La Ciudad Deportiva está en obras hasta enero de 2027</td></tr>
+      <tr><td>Pista de atletismo</td><td>Parque San Cristóbal: bucle <strong>no homologado</strong>, rectas de ~170 m y curvas de radio ~8,5 m. Perímetro sin medir, entre 392 y 400 m. Telde solo entre semana. La Ciudad Deportiva está en obras hasta enero de 2027</td></tr>
       <tr><td>Cadencia en los archivos</td><td>El TCX la recorta. En Garmin Connect: abre la actividad → engranaje → <strong>Exportar original</strong>, que te da el .fit con cadencia, longitud de zancada, oscilación vertical y tiempo de contacto</td></tr>
     </table>
   </section>
@@ -955,13 +957,59 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
 
   <div class="chart"><h4>Foco de carga</h4><p class="cap">Cambia de fecha para ver cómo empeoró el desequilibrio.</p><div class="legend" id="lg-carga"></div><div class="plot" id="ch-carga"></div></div>
 
+  <details class="acc" open><summary>Control a control: qué cambia<span class="when">2 hechos · 2 por hacer</span></summary><div class="in">
+    <p class="cap">Los controles son las únicas sesiones que miden. Todo lo demás entrena. Aquí se ve qué cambia de uno a otro.</p>
+    <table>
+      <tr><th style="width:62px">Fecha</th><th class="n">Qué se midió</th><th>Resultado y qué cambió</th></tr>
+      <tr class="r-ok"><td><strong>31 ago</strong></td><td class="n"><strong>600 m</strong><br>2:12<br>43,0 · 43,9 · 45,0<br>FC med 179 · máx 191</td><td>Primera medición real. Muy regular: solo 2 s entre el primer 200 y el último, demasiado parejo para un esfuerzo vaciado. Se hizo con <strong>4h09 de sueño</strong>, siete horas sin comer y tres días tras una doble extracción de muelas. <strong>Qué cambió:</strong> de aquí salió la estimación de 3:52, que resultó estar 14–22 s por debajo de la realidad</td></tr>
+      <tr class="r-ok"><td><strong>19 sep</strong></td><td class="n"><strong>1.000 m</strong><br>3:34<br>40 · 42 · 46 · 46 · 41<br>FC med 192 · <strong>máx 202</strong><br>434 W · 11 dominadas</td><td><strong>Pasó el 600 en 2:08: cuatro segundos más rápido que su 600 a tope de agosto, y luego siguió 400 m más.</strong> El último 200 fue el segundo más rápido de la carrera. <strong>Qué cambió:</strong> la estimación pasa a marca medida; la FC máxima sube de 195 a 202 y mueve las cinco zonas; los ritmos se recalibran a los bloques A, B y C; y se destaparon once errores del plan</td></tr>
+      <tr><td>10 oct</td><td class="n">Simulacro completo<br>las tres pruebas</td><td><strong>Objetivo: 1.000 ≤ 3:36 · circuito ≤ 9,5 s · dominadas ≥ 12.</strong> Antes hay que medir el perímetro del anillo o llevarlo a una pista homologada. Hora fija, 09:30–10:00, la misma que el 24. Dominadas grabadas en vídeo</td></tr>
+      <tr><td>24 oct</td><td class="n">Simulacro ligero<br>600 m a ritmo</td><td><strong>Objetivo: 600 en 2:07 y acabar con sensación de sobra.</strong> Misma hora que el 10, para que las dos medidas se puedan comparar. Nada a tope esa semana</td></tr>
+    </table>
+    <div class="box wa">
+      <p class="hd">Lo que hace comparables dos controles</p>
+      <p>Del 31 de agosto al 19 de septiembre cambiaron a la vez la distancia, la pista, la hora, el sueño y la comida. Por eso la mejora del 600 (2:12 → 2:08) no se puede atribuir solo a la forma.</p>
+      <p><strong>A partir del 10 de octubre se fijan tres cosas:</strong> misma hora, misma pista con el perímetro ya medido, y vídeo de las dominadas. Solo así el 24 de octubre dirá algo sobre la forma y no sobre las condiciones.</p>
+    </div>
+  </details>
+
+  <details class="acc"><summary>Diagnóstico del control del 19 de septiembre</summary><div class="in">
+    <p><strong>Lo que el archivo dice y el relato no.</strong> Contó que casi abandona en el 600 y que los siguientes 200 se arrastró. Los números dicen otra cosa.</p>
+    <div style="overflow-x:auto">
+    <table style="min-width:340px">
+      <tr><th class="n">Tramo</th><th class="n">Tiempo</th><th class="n">Potencia</th><th class="n">Contacto</th><th class="n">Cadencia</th><th class="n">FC</th></tr>
+      <tr><td class="n">0–200</td><td class="n">40,0 s</td><td class="n">400 W</td><td class="n">187 ms</td><td class="n">160</td><td class="n">178</td></tr>
+      <tr><td class="n">200–400</td><td class="n">42,0 s</td><td class="n">434 W</td><td class="n">200 ms</td><td class="n">179</td><td class="n">190</td></tr>
+      <tr><td class="n">400–600</td><td class="n">46,0 s</td><td class="n">435 W</td><td class="n">210 ms</td><td class="n">177</td><td class="n">194</td></tr>
+      <tr class="r-al"><td class="n">600–800</td><td class="n">46,0 s</td><td class="n"><strong>395 W</strong></td><td class="n"><strong>225 ms</strong></td><td class="n"><strong>172</strong></td><td class="n">196</td></tr>
+      <tr class="r-ok"><td class="n">800–1000</td><td class="n"><strong>41,0 s</strong></td><td class="n"><strong>443 W</strong></td><td class="n">199 ms</td><td class="n"><strong>184</strong></td><td class="n">199</td></tr>
+    </table>
+    </div>
+    <p style="margin-top:10px">El tramo 600–800 tuvo la potencia más baja, el contacto con el suelo más largo y la cadencia más baja. <strong>Pero tardó lo mismo que el anterior: 46,0 s.</strong> Se te cayó la sensación, no el ritmo. Y el último 200 lo hiciste en 41,0 s con la potencia y la cadencia más altas del día: quedaba reserva.</p>
+    <div class="box">
+      <p class="hd">La salida no fue un error tuyo</p>
+      <p>Saliste en 0:40 con un reparto que pedía 0:45. Pero ese reparto estaba calculado sobre una estimación de 3:52 que falló por 14 a 22 segundos. Corriste a tu ritmo real: <strong>el número equivocado era el del plan</strong>.</p>
+    </div>
+    <div class="box">
+      <p class="hd">Por qué te sentiste débil, con lo que está medido</p>
+      <p><strong>El estado no lo explica.</strong> El sueño previo fue el mejor de la serie: 7h59, VFC de 66 ms y pulso en reposo de 45.</p>
+      <p><strong>Lo que sí está medido:</strong> al mismo ritmo de trote ibas a 157–161 ppm frente a 143 el día 16. Son 14 a 18 pulsaciones más. Corriste a las 13:01 y el sensor del reloj marcó 3 °C más que en el rodaje nocturno del día 16.</p>
+      <p><strong>Lo que no puedo afirmar:</strong> la temperatura que hacía. Ese sensor es de muñeca, no un termómetro. La hora y el calor son la causa más probable, pero es una inferencia, no una medición.</p>
+    </div>
+    <div class="box">
+      <p class="hd">La recuperación fue buena</p>
+      <p>Tras cruzar la meta: −25 pulsaciones en el primer minuto y −63 en tres minutos. Eso no es el perfil de alguien fundido.</p>
+    </div>
+  </details>
+
   <details class="acc"><summary>Cómo ha cambiado la estimación del kilómetro</summary><div class="in">
     <table>
       <tr><th>Fecha</th><th class="n">Estimación</th><th>Por qué</th></tr>
       <tr><td>21 ago</td><td class="n">≈ 4:00</td><td>Primera lectura sobre unas series que no eran válidas</td></tr>
       <tr><td>24 ago</td><td class="n">3:45–3:55</td><td>Corregida por el ayuno y la fatiga de aquel día</td></tr>
       <tr><td>26 ago</td><td class="n">4:05–4:20</td><td><strong>Sobrecorrección mía.</strong> La sesión de umbral se hizo con 3h17 de sueño</td></tr>
-      <tr class="r-ok"><td>31 ago</td><td class="n">3:48–3:56</td><td>Primera medición real: 600 m en 2:12</td></tr>
+      <tr><td>31 ago</td><td class="n">3:48–3:56</td><td>Sobre el 600 de 2:12. <strong>Era una sesión que el propio plan prohibía usar para reestimar:</strong> 4h09 de sueño, 7 h sin comer y tres días tras una doble extracción</td></tr>
+      <tr class="r-ok"><td><strong>19 sep</strong></td><td class="n"><strong>3:34</strong><br>banda 3:30–3:38</td><td><strong>MEDIDO, ya no es estimación.</strong> La anterior falló por 14–22 s y la realidad quedó fuera del rango entero. Lo que falló no fue el 600: fue el modelo que lo convirtió en 3:52</td></tr>
     </table>
   </div></details>
 
