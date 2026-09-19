@@ -52,9 +52,10 @@
     "aviso": "Baremo VERIFICADO el 19-9-2026 en BOE-A-2026-15055 (Resolución de 7 de julio de 2026, BOE núm. 167 de 10-07-2026). Ya no hay tramos interpolados: las tres tablas están completas. Corrige errores del baremo anterior en dominadas.",
     "objetivosRevisados": {
       "mil": "3:32-3:36 el día de la prueba, suelo 3:36 → 3 puntos",
-      "dominadas": "15 el día de la prueba, suelo 12 → 8 puntos con 15, 6 con 12",
-      "circuito": "≤ 9,3 s a tope, suelo 9,7 → 8 puntos con 9,3, 7 con 9,7",
-      "mediaEsperada": "5,67 realista · 6,67 si sale todo"
+      "dominadas": "12 es el suelo que hace falta con el circuito a 9,0 (6 puntos). 15 sigue siendo el objetivo deseable (8 puntos)",
+      "circuito": "9,0-9,3 s → 8 puntos. Es la prueba con más margen y la única sin medir en serio",
+      "mediaEsperada": "5,67 con el escenario realista",
+      "prioridad": "Cronometrar el circuito el jueves 24. Todo el escenario descansa sobre un número que todavía no existe."
     }
   },
   "baremo": {
@@ -1307,29 +1308,33 @@
       "circuito": 9.9,
       "circuitoPuntos": 6,
       "media": 4.67,
-      "resultado": "NO APTO"
+      "resultado": "NO APTO",
+      "nota": "El 9,9 es el dato del 10 de septiembre, al 60 % y sin saber que le cronometraban. No es una medición seria."
     },
     {
-      "nombre": "Mínimo para aprobar",
+      "nombre": "Realista (el suyo, 19-9-2026)",
       "mil": "3:34",
       "milPuntos": 3,
       "dominadas": 12,
       "dominadasPuntos": 6,
-      "circuito": 9.9,
-      "circuitoPuntos": 6,
-      "media": 5.0,
-      "resultado": "apto justo"
+      "circuito": 9.0,
+      "circuitoPuntos": 8,
+      "media": 5.67,
+      "resultado": "APTO",
+      "vigente": true,
+      "razon": "Suyo, y se sostiene. El circuito a tope debería estar en 9,0-9,4 (valoración del 10-9): 9,0 es el borde bueno de ese rango, no una fantasía. Y una dominada más es el salto más barato de las tres pruebas: 11 son 5 puntos y 12 son 6.",
+      "porQueNoEsEstancamiento": "En el historial solo hay DOS tests máximos: 10 el 24 de agosto (y fueron 4 min después de 8 × 200) y 11 el 19 de septiembre. La primera sesión de fuerza específica fue el 15 de septiembre. A 19 de septiembre lleva cuatro días entrenando fuerza. Lo anterior era habituación a peso corporal, que no sube el techo."
     },
     {
-      "nombre": "Realista",
-      "mil": "3:34",
-      "milPuntos": 3,
-      "dominadas": 14,
-      "dominadasPuntos": 7,
-      "circuito": 9.7,
-      "circuitoPuntos": 7,
-      "media": 5.67,
-      "resultado": "apto"
+      "nombre": "Con el kilómetro bajado",
+      "mil": "3:28",
+      "milPuntos": 4,
+      "dominadas": 12,
+      "dominadasPuntos": 6,
+      "circuito": 9.0,
+      "circuitoPuntos": 8,
+      "media": 6.0,
+      "resultado": "APTO"
     },
     {
       "nombre": "Objetivo",
@@ -1340,7 +1345,7 @@
       "circuito": 9.3,
       "circuitoPuntos": 8,
       "media": 6.67,
-      "resultado": "apto"
+      "resultado": "APTO"
     }
   ],
   "reglas": [
@@ -1404,5 +1409,69 @@
   "lesiones": {
     "cintillo": "Cintillo iliotibial en la rodilla izquierda, resuelto con fisio. Nota tirantez al apretar 10-15 min por encima del umbral. NO se cambian sesiones por esto: el umbral de los miércoles es EN umbral, no por encima. Se añade glúteo medio los martes. Regla de parada: si pasa de 'lo noto' a 'me molesta al correr', esa sesión se acaba.",
     "pies": "Pies planos y propensión a fascitis plantar. Plantillas 3D de ICOT. Elevaciones de talón a una pierna innegociables los sábados. Señal de alarma: dolor de talón en los primeros pasos de la mañana."
+  },
+  "sensibilidad": {
+    "nota": "Partiendo del escenario realista (3:34 · 12 dominadas · 9,0 s), cuánto aguanta antes de caer.",
+    "circuito": [
+      {
+        "seg": 9.0,
+        "puntos": 8,
+        "media": 5.67,
+        "apto": true
+      },
+      {
+        "seg": 9.4,
+        "puntos": 7,
+        "media": 5.33,
+        "apto": true
+      },
+      {
+        "seg": 9.8,
+        "puntos": 6,
+        "media": 5.0,
+        "apto": true,
+        "nota": "apto justo"
+      },
+      {
+        "seg": 10.2,
+        "puntos": 5,
+        "media": 4.67,
+        "apto": false,
+        "nota": "PUNTO DE ROTURA"
+      }
+    ],
+    "dominadas": [
+      {
+        "reps": 11,
+        "puntos": 5,
+        "media": 5.33,
+        "apto": true
+      },
+      {
+        "reps": 12,
+        "puntos": 6,
+        "media": 5.67,
+        "apto": true
+      },
+      {
+        "reps": 14,
+        "puntos": 7,
+        "media": 6.0,
+        "apto": true
+      },
+      {
+        "reps": 15,
+        "puntos": 8,
+        "media": 6.33,
+        "apto": true
+      }
+    ],
+    "peorCasoQueTumba": "3:37 + 11 dominadas + 9,8 s = 4,33. Hace falta que fallen las tres a la vez.",
+    "riesgoRealDeLasDominadas": "No es llegar a 12: es que el tribunal las cuente. Las 11 del 19 son autoinformadas, sin registro. Si dos no cumplen la técnica oficial (brazos completamente extendidos abajo, barbilla claramente por encima, sin balanceo, UN SOLO INTENTO), son 9 y bajan a 4 puntos.",
+    "cuestaCadaPunto": {
+      "circuito": "tramos de 0,3-0,5 s. De 9,9 a 9,7 = +1 punto; de 9,9 a 9,3 = +2",
+      "dominadas": "de 11 a 12 = +1 punto (1 repetición). De 12 a 13 = nada. De 13 a 14 = +1. De 14 a 15 = +1",
+      "kilometro": "tramos de 6 s. De 3:34 a 3:30 = +1 punto"
+    }
   }
 }

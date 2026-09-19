@@ -18,7 +18,15 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 
 La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**.
 
-**Con las marcas de hoy la media es 4,67 y NO aprueba.** Falta un punto. Los tres más baratos: una dominada más (11 → 12), dos décimas de circuito (9,9 → 9,7) o cuatro segundos en el kilómetro (3:34 → 3:30).
+**Con las marcas de hoy la media es 4,67 y NO aprueba.** Pero el 9,9 del circuito es del 10-9, al 60 % y sin saber que le cronometraban: no es una medición.
+
+**Escenario realista vigente (suyo, 19-9-2026): 3:34 · 12 dominadas · 9,0 s = 5,67, APTO.** Se sostiene: a tope el circuito debería estar en 9,0-9,4 (ya era la valoración del 10-9), y de 11 a 12 dominadas es el salto más barato de las tres pruebas (5 → 6 puntos).
+
+**No está estancado en dominadas, aunque él lo crea.** En todo el historial hay DOS tests máximos: 10 el 24 de agosto (4 min después de 8 × 200) y 11 el 19 de septiembre. La primera sesión de fuerza del Arsenal fue el 15 de septiembre: a 19 de septiembre lleva cuatro días. Lo anterior era habituación a peso corporal, que no sube el techo.
+
+**Punto de rotura:** circuito en 10,2 s. Con 9,8 aprueba justo (5,00). Solo le tumba que fallen las tres a la vez (3:37 + 11 dominadas + 9,8 = 4,33).
+
+**El riesgo de las dominadas no es llegar a 12: es que el tribunal las cuente.** Las 11 son autoinformadas. Si dos no cumplen la técnica oficial, son 9 y bajan a 4 puntos.
 
 **Baremo verificado el 19-9-2026** en BOE-A-2026-15055 (BOE núm. 167 de 10-07-2026). Corrigió errores del anterior: 8-9 dominadas son 4 puntos (no 3) y 7 son 3 (no 2). Ya no quedan tramos interpolados.
 
