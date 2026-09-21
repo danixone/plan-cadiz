@@ -1,6 +1,6 @@
 {
   "meta": {
-    "actualizado": "2026-09-19",
+    "actualizado": "2026-09-21",
     "nota": "Añade cada sesión nueva al principio del array que corresponda. No borres nada."
   },
   "carrera": [
@@ -780,6 +780,12 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-21",
+      "hora": "20:00",
+      "tiempoRecuperacion": "4h",
+      "valoracion": "Al acabar el control el sábado a las 13:59 marcó 55 h, que acababan el lunes a las 20:59. El lunes a las 20:00 quedan 4 h: acaba a medianoche, 3 h más tarde de lo previsto. Garmin recalcula con el sueño y el estrés del fin de semana; sin los datos de sueño del 20 y el 21 no se puede saber qué lo alargó. No es una alarma: el martes llega recuperado."
+    },
     {
       "fecha": "2026-09-19",
       "estado": "No productivo",

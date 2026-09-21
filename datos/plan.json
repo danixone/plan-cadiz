@@ -978,14 +978,15 @@
     {
       "semana": "2026-09-21/2026-09-27",
       "titulo": "Examen escrito el sábado 26",
-      "nota": "Carga reducida a propósito. Esa semana la carrera es secundaria.",
+      "nota": "Carga reducida a propósito por el examen escrito. El lunes 21 no entrena y el 6 × 300 se pierde sin recuperar. El domingo 27 pasa a rodaje de 40 min para no dejar la semana con un solo rodaje.",
       "dias": [
         {
           "fecha": "2026-09-21",
           "dia": "Lun",
-          "tipo": "carrera",
-          "sesion": "3 × 5 dominadas + 6 × 300 m, rec. 2 min",
-          "objetivo": "1:05 (bloque A)"
+          "tipo": "descanso",
+          "sesion": "No entrena (no puede). El 6 × 300 NO se recupera",
+          "objetivo": "",
+          "porQue": "Moverlo al miércoles pone series el día antes del circuito, que tiene que ser fresco. Moverlo al domingo pone series el día antes de las series del lunes 28. Y entrena lo que ya le sobra, velocidad: lo que falta es aeróbica baja. El primer contacto con el ritmo del bloque A pasa al 6 × 400 del lunes 28."
         },
         {
           "fecha": "2026-09-22",
@@ -1024,8 +1025,11 @@
         {
           "fecha": "2026-09-27",
           "dia": "Dom",
-          "tipo": "descanso",
-          "sesion": "Opcional: 30 min muy suaves"
+          "tipo": "carrera",
+          "sesion": "Rodaje 40 min, techo 145. Ya no es opcional",
+          "objetivo": "por pulso, media 135-140",
+          "porQue": "Esta semana pierde el lunes y no tiene rodaje largo el sábado por el examen: solo le queda el rodaje de 35 min del miércoles. La aeróbica baja es el agujero (182, insuficiente). El domingo llega descansado tras el sábado sin entrenar, y un rodaje suave no compromete las series del lunes. Si el examen le deja fundido, se queda en 30.",
+          "nota": "Último día con horario libre: desde el 28 trabaja de 7:30 a 14:00."
         }
       ]
     },

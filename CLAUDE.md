@@ -183,12 +183,13 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 
 | Día | Sesión |
 |---|---|
-| Lun 21 sep | 3 × 5 dominadas + 6 × 300 m a 1:05, rec. 2 min |
+| Lun 21 sep | **No entrena.** El 6 × 300 se pierde y no se recupera. El reloj cerraba la recuperación a medianoche |
 | Mar 22 sep | Arsenal. Lastradas 5 × 3 con 10 kg, **sin subir peso**. Grabar una serie en vídeo |
 | Mié 23 sep | Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas |
 | **Jue 24 sep** | **21:30 circuito: 2 intentos CRONOMETRADOS de verdad.** Es el número que falta desde el 10 de septiembre y el punto más barato del plan |
 | Vie 25 sep | Descanso |
 | Sáb 26 sep | **EXAMEN ESCRITO.** Descanso total |
+| Dom 27 sep | **Rodaje 40 min, techo 145.** Deja de ser opcional: la semana se quedaba con un solo rodaje. Si el examen le deja fundido, 30 |
 
 **Ritmos recalibrados sobre el 3:34 real.** Bloque A (21 sep – 4 oct): 200 en 0:43,5 · 300 en 1:05 · 400 en 1:27 · 600 en 2:11. Bloque B (5 – 18 oct): 0:43 · 1:26 · 2:08. Bloque C (prueba): 0:42,5 · 1:25 · 2:07, meta 3:32–3:36.
 
@@ -199,6 +200,8 @@ El resto del calendario está en `datos/plan.json`.
 **Pista de San Cristóbal:** bucle de atletismo **NO homologado**. Rectas de ~170 m y curvas de radio ~8,5 m; una calle 1 homologada tiene rectas de 84,4 m y radio 36,5 m. **Perímetro sin medir: entre 392 y 400 m** según el ajuste del GPS, y el método no los distingue. Por eso toda marca medida ahí lleva ±1-2 % de escala. **No usar la calibración de cuatro vueltas del FR265:** el manual la condiciona a una pista estándar de 400 m. Antes del control del 10 de octubre hay que medir el anillo con rueda o cinta, o llevar el control a una pista homologada.
 
 ---
+
+**Nota sobre la web:** el calendario de la pestaña Plan se regeneró desde `datos/plan.json` el 21-9-2026. Había quedado con los ritmos viejos y con dos rodajes que no coincidían con el plan (3 oct: web 65 min, plan 55; 17 oct: web 60 min, plan 45). Venían del mismo commit inicial. Manda `plan.json`. Si se cambia el calendario, se cambia en los dos sitios.
 
 # PENDIENTE
 
