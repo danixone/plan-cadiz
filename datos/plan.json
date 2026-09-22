@@ -443,9 +443,9 @@
     },
     "martesFuerza": {
       "lugar": "Gimnasio del Arsenal de Las Palmas",
-      "duracionMin": 65,
+      "duracionMin": 85,
       "calentamiento": "8–10 min de remo o bici + movilidad de hombro + 2 suspensiones de 20 s + 2 × 8 retracciones escapulares",
-      "prioridad": "A es la sesión. Si falta tiempo: A, B, D y a casa.",
+      "prioridad": "A es la sesión. Si falta tiempo: A, B, D y a casa. H e I son los primeros que se recortan, pero antes de eliminarlos se bajan a 2 rondas: el glúteo medio es lo que compensa el cintillo.",
       "bloques": [
         {
           "clave": "A",
@@ -485,7 +485,7 @@
           "ejercicio": "Peso muerto rumano",
           "series": 3,
           "reps": 8,
-          "peso": "20–25 kg",
+          "peso": "20 kg la primera vez. Subir a 25 solo si la anterior no dejó agujetas que se noten al correr",
           "descanso": "2 min"
         },
         {
@@ -506,13 +506,56 @@
         },
         {
           "clave": "H",
+          "ejercicio": "Glúteo medio (circuito)",
+          "series": 3,
+          "reps": "ver detalle",
+          "peso": "banda elástica",
+          "descanso": "45–60 s al final de cada ronda",
+          "detalle": [
+            "Plancha lateral con elevación 10 POR LADO",
+            "Elevación de pierna tumbado de lado 15 por lado (30 en total)",
+            "Pasos laterales con banda en tobillos, 12 por sentido"
+          ],
+          "formato": "En circuito: los tres ejercicios seguidos y descansas al final de la ronda. 3 rondas, unos 8-9 min.",
+          "porQue": "Compensa el cintillo iliotibial izquierdo. Es prevención, no fuerza: por eso va en circuito y no con descanso completo entre series.",
+          "orden": "La plancha lateral va primero porque es la que peor sale con el glúteo ya cargado."
+        },
+        {
+          "clave": "I",
           "ejercicio": "Elevación de piernas colgado + plancha",
           "series": 3,
           "reps": "10 / 45 s",
           "peso": "peso corporal",
-          "descanso": "45 s"
+          "descanso": "45 s",
+          "formato": "En circuito: las dos cosas seguidas y descansas al final de la ronda. 3 rondas."
         }
-      ]
+      ],
+      "formatoHI": "H e I se hacen EN CIRCUITO: todos los ejercicios del bloque seguidos, y el descanso va al final de la ronda, no entre ejercicios. Son bloques de prevención y core con carga baja: no necesitan recuperación completa entre series y así la sesión cabe en el tiempo del gimnasio.",
+      "duracionNota": "CORREGIDO el 22-9-2026. El plan decía 65 min y era falso: solo los descansos prescritos de A a G suman 63 min. Con el trabajo, el calentamiento y los circuitos H e I, la sesión seguida sale en 1h46. Con las superseries de abajo, 1h23. El Arsenal cierra a las 22:00.",
+      "superseries": {
+        "porQue": "La sesión completa no cabe en el tiempo del gimnasio si cada ejercicio va por separado. Emparejar los que no compiten entre sí ahorra 24 min y no quita calidad: mientras descansa el tirón, trabaja la pierna.",
+        "pares": [
+          {
+            "par": "B + D",
+            "ejercicios": "Jalón al pecho + Sentadilla",
+            "descanso": "2 min al final del par",
+            "nota": "tirón de espalda y pierna: no compiten"
+          },
+          {
+            "par": "C + F",
+            "ejercicios": "Remo con barra + Fondos en paralelas",
+            "descanso": "2 min al final del par",
+            "nota": "tirón y empuje"
+          },
+          {
+            "par": "E + G",
+            "ejercicios": "Peso muerto rumano + Pájaros",
+            "descanso": "2 min al final del par",
+            "nota": "cadena posterior y hombro"
+          }
+        ],
+        "loQueNoSeEmpareja": "A (dominadas lastradas) va sola y con sus 3 min completos. Es la sesión: emparejarla arruinaría la calidad de la serie."
+      }
     },
     "juevesCircuito": {
       "hora": "21:30",
@@ -769,7 +812,8 @@
         "Baja como si te sentaras hacia atrás, controlando, hasta que el muslo quede paralelo al suelo o algo por debajo.",
         "Espalda neutra, pecho arriba, mirada al frente. El talón no se despega.",
         "Sube empujando con todo el pie, sin adelantar la cadera antes que el pecho."
-      ]
+      ],
+      "aviso": "En Garmin es «Sentadilla con barra», NO «Sentadilla frontal con barra». La frontal lleva la barra delante, sobre los hombros, y es otro ejercicio: exige mucha movilidad de muñeca y hombro y mueve menos peso. La técnica del plan (barra sobre el trapecio) es la de la sentadilla trasera."
     },
     {
       "id": "peso-muerto-rumano",
