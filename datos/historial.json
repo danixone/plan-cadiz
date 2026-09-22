@@ -1,6 +1,6 @@
 {
   "meta": {
-    "actualizado": "2026-09-21",
+    "actualizado": "2026-09-22",
     "nota": "Añade cada sesión nueva al principio del array que corresponda. No borres nada."
   },
   "carrera": [
@@ -481,6 +481,47 @@
     }
   ],
   "dominadas": [
+    {
+      "fecha": "2026-09-22",
+      "sesion": "Arsenal · sesión de fuerza A–G",
+      "horaLocal": "20:37 a 21:53",
+      "duracion": "72:37",
+      "series": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 15,
+      "lastreKg": 10,
+      "descanso": "180 s exactos en las cinco series",
+      "duracionSeriesS": [
+        22,
+        22,
+        19,
+        18,
+        23
+      ],
+      "fcMedia": 109,
+      "fcMax": 150,
+      "bloquesHechos": {
+        "calentamiento": "Bici 2:19 (el plan pide 8-10 min) + 2 suspensiones de 20 s + 2 × 8 retracciones",
+        "A": "Dominadas lastradas 5 × 3 con 10 kg · descansos de 180 s clavados",
+        "B": "Jalón 4 × 6 con 38 kg (el plan decía 40-45) · descansos 101-120 s · series de 49, 44, 41 y 28 s",
+        "C": "Remo 9-8-8-8 con 20 kg en la máquina de agarre estrecho · descansos 82-120 s · la primera serie duró 68 s y las otras 30-35",
+        "D": "Sentadilla 4 × 6 con 20 kg · descansos 120, 49, 45 y 29 s",
+        "E": "Peso muerto rumano 3 × 8 con 20 kg, primera vez · series de 88, 61 y 62 s",
+        "F": "Fondos 8-8-6 a peso corporal",
+        "G": "Aperturas 10-10-12 con 7,5 kg (el plan dice 5-7 kg)"
+      },
+      "noHechos": [
+        "H · glúteo medio (el que compensa el cintillo)",
+        "I · core"
+      ],
+      "valoracion": "Válida y la mejor sesión de fuerza hasta ahora: llegó de la A a la G y el bloque A salió impecable, con los 180 s de descanso clavados en las cinco series. El tiempo siguió siendo el limitante y se pagó por tres sitios: el calentamiento en bici quedó en 2:19 de los 8-10 min prescritos, los descansos de la sentadilla se derrumbaron a 49, 45 y 29 s, y H e I se quedaron fuera. Con la sesión completa y el calentamiento entero habrían sido unos 99 min. No hizo superseries: si las hace, le cabe todo. Dos ajustes de peso: el jalón fue a 38 kg y las aperturas a 7,5 kg, con 10 repeticiones en las dos primeras series en vez de 12: es algo pesado para lo que busca ese ejercicio, que es salud de hombro. RESUELTO: le quedaban 2 repeticiones en reserva en la quinta serie. Con la regla del plan, el 29 SUBE a 12,5 kg. Es la primera subida de lastre desde que empezó la fuerza el 15 de septiembre.",
+      "repeticionesEnReserva": 2
+    },
     {
       "fecha": "2026-09-19",
       "sesion": "CONTROL · una serie al máximo",

@@ -1042,6 +1042,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <tr><td>14 sep</td><td class="n">3 × 5<br>antes de correr</td><td>Habituación hecha como estaba pautada. FC media 127, pico 169</td></tr>
       <tr><td>15 sep</td><td class="n">5 × 3 con 10 kg<br>desc. 3 min</td><td>Primera sesión de fuerza del Arsenal, versión corta por tiempo (A, B, D, H). Lastradas muy lentas y controladas, <strong>1 repetición en reserva</strong> al acabar: el 22 se repite con 10 kg. Jalón 4 × 6 a 40 kg, sentadilla 4 × 6 con barra vacía</td></tr>
       <tr><td>16 sep</td><td class="n">3 × 5<br>antes de correr</td><td>Habituación como estaba pautada. FC media 116, pico 153</td></tr>
+      <tr class="r-ok"><td><strong>22 sep</strong></td><td class="n"><strong>5 × 3 con 10 kg</strong><br>desc. 180 s clavados<br>Arsenal · 72 min</td><td><strong>La mejor sesión de fuerza hasta ahora.</strong> Llegó de la A a la G y el bloque A salió impecable: los tres minutos respetados en las cinco series. Jalón 4 × 6 a 38 kg, remo 9-8-8-8 a 20 kg, sentadilla 4 × 6 a 20 kg, rumano 3 × 8 a 20 kg la primera vez, fondos 8-8-6 y aperturas a 7,5 kg. <strong>Se quedaron fuera H y I</strong>, y el calentamiento en bici fue de 2:19 en vez de 8–10 min</td></tr>
       <tr class="r-al"><td><strong>19 sep</strong></td><td class="n"><strong>11</strong><br>serie máxima</td><td><strong>CONTROL.</strong> Autoinformado: el reloj estuvo parado y no hay registro. La previsión de 13–15 estaba <strong>mal fundada</strong>: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza. El «máximo confirmado 12» no aparece en ninguna sesión del historial. El pulso no lo explica: llegó a la barra a 146–148 y ya ha hecho dominadas a 169. <strong>Se saltó el prep-hombro</strong>, que el plan marca obligatorio. Bíceps hinchados y omóplatos sin activar es el patrón de tirar con el codo en vez de con la escápula</td></tr>
       <tr class="r-ok"><td>10 sep</td><td class="n">29 totales<br>14 con 10 kg</td><td><strong>El mejor dato hasta ahora.</strong> 14 repeticiones con 10 kg pesando 67,4 apuntan a un máximo en fresco con lastre de unas 6, que suele corresponder a <strong>13–15 a peso corporal</strong></td></tr>
       <tr class="r-ok"><td>10 sep</td><td class="n">Circuito<br><strong>9,9 s</strong></td><td><strong>Cambió la estrategia entera.</strong> Al 60 %, contando pasos entre conos y sin saber que le cronometraban. A tope debería andar por 9,0–9,4</td></tr>
@@ -1426,7 +1427,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     { d:'14 sep', total:15, mejor:5,  n:'3 × 5 de habituación antes del rodaje, con 3 min' },
     { d:'15 sep', total:15, mejor:3,  n:'5 × 3 con 10 kg, muy lentas y controladas. 1 en reserva al final' },
     { d:'16 sep', total:15, mejor:5,  n:'3 × 5 de habituación antes del rodaje, con 3 min' },
-    { d:'19 sep', total:11, mejor:11, n:'CONTROL: serie máxima de 11, autoinformada. Sin registro en el FIT' }
+    { d:'19 sep', total:11, mejor:11, n:'CONTROL: serie máxima de 11, autoinformada. Sin registro en el FIT' },
+    { d:'22 sep', total:15, mejor:3,  n:'5 × 3 con 10 kg y 180 s de descanso clavados. Sesión A–G en 72 min' }
   ];
   var domShow = { total:true, mejor:true };
   function drawDom() {
@@ -2847,12 +2849,12 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       return '<h5>Arsenal · 1h23 con superseries</h5>' +
         '<div class="bq">Calentamiento: 8–10 min de remo o bici + movilidad de hombro + <b>2 suspensiones pasivas de 20 s</b> y <b>2 × 8 retracciones escapulares</b> colgado. Obligatorio antes del lastre.</div>' +
         '<ol><li><b>Dominadas lastradas 5 × 3 con ' + lastre + '</b> · descanso 3 min. <b>Es la sesión.</b> Nunca al fallo con lastre</li>' +
-        '<li>Jalón al pecho 4 × 6 · 40–45 kg · 2 min</li>' +
+        '<li>Jalón al pecho <b>4 × 8 · 38 kg</b> · 2 min. La máquina del Arsenal salta de 38 a 45: no hay 40, así que se progresa por repeticiones. Cuando 4 × 8 salga cómodo, pasas a 45 kg con 6</li>' +
         '<li>Remo con barra 4 × 8 · 20 kg · 2 min</li>' +
         '<li>Sentadilla 4 × 6 · barra vacía la primera semana. <b>Sobre el trapecio, nunca en el cuello.</b> En Garmin es «Sentadilla con barra», <b>NO «Sentadilla frontal»</b>: esa lleva la barra delante y es otro ejercicio</li>' +
         '<li>Peso muerto rumano 3 × 8 · <b>20 kg la primera vez</b>, 25 solo si la anterior no dejó agujetas al correr. Rodilla casi fija, movimiento de cadera</li>' +
         '<li>Fondos en paralelas 3 × 6–8 · <b>no bajes de 90°</b></li>' +
-        '<li>Pájaros o face pull 3 × 12 · 5–7 kg · <b>descanso 60 s</b>, no 2 min. Salud de hombro, no fuerza</li>' +
+        '<li>Pájaros o face pull 3 × 12 · <b>5 kg</b> · <b>descanso 60 s</b>, no 2 min. El 22 con 7,5 no llegaste a 12: es salud de hombro, no fuerza</li>' +
         '<li><b>H · Glúteo medio, EN CIRCUITO:</b> plancha lateral con elevación <b>10 por lado</b> → elevación de pierna tumbado de lado 15 por lado (30 en total) → pasos laterales con banda en tobillos, 12 por sentido. <b>Los tres seguidos, descansas 45 s al final de la ronda. 3 rondas.</b> La plancha lateral va la primera: con el glúteo cargado sale mucho peor</li>' +
         '<li><b>I · Core, EN CIRCUITO:</b> elevación de piernas colgado 10 → plancha 45 s. Seguidos, descansas al final. 3 rondas</li></ol>' +
         '<div class="bq"><b>H e I van en circuito, no serie a serie.</b> Son prevención y core con carga baja: no necesitan recuperación completa. En circuito son unos 14 min; serie a serie, más de 25.</div>' +
@@ -2916,7 +2918,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '2026-09-18': DET.descanso(),
     '2026-09-19': DET.control() + '<div class="bq"><b>Hecho (19 sep):</b> 1.000 m en <b>3:34</b> (banda 3:30–3:38), parciales 40 · 42 · 46 · 46 · 41, FC máxima 202 y potencia media 434 W. 11 dominadas. Corriste a las 13:01 con el sensor de muñeca 3 °C por encima del rodaje del 16 y con el pulso +14/+16 ppm al mismo ritmo de trote.</div>',
     '2026-09-20': DET.descanso('Descanso total. Ayer fue un esfuerzo máximo: el reloj pide 55 h.'),
-    '2026-09-22': DET.fuerza('10 kg') + '<div class="bq"><b>No se sube peso.</b> El 15 de septiembre quedó 1 repetición en reserva en la última serie y la regla del plan pide 2. <b>Graba una serie lastrada en vídeo</b>, de frente y de lado: hay que auditar si el tirón empieza en la escápula o en el codo.</div>',
+    '2026-09-22': DET.fuerza('10 kg') + '<div class="bq"><b>Hecho (22 sep):</b> A–G en 72 min. Las lastradas, impecables: 5 × 3 con 10 kg y los 180 s clavados en las cinco series. Se quedaron fuera H e I, y el calentamiento en bici fue 2:19 de los 8–10 min. <b>Con superseries te habría cabido todo.</b><br><b>Te quedaban 2 repeticiones en reserva en la quinta serie: el 29 subes a 12,5 kg.</b> Primera subida de lastre desde que empezaste.</div>' + '<div class="bq"><b>No se sube peso.</b> El 15 de septiembre quedó 1 repetición en reserva en la última serie y la regla del plan pide 2. <b>Graba una serie lastrada en vídeo</b>, de frente y de lado: hay que auditar si el tirón empieza en la escápula o en el codo.</div>',
     '2026-09-23': DET.rodaje(35) + '<div class="bq">4 progresivos de 100 m al terminar, 60–90 s de pausa. Sin dominadas esta semana.</div>',
     '2026-09-24': DET.circuito() + '<div class="bq"><b>Esta vez se cronometra de verdad.</b> 2 intentos con recuperación completa, fresco y sin piernas por la mañana. Es el único dato que te falta y el punto más barato: de 9,9 a 9,7 es un punto entero de baremo.</div>',
     '2026-09-25': DET.descanso(),

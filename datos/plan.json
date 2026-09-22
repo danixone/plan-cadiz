@@ -460,9 +460,10 @@
           "clave": "B",
           "ejercicio": "Jalón al pecho",
           "series": 4,
-          "reps": 6,
-          "peso": "40–45 kg",
-          "descanso": "2 min"
+          "reps": 8,
+          "peso": "38 kg",
+          "descanso": "2 min",
+          "nota": "La máquina del Arsenal salta de 38 a 45 kg: no hay 40. Subir a 45 sería un 18 % de golpe. Se progresa por repeticiones: 4 × 8 con 38 kg. Cuando eso salga cómodo, se pasa a 45 kg con 6."
         },
         {
           "clave": "C",
@@ -501,8 +502,9 @@
           "ejercicio": "Pájaros o face pull",
           "series": 3,
           "reps": 12,
-          "peso": "5–7 kg por mano",
-          "descanso": "60 s"
+          "peso": "5 kg",
+          "descanso": "60 s",
+          "nota": "El 22 usó 7,5 y no llegó a 12 repeticiones en las dos primeras series. Es salud de hombro, no fuerza."
         },
         {
           "clave": "H",
@@ -646,7 +648,8 @@
       {
         "semana": "2026-09-29",
         "habituacion": "3 × 5",
-        "fuerza": "12,5 kg SOLO si la quinta serie del 22 dejó 2 repeticiones en reserva; si no, se repiten los 10 kg"
+        "fuerza": "5 × 3 con 12,5 kg · CONFIRMADO",
+        "porQue": "El 22 de septiembre quedaron 2 repeticiones en reserva en la quinta serie, que es lo que pide la regla para subir."
       },
       {
         "semana": "2026-10-06",
@@ -689,8 +692,8 @@
     },
     {
       "ejercicio": "Jalón al pecho 40–45 kg",
-      "tipo": "estimado",
-      "base": "Maneja 30–40 kg a 10 repeticiones. Con 6 repeticiones deberían entrar 40–45. Probar 50."
+      "tipo": "medido",
+      "base": "El 22-9-2026 hizo 4 × 6 con 38 kg. La máquina del Arsenal no tiene 40: salta de 38 a 45. Se progresa por repeticiones hasta 4 × 8 antes de saltar a 45."
     },
     {
       "ejercicio": "Remo con barra 20 kg",
