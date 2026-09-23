@@ -5,6 +5,82 @@
   },
   "carrera": [
     {
+      "fecha": "2026-09-23",
+      "sesion": "Rodaje 35 min + 4 progresivos de 100 m",
+      "objetivo": "media 135–140 · techo 145 · progresivos 100 m en 20–23 s",
+      "valida": true,
+      "horaInicioLocal": "20:51",
+      "resultado": {
+        "duracion": "35:00",
+        "km": 4.41,
+        "ritmo": "7:57/km",
+        "fcMedia": 142,
+        "fcMax": 154,
+        "cadencia": 152,
+        "zancadaMm": 821,
+        "contactoMs": 310,
+        "desnivelPos": 11,
+        "terreno": "llano",
+        "franjas": {
+          "<130": "3%",
+          "130-140": "17%",
+          "140-145": "63%",
+          "145-155": "18%",
+          ">155": "0%"
+        },
+        "bloques5min": {
+          "ritmos": [
+            "7:10",
+            "7:32",
+            "8:24",
+            "8:17",
+            "8:14",
+            "7:57",
+            "8:17"
+          ],
+          "fc": [
+            134,
+            143,
+            143,
+            142,
+            142,
+            144,
+            145
+          ]
+        },
+        "deriva": {
+          "min5a10": "7:32/km a 143 ppm",
+          "min30a35": "8:17/km a 145 ppm",
+          "sKm": 44,
+          "pct": 10,
+          "analizador": "56 s/km (min 3-8 frente a últimos 8)",
+          "referenciaBaseAsentada": "por debajo del 5 %"
+        },
+        "fcARitmo7a8": 141.4,
+        "sensorMunecaC": 30.3,
+        "progresivos": {
+          "n": 4,
+          "distanciaM": 100,
+          "tiemposS": [
+            20.6,
+            17.7,
+            18.5,
+            17.6
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            166,
+            164,
+            165,
+            160
+          ],
+          "efectoAnaerobico": 2.9,
+          "nota": "Referencia del plan: 100 m en 20-23 s. Solo el primero entra. Los otros tres, a 17,6-18,5 s, son ritmo de 2:56-3:05/km: sprints. Tercera sesión seguida con los progresivos demasiado rápidos (16, 19 y 23)."
+        }
+      },
+      "valoracion": "Válida como rodaje; no reestima nada. El pulso, bien controlado: 63 % entre 140 y 145 y máximo 154. Deriva de 44 s/km (10 %) entre el bloque 5-10 y el 30-35, peor que los 38 del 16 y mejor que los 90 del 12. Cuatro rodajes con banda y cuatro cifras distintas: no hay tendencia. Lo que sí se repite: sale a 7:10 los cinco primeros minutos y 7:32 los cinco siguientes con el pulso ya en 143, y a partir del minuto 10 el ritmo cae de golpe a 8:20. Es el tercer rodaje seguido con salida rápida (12, 16 y 23). Contexto de hoy: el día después de la primera sentadilla y el primer peso muerto rumano juntos; cadencia 152 frente a 156 el día 16 y contacto 310 ms frente a 301, compatible con piernas cargadas, aunque no lo dijo. A ritmo 7:00-8:00 el pulso fue 141,4 frente a 143,4 el 16: la salida no fue peor, la caída sí. Progresivos: 4 × 100 m exactos con 90 s de pausa programados en el reloj, pero tres de cuatro a 17,6-18,5 s cuando la referencia es 20-23; el efecto anaeróbico de 2,9 lo confirma. PATRÓN en tres sesiones: hay que ponerle tope de ritmo en el reloj."
+    },
+    {
       "fecha": "2026-09-19",
       "sesion": "CONTROL 1.000 m · pista del parque San Cristóbal",
       "valida": true,
@@ -665,6 +741,24 @@
   ],
   "sueno": [
     {
+      "fecha": "2026-09-23",
+      "duracion": "7h01",
+      "puntuacion": 87,
+      "calidad": "Bueno",
+      "fcReposo": 49,
+      "vfc": 66,
+      "profundo": "1h06",
+      "rem": "1h33",
+      "despierto": "1m",
+      "inquietud": 47,
+      "bodyBattery": "+76",
+      "estresMedio": 11,
+      "spo2Media": "99%",
+      "spo2Minimo": "88%",
+      "vfc7dias": "Equilibrado",
+      "nota": "No hay datos de sueño del 20, 21 ni 22."
+    },
+    {
       "fecha": "2026-09-19",
       "duracion": "7h59",
       "puntuacion": 89,
@@ -821,6 +915,30 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-23",
+      "ventanaFocoCarga": "26 ago – 23 sep",
+      "focoCarga": "Equilibrado",
+      "mensajeGarmin": "Tu carga de entreno está equilibrada.",
+      "anaerobica": 289,
+      "aerobicaAlta": 549,
+      "aerobicaBaja": 214,
+      "cargaAguda": 332,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.1,
+      "healthSnapshot": {
+        "horaLocal": "22:11",
+        "duracionS": 120,
+        "fcMedia": 79,
+        "fcMin": 76,
+        "fcMax": 84,
+        "rmssdMs": 24,
+        "sdrrMs": 38,
+        "estres": 75,
+        "aviso": "Tomado 40 min después de los progresivos. Mide el estado tras entrenar, no el basal: un rmssd de 24 aquí no se compara con los 66 ms de la noche. Para que sirva, hacerlo por la mañana, sentado y a la misma hora."
+      },
+      "valoracion": "El foco pasa de «aeróbica baja insuficiente» a «Equilibrado», pero no porque la aeróbica baja haya subido mucho (182 → 214, los 35 min de hoy). Es sobre todo porque la aeróbica alta cae de 736 a 549 al moverse la ventana del 22-19 al 26-23: lo que sale es el umbral del 26 de agosto (3 × 8 min a 177-189 ppm) y el 8 × 200 del 24. CORREGIDO el 23-9 por la noche: antes decía que salían el umbral del 9-9 y el rodaje del 6-9, y los dos siguen dentro de la ventana. La anaeróbica sube de 233 a 289 por los progresivos, que fueron sprints. El agujero de base sigue siendo el mismo; la etiqueta ha cambiado por el calendario."
+    },
     {
       "fecha": "2026-09-21",
       "hora": "20:00",

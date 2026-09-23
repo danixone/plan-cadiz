@@ -361,14 +361,21 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
   <h2>Esta semana</h2>
   <p class="lede">Descarga hasta el control del sábado 19. <strong>Toca cualquier día para ver la sesión completa.</strong></p>
 
-  <div class="day rest" data-d="2026-09-20"><div class="d">Dom 20</div><div class="w">Descanso total tras el control.</div></div>
-  <div class="day rest" data-d="2026-09-21"><div class="d">Lun 21</div><div class="w">No entrenas. <strong>El 6 × 300 no se recupera.</strong><div class="t">el reloj cierra la recuperación a medianoche</div></div></div>
-  <div class="day" data-d="2026-09-22"><div class="d">Mar 22</div><div class="w"><strong>Arsenal.</strong> Lastradas 5 × 3 con 10 kg: <strong>no se sube peso</strong>.<div class="t">graba una serie en vídeo, de frente y de lado</div></div></div>
+  <div class="day rest" data-d="2026-09-20" hidden><div class="d">Dom 20</div><div class="w">Descanso total tras el control.</div></div>
+  <div class="day rest" data-d="2026-09-21" hidden><div class="d">Lun 21</div><div class="w">No entrenas. <strong>El 6 × 300 no se recupera.</strong><div class="t">el reloj cierra la recuperación a medianoche</div></div></div>
+  <div class="day" data-d="2026-09-22" hidden><div class="d">Mar 22</div><div class="w"><strong>Arsenal.</strong> Lastradas 5 × 3 con 10 kg: <strong>no se sube peso</strong>.<div class="t">graba una serie en vídeo, de frente y de lado</div></div></div>
   <div class="day" data-d="2026-09-23"><div class="d">Mié 23</div><div class="w">Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas.<div class="t">todo por pulso, techo 145</div></div></div>
   <div class="day key" data-d="2026-09-24"><div class="d">Jue 24</div><div class="w">21:30 circuito: <strong>2 intentos cronometrados de verdad</strong>.<div class="t">es el número que falta desde el 10 de septiembre</div></div></div>
   <div class="day rest" data-d="2026-09-25"><div class="d">Vie 25</div><div class="w">Descanso.</div></div>
   <div class="day key" data-d="2026-09-26"><div class="d">Sáb 26<small>examen</small></div><div class="w"><strong>EXAMEN ESCRITO.</strong> Descanso total.</div></div>
-  <div class="day" data-d="2026-09-27"><div class="d">Dom 27</div><div class="w"><strong>Rodaje 40 min</strong>, techo 145. Ya no es opcional.<div class="t">si el examen te deja fundido, 30</div></div></div>
+  <div class="day" data-d="2026-09-27"><div class="d">Dom 27</div><div class="w"><strong>Rodaje 40 min</strong>, techo 145, los diez primeros a 140. Después, <strong>elevaciones de talón 3 × 15</strong>.<div class="t">si el examen te deja fundido, 30 · es el termómetro antes del bloque A</div></div></div>
+  <div class="day" data-d="2026-09-28"><div class="d">Lun 28</div><div class="w">3 × 5 dominadas + <strong>6 × 400 m</strong>, rec. 90 s. Primer día de trabajo.<div class="t">hora 18:00–19:00 · 1:27 · primer 200 en 0:43,5 · aviso 3:30–3:40 · freno si baja de 1:24</div></div></div>
+  <div class="day" data-d="2026-09-29"><div class="d">Mar 29</div><div class="w"><strong>Arsenal.</strong> Lastradas <strong>5 × 3 con 12,5 kg</strong>. Primera subida.<div class="t">vídeo de la 1.ª y la 5.ª · superseries · H a dos rondas mínimo</div></div></div>
+  <div class="day key" data-d="2026-09-30"><div class="d">Mié 30</div><div class="w">3 × 5 dominadas + <strong>kilómetro partido × 2</strong>: 600 + 45 s + 400, rec. 6 min.<div class="t">hora 18:00–19:00 · 600 en 2:11 · 400 en 1:27 · primer 200 en 0:43,5 · acabar antes de las 21:00</div></div></div>
+  <div class="day" data-d="2026-10-01"><div class="d">Jue 1</div><div class="w">21:30 circuito: <strong>3 intentos cronometrados como el BOE</strong>, el primero comparable.<div class="t">técnica por tramos solo si el 24 dio 9,8 o más</div></div></div>
+  <div class="day rest" data-d="2026-10-02"><div class="d">Vie 2</div><div class="w">Descanso.</div></div>
+  <div class="day" data-d="2026-10-03"><div class="d">Sáb 3</div><div class="w"><strong>Rodaje 55 min</strong>, techo 145, los diez primeros a 140 + gemelo, saltos y core.<div class="t">sin progresivos · elevaciones de talón innegociables · 45 si hubo dolor de talón</div></div></div>
+  <div class="day rest" data-d="2026-10-04"><div class="d">Dom 4</div><div class="w">Descanso. Opción tuya, no recomendación: 30–40 min suaves si el sábado salió limpio.</div></div>
 
   <div class="day" data-d="2026-09-12" hidden><div class="d">Sáb 12</div><div class="w"><strong>Rodaje 35 min.</strong> Ni un minuto más.<div class="t">media 135–140 ppm · techo 145 · te saldrá a 7:00/km o más lento</div></div></div>
   <div class="day rest" data-d="2026-09-13" hidden><div class="d">Dom 13</div><div class="w">Descanso. Solo 3 × 20–30 s de suspensión pasiva + 2 × 8 retracciones escapulares.<div class="t">2 minutos</div></div></div>
@@ -601,75 +608,92 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
   </section>
 
   <section class="blk">
+    <div class="box ok" style="margin-bottom:14px">
+      <p class="hd">Revisión del 23 de septiembre: no se sube la intensidad</p>
+      <p>Seis análisis independientes, sesión por sesión, y los seis coinciden: <strong>los ritmos A, B y C ya están donde tus datos permiten</strong> (la diferencia entre A y B es 0,8 s por 200, el ruido de la pista), <strong>ya vas por encima de lo prescrito sin planificarlo</strong> (tres sesiones seguidas de progresivos a ritmo de 200 y la carga anaeróbica de 233 a 289 en cuatro días) y <strong>el coste es asimétrico</strong>: el punto extra del kilómetro vale +0,33 de media y tu escenario que aprueba no depende de él; un cintillo despierto te tumba el circuito, que es la palanca barata.</p>
+      <p><strong>Lo que sí cambia es la forma:</strong> sesiones entre semana a las 18:00–19:00 desde el 28, aviso de ritmo en el reloj en cada paso de series y primer 200 por reloj, circuito con 3 intentos como el BOE y el primero como comparable, el 8 × 200 del 12 con criterio bajado, habituación 3 × 4 la semana del 19, y la última quincena escrita en dos versiones según la fecha real. <strong>El circuito es inamovible</strong>: el de cada simulacro se hace el jueves anterior.</p>
+      <p>Lo que decide lo que falta: el circuito de mañana 24 (9,0–9,3 nada; 9,4–9,7 jueves con técnica; 9,8 o más, bloque técnico y reescribir escenarios), el lunes 28 y el miércoles 30 (la regla de las dos repeticiones dice si el bloque A se sostiene) y el simulacro del 10 (decide el bloque C).</p>
+    </div>
     <h3>Calendario</h3>
 
     <details class="acc"><summary>14 – 20 sept<span class="when">descarga y control</span></summary><div class="in">
-      <div class="day"><div class="d">Lun 14</div><div class="w">3 × 5 dominadas en el calentamiento + rodaje 40 min<div class="t">techo 145 ppm</div></div></div>
-      <div class="day"><div class="d">Mar 15</div><div class="w">Arsenal: sesión completa A–H<div class="t">lastradas 5 × 3 con 10 kg</div></div></div>
-      <div class="day"><div class="d">Mié 16</div><div class="w">3 × 5 dominadas + rodaje 45 min + 6 progresivos de 80 m<div class="t">techo 145 ppm</div></div></div>
-      <div class="day"><div class="d">Jue 17</div><div class="w">21:30 circuito cronometrado<div class="t">3–4 intentos · sin piernas ese día</div></div></div>
+      <p class="cap">Semana cerrada con el control del 19. El resto del calendario se revisó ese día con la marca real de 3:34.</p>
+      <div class="day done"><div class="d">Lun 14</div><div class="w"><strong>Hecho: rodaje 40 min, FC 142, sin deriva</strong><div class="t">techo 145 ppm</div></div></div>
+      <div class="day done"><div class="d">Mar 15</div><div class="w"><strong>Hecho: A, B, D y H en 52 min</strong><div class="t">lastradas 5 × 3 con 10 kg</div></div></div>
+      <div class="day done"><div class="d">Mié 16</div><div class="w"><strong>Hecho: 45 min a 7:46, deriva 38 s/km, 6 × 80 m</strong><div class="t">techo 145 ppm</div></div></div>
+      <div class="day done"><div class="d">Jue 17</div><div class="w"><strong>Circuito: sin archivo, no consta</strong><div class="t">3–4 intentos · sin piernas ese día</div></div></div>
       <div class="day rest"><div class="d">Vie 18</div><div class="w">Descanso</div></div>
-      <div class="day key done"><div class="d">Sáb 19</div><div class="w"><strong>CONTROL HECHO:</strong> 1.000 m en <strong>3:34</strong> y 11 dominadas<div class="t">banda 3:30–3:38 · 3 puntos</div></div></div>
+      <div class="day key done"><div class="d">Sáb 19</div><div class="w"><strong>CONTROL HECHO: 1.000 m en 3:34 y 11 dominadas</strong><div class="t">≤ 3:50 · dominadas ≥ 12</div></div></div>
       <div class="day rest"><div class="d">Dom 20</div><div class="w">Descanso</div></div>
     </div></details>
 
     <details class="acc" open><summary>21 – 27 sept<span class="when">examen escrito el sábado 26</span></summary><div class="in">
       <p class="cap">Carga reducida a propósito por el examen escrito. El lunes 21 no entrena y el 6 × 300 se pierde sin recuperar. El domingo 27 pasa a rodaje de 40 min para no dejar la semana con un solo rodaje.</p>
       <div class="day rest"><div class="d">Lun 21</div><div class="w">No entrena (no puede). El 6 × 300 NO se recupera</div></div>
-      <div class="day"><div class="d">Mar 22</div><div class="w">Arsenal: sesión completa<div class="t">lastradas 5 × 3 con 10 kg · NO se sube peso · grabar una serie en vídeo</div></div></div>
-      <div class="day"><div class="d">Mié 23</div><div class="w">Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas esta semana<div class="t">trote y rodaje por pulso, techo 145</div></div></div>
+      <div class="day done"><div class="d">Mar 22</div><div class="w"><strong>Hecho: A–G en 72 min, 5 × 3 con 10 kg y 2 en reserva</strong><div class="t">lastradas 5 × 3 con 10 kg · NO se sube peso · grabar una serie en vídeo</div></div></div>
+      <div class="day done"><div class="d">Mié 23</div><div class="w"><strong>Hecho: 35 min, deriva 44 s/km, progresivos rápidos</strong><div class="t">trote y rodaje por pulso, techo 145</div></div></div>
       <div class="day"><div class="d">Jue 24</div><div class="w">21:30 circuito: 2 intentos CRONOMETRADOS con recuperación completa<div class="t">por fin el número real del circuito</div></div></div>
       <div class="day rest"><div class="d">Vie 25</div><div class="w">Descanso</div></div>
       <div class="day key"><div class="d">Sáb 26</div><div class="w"><strong>EXAMEN ESCRITO. Descanso total</strong></div></div>
-      <div class="day"><div class="d">Dom 27</div><div class="w">Rodaje 40 min, techo 145. Ya no es opcional<div class="t">por pulso, media 135-140</div></div></div>
+      <div class="day"><div class="d">Dom 27</div><div class="w">Rodaje 40 min, techo 145 (primeros 10 min a 140). Después, elevaciones de talón a una pierna 3 × 15: el complemento del sábado que se pierde por el examen<div class="t">por pulso, media 135-140 · si el examen te deja fundido, 30 min</div></div></div>
     </div></details>
 
     <details class="acc"><summary>28 sept – 4 oct<span class="when">trabajo específico</span></summary><div class="in">
-      <div class="day"><div class="d">Lun 28</div><div class="w">3 × 5 dominadas + 6 × 400 m, rec. 90 s<div class="t">1:27 · las 6 dentro de 3 s</div></div></div>
-      <div class="day"><div class="d">Mar 29</div><div class="w">Arsenal: sesión completa<div class="t">lastre condicionado a las 2 repeticiones en reserva del día 22</div></div></div>
-      <div class="day key"><div class="d">Mié 30</div><div class="w"><strong>3 × 5 dominadas + kilómetro partido × 2:</strong> 600 m + 45 s + 400 m, rec. 6 min<div class="t">600 en 2:11 · 400 en 1:27 (bloque A)</div></div></div>
-      <div class="day"><div class="d">Jue 1</div><div class="w">21:30 circuito cronometrado</div></div>
+      <div class="day"><div class="d">Lun 28</div><div class="w">3 × 5 dominadas + 6 × 400 m, rec. 90 s<div class="t">hora 18:00-19:00, con banda · 1:27 · las 6 dentro de 3 s · primer 200 en 0:43,5 · aviso de ritmo 3:30-3:40 · freno si un 400 baja de 1:24</div></div></div>
+      <div class="day"><div class="d">Mar 29</div><div class="w">Arsenal: sesión completa<div class="t">lastradas 5 × 3 con 12,5 kg, 180 s · CONFIRMADO · vídeo lateral y frontal de la 1.ª y la 5.ª · calentamiento 8-10 min completo · superseries B+D, C+F, E+G · H a dos rondas mínimo · si la quinta deja 1 en reserva, esa sesión baja a 4 series</div></div></div>
+      <div class="day key"><div class="d">Mié 30</div><div class="w"><strong>3 × 5 dominadas + kilómetro partido × 2:</strong> 600 m + 45 s + 400 m, rec. 6 min<div class="t">hora 18:00-19:00 · acabar antes de las 21:00 y cama antes de las 23:00: el jueves hay circuito · 600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero · si sale 2:09 sin forzar, se anota y no se corrige</div></div></div>
+      <div class="day"><div class="d">Jue 1</div><div class="w">21:30 circuito: 3 intentos cronometrados como el BOE, recuperación completa. El primero es el comparable; anotar nulos y motivo<div class="t">bloque técnico por tramos SOLO si el 24-9 dio 9,8 o más y el preparador lo acepta</div></div></div>
       <div class="day rest"><div class="d">Vie 2</div><div class="w">Descanso</div></div>
-      <div class="day"><div class="d">Sáb 3</div><div class="w">Rodaje 55 min + 10 min de gemelo, saltos y core<div class="t">techo 145 ppm · sin dominadas</div></div></div>
-      <div class="day rest"><div class="d">Dom 4</div><div class="w">Descanso</div></div>
+      <div class="day"><div class="d">Sáb 3</div><div class="w">Rodaje 55 min + 10 min de gemelo, saltos y core<div class="t">techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min</div></div></div>
+      <div class="day rest"><div class="d">Dom 4</div><div class="w">Descanso. Opción tuya, no recomendación: 30-40 min techo 145 solo si el sábado salió dentro del pulso, sin dolor de talón ni piernas cargadas</div></div>
     </div></details>
 
     <details class="acc"><summary>5 – 11 oct<span class="when">afilado y simulacro completo</span></summary><div class="in">
-      <div class="day"><div class="d">Lun 5</div><div class="w">3 × 5 dominadas + 5 × 400 m, rec. 2 min<div class="t">1:26</div></div></div>
-      <div class="day"><div class="d">Mar 6</div><div class="w">Arsenal: sesión completa<div class="t">lastre condicionado a la quinta serie del 29</div></div></div>
-      <div class="day"><div class="d">Mié 7</div><div class="w">3 × 5 dominadas + 3 × 600 m, rec. 3 min<div class="t">2:08 (bloque B) · primera lectura con las zonas nuevas</div></div></div>
-      <div class="day"><div class="d">Jue 8</div><div class="w">21:30 circuito · o el simulacro completo aquí, que es la mejor opción</div></div>
+      <div class="day"><div class="d">Lun 5</div><div class="w">3 × 5 dominadas + 5 × 400 m, rec. 2 min<div class="t">hora 18:00-19:00 · 1:26 con 2 min · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · si la regla de las dos repeticiones saltó el 28 y el 30, se BAJA a 1:27</div></div></div>
+      <div class="day"><div class="d">Mar 6</div><div class="w">Arsenal: sesión completa<div class="t">5 × 3 con 15 kg si la quinta del 29 dejó 2 o más en reserva; 12,5 otra semana si dejó 1. Nunca un salto de 5 kg. Segundo vídeo si el del 29 falló</div></div></div>
+      <div class="day"><div class="d">Mié 7</div><div class="w">3 × 5 dominadas + 3 × 600 m, rec. 3 min<div class="t">hora 18:00, acabar antes de las 20:30: mañana el circuito del simulacro · 2:08 con 3 min, los tres dentro de 3 s · primer 200 en 0:43 · sin subir a 2:06-2:07 ni recortar a 2 × 600</div></div></div>
+      <div class="day key"><div class="d">Jue 8</div><div class="w"><strong>21:</strong>30 CIRCUITO DEL SIMULACRO: fresco, UN intento cronometrado como el BOE (segundo solo si nulo)<div class="t">el tiempo de ese intento es el que va al simulacro. El circuito es inamovible con el preparador: por eso no puede ir al sábado</div></div></div>
       <div class="day rest"><div class="d">Vie 9</div><div class="w">Descanso</div></div>
-      <div class="day key"><div class="d">Sáb 10</div><div class="w"><strong>SIMULACRO COMPLETO:</strong> circuito → dominadas al máximo → 1.000 m<div class="t">1.000 ≤ 3:36 · circuito ≤ 9,5 s · dominadas ≥ 12</div></div></div>
-      <div class="day rest"><div class="d">Dom 11</div><div class="w">Descanso</div></div>
+      <div class="day key"><div class="d">Sáb 10</div><div class="w"><strong>SIMULACRO:</strong> dominadas al máximo en vídeo → 20 min → 1.000 m en pista medida (el circuito se hizo el jueves 8)<div class="t">hora 09:30-10:00, la misma que el 24 de octubre · 1.000 ≤ 3:36 · dominadas ≥ 12 contadas con la técnica del BOE</div></div></div>
+      <div class="day rest"><div class="d">Dom 11</div><div class="w">Descanso. No añadir rodaje: tras el 1.000 del 19-9 el reloj pidió 55 h</div></div>
     </div></details>
 
     <details class="acc"><summary>12 – 18 oct<span class="when">velocidad específica</span></summary><div class="in">
-      <div class="day"><div class="d">Lun 12</div><div class="w">3 × 5 dominadas + 8 × 200 m, rec. 2 min<div class="t">0:41 · las 8 entre 0:40 y 0:42</div></div></div>
-      <div class="day"><div class="d">Mar 13</div><div class="w">Arsenal: sesión completa<div class="t">4 × 3, peso según la quinta serie del 6</div></div></div>
-      <div class="day"><div class="d">Mié 14</div><div class="w">3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)<div class="t">600 en 2:08 · 200 en 0:41</div></div></div>
-      <div class="day"><div class="d">Jue 15</div><div class="w">21:30 circuito cronometrado</div></div>
+      <div class="day"><div class="d">Lun 12</div><div class="w">3 × 5 dominadas + 8 × 200 m, rec. 2 min<div class="t">hora 18:00-19:00 · 0:41-0:42 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro · si el reloj no cerró la recuperación o hubo mala noche, 40 min de rodaje</div></div></div>
+      <div class="day"><div class="d">Mar 13</div><div class="w">Arsenal: sesión completa<div class="t">4 × 3 con el peso que salió del 6, sin perseguir cifra. Última sesión pesada, a 13 días del 26</div></div></div>
+      <div class="day"><div class="d">Mié 14</div><div class="w">3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)<div class="t">hora 18:00-19:00 · 600 en 2:08 (2:07 solo si el 10 salió ≤ 3:34 en distancia medida) · 200 en 0:41-0:42 · primer 200 del 600 en 0:43 · último miércoles con series largas: desde aquí nada nuevo</div></div></div>
+      <div class="day"><div class="d">Jue 15</div><div class="w">21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable. Último jueves cronometrado en formato entreno<div class="t">bloque técnico solo si se acordó tras el 24-9</div></div></div>
       <div class="day rest"><div class="d">Vie 16</div><div class="w">Descanso</div></div>
-      <div class="day"><div class="d">Sáb 17</div><div class="w">Rodaje 45 min + 10 min de gemelo, saltos y core<div class="t">techo 145 ppm · sin dominadas</div></div></div>
+      <div class="day"><div class="d">Sáb 17</div><div class="w">Rodaje 45 min + 10 min de gemelo, saltos y core<div class="t">techo 145 · primeros 10 min a 140 · 45 min y NO 55: bajada deliberada antes de «llegar entero» · elevaciones de talón 3 × 15 · comparar deriva con el 16-9 y con el 3-10 recortado a 45</div></div></div>
       <div class="day rest"><div class="d">Dom 18</div><div class="w">Descanso</div></div>
     </div></details>
 
     <details class="acc"><summary>19 – 25 oct<span class="when">llegar entero</span></summary><div class="in">
       <p class="cap">Nada de 1.000 a tope esta semana. El objetivo ya no es medir, es llegar entero.</p>
-      <div class="day"><div class="d">Lun 19</div><div class="w">3 × 5 dominadas + 4 × 400 m, rec. 2:30<div class="t">1:25 clavados, sin sufrir de más</div></div></div>
-      <div class="day"><div class="d">Mar 20</div><div class="w">Arsenal: descarga · solo A, B y D<div class="t">lastradas 4 × 3 con 10 kg</div></div></div>
-      <div class="day"><div class="d">Mié 21</div><div class="w">3 × 5 dominadas + 600 m + 400 m, rec. 5 min<div class="t">2:07 y 1:25 (bloque C), ambas al primer intento</div></div></div>
-      <div class="day"><div class="d">Jue 22</div><div class="w">21:30 circuito a ritmo, sin cronometrar</div></div>
+      <div class="day"><div class="d">Lun 19</div><div class="w">3 × 4 dominadas + 4 × 400 m, rec. 2:30<div class="t">hora 18:00-19:00 · 1:25 si el 10 dio ≤ 3:34; 1:26 si dio 3:36-3:38 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4</div></div></div>
+      <div class="day"><div class="d">Mar 20</div><div class="w">Arsenal: descarga · solo A, B y D<div class="t">4 × 3 con 10 kg, 180 s · descarga: mismo peso, menos volumen · prep-hombro completo</div></div></div>
+      <div class="day"><div class="d">Mié 21</div><div class="w">3 × 4 dominadas + 600 m + 400 m, rec. 5 min<div class="t">hora 18:00-19:00 · 2:07 y 1:25 si el 10 salió ≤ 3:34; 2:08 y 1:26 si salió 3:36-3:38 · primer 200 en 0:42,5-0:43 · si la prueba es el 26 o el 27, esta es la ÚLTIMA sesión de calidad</div></div></div>
+      <div class="day"><div class="d">Jue 22</div><div class="w">21:30 circuito: UN intento cronometrado como el BOE, fresco, y el resto a ritmo sin cronómetro. Último circuito medido antes de Cádiz (el sábado no hay circuito)<div class="t">sin bloque técnico ni saltos</div></div></div>
       <div class="day rest"><div class="d">Vie 23</div><div class="w">Descanso</div></div>
-      <div class="day key"><div class="d">Sáb 24</div><div class="w"><strong>SIMULACRO LIGERO:</strong> circuito + dominadas al máximo + 600 m a ritmo de prueba<div class="t">600 m en 2:07 · acaba con sensación de sobra</div></div></div>
+      <div class="day key"><div class="d">Sáb 24</div><div class="w"><strong>Depende de la fecha de la prueba (dos versiones)</strong><div class="t"><b>Si la prueba es del 28 al 30:</b> SIMULACRO LIGERO: dominadas al máximo en vídeo (prep-hombro obligatorio) + 600 m a 2:07 (o 2:08 según el 10). Sin circuito: se hizo el jueves 22.</div><div class="t"><b>Si es el 26 o el 27:</b> Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. SIN test máximo de dominadas ni 600: el último test fue el 10.</div><div class="t">hora 09:30-10:00 · acabar con sensación de sobra</div></div></div>
       <div class="day rest"><div class="d">Dom 25</div><div class="w">Descanso</div></div>
     </div></details>
-    <details class="acc"><summary>Semana del 26 oct<span class="when">afinamiento y prueba</span></summary><div class="in">
-      <div class="day"><div class="d">−5 días</div><div class="w">3 × 4 dominadas muy suaves + 3 × 200 m a 0:42, rec. 3 min. Y a casa</div></div>
-      <div class="day"><div class="d">−2 días</div><div class="w">15 min suaves + 3 progresivos de 100 m <strong>por mecánica</strong>, 20–23 s, no a ritmo de carrera<div class="t">el 19 de septiembre los progresivos salieron rápidos y abriste el kilómetro a 3:05</div></div></div>
+
+    <details class="acc"><summary>26 oct – 1 nov<span class="when">afinamiento y prueba · dos versiones según la fecha</span></summary><div class="in">
+      <p class="cap">La fecha exacta no se conoce (última semana de octubre). Se elige la versión en cuanto llegue el llamamiento. En las dos: un solo 1.000 a tope en octubre (el 10), el último esfuerzo máximo de carrera a 16-20 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba.</p>
+      <p class="hd" style="margin-top:10px">Si la prueba es el lunes 26 o el martes 27</p>
+      <div class="day"><div class="d">Mié 21</div><div class="w">600 + 400 del bloque C: ÚLTIMA sesión de calidad. Sustituye al «−5 días»</div></div>
+      <div class="day"><div class="d">Sáb 24</div><div class="w">Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. Sin test máximo</div></div>
+      <div class="day rest"><div class="d">Dom 25</div><div class="w">Descanso, o 15 min muy suaves</div></div>
+      <div class="day key"><div class="d">Prueba</div><div class="w"><strong>Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra. Nada nuevo</strong></div></div>
+      <p class="hd" style="margin-top:10px">Si la prueba es el miércoles 28, el jueves 29 o el viernes 30</p>
+      <div class="day key"><div class="d">Sáb 24</div><div class="w"><strong>Simulacro ligero completo:</strong> dominadas al máximo en vídeo + 600 a 2:07 (o 2:08). El circuito, el jueves 22</div></div>
+      <div class="day"><div class="d">Lun 26</div><div class="w">Si la prueba es el 29 o el 30: última calidad, 3 × 200 a 0:42-0:43 con 3 min + 3 × 4 dominadas suaves. Si es el 28: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 21</div></div>
+      <div class="day"><div class="d">−2 días</div><div class="w">15 min suaves + 3 progresivos de 100 m por mecánica (20-23 s), con tope 3:20-3:50 en el reloj</div></div>
       <div class="day rest"><div class="d">−1 día</div><div class="w">Descanso, o 15 min muy suaves</div></div>
-      <div class="day key"><div class="d">Prueba</div><div class="w"><strong>Calentamiento estándar completo, con el trote por pulso y el prep-hombro antes de la barra.</strong> No inventes nada nuevo ese día<div class="t">reparto 0:43 · 1:26 · 2:09 · 2:52 · meta 3:32–3:36 · el 3:49 elimina</div></div></div>
+      <div class="day key"><div class="d">Prueba</div><div class="w"><strong>Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra. Nada nuevo</strong></div></div>
     </div></details>
+
   </section>
 </div>
 <!-- ================= EJERCICIOS ================= -->
@@ -1014,7 +1038,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     </table>
   </div></details>
 
-  <details class="acc"><summary>Historial de carrera<span class="when">11 sesiones</span></summary><div class="in">
+  <details class="acc"><summary>Historial de carrera<span class="when">12 sesiones</span></summary><div class="in">
     <table>
       <tr><th style="width:66px">Fecha</th><th class="n">Resultado</th><th>Valoración</th></tr>
       <tr class="r-al"><td>21 ago</td><td class="n">4:32,7 · 4:25,9<br>4:22,0 · 4:34,2</td><td><strong>No válida.</strong> Sin calentamiento (FC 87 al empezar), sin hidratos, tras un día de trabajo y tres horas de compras. El giro de 180° del metro 500 costó ~3 s más 5–7 de reaceleración</td></tr>
@@ -1026,6 +1050,7 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       <tr class="r-al"><td>7 sep</td><td class="n">Teror<br>5h03 · +545 m</td><td><strong>La causa de todo lo que vino después.</strong> Día de descanso. De 20:12 a 01:15. Al reloj le entraron 15 puntos de carga aeróbica baja por cinco horas: toda la fatiga, casi nada del crédito</td></tr>
       <tr><td>9 sep</td><td class="n">5:32 · 5:53<br>5:53 · 5:53</td><td><strong>Ejecución impecable, resultado concluyente.</strong> El criterio para correr el control era 4:25–4:45; salió 5:53. Control aplazado al 19</td></tr>
       <tr class="r-ok"><td>11 sep</td><td class="n">carga 381 → 273<br>predisp. 91</td><td>La descarga funcionó en dos días. Fuera de sobrecarga, VFC de vuelta al equilibrio</td></tr>
+      <tr><td>23 sep</td><td class="n"><strong>35:00 · 4,41 km</strong><br>7:57/km · FC media 142<br>cadencia 152 · llano<br>+ 4 × 100 m</td><td>Pulso bien sujeto: 63 % entre 140 y 145, máximo 154. <strong>Deriva de 44 s/km (10 %)</strong>, peor que el 16 y mejor que el 12: cuatro rodajes con banda, cuatro cifras, ninguna tendencia. Lo que sí se repite por tercera vez es la <strong>salida a 7:10</strong> y la caída de golpe a partir del minuto 10. El día después de la primera sentadilla con rumano: cadencia 152 y contacto 310 ms, piernas cargadas. Los progresivos, 4 × 100 m exactos, pero <strong>tres de cuatro a 17,6–18,5 s</strong> cuando la referencia es 20–23: tercera sesión seguida de sprints disfrazados</td></tr>
       <tr class="r-ok"><td><strong>19 sep</strong></td><td class="n"><strong>1.000 m<br>3:34</strong><br>banda 3:30–3:38<br>FC máx 202 · 434 W</td><td><strong>CONTROL. El mejor dato de la serie.</strong> Parciales de 200: <strong>40 · 42 · 46 · 46 · 41</strong>. El último 200 fue el segundo más rápido, con la potencia (443 W) y la cadencia (184) más altas del día: quedaba reserva. El tramo 600–800 tuvo la potencia más baja y el contacto más largo, pero tardó lo mismo que el anterior: se cayó la sensación, no el ritmo. Salió en 0:40 con un reparto que pedía 0:45, pero <strong>ese reparto estaba calculado sobre una estimación de 3:52 que falló por 14–22 s</strong>. Corrió a las 13:01, con el pulso +14/+16 ppm al mismo ritmo de trote que el día 16. <strong>El margen de ±4 s no es el cronómetro: es la pista sin homologar</strong></td></tr>
       <tr class="r-ok"><td>16 sep</td><td class="n"><strong>45:00 · 5,80 km</strong><br>7:46/km · FC media 143<br>cadencia 156 · llano<br>+ 6 progresivos</td><td><strong>Tercer rodaje seguido en zona:</strong> 71 % entre 140 y 145 ppm, máximo 153. Media tres pulsaciones por encima del objetivo porque sale a 7:08 y la FC se planta en 142–144 desde el minuto 5. <strong>Deriva de 38 s/km (8 %)</strong> en 45 min en llano, con el ritmo cayendo de forma continua: entre los 90 del 12 y el cero del 14. Factores que no son forma: primera sentadilla el día anterior, salida rápida y 45 min. Los seis progresivos, programados en el reloj: 80 m exactos con 90 s de pausa, en 18,2 · 17,3 · 16,3 · 16,5 · 14,7 · 14,8 s. Los dos últimos, por encima del ritmo de 400</td></tr>
       <tr class="r-ok"><td>14 sep</td><td class="n"><strong>40:00 · 5,01 km</strong><br>7:59/km · FC media 142<br>cadencia 154 · D+ 53 m</td><td><strong>Segunda sesión seguida clavada en zona</strong> y con la forma correcta: 85 % entre 130 y 145 ppm y <strong>prácticamente sin deriva</strong> —sale a 8:00 y termina a 7:50— frente a los 90 s/km del sábado. Más lenta de media porque llevaba 53 m de desnivel, 5 min más y las dominadas 20 min antes. Mantuvo respiración nasal toda la sesión</td></tr>
@@ -1272,7 +1297,9 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     {d:'12 sep', h:7.38, s:95, q:'Excelente', fc:45},
     {d:'14 sep', h:6.68, s:77, q:'Aceptable', fc:48},
     {d:'15 sep', h:7.43, s:83, q:'Bueno', fc:49},
-    {d:'16 sep', h:7.33, s:79, q:'Aceptable', fc:46}
+    {d:'16 sep', h:7.33, s:79, q:'Aceptable', fc:46},
+    {d:'19 sep', h:7.98, s:89, q:'Bueno', fc:45},
+    {d:'23 sep', h:7.02, s:87, q:'Bueno', fc:49}
   ];
   function drawSueno() {
     var host = document.getElementById('ch-sueno'); if (!host) return;
@@ -1314,9 +1341,10 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '14 sept': { anaerobica:127, alta:759, baja:162, estado:'No productivo', vfc:'57 ms equilibrado', aguda:227 },
     '15 sept': { anaerobica:127, alta:759, baja:157, estado:'No productivo', vfc:'60 ms equilibrado', aguda:'190 (baja, ratio 0,7)' },
     '16 sept': { anaerobica:159, alta:759, baja:218, estado:'No productivo', vfc:'59 ms equilibrado', aguda:'275 (óptimo, ratio 0,9)' },
-    '19 sept': { anaerobica:233, alta:736, baja:182, estado:'No productivo', vfc:'62 ms equilibrado', aguda:'384 (óptimo, ratio 1,2)' }
+    '19 sept': { anaerobica:233, alta:736, baja:182, estado:'No productivo', vfc:'62 ms equilibrado', aguda:'384 (óptimo, ratio 1,2)' },
+    '23 sept': { anaerobica:289, alta:549, baja:214, estado:'foco Equilibrado', vfc:'66 ms equilibrado', aguda:'332 (óptimo, ratio 1,1)' }
   };
-  var cargaSel = '19 sept';
+  var cargaSel = '23 sept';
   function drawCarga() {
     var host = document.getElementById('ch-carga'); if (!host) return;
     host.innerHTML = ''; var tip = attachTip(host);
@@ -1359,7 +1387,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
       { d:'6 sep',  ritmo:'6:01 /km', fc:160, n:'Rodaje, tramo llano de los 2 primeros km' },
       { d:'12 sep', ritmo:'7:00 /km', fc:141, n:'Primer rodaje con banda. Minutos 3 a 8, en llano' },
       { d:'14 sep', ritmo:'7:55 /km', fc:142, n:'40 min a ritmo plano, con 53 m de desnivel y las dominadas antes' },
-      { d:'16 sep', ritmo:'7:36 /km', fc:142, n:'Minutos 5 a 10 en llano. Deriva de 38 s/km en 45 min, el día después de la primera sentadilla' }
+      { d:'16 sep', ritmo:'7:36 /km', fc:142, n:'Minutos 5 a 10 en llano. Deriva de 38 s/km en 45 min, el día después de la primera sentadilla' },
+      { d:'23 sep', ritmo:'7:32 /km', fc:143, n:'Minutos 5 a 10 en llano. Deriva de 44 s/km en 35 min. Tercera salida rápida seguida' }
     ];
     var W = 640, H = 190, L = 40, R = 14, T = 26, B = 44;
     var svg = el('svg', { viewBox:'0 0 '+W+' '+H, role:'img',
@@ -1534,7 +1563,8 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     { key:'14 sept', label:'14 sept', color:C.ok },
     { key:'15 sept', label:'15 sept', color:C.warn },
     { key:'16 sept', label:'16 sept', color:C.ink },
-    { key:'19 sept', label:'19 sept', color:C.alert }
+    { key:'19 sept', label:'19 sept', color:C.alert },
+    { key:'23 sept', label:'23 sept', color:C.blue }
   ], function(k){ cargaSel = k; drawCarga();
     document.querySelectorAll('#lg-carga button').forEach(function(b){
       b.setAttribute('aria-pressed', b.textContent.trim()===k ? 'true':'false');
@@ -2941,12 +2971,19 @@ footer{border-top:1px solid var(--rule);padding:18px 0 calc(env(safe-area-inset-
     '2026-09-19': DET.control() + '<div class="bq"><b>Hecho (19 sep):</b> 1.000 m en <b>3:34</b> (banda 3:30–3:38), parciales 40 · 42 · 46 · 46 · 41, FC máxima 202 y potencia media 434 W. 11 dominadas. Corriste a las 13:01 con el sensor de muñeca 3 °C por encima del rodaje del 16 y con el pulso +14/+16 ppm al mismo ritmo de trote.</div>',
     '2026-09-20': DET.descanso('Descanso total. Ayer fue un esfuerzo máximo: el reloj pide 55 h.'),
     '2026-09-22': DET.fuerza('10 kg') + '<div class="bq"><b>Hecho (22 sep):</b> A–G en 72 min. Las lastradas, impecables: 5 × 3 con 10 kg y los 180 s clavados en las cinco series. Se quedaron fuera H e I, y el calentamiento en bici fue 2:19 de los 8–10 min. <b>Con superseries te habría cabido todo.</b><br><b>Te quedaban 2 repeticiones en reserva en la quinta serie: el 29 subes a 12,5 kg.</b> Primera subida de lastre desde que empezaste.</div>' + '<div class="bq"><b>No se sube peso.</b> El 15 de septiembre quedó 1 repetición en reserva en la última serie y la regla del plan pide 2. <b>Graba una serie lastrada en vídeo</b>, de frente y de lado: hay que auditar si el tirón empieza en la escápula o en el codo.</div>',
-    '2026-09-23': DET.rodaje(35) + '<div class="bq">4 progresivos de 100 m al terminar, 60–90 s de pausa. Sin dominadas esta semana.</div>',
+    '2026-09-23': DET.rodaje(35) + '<div class="bq">4 progresivos de 100 m al terminar, 60–90 s de pausa. Sin dominadas esta semana.</div>' + '<div class="bq"><b>Hecho (23 sep):</b> 35:00 a 7:57 con FC media 142 y máximo 154. Deriva 44 s/km. Progresivos de 100 m en 20,6 · 17,7 · 18,5 · 17,6 s: <b>tres de cuatro demasiado rápidos</b>, referencia 20–23 s. Dos reglas nuevas para todos los rodajes que quedan: <b>los diez primeros minutos con techo 140</b>, y <b>el paso de 100 m con aviso de ritmo en el reloj</b> (3:20–3:50 /km).</div>',
     '2026-09-24': DET.circuito() + '<div class="bq"><b>Esta vez se cronometra de verdad.</b> 2 intentos con recuperación completa, fresco y sin piernas por la mañana. Es el único dato que te falta y el punto más barato: de 9,9 a 9,7 es un punto entero de baremo.</div>',
     '2026-09-25': DET.descanso(),
     '2026-09-26': DET.descanso('EXAMEN ESCRITO. Descanso total.'),
+    '2026-09-28': '<h5>Series · 6 × 400 m · 18:00–19:00</h5><div class="bq">Primer día de trabajo (7:30–14:00). Calentamiento estándar con el trote por pulso, techo 145, y prep-hombro antes de las dominadas.</div><ol><li>3 × 5 dominadas con 3 min.</li><li><b>6 × 400 m a 1:27</b>, recuperación 90 s al trote. Las seis dentro de 3 s.</li><li>Vuelta a la calma 10 min.</li></ol><div class="bq"><b>Es la primera sesión de 400 repetidos de todo tu historial.</b> Programa el paso con <b>aviso de ritmo 3:30–3:40</b>. Primer 200 de cada 400 en 0:43,5 por reloj: 44 + 43, no 41 + 46. Si un 400 baja de 1:24, la siguiente sale más lenta, no se abandona. Mira el pulso al final de cada recuperación: si no baja, la siguiente más lenta.</div><div class="bq"><b>Regla del día torcido:</b> mala noche o jornada dura de vuelta al trabajo → 40 min de rodaje y esta sesión se pierde, no el kilómetro partido del miércoles. Y la regla de las dos repeticiones: dos seguidas a más de 3 s del objetivo, a casa.</div>',
+    '2026-09-29': DET.fuerza('12,5 kg') + '<div class="bq"><b>Primera subida de lastre:</b> el 22 quedaron 2 en reserva. Calentamiento de 8–10 min completo (el 22 fueron 2:19). <b>Vídeo lateral y frontal de la 1.ª y la 5.ª serie</b>: comprobar que los hombros bajan antes de que el codo doble, codo recto abajo, barbilla claramente por encima, cadera quieta. Si la quinta deja solo 1 en reserva, la sesión baja a 4 series y el 6 repite 12,5. <b>Superseries</b> para que quepan H e I; el glúteo medio, a dos rondas como mínimo: no consta hecho ni una vez.</div>',
+    '2026-09-30': '<h5>Kilómetro partido × 2 · 18:00–19:00</h5><div class="bq">La sesión más importante del plan: ataca el tramo 600–1.000, que es donde se te cayó la potencia el 19.</div><ol><li>3 × 5 dominadas con 3 min.</li><li><b>600 m en 2:11</b> → 45 s de pausa → <b>400 m en 1:27</b>. Recuperación 6 min. Dos veces.</li><li>Vuelta a la calma 10 min.</li></ol><div class="bq">Lo que se exige es el <b>reparto</b>, no el tiempo: primer 200 del 600 en 0:43,5 por reloj, los tres 200 del 600 dentro de 1 s, y el segundo 400 a 2 s o menos del primero. Si el 600 sale en 2:09 sin forzar la salida, se anota y no se corrige. Si el primero pasa de 2:12, el segundo a 2:11 y se anota. <b>Acabar antes de las 21:00 y cama antes de las 23:00: mañana circuito.</b></div>',
+    '2026-10-01': DET.circuito() + '<div class="bq"><b>Protocolo nuevo:</b> 3 intentos cronometrados como el BOE (voz de «ya» hasta el pie en el suelo tras la última valla), 3–4 min entre ellos. <b>El primer intento es el que se compara con el baremo</b>; el mejor es tu techo. Anota los tres en décimas, si hubo nulo y por qué. Bloque técnico por tramos <b>solo</b> si el 24 dio 9,8 o más y el preparador lo acepta, y siempre después de los intentos.</div>',
+    '2026-10-02': DET.descanso(),
+    '2026-10-03': DET.rodaje(55) + '<div class="bq"><b>+22 % sobre tu máximo (45 min).</b> Los diez primeros a 140. Sin progresivos. Al acabar, el complemento: <b>elevaciones de talón 3 × 15 innegociables</b>, saltos al cajón 3 × 5 solo si hay calidad, plancha lateral. Si esa semana hubo dolor de talón por la mañana, 45 min. Es la sesión que sí toca el limitante: la aeróbica baja solo ha subido con rodajes.</div>',
+    '2026-10-04': DET.descanso('Descanso. Hay una opción, y es tuya, no una recomendación: 30–40 min con techo 145 (los diez primeros a 140, sin progresivos) solo si el sábado salió dentro del pulso, sin dolor de talón y sin piernas cargadas. Si la haces, se anota como decisión tuya.'),
     '2026-09-21': DET.descanso('No entrenas. El reloj marcaba 4 h de recuperación a las 20:00: acaba a medianoche, tres horas más tarde de lo que calculó al acabar el control.') + '<div class="bq"><b>El 6 × 300 se pierde y no se recupera.</b> Moverlo al miércoles pone series el día antes del circuito, que tiene que ser fresco. Moverlo al domingo pone series el día antes de las series del lunes 28. Y entrena lo que ya te sobra, velocidad. Tu primer contacto con el ritmo del bloque A pasa al 6 × 400 del lunes 28.</div>',
-    '2026-09-27': DET.rodaje(40) + '<div class="bq"><b>Por qué deja de ser opcional.</b> Esta semana pierdes el lunes y el sábado no hay rodaje largo por el examen: solo te quedaba el de 35 min del miércoles. La aeróbica baja es tu agujero (182, insuficiente). Llegas descansado tras el sábado y un rodaje suave no compromete las series del lunes. Es además tu último día con horario libre: desde el 28 trabajas de 7:30 a 14:00. <b>Si el examen te deja fundido, 30 min.</b></div>'
+    '2026-09-27': DET.rodaje(40) + '<div class="bq"><b>Los diez primeros minutos con techo 140</b>, no 145: es la regla nueva contra la salida rápida (12, 16 y 23). Al acabar, <b>elevaciones de talón a una pierna 3 × 15</b>: es el complemento del sábado, que este fin de semana se pierde por el examen. Este rodaje es el termómetro antes del bloque A: solo vale como medición limpia si has dormido más de 6h30 el viernes y el sábado.</div>' + '<div class="bq"><b>Por qué deja de ser opcional.</b> Esta semana pierdes el lunes y el sábado no hay rodaje largo por el examen: solo te quedaba el de 35 min del miércoles. La aeróbica baja es tu agujero (182, insuficiente). Llegas descansado tras el sábado y un rodaje suave no compromete las series del lunes. Es además tu último día con horario libre: desde el 28 trabajas de 7:30 a 14:00. <b>Si el examen te deja fundido, 30 min.</b></div>'
   };
 
     document.querySelectorAll('.day[data-d]').forEach(function (row) {

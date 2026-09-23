@@ -29,6 +29,7 @@ def ritmo(seg, metros):
 
 def lee_fit(ruta):
     rec, ses, sets, sensores = [], {}, [], set()
+    laps = []
     with fitdecode.FitReader(ruta) as f:
         for fr in f:
             if not isinstance(fr, fitdecode.FitDataMessage):
@@ -36,7 +37,7 @@ def lee_fit(ruta):
             if fr.name == "record":
                 d = {}
                 for k in ("timestamp", "distance", "heart_rate", "cadence",
-                          "altitude", "enhanced_altitude"):
+                          "altitude", "enhanced_altitude", "enhanced_speed", "temperature"):
                     if fr.has_field(k):
                         d[k] = fr.get_value(k)
                 rec.append(d)
@@ -57,11 +58,32 @@ def lee_fit(ruta):
                 if d.get("repetitions"):
                     sets.append(d)
             elif fr.name == "lap":
-                pass
+                d = {}
+                for k in ("start_time", "total_distance", "total_timer_time",
+                          "total_elapsed_time", "avg_heart_rate", "max_heart_rate", "lap_trigger"):
+                    if fr.has_field(k):
+                        d[k] = fr.get_value(k)
+                laps.append(d)
             elif fr.name == "device_info":
                 if fr.has_field("device_type") and fr.get_value("device_type") == "heart_rate":
                     sensores.add(str(fr.get_value("garmin_product") if fr.has_field("garmin_product") else "?"))
+    ses["_laps"] = laps
     return rec, ses, sets, sensores
+
+
+def informe_vueltas(laps):
+    """Vueltas del reloj: la fuente buena para progresivos, series y controles.
+    Nunca medir una repetición con un umbral de velocidad: usar esto."""
+    if len(laps) < 2:
+        return
+    print("\n  VUELTAS DEL RELOJ (la referencia para series y progresivos)")
+    for i, l in enumerate(laps, 1):
+        d = l.get("total_distance") or 0
+        t = l.get("total_timer_time") or 0
+        el = l.get("total_elapsed_time") or 0
+        pausa = f"  (pausa {el - t:.0f} s)" if el - t > 2 else ""
+        rit = f"{mmss(t / (d / 1000))}/km" if d > 0 and t > 0 else "—"
+        print(f"    {i:2}: {d:7.1f} m  {t:6.1f} s  {rit:>9}  FC med {l.get('avg_heart_rate') or '—'} máx {l.get('max_heart_rate') or '—'}  [{l.get('lap_trigger')}]{pausa}")
 
 
 def informe_carrera(rec, ses, sensores):
@@ -117,6 +139,20 @@ def informe_carrera(rec, ses, sensores):
             print(f"    minutos 3-8    {mmss(ri)}/km a {hi:.0f} ppm")
             print(f"    últimos 8 min  {mmss(rf)}/km a {hf:.0f} ppm")
             print(f"    deriva         {rf-ri:+.0f} s/km   (normal con base asentada: 5-10 s/km en 35 min)")
+        # Segunda medida, inmune a la salida rápida: mitades desde el minuto 15
+        if len(filas) >= 30:
+            resto = [f for f in filas[15:] if f[1] > 0]
+            mitad = len(resto) // 2
+            a, b = resto[:mitad], resto[mitad:]
+            if a and b:
+                ra, rb = statistics.mean(f[1] for f in a), statistics.mean(f[1] for f in b)
+                ha, hb = statistics.mean(f[2] for f in a), statistics.mean(f[2] for f in b)
+                pct = 100 * ((rb / hb) - (ra / ha)) / (ra / ha) if ha and hb else 0
+                print(f"    mitades desde el min 15: {mmss(ra)}/km a {ha:.0f} → {mmss(rb)}/km a {hb:.0f}  ({rb-ra:+.0f} s/km, {pct:+.1f} % de desacople; base asentada < 5 %)")
+    temps = [r.get("temperature") for r in rec if r.get("temperature") is not None]
+    if temps:
+        print(f"\n  SENSOR DE MUÑECA  media {statistics.mean(temps):.1f} °C · máx {max(temps):.0f}  (no es temperatura ambiente: sirve solo para comparar sesiones)")
+    informe_vueltas(ses.get("_laps", []))
 
     # franjas de pulso
     z = {"<130": 0, "130-140": 0, "140-145": 0, "145-155": 0, "155-170": 0, ">170": 0}

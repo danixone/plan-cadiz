@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generado": "2026-09-19",
+    "generado": "2026-09-23",
     "origen": "Conversación en Claude.ai del 21 ago al 15 sep de 2026",
     "idioma": "es-ES",
-    "nota": "Estado vivo del plan. Revisado a fondo el 19-9-2026 tras el primer control de 1.000 m."
+    "nota": "Estado vivo del plan. Revisado a fondo el 19-9 tras el control y el 23-9 sesión a sesión (veredicto: no subir intensidad; cambiar la forma)."
   },
   "atleta": {
     "nombre": "Daniel",
@@ -37,7 +37,7 @@
       "avisoBasculas": "El 11-9 otra báscula dio 67,4 kg y 14,3 % de grasa. No es comparable con esta serie. Para seguimiento se usa solo la del dietista."
     },
     "banda": "Garmin HRM 200, comprada el 11/09/2026, confirmada activa en los FIT desde el 12/09",
-    "horario": "Vacaciones hasta el 25/09. Desde el 28/09, trabajo de 7:30 a 14:00",
+    "horario": "Vacaciones hasta el 25/09. Desde el 28/09, trabajo de 7:30 a 14:00. Sesiones de carrera entre semana a las 18:00-19:00 (no más tarde: el martes sale del Arsenal a las 22:00 y el jueves tiene circuito a las 21:30).",
     "gimnasios": [
       "Arsenal de Las Palmas (martes)",
       "Gimnasio del preparador (jueves, circuito)"
@@ -323,7 +323,8 @@
         140
       ],
       "ritmoEsperado": "6:45-7:30 /km, el que salga",
-      "aplicaTambienA": "El trote del calentamiento. ANTES iba prescrito a 5:45-6:15 /km, que es más rápido de lo que rueda y lo ponía por encima del techo antes de empezar. Corregido el 19-9."
+      "aplicaTambienA": "El trote del calentamiento. ANTES iba prescrito a 5:45-6:15 /km, que es más rápido de lo que rueda y lo ponía por encima del techo antes de empezar. Corregido el 19-9.",
+      "reglaDeSalida": "Los diez primeros minutos con techo 140, no 145. Patrón medido el 12, 16 y 23 de septiembre: sale a 7:10 los cinco primeros minutos, el pulso se planta en 143-144 y a partir del minuto 10 el ritmo se cae de golpe. Con salida a 7:50 el pulso sube despacio y la deriva se mide de verdad."
     },
     {
       "clave": "TR",
@@ -349,7 +350,9 @@
       "m400": "1:27",
       "m600": "2:11",
       "cuando": "21 sep - 4 oct",
-      "porQue": "Anclado al extremo LENTO de la banda medida, no al centro, porque la distancia no está verificada. Sustituye a K1 (3:50), que era más lento que su ritmo real de 1.000 y no entrenaba nada."
+      "porQue": "Anclado un poco por debajo del 3:34 medido (42,8 s por 200) por tres razones: en el control los tramos 400-600 y 600-800 salieron a 46,0 (ritmo 3:50), es la primera sesión de 400 repetidos de todo el historial, y el patrón medido es pasarse de ritmo. NO por la distancia sin verificar: el sesgo de escala se cancela al medir control y series con el mismo reloj en la misma pista (corregido el 23-9).",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control."
     },
     {
       "clave": "B",
@@ -359,7 +362,9 @@
       "m400": "1:26",
       "m600": "2:08",
       "cuando": "5 - 18 oct",
-      "porQue": "Anclado al centro de la banda medida. La diferencia con A es 0,8 s por 200, menos que el ruido de una repetición suelta: lo que cambia de verdad no es el ritmo, es la exigencia de regularidad."
+      "porQue": "Anclado al centro de la banda medida. La diferencia con A es 0,8 s por 200, menos que el ruido de una repetición suelta: lo que cambia de verdad no es el ritmo, es la exigencia de regularidad.",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control."
     },
     {
       "clave": "C",
@@ -368,7 +373,9 @@
       "m200": "0:42,5",
       "m400": "1:25",
       "m600": "2:07",
-      "cuando": "19-25 oct y día de la prueba"
+      "cuando": "19-25 oct y día de la prueba",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control."
     },
     {
       "clave": "VEL",
@@ -376,14 +383,16 @@
       "ritmoKm": "3:20-3:25",
       "m200": "0:40-0:41",
       "m400": "1:20-1:22",
-      "porQue": "SIN CAMBIOS: 0:40-0:41 es exactamente su máximo medido de 200, el que abrió el 19-9. En los archivos no hay ni un 200 por debajo de 40 s."
+      "porQue": "SIN CAMBIOS: 0:40-0:41 es exactamente su máximo medido de 200, el que abrió el 19-9. En los archivos no hay ni un 200 por debajo de 40 s.",
+      "criterio12oct": "Bajada del 23-9: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Antes decía 0:40-0:42."
     }
   ],
   "estructuraSemanal": [
     {
       "dia": "Lunes",
       "tipo": "carrera",
-      "contenido": "Series (calidad 1). 3 × 5 dominadas dentro del calentamiento"
+      "contenido": "Series (calidad 1). 3 × 5 dominadas dentro del calentamiento",
+      "hora": "18:00-19:00 desde el 28-9"
     },
     {
       "dia": "Martes",
@@ -394,12 +403,13 @@
       "dia": "Miércoles",
       "tipo": "carrera",
       "contenido": "Calidad 2: kilómetro partido o series largas. 3 × 5 dominadas dentro del calentamiento",
-      "nota": "Antes se llamaba «umbral por pulsaciones», pero del 21 de septiembre al 25 de octubre no hay ninguna sesión de umbral programada. La banda 166-172 se conserva documentada como techo para los días en que aplique. NO se añade umbral: el déficit medido es aeróbica baja (182 frente a 736 de alta), y más aeróbica alta empeora el agujero."
+      "nota": "Antes se llamaba «umbral por pulsaciones», pero del 21 de septiembre al 25 de octubre no hay ninguna sesión de umbral programada. La banda 166-172 se conserva documentada como techo para los días en que aplique. NO se añade umbral: el déficit medido es aeróbica baja (182 frente a 736 de alta), y más aeróbica alta empeora el agujero.",
+      "hora": "18:00-19:00 desde el 28-9"
     },
     {
       "dia": "Jueves",
       "tipo": "circuito",
-      "contenido": "Mañana libre. 21:30 circuito con el preparador, fresco y cronometrado"
+      "contenido": "Circuito con el preparador a las 21:30. INAMOVIBLE: no se mueve a otro día. Mañana libre, nada de piernas."
     },
     {
       "dia": "Viernes",
@@ -567,23 +577,33 @@
     "juevesCircuito": {
       "hora": "21:30",
       "lugar": "Con el preparador",
-      "regla": "Solo el circuito y fresco. Nada de piernas por la mañana ese día.",
+      "regla": "Solo el circuito y fresco. Nada de piernas por la mañana. El miércoles acaba antes de las 20:30.",
       "porQue": "El circuito vale hasta 10 puntos y aún no se conoce el tiempo real. Hacerlo cansado impide medirlo.",
       "bloques": [
         {
-          "ejercicio": "Calentamiento estándar",
+          "ejercicio": "Calentamiento fijo",
           "duracionMin": 20
         },
         {
-          "ejercicio": "Circuito de agilidad cronometrado",
-          "series": "3–4",
-          "descanso": "3–4 min de recuperación completa. El mejor tiempo es el que cuenta"
+          "ejercicio": "3 intentos cronometrados como el BOE",
+          "descanso": "3-4 min de recuperación completa",
+          "detalle": "Cronometrar como el examen: voz de «ya» hasta el pie en el suelo tras la última valla. EL PRIMER INTENTO es el que se compara con el baremo; el mejor es el techo. Anotar los tres en décimas, si hubo nulo y por qué, quién cronometra y con qué."
+        },
+        {
+          "ejercicio": "Bloque técnico por tramos (condicionado)",
+          "detalle": "SOLO si el 24-9 dio 9,8 s o más y el preparador lo acepta: 6-8 repeticiones cortas después de los intentos, con objetivo de tiempo relativo a la mejor marca (mejor +0,5-0,8 s). Nunca antes de los intentos."
         },
         {
           "ejercicio": "Vuelta a la calma",
           "duracionMin": 10
         }
-      ]
+      ],
+      "inamovible": "Los jueves a las 21:30 con el preparador. No se puede hacer otro día ni un sábado. Por eso el circuito de los simulacros del 10 y del 24 se hace el jueves anterior (8 y 22).",
+      "decisionSegunEl24": {
+        "9,0-9,3": "8 puntos. Nada cambia.",
+        "9,4-9,7": "7 puntos. Jueves completo con técnica.",
+        "9,8 o más": "6 puntos o menos: hablar con el preparador de meter el bloque técnico los jueves 1 y 15 y reescribir los escenarios de nota."
+      }
     },
     "sabadoComplemento": {
       "duracionMin": 10,
@@ -888,7 +908,8 @@
         "Aceleraciones de 80–100 m que van de menos a más: empiezas a ritmo de rodaje y terminas los últimos 20 m a ritmo de 400.",
         "No son sprints. Si acabas con la cara descompuesta, has ido demasiado.",
         "Vuelta caminando, 60–90 s entre uno y otro, hombros sueltos y mandíbula floja.",
-        "Referencia: 80 m en 16–18 s, 100 m en 20–23 s. Orientativo, no un objetivo: aquí importa la mecánica, no el cronómetro."
+        "Referencia: 80 m en 16–18 s, 100 m en 20–23 s. Orientativo, no un objetivo: aquí importa la mecánica, no el cronómetro.",
+        "TOPE EN EL RELOJ (desde el 23-9-2026): programar el paso de 100 m con objetivo de ritmo 3:20-3:50 /km para que avise si va más rápido. Patrón en tres sesiones seguidas (16, 19 y 23 de septiembre): los progresivos salen a 17-18 s por 100 m, que es ritmo de 200 y no de 400, y el reloj los registra con efecto anaeróbico de 2,2 a 2,9. Un progresivo bien hecho no deja huella anaeróbica."
       ]
     },
     {
@@ -980,28 +1001,32 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas en el calentamiento + rodaje 40 min",
-          "objetivo": "techo 145 ppm"
+          "objetivo": "techo 145 ppm",
+          "hecho": "Hecho: rodaje 40 min, FC 142, sin deriva"
         },
         {
           "fecha": "2026-09-15",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa A–H",
-          "objetivo": "lastradas 5 × 3 con 10 kg"
+          "objetivo": "lastradas 5 × 3 con 10 kg",
+          "hecho": "Hecho: A, B, D y H en 52 min"
         },
         {
           "fecha": "2026-09-16",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + rodaje 45 min + 6 progresivos de 80 m",
-          "objetivo": "techo 145 ppm"
+          "objetivo": "techo 145 ppm",
+          "hecho": "Hecho: 45 min a 7:46, deriva 38 s/km, 6 × 80 m"
         },
         {
           "fecha": "2026-09-17",
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 circuito cronometrado",
-          "objetivo": "3–4 intentos · sin piernas ese día"
+          "objetivo": "3–4 intentos · sin piernas ese día",
+          "hecho": "Circuito: sin archivo, no consta"
         },
         {
           "fecha": "2026-09-18",
@@ -1016,7 +1041,8 @@
           "sesion": "CONTROL: dominadas al máximo + 1.000 m a tope en San Cristóbal",
           "objetivo": "≤ 3:50 · dominadas ≥ 12",
           "clave": true,
-          "lugar": "Pista del parque San Cristóbal, 400 m, calle 1"
+          "lugar": "Pista del parque San Cristóbal, 400 m, calle 1",
+          "hecho": "CONTROL HECHO: 1.000 m en 3:34 y 11 dominadas"
         },
         {
           "fecha": "2026-09-20",
@@ -1045,14 +1071,16 @@
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastradas 5 × 3 con 10 kg · NO se sube peso · grabar una serie en vídeo"
+          "objetivo": "lastradas 5 × 3 con 10 kg · NO se sube peso · grabar una serie en vídeo",
+          "hecho": "Hecho: A–G en 72 min, 5 × 3 con 10 kg y 2 en reserva"
         },
         {
           "fecha": "2026-09-23",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "Rodaje 35 min + 4 progresivos de 100 m. Sin dominadas esta semana",
-          "objetivo": "trote y rodaje por pulso, techo 145"
+          "objetivo": "trote y rodaje por pulso, techo 145",
+          "hecho": "Hecho: 35 min, deriva 44 s/km, progresivos rápidos"
         },
         {
           "fecha": "2026-09-24",
@@ -1078,10 +1106,11 @@
           "fecha": "2026-09-27",
           "dia": "Dom",
           "tipo": "carrera",
-          "sesion": "Rodaje 40 min, techo 145. Ya no es opcional",
-          "objetivo": "por pulso, media 135-140",
+          "sesion": "Rodaje 40 min, techo 145 (primeros 10 min a 140). Después, elevaciones de talón a una pierna 3 × 15: el complemento del sábado que se pierde por el examen",
+          "objetivo": "por pulso, media 135-140 · si el examen te deja fundido, 30 min",
           "porQue": "Esta semana pierde el lunes y no tiene rodaje largo el sábado por el examen: solo le queda el rodaje de 35 min del miércoles. La aeróbica baja es el agujero (182, insuficiente). El domingo llega descansado tras el sábado sin entrenar, y un rodaje suave no compromete las series del lunes. Si el examen le deja fundido, se queda en 30.",
-          "nota": "Último día con horario libre: desde el 28 trabaja de 7:30 a 14:00."
+          "nota": "Último día con horario libre: desde el 28 trabaja de 7:30 a 14:00.",
+          "medir": "Guardar las dos derivas del analizador. Solo es medición limpia con más de 6h30 de sueño las noches del 25 y del 26."
         }
       ]
     },
@@ -1094,28 +1123,32 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 6 × 400 m, rec. 90 s",
-          "objetivo": "1:27 · las 6 dentro de 3 s"
+          "objetivo": "1:27 · las 6 dentro de 3 s · primer 200 en 0:43,5 · aviso de ritmo 3:30-3:40 · freno si un 400 baja de 1:24",
+          "hora": "18:00-19:00, con banda",
+          "regla": "Primera sesión de 400 del historial: manda la regla de las dos repeticiones. Si el día viene torcido (mala noche o jornada dura de vuelta al trabajo): 40 min de rodaje y se pierde esta sesión, no el kilómetro partido."
         },
         {
           "fecha": "2026-09-29",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastre condicionado a las 2 repeticiones en reserva del día 22"
+          "objetivo": "lastradas 5 × 3 con 12,5 kg, 180 s · CONFIRMADO · vídeo lateral y frontal de la 1.ª y la 5.ª · calentamiento 8-10 min completo · superseries B+D, C+F, E+G · H a dos rondas mínimo · si la quinta deja 1 en reserva, esa sesión baja a 4 series"
         },
         {
           "fecha": "2026-09-30",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min",
-          "objetivo": "600 en 2:11 · 400 en 1:27 (bloque A)",
-          "clave": true
+          "objetivo": "600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero · si sale 2:09 sin forzar, se anota y no se corrige",
+          "clave": true,
+          "hora": "18:00-19:00 · acabar antes de las 21:00 y cama antes de las 23:00: el jueves hay circuito"
         },
         {
           "fecha": "2026-10-01",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito cronometrado"
+          "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, recuperación completa. El primero es el comparable; anotar nulos y motivo",
+          "objetivo": "bloque técnico por tramos SOLO si el 24-9 dio 9,8 o más y el preparador lo acepta"
         },
         {
           "fecha": "2026-10-02",
@@ -1128,13 +1161,14 @@
           "dia": "Sáb",
           "tipo": "carrera",
           "sesion": "Rodaje 55 min + 10 min de gemelo, saltos y core",
-          "objetivo": "techo 145 ppm · sin dominadas"
+          "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min",
+          "nota": "+22 % sobre el máximo (45 min). Guardar las dos derivas; para comparar con el 16-9, recortar a 45."
         },
         {
           "fecha": "2026-10-04",
           "dia": "Dom",
           "tipo": "descanso",
-          "sesion": "Descanso"
+          "sesion": "Descanso. Opción tuya, no recomendación: 30-40 min techo 145 solo si el sábado salió dentro del pulso, sin dolor de talón ni piernas cargadas"
         }
       ]
     },
@@ -1147,27 +1181,31 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
-          "objetivo": "1:26"
+          "objetivo": "1:26 con 2 min · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · si la regla de las dos repeticiones saltó el 28 y el 30, se BAJA a 1:27",
+          "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-06",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "lastre condicionado a la quinta serie del 29"
+          "objetivo": "5 × 3 con 15 kg si la quinta del 29 dejó 2 o más en reserva; 12,5 otra semana si dejó 1. Nunca un salto de 5 kg. Segundo vídeo si el del 29 falló"
         },
         {
           "fecha": "2026-10-07",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08 (bloque B) · primera lectura con las zonas nuevas"
+          "objetivo": "2:08 con 3 min, los tres dentro de 3 s · primer 200 en 0:43 · sin subir a 2:06-2:07 ni recortar a 2 × 600",
+          "hora": "18:00, acabar antes de las 20:30: mañana el circuito del simulacro"
         },
         {
           "fecha": "2026-10-08",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito · o el simulacro completo aquí, que es la mejor opción"
+          "sesion": "21:30 CIRCUITO DEL SIMULACRO: fresco, UN intento cronometrado como el BOE (segundo solo si nulo)",
+          "objetivo": "el tiempo de ese intento es el que va al simulacro. El circuito es inamovible con el preparador: por eso no puede ir al sábado",
+          "clave": true
         },
         {
           "fecha": "2026-10-09",
@@ -1179,17 +1217,18 @@
           "fecha": "2026-10-10",
           "dia": "Sáb",
           "tipo": "control",
-          "sesion": "SIMULACRO COMPLETO: circuito → dominadas al máximo → 1.000 m",
-          "objetivo": "1.000 ≤ 3:36 · circuito ≤ 9,5 s · dominadas ≥ 12",
+          "sesion": "SIMULACRO: dominadas al máximo en vídeo → 20 min → 1.000 m en pista medida (el circuito se hizo el jueves 8)",
+          "objetivo": "1.000 ≤ 3:36 · dominadas ≥ 12 contadas con la técnica del BOE",
           "clave": true,
           "hora": "09:30-10:00, la misma que el 24 de octubre",
-          "protocolo": "Antes: medir el perímetro del anillo con rueda o cinta, o llevarlo a una pista homologada. Sin calibración de cuatro vueltas del reloj (el manual la condiciona a pista estándar). El 1.000 se marca a mano con el botón de vuelta, salida y meta en el mismo punto. Dominadas grabadas en vídeo. Reparto del bloque B: 0:43 / 1:26 / 2:08."
+          "protocolo": "Antes: perímetro medido con rueda o cinta, o pista homologada. Sin calibración de cuatro vueltas. Reparto del examen 0:43 / 1:26 / 2:09 / 2:52 con botón de vuelta al pasar por la salida (≈400 y ≈800: 1:26 ±2, 2:52 ±3) y aviso de ritmo 3:25-3:40. Primer 200 entre 0:42 y 0:45. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000.",
+          "decide": "El bloque C: ≤ 3:34 en distancia verificada → C como está (2:07 / 1:25); 3:36-3:38 → el 19, el 21 y el 24 se quedan en 1:26 / 2:08; peor de 3:38 → se revisan todos los ritmos."
         },
         {
           "fecha": "2026-10-11",
           "dia": "Dom",
           "tipo": "descanso",
-          "sesion": "Descanso"
+          "sesion": "Descanso. No añadir rodaje: tras el 1.000 del 19-9 el reloj pidió 55 h"
         }
       ]
     },
@@ -1202,27 +1241,31 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
-          "objetivo": "0:41 · las 8 entre 0:40 y 0:42"
+          "objetivo": "0:41-0:42 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro · si el reloj no cerró la recuperación o hubo mala noche, 40 min de rodaje",
+          "hora": "18:00-19:00",
+          "nota": "Comprobar si trabaja el 12-10 (Fiesta Nacional)."
         },
         {
           "fecha": "2026-10-13",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "4 × 3, peso según la quinta serie del 6"
+          "objetivo": "4 × 3 con el peso que salió del 6, sin perseguir cifra. Última sesión pesada, a 13 días del 26"
         },
         {
           "fecha": "2026-10-14",
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
-          "objetivo": "600 en 2:08 · 200 en 0:41"
+          "objetivo": "600 en 2:08 (2:07 solo si el 10 salió ≤ 3:34 en distancia medida) · 200 en 0:41-0:42 · primer 200 del 600 en 0:43 · último miércoles con series largas: desde aquí nada nuevo",
+          "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-15",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito cronometrado"
+          "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable. Último jueves cronometrado en formato entreno",
+          "objetivo": "bloque técnico solo si se acordó tras el 24-9"
         },
         {
           "fecha": "2026-10-16",
@@ -1235,7 +1278,7 @@
           "dia": "Sáb",
           "tipo": "carrera",
           "sesion": "Rodaje 45 min + 10 min de gemelo, saltos y core",
-          "objetivo": "techo 145 ppm · sin dominadas"
+          "objetivo": "techo 145 · primeros 10 min a 140 · 45 min y NO 55: bajada deliberada antes de «llegar entero» · elevaciones de talón 3 × 15 · comparar deriva con el 16-9 y con el 3-10 recortado a 45"
         },
         {
           "fecha": "2026-10-18",
@@ -1254,28 +1297,31 @@
           "fecha": "2026-10-19",
           "dia": "Lun",
           "tipo": "carrera",
-          "sesion": "3 × 5 dominadas + 4 × 400 m, rec. 2:30",
-          "objetivo": "1:25 clavados, sin sufrir de más"
+          "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30",
+          "objetivo": "1:25 si el 10 dio ≤ 3:34; 1:26 si dio 3:36-3:38 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4",
+          "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-20",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: descarga · solo A, B y D",
-          "objetivo": "lastradas 4 × 3 con 10 kg"
+          "objetivo": "4 × 3 con 10 kg, 180 s · descarga: mismo peso, menos volumen · prep-hombro completo"
         },
         {
           "fecha": "2026-10-21",
           "dia": "Mié",
           "tipo": "carrera",
-          "sesion": "3 × 5 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:07 y 1:25 (bloque C), ambas al primer intento"
+          "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min",
+          "objetivo": "2:07 y 1:25 si el 10 salió ≤ 3:34; 2:08 y 1:26 si salió 3:36-3:38 · primer 200 en 0:42,5-0:43 · si la prueba es el 26 o el 27, esta es la ÚLTIMA sesión de calidad",
+          "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-22",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito a ritmo, sin cronometrar"
+          "sesion": "21:30 circuito: UN intento cronometrado como el BOE, fresco, y el resto a ritmo sin cronómetro. Último circuito medido antes de Cádiz (el sábado no hay circuito)",
+          "objetivo": "sin bloque técnico ni saltos"
         },
         {
           "fecha": "2026-10-23",
@@ -1287,11 +1333,13 @@
           "fecha": "2026-10-24",
           "dia": "Sáb",
           "tipo": "control",
-          "sesion": "SIMULACRO LIGERO: circuito + dominadas al máximo + 600 m a ritmo de prueba",
-          "objetivo": "600 m en 2:07 · acaba con sensación de sobra",
+          "sesion": "Depende de la fecha de la prueba (dos versiones)",
+          "objetivo": "acabar con sensación de sobra",
           "clave": true,
-          "hora": "la misma que el 10 de octubre",
-          "protocolo": "Dominadas al máximo grabadas en vídeo."
+          "hora": "09:30-10:00",
+          "protocolo": "Dominadas al máximo grabadas en vídeo.",
+          "siPrueba28a30": "SIMULACRO LIGERO: dominadas al máximo en vídeo (prep-hombro obligatorio) + 600 m a 2:07 (o 2:08 según el 10). Sin circuito: se hizo el jueves 22.",
+          "siPrueba26o27": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. SIN test máximo de dominadas ni 600: el último test fue el 10."
         },
         {
           "fecha": "2026-10-25",
@@ -1303,29 +1351,66 @@
     },
     {
       "semana": "2026-10-26/2026-11-01",
-      "titulo": "Afinamiento y prueba",
-      "nota": "Ajustar según la fecha exacta del llamamiento.",
-      "dias": [
+      "titulo": "Afinamiento y prueba · dos versiones según la fecha",
+      "nota": "La fecha exacta no se conoce (última semana de octubre). Se elige la versión en cuanto llegue el llamamiento. En las dos: un solo 1.000 a tope en octubre (el 10), el último esfuerzo máximo de carrera a 16-20 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba.",
+      "versiones": [
         {
-          "dia": "−5 días",
-          "tipo": "carrera",
-          "sesion": "3 × 4 dominadas muy suaves + 3 × 200 m a 0:42, rec. 3 min. Y a casa"
+          "nombre": "Si la prueba es el lunes 26 o el martes 27",
+          "dias": [
+            {
+              "dia": "Mié 21",
+              "tipo": "carrera",
+              "sesion": "600 + 400 del bloque C: ÚLTIMA sesión de calidad. Sustituye al «−5 días»"
+            },
+            {
+              "dia": "Sáb 24",
+              "tipo": "carrera",
+              "sesion": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. Sin test máximo"
+            },
+            {
+              "dia": "Dom 25",
+              "tipo": "descanso",
+              "sesion": "Descanso, o 15 min muy suaves"
+            },
+            {
+              "dia": "Prueba",
+              "tipo": "prueba",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra. Nada nuevo",
+              "clave": true
+            }
+          ]
         },
         {
-          "dia": "−2 días",
-          "tipo": "carrera",
-          "sesion": "15 min suaves + 3 progresivos de 100 m por mecánica (referencia 100 m en 20-23 s), NO a ritmo K"
-        },
-        {
-          "dia": "−1 día",
-          "tipo": "descanso",
-          "sesion": "Descanso, o 15 min muy suaves"
-        },
-        {
-          "dia": "Prueba",
-          "tipo": "prueba",
-          "sesion": "Calentamiento estándar completo, el de siempre. No inventar nada nuevo ese día",
-          "clave": true
+          "nombre": "Si la prueba es el miércoles 28, el jueves 29 o el viernes 30",
+          "dias": [
+            {
+              "dia": "Sáb 24",
+              "tipo": "control",
+              "sesion": "Simulacro ligero completo: dominadas al máximo en vídeo + 600 a 2:07 (o 2:08). El circuito, el jueves 22",
+              "clave": true
+            },
+            {
+              "dia": "Lun 26",
+              "tipo": "carrera",
+              "sesion": "Si la prueba es el 29 o el 30: última calidad, 3 × 200 a 0:42-0:43 con 3 min + 3 × 4 dominadas suaves. Si es el 28: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 21"
+            },
+            {
+              "dia": "−2 días",
+              "tipo": "carrera",
+              "sesion": "15 min suaves + 3 progresivos de 100 m por mecánica (20-23 s), con tope 3:20-3:50 en el reloj"
+            },
+            {
+              "dia": "−1 día",
+              "tipo": "descanso",
+              "sesion": "Descanso, o 15 min muy suaves"
+            },
+            {
+              "dia": "Prueba",
+              "tipo": "prueba",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra. Nada nuevo",
+              "clave": true
+            }
+          ]
         }
       ]
     }
@@ -1351,7 +1436,9 @@
       ],
       "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
       "orden": "circuito → dominadas → 1.000 m",
-      "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz."
+      "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz.",
+      "nota": "Este reparto (0:43 por 200) manda también en el simulacro del 10. Los 2:07-2:08 de los bloques B y C son objetivos de repetición con descanso, deliberadamente más rápidos que el paso de carrera.",
+      "dominadas": "Hacer 13 por tu cuenta para que el tribunal cuente 12: la repetición de margen es la única cobertura frente al recuento."
     }
   },
   "escenariosNota": [
@@ -1529,5 +1616,30 @@
       "dominadas": "de 11 a 12 = +1 punto (1 repetición). De 12 a 13 = nada. De 13 a 14 = +1. De 14 a 15 = +1",
       "kilometro": "tramos de 6 s. De 3:34 a 3:30 = +1 punto"
     }
+  },
+  "revision23sep": {
+    "veredicto": "MANTENER. No se sube la intensidad de ninguna sesión hasta Cádiz; se cambia la forma.",
+    "razones": [
+      "Los ritmos A/B/C ya están anclados al 3:34 medido: la diferencia A→B es 0,8 s por 200, el ruido de la pista. No hay ninguna sesión de 400 repetidos en el historial: la viabilidad de 6 × 1:27 con 90 s se mide por primera vez el 28-9.",
+      "Ya va por encima de lo prescrito sin planificarlo: tres sesiones seguidas de progresivos a ritmo de 200, salida del control a 3:05 y carga anaeróbica de 233 a 289 en cuatro días.",
+      "Coste asimétrico: el punto extra del kilómetro exige 3:30 en pista homologada (+0,33 de media) y el escenario que aprueba no depende de él; el único exceso de carga medido (Teror) costó una sobrecarga y un control aplazado; un cintillo despierto tumba el circuito, la palanca barata."
+    ],
+    "loQueSiCambia": [
+      "Sesiones entre semana a las 18:00-19:00 desde el 28-9",
+      "Aviso de ritmo en el reloj en cada paso de series y primer 200 por reloj",
+      "Circuito: 3 intentos como el BOE, el primero comparable; el del simulacro, el jueves 8 con un intento",
+      "8 × 200 del 12-10: criterio bajado a 0:41-0:43",
+      "Habituación 3 × 4 la semana del 19",
+      "Última quincena en dos versiones según la fecha",
+      "Sábado 24 sin test máximo si la prueba es el 26 o el 27",
+      "Glúteo medio a dos rondas mínimo, nunca fuera: no consta hecho ni una vez"
+    ],
+    "queDecideLoQueFalta": {
+      "circuito del 24-9": "9,0-9,3 nada · 9,4-9,7 jueves con técnica · ≥9,8 bloque técnico y reescribir escenarios",
+      "rodaje del 27-9": "termómetro, no decisión (alarma orientativa: media peor de 8:30)",
+      "lunes 28 y miércoles 30": "la regla de las dos repeticiones decide si el bloque A se sostiene; solo hay regla para bajar ritmos, no para subirlos",
+      "simulacro del 10-10": "decide el bloque C"
+    },
+    "metodo": "Seis lentes independientes (carrera, base aeróbica, fuerza, circuito, riesgo, periodización) y escépticos contra cada conclusión; 43 agentes. Las seis lentes coincidieron en no subir intensidad."
   }
 }
