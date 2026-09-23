@@ -12,7 +12,7 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 
 | Prueba | Ahora | Puntos | Objetivo | **Elimina** |
 |---|---|---|---|---|
-| 1.000 m | **3:34 medido el 19-9** (banda 3:30–3:38) | 3 | 3:32–3:36 | **≥ 3:49** |
+| 1.000 m | **3:34 medido el 19-9** (banda 3:30–3:38) | 3 | **Bajar de 3:30** (4 pts, decisión suya del 23-9); suelo 3:36 | **≥ 3:49** |
 | Dominadas | 11 autoinformado el 19-9 | 5 | 15 (suelo 12) | ≤ 4 |
 | Circuito | 9,9 s al 60 %, sin medir en serio | 6 | ≤ 9,3 s (suelo 9,7) | ≥ 11,7 s |
 
@@ -20,7 +20,9 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**.
 
 **Con las marcas de hoy la media es 4,67 y NO aprueba.** Pero el 9,9 del circuito es del 10-9, al 60 % y sin saber que le cronometraban: no es una medición.
 
-**Escenario realista vigente (suyo, 19-9-2026): 3:34 · 12 dominadas · 9,0 s = 5,67, APTO.** Se sostiene: a tope el circuito debería estar en 9,0-9,4 (ya era la valoración del 10-9), y de 11 a 12 dominadas es el salto más barato de las tres pruebas (5 → 6 puntos).
+**Objetivo del 1.000 desde el 23-9-2026: bajar de 3:30.** Es decisión suya y no cambia el veredicto de la revisión: NO se persigue con más intensidad, se persigue con el reparto. El 19-9 hizo 40 · 42 · 46 · 46 · 41; con los dos 46 en 43 habría sido 3:29. Reparto del examen a 42,0 por 200: 0:42 / 1:24 / 2:06 / 2:48. Los ritmos suben UN escalón de 1 s por 400 y solo si el anterior se sostiene (A se mide el 28 y el 30 → B a 1:25 / 2:07 → el simulacro del 10 decide C a 1:24 / 2:06). Un 3:30 en San Cristóbal no cuenta hasta medir el perímetro. Detalle en `plan.json` → `objetivo.objetivoNuevo23sep`.
+
+**Escenario realista vigente (suyo, 19-9-2026): 3:34 · 12 dominadas · 9,0 s = 5,67, APTO.** Con el 3:30: 6,00. Se sostiene: a tope el circuito debería estar en 9,0-9,4 (ya era la valoración del 10-9), y de 11 a 12 dominadas es el salto más barato de las tres pruebas (5 → 6 puntos).
 
 **No está estancado en dominadas, aunque él lo crea.** En todo el historial hay DOS tests máximos: 10 el 24 de agosto (4 min después de 8 × 200) y 11 el 19 de septiembre. La primera sesión de fuerza del Arsenal fue el 15 de septiembre: a 19 de septiembre lleva cuatro días. Lo anterior era habituación a peso corporal, que no sube el techo.
 
@@ -167,7 +169,7 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **El circuito es inamovible: jueves a las 21:30 con el preparador.** No se mueve a otro día ni a un sábado. Por eso el circuito de cada simulacro se hace el jueves anterior (8 y 22 de octubre) con UN intento cronometrado como el BOE, y el sábado quedan dominadas y kilómetro. El miércoles acaba antes de las 20:30. Protocolo de cada jueves: 3 intentos cronometrados como el examen (voz de «ya» hasta el pie en el suelo tras la última valla), **el primero es el comparable con el baremo**, el mejor es el techo, y se anotan nulos y motivo.
 
-**Sesiones entre semana a las 18:00-19:00 desde el 28-9**, con el trabajo de 7:30 a 14:00. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
+**Sesiones entre semana a las 18:00-19:00 desde el 28-9**, con el trabajo de 7:30 a 14:30 de lunes a viernes. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
 
 **Reloj en cada sesión de series:** paso con rango de ritmo 3:30-3:40 /km; primer 200 por reloj (0:43,5 en A, 0:43 en B y C); si un 400 baja del objetivo en más de 3 s, la siguiente sale más lenta, no se abandona. Regla de las dos repeticiones: dos seguidas a más de 3 s, a casa; dos semanas seguidas, se bajan los ritmos.
 
@@ -217,15 +219,15 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 | Vie 25 sep | Descanso |
 | Sáb 26 sep | **EXAMEN ESCRITO.** Descanso total |
 | Dom 27 sep | **Rodaje 40 min, techo 145, primeros 10 min a 140.** Después, elevaciones de talón 3 × 15. Termómetro antes del bloque A, no decisión. 30 min si el examen le deja fundido |
-| Lun 28 sep | **Primer día de trabajo.** 3 × 5 dominadas + 6 × 400 a 1:27, rec. 90 s, 18:00–19:00. Primera sesión de 400 del historial. Día torcido → 40 min de rodaje y se pierde esta, no el kilómetro partido |
+| Lun 28 sep | **Primer día de trabajo (7:30–14:30).** 3 × 5 dominadas + 6 × 400 a 1:27, rec. 90 s, 18:00–19:00. Primera sesión de 400 del historial. Día torcido → 40 min de rodaje y se pierde esta, no el kilómetro partido |
 | Mar 29 sep | Arsenal. **Lastradas 5 × 3 con 12,5 kg**, primera subida. Vídeo de la 1.ª y la 5.ª. Superseries. H a dos rondas mínimo |
 | **Mié 30 sep** | **Kilómetro partido × 2** (600 en 2:11 + 45 s + 400 en 1:27, rec. 6 min), 18:00–19:00. Lo que se exige es el reparto. Acabar antes de las 21:00 |
 | Jue 1 oct | 21:30 circuito, 3 intentos como el BOE |
 | Sáb 3 oct | Rodaje 55 min, techo 145, +22 % sobre el máximo. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
 
-**Ritmos recalibrados sobre el 3:34 real.** Bloque A (21 sep – 4 oct): 200 en 0:43,5 · 300 en 1:05 · 400 en 1:27 · 600 en 2:11. Bloque B (5 – 18 oct): 0:43 · 1:26 · 2:08. Bloque C (prueba): 0:42,5 · 1:25 · 2:07, meta 3:32–3:36.
+**Ritmos, con el escalón condicionado del objetivo 3:30.** Bloque A (28 sep – 4 oct): 400 en 1:27 · 600 en 2:11, no se toca. Bloque B (5 – 18 oct): 1:26 / 2:08, o 1:25 / 2:07 si el A salió clavado con sobra. Bloque C (19 oct – prueba): 1:25 / 2:07, o 1:24 / 2:06 si el simulacro del 10 dio ≤ 3:33 en distancia verificada con los tramos centrales en 43. Solo se sube un escalón si el anterior se sostiene; la regla de las dos repeticiones sigue mandando para bajar.
 
-**Reparto del examen:** 200 en 0:43 · 400 en 1:26 · 600 en 2:09 · 800 en 2:52 · meta 3:32–3:36. Si pasas el 600 por delante de 2:07, has salido demasiado rápido.
+**Reparto del examen (objetivo 3:30):** 200 en 0:42 · 400 en 1:24 · 600 en 2:06 · 800 en 2:48 · meta 3:29–3:30. Suelo 3:36. Si pasas el 600 por delante de 2:05, has salido demasiado rápido. Lo que decide el objetivo son los tramos 400-600 y 600-800: 43 y 43, no 46 y 46.
 
 El resto del calendario está en `datos/plan.json`.
 
