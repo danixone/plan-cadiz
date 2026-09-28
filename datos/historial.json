@@ -1,9 +1,137 @@
 {
   "meta": {
-    "actualizado": "2026-09-23",
+    "actualizado": "2026-09-28",
     "nota": "Añade cada sesión nueva al principio del array que corresponda. No borres nada."
   },
   "carrera": [
+    {
+      "fecha": "2026-09-28",
+      "sesion": "6 × 400 m, rec. 90 s · pista de atletismo de Arucas (complejo Tonono)",
+      "objetivo": "1:27 · las 6 dentro de 3 s · primer 200 en 0:43,5 · aviso 3:30-3:40 · 3 × 5 dominadas en el calentamiento",
+      "valida": false,
+      "horaInicioLocal": "17:56 (primera serie 18:08)",
+      "lugar": "Pista de atletismo del complejo deportivo Tonono (Arucas). Perfil «Pista» del reloj (modo pista, calle 1).",
+      "resultado": {
+        "tiemposS": [
+          84.3,
+          89.7,
+          86.8,
+          87.5,
+          86.0,
+          86.8
+        ],
+        "media": "86,85 s (1:26,9)",
+        "parciales200": [
+          [
+            40.6,
+            43.7
+          ],
+          [
+            46.5,
+            43.2
+          ],
+          [
+            44.8,
+            42.0
+          ],
+          [
+            43.6,
+            43.9
+          ],
+          [
+            43.9,
+            42.2
+          ],
+          [
+            45.4,
+            41.3
+          ]
+        ],
+        "fcMaxPorSerie": [
+          191,
+          193,
+          198,
+          201,
+          203,
+          203
+        ],
+        "fcMediaPorSerie": [
+          179,
+          183,
+          186,
+          191,
+          193,
+          195
+        ],
+        "fcInicioSerie": [
+          144,
+          162,
+          159,
+          170,
+          170,
+          177
+        ],
+        "recuperaciones": {
+          "duracionS": 90,
+          "tipo": "andando (50-100 m en 90 s)",
+          "fcFinal": [
+            162,
+            158,
+            169,
+            171,
+            177
+          ],
+          "bajadaEn60s": [
+            27,
+            28,
+            24,
+            26,
+            24
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 188,
+          "60s": 178,
+          "90s": 169,
+          "120s": 161,
+          "180s": 151
+        },
+        "fcMax": 203,
+        "potenciaMediaSerieW": [
+          444,
+          412,
+          417,
+          433,
+          437,
+          430
+        ],
+        "contactoMsSerie": [
+          203,
+          221,
+          217,
+          215,
+          213,
+          216
+        ],
+        "efectoAerobico": 4.0,
+        "efectoAnaerobico": 3.4,
+        "cargaSesion": 234,
+        "calentamiento": "unos 12 min en vez de 30: 4,5 min de trote a 7:15-7:30 con FC 146-167 (por encima del techo de 145), 1,5 min andando, 2 min de técnica, 1,5 min andando y 3 min parado. Sin progresivos. Sin dominadas: el parque de calistenia estaba vallado por un concierto.",
+        "fcTroteCalentamiento": "150-167 a 7:15-7:30 (el 23-9, 134 a 7:10 en los cinco primeros minutos): unas 15-20 ppm más al mismo ritmo",
+        "sensorMunecaC": 30.1,
+        "geometriaPista": "El GPS da un óvalo de 400,0 m (rectas ~92 m, radio ~34,5 m), pero el perfil Pista del reloj ajusta la forma a una pista de 400 m, así que no es una medida independiente. OpenStreetMap: recinto de 162 × 74 m con el mismo eje (59°) y un campo de fútbol de 105 × 65 m dentro, compatible con una pista reglamentaria de 400 m (línea de calle 1: ~158 × 74 m). Pista renovada en 2025 por el Ayuntamiento. Homologación sin confirmar.",
+        "relojConfigurado": "FC máx 201, reposo 46, umbral 181 (zonas por FCR). Ya no es 195/46/180: la autodetección la subió tras el control del 19."
+      },
+      "valoracion": "NO VÁLIDA para medir forma (Paso 2): 2h14 de sueño. Se registra, no reestima nada. Lo que sí se ve: la media fue 86,85 s, clavada al 1:27, y ninguna serie se fue más de 3 s (84,3 y 89,7 son −2,7 y +2,7); de la tercera a la sexta, 86,0-87,5. La regla de las dos repeticiones no saltó. Primera serie con salida rápida (40,6 el primer 200 frente a 43,5): el mismo patrón del control (40) y de los progresivos; sin progresivos en el calentamiento no calibró el ritmo. Desde la segunda (la que él dice que se despistó: 46,5 el primer 200) corrigió de más: primeros 200 en 43,6-46,5 y segundos en 41,3-43,9. Es un reparto negativo, mejor que salir rápido, pero el examen pide plano. El coste fue máximo: FC 203 en las dos últimas (nuevo máximo, antes ≥202), carga de sesión 234 (la más alta del historial; el control del 19 fue 187), casi vómito. Recuperaciones andando de 90 s: la FC bajaba 24-28 ppm en el primer minuto en todas, sin empeorar, y llegaba a 158-177 al empezar la siguiente; con 90 s es lo esperable y andar es lo correcto en series a ritmo de 1.000: no es un fallo. El trote del calentamiento a 7:15-7:30 fue con 150-167 ppm, 15-20 más que el 23 al mismo ritmo: la huella de la noche. Para el escalón del bloque B (1:25/2:07 «si el A salió clavado con sobra») esta sesión no cuenta ni a favor ni en contra: clavado sí, con sobra no, y medida en un día torcido. Lo decide el miércoles 30."
+    },
+    {
+      "fecha": "2026-09-27",
+      "hecho": false,
+      "valida": false,
+      "sesion": "Rodaje 40 min, techo 145",
+      "motivo": "No se hizo: no sabía que tenía rodaje.",
+      "valoracion": "Confirma la lectura del foco de carga del 28: la aeróbica baja se quedó en 214 porque no entró ningún rodaje. Remedio: desde el 29-9 los entrenos van al Calendario del Mac con aviso el mismo día por la mañana."
+    },
     {
       "fecha": "2026-09-23",
       "sesion": "Rodaje 35 min + 4 progresivos de 100 m",
@@ -731,6 +859,13 @@
   ],
   "circuito": [
     {
+      "fecha": "2026-09-24",
+      "hecho": false,
+      "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
+      "motivo": "No se hizo: estudiaba para el examen escrito del 26.",
+      "valoracion": "El número que decidía el bloque técnico pasa al jueves 1-10. El circuito sigue sin medición seria desde el 10-9 (9,9 s al 60 %); el del 17-9 tampoco consta."
+    },
+    {
       "fecha": "2026-09-10",
       "segundos": 9.9,
       "condiciones": "al 60 %, contando pasos entre conos, sin saber que le cronometraban",
@@ -740,6 +875,27 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-09-28",
+      "duracion": "2h14",
+      "puntuacion": 31,
+      "calidad": "Deficiente",
+      "fcReposo": 47,
+      "vfc": 61,
+      "profundo": "47m",
+      "rem": "--",
+      "despierto": "--",
+      "inquietud": 9,
+      "bodyBattery": "+20",
+      "estresMedio": 17,
+      "spo2Media": "99%",
+      "spo2Minimo": "93%",
+      "fcMediaNoche": 55,
+      "respiracionMedia": 14,
+      "vfc7dias": "Equilibrado (61 ms; referencia 55-71; media 7 días 60)",
+      "nota": "Primera noche con horario laboral. La peor de toda la serie desde el 28-8 (3h08). VFC y FC en reposo casi normales: una noche corta aislada no mueve la VFC; la FC del trote sí (+15-20 ppm). Hubo siesta (la predisposición lo menciona). Faltan los CSV del 20, 21, 22 y 24-27.",
+      "causa": "Según él: los nervios de la vuelta al trabajo y que se acostó lleno, justo después de comer mucho. Se levanta a las 6:00."
+    },
     {
       "fecha": "2026-09-23",
       "duracion": "7h01",
@@ -915,6 +1071,30 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-28",
+      "ventanaFocoCarga": "31 ago – 28 sep",
+      "focoCarga": "Equilibrado",
+      "estadoEntreno": "Productivo",
+      "mensajeGarmin": "Tu carga de entreno está equilibrada.",
+      "anaerobica": 345,
+      "aerobicaAlta": 597,
+      "aerobicaBaja": 214,
+      "cargaAguda": 391,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.3,
+      "cargaAgudaMensaje": "Tu carga aguda está en el límite superior del intervalo óptimo",
+      "vo2max": 53.4,
+      "vfc": "60 ms, Equilibrado",
+      "predisposicion": {
+        "valor": 26,
+        "nivel": "Bajo",
+        "hora": "18:35 según la captura, 4 h después del entreno según él",
+        "factores": "sueño 31 deficiente · recuperación 37 h gran necesidad · VFC 60 equilibrado · carga aguda 391 óptimo · sueño reciente aceptable · estrés bajo",
+        "mensaje": "Mejora tras la siesta"
+      },
+      "valoracion": "Del 23 al 28: anaeróbica 289 → 345 (+56), aeróbica alta 549 → 597 (+48), aeróbica baja 214 → 214 (sin cambio). Ventana: con el mismo criterio que el 23 (el primer día de la etiqueta ya no cuenta), SALE lo del 27 al 31 de agosto, que en el historial es el 600 a tope del 31-8, y ENTRA lo del 24 al 28 de septiembre. La sesión de hoy vale 234 y se reparte entre anaeróbica y aeróbica alta; con la salida del 31-8, las cuentas cuadran sin que haya entrado nada de aeróbica baja. Un rodaje de 40 min el 27 habría subido la aeróbica baja (el del 23, de 35 min, la subió): o no se hizo, o no se grabó. Tampoco consta el circuito del 24. «Equilibrado» se mantiene por el calendario, no porque la base haya crecido: la aeróbica baja lleva cinco días parada en 214. Ratio 1,3 en el límite alto del óptimo y predisposición 26: la sesión de hoy pesa. El reloj ya está configurado con máxima 201, reposo 46 y umbral 181."
+    },
     {
       "fecha": "2026-09-23",
       "ventanaFocoCarga": "26 ago – 23 sep",

@@ -8,7 +8,7 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 
 ## Quién es
 
-24 años, 66,5 kg, 172 cm, FC máxima ≥202 (19-9), FC en reposo 45. Militar en activo en Gran Canaria. Compagina trabajo, temario y entrenamiento. Garmin Forerunner 265 con banda pectoral HRM 200.
+24 años, 66,5 kg, 172 cm, FC máxima ≥203 (28-9), FC en reposo 45. Militar en activo en Gran Canaria. **Aprobó el examen teórico el 26-9**: ya no estudia temario y tiene más tiempo libre. Trabaja de 7:30 a 14:30 de lunes a viernes. Garmin Forerunner 265 con banda pectoral HRM 200.
 
 | Prueba | Ahora | Puntos | Objetivo | **Elimina** |
 |---|---|---|---|---|
@@ -34,7 +34,7 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**.
 
 **El diagnóstico, que gobierna todas las decisiones:** velocidad le sobra, le falta sostenerla. Su limitante es la base aeróbica, no la potencia. El control del 19-9 lo confirma y a la vez sube el suelo: corrió el kilómetro en 3:34 cuando la estimación era 3:52, y pasó el 600 en 2:08, cuatro segundos más rápido que su 600 a tope del 31 de agosto. El agujero sigue siendo el mismo: carga aeróbica baja 182 frente a 736 de aeróbica alta, que el reloj marca insuficiente. Solo la mueven los rodajes largos.
 
-**FC máxima: ≥ 202**, medida el 19-9 con banda en esfuerzo máximo. El 195 anterior venía de una sesión no válida y era un suelo. Zonas por FCR con reposo 45: 124-139 / 139-155 / 155-171 / 171-186 / 186-202. **El techo de rodaje sigue en 145 y el umbral en 166-172: no suben.**
+**FC máxima: ≥ 203** (202 el 19-9 en el control, 203 el 28-9 en la sexta de 6 × 400, con banda). Con 203 las zonas se mueven menos de 1 ppm: no se tocan. El 195 anterior venía de una sesión no válida y era un suelo. Zonas por FCR con reposo 45: 124-139 / 139-155 / 155-171 / 171-186 / 186-202. **El techo de rodaje sigue en 145 y el umbral en 166-172: no suben.**
 
 ---
 
@@ -62,6 +62,7 @@ Si falta la dependencia: `pip install fitdecode --break-system-packages`
 - **Series, progresivos y controles: por las VUELTAS DEL RELOJ** (mensajes `lap`, que el analizador imprime). Nunca por un umbral de velocidad sobre el segundo a segundo: el 16-9 eso dio 82-95 m para pasos que eran de 80,0 exactos.
 - **Un control de 1.000 m:** vuelta con botón, parciales de 200 por distancia del reloj, FC por tramo, potencia, contacto y cadencia por tramo, recuperación de FC a 30/60/90/120/180 s, geometría de la pista por GPS. El campo de logros del FIT (`unknown_113`) guarda «1000 m en X s», que es la ventana móvil más rápida, no una segunda medición.
 - **Fuerza:** cada `set` con su categoría decodificada (el SDK está dentro de `fitdecode`), reps, peso, duración y descansos reales. Los descansos que se derrumban se dicen.
+- **Perfil «Pista» del reloj (modo pista):** ajusta el GPS a una pista de 400 m, así que la forma y el perímetro que salen del FIT NO verifican la pista: dan 400,0 por construcción. La comprobación tiene que ser externa (OpenStreetMap, marcas pintadas, medición). En modo pista se corre por la calle que se le dice al reloj (la 1).
 - **La temperatura del FIT es del sensor de muñeca**, no ambiental: sirve para comparar sesiones entre sí (28,1 la noche del 16, 31,0 a las 13:01 del 19) y nada más.
 - **El sueño (CSV): se registra SIEMPRE en historial.json y en la gráfica de la web.** La noche del 19 faltó en la gráfica hasta el 23.
 - **Un Health Snapshot** hecho después de entrenar mide el estado tras el esfuerzo, no el basal: no se compara con la VFC nocturna. Solo vale por la mañana, sentado, a la misma hora.
@@ -99,6 +100,8 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 **Patrones que se cuentan en cada sesión** (tres seguidas = regla, no consejo):
 - **Salida rápida en rodajes:** 7:08-7:10 los cinco primeros minutos el 12, 16 y 23. Regla desde el 23-9: primeros 10 min con techo 140.
 - **Progresivos como sprints:** 14,8 s/80 m el 16, salida del control a 3:05 el 19, 17,6-18,5 s/100 m el 23 (efecto anaeróbico 2,2-2,9). Regla: paso de 100 m con aviso de ritmo 3:20-3:50 en el reloj. Un progresivo bien hecho no deja huella anaeróbica.
+- **Primer 200 rápido en esfuerzos a ritmo de 1.000:** 40 en el control del 19 (pedía 45) y 40,6 en la primera de 6 × 400 el 28 (pedía 43,5), las dos sin progresivos de calibración. Después del primero corrige de más (primeros 200 de 43,6-46,5 y segundos de 41,3-43,9 el 28). Dos veces: a la tercera es regla. Remedio que ya está en el plan: los 5 progresivos del calentamiento, el último a ritmo K, y el aviso de ritmo.
+- **Calidad hecha tras una mala noche:** el 28 (2h14), a pesar de la regla del día torcido. La marca se sostuvo (media 1:26,9) con FC 203 y carga 234, la más alta del historial. Se registra como no válida.
 - **Descansos que se derrumban por tiempo en fuerza** (sentadilla 49/45/29 s el 22): superseries, no recortar.
 - **Sesiones que no se hacen:** el glúteo medio (H) no consta hecho ni una vez; el complemento del sábado (elevaciones de talón) tampoco. Se pregunta y se anota.
 
@@ -143,6 +146,8 @@ GitHub Pages publica desde `docs/`. Tarda un minuto. **Sin coste y sin límite.*
 
 **Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»). El 19-9 los creé en Google y hubo que borrarlos.
 
+**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Creados del 29-9 al 24-10 (19 eventos); la semana de la prueba se añade cuando llegue el llamamiento. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
+
 ## Paso 7 · Responder
 
 Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
@@ -165,11 +170,15 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **Pies planos y riesgo de fascitis.** Corre con una sola zapatilla; la segunda está aplazada por coste. Las elevaciones de talón a una pierna de los sábados son innegociables. Señal de alarma: dolor de talón en los primeros pasos de la mañana.
 
+**Semáforo de la mañana (desde el 29-9, sustituye a «mala noche → 40 min y moverla»).** Horas de sueño del Garmin sin siesta, VFC de 7 días, dolor de codo/hombro y de talón/cintillo. Verde ≥ 6h30: la sesión entera, la única que mide. Ámbar 5h00-6h29: dos tercios de las repeticiones al mismo ritmo + 15-20 min suaves, o el peso ya dominado (no se estrena peso). Rojo < 5h00, VFC desequilibrada o «Sobrecarga»: rodaje 30-40 min o fuerza reducida sin pierna; una calidad en rojo se pierde, no se mueve. Dos noches seguidas < 5 h = 48 h en rojo. Cortes convencionales, no de un estudio. Detalle en `plan.json` → `reglas` → `dia-torcido`.
+
+**Dominadas, revisión del 28-9 (9 agentes):** más barra, poca y sin lastre: sesión corta los sábados 3 y 17-10 antes del rodaje. Nada de segundo día con lastre, dominadas diarias ni excéntricas. Test máximo solo el 10-10 y la prueba (el 24-10, serie técnica de 8). Descarga del 20-10: 3 × 2 con el peso del 13. Registro de dolor de codo y hombro 0-10 en cada sesión de barra. Él pide 14 «como sea»: rango honesto 9-13 válidas, centro 11-12; se asegura 12 válidas. Detalle en `plan.json` → `revision28sep`.
+
 **Descanso significa descanso.** Un día de descanso no son cinco horas de monte. Ya pasó el 7 de septiembre y costó un control aplazado y dos semanas.
 
 **El circuito es inamovible: jueves a las 21:30 con el preparador.** No se mueve a otro día ni a un sábado. Por eso el circuito de cada simulacro se hace el jueves anterior (8 y 22 de octubre) con UN intento cronometrado como el BOE, y el sábado quedan dominadas y kilómetro. El miércoles acaba antes de las 20:30. Protocolo de cada jueves: 3 intentos cronometrados como el examen (voz de «ya» hasta el pie en el suelo tras la última valla), **el primero es el comparable con el baremo**, el mejor es el techo, y se anotan nulos y motivo.
 
-**Sesiones entre semana a las 18:00-19:00 desde el 28-9**, con el trabajo de 7:30 a 14:30 de lunes a viernes. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
+**Sesiones entre semana a las 18:00 desde el 28-9, también el Arsenal los martes (abre hasta las 22:00)**, con el trabajo de 7:30 a 14:30 de lunes a viernes. Se levanta a las 6:00: luz apagada a las 22:15. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
 
 **Reloj en cada sesión de series:** paso con rango de ritmo 3:30-3:40 /km; primer 200 por reloj (0:43,5 en A, 0:43 en B y C); si un 400 baja del objetivo en más de 3 s, la siguiente sale más lenta, no se abandona. Regla de las dos repeticiones: dos seguidas a más de 3 s, a casa; dos semanas seguidas, se bajan los ritmos.
 
@@ -215,21 +224,19 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 
 | Día | Sesión |
 |---|---|
-| **Jue 24 sep** | **21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable.** Decide lo que falta: 9,0–9,3 nada · 9,4–9,7 jueves con técnica · 9,8 o más, bloque técnico con el preparador y reescribir escenarios |
-| Vie 25 sep | Descanso |
-| Sáb 26 sep | **EXAMEN ESCRITO.** Descanso total |
-| Dom 27 sep | **Rodaje 40 min, techo 145, primeros 10 min a 140.** Después, elevaciones de talón 3 × 15. Termómetro antes del bloque A, no decisión. 30 min si el examen le deja fundido |
-| Lun 28 sep | **Primer día de trabajo (7:30–14:30).** 3 × 5 dominadas + 6 × 400 a 1:27, rec. 90 s, 18:00–19:00. Primera sesión de 400 del historial. Día torcido → 40 min de rodaje y se pierde esta, no el kilómetro partido |
-| Mar 29 sep | Arsenal. **Lastradas 5 × 3 con 12,5 kg**, primera subida. Vídeo de la 1.ª y la 5.ª. Superseries. H a dos rondas mínimo |
-| **Mié 30 sep** | **Kilómetro partido × 2** (600 en 2:11 + 45 s + 400 en 1:27, rec. 6 min), 18:00–19:00. Lo que se exige es el reparto. Acabar antes de las 21:00 |
-| Jue 1 oct | 21:30 circuito, 3 intentos como el BOE |
-| Sáb 3 oct | Rodaje 55 min, techo 145, +22 % sobre el máximo. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
+| Lun 28 sep | **Hecho en Arucas, NO válido (2h14 de sueño):** 6 × 400 en 84,3 · 89,7 · 86,8 · 87,5 · 86,0 · 86,8 (media 1:26,9), FC 203, carga 234. Sin dominadas (parque vallado) |
+| Mar 29 sep | Arsenal a las 18:00 según el **semáforo**: verde, **lastradas 5 × 3 con 12,5 kg**; ámbar, 10 kg y la subida pasa al 6; rojo, 4 × 3 con 10 kg sin pierna. Estándar BOE en cada repetición, vídeo de la 1.ª y la 5.ª, H justo después de A, pierna sin subir |
+| **Mié 30 sep** | En Arucas. Calentamiento completo de 42 min con 5 progresivos + 3 × 5 dominadas + **kilómetro partido × 2** (600 en 2:11 + 45 s + 400 en 1:27, rec. 6 min). Única sesión válida del bloque A; no sube escalón. Ámbar: una tanda. Rojo: rodaje y se pierde. Acabar antes de las 20:30 |
+| **Jue 1 oct** | 21:30 circuito, 3 intentos como el BOE. **Primera medición seria (el 24 no se hizo):** decide lo del 24 (9,0–9,3 nada · 9,4–9,7 jueves con técnica · 9,8 o más, bloque técnico y reescribir escenarios). Apuntar horas de sueño junto al primer intento |
+| Sáb 3 oct | **Barra corta antes del rodaje** (prep-hombro, 1 × 3, serie técnica de 7 en vídeo, 2 × 5 con 4 en reserva) + rodaje 55 min, techo 145. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
 
-**Ritmos, con el escalón condicionado del objetivo 3:30.** Bloque A (28 sep – 4 oct): 400 en 1:27 · 600 en 2:11, no se toca. Bloque B (5 – 18 oct): 1:26 / 2:08, o 1:25 / 2:07 si el A salió clavado con sobra. Bloque C (19 oct – prueba): 1:25 / 2:07, o 1:24 / 2:06 si el simulacro del 10 dio ≤ 3:33 en distancia verificada con los tramos centrales en 43. Solo se sube un escalón si el anterior se sostiene; la regla de las dos repeticiones sigue mandando para bajar.
+**Ritmos, con el escalón condicionado del objetivo 3:30.** Bloque A (28 sep – 4 oct): 400 en 1:27 · 600 en 2:11, no se toca. Bloque B (5 – 18 oct): **1:26 / 2:08, decidido el 28-9** (el escalón a 1:25 / 2:07 pedía el 28 y el 30 clavados con sobra, y el 28 no fue válido ni con sobra). Bloque C (19 oct – prueba): 1:25 / 2:07, o 1:24 / 2:06 si el simulacro del 10 dio ≤ 3:33 en distancia verificada con los tramos centrales en 43. Solo se sube un escalón si el anterior se sostiene; la regla de las dos repeticiones sigue mandando para bajar.
 
 **Reparto del examen (objetivo 3:30):** 200 en 0:42 · 400 en 1:24 · 600 en 2:06 · 800 en 2:48 · meta 3:29–3:30. Suelo 3:36. Si pasas el 600 por delante de 2:05, has salido demasiado rápido. Lo que decide el objetivo son los tramos 400-600 y 600-800: 43 y 43, no 46 y 46.
 
 El resto del calendario está en `datos/plan.json`.
+
+**Pista de Arucas (desde el 28-9):** pista de atletismo del complejo deportivo Tonono, con parque de calistenia al lado. OpenStreetMap: recinto de 162 × 74 m con el mismo eje que el GPS y un campo de fútbol de 105 × 65 m dentro: compatible con una pista reglamentaria de 400 m (calle 1 ≈ 158 × 74 m). Renovada en 2025. **Homologación sin confirmar:** comprobar las marcas pintadas (salidas escalonadas del 200 y del 400, salida en abanico del 1.000/1.500, números de calle). Si están, la calle 1 mide 400 m y aquí va el simulacro del 10.
 
 **Pista de San Cristóbal:** bucle de atletismo **NO homologado**. Rectas de ~170 m y curvas de radio ~8,5 m; una calle 1 homologada tiene rectas de 84,4 m y radio 36,5 m. **Perímetro sin medir: entre 392 y 400 m** según el ajuste del GPS, y el método no los distingue. Por eso toda marca medida ahí lleva ±1-2 % de escala. **No usar la calibración de cuatro vueltas del FR265:** el manual la condiciona a una pista estándar de 400 m. Antes del control del 10 de octubre hay que medir el anillo con rueda o cinta, o llevar el control a una pista homologada.
 
@@ -239,10 +246,12 @@ El resto del calendario está en `datos/plan.json`.
 
 # PENDIENTE
 
-- **Medir el perímetro de San Cristóbal** con rueda o cinta, o llevar el control del 10 de octubre a una pista homologada. Mientras no se haga, ninguna marca de ahí es una marca de baremo.
-- **Reconfigurar el reloj:** máxima 202 y reposo 45. Sigue con 195, reposo 46 y un umbral de 180 que no sale de ninguna medición. Al cambiarlo, el foco de carga deja de ser comparable con la ventana actual.
-- **Cronometrar el circuito en serio** el jueves 24, fresco y al principio de la sesión. Es el punto más barato que queda. Anotar también qué contiene la sesión entera del preparador, a qué hora termina y si el circuito del 17-9 se hizo (no consta).
-- **Sueño con horario laboral: cero noches medidas.** Hora a la que se levanta desde el 28: no consta. Preguntarla para fijar la hora de acostarse. Faltan los CSV de sueño del 20, 21 y 22.
+- **Pista para el simulacro del 10: Arucas**, si las marcas pintadas confirman los 400 m (foto de la salida del 1.000 o de las salidas escalonadas). Eso resuelve el perímetro de San Cristóbal, que queda sin medir: el 3:34 del 19 sigue con ±1-2 % de escala y el primer 1.000 de Arucas será la primera marca de baremo.
+- ~~Reconfigurar el reloj~~ **Resuelto sin tocarlo:** desde el 22-9 los FIT llevan máxima 201, reposo 46 y umbral 181 (la autodetección la subió tras el control del 19). Me equivoqué al darlo por pendiente hasta el 28: no lo comprobé en los FIT.
+- **Cronometrar el circuito en serio el jueves 1-10**, fresco y al principio de la sesión (el 24 no se hizo). Es el punto más barato que queda. El preparador solo hace circuito. Falta saber si el circuito del 17-9 se hizo (no consta).
+- **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27.
+- **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El número del circuito sale el jueves 1-10. El preparador solo hace circuito los jueves, sin fuerza ni tirón.
+- **Barra de Arucas:** altura y grosor desconocidos. Las cifras de barras distintas no se comparan.
 - **¿Trabaja el 12-10 (Fiesta Nacional)?** Decide si el 8 × 200 se adelanta o no.
 - **Glúteo medio (H): no consta hecho ni una vez.** Del cintillo no hay ningún dato desde el 21-8.
 - Fecha exacta de las pruebas, hora y minutos entre ellas, cuando llegue el llamamiento. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
@@ -281,4 +290,9 @@ Auditoría del plan tras el primer control. Lo que estaba mal:
 20. **Creé los eventos en Google Calendar** cuando él usa el Calendario del Mac.
 21. **El «porQue» del bloque A citaba la razón equivocada** (la distancia sin verificar): el sesgo de escala se cancela al medir control y series con el mismo reloj en la misma pista. Corregido el 23-9.
 
-**Protocolo nuevo:** toda serie máxima de dominadas se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena. Técnica oficial (BOE): palmas al frente, brazos completamente extendidos, barbilla claramente por encima de la barra, sin balanceo. **Un solo intento.**
+**Errores del 28-9-2026:**
+
+22. **El agarre de las dominadas estaba mal en la web y se presentaba como corrección:** «anchura exacta de los hombros». El BOE dice «ligeramente superior». Además faltaban cuatro de las nueve reglas (pausa mínima, tercio inferior del cuello, 5 s colgado, guantes y sustancias). Regla: la técnica de una prueba se copia literal del BOE, no se resume.
+23. **Di por pendiente reconfigurar el reloj (195/46/180) sin mirarlo en los FIT:** desde el 22-9 llevaba 201/46/181. Regla: los ajustes del reloj se leen en `time_in_zone` de cada FIT antes de pedir que se cambien.
+
+**Protocolo nuevo:** toda serie máxima de dominadas se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena. **Técnica oficial (BOE-A-2026-15055, comprobada en boe.es el 28-9):** agarre prono **ligeramente más ancho que los hombros**; cada dominada parte de brazos completamente extendidos; cuerpo extendido; sin oscilaciones, balanceos ni impulso; cabeza en posición anatómica; barbilla claramente por encima y **la barra a la altura del tercio inferior del cuello**; **mínima pausa entre repeticiones**; no soltarse ni más de 5 s colgado; sin guantes, objetos ni sustancias, y no descalzo; se pueden cruzar las piernas; un solo intento; **es nula toda dominada que incumpla cualquier regla.** Literal en `plan.json` → `protocoloDominadas.tecnicaExamen`. Solo cuentan las válidas en vídeo.
