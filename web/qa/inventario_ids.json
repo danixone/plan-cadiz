@@ -1,0 +1,705 @@
+{
+ "_nota": "Generado desde spec.md §5.7 (versión 2, 29-9-2026). eliminado=true: no debe tener data-inv en el DOM; false: debe aparecer en algún data-inv y sus frases de qa/frases_clave.json deben verse con abrir=1.",
+ "ids": {
+  "C1": {
+   "destino": "`<title>` y barra superior de escritorio (marca «Plan Cádiz»)",
+   "tratamiento": "La línea «1.000 metros, dominadas y circuito» desaparece",
+   "eliminado": false
+  },
+  "C2": {
+   "destino": "Hoy H-0 (banderín «Cádiz · ≥ 27 días» al final del camino)",
+   "tratamiento": "Con «fecha sin confirmar». Del 26 al 30-10, «semana de la prueba»; después, se oculta",
+   "eliminado": false
+  },
+  "C3": {
+   "destino": "Marcas M-1 (fila del 1.000: pista del baremo con el 3:49 y escena I2); chip de nota en Hoy H-0 y en la barra de escritorio",
+   "tratamiento": "La escala de la cabecera se elimina",
+   "eliminado": false
+  },
+  "C4": {
+   "destino": "`.tabbar` (móvil) y `.ab-tabs` (escritorio), 5 destinos, y rutas",
+   "tratamiento": "Se elimina `pc-tab`",
+   "eliminado": false
+  },
+  "C5": {
+   "destino": "Pie de cada vista",
+   "tratamiento": "«Datos hasta…» calculado; conmutador de tema",
+   "eliminado": false
+  },
+  "C6": {
+   "destino": "`<head>`",
+   "tratamiento": "Un icono, Barlow en 3 pesos, sin Plex Mono",
+   "eliminado": false
+  },
+  "C7": {
+   "destino": "`@media print`",
+   "tratamiento": "Se conserva",
+   "eliminado": false
+  },
+  "D1": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D2": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D3": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D4": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D5": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D6": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D7": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D8": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D9": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D10": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D11": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D12": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D13": {
+   "destino": "Dieta",
+   "tratamiento": "§9.1",
+   "eliminado": false
+  },
+  "D14": {
+   "destino": "Dieta `#di-entreno` y `#di-calidad`",
+   "tratamiento": "La caja se elimina",
+   "eliminado": false
+  },
+  "E1": {
+   "destino": "Hoy H-1 y [T3] desde `martesFuerza`; técnica en Técnica TE-4",
+   "tratamiento": "Cifras obsoletas eliminadas",
+   "eliminado": false
+  },
+  "E2": {
+   "destino": "Pie de la tarjeta del martes",
+   "tratamiento": "«Si falta tiempo: A, H, B, D y a casa.» (`martesFuerza.prioridad`)",
+   "eliminado": false
+  },
+  "E3": {
+   "destino": "Plan P-2",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "E4": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "E5": {
+   "destino": "Paso 3 del calentamiento; `porQueAntesDeCorrer` plegado en TE-1",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "E6": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "E7": {
+   "destino": "Tarjeta del jueves (H-1, con [T8] dentro); Técnica TE-3 en lectura",
+   "tratamiento": "«Cuenta el mejor» corregido: el primero es el comparable",
+   "eliminado": false
+  },
+  "E8": {
+   "destino": "Tarjeta del jueves (H-1, con [T8] dentro); Técnica TE-3 en lectura",
+   "tratamiento": "«Cuenta el mejor» corregido: el primero es el comparable",
+   "eliminado": false
+  },
+  "E9": {
+   "destino": "Tarjeta del sábado (`sabadoComplemento`)",
+   "tratamiento": "Cajón o pogo: conflicto K4. Se muestra `plan.json`",
+   "eliminado": false
+  },
+  "E10": {
+   "destino": "Tarjeta del sábado (`sabadoComplemento`)",
+   "tratamiento": "Cajón o pogo: conflicto K4. Se muestra `plan.json`",
+   "eliminado": false
+  },
+  "E11": {
+   "destino": "Técnica TE-1 [I5] y [T7]",
+   "tratamiento": "Errata eliminada",
+   "eliminado": false
+  },
+  "E12": {
+   "destino": "Plan P-2 (única casa); TE-1 enlaza con «Cuándo hay barra: Semana tipo →»",
+   "tratamiento": "Sin copia en Técnica",
+   "eliminado": false
+  },
+  "E13": {
+   "destino": "Técnica TE-1 [G15]",
+   "tratamiento": "Semanas pasadas en gris; derivada de `progresion`",
+   "eliminado": false
+  },
+  "E14": {
+   "destino": "Técnica TE-1 (las 11 reglas de la barra)",
+   "tratamiento": "Completas; única casa",
+   "eliminado": false
+  },
+  "E15": {
+   "destino": "Marcas M-4 (registro del 10-9)",
+   "tratamiento": "Retirado de Técnica",
+   "eliminado": false
+  },
+  "E16": {
+   "destino": "Técnica TE-5; pasos de H-1",
+   "tratamiento": "«Versión corta para umbral» y «antes decía…» eliminados",
+   "eliminado": false
+  },
+  "E17": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E18": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E19": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E20": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E21": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E22": {
+   "destino": "Técnica TE-4",
+   "tratamiento": "Fuente única: `ejercicios[].tecnica`; láminas [I6]",
+   "eliminado": false
+  },
+  "E23": {
+   "destino": "Técnica TE-5",
+   "tratamiento": "Umbral eliminado. «Nunca parado»: conflicto K9",
+   "eliminado": false
+  },
+  "E24": {
+   "destino": "—",
+   "tratamiento": "Eliminados. Los sustituyen [I5] e [I6]",
+   "eliminado": true
+  },
+  "E25": {
+   "destino": "—",
+   "tratamiento": "Eliminados. Los sustituyen [I5] e [I6]",
+   "eliminado": true
+  },
+  "E26": {
+   "destino": "Enlace «Vídeo» en cada ficha de TE-4",
+   "tratamiento": "Búsquedas de YouTube, nunca vídeos concretos",
+   "eliminado": false
+  },
+  "E27": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "E28": {
+   "destino": "Técnica TE-6",
+   "tratamiento": "Sin umbral",
+   "eliminado": false
+  },
+  "E29": {
+   "destino": "—",
+   "tratamiento": "Eliminado. Lo sustituye `PC.sesion.reloj()`",
+   "eliminado": true
+  },
+  "E30": {
+   "destino": "Técnica TE-6",
+   "tratamiento": "Sin umbral",
+   "eliminado": false
+  },
+  "E31": {
+   "destino": "Técnica TE-6",
+   "tratamiento": "Sin umbral",
+   "eliminado": false
+  },
+  "E32": {
+   "destino": "Técnica TE-6",
+   "tratamiento": "Sin umbral",
+   "eliminado": false
+  },
+  "E33": {
+   "destino": "Técnica TE-7",
+   "tratamiento": "Sin «estrenarla el 16» ni San Cristóbal",
+   "eliminado": false
+  },
+  "E34": {
+   "destino": "Técnica TE-7",
+   "tratamiento": "Sin «estrenarla el 16» ni San Cristóbal",
+   "eliminado": false
+  },
+  "G1": {
+   "destino": "Marcas M-1",
+   "tratamiento": "Cifras de carga vivas solo en [G9]",
+   "eliminado": false
+  },
+  "G2": {
+   "destino": "Marcas M-1 (diagnóstico: primera frase visible, resto plegado)",
+   "tratamiento": "Cifras de carga vivas solo en [G9]",
+   "eliminado": false
+  },
+  "G3": {
+   "destino": "Marcas M-2 (cabecera [G3])",
+   "tratamiento": "Rehecha. Las estimaciones van como puntos huecos con conmutador",
+   "eliminado": false
+  },
+  "G4": {
+   "destino": "Marcas M-3 [G4] (chip «Sueño»)",
+   "tratamiento": "Rehecha",
+   "eliminado": false
+  },
+  "G5": {
+   "destino": "—",
+   "tratamiento": "Eliminada. La sustituye [G8]",
+   "eliminado": true
+  },
+  "G6": {
+   "destino": "Marcas M-3 [G6] (chip «Barra»)",
+   "tratamiento": "Rehecha",
+   "eliminado": false
+  },
+  "G7": {
+   "destino": "Marcas M-3 [G9] (chip «Carga»)",
+   "tratamiento": "Rehecha, sin óptimos sin fuente",
+   "eliminado": false
+  },
+  "G8": {
+   "destino": "Marcas M-2",
+   "tratamiento": "Objetivos de `plan.json`",
+   "eliminado": false
+  },
+  "G9": {
+   "destino": "Marcas M-2",
+   "tratamiento": "Una línea",
+   "eliminado": false
+  },
+  "G10": {
+   "destino": "Marcas M-2 (plegado del 19-9, [G12] con «Ver datos» completo)",
+   "tratamiento": "Contacto, cadencia, zancada y respiración en la tabla",
+   "eliminado": false
+  },
+  "G11": {
+   "destino": "Marcas M-2 (ficha de [G3])",
+   "tratamiento": "Rehecha. Las estimaciones van como puntos huecos con conmutador",
+   "eliminado": false
+  },
+  "G12": {
+   "destino": "Marcas M-4 [T10]",
+   "tratamiento": "Orden descendente, recuento calculado",
+   "eliminado": false
+  },
+  "G13": {
+   "destino": "Marcas M-4 [T10]",
+   "tratamiento": "Orden descendente, recuento calculado",
+   "eliminado": false
+  },
+  "G14": {
+   "destino": "Marcas M-5",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H1": {
+   "destino": "—",
+   "tratamiento": "Eliminado (la tarjeta abierta lo hace innecesario)",
+   "eliminado": true
+  },
+  "H2": {
+   "destino": "Hoy H-0 (tira de la semana) y H-1",
+   "tratamiento": "Generado desde `plan.json`",
+   "eliminado": false
+  },
+  "H3": {
+   "destino": "Hoy H-1 (la `hora` del 30-9, literal)",
+   "tratamiento": "Conflicto K3",
+   "eliminado": false
+  },
+  "H4": {
+   "destino": "Hoy H-1 y la hoja «Cómo fue» [T4]",
+   "tratamiento": "`DIADET` eliminado",
+   "eliminado": false
+  },
+  "H5": {
+   "destino": "Hoy H-1 (fila del semáforo [T1]); Plan P-5 (texto completo plegado)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H6": {
+   "destino": "Reglas BOE en Técnica TE-1; decisión en Plan P-6; rango 9–13 en TE-1 plegado con «supuesto»",
+   "tratamiento": "«Te lo había dicho mal» y el proceso de revisión, eliminados",
+   "eliminado": false
+  },
+  "H7": {
+   "destino": "Marcas M-2 (19-9)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H8": {
+   "destino": "Marcas M-1; chip de nota en Hoy H-0",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H9": {
+   "destino": "Marcas M-1 (chip de escenario «Realista») y su «por qué» plegado",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H10": {
+   "destino": "Marcas M-1 (marca de corte viva [G10] y «Cuánto aguanta el escenario realista» plegado)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H11": {
+   "destino": "`web.avisos` (hasta el 1-10): Hoy H-2 y Marcas M-1",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "H12": {
+   "destino": "—",
+   "tratamiento": "Eliminados",
+   "eliminado": true
+  },
+  "H13": {
+   "destino": "—",
+   "tratamiento": "Eliminados",
+   "eliminado": true
+  },
+  "H14": {
+   "destino": "—",
+   "tratamiento": "Eliminados",
+   "eliminado": true
+  },
+  "H15": {
+   "destino": "—",
+   "tratamiento": "Eliminados",
+   "eliminado": true
+  },
+  "H16": {
+   "destino": "Plan P-6 (pendientes con casilla); Hoy H-4 (una línea)",
+   "tratamiento": "«Luz 22:15» pasa a H-3 y P-5. «Reloj configurado» pasa a TE-6",
+   "eliminado": false
+  },
+  "N1": {
+   "destino": "Marcas M-1 [T5]",
+   "tratamiento": "Media con dos decimales",
+   "eliminado": false
+  },
+  "N2": {
+   "destino": "Marcas M-1: chips de escenario = `escenariosNota` (5)",
+   "tratamiento": "«Bueno» eliminado. Entra «Objetivo»",
+   "eliminado": false
+  },
+  "N3": {
+   "destino": "Marcas M-1: «siguiente punto» calculado",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "N4": {
+   "destino": "Técnica, cabecera `#te-pruebas`",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "N5": {
+   "destino": "Marcas M-1 (baremo plegado)",
+   "tratamiento": "La nota de erratas no se muestra",
+   "eliminado": false
+  },
+  "N6": {
+   "destino": "Técnica TE-2, plegado",
+   "tratamiento": "Clima con «supuesto»",
+   "eliminado": false
+  },
+  "N7": {
+   "destino": "Técnica TE-2 [T6]",
+   "tratamiento": "«0:43» pasa a 0:42. «Superficie de tartán. Prohibido correr descalzo o con clavos.» se conserva literal, con `.chip.sup` «sin verificar» (no está en `plan.json`)",
+   "eliminado": false
+  },
+  "P1": {
+   "destino": "Plan P-2",
+   "tratamiento": "Se añaden las horas y la barra de los sábados 3 y 17",
+   "eliminado": false
+  },
+  "P2": {
+   "destino": "Plan P-2",
+   "tratamiento": "Se añaden las horas y la barra de los sábados 3 y 17",
+   "eliminado": false
+  },
+  "P3": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "P4": {
+   "destino": "Plan P-4; ruta de menús en TE-6 con «sin verificar»",
+   "tratamiento": "FC máx ≥ 203. El «195» se elimina",
+   "eliminado": false
+  },
+  "P5": {
+   "destino": "Plan P-4 [G13]",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "P6": {
+   "destino": "Plan P-4",
+   "tratamiento": "El pendiente del reloj se elimina (manda `atleta.relojConfigurado`, conflicto K1)",
+   "eliminado": false
+  },
+  "P7": {
+   "destino": "Plan P-4; Marcas M-3 [G8] (chip «Pulso»)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "P8": {
+   "destino": "Plan P-3 [G14]",
+   "tratamiento": "Se añade la compuerta del C y la escala con el 3:49",
+   "eliminado": false
+  },
+  "P9": {
+   "destino": "Plan P-3 [G14] y bandas de bloque del calendario P-1",
+   "tratamiento": "Se añade la compuerta del C",
+   "eliminado": false
+  },
+  "P10": {
+   "destino": "Plan P-5 (medir distancias) y Técnica TE-6",
+   "tratamiento": "Sin «la pista del parque» (§5.8)",
+   "eliminado": false
+  },
+  "P11": {
+   "destino": "Plan P-6 y P-7",
+   "tratamiento": "Sin el `metodo`",
+   "eliminado": false
+  },
+  "P12": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P13": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P14": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P15": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P16": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P17": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "P18": {
+   "destino": "Plan P-1 [T9] y hoja del día; Hoy H-1",
+   "tratamiento": "Semanas pasadas plegadas. Conmutador de versión",
+   "eliminado": false
+  },
+  "R1": {
+   "destino": "Plan P-5 (Dormir); Hoy H-3",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R2": {
+   "destino": "Plan P-5 («Por qué» de Dormir)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R3": {
+   "destino": "Dieta `#di-entreno`",
+   "tratamiento": "Café a las 14:00",
+   "eliminado": false
+  },
+  "R4": {
+   "destino": "Dieta `#di-calidad`",
+   "tratamiento": "Sin «umbral»",
+   "eliminado": false
+  },
+  "R5": {
+   "destino": "Dieta `#di-entreno`",
+   "tratamiento": "Café a las 14:00",
+   "eliminado": false
+  },
+  "R6": {
+   "destino": "Técnica TE-7",
+   "tratamiento": "Sin «67,4»",
+   "eliminado": false
+  },
+  "R7": {
+   "destino": "Técnica TE-7",
+   "tratamiento": "Sin «entrenas de noche»",
+   "eliminado": false
+  },
+  "R8": {
+   "destino": "Técnica TE-7",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R9": {
+   "destino": "Plan P-5 (parada) y Técnica TE-7",
+   "tratamiento": "Sin «miércoles en el umbral» ni «cinco minutos»",
+   "eliminado": false
+  },
+  "R10": {
+   "destino": "Plan P-5",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R11": {
+   "destino": "Plan P-5",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R12": {
+   "destino": "Plan P-5, con «Hacerlo ahora →» a Hoy",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "R13": {
+   "destino": "Plan P-5 (título y enlace); texto en Técnica TE-1 (`protocoloDominadas.reglas[6]`)",
+   "tratamiento": "Sin el 24-10 (conflicto K6)",
+   "eliminado": false
+  },
+  "R14": {
+   "destino": "Plan P-5",
+   "tratamiento": "Reúne todas las reglas duras",
+   "eliminado": false
+  },
+  "S1": {
+   "destino": "`PC.hoy()` (núcleo)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "S2": {
+   "destino": "Pasos de H-1; Técnica TE-5",
+   "tratamiento": "Sin figuras. Rodaje con 10 min a 140",
+   "eliminado": false
+  },
+  "S3": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "S4": {
+   "destino": "Paso 3 del calentamiento, con enlace a TE-1",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "S5": {
+   "destino": "Pasos de H-1; Técnica TE-5",
+   "tratamiento": "Sin figuras",
+   "eliminado": false
+  },
+  "S6": {
+   "destino": "Pasos de H-1 (sábado); Técnica TE-5",
+   "tratamiento": "Sin figuras. Cajón o pogo: K4",
+   "eliminado": false
+  },
+  "S7": {
+   "destino": "Pasos de H-1; Técnica TE-5",
+   "tratamiento": "Sin figuras. Rodaje con 10 min a 140",
+   "eliminado": false
+  },
+  "S8": {
+   "destino": "Técnica TE-5 (series)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "S9": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "S10": {
+   "destino": "Tarjeta del martes (vía `sesionesTipo`) y frase de Garmin en TE-4",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "S11": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "S12": {
+   "destino": "—",
+   "tratamiento": "Eliminado",
+   "eliminado": true
+  },
+  "S13": {
+   "destino": "Tarjeta de descanso (la parte «hombro» se elimina)",
+   "tratamiento": "Primero la `sesion` literal del día (§3.4.8)",
+   "eliminado": false
+  },
+  "S14": {
+   "destino": "Día pasado en Hoy H-1 y hoja del día en Plan P-1: líneas «Hecho» de `web.hechosAntiguos`, con el chip «de la web antigua»",
+   "tratamiento": "La ficha entera se elimina; solo se conserva la línea «Hecho» de los días sin registro en `historial`",
+   "eliminado": false
+  },
+  "S15": {
+   "destino": "Hoy H-1 (vía `web.dias`)",
+   "tratamiento": "—",
+   "eliminado": false
+  },
+  "S16": {
+   "destino": "—",
+   "tratamiento": "Eliminados (salvo las consultas de vídeo, que pasan a `web.videos`)",
+   "eliminado": true
+  }
+ }
+}

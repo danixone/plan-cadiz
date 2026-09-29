@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Prueba del enrutador y del tema · Plan Cádiz</title>
+<style>html,body{margin:0;background:#777} iframe{display:block;border:0;background:#fff} #res{display:none}</style>
+</head>
+<body>
+<!--
+  Prueba automática del núcleo (M0 · §10.5): rutas de §3.2 con anclas y alias, memoria de posición,
+  «tocar la pestaña activa sube arriba», flechas en las pestañas, init una sola vez, barras según el ancho
+  (sin barra superior por debajo de 1024 px) y tema claro/oscuro sin destello (data-theme antes de pintar).
+  Uso: qa/rutas.html?w=390&h=844   (Chrome sin cabecera con --allow-file-access-from-files y --virtual-time-budget)
+  Mete en cada vista un relleno alto con [data-ancla] para poder desplazarse aunque la vista aún no tenga módulo.
+-->
+<iframe id="f" title="web"></iframe>
+<pre id="res"></pre>
+<script>
+(function () {
+  var q = {}; location.search.replace(/^\?/, '').split('&').forEach(function (p) { if (!p) return; var i = p.indexOf('='); q[p.slice(0, i)] = decodeURIComponent(p.slice(i + 1)); });
+  var w = +(q.w || 390), h = +(q.h || 844);
+  var f = document.getElementById('f'); f.style.width = w + 'px'; f.style.height = h + 'px';
+  var base = (q.pagina || '../out/index.html') + '?hoy=2026-09-29';
+  var R = { ancho: w, pasos: [], ok: true };
+  function paso(nombre, ok, det) { R.pasos.push({ paso: nombre, ok: !!ok, det: det }); if (!ok) R.ok = false; }
+  function fin() { document.getElementById('res').textContent = JSON.stringify(R); document.documentElement.setAttribute('data-listo', '1'); }
+  var cola = [];
+  function luego(ms, fn) { cola.push([ms, fn]); }
+  function correr() { var x = cola.shift(); if (!x) return fin(); setTimeout(function () { try { x[1](); } catch (e) { paso('excepción', false, String(e && e.message || e)); } correr(); }, x[0]); }
+  var W, D, PC;
+  function vis(id) { var e = D.getElementById(id); return e && !e.hidden; }
+  function sel(v) { return D.getElementById('t-' + v).getAttribute('aria-selected') === 'true' && D.getElementById('ab-' + v).getAttribute('aria-selected') === 'true'; }
+  function preparar() {
+    W = f.contentWindow; D = W.document; PC = W.PC;
+    ['hoy', 'plan', 'marcas', 'tecnica', 'dieta'].forEach(function (v) {
+      var c = D.querySelector('#v-' + v + ' .container');
+      var pie = c.querySelector('.pie');
+      var r = D.createElement('div'); r.className = 'relleno-prueba';
+      r.innerHTML = '<div style="height:900px"></div><section data-ancla="nota" style="height:600px">nota</section><section data-ancla="controles" style="height:600px">controles</section><section data-ancla="ritmos" style="height:600px">ritmos</section><div style="height:900px"></div>';
+      c.insertBefore(r, pie);
+    });
+  }
+  f.onload = function () {
+    if (R.pasos.length) return;          /* segunda carga (tema): la gestiona su paso */
+    preparar();
+    var inits = 0, shows = [];
+    PC.vista('tecnica', { init: function () { inits++; }, show: function (sub, r) { shows.push(sub); } });
+    paso('arranca en Hoy sin ruta', vis('v-hoy') && !vis('v-plan') && sel('hoy') && PC.ruta().vista === 'hoy', { hash: W.location.hash });
+    paso('sb-fondo presente', !!D.querySelector('.sb-fondo'));
+    var ab = W.getComputedStyle(D.querySelector('.appbar')).display, tb = W.getComputedStyle(D.querySelector('.tabbar')).display;
+    paso(w < 1024 ? 'sin barra superior y con tabbar (< 1024)' : 'barra superior y sin tabbar (≥ 1024)', w < 1024 ? (ab === 'none' && tb !== 'none') : (ab !== 'none' && tb === 'none'), { appbar: ab, tabbar: tb });
+    paso('clave antigua de pestaña borrada', W.localStorage.getItem(['pc', 'tab'].join('-')) === null);
+    luego(50, function () { W.location.hash = '#marcas'; });
+    luego(150, function () { paso('#marcas muestra Marcas', vis('v-marcas') && !vis('v-hoy') && sel('marcas')); W.scrollTo(0, 1200); });
+    luego(150, function () { W.location.hash = '#plan'; });
+    luego(150, function () { paso('#plan muestra Plan y empieza arriba', vis('v-plan') && W.scrollY < 5, { y: W.scrollY }); W.scrollTo(0, 500); });
+    luego(150, function () { W.location.hash = '#marcas'; });
+    luego(200, function () { paso('memoria de posición: Marcas vuelve a 1200', Math.abs(W.scrollY - 1200) < 3, { y: W.scrollY }); W.location.hash = '#plan'; });
+    luego(200, function () { paso('memoria de posición: Plan vuelve a 500', Math.abs(W.scrollY - 500) < 3, { y: W.scrollY }); D.getElementById(w < 1024 ? 't-plan' : 'ab-plan').click(); });
+    luego(1200, function () { paso('tocar la pestaña activa sube arriba', W.scrollY < 5 && W.location.hash === '#plan', { y: W.scrollY, hash: W.location.hash }); W.location.hash = '#marcas/controles'; });
+    luego(600, function () {
+      var a = D.querySelector('#v-marcas [data-ancla="controles"]').getBoundingClientRect().top;
+      paso('#marcas/controles lleva al ancla', a >= 0 && a < 140, { top: Math.round(a), y: W.scrollY });
+      W.location.hash = '#marcas/simulador';
+    });
+    luego(600, function () {
+      var a = D.querySelector('#v-marcas [data-ancla="nota"]').getBoundingClientRect().top;
+      paso('alias #marcas/simulador → nota', PC.ruta().sub === 'nota' && a >= 0 && a < 140, { sub: PC.ruta().sub, top: Math.round(a) });
+      W.location.hash = '#plan/ritmos';
+    });
+    luego(600, function () {
+      var a = D.querySelector('#v-plan [data-ancla="ritmos"]').getBoundingClientRect().top;
+      paso('#plan/ritmos lleva al ancla', vis('v-plan') && a >= 0 && a < 140, { top: Math.round(a) });
+      W.location.hash = '#tecnica/ej/sentadilla';
+    });
+    luego(200, function () {
+      var r = PC.ruta();
+      paso('#tecnica/ej/<id>: ruta con partes', r.vista === 'tecnica' && r.partes.join('/') === 'ej/sentadilla' && shows[shows.length - 1] === 'ej/sentadilla', r);
+      W.location.hash = '#hoy/2026-10-01';
+    });
+    luego(200, function () { var r = PC.ruta(); paso('#hoy/2026-10-01', r.vista === 'hoy' && r.sub === '2026-10-01' && vis('v-hoy')); W.location.hash = '#tecnica'; });
+    luego(200, function () { W.location.hash = '#dieta'; });
+    luego(200, function () { W.location.hash = '#tecnica/dominada'; });
+    luego(200, function () { paso('init de una vista solo la primera vez', inits === 1 && shows.length >= 3, { inits: inits, shows: shows }); W.location.hash = '#nada'; });
+    luego(200, function () { paso('ruta desconocida → Hoy', vis('v-hoy') && PC.ruta().vista === 'hoy'); W.location.hash = '#plan'; });
+    luego(200, function () {
+      var t = D.getElementById(w < 1024 ? 't-plan' : 'ab-plan'); t.focus();
+      t.dispatchEvent(new W.KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+    });
+    luego(200, function () { paso('flecha derecha en las pestañas → Marcas', vis('v-marcas') && sel('marcas') && D.activeElement && D.activeElement.getAttribute('data-v') === 'marcas'); });
+    /* tema */
+    luego(100, function () {
+      var b = D.querySelector('#v-marcas .seg.tema button[data-tema="dark"]'); b.click();
+      var bg = W.getComputedStyle(D.body).backgroundColor;
+      paso('conmutador del pie: Oscuro', D.documentElement.getAttribute('data-theme') === 'dark' && W.localStorage.getItem('pc-tema') === '"dark"' && bg === 'rgb(11, 17, 23)' && b.getAttribute('aria-pressed') === 'true', { bg: bg });
+      D.querySelector('#v-marcas .seg.tema button[data-tema="light"]').click();
+      paso('conmutador del pie: Claro', D.documentElement.getAttribute('data-theme') === 'light' && W.getComputedStyle(D.body).backgroundColor === 'rgb(243, 245, 248)');
+      D.querySelector('#v-marcas .seg.tema button[data-tema=""]').click();
+      paso('conmutador del pie: Sistema', !D.documentElement.hasAttribute('data-theme') && W.localStorage.getItem('pc-tema') === null);
+      W.localStorage.setItem('pc-tema', '"dark"');
+      f.onload = function () {
+        W = f.contentWindow; D = W.document;
+        paso('sin destello: data-theme puesto en el head antes del body', W.__temaEnHead === 'dark' && D.documentElement.getAttribute('data-theme') === 'dark', { enHead: W.__temaEnHead });
+        W.localStorage.removeItem('pc-tema');
+        fin();
+      };
+      /* el head se comprueba con un observador que mira data-theme en cuanto existe <body> */
+      f.src = base + '&sondaTema=1#marcas';
+      var sonda = setInterval(function () {
+        try {
+          var d = f.contentWindow.document;
+          if (d && d.body && !f.contentWindow.__temaEnHead && d.readyState !== 'uninitialized') {
+            f.contentWindow.__temaEnHead = d.documentElement.getAttribute('data-theme') || 'ninguno';
+          }
+        } catch (e) {}
+      }, 1);
+      setTimeout(function () { clearInterval(sonda); }, 3000);
+    });
+    correr();
+  };
+  f.src = base;
+})();
+</script>
+</body>
+</html>

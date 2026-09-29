@@ -6,7 +6,10 @@ Estado vivo de la preparación física. Se actualiza con Claude Code cada vez qu
 CLAUDE.md             instrucciones para Claude Code
 datos/plan.json       baremo, zonas, ritmos, calendario, protocolos, dieta, lesiones
 datos/historial.json  todas las sesiones, sueño y lecturas del Garmin
-docs/index.html       la web · GitHub Pages publica desde esta carpeta
+docs/index.html       la web generada · GitHub Pages publica desde esta carpeta (no se edita a mano)
+docs/anterior/        la web anterior al rediseño del 29-9-2026, por si hay que volver atrás
+web/                  código de la web: plantilla, estilos, JS por pestaña, constructor y validador
+                      · sh web/instalar.sh la construye desde datos/ y la copia a docs/
 herramientas/         analizar.py, el guion que procesa los archivos del Garmin
 archivos-garmin/      deja aquí los .fit y .csv que exportes (no se suben al repo)
 ```

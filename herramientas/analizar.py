@@ -271,7 +271,8 @@ def main():
         procesa(r)
     print("\n" + "=" * 62)
     print("Siguiente paso: decidir si la sesión es válida, registrarla en")
-    print("datos/historial.json y actualizar docs/index.html. Ver CLAUDE.md.")
+    print("datos/historial.json y reconstruir la web con: sh web/instalar.sh")
+    print("(docs/index.html no se edita a mano). Ver CLAUDE.md, Paso 5.")
 
 
 if __name__ == "__main__":

@@ -182,7 +182,8 @@
           "sKm": 44,
           "pct": 10,
           "analizador": "56 s/km (min 3-8 frente a últimos 8)",
-          "referenciaBaseAsentada": "por debajo del 5 %"
+          "referenciaBaseAsentada": "por debajo del 5 %",
+          "mitadesDesdeMin15": "−2,7 %"
         },
         "fcARitmo7a8": 141.4,
         "sensorMunecaC": 30.3,

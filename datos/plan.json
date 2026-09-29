@@ -42,8 +42,8 @@
       "Arsenal de Las Palmas (martes)",
       "Gimnasio del preparador (jueves, circuito)"
     ],
-    "pista": "Parque San Cristóbal (Las Palmas): bucle de atletismo NO homologado, recta de ~170 m y curvas de radio ~8,5 m. Perímetro SIN MEDIR, entre 392 y 400 m según el ajuste del GPS. Accesible cualquier día. Telde solo entre semana. La Ciudad Deportiva está en obras hasta enero de 2027.",
-    "fcMaximaNota": "≥203 con banda en la sexta serie de 6 × 400 el 28-9 (antes ≥202 el 19-9). Es un suelo. Las zonas por FCR no cambian: con 203 se mueven menos de 1 ppm (124-139 / 139-155 / 155-171 / 171-187 / 187-203).",
+    "pista": "Desde el 28-9, pista de atletismo del complejo deportivo Tonono (Arucas), compatible con 400 m reglamentaria según OpenStreetMap, homologación sin confirmar. Antes: parque San Cristóbal, bucle no homologado con perímetro sin medir (392-400 m). Actualizado el 29-9 (K8).",
+    "fcMaximaNota": "≥203 con banda en la sexta serie de 6 × 400 el 28-9 (antes ≥202 el 19-9). Es un suelo. Las zonas por FCR se dejan como el 19-9 (124-139 / 139-155 / 155-171 / 171-186 / 186-203): con 203 se moverían menos de 1 ppm, y el techo de la zona 5 es la máxima.",
     "relojConfigurado": "Desde el 22-9 el reloj tiene FC máx 201, reposo 46 y umbral 181 (la autodetección la subió tras el control del 19). No hace falta reconfigurarlo; si la autodetección lo sube a 203, tampoco.",
     "horaLevantarse": "06:00",
     "horaApagarLuz": "22:15 (7h45 antes de las 6:00)"
@@ -56,7 +56,7 @@
       "fechaReferencia": "2026-10-26"
     },
     "examenEscrito": "2026-09-26",
-    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero.",
+    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física, y con ella se ordena a los aspirantes para las plazas (base 6.11 del BOE). Corregido el 29-9: la web decía que las físicas no sumaban a la nota final, y era falso.",
     "aviso": "Baremo VERIFICADO el 19-9-2026 en BOE-A-2026-15055 (Resolución de 7 de julio de 2026, BOE núm. 167 de 10-07-2026). Ya no hay tramos interpolados: las tres tablas están completas. Corrige errores del baremo anterior en dominadas.",
     "objetivosRevisados": {
       "mil": "Bajar de 3:30 (4 puntos) como objetivo; suelo 3:36 (3 puntos). Se persigue con el reparto y un escalón de ritmo condicionado, no con más intensidad.",
@@ -274,7 +274,7 @@
     "termometro": "El ritmo a 140 ppm en el minuto 5 frente al del minuto 30. 12/09: 7:00 contra 8:30. 14/09: 8:00 contra 7:50. Cuando salga rápido y no derive, la base sube."
   },
   "zonasFC": {
-    "metodo": "% de frecuencia cardíaca de reserva (FCR) · máxima ≥202 medida el 19-9 · reposo 45 · reserva 157",
+    "metodo": "% de frecuencia cardíaca de reserva (FCR) · máxima ≥203 (202 el 19-9, 203 el 28-9, con banda) · reposo 45 · reserva 158. Con 203 las zonas se mueven menos de 1 ppm: se dejan como estaban",
     "configurarEnGarmin": "Mantén UP → Perfil del usuario → Frecuencia cardiaca y zonas de potencia → Frec. cardiaca → Zonas → Según → % FCR",
     "zonas": [
       {
@@ -304,7 +304,7 @@
       {
         "zona": 5,
         "min": 186,
-        "max": 202,
+        "max": 203,
         "uso": "Controles y día de la prueba"
       }
     ],
@@ -326,7 +326,7 @@
       }
     ],
     "porQueNoSubeElTecho": "El techo de rodaje se queda en 145 y el umbral en 166-172 aunque las zonas suban. Subirlos contradice el foco de carga medido (aeróbica baja 182 frente a aeróbica alta 736, marcada insuficiente) y la deriva de 38 s/km del 16-9 a pulso constante. La FC de umbral se mide aparte y no hay medición nueva: el 180 que tiene configurado el reloj no procede de ninguna medición.",
-    "accionPendiente": "Reconfigurar el reloj, que sigue con máxima 195, reposo 46 y umbral 180. Al hacerlo, el foco de carga deja de ser comparable con la ventana 22 ago - 19 sep."
+    "accionPendiente": "Ninguna. El reloj lleva máxima 201, reposo 46 y umbral 181 desde el 22-9 (la autodetección la subió tras el control del 19). No se toca. Resuelto el 29-9 (K1)."
   },
   "ritmos": [
     {
@@ -355,7 +355,7 @@
         166,
         172
       ],
-      "aviso": "No sube con la máxima nueva: la FC de umbral se mide aparte y no hay medición nueva. Del 21 de septiembre al 25 de octubre el calendario no contiene ninguna sesión de umbral."
+      "aviso": "No sube con la máxima nueva: la FC de umbral se mide aparte y no hay medición nueva. Del 21 de septiembre al 25 de octubre el calendario no contiene ninguna sesión de umbral. Sin sesiones de umbral hasta la prueba (K15)."
     },
     {
       "clave": "A",
@@ -365,9 +365,9 @@
       "m300": "1:05",
       "m400": "1:27",
       "m600": "2:11",
-      "cuando": "21 sep - 4 oct",
+      "cuando": "28 sep - 4 oct",
       "porQue": "Anclado un poco por debajo del 3:34 medido (42,8 s por 200) por tres razones: en el control los tramos 400-600 y 600-800 salieron a 46,0 (ritmo 3:50), es la primera sesión de 400 repetidos de todo el historial, y el patrón medido es pasarse de ritmo. NO por la distancia sin verificar: el sesgo de escala se cancela al medir control y series con el mismo reloj en la misma pista (corregido el 23-9).",
-      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona. En los 200 del 12-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control."
     },
     {
@@ -379,7 +379,7 @@
       "m600": "2:08",
       "cuando": "5 - 18 oct",
       "porQue": "Anclado al centro de la banda medida. La diferencia con A es 0,8 s por 200, menos que el ruido de una repetición suelta: lo que cambia de verdad no es el ritmo, es la exigencia de regularidad.",
-      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona. En los 200 del 12-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
       "condicion": "DECIDIDO el 28-9: el bloque B va a 1:26 / 2:08. El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11."
     },
@@ -391,7 +391,7 @@
       "m400": "1:25 → 1:24",
       "m600": "2:07 → 2:06",
       "cuando": "19-25 oct y día de la prueba",
-      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona.",
+      "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5-10, 1:22 el 19-10), la siguiente sale más lenta, no se abandona. En los 200 del 12-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
       "condicion": "El escalón (segundo valor) solo si el 10 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor."
     },
@@ -513,7 +513,7 @@
           "ejercicio": "Sentadilla",
           "series": 4,
           "reps": 6,
-          "peso": "barra vacía (20 kg) la 1ª semana",
+          "peso": "20 kg (barra). No sube mientras el miércoles sea la sesión clave",
           "descanso": "2–3 min"
         },
         {
@@ -649,7 +649,7 @@
           "reps": "30 s por lado"
         }
       ],
-      "nota": "Sin dominadas los sábados. Esa carga ya está el martes."
+      "nota": "Sin dominadas los sábados, SALVO el 3-10 y el 17-10: sesión corta de barra antes del rodaje (revisión del 28-9). Resuelto el 29-9 (K4)."
     }
   },
   "protocoloDominadas": {
@@ -976,7 +976,7 @@
       "material": [],
       "tecnica": [
         "Salida de pie desde parado, sin agacharte. Acelera en los primeros 20 m y a partir de ahí sostén.",
-        "Recuperación al trote suave (6:00–6:30 /km), nunca parado: parar enfría las piernas y falsea la sesión."
+        "Recuperación andando o al trote muy suave, lo que pida el cuerpo, pero sin sentarse. Con 90 s entre series a ritmo de 1.000, andar es correcto: el 28-9 la FC bajaba 24-28 ppm en el primer minuto en todas. Corregido el 29-9 (K9): antes decía «nunca parado»."
       ]
     },
     {
@@ -999,7 +999,8 @@
         "Prueba del habla: frases de cinco o seis palabras, no una conversación.",
         "Recuperación trotando, no parado.",
         "Los dos primeros minutos la FC va por detrás del esfuerzo: ajusta a partir del minuto 3."
-      ]
+      ],
+      "nota": "Sin sesiones de umbral programadas hasta la prueba (K15). Se conserva la técnica por si vuelve a hacer falta."
     },
     {
       "id": "kilometro-partido",
@@ -1017,8 +1018,8 @@
       "grupo": "prueba",
       "material": [],
       "tecnica": [
-        "Las tres pruebas seguidas en el orden real: circuito → dominadas → 1.000 m, con las mismas esperas del día del examen.",
-        "La mejor opción es hacerlo un jueves en el gimnasio: circuito al principio de la sesión, dominadas al máximo y salir a correr el 1.000 al terminar."
+        "Las tres pruebas en el orden del BOE: circuito → dominadas → 1.000 m.",
+        "El circuito es inamovible los jueves con el preparador: el del simulacro se hace el jueves anterior (8-10) con UN intento como el BOE, y el sábado (10-10) van dominadas al máximo en vídeo y, 20 min después, el 1.000. Corregido el 29-9 (K7): antes decía «un jueves en el gimnasio»."
       ]
     },
     {
@@ -1190,7 +1191,7 @@
           "sesion": "Calentamiento completo (42 min, con 5 progresivos) + 3 × 5 dominadas con el estándar BOE en el parque de Arucas + kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min",
           "objetivo": "600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero. Semáforo: VERDE × 2; ÁMBAR (5h00-6h29 o agujetas 3-4) × 1 + 15-20 min con techo 145; ROJO 35-40 min con techo 145 y el kilómetro partido se pierde. Es la única sesión válida del bloque A: solo decide si el A se sostiene, no sube escalón (el B va a 1:26 / 2:08 en cualquier caso). Series a ritmo, no a tope",
           "clave": true,
-          "hora": "18:00-19:00 · acabar antes de las 21:00 y cama antes de las 23:00: el jueves hay circuito",
+          "hora": "18:00 · acabar antes de las 20:30 · cena terminada a las 20:15 y luz a las 22:15: el jueves hay circuito (K3)",
           "lugar": "Pista de Arucas, perfil Pista del reloj, calle 1"
         },
         {
@@ -1273,7 +1274,7 @@
           "objetivo": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48) y los tramos 400-600 y 600-800 en 43 · dominadas: anotar por separado las que cuentes tú y las VÁLIDAS al revisar el vídeo con las nueve reglas del BOE; objetivo ≥ 12 válidas",
           "clave": true,
           "hora": "09:30-10:00, la misma que el 24 de octubre",
-          "protocolo": "Antes: perímetro medido con rueda o cinta, o pista homologada. Sin calibración de cuatro vueltas. Reparto del examen 0:43 / 1:26 / 2:09 / 2:52 con botón de vuelta al pasar por la salida (≈400 y ≈800: 1:26 ±2, 2:52 ±3) y aviso de ritmo 3:25-3:40. Primer 200 entre 0:42 y 0:45. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000.",
+          "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con botón de vuelta al pasar por la salida (≈400 y ≈800). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
           "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30). 3:34-3:36 → C a 1:25 / 2:07. Peor de 3:36 → se revisan todos los ritmos. Objetivo de Cádiz: bajar de 3:30. Dominadas: diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica; 11 o menos válidas → asegurar 12 (técnica); 12 o más → no se añade nada. Es el primer número de dominadas validado del historial.",
           "lugar": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
           "semaforo": "Noche del 9: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 11"
@@ -1295,7 +1296,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
-          "objetivo": "0:41-0:42 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro · si el reloj no cerró la recuperación o hubo mala noche, 40 min de rodaje · si el simulacro pasó al domingo 11, rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
+          "objetivo": "0:41-0:43 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro · semáforo: ámbar → 5 × 200 con el mismo criterio + 15-20 min con techo 145; rojo → 40 min de rodaje con techo 145 · si el simulacro pasó al domingo 11, rodaje de 40 min con techo 145 y el 8 × 200 se pierde (K18: la condición «el reloj no cerró la recuperación» se sustituye por el semáforo)",
           "hora": "18:00-19:00",
           "nota": "Comprobar si trabaja el 12-10 (Fiesta Nacional)."
         },
@@ -1569,7 +1570,7 @@
     {
       "id": "cuello",
       "titulo": "Regla del cuello para entrenar con catarro",
-      "texto": "Síntomas por encima del cuello (mocos, garganta, estornudos): se puede entrenar suave. Por debajo (pecho cargado, tos persistente, fiebre, dolor muscular): no se entrena. Ojo con los antigripales tipo Frenadol: paracetamol y dextrometorfano tapan la fiebre y la tos, así que se entrena sin poder leer las propias señales. Fiarse del pulso, no de la sensación.",
+      "texto": "Síntomas por encima del cuello (mocos, garganta, estornudos): se entrena suave, y en el semáforo el día es rojo como mínimo. Por debajo (pecho cargado, tos persistente, fiebre, dolor muscular): no se entrena. Ojo con los antigripales tipo Frenadol: paracetamol y dextrometorfano tapan la fiebre y la tos, así que se entrena sin poder leer las propias señales. Fiarse del pulso, no de la sensación.",
       "origen": "Sesión del 03/09 con el pecho cargado: la FC no bajó de 174 en ninguna recuperación."
     },
     {
@@ -1581,7 +1582,7 @@
     {
       "id": "dia-torcido",
       "titulo": "Semáforo de la mañana (regla del día torcido, versión del 28-9): no se pierde el día, cambia el contenido",
-      "texto": "Al levantarte miras cuatro cosas: (1) horas de sueño de la noche según el Garmin, sin contar la siesta (si el reloj no recogió la noche entera, las horas en la cama apuntadas a mano); (2) estado general: VFC de 7 días «Desequilibrado» o «Bajo», el reloj en «Sobrecarga», o síntomas por debajo del cuello; (3) dolor de codo u hombro de 0 a 10; (4) dolor de talón o del cintillo de 0 a 10. Cada dolor decide solo sobre lo que carga ese sitio. VERDE (6h30 o más, sin estado rojo): la sesión como está escrita; es la única que mide y decide escalones, subidas de lastre y escenarios. ÁMBAR (5h00-6h29): carrera con dos tercios de las repeticiones redondeando hacia abajo, al mismo ritmo y con la misma recuperación, más 15-20 min con techo 145 (6 × 400 → 4; 5 × 400 → 3; 4 × 400 → 2; 3 × 600 → 2; 8 × 200 → 5; 2 × 600 + 2 × 200 → 1 + 1; kilómetro partido × 2 → × 1; 600 + 400 → solo el 600), y si una repetición llega a 200 ppm antes de la última, esa es la última; fuerza con el peso ya dominado, sin estrenar peso, sin peso muerto rumano si al día siguiente hay calidad, H siempre; circuito con sus 3 intentos, con asterisco. ROJO (menos de 5h00, o VFC de 7 días «Desequilibrado»/«Bajo», o «Sobrecarga»): carrera → rodaje de 30-40 min con techo 145 y los diez primeros a 140; fuerza → A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I (unos 45 min); circuito → solo técnica, sin cronómetro. Una calidad que cae en rojo no se mueve: se pierde. RACHA: dos noches seguidas por debajo de 5h00 son 48 h en rojo. Si en la semana del 28-9 al 4-10 hay tres noches por debajo de 6 h, lo que se cambia es el horario, no las sesiones. Ninguna sesión hecha en ámbar o en rojo mide nada (Paso 2). Se anotan pero no deciden: FC en reposo, VFC de una sola noche y FC del trote de los minutos 5-10 (referencia 142-143 a 7:32-7:35, el 16 y el 23), hasta tener tres sesiones verdes a las 18:00. Controles: el simulacro del 10-10 decide solo con 6h30 o más la noche del 9; con 5h00-6h29 se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos); por debajo de 5h00 pasa al domingo 11 y el lunes 12 es rodaje de 40 min. El circuito del 8-10 con menos de 6h30 va con asterisco. Los cortes de 6h30 y 5h00 son convenciones del plan, no umbrales de un estudio: 6h30 ya era el umbral de medición limpia.",
+      "texto": "Al levantarte miras cuatro cosas: (1) horas de sueño de la noche según el Garmin, sin contar la siesta (si el reloj no recogió la noche entera, las horas en la cama apuntadas a mano); (2) estado general: VFC de 7 días «Desequilibrado» o «Bajo», el reloj en «Sobrecarga», o síntomas por debajo del cuello; (3) dolor de codo u hombro de 0 a 10; (4) dolor de talón o del cintillo de 0 a 10. Cada dolor decide solo sobre lo que carga ese sitio. VERDE (6h30 o más, sin estado rojo): la sesión como está escrita; es la única que mide y decide escalones, subidas de lastre y escenarios. ÁMBAR (5h00-6h29): carrera con dos tercios de las repeticiones redondeando hacia abajo, al mismo ritmo y con la misma recuperación, más 15-20 min con techo 145 (6 × 400 → 4; 5 × 400 → 3; 4 × 400 → 2; 3 × 600 → 2; 8 × 200 → 5; 2 × 600 + 2 × 200 → 1 + 1; kilómetro partido × 2 → × 1; 600 + 400 → solo el 600), y si una repetición llega a 200 ppm antes de la última, esa es la última; fuerza con el peso ya dominado, sin estrenar peso, sin peso muerto rumano si al día siguiente hay calidad, H siempre; circuito con sus 3 intentos, con asterisco. ROJO (menos de 5h00, o VFC de 7 días «Desequilibrado»/«Bajo», o «Sobrecarga»): carrera → rodaje de 30-40 min con techo 145 y los diez primeros a 140; fuerza → A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I (unos 45 min); circuito → solo técnica, sin cronómetro. Una calidad que cae en rojo no se mueve: se pierde. RACHA: dos noches seguidas por debajo de 5h00 son 48 h en rojo. Si en la semana del 28-9 al 4-10 hay tres noches por debajo de 6 h, lo que se cambia es el horario, no las sesiones. Ninguna sesión hecha en ámbar o en rojo mide nada (Paso 2). Se anotan pero no deciden: FC en reposo, VFC de una sola noche y FC del trote de los minutos 5-10 (referencia 142-143 a 7:32-7:35, el 16 y el 23), hasta tener tres sesiones verdes a las 18:00. Controles: el simulacro del 10-10 decide solo con 6h30 o más la noche del 9; con 5h00-6h29 se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos); por debajo de 5h00 pasa al domingo 11 y el lunes 12 es rodaje de 40 min. El circuito del 8-10 con menos de 6h30 va con asterisco. Los cortes de 6h30 y 5h00 son convenciones del plan, no umbrales de un estudio: 6h30 ya era el umbral de medición limpia. Síntomas por encima del cuello (mocos, garganta, estornudos): el día es ROJO como mínimo (se entrena suave, regla del cuello). Por debajo del cuello (pecho, tos, fiebre, dolor muscular): no se entrena. Resuelto el 29-9 (K10).",
       "origen": "Versión anterior: «mala noche → 40 min de rodaje y moverla». Con cuatro semanas ya no hay hueco donde moverla. El 28-9, con 2h14 de sueño, hizo la calidad igualmente: los tiempos aguantaron (media 86,85 s para 87) con coste máximo (FC 203, carga 234) y el trote 15-20 ppm más alto al mismo ritmo, con la VFC (61) y la FC en reposo (47) sin avisar. Evidencia general (certeza media): una noche corta suelta afecta poco al esfuerzo máximo corto; afecta más al esfuerzo repetido, al esfuerzo percibido y al cálculo de la reserva; varias noches seguidas acumulan déficit."
     },
     {
@@ -1593,7 +1594,7 @@
     {
       "id": "no-testear",
       "titulo": "No testear de más",
-      "texto": "Solo los controles marcados: 19 de septiembre, 10 y 24 de octubre, y el examen. Testear cada semana desgasta y no informa."
+      "texto": "Solo los controles marcados: el simulacro del 10 de octubre y la prueba. El 24 de octubre ya no lleva máximo de dominadas (serie técnica de 8) y su carrera depende de la fecha de la prueba. Testear cada semana desgasta y no informa. Actualizado el 29-9 (K6)."
     },
     {
       "id": "dos-repeticiones",
@@ -1608,7 +1609,7 @@
     }
   ],
   "contextoDelUsuario": {
-    "situacion": "Militar en activo. Aprobó el examen teórico del 26-9 (5,60 con la plantilla oficial; su corte es 5,00): ya no estudia temario y tiene más tiempo libre. Trabajo de 7:30 a 14:30 de lunes a viernes.",
+    "situacion": "Militar en activo. Aprobó el examen teórico del 26-9: ya no estudia temario y tiene más tiempo libre. Trabajo de 7:30 a 14:30 de lunes a viernes.",
     "gimnasios": [
       "Gimnasio del preparador (jueves, circuito)",
       "Gimnasio del Arsenal de Las Palmas, nuevo y con mucha variedad"
@@ -1722,5 +1723,45 @@
     "expectativa": "9-13 válidas el día de la prueba, centro 11-12 (supuesto). 14 posible si el 10-10 da 12-13 válidas en vídeo y el 13-10 mueve 15 kg con 2 en reserva.",
     "sueno": "Semáforo de la mañana con cortes 6h30 / 5h00 (convenciones del plan): verde, sesión entera y la única que mide; ámbar, dos tercios de las repeticiones o el peso dominado; rojo, rodaje o fuerza reducida; una calidad en rojo se pierde, no se mueve. Ver reglas → dia-torcido.",
     "loQueNoCambia": "La intensidad de carrera no sube. Circuito los jueves a las 21:30. Lastre solo los martes, subir solo con 2 en reserva, nunca al fallo. Habituación lunes y miércoles. Prep-hombro obligatorio. Viernes y domingo, descanso. Rodajes del sábado y elevaciones de talón. El 3:49 elimina."
-  }
+  },
+  "pendientes": [
+    {
+      "id": "pista-arucas",
+      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. Si lo es, el simulacro del 10 va allí.",
+      "desde": "2026-09-28"
+    },
+    {
+      "id": "circuito-1",
+      "texto": "Circuito del jueves 1-10: primera medición seria (el 24 no se hizo). Los tres intentos en décimas; el primero es el comparable.",
+      "desde": "2026-09-29",
+      "hasta": "2026-10-01"
+    },
+    {
+      "id": "sueno",
+      "texto": "Luz apagada a las 22:15 entre semana y cena terminada 2 h antes. Mandar los CSV de sueño cada mañana la primera semana de trabajo.",
+      "desde": "2026-09-29"
+    },
+    {
+      "id": "fiesta-12",
+      "texto": "¿Trabaja el lunes 12-10 (Fiesta Nacional)? Decide la hora del 8 × 200.",
+      "desde": "2026-09-29",
+      "hasta": "2026-10-11"
+    },
+    {
+      "id": "llamamiento",
+      "texto": "Fecha exacta, hora y minutos entre pruebas, cuando llegue el llamamiento. Decide la versión de la última semana y los eventos del calendario de esa semana.",
+      "desde": "2026-09-29"
+    },
+    {
+      "id": "zapatilla",
+      "texto": "Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT.",
+      "desde": "2026-09-15"
+    },
+    {
+      "id": "segunda-zapatilla",
+      "texto": "Segunda zapatilla de rodaje, aplazada por coste.",
+      "desde": "2026-09-15"
+    }
+  ],
+  "resueltos29sep": "Contradicciones del plan detectadas en el diagnóstico de la web (K1-K18) y resueltas el 29-9: reloj ya configurado (K1), FC máx ≥203 (K2), miércoles 30 acaba antes de las 20:30 (K3), barra de los sábados 3 y 17 (K4), reparto del simulacro 0:42/1:24/2:06/2:48 (K5), sin máximo el 24-10 (K6), simulacro en jueves + sábado (K7), pista de Arucas (K8), recuperación andando (K9), síntomas por encima del cuello = rojo como mínimo (K10), bloque A desde el 28-9 (K13), deriva por mitades guardada (K14), umbral sin sesiones (K15), lista de pendientes en plan.json (K16), 12-10 con el semáforo (K18). K11 (carga del 12-9 sin fuente), K12 (relatos personales, no se publican) y K17 (recorrido del circuito: el BOE solo lo da en un gráfico) se quedan fuera de la web."
 }

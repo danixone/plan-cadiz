@@ -1,0 +1,1634 @@
+{
+  "_nota": "Datos de la web que no están en plan.json y no se pueden calcular (especificación §8.4 y Anexo B). Solo texto literal de plan.json, historial.json o de la web antigua congelada (datos/corpus_web_antigua.html), o estructura sacada de ellos. Cada entrada lleva su fuente; cada campo estructurado, su «desde» (la subcadena literal de la que sale). Las firmas son los 12 primeros caracteres del sha1 del día de plan.calendario (o de las fuentes de «firmaDe»): si el día cambia en plan.json, la construcción se para y dice qué entrada revisar. Para rehacerlas: python3 herramientas/construir_web.py --firmas.",
+  "version": 2,
+  "corpusSha256": "ce173531ac90863b99a97e122add3b7c584a3e4dc78478861d115dc90e060ebd",
+  "resueltos": [
+    "K1",
+    "K2",
+    "K3",
+    "K4",
+    "K5",
+    "K6",
+    "K7",
+    "K8",
+    "K9",
+    "K10",
+    "K11",
+    "K12",
+    "K13",
+    "K14",
+    "K15",
+    "K16",
+    "K17",
+    "K18"
+  ],
+  "_resueltos": "Fuente: plan.resueltos29sep (el entrenador resolvió el 29-9 las contradicciones K1-K18). K11, K12 y K17 se resuelven dejándolos fuera de la web. Las reglas de detección del constructor siguen activas: si un conflicto vuelve a aparecer en los datos, sale como aviso aunque figure aquí.",
+  "dias": {
+    "2026-09-28": {
+      "firma": "2c735175bfce",
+      "titulo": "6 × 400 m, rec. 90 s",
+      "fuentes": [
+        "plan.calendario[2026-09-28].sesion"
+      ]
+    },
+    "2026-09-29": {
+      "firma": "d847a76dcdca",
+      "titulo": "Arsenal: sesión completa",
+      "numeros": {
+        "verde": [
+          {
+            "v": "5 × 3",
+            "l": "lastradas",
+            "desde": "lastradas 5 × 3"
+          },
+          {
+            "v": "12,5 kg",
+            "l": "lastre",
+            "desde": "con 12,5 kg"
+          },
+          {
+            "v": "180 s",
+            "l": "descanso",
+            "desde": "180 s"
+          }
+        ],
+        "ambar": [
+          {
+            "v": "5 × 3",
+            "l": "lastradas",
+            "desde": "5 × 3 con 10 kg"
+          },
+          {
+            "v": "10 kg",
+            "l": "lastre",
+            "desde": "5 × 3 con 10 kg"
+          }
+        ],
+        "rojo": [
+          {
+            "v": "4 × 3",
+            "l": "lastradas",
+            "desde": "4 × 3 con 10 kg"
+          },
+          {
+            "v": "10 kg",
+            "l": "lastre",
+            "desde": "4 × 3 con 10 kg"
+          }
+        ]
+      },
+      "fuerza": {
+        "verde": {
+          "A": {
+            "series": 5,
+            "reps": 3,
+            "peso": "12,5 kg",
+            "descanso": "180 s"
+          },
+          "D": {
+            "peso": "20 kg"
+          },
+          "E": {
+            "peso": "20 kg"
+          },
+          "H": {
+            "series": 2
+          },
+          "desde": [
+            "lastradas 5 × 3 con 12,5 kg, 180 s",
+            "H a dos rondas justo después de A",
+            "sentadilla y rumano con los mismos 20 kg"
+          ]
+        },
+        "ambar": {
+          "A": {
+            "series": 5,
+            "reps": 3,
+            "peso": "10 kg"
+          },
+          "B": {
+            "series": 3
+          },
+          "C": {
+            "series": 3
+          },
+          "F": {
+            "series": 3
+          },
+          "quitar": [
+            "E"
+          ],
+          "desde": [
+            "5 × 3 con 10 kg",
+            "B, C y F a 3 series; sin rumano"
+          ]
+        },
+        "rojo": {
+          "A": {
+            "series": 4,
+            "reps": 3,
+            "peso": "10 kg"
+          },
+          "solo": [
+            "A",
+            "G",
+            "H",
+            "I"
+          ],
+          "desde": "4 × 3 con 10 kg, sin sentadilla ni rumano, G, H e I"
+        }
+      },
+      "calidad": false,
+      "registroCampos": [
+        "repsA",
+        "lastre",
+        "reserva5",
+        "codoHombro",
+        "bloques",
+        "nota"
+      ],
+      "fuentes": [
+        "plan.calendario[2026-09-29].objetivo",
+        "plan.sesionesTipo.martesFuerza"
+      ]
+    },
+    "2026-09-30": {
+      "firma": "117837e18465",
+      "titulo": "Kilómetro partido × 2",
+      "numeros": {
+        "verde": [
+          {
+            "v": "600 en 2:11",
+            "l": "primera parte",
+            "desde": "600 en 2:11"
+          },
+          {
+            "v": "400 en 1:27",
+            "l": "tras 45 s",
+            "desde": "400 en 1:27"
+          },
+          {
+            "v": "6 min",
+            "l": "entre series",
+            "desde": "rec. 6 min"
+          }
+        ],
+        "ambar": [
+          {
+            "v": "× 1",
+            "l": "kilómetro partido",
+            "desde": "× 1"
+          },
+          {
+            "v": "600 en 2:11",
+            "l": "primera parte",
+            "desde": "600 en 2:11"
+          },
+          {
+            "v": "400 en 1:27",
+            "l": "tras 45 s",
+            "desde": "400 en 1:27"
+          }
+        ],
+        "rojo": [
+          {
+            "v": "35-40 min",
+            "l": "techo 145",
+            "desde": "ROJO 35-40 min con techo 145"
+          }
+        ]
+      },
+      "variantes": {
+        "base": "600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero",
+        "verde": "VERDE × 2",
+        "ambar": "(5h00-6h29 o agujetas 3-4) × 1 + 15-20 min con techo 145",
+        "rojo": "35-40 min con techo 145 y el kilómetro partido se pierde",
+        "comun": "Es la única sesión válida del bloque A: solo decide si el A se sostiene, no sube escalón (el B va a 1:26 / 2:08 en cualquier caso). Series a ritmo, no a tope"
+      },
+      "principal": {
+        "tipo": "km-partido",
+        "n": {
+          "verde": 2,
+          "ambar": 1
+        },
+        "partes": [
+          {
+            "dist": 600,
+            "obj": "2:11"
+          },
+          {
+            "pausa": "45 s"
+          },
+          {
+            "dist": 400,
+            "obj": "1:27"
+          }
+        ],
+        "rec": "6 min",
+        "primer200": "0:43,5",
+        "aviso": "3:30-3:40",
+        "criterios": [
+          "los tres 200 del 600 dentro de 1 s",
+          "segundo 400 a 2 s o menos del primero"
+        ],
+        "desde": "kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min"
+      },
+      "calidad": true,
+      "registroCampos": [
+        "reps",
+        "talonCintillo",
+        "nota"
+      ],
+      "fuentes": [
+        "plan.calendario[2026-09-30].sesion",
+        "plan.calendario[2026-09-30].objetivo",
+        "plan.ritmos[A].avisoReloj"
+      ]
+    },
+    "2026-10-01": {
+      "firma": "604755043fa7",
+      "titulo": "Circuito · primera medición seria",
+      "fuentes": [
+        "plan.calendario[2026-10-01].sesion"
+      ]
+    },
+    "2026-10-03": {
+      "firma": "27e7b68f9a7c",
+      "numeros": {
+        "verde": [
+          {
+            "v": "serie técnica de 7",
+            "l": "barra, en vídeo",
+            "desde": "serie técnica de 7 grabada de frente y de lado"
+          },
+          {
+            "v": "55 min",
+            "l": "rodaje",
+            "desde": "rodaje 55 min"
+          },
+          {
+            "v": "techo 145",
+            "l": "primeros 10 min a 140",
+            "desde": "techo 145 · primeros 10 min a 140"
+          }
+        ]
+      },
+      "condicion": {
+        "pregunta": "¿Qué toca hoy?",
+        "opciones": [
+          {
+            "id": "55",
+            "txt": "rodaje 55 min",
+            "fuente": "sesion",
+            "principal": {
+              "tipo": "rodaje",
+              "min": "55"
+            }
+          },
+          {
+            "id": "45",
+            "txt": "si hubo dolor de talón por la mañana esa semana, 45 min",
+            "principal": {
+              "tipo": "rodaje",
+              "min": "45"
+            }
+          }
+        ],
+        "prellenar": {
+          "sem": {
+            "desde": "2026-09-28",
+            "hasta": "2026-10-03",
+            "campo": "talon",
+            "igual": "duele"
+          },
+          "opcion": "45"
+        }
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-03].sesion",
+        "plan.calendario[2026-10-03].objetivo"
+      ]
+    },
+    "2026-10-05": {
+      "firma": "f92de8a8866c",
+      "titulo": "5 × 400 m, rec. 2 min",
+      "principal": {
+        "tipo": "series",
+        "n": 5,
+        "dist": 400,
+        "rec": "2 min",
+        "obj": "1:26",
+        "primer200": "0:43",
+        "freno": "1:23",
+        "aviso": "3:30-3:40",
+        "desde": "5 × 400 m, rec. 2 min"
+      },
+      "condicion": {
+        "pregunta": "¿Saltó el 30 la regla de las dos repeticiones?",
+        "opciones": [
+          {
+            "id": "no",
+            "txt": "1:26 con 2 min",
+            "principal": {
+              "obj": "1:26"
+            }
+          },
+          {
+            "id": "si",
+            "txt": "1:27 si el 30 saltó la regla de las dos repeticiones",
+            "principal": {
+              "obj": "1:27"
+            }
+          }
+        ],
+        "prellenar": {
+          "clave": "pc-ses-2026-09-30",
+          "campo": "aviso2",
+          "si": true,
+          "no": false
+        }
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-05].sesion",
+        "plan.calendario[2026-10-05].objetivo"
+      ]
+    },
+    "2026-10-06": {
+      "firma": "6a6c43026ef8",
+      "titulo": "Arsenal: sesión completa",
+      "numeros": {
+        "rojo": [
+          {
+            "v": "4 × 3",
+            "l": "lastradas · peso dominado",
+            "desde": "A en 4 × 3 con el peso dominado",
+            "fuente": "plan.reglas[dia-torcido].texto"
+          }
+        ]
+      },
+      "fuerza": {
+        "ambar": {
+          "quitar": [
+            "E"
+          ],
+          "desde": "sin peso muerto rumano si al día siguiente hay calidad",
+          "fuente": "plan.reglas[dia-torcido].texto"
+        },
+        "rojo": {
+          "A": {
+            "series": 4,
+            "reps": 3,
+            "peso": "el peso dominado"
+          },
+          "solo": [
+            "A",
+            "G",
+            "H",
+            "I"
+          ],
+          "desde": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I",
+          "fuente": "plan.reglas[dia-torcido].texto"
+        }
+      },
+      "condicion": {
+        "pregunta": "¿Cómo salió el martes 29?",
+        "opciones": [
+          {
+            "id": "15",
+            "txt": "Si el 29 fue verde: 15 kg si la quinta dejó 2 o más en reserva con la pausa del BOE",
+            "numeros": [
+              {
+                "v": "15 kg",
+                "l": "lastre",
+                "desde": "15 kg si la quinta dejó 2 o más en reserva"
+              }
+            ],
+            "fuerza": {
+              "A": {
+                "series": 5,
+                "reps": 3,
+                "peso": "15 kg"
+              },
+              "desde": "15 kg"
+            }
+          },
+          {
+            "id": "12,5",
+            "txt": "12,5 si dejó 1",
+            "numeros": [
+              {
+                "v": "12,5 kg",
+                "l": "lastre",
+                "desde": "12,5 si dejó 1"
+              }
+            ],
+            "fuerza": {
+              "A": {
+                "series": 5,
+                "reps": 3,
+                "peso": "12,5 kg"
+              },
+              "desde": "12,5 si dejó 1"
+            }
+          },
+          {
+            "id": "estreno",
+            "txt": "Si el 29 fue ámbar o rojo: estreno de los 12,5 kg, solo con noche verde",
+            "numeros": [
+              {
+                "v": "12,5 kg",
+                "l": "lastre · solo con noche verde",
+                "desde": "estreno de los 12,5 kg, solo con noche verde"
+              }
+            ],
+            "fuerza": {
+              "A": {
+                "series": 5,
+                "reps": 3,
+                "peso": "12,5 kg"
+              },
+              "desde": "estreno de los 12,5 kg"
+            }
+          }
+        ],
+        "prellenar": {
+          "sem": "pc-sem-2026-09-29",
+          "gym": "pc-ses-2026-09-29",
+          "reglas": [
+            {
+              "color": "verde",
+              "reserva5": ">=2",
+              "opcion": "15"
+            },
+            {
+              "color": "verde",
+              "reserva5": "1",
+              "opcion": "12,5"
+            },
+            {
+              "color": [
+                "ambar",
+                "rojo"
+              ],
+              "opcion": "estreno"
+            },
+            {
+              "color": "verde",
+              "reserva5": "0",
+              "opcion": "ninguna"
+            }
+          ]
+        },
+        "comun": "Nunca un salto de 5 kg"
+      },
+      "calidad": false,
+      "fuentes": [
+        "plan.calendario[2026-10-06].objetivo",
+        "plan.protocoloDominadas.progresion[2]",
+        "plan.reglas[dia-torcido].texto"
+      ]
+    },
+    "2026-10-07": {
+      "firma": "c34333007444",
+      "titulo": "3 × 600 m, rec. 3 min",
+      "condicion": {
+        "pregunta": "¿Saltó el 30 la regla de las dos repeticiones?",
+        "opciones": [
+          {
+            "id": "no",
+            "txt": "2:08 con 3 min",
+            "principal": {
+              "obj": "2:08"
+            }
+          },
+          {
+            "id": "si",
+            "txt": "Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11",
+            "fuente": "plan.ritmos[B].condicion",
+            "principal": {
+              "obj": "2:11"
+            }
+          }
+        ],
+        "prellenar": {
+          "clave": "pc-ses-2026-09-30",
+          "campo": "aviso2",
+          "si": true,
+          "no": false
+        }
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-07].sesion",
+        "plan.calendario[2026-10-07].objetivo",
+        "plan.ritmos[B].condicion"
+      ]
+    },
+    "2026-10-10": {
+      "firma": "30d2c665ef8a",
+      "numeros": [
+        {
+          "v": "≤ 3:33",
+          "l": "1.000 con reparto plano",
+          "desde": "1.000 ≤ 3:33 con reparto plano"
+        },
+        {
+          "v": "≥ 12",
+          "l": "dominadas válidas",
+          "desde": "objetivo ≥ 12 válidas"
+        },
+        {
+          "v": "20 min",
+          "l": "entre barra y 1.000",
+          "desde": "→ 20 min →"
+        }
+      ],
+      "pasos": [
+        {
+          "t": "Dominadas al máximo en vídeo",
+          "d": "prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE",
+          "enlace": "#tecnica/dominada",
+          "desde": [
+            "dominadas al máximo en vídeo",
+            "prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE"
+          ]
+        },
+        {
+          "t": "20 min",
+          "timer": "20:00",
+          "desde": "→ 20 min →"
+        },
+        {
+          "t": "1.000 m en pista medida",
+          "d": "los tramos 400-600 y 600-800 en 43",
+          "enlace": "#tecnica/mil",
+          "desde": [
+            "1.000 m en pista medida",
+            "los tramos 400-600 y 600-800 en 43"
+          ]
+        }
+      ],
+      "principal": {
+        "tipo": "control1000",
+        "obj": "3:33",
+        "meta": "3:29-3:30",
+        "repartos": {
+          "objetivo": [
+            "0:42",
+            "1:24",
+            "2:06",
+            "2:48"
+          ]
+        },
+        "primer200": "0:42-0:43",
+        "aviso": "3:25-3:35",
+        "criterios": [
+          "Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40)",
+          "Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C",
+          "Anotar juntos los tramos 400-600 y 600-800"
+        ],
+        "desde": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48)"
+      },
+      "registroCampos": [
+        "dominadas",
+        "mil",
+        "parciales",
+        "nota"
+      ],
+      "fuentes": [
+        "plan.calendario[2026-10-10].sesion",
+        "plan.calendario[2026-10-10].objetivo",
+        "plan.calendario[2026-10-10].protocolo"
+      ]
+    },
+    "2026-10-12": {
+      "firma": "63358322391b",
+      "titulo": "8 × 200 m, rec. 2 min",
+      "numeros": {
+        "verde": [
+          {
+            "v": "8 × 200 m",
+            "l": "series",
+            "desde": "8 × 200 m, rec. 2 min"
+          },
+          {
+            "v": "0:41-0:43",
+            "l": "cada una",
+            "desde": "0:41-0:43"
+          },
+          {
+            "v": "2 min",
+            "l": "recuperación",
+            "desde": "rec. 2 min"
+          }
+        ],
+        "ambar": [
+          {
+            "v": "5 × 200",
+            "l": "mismo criterio",
+            "desde": "5 × 200 con el mismo criterio"
+          },
+          {
+            "v": "15-20 min",
+            "l": "techo 145",
+            "desde": "15-20 min con techo 145"
+          }
+        ],
+        "rojo": [
+          {
+            "v": "40 min",
+            "l": "rodaje · techo 145",
+            "desde": "40 min de rodaje con techo 145"
+          }
+        ]
+      },
+      "variantes": {
+        "base": "0:41-0:43 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44",
+        "ambar": "5 × 200 con el mismo criterio + 15-20 min con techo 145",
+        "rojo": "40 min de rodaje con techo 145",
+        "comun": "Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro"
+      },
+      "principal": {
+        "tipo": "series",
+        "n": 8,
+        "dist": 200,
+        "rec": "2 min",
+        "obj": "0:41-0:43",
+        "criterio": {
+          "ok": [
+            "0:41",
+            "0:43"
+          ],
+          "min": "0:40",
+          "corte": "0:44"
+        },
+        "desde": "las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44"
+      },
+      "condicion": {
+        "pregunta": "¿Qué toca hoy?",
+        "opciones": [
+          {
+            "id": "base",
+            "txt": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
+            "fuente": "sesion"
+          },
+          {
+            "id": "domingo",
+            "txt": "si el simulacro pasó al domingo 11, rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
+            "principal": {
+              "tipo": "rodaje",
+              "min": "40"
+            }
+          }
+        ],
+        "prellenar": {
+          "clave": "pc-sem-2026-10-10",
+          "campo": "banda",
+          "igual": "rojo",
+          "opcion": "domingo"
+        }
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-12].sesion",
+        "plan.calendario[2026-10-12].objetivo"
+      ]
+    },
+    "2026-10-13": {
+      "firma": "08f6ef6ef02b",
+      "titulo": "Arsenal: sesión completa",
+      "numeros": {
+        "verde": [
+          {
+            "v": "4 × 3",
+            "l": "lastradas · peso del 6",
+            "desde": "4 × 3 con el peso que salió del 6"
+          }
+        ],
+        "rojo": [
+          {
+            "v": "4 × 3",
+            "l": "lastradas · peso dominado",
+            "desde": "A en 4 × 3 con el peso dominado",
+            "fuente": "plan.reglas[dia-torcido].texto"
+          }
+        ]
+      },
+      "fuerza": {
+        "verde": {
+          "A": {
+            "series": 4,
+            "reps": 3,
+            "peso": "el peso que salió del 6"
+          },
+          "desde": "4 × 3 con el peso que salió del 6, sin perseguir cifra"
+        },
+        "ambar": {
+          "quitar": [
+            "E"
+          ],
+          "desde": "sin peso muerto rumano si al día siguiente hay calidad",
+          "fuente": "plan.reglas[dia-torcido].texto"
+        },
+        "rojo": {
+          "A": {
+            "series": 4,
+            "reps": 3,
+            "peso": "el peso dominado"
+          },
+          "solo": [
+            "A",
+            "G",
+            "H",
+            "I"
+          ],
+          "desde": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I",
+          "fuente": "plan.reglas[dia-torcido].texto"
+        }
+      },
+      "calidad": false,
+      "fuentes": [
+        "plan.calendario[2026-10-13].objetivo",
+        "plan.reglas[dia-torcido].texto"
+      ]
+    },
+    "2026-10-14": {
+      "firma": "e809c159d1ef",
+      "titulo": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
+      "numeros": {
+        "verde": [
+          {
+            "v": "2 × 600 m",
+            "l": "rec. 3 min",
+            "desde": "2 × 600 m (rec. 3 min)"
+          },
+          {
+            "v": "2:07 o 2:06",
+            "l": "cada 600",
+            "desde": "600 en 2:07, o 2:06"
+          },
+          {
+            "v": "2 × 200 m",
+            "l": "0:41-0:42 · rec. 2 min",
+            "desde": "2 × 200 m (rec. 2 min)"
+          }
+        ]
+      },
+      "principal": {
+        "tipo": "compuesta",
+        "partes": [
+          {
+            "n": 2,
+            "dist": 600,
+            "obj": "2:07",
+            "rec": "3 min",
+            "primer200": "0:42,5"
+          },
+          {
+            "n": 2,
+            "dist": 200,
+            "obj": "0:41-0:42",
+            "rec": "2 min"
+          }
+        ],
+        "desde": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)"
+      },
+      "condicion": {
+        "compartida": "bloqueC",
+        "base": {
+          "partes": [
+            {
+              "obj": "2:07"
+            },
+            null
+          ]
+        },
+        "si": {
+          "partes": [
+            {
+              "obj": "2:06"
+            },
+            null
+          ]
+        },
+        "desde": "600 en 2:07, o 2:06 si el 10 respaldó el bloque C a 3:30"
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-14].sesion",
+        "plan.calendario[2026-10-14].objetivo"
+      ]
+    },
+    "2026-10-15": {
+      "firma": "9d91c74989a4",
+      "condicion": {
+        "pregunta": "¿Qué toca hoy?",
+        "opciones": [
+          {
+            "id": "sin",
+            "txt": "3 intentos cronometrados como el BOE, el primero comparable",
+            "fuente": "sesion"
+          },
+          {
+            "id": "tecnico",
+            "txt": "bloque técnico solo si se acordó tras el 24-9",
+            "bloqueTecnico": true
+          }
+        ]
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-15].sesion",
+        "plan.calendario[2026-10-15].objetivo",
+        "plan.sesionesTipo.juevesCircuito.bloques[2]"
+      ]
+    },
+    "2026-10-17": {
+      "firma": "8eda71fb8f58",
+      "numeros": {
+        "verde": [
+          {
+            "v": "serie técnica",
+            "l": "válidas del 10-10 − 4, como mucho 8",
+            "desde": "serie técnica de (válidas del 10-10 − 4), como mucho 8"
+          },
+          {
+            "v": "45 min",
+            "l": "rodaje",
+            "desde": "45 min y NO 55"
+          },
+          {
+            "v": "techo 145",
+            "l": "primeros 10 min a 140",
+            "desde": "techo 145 · primeros 10 min a 140"
+          }
+        ]
+      },
+      "condicion": {
+        "calculo": {
+          "de": "pc-dom-2026-10-10",
+          "campo": "validas",
+          "resta": 4,
+          "max": 8,
+          "desde": "serie técnica de (válidas del 10-10 − 4), como mucho 8"
+        },
+        "pregunta": "¿Codo y hombro en 2/10 o menos las dos semanas anteriores?",
+        "opciones": [
+          {
+            "id": "completa",
+            "txt": "solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores"
+          },
+          {
+            "id": "solo",
+            "txt": "si no, solo la serie técnica"
+          }
+        ],
+        "prellenar": {
+          "ses": {
+            "desde": "2026-10-03",
+            "hasta": "2026-10-16",
+            "campos": [
+              "codo",
+              "hombro"
+            ],
+            "mayorQue": 2
+          },
+          "opcion": "solo",
+          "sinRegistros": null
+        }
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-17].objetivo"
+      ]
+    },
+    "2026-10-19": {
+      "firma": "099ea4c32a09",
+      "titulo": "4 × 400 m, rec. 2:30",
+      "principal": {
+        "tipo": "series",
+        "n": 4,
+        "dist": 400,
+        "rec": "2:30",
+        "obj": "1:25",
+        "primer200": "0:42,5-0:43",
+        "freno": "1:22",
+        "aviso": "3:30-3:40",
+        "desde": "4 × 400 m, rec. 2:30"
+      },
+      "condicion": {
+        "compartida": "bloqueC",
+        "base": {
+          "obj": "1:25"
+        },
+        "si": {
+          "obj": "1:24"
+        },
+        "desde": "1:25 con 2:30; 1:24 si el 10 respaldó el bloque C a 3:30"
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-19].sesion",
+        "plan.calendario[2026-10-19].objetivo",
+        "plan.ritmos[C].primer200"
+      ]
+    },
+    "2026-10-20": {
+      "firma": "45e8af34f092",
+      "titulo": "Arsenal: descarga · A, B, D y H",
+      "numeros": {
+        "verde": [
+          {
+            "v": "3 × 2",
+            "l": "lastradas · peso del 13-10",
+            "desde": "A en 3 × 2 con el peso del 13-10"
+          },
+          {
+            "v": "180 s",
+            "l": "descanso",
+            "desde": "180 s"
+          },
+          {
+            "v": "3 o más",
+            "l": "en reserva",
+            "desde": "3 o más en reserva"
+          }
+        ]
+      },
+      "fuerza": {
+        "verde": {
+          "A": {
+            "series": 3,
+            "reps": 2,
+            "peso": "el peso del 13-10",
+            "descanso": "180 s"
+          },
+          "B": {
+            "series": 2
+          },
+          "D": {
+            "series": 2
+          },
+          "H": {
+            "series": 2
+          },
+          "solo": [
+            "A",
+            "B",
+            "D",
+            "H"
+          ],
+          "desde": [
+            "A en 3 × 2 con el peso del 13-10, 180 s, 3 o más en reserva",
+            "B, D y H a dos rondas"
+          ]
+        }
+      },
+      "calidad": false,
+      "fuentes": [
+        "plan.calendario[2026-10-20].sesion",
+        "plan.calendario[2026-10-20].objetivo"
+      ]
+    },
+    "2026-10-21": {
+      "firma": "34a54dbe8b09",
+      "titulo": "600 m + 400 m, rec. 5 min",
+      "numeros": {
+        "verde": [
+          {
+            "v": "600 m + 400 m",
+            "l": "rec. 5 min",
+            "desde": "600 m + 400 m, rec. 5 min"
+          },
+          {
+            "v": "2:07 y 1:25",
+            "l": "o 2:06 y 1:24 si el 10 respaldó el 3:30",
+            "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 10 respaldó el 3:30"
+          },
+          {
+            "v": "0:42",
+            "l": "primer 200",
+            "desde": "primer 200 en 0:42"
+          }
+        ]
+      },
+      "principal": {
+        "tipo": "compuesta",
+        "partes": [
+          {
+            "dist": 600,
+            "obj": "2:07"
+          },
+          {
+            "dist": 400,
+            "obj": "1:25"
+          }
+        ],
+        "rec": "5 min",
+        "primer200": "0:42",
+        "desde": "600 m + 400 m, rec. 5 min"
+      },
+      "condicion": {
+        "compartida": "bloqueC",
+        "base": {
+          "partes": [
+            {
+              "obj": "2:07"
+            },
+            {
+              "obj": "1:25"
+            }
+          ]
+        },
+        "si": {
+          "partes": [
+            {
+              "obj": "2:06"
+            },
+            {
+              "obj": "1:24"
+            }
+          ]
+        },
+        "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 10 respaldó el 3:30"
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-21].sesion",
+        "plan.calendario[2026-10-21].objetivo"
+      ]
+    },
+    "2026-10-24": {
+      "firma": "d06ee7d2feb7",
+      "titulo": "Simulacro ligero o sesión «−2 días»",
+      "versiones": {
+        "28-30": "v2:Sáb 24",
+        "26-27": "v1:Sáb 24"
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-24].siPrueba28a30",
+        "plan.calendario[2026-10-24].siPrueba26o27"
+      ]
+    },
+    "v1:Mié 21": {
+      "firma": "ff4e8fd5bef7",
+      "titulo": "600 + 400 del bloque C",
+      "principal": {
+        "tipo": "compuesta",
+        "partes": [
+          {
+            "dist": 600,
+            "obj": "2:07"
+          },
+          {
+            "dist": 400,
+            "obj": "1:25"
+          }
+        ],
+        "desde": "600 + 400 del bloque C"
+      },
+      "condicion": {
+        "compartida": "bloqueC",
+        "base": {
+          "partes": [
+            {
+              "obj": "2:07"
+            },
+            {
+              "obj": "1:25"
+            }
+          ]
+        },
+        "si": {
+          "partes": [
+            {
+              "obj": "2:06"
+            },
+            {
+              "obj": "1:24"
+            }
+          ]
+        },
+        "desde": "2:06 + 1:24, o 2:07 + 1:25"
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[v1:Mié 21].sesion"
+      ]
+    },
+    "v1:Sáb 24": {
+      "firma": "706a49bc2833",
+      "pasos": [
+        {
+          "t": "15 min suaves",
+          "desde": "15 min suaves"
+        },
+        {
+          "t": "3 progresivos de 100 m",
+          "d": "con tope 3:20-3:50",
+          "desde": "3 progresivos de 100 m con tope 3:20-3:50"
+        },
+        {
+          "t": "3 × 4 dominadas muy suaves",
+          "desde": "3 × 4 dominadas muy suaves"
+        }
+      ],
+      "fuentes": [
+        "plan.calendario[v1:Sáb 24].sesion"
+      ]
+    },
+    "v2:Sáb 24": {
+      "firma": "cc244f4d9ca8",
+      "numeros": [
+        {
+          "v": "8",
+          "l": "serie técnica de dominadas en vídeo",
+          "desde": "serie técnica de 8 dominadas en vídeo"
+        },
+        {
+          "v": "600",
+          "l": "a 2:06 (o 2:07)",
+          "desde": "600 a 2:06 (o 2:07)"
+        }
+      ],
+      "pasos": [
+        {
+          "t": "Serie técnica de 8 dominadas en vídeo",
+          "d": "no un máximo",
+          "enlace": "#tecnica/dominada",
+          "desde": "serie técnica de 8 dominadas en vídeo (no un máximo)"
+        },
+        {
+          "t": "600 a 2:06 (o 2:07)",
+          "enlace": "#tecnica/mil",
+          "desde": "600 a 2:06 (o 2:07)"
+        }
+      ],
+      "principal": {
+        "tipo": "series",
+        "n": 1,
+        "dist": 600,
+        "obj": "2:07",
+        "desde": "600 a 2:06 (o 2:07)"
+      },
+      "condicion": {
+        "compartida": "bloqueC",
+        "base": {
+          "obj": "2:07"
+        },
+        "si": {
+          "obj": "2:06"
+        },
+        "desde": "600 a 2:06 (o 2:07)"
+      },
+      "fuentes": [
+        "plan.calendario[v2:Sáb 24].sesion"
+      ]
+    },
+    "v2:Lun 26": {
+      "firma": "46cad1ff59bc",
+      "titulo": "Última calidad o sesión «−2 días»",
+      "condicion": {
+        "pregunta": "¿Cuándo es la prueba?",
+        "opciones": [
+          {
+            "id": "29-30",
+            "txt": "Si la prueba es el 29 o el 30: última calidad, 3 × 200 a 0:42-0:43 con 3 min + 3 × 4 dominadas suaves"
+          },
+          {
+            "id": "28",
+            "txt": "Si es el 28: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 21"
+          }
+        ]
+      },
+      "fuentes": [
+        "plan.calendario[v2:Lun 26].sesion"
+      ]
+    },
+    "v2:−2 días": {
+      "firma": "67169bd15f22",
+      "pasos": [
+        {
+          "t": "15 min suaves",
+          "desde": "15 min suaves"
+        },
+        {
+          "t": "3 progresivos de 100 m por mecánica (20-23 s)",
+          "d": "con tope 3:20-3:50 en el reloj",
+          "desde": [
+            "3 progresivos de 100 m por mecánica (20-23 s)",
+            "con tope 3:20-3:50 en el reloj"
+          ]
+        }
+      ],
+      "fuentes": [
+        "plan.calendario[v2:−2 días].sesion"
+      ]
+    }
+  },
+  "condiciones": {
+    "bloqueC": {
+      "firma": "485e6e1d1838",
+      "firmaDe": [
+        "plan.calendario[2026-10-10]",
+        "plan.ritmos[C]"
+      ],
+      "pregunta": "¿El 10-10 respaldó el bloque C a 3:30?",
+      "guardar": "pc-bloqueC",
+      "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30)",
+      "condicion": "El escalón (segundo valor) solo si el 10 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor.",
+      "fuente": "plan.calendario[2026-10-10].decide · plan.ritmos[C].condicion"
+    }
+  },
+  "series": {},
+  "semaforo": {
+    "fuente": "plan.reglas[dia-torcido].texto",
+    "cortes": {
+      "verde": "6h30",
+      "rojo": "5h00"
+    },
+    "verde": "la sesión como está escrita; es la única que mide y decide escalones, subidas de lastre y escenarios",
+    "generico": {
+      "carrera": {
+        "ambar": "carrera con dos tercios de las repeticiones redondeando hacia abajo, al mismo ritmo y con la misma recuperación, más 15-20 min con techo 145",
+        "rojo": "rodaje de 30-40 min con techo 145 y los diez primeros a 140"
+      },
+      "fuerza": {
+        "ambar": "fuerza con el peso ya dominado, sin estrenar peso, sin peso muerto rumano si al día siguiente hay calidad, H siempre",
+        "rojo": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I (unos 45 min)"
+      },
+      "circuito": {
+        "ambar": "circuito con sus 3 intentos, con asterisco",
+        "rojo": "solo técnica, sin cronómetro"
+      }
+    },
+    "recortes": [
+      [
+        "6 × 400",
+        "4"
+      ],
+      [
+        "5 × 400",
+        "3"
+      ],
+      [
+        "4 × 400",
+        "2"
+      ],
+      [
+        "3 × 600",
+        "2"
+      ],
+      [
+        "8 × 200",
+        "5"
+      ],
+      [
+        "2 × 600 + 2 × 200",
+        "1 + 1"
+      ],
+      [
+        "kilómetro partido × 2",
+        "× 1"
+      ],
+      [
+        "600 + 400",
+        "solo el 600"
+      ]
+    ],
+    "extras": [
+      "si una repetición llega a 200 ppm antes de la última, esa es la última",
+      "Una calidad que cae en rojo no se mueve: se pierde",
+      "Ninguna sesión hecha en ámbar o en rojo mide nada"
+    ],
+    "racha": "RACHA: dos noches seguidas por debajo de 5h00 son 48 h en rojo",
+    "horario": "Si en la semana del 28-9 al 4-10 hay tres noches por debajo de 6 h, lo que se cambia es el horario, no las sesiones",
+    "cuello": {
+      "encima": "Síntomas por encima del cuello (mocos, garganta, estornudos): el día es ROJO como mínimo (se entrena suave, regla del cuello)",
+      "debajo": "Por debajo del cuello (pecho, tos, fiebre, dolor muscular): no se entrena",
+      "colorEncima": "rojo"
+    }
+  },
+  "decide": [
+    {
+      "fecha": "2026-10-01",
+      "firma": "4c34babe42be",
+      "firmaDe": [
+        "plan.calendario[2026-10-01]",
+        "plan.sesionesTipo.juevesCircuito.decisionSegunEl24"
+      ],
+      "titulo": "Jue 1-10 · circuito, primer intento cronometrado como el BOE",
+      "que": "primer intento",
+      "barras": [
+        {
+          "prueba": "cir",
+          "etiqueta": "Primer intento",
+          "tramos": [
+            {
+              "txt": "9,0-9,3",
+              "gte": "9,0",
+              "lte": "9,3",
+              "corto": "nada",
+              "efecto": "8 puntos. Nada cambia.",
+              "tono": "ok"
+            },
+            {
+              "txt": "9,4-9,7",
+              "gte": "9,4",
+              "lte": "9,7",
+              "corto": "jueves con técnica",
+              "efecto": "7 puntos. Jueves completo con técnica.",
+              "tono": "warn"
+            },
+            {
+              "txt": "9,8 o más",
+              "gte": "9,8",
+              "corto": "bloque técnico con el preparador y reescribir escenarios",
+              "efecto": "6 puntos o menos: hablar con el preparador de meter el bloque técnico los jueves 1 y 15 y reescribir los escenarios de nota.",
+              "tono": "bad"
+            }
+          ]
+        }
+      ],
+      "nota": "Anotar las horas de sueño de la noche anterior: con menos de 6h30, el intento va con asterisco",
+      "fuente": "plan.calendario[2026-10-01].objetivo · plan.sesionesTipo.juevesCircuito.decisionSegunEl24"
+    },
+    {
+      "fecha": "2026-10-10",
+      "firma": "30d2c665ef8a",
+      "firmaDe": [
+        "plan.calendario[2026-10-10]"
+      ],
+      "titulo": "Sáb 10-10 · simulacro",
+      "que": "dominadas al máximo en vídeo · 1.000 m en pista medida",
+      "barras": [
+        {
+          "prueba": "mil",
+          "etiqueta": "1.000 en distancia verificada",
+          "elimina": true,
+          "tramos": [
+            {
+              "txt": "≤ 3:33",
+              "lte": "3:33",
+              "corto": "C a 1:24 / 2:06",
+              "efecto": "C a 1:24 / 2:06 (ritmo 3:30)",
+              "condicion": "con los dos tramos centrales en 43",
+              "tono": "ok"
+            },
+            {
+              "txt": "3:34-3:36",
+              "gte": "3:34",
+              "lte": "3:36",
+              "corto": "C a 1:25 / 2:07",
+              "efecto": "C a 1:25 / 2:07",
+              "tono": "warn"
+            },
+            {
+              "txt": "Peor de 3:36",
+              "gt": "3:36",
+              "corto": "se revisan todos los ritmos",
+              "efecto": "se revisan todos los ritmos",
+              "tono": "bad"
+            }
+          ]
+        },
+        {
+          "prueba": "dom",
+          "etiqueta": "Dominadas válidas en vídeo",
+          "tramos": [
+            {
+              "txt": "12 o más",
+              "gte": "12",
+              "corto": "no se añade nada",
+              "efecto": "no se añade nada",
+              "tono": "ok"
+            },
+            {
+              "txt": "11 o menos válidas",
+              "lte": "11",
+              "corto": "asegurar 12 (técnica)",
+              "efecto": "asegurar 12 (técnica)",
+              "tono": "warn"
+            }
+          ],
+          "aparte": "diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica"
+        }
+      ],
+      "nota": "Noche del 9: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 11",
+      "fuente": "plan.calendario[2026-10-10].decide · plan.calendario[2026-10-10].semaforo"
+    }
+  ],
+  "avisos": [
+    {
+      "id": "circuito-sin-medir",
+      "titulo": "Todo esto descansa sobre un número que no existe",
+      "texto": "El circuito del 24 no se hizo: el número sale el jueves 1, primer intento como el BOE. Hasta entonces el escenario sigue en el aire. Si sale 9,0, el plan se relaja. Si sale 9,6, bajar el kilómetro pasa a ser obligatorio.",
+      "tono": "warn",
+      "donde": [
+        "hoy",
+        "marcas"
+      ],
+      "desde": "2026-09-28",
+      "hasta": "2026-10-01",
+      "fuente": "html:H11"
+    }
+  ],
+  "_pendientes": "Los pendientes viven en plan.pendientes desde el 29-9 (K16): web.json ya no los lleva.",
+  "decisiones": [
+    {
+      "fecha": "2026-09-23",
+      "texto": "MANTENER. No se sube la intensidad de ninguna sesión hasta Cádiz; se cambia la forma.",
+      "porQue": [
+        "Los ritmos A/B/C ya están anclados al 3:34 medido: la diferencia A→B es 0,8 s por 200, el ruido de la pista. No hay ninguna sesión de 400 repetidos en el historial: la viabilidad de 6 × 1:27 con 90 s se mide por primera vez el 28-9.",
+        "Ya va por encima de lo prescrito sin planificarlo: tres sesiones seguidas de progresivos a ritmo de 200, salida del control a 3:05 y carga anaeróbica de 233 a 289 en cuatro días.",
+        "Coste asimétrico: el punto extra del kilómetro exige 3:30 en pista homologada (+0,33 de media) y el escenario que aprueba no depende de él; el único exceso de carga medido (Teror) costó una sobrecarga y un control aplazado; un cintillo despierto tumba el circuito, la palanca barata."
+      ],
+      "fuente": "plan.revision23sep.veredicto"
+    },
+    {
+      "fecha": "2026-09-23",
+      "texto": "Bajar de 3:30 (4 puntos, tramo 3:25-3:30). Decisión de Daniel el 23-9-2026. · 0:42 / 1:24 / 2:06 / 2:48",
+      "fuente": "plan.objetivo.objetivoNuevo23sep.mil · plan.objetivo.objetivoNuevo23sep.comoSePersigue"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "El bloque B va a 1:26 / 2:08.",
+      "porQue": "El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11.",
+      "fuente": "plan.ritmos[B].condicion"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "El escalón (segundo valor) solo si el 10 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor.",
+      "fuente": "plan.ritmos[C].condicion"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
+      "fuente": "plan.calendario[2026-10-10].lugar"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "Sí a más barra, pero poca y sin lastre: dos sesiones cortas los sábados 3 y 17 de octubre antes del rodaje (unas 20 repeticiones lejos del fallo, con una serie técnica en vídeo).",
+      "porQue": "NO: segundo día completo de fuerza, segundo día con lastre, dominadas diarias o repartidas, excéntricas. No hay hueco que no pise la calidad del lunes o del miércoles, el circuito del jueves o los controles; subir el volumen de tirón a la vez que el lastre es la vía típica al dolor de codo y hombro (certeza moderada); con el volumen igualado, más días apenas cambian la fuerza (certeza moderada). El viernes se descarta: único descanso entre semana, tras el circuito de las 21:30 y una noche corta casi segura.",
+      "fuente": "plan.revision28sep.veredictoDominadas"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "Semáforo de la mañana con cortes 6h30 / 5h00 (convenciones del plan): verde, sesión entera y la única que mide; ámbar, dos tercios de las repeticiones o el peso dominado; rojo, rodaje o fuerza reducida; una calidad en rojo se pierde, no se mueve.",
+      "fuente": "plan.revision28sep.sueno"
+    },
+    {
+      "fecha": "2026-09-28",
+      "texto": "Test máximo solo el 10-10 y en la prueba. El 24-10 ya no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 24 ningún número cambia ninguna decisión).",
+      "fuente": "plan.protocoloDominadas.reglas[6]"
+    },
+    {
+      "fecha": "2026-09-29",
+      "texto": "Síntomas por encima del cuello (mocos, garganta, estornudos): el día es ROJO como mínimo (se entrena suave, regla del cuello).",
+      "fuente": "plan.reglas[dia-torcido].texto"
+    },
+    {
+      "fecha": "2026-09-29",
+      "texto": "Desde el 29-9 los entrenos van al Calendario del Mac (calendario «Calendario»), con aviso el MISMO día por la mañana (06:15 entre semana, 07:30 los sábados), nunca el día antes.",
+      "porQue": "El rodaje del 27-9 no se hizo porque no sabía que lo tenía.",
+      "fuente": "plan.contextoDelUsuario.calendarioMac"
+    }
+  ],
+  "controlesExtra": [
+    {
+      "fecha": "2026-08-31",
+      "titulo": "600 m a tope",
+      "hist": "carrera:2026-08-31",
+      "queCambio": "Sobre el 600 de 2:12. Era una sesión que el Paso 2 del propio plan prohíbe usar para reestimar: 4h09 de sueño, 7 h sin comer y tres días tras una doble extracción.",
+      "fuente": "historial.evolucionEstimacion[2026-08-31].motivo"
+    }
+  ],
+  "anula": {
+    "hitos": []
+  },
+  "hechosAntiguos": {
+    "_nota": "Líneas «Hecho» de las fichas DIADET del 11 al 27-9 cuyo día no tiene entrada en historial.json. Revisadas contra el corpus congelado (html:S14): las cinco fichas con línea «Hecho» (15, 16, 19, 22 y 23-9) tienen su sesión en historial.json, así que no queda ninguna."
+  },
+  "textos": {
+    "N4": "El circuito admite un segundo intento solo si el primero es nulo. En barra y en los 1.000 metros tienes un único intento.",
+    "N6": {
+      "mar": "Nada de altitud. Ávila estaba a 1.130 m; Cádiz está al nivel del mar, igual que tú.",
+      "clima": "Nada de frío. Costa atlántica a finales de octubre: templado y húmedo, muy parecido a Gran Canaria. Vas a competir en condiciones casi idénticas a las que entrenas."
+    },
+    "N7": "Superficie de tartán. Prohibido correr descalzo o con clavos.",
+    "E28": [
+      "En la app Garmin Connect: Más (los tres puntos abajo a la derecha) → Entreno y planificación → Sesiones de entrenamiento → Crear una sesión de entrenamiento → Carrera.",
+      "Ahí montas los pasos —calentamiento, intervalo, recuperación, repetición, enfriamiento— y a cada uno le pones duración (tiempo o distancia) y objetivo (ritmo o zona de frecuencia cardíaca). Al guardar, pulsa Enviar al dispositivo. Aparecerá en el reloj tras la siguiente sincronización.",
+      "En el reloj, para usarla: START → Carrera → UP → Entreno → Mis sesiones de entrenamiento, la eliges y START."
+    ],
+    "E31": [
+      "Para un día suelto, sin pasar por el móvil: START → Carrera → UP → Entreno → Intervalos → Repeticiones estructuradas → START → Editar.",
+      "Intervalo: tipo distancia o tiempo, y su duración.",
+      "Descanso: igual.",
+      "Repetir: el número de veces.",
+      "Calentamiento y Enfriamiento: actívalos y quedan abiertos, los cierras tú con el botón.",
+      "El reloj guarda solo una sesión de este tipo: al crear otra, se sobrescribe. Para tener varias guardadas, hay que hacerlas en Connect."
+    ],
+    "E32": [
+      "Desde la pantalla de la actividad y sin arrancar: UP → Ajustes de la actividad → Alertas.",
+      "Rodajes: alerta de frecuencia cardíaca con máximo 145 y sin mínimo. Te avisa solo cuando te pasas, que es lo único que importa esos días.",
+      "No pongas alerta de ritmo en los rodajes: manda el pulso, y una alerta de ritmo te empuja justo a lo contrario.",
+      "Si la alerta no vibra: comprueba que el reloj no esté en No molestar, y mira UP → Sistema → Sonido y vibración, que el tono y la vibración son dos ajustes separados."
+    ],
+    "E33": [
+      "Comprueba que no estás doblando plantilla. Saca la plantilla original de la Magic Speed y deja dentro solo la de ICOT. Si las tienes apiladas, el pie va alto y apretado, y eso explicaría que el izquierdo se te meta hacia dentro.",
+      "Enséñaselo a ICOT o al fisio. Llevas la zapatilla con la plantilla puesta y que te la miren. Muchas veces se recorta un par de milímetros y asienta. Es una consulta corta y tu cintillo es el de la rodilla izquierda, el mismo lado.",
+      "Las elevaciones de talón pasan a ser innegociables. Con pies planos, antecedente de fascitis y una sola zapatilla que además es de placa, ese ejercicio es tu protección principal. Los sábados, 3 × 15 por pierna, con pausa de un segundo abajo y otro arriba. Sin excusas.",
+      "Vigila la señal de alarma. Dolor en el talón al dar los primeros pasos por la mañana. Si aparece, me lo dices el mismo día y bajamos volumen antes de que vaya a más.",
+      "Si en algún momento se puede, la más barata que cumple es una de rodaje de marca propia de Decathlon, sobre 50–60 €. No hace falta gastar 150."
+    ],
+    "E34": [
+      {
+        "cosa": "Cronómetro para el circuito",
+        "texto": "Resuelto: lo tiene el instructor"
+      },
+      {
+        "cosa": "Cadencia en los archivos",
+        "texto": "El TCX la recorta. En Garmin Connect: abre la actividad → engranaje → Exportar original, que te da el .fit con cadencia, longitud de zancada, oscilación vertical y tiempo de contacto"
+      }
+    ],
+    "G9": "Del 31 de agosto al 19 de septiembre cambiaron a la vez la distancia, la pista, la hora, el sueño y la comida. Por eso la mejora del 600 (2:12 → 2:08) no se puede atribuir solo a la forma. A partir del 10 de octubre se fijan tres cosas: misma hora, misma pista con el perímetro ya medido, y vídeo de las dominadas.",
+    "R6": "Creatina: 5 g al día, y que no se te olvide. La dosis es correcta y el momento da igual: funciona por saturación del músculo, no por timing. Lo que importa es la constancia, porque los olvidos frecuentes impiden llegar a la saturación y sin saturación no hay efecto. Ánclala a algo diario: échala directamente en el queso batido de la merienda, entrenes o no. Retiene agua dentro del músculo, entre uno y dos kilos, que en tus tres pruebas es peso que subes a la barra y arrastras. Pero te da fuerza en las dominadas, que es donde más puntos tienes: el balance te sale a favor.",
+    "R7": {
+      "titulo": "El resto, por lo que realmente aporta",
+      "filas": [
+        [
+          "Magnesio quelado",
+          "El más justificado en tu caso. Tómalo por la noche: tiene algo de respaldo para el descanso, y eso ahora es tu palanca principal"
+        ],
+        [
+          "Vitamina D3",
+          "Razonable. Sol te sobra, pero trabajas bajo techo. Riesgo cero, coste bajo"
+        ],
+        [
+          "Omega 3",
+          "Razonable, con evidencia modesta. No espera milagros pero tampoco estorba"
+        ],
+        [
+          "Vitamina B12",
+          "Probablemente innecesario. Tu dieta lleva carne, pescado, huevo y lácteos a diario, y la B12 solo sirve si hay déficit"
+        ],
+        [
+          "Coenzima Q10",
+          "El más flojo. En un atleta joven y sano la evidencia de rendimiento es escasa. Si recortas algo, empieza por aquí"
+        ]
+      ]
+    },
+    "R8": "En estas oposiciones puede haber control, y los suplementos son la vía habitual de positivos por contaminación cruzada. Ninguno de los que tomas contiene nada prohibido, pero comprueba que los productos de HSN lleven certificación externa tipo Informed Sport o NSF. Es mirar la etiqueta. Nada de lo que tomas es tu factor limitante. Tus dos limitantes son la base aeróbica y el sueño, y los dos se arreglan corriendo despacio y acostándote pronto, que sale gratis.",
+    "S10garmin": "En Garmin es «Sentadilla con barra», NO «Sentadilla frontal»: esa lleva la barra delante y es otro ejercicio",
+    "diag19": {
+      "salida": "Saliste en 0:40 con un reparto que pedía 0:45. Pero ese reparto estaba calculado sobre una estimación de 3:52 que falló por 14 a 22 segundos. Corriste a tu ritmo real: el número equivocado era el del plan.",
+      "debil": "El estado no lo explica. El sueño previo fue el mejor de la serie: 7h59, VFC de 66 ms y pulso en reposo de 45. Lo que sí está medido: al mismo ritmo de trote ibas a 157–161 ppm frente a 143 el día 16. Son 14 a 18 pulsaciones más. Corriste a las 13:01 y el sensor del reloj marcó 3 °C más que en el rodaje nocturno del día 16. Lo que no puedo afirmar: la temperatura que hacía. Ese sensor es de muñeca, no un termómetro. La hora y el calor son la causa más probable, pero es una inferencia, no una medición.",
+      "recuperacion": "Tras cruzar la meta: −25 pulsaciones en el primer minuto y −63 en tres minutos. Eso no es el perfil de alguien fundido.",
+      "tramos": "El tramo 600–800 tuvo la potencia más baja, el contacto con el suelo más largo y la cadencia más baja. Pero tardó lo mismo que el anterior: 46,0 s. Se te cayó la sensación, no el ritmo. Y el último 200 lo hiciste en 41,0 s con la potencia y la cadencia más altas del día: quedaba reserva."
+    }
+  },
+  "videos": {
+    "_nota": "Consultas de búsqueda de YouTube de FICHAS (html:S16), nunca vídeos concretos. La consulta de glúteo medio de la web antigua («abduccion monster walk») no se conserva: esos ejercicios ya no son los del bloque H; ese ejercicio usa «<nombre> técnica».",
+    "dominadas-lastradas": "dominadas tecnica correcta agarre pronado",
+    "jalon-pecho": "jalon al pecho tecnica correcta espalda",
+    "remo-barra": "remo con barra tecnica correcta bisagra cadera",
+    "sentadilla": "sentadilla y peso muerto rumano tecnica correcta",
+    "peso-muerto-rumano": "sentadilla y peso muerto rumano tecnica correcta",
+    "elevacion-talon": "elevacion de talon a una pierna soleo tecnica",
+    "tecnica-carrera": "tecnica de carrera skipping talones al gluteo zancada",
+    "calentamiento": "calentamiento antes de correr series movilidad dinamica"
+  },
+  "recortes": [
+    {
+      "fuente": "plan.reglas[medir-distancias].texto",
+      "quitado": "La pista del parque tiene rectas largas y curvas cortas, sin marcas fiables.",
+      "motivo": "pista de Arucas desde el 28-9"
+    },
+    {
+      "fuente": "plan.lesiones.cintillo",
+      "quitado": ": el umbral de los miércoles es EN umbral, no por encima",
+      "motivo": "el miércoles es calidad 2 y no hay sesiones de umbral hasta Cádiz (K15)"
+    },
+    {
+      "fuente": "html:R6",
+      "quitado": ", y esos kilos ya están dentro de los 67,4",
+      "motivo": "serie Tanita del dietista, 66,5 kg"
+    },
+    {
+      "fuente": "html:R7",
+      "quitado": "entrenas de noche y ",
+      "motivo": "sesiones a las 18:00"
+    },
+    {
+      "fuente": "html:R9",
+      "quitado": "Cinco minutos.",
+      "motivo": "H son 3 rondas (mínimo 2); el texto del cintillo sale de plan.lesiones.cintillo"
+    },
+    {
+      "fuente": "html:G9",
+      "quitado": "Solo así el 24 de octubre dirá algo sobre la forma y no sobre las condiciones.",
+      "motivo": "el 24-10 ya no lleva máximo ni 1.000 a tope (protocoloDominadas.reglas[6])"
+    }
+  ],
+  "pendientesEntrenador": []
+}

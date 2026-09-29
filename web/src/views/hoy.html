@@ -1,0 +1,31 @@
+<!-- M2 · Hoy (§5.1). El contenido se pinta con src/js/20_hoy.js a partir de PC.cal y PC.D.derivados.
+     Orden fijo a cualquier hora: H-0 cabecera y camino · H-1 tarjeta del día · H-2 lo que decide · H-3 esta noche · H-4 pendientes. -->
+<header id="hoy-cab" class="hoy-cab" data-inv="C2,C3,H2,H8">
+  <div class="hoy-f1">
+    <div class="hoy-tit"><h1 data-qa-clave="fecha" data-inv="S1"></h1><small class="hoy-semt"></small></div>
+    <a class="hoy-notalink" href="#marcas" aria-label="Tu nota en Marcas"><span class="chip nota" data-pc="notaChip"></span></a>
+  </div>
+  <div class="hoy-camino"></div>
+  <div class="week" role="group" aria-label="Semana"></div>
+  <div class="hoy-semnav">
+    <button type="button" class="icon-btn hoy-prev" aria-label="Semana anterior"><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></button>
+    <details class="hoy-leyenda"><summary>Qué significa cada color</summary>
+      <ul class="hoy-ley">
+        <li><i class="hoy-sw today"></i>hoy</li><li><i class="hoy-sw done"></i>hecho</li><li><i class="hoy-sw nomide"></i>no mide</li>
+        <li><i class="hoy-sw miss"></i>no hecho</li><li><i class="hoy-sw noreg"></i>sin registrar</li><li><i class="hoy-sw rest"></i>descanso</li>
+        <li><i class="hoy-sw key"></i>clave</li>
+      </ul>
+    </details>
+    <button type="button" class="icon-btn hoy-next" aria-label="Semana siguiente"><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></button>
+  </div>
+</header>
+<div class="hoy-rej">
+  <div class="hoy-c1">
+    <section id="hoy-ses" aria-label="Sesión del día" data-inv="H2,H3,H4,H5,R12,E1,E2,E5,E7,E8,E9,E10,S2,S4,S5,S6,S7,S10,S13,S14,S15"></section>
+  </div>
+  <div class="hoy-c2">
+    <section id="hoy-decide" aria-label="Lo que decide lo siguiente" data-inv="H11"></section>
+    <section id="hoy-noche" aria-label="Esta noche" data-inv="R1"></section>
+    <section id="hoy-pend" aria-label="Pendientes" data-inv="H16"></section>
+  </div>
+</div>

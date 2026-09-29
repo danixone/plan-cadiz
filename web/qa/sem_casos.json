@@ -1,0 +1,182 @@
+{
+ "_nota": "Casos de PC.sem.calcular(entrada) → salida (M2 · §6.2 T1 · §10.5). Entrada: {fecha, banda:\"verde\"|\"ambar\"|\"rojo\", min, reloj:\"normal\"|\"vfc\"|\"sobrecarga\", sintomas:\"ninguno\"|\"encima\"|\"debajo\", codo:0-10, talon:\"nada\"|\"duele\", cintillo:\"nada\"|\"noto\"|\"molesta\", agujetas:0-10, ayerRojo:bool}; lo que falta vale su valor por defecto. Salida: {color:\"verde\"|\"ambar\"|\"rojo\"|\"parada\", mide:bool, racha:bool, motivos:[texto], avisos:[texto]}. Una clave terminada en «~» comprueba que JSON.stringify(salida[clave]) contiene el texto. Cambio del 29-9 (plan.json, K10 resuelto): síntomas por encima del cuello = ROJO como mínimo; por debajo, no se entrena.",
+ "casos": [
+  {
+   "nombre": "lámpara verde → verde (mide)",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde"
+   },
+   "esperado": {
+    "color": "verde",
+    "mide": true
+   }
+  },
+  {
+   "nombre": "lámpara ámbar → ámbar (no mide)",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "ambar"
+   },
+   "esperado": {
+    "color": "ambar",
+    "mide": false
+   }
+  },
+  {
+   "nombre": "lámpara roja → rojo",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "rojo"
+   },
+   "esperado": {
+    "color": "rojo",
+    "mide": false
+   }
+  },
+  {
+   "nombre": "390 min → verde",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "min": 390
+   },
+   "esperado": {
+    "color": "verde"
+   }
+  },
+  {
+   "nombre": "389 min → ámbar",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "min": 389
+   },
+   "esperado": {
+    "color": "ambar"
+   }
+  },
+  {
+   "nombre": "300 min → ámbar",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "min": 300
+   },
+   "esperado": {
+    "color": "ambar"
+   }
+  },
+  {
+   "nombre": "299 min → rojo",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "min": 299
+   },
+   "esperado": {
+    "color": "rojo"
+   }
+  },
+  {
+   "nombre": "verde + VFC de 7 días desequilibrada o baja → rojo",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "reloj": "vfc"
+   },
+   "esperado": {
+    "color": "rojo"
+   }
+  },
+  {
+   "nombre": "verde + sobrecarga → rojo",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "reloj": "sobrecarga"
+   },
+   "esperado": {
+    "color": "rojo"
+   }
+  },
+  {
+   "nombre": "rojo con ayer rojo → rojo con racha (48 h)",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "rojo",
+    "ayerRojo": true
+   },
+   "esperado": {
+    "color": "rojo",
+    "racha": true
+   }
+  },
+  {
+   "nombre": "síntomas por debajo del cuello → parada (no se entrena)",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "sintomas": "debajo"
+   },
+   "esperado": {
+    "color": "parada",
+    "mide": false
+   }
+  },
+  {
+   "nombre": "síntomas por encima del cuello → rojo como mínimo (K10 resuelto el 29-9) y aviso",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "sintomas": "encima"
+   },
+   "esperado": {
+    "color": "rojo",
+    "avisos~": "encima del cuello"
+   }
+  },
+  {
+   "nombre": "codo 3 → aviso «3-4/10»",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "codo": 3
+   },
+   "esperado": {
+    "color": "verde",
+    "avisos~": "3-4/10"
+   }
+  },
+  {
+   "nombre": "codo 5 → aviso «5/10 o más»",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "codo": 5
+   },
+   "esperado": {
+    "color": "verde",
+    "avisos~": "5/10 o más"
+   }
+  },
+  {
+   "nombre": "cintillo «molesta al correr» → aviso con la regla de parada",
+   "entrada": {
+    "fecha": "2026-10-05",
+    "banda": "verde",
+    "cintillo": "molesta"
+   },
+   "esperado": {
+    "avisos~": "me molesta al correr"
+   }
+  },
+  {
+   "nombre": "agujetas 3 el 30-9 con verde → ámbar (objetivo del día)",
+   "entrada": {
+    "fecha": "2026-09-30",
+    "banda": "verde",
+    "agujetas": 3
+   },
+   "esperado": {
+    "color": "ambar"
+   }
+  }
+ ]
+}

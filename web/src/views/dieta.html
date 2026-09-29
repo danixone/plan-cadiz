@@ -1,0 +1,43 @@
+<!-- Vista Dieta (M7 · §5.5). La cabecera .vh con la línea D1 está en el armazón (src/20_shell.html).
+     Los identificadores que usa el código de la app se conservan (§9.1): m-kcal, m-hc, m-pr, m-gr, m-bars,
+     lg-dia, lg-modo, btn-reset, reg-box, pdf-opts, swap y dieta-body. -->
+<div class="aviso info" id="di-entreno" data-inv="R3,R5,D14" role="note" hidden>
+  <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+  <div><b>Alrededor del entreno</b> <span class="di-ent-t"></span><small class="di-ent-n" hidden></small></div>
+</div>
+
+<div class="di-calidad" id="di-calidad" data-inv="R4,D14" hidden>
+  <button type="button" class="chip pri" aria-pressed="false">Hoy hay series: gofio de la merienda a 40 g</button>
+</div>
+
+<div class="di-app" id="di-app" data-inv="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12">
+  <!-- .di-lado agrupa panel, días, modos, registro e intercambio: en escritorio es la columna fija de la izquierda -->
+  <div class="di-lado">
+  <div class="di-macros" role="group" aria-label="Macros del día">
+    <div class="di-m4">
+      <div><span class="di-ml">Calorías</span><span class="num di-mv" id="m-kcal">—</span></div>
+      <div><span class="di-ml">Hidratos</span><span class="num di-mv di-hc" id="m-hc">—</span></div>
+      <div><span class="di-ml">Proteína</span><span class="num di-mv di-pr" id="m-pr">—</span></div>
+      <div><span class="di-ml">Grasa</span><span class="num di-mv di-gr" id="m-gr">—</span></div>
+    </div>
+    <div id="m-bars"></div>
+  </div>
+
+  <div class="legend" id="lg-dia" role="group" aria-label="Día de la pauta"></div>
+  <div class="di-modos">
+    <div class="legend" id="lg-modo" role="group" aria-label="Modo del día"></div>
+    <button type="button" id="btn-reset">Restablecer cantidades</button>
+  </div>
+
+  <div class="di-fila">
+    <div class="di-col">
+      <div class="reg" id="reg-box"></div>
+      <div class="pdfopts" id="pdf-opts"></div>
+    </div>
+    <div class="swap" id="swap"></div>
+  </div>
+  </div>
+  <div id="dieta-body"></div>
+</div>
+
+<p class="di-pie" id="di-pie" data-inv="D13">Valores aproximados. Pesos en crudo. La pauta es de tu nutricionista: si quieres cambiar algo, háblalo con ella.</p>

@@ -2,3 +2,8 @@
 node_modules/
 *.zip
 archivos-garmin/
+web/out/
+web/capturas/
+web/qa/resultado.json
+__pycache__/
+web/herramientas/centinelas.local.json

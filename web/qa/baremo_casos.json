@@ -1,0 +1,722 @@
+{
+ "_nota": "Casos de PC.baremo (M0 · §10.5). Las cifras salen del baremo del BOE-A-2026-15055 recogido en plan.json, de escenariosNota y de sensibilidad. Formato: {fn, args, esperado} o {fn, args, contiene}. Los pasa qa/marco.html con casos=1.",
+ "casos": [
+  {
+   "nombre": "1.000 3:30 → 4",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    210
+   ],
+   "esperado": 4
+  },
+  {
+   "nombre": "1.000 3:31 → 3",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    211
+   ],
+   "esperado": 3
+  },
+  {
+   "nombre": "1.000 3:48 → 1",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    228
+   ],
+   "esperado": 1
+  },
+  {
+   "nombre": "1.000 3:49 → 0",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    229
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "1.000 3:34 → 3",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    214
+   ],
+   "esperado": 3
+  },
+  {
+   "nombre": "1.000 2:54 → 10",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    174
+   ],
+   "esperado": 10
+  },
+  {
+   "nombre": "1.000 2:55 → 9",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    175
+   ],
+   "esperado": 9
+  },
+  {
+   "nombre": "1.000 3:36 → 3",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    216
+   ],
+   "esperado": 3
+  },
+  {
+   "nombre": "1.000 3:37 → 2",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    217
+   ],
+   "esperado": 2
+  },
+  {
+   "nombre": "1.000 3:30,4 → 3 (sin redondear)",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    210.4
+   ],
+   "esperado": 3
+  },
+  {
+   "nombre": "1.000 3:48,5 → 0 (sin redondear)",
+   "fn": "baremo.pts",
+   "args": [
+    "mil",
+    228.5
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "dominadas 4 → 0",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    4
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "dominadas 5 → 1",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    5
+   ],
+   "esperado": 1
+  },
+  {
+   "nombre": "dominadas 11 → 5",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    11
+   ],
+   "esperado": 5
+  },
+  {
+   "nombre": "dominadas 12 → 6",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    12
+   ],
+   "esperado": 6
+  },
+  {
+   "nombre": "dominadas 13 → 6",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    13
+   ],
+   "esperado": 6
+  },
+  {
+   "nombre": "dominadas 17 → 10",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    17
+   ],
+   "esperado": 10
+  },
+  {
+   "nombre": "dominadas 0 → 0",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    0
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "dominadas 7 → 3",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    7
+   ],
+   "esperado": 3
+  },
+  {
+   "nombre": "dominadas 8 → 4",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    8
+   ],
+   "esperado": 4
+  },
+  {
+   "nombre": "dominadas 9 → 4",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    9
+   ],
+   "esperado": 4
+  },
+  {
+   "nombre": "dominadas 10 → 5",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    10
+   ],
+   "esperado": 5
+  },
+  {
+   "nombre": "dominadas 14 → 7",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    14
+   ],
+   "esperado": 7
+  },
+  {
+   "nombre": "dominadas 15 → 8",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    15
+   ],
+   "esperado": 8
+  },
+  {
+   "nombre": "dominadas 16 → 9",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    16
+   ],
+   "esperado": 9
+  },
+  {
+   "nombre": "dominadas 22 → 10",
+   "fn": "baremo.pts",
+   "args": [
+    "dom",
+    22
+   ],
+   "esperado": 10
+  },
+  {
+   "nombre": "circuito 8,2 → 10",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    8.2
+   ],
+   "esperado": 10
+  },
+  {
+   "nombre": "circuito 9,3 → 8",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.3
+   ],
+   "esperado": 8
+  },
+  {
+   "nombre": "circuito 9,4 → 7",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.4
+   ],
+   "esperado": 7
+  },
+  {
+   "nombre": "circuito 11,6 → 1",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    11.6
+   ],
+   "esperado": 1
+  },
+  {
+   "nombre": "circuito 11,7 → 0",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    11.7
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "circuito 9,9 → 6",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.9
+   ],
+   "esperado": 6
+  },
+  {
+   "nombre": "circuito 9,7 → 7",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.7
+   ],
+   "esperado": 7
+  },
+  {
+   "nombre": "circuito 10,1 → 6",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    10.1
+   ],
+   "esperado": 6
+  },
+  {
+   "nombre": "circuito 10,2 → 5",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    10.2
+   ],
+   "esperado": 5
+  },
+  {
+   "nombre": "circuito 9,0 → 8",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.0
+   ],
+   "esperado": 8
+  },
+  {
+   "nombre": "circuito 8,3 → 9",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    8.3
+   ],
+   "esperado": 9
+  },
+  {
+   "nombre": "circuito 12,5 → 0",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    12.5
+   ],
+   "esperado": 0
+  },
+  {
+   "nombre": "circuito 9,35 → 7 (sin redondear)",
+   "fn": "baremo.pts",
+   "args": [
+    "cir",
+    9.35
+   ],
+   "esperado": 7
+  },
+  {
+   "nombre": "corte circuito para 6 pts = 10,1 s (3:34 y 12 dominadas)",
+   "fn": "baremo.corte",
+   "args": [
+    "cir",
+    6
+   ],
+   "esperado": 10.1
+  },
+  {
+   "nombre": "corte circuito para 7 pts = 9,7 s (marcas de hoy: 3:34 y 11)",
+   "fn": "baremo.corte",
+   "args": [
+    "cir",
+    7
+   ],
+   "esperado": 9.7
+  },
+  {
+   "nombre": "corte dominadas para 6 pts = 12",
+   "fn": "baremo.corte",
+   "args": [
+    "dom",
+    6
+   ],
+   "esperado": 12
+  },
+  {
+   "nombre": "corte 1.000 para 4 pts = 3:30",
+   "fn": "baremo.corte",
+   "args": [
+    "mil",
+    4
+   ],
+   "esperado": 210
+  },
+  {
+   "nombre": "corte con más de 10 pts necesarios = null",
+   "fn": "baremo.corte",
+   "args": [
+    "cir",
+    11
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "corte con 1 o menos = peor marca que no elimina (3:48)",
+   "fn": "baremo.corte",
+   "args": [
+    "mil",
+    0
+   ],
+   "esperado": 228
+  },
+  {
+   "nombre": "siguiente punto circuito 9,9 → 9,7 (−0,2)",
+   "fn": "baremo.siguiente",
+   "args": [
+    "cir",
+    9.9
+   ],
+   "contiene": {
+    "pts": 7,
+    "objetivo": 9.7,
+    "diferencia": -0.2
+   }
+  },
+  {
+   "nombre": "siguiente punto dominadas 11 → 12 (+1)",
+   "fn": "baremo.siguiente",
+   "args": [
+    "dom",
+    11
+   ],
+   "contiene": {
+    "pts": 6,
+    "objetivo": 12,
+    "diferencia": 1
+   }
+  },
+  {
+   "nombre": "siguiente punto 1.000 3:34 → 3:30 (−4 s)",
+   "fn": "baremo.siguiente",
+   "args": [
+    "mil",
+    214
+   ],
+   "contiene": {
+    "pts": 4,
+    "objetivo": 210,
+    "diferencia": -4
+   }
+  },
+  {
+   "nombre": "siguiente punto con 10 = null",
+   "fn": "baremo.siguiente",
+   "args": [
+    "dom",
+    17
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "resultado 3+5+6 = 4,67 NO APTO",
+   "fn": "baremo.resultado",
+   "args": [
+    [
+     3,
+     5,
+     6
+    ]
+   ],
+   "contiene": {
+    "media": 4.67,
+    "txt": "NO APTO"
+   }
+  },
+  {
+   "nombre": "resultado 5+5+5 = 5,00 APTO",
+   "fn": "baremo.resultado",
+   "args": [
+    [
+     5,
+     5,
+     5
+    ]
+   ],
+   "contiene": {
+    "media": 5,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "resultado con un cero = ELIMINADO",
+   "fn": "baremo.resultado",
+   "args": [
+    [
+     10,
+     0,
+     10
+    ]
+   ],
+   "contiene": {
+    "txt": "ELIMINADO"
+   }
+  },
+  {
+   "nombre": "escenario «Marcas de hoy»",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 11,
+     "cir": 9.9
+    }
+   ],
+   "contiene": {
+    "pts": {
+     "mil": 3,
+     "dom": 5,
+     "cir": 6
+    },
+    "media": 4.67,
+    "txt": "NO APTO"
+   }
+  },
+  {
+   "nombre": "escenario «Realista (el suyo, 19-9-2026)»",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "pts": {
+     "mil": 3,
+     "dom": 6,
+     "cir": 8
+    },
+    "media": 5.67,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "escenario «Objetivo nuevo (23-9): bajar de 3:30»",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 209,
+     "dom": 12,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "pts": {
+     "mil": 4,
+     "dom": 6,
+     "cir": 8
+    },
+    "media": 6.0,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "escenario «Con el kilómetro bajado»",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 208,
+     "dom": 12,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "pts": {
+     "mil": 4,
+     "dom": 6,
+     "cir": 8
+    },
+    "media": 6.0,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "escenario «Objetivo»",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 210,
+     "dom": 15,
+     "cir": 9.3
+    }
+   ],
+   "contiene": {
+    "pts": {
+     "mil": 4,
+     "dom": 8,
+     "cir": 8
+    },
+    "media": 6.67,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad circuito 9,0",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "media": 5.67,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad circuito 9,4",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 9.4
+    }
+   ],
+   "contiene": {
+    "media": 5.33,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad circuito 9,8",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 9.8
+    }
+   ],
+   "contiene": {
+    "media": 5.0,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad circuito 10,2",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 10.2
+    }
+   ],
+   "contiene": {
+    "media": 4.67,
+    "txt": "NO APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad dominadas 11",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 11,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "media": 5.33,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad dominadas 12",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 12,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "media": 5.67,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad dominadas 14",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 14,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "media": 6.0,
+    "txt": "APTO"
+   }
+  },
+  {
+   "nombre": "sensibilidad dominadas 15",
+   "fn": "baremo.nota",
+   "args": [
+    {
+     "mil": 214,
+     "dom": 15,
+     "cir": 9.0
+    }
+   ],
+   "contiene": {
+    "media": 6.33,
+    "txt": "APTO"
+   }
+  }
+ ]
+}

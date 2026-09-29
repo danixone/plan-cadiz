@@ -1,0 +1,528 @@
+{
+ "_nota": "Casos de PC.fmt (parseT y formatos), PC.dias y PC.cal (M0 · §4.8, §10.3). Los «expr» se evalúan dentro de la página y requieren hoy=2026-09-29 (marco.html lo pone por defecto con casos=1). Los casos con \"m1\": true dependen de los datos de M1 (web.json y derivados) y se saltan al construir con la muestra.",
+ "requiere": {
+  "hoy": "2026-09-29"
+ },
+ "casos": [
+  {
+   "nombre": "parseT «87,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "87,5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «87.5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "87.5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «1:27»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1:27"
+   ],
+   "esperado": 87
+  },
+  {
+   "nombre": "parseT «1:27,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1:27,5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «1.27.5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1.27.5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «1,27,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1,27,5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «127,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "127,5"
+   ],
+   "esperado": 87.5
+  },
+  {
+   "nombre": "parseT «0:43,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "0:43,5"
+   ],
+   "esperado": 43.5
+  },
+  {
+   "nombre": "parseT «9,4»",
+   "fn": "fmt.parseT",
+   "args": [
+    "9,4"
+   ],
+   "esperado": 9.4
+  },
+  {
+   "nombre": "parseT «334»",
+   "fn": "fmt.parseT",
+   "args": [
+    "334"
+   ],
+   "esperado": 214
+  },
+  {
+   "nombre": "parseT «3:34»",
+   "fn": "fmt.parseT",
+   "args": [
+    "3:34"
+   ],
+   "esperado": 214
+  },
+  {
+   "nombre": "parseT « 3:34 »",
+   "fn": "fmt.parseT",
+   "args": [
+    " 3:34 "
+   ],
+   "esperado": 214
+  },
+  {
+   "nombre": "parseT «43,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "43,5"
+   ],
+   "esperado": 43.5
+  },
+  {
+   "nombre": "parseT «2:06»",
+   "fn": "fmt.parseT",
+   "args": [
+    "2:06"
+   ],
+   "esperado": 126
+  },
+  {
+   "nombre": "parseT «206»",
+   "fn": "fmt.parseT",
+   "args": [
+    "206"
+   ],
+   "esperado": 126
+  },
+  {
+   "nombre": "parseT «12,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "12,5"
+   ],
+   "esperado": 12.5
+  },
+  {
+   "nombre": "parseT «9»",
+   "fn": "fmt.parseT",
+   "args": [
+    "9"
+   ],
+   "esperado": 9
+  },
+  {
+   "nombre": "parseT «3:29,5»",
+   "fn": "fmt.parseT",
+   "args": [
+    "3:29,5"
+   ],
+   "esperado": 209.5
+  },
+  {
+   "nombre": "parseT «»",
+   "fn": "fmt.parseT",
+   "args": [
+    ""
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "parseT «abc»",
+   "fn": "fmt.parseT",
+   "args": [
+    "abc"
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "parseT «1:75»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1:75"
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "parseT «1:2:3»",
+   "fn": "fmt.parseT",
+   "args": [
+    "1:2:3"
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "parseT «175»",
+   "fn": "fmt.parseT",
+   "args": [
+    "175"
+   ],
+   "esperado": null
+  },
+  {
+   "nombre": "fmt.t [214]",
+   "fn": "fmt.t",
+   "args": [
+    214
+   ],
+   "esperado": "3:34"
+  },
+  {
+   "nombre": "fmt.t [86.9, 1]",
+   "fn": "fmt.t",
+   "args": [
+    86.9,
+    1
+   ],
+   "esperado": "1:26,9"
+  },
+  {
+   "nombre": "fmt.t [43.5, 1]",
+   "fn": "fmt.t",
+   "args": [
+    43.5,
+    1
+   ],
+   "esperado": "0:43,5"
+  },
+  {
+   "nombre": "fmt.t [87]",
+   "fn": "fmt.t",
+   "args": [
+    87
+   ],
+   "esperado": "1:27"
+  },
+  {
+   "nombre": "fmt.t [59.96, 1]",
+   "fn": "fmt.t",
+   "args": [
+    59.96,
+    1
+   ],
+   "esperado": "1:00,0"
+  },
+  {
+   "nombre": "fmt.t [126]",
+   "fn": "fmt.t",
+   "args": [
+    126
+   ],
+   "esperado": "2:06"
+  },
+  {
+   "nombre": "fmt.t [229]",
+   "fn": "fmt.t",
+   "args": [
+    229
+   ],
+   "esperado": "3:49"
+  },
+  {
+   "nombre": "fmt.s 9,9",
+   "fn": "fmt.s",
+   "args": [
+    9.9
+   ],
+   "esperado": "9,9 s"
+  },
+  {
+   "nombre": "fmt.s 10,1",
+   "fn": "fmt.s",
+   "args": [
+    10.1
+   ],
+   "esperado": "10,1 s"
+  },
+  {
+   "nombre": "fmt.num 4,67",
+   "fn": "fmt.num",
+   "args": [
+    4.666666,
+    2
+   ],
+   "esperado": "4,67"
+  },
+  {
+   "nombre": "fmt.num 5,00",
+   "fn": "fmt.num",
+   "args": [
+    5,
+    2
+   ],
+   "esperado": "5,00"
+  },
+  {
+   "nombre": "fmt.sueno 390",
+   "fn": "fmt.sueno",
+   "args": [
+    390
+   ],
+   "esperado": "6h30"
+  },
+  {
+   "nombre": "fmt.sueno 134",
+   "fn": "fmt.sueno",
+   "args": [
+    134
+   ],
+   "esperado": "2h14"
+  },
+  {
+   "nombre": "fmt.parseSueno 7h01",
+   "fn": "fmt.parseSueno",
+   "args": [
+    "7h01"
+   ],
+   "esperado": 421
+  },
+  {
+   "nombre": "fmt.dia corta",
+   "fn": "fmt.dia",
+   "args": [
+    "2026-09-29",
+    "corta"
+   ],
+   "esperado": "mar 29-9"
+  },
+  {
+   "nombre": "fmt.dia larga",
+   "fn": "fmt.dia",
+   "args": [
+    "2026-09-29",
+    "larga"
+   ],
+   "esperado": "martes 29 de septiembre"
+  },
+  {
+   "nombre": "fmt.dia dow",
+   "fn": "fmt.dia",
+   "args": [
+    "2026-09-29",
+    "dow"
+   ],
+   "esperado": "Mar"
+  },
+  {
+   "nombre": "fmt.dia larga 30-9",
+   "fn": "fmt.dia",
+   "args": [
+    "2026-09-30",
+    "larga"
+   ],
+   "esperado": "miércoles 30 de septiembre"
+  },
+  {
+   "nombre": "dias 28-9 → 10-10",
+   "fn": "dias",
+   "args": [
+    "2026-09-28",
+    "2026-10-10"
+   ],
+   "esperado": 12
+  },
+  {
+   "nombre": "dias cambio de hora 24-10 → 26-10",
+   "fn": "dias",
+   "args": [
+    "2026-10-24",
+    "2026-10-26"
+   ],
+   "esperado": 2
+  }
+ ],
+ "expr": [
+  {
+   "nombre": "horaIni 1-10 (21:30 al principio de la sesión)",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-01'))",
+   "esperado": 1290
+  },
+  {
+   "nombre": "horaFin 1-10 = 22:30",
+   "expr": "PC.cal.horaFin(PC.cal.dia('2026-10-01'))",
+   "esperado": 1350
+  },
+  {
+   "nombre": "horaIni 29-9 (hora 18:00-19:30)",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-09-29'))",
+   "esperado": 1080
+  },
+  {
+   "nombre": "horaFin 29-9",
+   "expr": "PC.cal.horaFin(PC.cal.dia('2026-09-29'))",
+   "esperado": 1170
+  },
+  {
+   "nombre": "horaFin 30-9 (una sola hora: +60)",
+   "expr": "PC.cal.horaFin(PC.cal.dia('2026-09-30'))",
+   "esperado": 1140
+  },
+  {
+   "nombre": "horaIni 10-10",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-10'))",
+   "esperado": 570
+  },
+  {
+   "nombre": "horaIni 19-10 no confunde «rec. 2:30» con una hora",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-19'))",
+   "esperado": 1080
+  },
+  {
+   "nombre": "horaIni 3-10 sin hora = null",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-03'))",
+   "esperado": null
+  },
+  {
+   "nombre": "estado 24-9 = miss",
+   "expr": "PC.cal.dia('2026-09-24').estado",
+   "esperado": "miss"
+  },
+  {
+   "nombre": "estado 28-9 = nomide",
+   "expr": "PC.cal.dia('2026-09-28').estado",
+   "esperado": "nomide"
+  },
+  {
+   "nombre": "estado 22-9 = hecho",
+   "expr": "PC.cal.dia('2026-09-22').estado",
+   "esperado": "hecho"
+  },
+  {
+   "nombre": "estado 29-9 = hoy",
+   "expr": "PC.cal.dia('2026-09-29').estado",
+   "esperado": "hoy"
+  },
+  {
+   "nombre": "estado 25-9 = rest",
+   "expr": "PC.cal.dia('2026-09-25').estado",
+   "esperado": "rest"
+  },
+  {
+   "nombre": "estado 17-9 = noreg",
+   "expr": "PC.cal.dia('2026-09-17').estado",
+   "esperado": "noreg"
+  },
+  {
+   "nombre": "estado 5-10 = futuro",
+   "expr": "PC.cal.dia('2026-10-05').estado",
+   "esperado": "futuro"
+  },
+  {
+   "nombre": "semana del 29-9 empieza el lunes 28",
+   "expr": "PC.cal.semana('2026-09-29')[0].fecha",
+   "esperado": "2026-09-28"
+  },
+  {
+   "nombre": "bloque 29-9 = A",
+   "expr": "PC.cal.bloque('2026-09-29')",
+   "esperado": "A"
+  },
+  {
+   "nombre": "bloque 5-10 = B",
+   "expr": "PC.cal.bloque('2026-10-05')",
+   "esperado": "B"
+  },
+  {
+   "nombre": "bloque 27-10 = C",
+   "expr": "PC.cal.bloque('2026-10-27')",
+   "esperado": "C"
+  },
+  {
+   "nombre": "10-10 sin conflictos (K5 resuelto el 29-9)",
+   "expr": "PC.cal.dia('2026-10-10').conflictos.length",
+   "esperado": 0
+  },
+  {
+   "nombre": "K1-K18 resueltos",
+   "expr": "['K1','K2','K3','K4','K5','K6','K7','K8','K9','K10','K13','K14','K15','K16','K18'].every(PC.web.resuelto)",
+   "esperado": true
+  },
+  {
+   "nombre": "pendientes desde plan.json",
+   "expr": "PC.web.pendientes().length > 0",
+   "esperado": true
+  },
+  {
+   "nombre": "27-10 está en la semana final",
+   "expr": "PC.cal.dia('2026-10-27').final.enSemanaFinal",
+   "esperado": true
+  },
+  {
+   "nombre": "21-10: la versión 26-27 tiene una entrada con esa fecha",
+   "expr": "PC.cal.dia('2026-10-21').final.entradas.length",
+   "esperado": 1
+  },
+  {
+   "nombre": "24-10: las dos versiones tienen entrada",
+   "expr": "PC.cal.dia('2026-10-24').final.entradas.length",
+   "esperado": 2
+  },
+  {
+   "nombre": "24-10 sin versión elegida: sesión base del calendario",
+   "expr": "PC.cal.dia('2026-10-24').version === undefined && PC.cal.dia('2026-10-24').tipo",
+   "esperado": "control"
+  },
+  {
+   "nombre": "entradas sin fecha fija (Prueba, −2 días, −1 día)",
+   "expr": "PC.cal.sinFecha().length >= 3",
+   "esperado": true
+  },
+  {
+   "nombre": "10-10: reparto único del simulacro (K5 resuelto el 29-9)",
+   "expr": "JSON.stringify(PC.cal.dia('2026-10-10').principal.repartos)",
+   "esperado": "{\"objetivo\":[\"0:42\",\"1:24\",\"2:06\",\"2:48\"]}",
+   "m1": true
+  },
+  {
+   "nombre": "10-10: primer 200 entre 0:42 y 0:43 y aviso 3:25-3:35",
+   "expr": "[PC.cal.dia('2026-10-10').principal.primer200, PC.cal.dia('2026-10-10').principal.aviso].join(' · ')",
+   "esperado": "0:42-0:43 · 3:25-3:35",
+   "m1": true
+  },
+  {
+   "nombre": "6-10: condición con tres opciones",
+   "expr": "PC.cal.dia('2026-10-06').condicion.opciones.length",
+   "esperado": 3,
+   "m1": true
+  },
+  {
+   "nombre": "marcas: 4,67 · no apto",
+   "expr": "PC.notaActual().txt",
+   "esperado": "4,67 · no apto"
+  },
+  {
+   "nombre": "nota: clase warn (no apto sin ceros)",
+   "expr": "PC.notaActual().cls",
+   "esperado": "warn"
+  }
+ ]
+}

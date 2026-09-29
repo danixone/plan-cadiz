@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Marco de QA · Plan Cádiz</title>
+<style>
+  html,body{margin:0;padding:0;background:#777}
+  iframe{display:block;border:0;background:#fff}
+  #res{display:none}
+</style>
+</head>
+<body>
+<!--
+  Marco de QA (M0 · §10.6). Uso:
+    qa/marco.html?w=390&h=844&ruta=hoy&hoy=2026-09-29&tema=light&abrir=1[&hora=08:00][&prueba=28-30][&sem=verde][&sinvibrar=1][&pruebas=1][&casos=1][&pagina=../out/index.html]
+  Carga ../out/index.html?qa=1&… en un iframe del ancho pedido y copia iframe.contentWindow.__qa al bloque «res»,
+  que se lee con --dump-dom. Chrome necesita --allow-file-access-from-files.
+  pruebas=1: además, pruebas del núcleo dentro de la página (temporizador con Date.now adelantado, audio y vibración).
+  casos=1: además, pasa qa/baremo_casos.json, qa/parse_casos.json y qa/sem_casos.json (este, si PC.sem existe).
+-->
+<iframe id="f" title="web"></iframe>
+<pre id="res"></pre>
+<script>
+(function () {
+  var q = {};
+  location.search.replace(/^\?/, '').split('&').forEach(function (p) { if (!p) return; var i = p.indexOf('='); q[decodeURIComponent(i < 0 ? p : p.slice(0, i))] = i < 0 ? '' : decodeURIComponent(p.slice(i + 1)); });
+  if (q.casos === '1' && !q.hoy) q.hoy = '2026-09-29';
+  var w = +(q.w || 390), h = +(q.h || 844);
+  var f = document.getElementById('f');
+  f.style.width = w + 'px'; f.style.height = h + 'px';
+  var pas = ['qa=1'];
+  ['hoy', 'hora', 'tema', 'abrir', 'prueba', 'sem', 'sinvibrar', 'pruebas'].forEach(function (k) { if (q[k]) pas.push(k + '=' + encodeURIComponent(q[k])); });
+  f.src = (q.pagina || '../out/index.html') + '?' + pas.join('&') + '#' + (q.ruta || 'hoy');
+
+  function leerJSON(ruta) {
+    try { var x = new XMLHttpRequest(); x.open('GET', ruta, false); x.send(null); return JSON.parse(x.responseText); }
+    catch (e) { return { _error: String(e && e.message || e) }; }
+  }
+  function igual(a, b) {
+    if (typeof a === 'number' && typeof b === 'number') return Math.abs(a - b) < 1e-6;
+    if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(b)) return Object.keys(b).every(function (k) { return igual(a[k], b[k]); });
+    return JSON.stringify(a === undefined ? null : a) === JSON.stringify(b);
+  }
+  function cumple(r, c) {
+    if (c.hasOwnProperty('esperado')) return igual(r, c.esperado);
+    if (c.contiene) return Object.keys(c.contiene).every(function (k) {
+      if (/~$/.test(k)) { var base = k.slice(0, -1); return r && JSON.stringify(r[base] || '').indexOf(c.contiene[k]) >= 0; }
+      return r && igual(r[k], c.contiene[k]);
+    });
+    return true;
+  }
+  /* un caso es {fn, args, esperado|contiene} o {expr, esperado} */
+  function correr(W, lista) {
+    var PC = W.PC, out = { total: 0, fallos: [] };
+    (lista || []).forEach(function (c) {
+      out.total++;
+      try {
+        var r;
+        if (c.expr) r = W.eval(c.expr);
+        else {
+          var partes = c.fn.split('.'), obj = PC, fn = PC;
+          for (var i = 0; i < partes.length; i++) { obj = fn; fn = fn[partes[i]]; }
+          if (typeof fn !== 'function') throw new Error('no existe PC.' + c.fn);
+          r = fn.apply(obj, JSON.parse(JSON.stringify(c.args || [])));
+        }
+        if (!cumple(r, c)) out.fallos.push({ caso: c.nombre || c.fn || c.expr, args: c.args, esperado: c.hasOwnProperty('esperado') ? c.esperado : c.contiene, obtenido: r === undefined ? null : r });
+      } catch (e) { out.fallos.push({ caso: c.nombre || c.fn || c.expr, args: c.args, error: String(e && e.message || e) }); }
+    });
+    out.ok = out.fallos.length === 0;
+    return out;
+  }
+  var t0 = Date.now();
+  (function esperar() {
+    var W = null, qa = null;
+    try { W = f.contentWindow; qa = W && W.__qa; }
+    catch (e) { document.getElementById('res').textContent = JSON.stringify({ error: 'sin acceso al iframe (¿falta --allow-file-access-from-files?): ' + e.message }); return; }
+    if (!qa) {
+      if (Date.now() - t0 > 15000) { document.getElementById('res').textContent = JSON.stringify({ error: 'la página no terminó el modo QA', errores: W && W.__errores }); return; }
+      return setTimeout(esperar, 100);
+    }
+    var res = { qa: qa };
+    if (q.casos === '1') {
+      var B = leerJSON('baremo_casos.json'), P = leerJSON('parse_casos.json'), S = leerJSON('sem_casos.json');
+      var muestra = !!(W.PC.D.fuente && W.PC.D.fuente.muestra);
+      var exprs = (P.expr || []).filter(function (c) { return !(muestra && c.m1); });
+      res.casos = { baremo: correr(W, B.casos), parse: correr(W, P.casos), cal: correr(W, exprs) };
+      if (muestra) res.casos.cal.saltados = (P.expr || []).length - exprs.length;
+      if (W.PC.sem && W.PC.sem.calcular) {
+        res.casos.sem = correr(W, (S.casos || []).map(function (c) { return { nombre: c.nombre, fn: 'sem.calcular', args: [c.entrada], contiene: c.esperado }; }));
+      } else res.casos.sem = { pendiente: 'PC.sem.calcular no existe todavía (M2)', total: (S.casos || []).length };
+    }
+    document.getElementById('res').textContent = JSON.stringify(res);
+    document.documentElement.setAttribute('data-listo', '1');
+  })();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Pruebas de M3 · Plan</title>
+<style>html,body{margin:0;background:#777} iframe{display:block;border:0;background:#fff} #res{display:none}</style>
+</head>
+<body>
+<!--
+  Criterios de aceptación de M3 (§10.5) comprobados dentro de la página construida.
+  Uso (Chrome sin cabecera con --allow-file-access-from-files y --dump-dom):
+    qa/plan_m3.html?hoy=2026-09-29[&w=390][&pagina=../out/index.html]
+  Escribe el resultado en el bloque «res» como JSON: {ok, fallos:[…], datos:{…}}.
+-->
+<iframe id="f" title="web"></iframe>
+<pre id="res"></pre>
+<script>
+(function () {
+  var q = {};
+  location.search.replace(/^\?/, '').split('&').forEach(function (p) { if (!p) return; var i = p.indexOf('='); q[decodeURIComponent(i < 0 ? p : p.slice(0, i))] = i < 0 ? '' : decodeURIComponent(p.slice(i + 1)); });
+  var hoy = q.hoy || '2026-09-29', w = +(q.w || 390);
+  var f = document.getElementById('f');
+  f.style.width = w + 'px'; f.style.height = '844px';
+  f.src = (q.pagina || '../out/index.html') + '?hoy=' + hoy + '&tema=light#plan';
+  var R = { ok: true, fallos: [], datos: { hoy: hoy, ancho: w } };
+  function falla(t, extra) { R.ok = false; R.fallos.push(extra === undefined ? t : t + ' · ' + JSON.stringify(extra)); }
+  function fin() { document.getElementById('res').textContent = JSON.stringify(R); document.documentElement.setAttribute('data-listo', '1'); }
+  function espera(cond, ms, luego) {
+    var t0 = Date.now();
+    (function mira() { var v = false; try { v = cond(); } catch (e) {} if (v) return luego(true); if (Date.now() - t0 > ms) return luego(false); setTimeout(mira, 50); })();
+  }
+  espera(function () { var W = f.contentWindow; return W.PC && W.document.querySelector('#v-plan .cal-d[data-f]'); }, 15000, function (listo) {
+    if (!listo) { falla('la vista Plan no se pintó'); return fin(); }
+    /* se visitan las demás vistas para que se pinten (init solo al mostrarse) y se vuelve a Plan */
+    var W0 = f.contentWindow, rutas = ['#hoy', '#marcas', '#tecnica', '#dieta', '#plan'], k = 0;
+    (function sig() {
+      if (k >= rutas.length) return setTimeout(pruebas, 300);
+      W0.location.hash = rutas[k++]; setTimeout(sig, 250);
+    })();
+  });
+  function pruebas() {
+    var W = f.contentWindow, D = W.document, PC = W.PC;
+    R.datos.errores = (W.__errores || []).slice();
+    var v = D.getElementById('v-plan');
+    function celda(iso) { return v.querySelector('.cal-d[data-f="' + iso + '"]'); }
+    try {
+      /* 1 · rejilla del 14-9 al 1-11 */
+      var sem = Array.prototype.map.call(v.querySelectorAll('.pl-w[data-semana]'), function (x) { return x.getAttribute('data-semana'); });
+      R.datos.semanas = sem;
+      if (sem[0] !== '2026-09-14') falla('la rejilla no empieza el lunes 14-9', sem[0]);
+      if (PC.sumarDias(sem[sem.length - 1], 6) !== '2026-11-01') falla('la rejilla no acaba el domingo 1-11', sem[sem.length - 1]);
+      Array.prototype.forEach.call(v.querySelectorAll('.pl-w'), function (s) {
+        var n = s.querySelectorAll(':scope > .cal-g:not(.cal-vent) > .cal-d').length;
+        if (n !== 7) falla('semana sin 7 celdas', [s.getAttribute('data-semana'), n]);
+      });
+      for (var d = '2026-09-14'; d <= '2026-10-30'; d = PC.sumarDias(d, 1)) {
+        var dia = PC.cal.dia(d);
+        if (dia && dia.tipo && !celda(d)) falla('día del plan sin celda', d);
+      }
+      /* 2 · estados del historial */
+      var esper = { '2026-09-22': 'done', '2026-09-24': 'miss', '2026-09-27': 'miss', '2026-09-28': 'nomide' };
+      if (hoy > '2026-09-28') Object.keys(esper).forEach(function (iso) {
+        var c = celda(iso);
+        if (!c) return falla('sin celda', iso);
+        if (!c.classList.contains(esper[iso])) falla('estado mal', [iso, c.className]);
+        R.datos['estado_' + iso] = c.getAttribute('aria-label');
+      });
+      /* 3 · bandas de bloque en las filas de semana */
+      [['2026-09-28', 'b-a'], ['2026-10-05', 'b-b'], ['2026-10-12', 'b-b'], ['2026-10-19', 'b-c']].forEach(function (p) {
+        var s = v.querySelector('.pl-w[data-semana="' + p[0] + '"] .cal-sem');
+        if (!s || !s.classList.contains(p[1])) falla('banda de bloque', [p[0], s && s.className]);
+        var chip = s && s.querySelector('.cs-b');
+        if (!chip) falla('fila de semana sin chip de bloque', p[0]);
+      });
+      /* 4 · hitos en los días clave */
+      var hitos = PC.cal.hitos().filter(function (h) { return !h.hasta; });
+      R.datos.hitos = hitos.map(function (h) { return h.fecha; });
+      hitos.forEach(function (h) { var c = celda(h.fecha); if (c && !c.classList.contains('key')) falla('hito sin punto', h.fecha); });
+      /* 5 · ventana de la prueba rayada */
+      var ray = Array.prototype.map.call(v.querySelectorAll('.cal-d.vent[data-f]'), function (c) { return c.getAttribute('data-f'); });
+      R.datos.rayadas = ray;
+      if (!ray.length) falla('sin ventana de la prueba rayada');
+      if (!/la fecha llega con el llamamiento/.test(v.textContent)) falla('falta «la fecha llega con el llamamiento»');
+      /* 6 · conmutador de versión: cambia las celdas del 21 al 30 */
+      function foto() { var o = {}; for (var x = '2026-10-21'; x <= '2026-10-30'; x = PC.sumarDias(x, 1)) { var c = celda(x); o[x] = c ? c.className + '|' + c.textContent + '|' + c.getAttribute('aria-label') : '—'; } return o; }
+      function pulsa(val) { var b = v.querySelector('.pl-prueba button[data-prueba="' + val + '"]'); if (!b) { falla('sin botón de versión', val); return; } b.click(); }
+      var ultimo = PC.sumarDias(sem[sem.length - 1], 6);
+      if (hoy <= ultimo) {
+      var f0 = foto(); pulsa('28-30'); var f2830 = foto(); pulsa('26-27'); var f2627 = foto(); pulsa('');
+      var cambia = function (a, b) { return Object.keys(a).filter(function (k) { return a[k] !== b[k]; }); };
+      R.datos.cambian2830 = cambia(f0, f2830); R.datos.cambian2627 = cambia(f0, f2627); R.datos.entre = cambia(f2830, f2627);
+      if (!R.datos.cambian2830.length || !R.datos.cambian2627.length || !R.datos.entre.length) falla('el conmutador no cambia las celdas del 21 al 30');
+      if (W.localStorage.getItem('pc-prueba') !== null) falla('«sin confirmar» no borra pc-prueba', W.localStorage.getItem('pc-prueba'));
+      } else R.datos.conmutador = 'el plan ya terminó: sin conmutador';
+      /* 7 · escalera de ritmos */
+      var b = PC.cal.bloque(PC.hoyIso());
+      var hi = v.querySelectorAll('.pl-rb.hi');
+      R.datos.bloqueHoy = b; R.datos.resaltado = Array.prototype.map.call(hi, function (x) { return x.getAttribute('data-bloque'); });
+      if (b && (hi.length !== 1 || hi[0].getAttribute('data-bloque') !== b)) falla('la escalera no resalta el bloque de hoy', R.datos.resaltado);
+      if (!b && hi.length) falla('resaltado sin bloque');
+      var um = v.querySelectorAll('#pl-ritmos [data-umbral="229"]');
+      R.datos.umbral = um.length;
+      if (!um.length) falla('la escala de ritmos no enseña el 3:49');
+      var tx = Array.prototype.map.call(v.querySelectorAll('#pl-g14 text'), function (t) { return t.textContent; });
+      if (tx.indexOf('3:49 elimina') < 0) falla('sin el rótulo «3:49 elimina»', tx);
+      if (!v.querySelector('.pl-gate')) falla('sin la compuerta del bloque C');
+      /* 8 · reglas: cuatro grupos, cada regla una vez */
+      var G = Array.prototype.map.call(v.querySelectorAll('#pl-reglas .pl-grupo .pl-gt'), function (x) { return x.textContent; });
+      R.datos.grupos = G;
+      if (G.join('|') !== 'Por la mañana|Durante|Por la noche|La semana') falla('grupos de reglas', G);
+      /* «ninguna regla aparece dos veces»: ningún otro bloque .rule de la web (cualquier vista) repite el título
+         ni el arranque del texto de una regla de Plan. Los enlaces a Plan › Reglas y el texto de salud de Técnica
+         (lesiones completas, §5.4 TE-7) no son reglas. */
+      var otras = Array.prototype.filter.call(D.querySelectorAll('main .rule, .rule'), function (x) { return !v.querySelector('#pl-reglas').contains(x); });
+      var todoReglas = otras.map(function (x) { return x.textContent; }).join('\n');
+      R.datos.reglasOtrasVistas = otras.length;
+      var ids = {};
+      if (D.querySelectorAll('[id]').length) {
+        var vistos = {}, rep = [];
+        Array.prototype.forEach.call(D.querySelectorAll('[id]'), function (x) { if (vistos[x.id]) rep.push(x.id); vistos[x.id] = 1; });
+        var mios = rep.filter(function (i) { return /^pl-|^cal-/.test(i); });
+        if (mios.length) falla('ids repetidos de Plan', mios);
+      }
+      var titulos = {};
+      Array.prototype.forEach.call(v.querySelectorAll('#pl-reglas .rule'), function (r) {
+        if (ids[r.id]) falla('regla repetida (id)', r.id); ids[r.id] = 1;
+        var t = r.querySelector('h4').textContent.trim();
+        if (titulos[t]) falla('título de regla repetido en Plan', t); titulos[t] = 1;
+        if (todoReglas.indexOf(t) >= 0) falla('título de regla repetido en otra vista', t);
+        var p = r.querySelector('h4 + p'); if (p && p.textContent.length > 30) {
+          var fr = p.textContent.trim().slice(0, 120);
+          if (todoReglas.indexOf(fr) >= 0) falla('texto de regla repetido en otra vista', fr);
+          var enPlan = v.querySelector('#pl-reglas').textContent.split(fr).length - 1;
+          if (enPlan !== 1) falla('texto de regla repetido dentro de Plan › Reglas', [fr, enPlan]);
+        }
+      });
+      R.datos.reglas = Object.keys(ids);
+      /* 9 · pendientes de plan.pendientes con casilla y pc-pend */
+      var pend = v.querySelectorAll('#pl-pend .ex[data-id]');
+      R.datos.pendientes = pend.length;
+      if (pend.length !== PC.web.pendientes().length) falla('pendientes no cuadran', [pend.length, PC.web.pendientes().length]);
+      if (pend.length) {
+        var id = pend[0].getAttribute('data-id');
+        pend[0].querySelector('.ck').click();
+        var L = JSON.parse(W.localStorage.getItem('pc-pend') || '[]');
+        if (L.indexOf(id) < 0) falla('marcar no guarda en pc-pend', L);
+        v.querySelector('#pl-pend .ex[data-id="' + id + '"] .ck').click();
+        L = JSON.parse(W.localStorage.getItem('pc-pend') || '[]');
+        if (L.indexOf(id) >= 0) falla('desmarcar no borra de pc-pend', L);
+      }
+      /* 10 · calendario del Mac */
+      if (!/Calendario del Mac/.test(v.textContent)) falla('no se menciona el Calendario del Mac');
+      /* 11 · ningún aviso de conflicto K con los datos del 29-9 */
+      if (v.querySelector('.aviso.warn')) falla('aviso de conflicto inesperado');
+    } catch (e) { falla('excepción', String(e && e.stack || e)); }
+    /* 12 · la hoja se abre y se cierra con el teclado */
+    var c = celda('2026-10-10');
+    if (!c || c.tagName !== 'BUTTON') { falla('la celda del 10-10 no es un botón'); return fin(); }
+    var pl = c.closest('details'); if (pl && !pl.open) pl.open = true;   /* semanas pasadas: se despliegan como lo haría la persona */
+    c.focus();
+    if (D.activeElement !== c) falla('la celda no recibe el foco');
+    c.click();   /* Intro o Espacio sobre un <button> disparan click */
+    espera(function () { return PC.sheet.abierta() && W.location.hash === '#plan/2026-10-10'; }, 3000, function (ok) {
+      if (!ok) { falla('la hoja no se abre', W.location.hash); return fin(); }
+      var sh = D.querySelector('.sheet');
+      var th = (sh && sh.textContent || '').replace(/\s+/g, ' ');
+      R.datos.hoja = th.slice(0, 400);
+      if (!/Abrir en Hoy/.test(th)) falla('la hoja no tiene «Abrir en Hoy»');
+      if (sh && !sh.contains(D.activeElement)) falla('el foco no entra en la hoja', D.activeElement && D.activeElement.outerHTML.slice(0, 80));
+      var um2 = sh ? sh.querySelectorAll('[data-umbral="229"]').length : 0; R.datos.umbralHoja = um2;
+      /* mientras el 10-10 no ha pasado, su hoja pinta el reparto y con él el 3:49; después es un día pasado (Registrado) */
+      if (!um2 && hoy <= '2026-10-10') falla('la hoja del 10-10 no enseña el 3:49');
+      D.activeElement.dispatchEvent(new W.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+      espera(function () { return !PC.sheet.abierta(); }, 3000, function (cerr) {
+        if (!cerr) falla('Escape no cierra la hoja');
+        R.datos.hashTrasCerrar = W.location.hash;
+        R.datos.focoTrasCerrar = D.activeElement && (D.activeElement.getAttribute('data-f') || D.activeElement.tagName);
+        if (cerr && D.activeElement !== celda('2026-10-10')) falla('el foco no vuelve a la celda', R.datos.focoTrasCerrar);
+        R.datos.erroresFin = (W.__errores || []).slice();
+        fin();
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>

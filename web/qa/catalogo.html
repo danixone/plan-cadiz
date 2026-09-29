@@ -1,0 +1,139 @@
+<!-- Catálogo de componentes del sistema (M0). Solo para revisar el sistema de diseño a la vista:
+     python3 build.py --catalogo  →  out/catalogo.html. No forma parte de la web.
+     Los textos son de muestra del propio catálogo, no datos del plan. -->
+<main class="container" id="catalogo">
+  <header class="vh"><h1 class="vt">Catálogo del sistema</h1><p class="vt-sub">Componentes de §4.8 con los tokens de §4.2</p></header>
+
+  <nav class="subnav" aria-label="En esta pestaña"><a href="#c-tarjetas" aria-current="true">Tarjetas</a><a href="#c-controles">Controles</a><a href="#c-avisos">Avisos</a><a href="#c-semana">Semana</a><a href="#c-grafica">Gráfica</a><a href="#c-listas">Listas</a></nav>
+
+  <section id="c-tarjetas" data-ancla="c-tarjetas">
+    <article class="card hi">
+      <div class="card-h"><span class="ic"><svg class="icon"><use href="#i-fuerza"/></svg></span><div class="t"><h2>Tarjeta de hoy (.card.hi)</h2><small>hoy · 18:00–19:30 · bloque A</small></div><span class="end chip sup">sin rellenar</span></div>
+      <div class="lamps" role="radiogroup" aria-label="Lámparas">
+        <button role="radio" aria-checked="true" data-banda="verde"><i class="lamp g"></i><b>Verde</b><small>6h30 o más</small></button>
+        <button role="radio" aria-checked="false" data-banda="ambar"><i class="lamp a"></i><b>Ámbar</b><small>5h00–6h29</small></button>
+        <button role="radio" aria-checked="false" data-banda="rojo"><i class="lamp r"></i><b>Rojo</b><small>menos de 5h00</small></button>
+      </div>
+      <p style="margin-top:12px"><label for="c-rango" class="faint">Deslizador de sueño (.rango.sueno)</label><input id="c-rango" class="rango sueno" type="range" min="180" max="600" step="5" value="425" aria-valuetext="7 horas 5 minutos, verde"></p>
+      <div class="stats"><div class="stat"><b>5 × 3</b><span>series</span></div><div class="stat"><b>12,5 kg</b><span>peso</span></div><div class="stat"><b>3:00</b><span>descanso</span></div></div>
+      <div class="card-f"><button class="btn pri lg">Botón principal</button><button class="btn sec">Secundario</button><button class="btn ghost">Fantasma</button><button class="btn sec" disabled>Desactivado</button></div>
+      <a class="franja" href="#c-tarjetas">Franja al pie de la tarjeta <svg class="icon sm"><use href="#i-flecha"/></svg></a>
+    </article>
+    <article class="card flat"><div class="card-h"><span class="ic"><svg class="icon"><use href="#i-descanso"/></svg></span><div class="t"><h2>Tarjeta plana (.card.flat)</h2><small>descanso</small></div></div><p class="muted">Texto secundario de la tarjeta.</p></article>
+    <div class="grid-2">
+      <article class="card"><div class="stat hero"><b>4,67</b><span>cifra héroe (.stat.hero)</span></div></article>
+      <article class="card"><div class="chips"><span class="chip">neutro</span><span class="chip ok">ok</span><span class="chip warn">warn</span><span class="chip bad">bad</span><span class="chip pri">pri</span><span class="chip sup">supuesto</span></div>
+        <div class="chips" style="margin-top:8px"><button class="chip" aria-pressed="true">Elegido</button><button class="chip" aria-pressed="false">Otro</button><button class="chip" aria-disabled="true">Sin datos</button></div></article>
+    </div>
+  </section>
+
+  <section id="c-controles" data-ancla="c-controles">
+    <h2 class="section-t">Controles</h2>
+    <div class="card">
+      <div class="seg" role="group" aria-label="Segmentado"><button aria-pressed="true">Normal</button><button aria-pressed="false">VFC baja</button><button aria-pressed="false">Sobrecarga</button></div>
+      <p style="margin:12px 0"><span class="stepper" role="group" aria-label="Stepper"><button type="button" aria-label="Menos">−</button><output class="num">3</output><button type="button" aria-label="Más">+</button></span></p>
+      <label class="tin"><span>Intento 1</span><input inputmode="decimal" placeholder="9,4" aria-label="Tiempo del intento 1" value="9,4"><em class="dv ok">7 pts</em></label>
+      <div class="umb-w" style="margin-top:12px">
+        <div class="umb" role="img" aria-label="Barra de umbrales de ejemplo">
+          <button class="ok tu" style="--w:4" aria-pressed="false"><b>≤ 3:33</b>tramo bueno</button>
+          <button class="warn" style="--w:4" aria-pressed="false"><b>3:34–3:36</b>tramo medio</button>
+          <button class="bad" style="--w:4" aria-pressed="true"><b>peor de 3:36</b>tramo malo</button>
+          <button class="elim" data-umbral="229" aria-pressed="false"><b>3:49 o más</b>elimina</button>
+        </div>
+        <p class="umb-t">Texto completo del tramo en el que cae el dato.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="c-avisos" data-ancla="c-avisos">
+    <h2 class="section-t">Avisos y plegados</h2>
+    <div class="aviso warn" role="note"><svg class="icon"><use href="#i-alerta"/></svg><div><b>Aviso con dos versiones.</b> El formato del aviso de conflicto de un día.<div class="dos"><q>primer texto literal</q><small>objetivo del día</small><q>segundo texto literal</q><small>protocolo del día</small></div></div></div>
+    <div class="aviso info" role="note"><svg class="icon"><use href="#i-info"/></svg><div><b>Info.</b> Aviso informativo.<small>hasta el 1-10</small></div></div>
+    <div class="aviso ok" role="note"><svg class="icon"><use href="#i-check"/></svg><div>Aviso ok.</div></div>
+    <div class="aviso bad" role="note"><svg class="icon"><use href="#i-x"/></svg><div>Aviso bad.</div></div>
+    <details class="acc why"><summary><svg class="icon sm"><use href="#i-info"/></svg>Por qué<svg class="icon sm chev"><use href="#i-chev"/></svg></summary><div class="in"><p>Contenido plegado.</p><dl class="kv"><dt>clave</dt><dd>valor 1</dd><dt>otra clave</dt><dd>valor 2</dd></dl></div></details>
+    <div class="card"><article class="rule"><h3>Título de regla (.rule)</h3><p>Primera frase visible.</p></article><article class="rule"><h3>Otra regla</h3><p>Texto.</p></article></div>
+  </section>
+
+  <section id="c-semana" data-ancla="c-semana">
+    <h2 class="section-t">Tira de la semana</h2>
+    <div class="week">
+      <button class="done"><span>L</span><b>28</b><svg class="icon"><use href="#i-carrera"/></svg></button>
+      <button class="today" aria-current="date" aria-pressed="true"><span>M</span><b>29</b><svg class="icon"><use href="#i-fuerza"/></svg></button>
+      <button class="key"><span>X</span><b>30</b><svg class="icon"><use href="#i-carrera"/></svg></button>
+      <button class="nomide"><span>J</span><b>1</b><svg class="icon"><use href="#i-circuito"/></svg></button>
+      <button class="miss"><span>V</span><b>2</b><svg class="icon"><use href="#i-descanso"/></svg></button>
+      <button class="noreg"><span>S</span><b>3</b><svg class="icon"><use href="#i-carrera"/></svg></button>
+      <button class="rest"><span>D</span><b>4</b><svg class="icon"><use href="#i-descanso"/></svg></button>
+    </div>
+    <p class="faint" style="margin-top:8px">done · today · key · nomide · miss · noreg · rest</p>
+    <div class="card"><div class="chips">
+      <span class="chip"><svg class="icon sm"><use href="#i-app"/></svg>app</span><span class="chip"><svg class="icon sm"><use href="#i-control"/></svg>control</span><span class="chip"><svg class="icon sm"><use href="#i-prueba"/></svg>prueba</span><span class="chip"><svg class="icon sm"><use href="#i-examen"/></svg>examen</span><span class="chip"><svg class="icon sm"><use href="#i-sueno"/></svg>sueño</span><span class="chip"><svg class="icon sm"><use href="#i-reloj"/></svg>reloj</span><span class="chip"><svg class="icon sm"><use href="#i-temporizador"/></svg>tempo</span><span class="chip"><svg class="icon sm"><use href="#i-copiar"/></svg>copiar</span><span class="chip"><svg class="icon sm"><use href="#i-video"/></svg>vídeo</span><span class="chip"><svg class="icon sm"><use href="#i-editar"/></svg>editar</span><span class="chip"><svg class="icon sm"><use href="#i-lista"/></svg>lista</span><span class="chip"><svg class="icon sm"><use href="#i-play"/></svg>play</span><span class="chip"><svg class="icon sm"><use href="#i-pausa"/></svg>pausa</span><span class="chip"><svg class="icon sm"><use href="#i-mas"/></svg>más</span><span class="chip"><svg class="icon sm"><use href="#i-menos"/></svg>menos</span><span class="chip"><svg class="icon sm"><use href="#i-sol"/></svg>sol</span><span class="chip"><svg class="icon sm"><use href="#i-luna"/></svg>luna</span>
+    </div></div>
+  </section>
+
+  <section id="c-grafica" data-ancla="c-grafica">
+    <h2 class="section-t">Gráfica con PC.chart</h2>
+    <div class="card"><figure class="chart" id="c-g" role="group" aria-labelledby="c-g-t"><figcaption class="chart-h"><h3 id="c-g-t">Sueño de la muestra</h3><small>Selección fija, sin tooltip. Toca una barra.</small></figcaption><div class="chart-c"></div></figure></div>
+    <div class="card"><figure class="chart" id="c-g2" role="group" aria-labelledby="c-g2-t"><figcaption class="chart-h"><h3 id="c-g2-t">Escala del 1.000 con PC.chart.umbral1000</h3></figcaption><div class="chart-c"></div></figure></div>
+  </section>
+
+  <section id="c-listas" data-ancla="c-listas">
+    <h2 class="section-t">Listas</h2>
+    <div class="card">
+      <div class="ex"><button class="ck" aria-label="Hecho"><svg viewBox="0 0 26 26"><rect class="cbox" x="2" y="2" width="22" height="22" rx="6"/><path class="tick" d="M7 13.5l4 4 8-9"/></svg></button><div class="nm">Paso hecho<small>detalle</small><div class="tags"><span class="chip">5 × 3</span></div></div><button class="timer">3:00</button></div>
+      <div class="ex done"><button class="ck" aria-label="Hecho"><svg viewBox="0 0 26 26"><rect class="cbox" x="2" y="2" width="22" height="22" rx="6"/><path class="tick" d="M7 13.5l4 4 8-9"/></svg></button><div class="nm">Paso tachado<small>detalle</small></div><button class="timer run">1:12</button></div>
+    </div>
+    <ol class="tl"><li class="hecho"><span class="dot"></span><b>sáb 19-9 · control</b><p>línea de un hito hecho</p></li><li class="hoy"><span class="dot"></span><b>hoy</b><p>línea de hoy</p></li><li class="futuro"><span class="dot"></span><b>sáb 10-10</b><p>línea futura</p></li></ol>
+    <div class="empty">Estado vacío (.empty)</div>
+    <div class="card-f" style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sec" id="c-hoja">Abrir hoja</button><button class="btn sec" id="c-focus">Abrir modo pista</button><button class="btn sec" id="c-toast">Toast</button><button class="btn sec" id="c-timer">Temporizador 12 s</button></div>
+  </section>
+</main>
+<script>
+(function () {
+  var PC = window.PC;
+  function dibujar() {
+    var fig = document.getElementById('c-g');
+    var N = (PC.D.derivados.noches || []).filter(function (n) { return n.min != null; });
+    if (!N.length) return;
+    var ctx = PC.chart.base(fig, { h: 200, label: 'Sueño de la muestra: ' + N.length + ' noches' });
+    var i0 = N[0].fecha, i1 = N[N.length - 1].fecha;
+    var fx = PC.chart.tiempo(PC.sumarDias(i0, -1), PC.sumarDias(i1, 1), 0, ctx.iw);
+    var fy = PC.chart.lineal(0, 540, ctx.ih, 0);
+    PC.chart.ejeY(ctx, fy, [300, 390, 530], PC.fmt.sueno);
+    PC.chart.ejeFechas(ctx, fx, i0, i1);
+    var bw = Math.max(4, Math.min(14, ctx.iw / (PC.dias(i0, i1) + 2) - 3));
+    var pts = N.map(function (n) {
+      var x = fx(n.fecha), y = fy(n.min);
+      var col = n.color === 'verde' ? '--st-good' : n.color === 'ambar' ? '--st-warn' : '--st-crit';
+      var r = PC.svg('rect', { x: x - bw / 2, y: y, width: bw, height: ctx.ih - y, rx: 2, style: 'fill:var(' + col + ')' }, ctx.g);
+      return { x: x, y: y, nodo: r, html: '<b>' + PC.fmt.dia(n.fecha, 'corta') + '</b> · ' + PC.fmt.sueno(n.min) + ' · ' + (n.color || '') };
+    });
+    PC.chart.seleccion(ctx, pts);
+    PC.chart.tabla(fig, ['Fecha', 'Horas'], N.map(function (n) { return [PC.fmt.dia(n.fecha, 'corta'), PC.fmt.sueno(n.min)]; }));
+    var f2 = document.getElementById('c-g2');
+    var c2 = PC.chart.base(f2, { h: 90, m: { t: 12, r: 12, b: 28, l: 12 }, label: 'Escala del 1.000 de 3:25 a 3:52' });
+    var fs = PC.chart.lineal(232, 205, 0, c2.iw);
+    PC.svg('rect', { x: 0, y: 20, width: c2.iw, height: 16, rx: 3, style: 'fill:var(--surface-2)' }, c2.g);
+    [214, 210].forEach(function (s) { var x = fs(s); PC.svg('line', { x1: x, x2: x, y1: 14, y2: 42, style: 'stroke:var(--s1);stroke-width:2' }, c2.g); PC.svg('text', { x: x, y: 58, 'text-anchor': 'middle', 'class': 'lab', text: PC.fmt.t(s) }, c2.g); });
+    PC.chart.umbral1000(c2, { orient: 'v', x: fs(229) });
+  }
+  dibujar();
+  PC.alRedimensionar(document.getElementById('c-g'), dibujar);
+  document.getElementById('c-hoja').addEventListener('click', function () { PC.sheet.abrir('Hoja de ejemplo', '<p>Contenido de la hoja. Esc la cierra.</p><button class="btn pri">Un botón</button>'); });
+  document.getElementById('c-focus').addEventListener('click', function () {
+    var b = PC.el('div', null, '<p class="focus-k">Repetición 3 de 6</p><p class="big num">1:27</p><div class="rep-btns"><button class="ok">Dentro<small>1:24–1:30</small></button><button class="bad">Lenta<small>más de 1:30</small></button><button class="warn">Rápida<small>menos de 1:24</small></button></div>');
+    PC.focus.abrir({ titulo: '6 × 400 · bloque A · verde', nodo: b });
+  });
+  document.getElementById('c-toast').addEventListener('click', function () { PC.toast('Copiado'); });
+  document.getElementById('c-timer').addEventListener('click', function (e) {
+    var bt = e.currentTarget;
+    var t = PC.timer.crear({ seg: 12, alTick: function (r) { bt.textContent = 'Temporizador ' + PC.fmt.t(Math.ceil(r)); }, alCero: function () { bt.textContent = 'Terminó'; } });
+    t.empezar();
+  });
+  if (PC.q('abrir') === 'focus') document.getElementById('c-focus').click();
+  if (PC.q('abrir') === 'hoja') document.getElementById('c-hoja').click();
+  PC.tema.pintar();
+  if (PC.qa) PC._qa.lanzar();
+})();
+</script>

@@ -1,0 +1,234 @@
+/* M2 · Hoy (§5.1, §6.2 T1-T4 y T11, G11). build.py lo envuelve en @layer modulos.
+   Todo va bajo #v-hoy o con el prefijo hoy- (el modo pista y la hoja viven fuera de la vista). */
+
+/* ---------- H-0 · cabecera, camino y semana ---------- */
+.hoy-cab{padding:var(--sp-4) 0 var(--sp-2)}
+.hoy-f1{display:flex;align-items:center;gap:var(--sp-3);justify-content:space-between}
+.hoy-tit{min-width:0}
+.hoy-tit h1{font:var(--fw-bold) var(--fs-xl)/1.2 var(--font);margin:0}
+.hoy-semt{display:block;color:var(--text-3);font-size:var(--fs-sm);line-height:1.3}
+.hoy-notalink{flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);min-width:var(--tap);text-decoration:none;margin-right:-4px}
+.hoy-camino{height:56px;margin:var(--sp-2) 0 var(--sp-2)}
+.hoy-camino a{display:block;height:56px;color:inherit;border-radius:var(--r-sm)}
+.hoy-camino svg{display:block;overflow:visible}
+.hoy-camino text{font-family:var(--font);font-size:12px;fill:var(--text-3);font-variant-numeric:tabular-nums}
+.hoy-camino .hoy-cm-b{font-weight:var(--fw-semi);fill:var(--text-2)}
+.hoy-camino .hoy-cm-flag text{fill:var(--ill-flag-txt);font-weight:var(--fw-semi)}
+.hoy-semnav{display:flex;align-items:flex-start;gap:var(--sp-1);margin-top:var(--sp-1)}
+.hoy-semnav .icon-btn{flex:none}
+.hoy-prev .icon{transform:rotate(90deg)} .hoy-next .icon{transform:rotate(-90deg)}
+.hoy-semnav .icon-btn[disabled]{opacity:.35;cursor:default}
+.hoy-leyenda{flex:1 1 auto;min-width:0}
+.hoy-leyenda>summary{list-style:none;min-height:var(--tap);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;
+  color:var(--text-3);font-size:var(--fs-sm);font-weight:var(--fw-semi)}
+.hoy-leyenda>summary::-webkit-details-marker{display:none}
+.hoy-leyenda>summary .hoy-rango{color:var(--text-2)}
+.hoy-ley{list-style:none;margin:0 0 var(--sp-2);padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-ley li{display:inline-flex;align-items:center;gap:6px}
+.hoy-sw{display:inline-block;width:16px;height:16px;border-radius:5px;border:1px solid var(--border);background:var(--surface)}
+.hoy-sw.today{background:var(--primary);border-color:var(--primary)} .hoy-sw.done{background:var(--ok-soft);border-color:transparent}
+.hoy-sw.nomide{background:var(--warn-soft);border-color:transparent} .hoy-sw.miss{border:1px dashed var(--bad)}
+.hoy-sw.noreg{border:1px dashed var(--border-strong)} .hoy-sw.rest{background:var(--surface-2)}
+.hoy-sw.key{width:8px;height:8px;border-radius:50%;border:0;background:var(--s2)}
+#v-hoy .week button.hoy-fuera{opacity:.45}
+
+/* ---------- rejilla: una columna; en escritorio 7 + 5 ---------- */
+.hoy-rej{display:block}
+@media (min-width:1024px){
+  .hoy-rej{display:grid;grid-template-columns:7fr 5fr;gap:var(--sp-6);align-items:start}
+  .hoy-cab{padding-top:var(--sp-5)}
+}
+.hoy-volver{margin:0 0 var(--sp-2)}
+
+/* ---------- H-1 · tarjeta del día ---------- */
+#hoy-ses .card{margin-bottom:var(--sp-4)}
+.hoy-card .card-h{align-items:flex-start}
+.hoy-card .card-h .t{flex:1 1 auto}
+.hoy-card .card-h .end{flex:none;margin-left:var(--sp-2)}
+.hoy-card .card-h .t small{line-height:1.35}
+.hoy-bloque+.hoy-bloque{margin-top:var(--sp-3)}
+.hoy-sub{margin:var(--sp-4) 0 var(--sp-1);font:var(--fw-semi) var(--fs-sm)/1.3 var(--font);color:var(--text-3);text-transform:none}
+.hoy-linea{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-hora{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-hora b{color:var(--text)}
+
+/* fila del semáforo (T1) */
+.hoy-sem{border:1px solid var(--border);border-radius:var(--r-sm);padding:var(--sp-3);background:var(--surface)}
+.hoy-sem-q{margin:0 0 var(--sp-2);font-weight:var(--fw-semi);font-size:var(--fs-md)}
+.hoy-sem-l{display:flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2);min-height:var(--tap)}
+.hoy-sem-l>span{flex:1 1 auto;min-width:0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-sem-l .btn{flex:none}
+.hoy-sem.cerrado{padding:var(--sp-2) var(--sp-3)}
+.hoy-sem.cerrado .hoy-sem-l{margin:0}
+.hoy-sem-c{display:flex;align-items:flex-start;gap:var(--sp-2);flex:1 1 auto;min-width:0}
+.hoy-sem-c .lamp{flex:none;width:14px;height:14px;border-radius:50%;margin-top:4px}
+.hoy-sem-c b{display:block;font-size:var(--fs-md)}
+.hoy-sem-c span{display:block;font-size:var(--fs-sm);color:var(--text-2);line-height:1.35}
+.hoy-sem-av{margin:var(--sp-2) 0 0;padding:0;list-style:none;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-sem-av li{padding:4px 0 4px 12px;border-left:3px solid var(--border-strong);margin-top:4px;line-height:1.35}
+.hoy-sem-av li.warn{border-left-color:var(--st-warn)} .hoy-sem-av li.bad{border-left-color:var(--st-crit)}
+.hoy-sem-av a{white-space:nowrap}
+.hoy-opt{display:grid;gap:var(--sp-3);margin-top:var(--sp-3);padding-top:var(--sp-3);border-top:1px solid var(--border)}
+.hoy-opt label,.hoy-opt .hoy-opt-t{display:block;font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2);margin-bottom:4px}
+.hoy-opt output{font:var(--fw-bold) var(--fs-md)/1 var(--font);font-variant-numeric:tabular-nums;color:var(--text)}
+.hoy-opt .seg button{padding:0 4px;text-align:center;line-height:1.15}
+.hoy-ayer{margin-top:var(--sp-3)}
+.hoy-ayer p{margin:0 0 4px;font-size:var(--fs-sm);font-weight:var(--fw-semi)}
+
+/* condición del día (T11) */
+.hoy-cond{margin-top:var(--sp-3);padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2)}
+.hoy-cond-q{margin:0 0 var(--sp-2);font-weight:var(--fw-semi)}
+.hoy-cond .seg{background:var(--surface-3)}
+.hoy-opc{display:grid;gap:6px}
+.hoy-opc button{min-height:var(--tap);text-align:left;padding:8px 12px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);
+  color:var(--text);font:var(--fw-reg) var(--fs-sm)/1.35 var(--font);cursor:pointer}
+.hoy-opc button[aria-pressed="true"]{border:2px solid var(--primary);background:var(--primary-soft);padding:7px 11px;font-weight:var(--fw-semi)}
+.hoy-cond small{display:block;margin-top:6px;color:var(--text-3);font-size:var(--fs-xs)}
+.hoy-cond .hoy-cond-r{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-cond .hoy-cifra{font:var(--fw-bold) var(--fs-lg)/1.2 var(--font);font-variant-numeric:tabular-nums;color:var(--text)}
+
+/* números, «Hoy haces», chips y pasos */
+.hoy-card .stats{margin-top:var(--sp-3)}
+.hoy-card .stat b{overflow-wrap:normal}
+.hoy-card .stat.largo b{font-size:var(--fs-lg);line-height:1.25}
+.hoy-haces{margin:var(--sp-3) 0 0;color:var(--text-2);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.hoy-haces b{color:var(--text)}
+.hoy-haces.abierto{display:block;-webkit-line-clamp:unset;overflow:visible}
+.hoy-mas{margin-top:2px;min-height:var(--tap);padding:0 var(--sp-2)}
+.hoy-card .chips{margin-top:var(--sp-3)}
+.hoy-pasos{margin-top:var(--sp-3)}
+.hoy-pasos .acc{margin:var(--sp-2) 0}
+.hoy-pasos .acc>summary{font-size:var(--fs-md)}
+.hoy-pasos .acc>summary small{color:var(--text-3);font-weight:var(--fw-reg);font-size:var(--fs-sm)}
+.hoy-pasos .ex .nm small a{white-space:nowrap}
+.hoy-pasos .ex .nm small{overflow-wrap:anywhere}
+.hoy-pasos .hoy-ex-sin{grid-template-columns:1fr auto;padding-left:var(--sp-2)}
+.hoy-pie-f{margin:var(--sp-3) 0 0;font-weight:var(--fw-semi)}
+.hoy-regla{margin:0 0 var(--sp-2);font-size:var(--fs-sm);color:var(--text-2);padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2)}
+.hoy-reg-l{margin:0}
+.hoy-plg{margin-top:var(--sp-3)}
+.hoy-plg dl{margin:0} .hoy-plg dt{font-weight:var(--fw-semi);font-size:var(--fs-sm);color:var(--text-3);margin-top:var(--sp-2)}
+.hoy-plg dt:first-child{margin-top:0}
+.hoy-plg dd{margin:2px 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-plg ul{margin:0;padding-left:18px;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-card .card-f .btn{flex:1 1 160px}
+.hoy-card>.franja{cursor:pointer;border:0;width:calc(100% + 2*var(--sp-4));font:var(--fw-semi) var(--fs-md)/1.2 var(--font);text-align:left}
+@media (min-width:768px){.hoy-card>.franja{width:calc(100% + 2*var(--sp-5))}}
+.hoy-reg{display:grid;gap:var(--sp-2);margin-top:var(--sp-3)}
+.hoy-reg .aviso{margin:0}
+.hoy-reg details{font-size:var(--fs-sm)}
+
+/* reparto del 1.000 (10-10 y prueba): con la columna del 3:49 */
+.hoy-rep{margin-top:var(--sp-3)}
+.hoy-rep table.t td,.hoy-rep table.t th{padding:6px 8px}
+.hoy-rep .hoy-elim{color:var(--bad);font-weight:var(--fw-semi)}
+.hoy-rep caption{caption-side:top;text-align:left;font-size:var(--fs-sm);color:var(--text-3);padding:0 0 4px}
+
+/* H-2 · lo que decide */
+#hoy-decide .card{margin-bottom:var(--sp-4)}
+.hoy-dec-t{margin:0 0 var(--sp-1);font:var(--fw-bold) var(--fs-lg)/1.3 var(--font)}
+.hoy-dec-q{margin:0 0 var(--sp-3);color:var(--text-3);font-size:var(--fs-sm)}
+.hoy-dec-b+.hoy-dec-b{margin-top:var(--sp-4)}
+.hoy-dec-b h3{font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2);margin:0 0 6px}
+.hoy-dec-ap{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-dec-n{margin:var(--sp-3) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-enl{display:flex;flex-wrap:wrap;gap:0 var(--sp-3);margin-top:var(--sp-2)}
+.hoy-enl a{display:inline-flex;align-items:center;min-height:var(--tap);font-weight:var(--fw-semi);font-size:var(--fs-sm)}
+#hoy-decide .aviso{margin:0}
+#hoy-decide .aviso b{display:block}
+
+/* H-3 y H-4 */
+.hoy-noche{display:flex;align-items:center;gap:var(--sp-3);padding:var(--sp-3) var(--sp-4);border-radius:var(--r-md);background:var(--surface-2);margin-bottom:var(--sp-4)}
+.hoy-noche .icon{color:var(--text-3)}
+.hoy-noche p{margin:0} .hoy-noche small{display:block;color:var(--text-3);font-size:var(--fs-xs)}
+.hoy-pend a,#hoy-pend a{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 var(--sp-4);border-radius:var(--r-md);
+  border:1px solid var(--border);background:var(--surface);color:var(--primary);font-weight:var(--fw-semi);text-decoration:none}
+
+/* ---------- modo pista y gimnasio (dentro de #focus) ---------- */
+.hoy-fz{display:grid;gap:var(--sp-3);padding-bottom:var(--sp-6)}
+.hoy-fz .focus-k{margin:var(--sp-2) 0 0}
+.hoy-fz .big{margin:0}
+.hoy-fz-l{margin:0;color:var(--text-2);font-size:var(--fs-sm)}
+.hoy-fz .aviso{margin:0}
+.hoy-fz .rep-btns button small{display:block;margin-top:4px}
+.hoy-fz-ctl{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2)}
+.hoy-fz-ctl .btn{min-height:56px}
+.hoy-fz-tr button{min-height:56px}
+.hoy-fz-hist{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.hoy-fz-hist li{display:inline-flex;align-items:center;gap:4px;height:28px;padding:0 10px;border-radius:var(--r-pill);background:var(--surface-2);color:var(--text-2);font-size:var(--fs-sm);font-weight:var(--fw-semi);font-variant-numeric:tabular-nums}
+.hoy-fz-hist li.ok{background:var(--ok-soft);color:var(--ok)} .hoy-fz-hist li.warn{background:var(--warn-soft);color:var(--warn)} .hoy-fz-hist li.bad{background:var(--bad-soft);color:var(--bad)}
+.hoy-fz-t{display:grid;gap:var(--sp-2);justify-items:start}
+.hoy-fz-t output{cursor:text}
+.hoy-fz-t input{height:64px;width:160px;font:var(--fw-bold) var(--fs-2xl)/1 var(--font);text-align:center;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text)}
+.hoy-fz-dos{position:fixed;inset:0;z-index:84;display:flex;align-items:center;justify-content:center;padding:var(--gutter);background:var(--bg)}
+.hoy-fz-dos .aviso{max-width:560px;font-size:var(--fs-lg);flex-direction:column}
+.hoy-fz-dos .aviso .icon{width:40px;height:40px;color:var(--bad)}
+.hoy-fz-dos .hoy-fz-bb{display:grid;gap:var(--sp-2);width:100%;margin-top:var(--sp-3)}
+.hoy-fz-card{border:1px solid var(--border);border-radius:var(--r-md);background:var(--surface);padding:var(--sp-4)}
+.hoy-fz-card.act{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.hoy-fz-card h3{font-size:var(--fs-lg);margin:0 0 var(--sp-2)}
+.hoy-fz-card p{margin:0 0 var(--sp-2);color:var(--text-2);font-size:var(--fs-sm)}
+.hoy-fz-par{display:grid;grid-template-columns:repeat(auto-fit,minmax(88px,1fr));gap:var(--sp-2)}
+.hoy-fz-par label{display:grid;gap:2px;font-size:var(--fs-xs);color:var(--text-3)}
+.hoy-fz-par input{height:var(--tap);min-width:0;width:100%;padding:0 8px;font:var(--fw-semi) var(--fs-md)/1 var(--font);font-variant-numeric:tabular-nums;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text)}
+.hoy-gb{border:1px solid var(--border);border-radius:var(--r-md);background:var(--surface);padding:var(--sp-3) var(--sp-4)}
+.hoy-gb h3{font-size:var(--fs-lg);margin:0 0 var(--sp-2)}
+.hoy-gb .chips{margin-bottom:var(--sp-2)}
+.hoy-circ{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.hoy-circ button{width:44px;height:44px;border-radius:50%;border:2px solid var(--border-strong);background:var(--surface);color:var(--text-2);
+  font:var(--fw-semi) var(--fs-xs)/1 var(--font);cursor:pointer;display:grid;place-items:center;padding:0}
+.hoy-circ button[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.hoy-gb .hoy-rec{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+/* M8: separación entre la nota de la A y los círculos (el anillo de foco tocaba el texto) */
+.hoy-gb .hoy-rec+.hoy-circ{margin-top:var(--sp-3)}
+.hoy-gtimer{position:sticky;top:0;z-index:2;background:var(--bg);padding:var(--sp-2) 0;display:grid;gap:var(--sp-2)}
+.hoy-gtimer .big{font-size:56px}
+.hoy-fz-fin{display:grid;gap:var(--sp-3)}
+.hoy-fz-fin .stepper{justify-self:start}
+
+/* ---------- hoja «Cómo fue» ---------- */
+.hoy-fue{display:grid;gap:var(--sp-4)}
+.hoy-fue .aviso{margin:0}
+.hoy-fue-c{display:grid;gap:6px}
+.hoy-fue-c>label,.hoy-fue-c>.hoy-fue-t{font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.hoy-fue textarea{width:100%;min-height:64px;padding:10px 12px;font:var(--fw-reg) var(--fs-md)/1.4 var(--font);border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text);resize:vertical}
+.hoy-fue input[type=text]{height:var(--tap);width:100%;padding:0 12px;font:var(--fw-semi) var(--fs-md)/1 var(--font);font-variant-numeric:tabular-nums;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text)}
+.hoy-fue-rep{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:var(--sp-2)}
+.hoy-fue-rep>span{font-size:var(--fs-sm);color:var(--text-2);font-variant-numeric:tabular-nums;min-width:56px}
+.hoy-fue-st{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+.hoy-fue-st>div{display:grid;gap:4px;font-size:var(--fs-sm);color:var(--text-2)}
+.hoy-copia{margin:0;padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2);font:var(--fw-reg) var(--fs-sm)/1.45 var(--font);white-space:pre-wrap;overflow-wrap:anywhere}
+.hoy-fue-pie{margin:0;color:var(--text-3);font-size:var(--fs-xs)}
+.hoy-mini{margin-top:var(--sp-2)}
+.hoy-mini svg{display:block;overflow:visible}
+.hoy-mini text{font-family:var(--font);font-size:12px;fill:var(--text-3);font-variant-numeric:tabular-nums}
+.hoy-mini .hoy-mini-e{fill:var(--bad);font-weight:var(--fw-semi)}
+.hoy-mini .hoy-mini-m{fill:var(--text);font-weight:var(--fw-semi)}
+
+/* ---------- añadidos: volver a hoy, pie con franja, hoja y modo ---------- */
+.hoy-volver{display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap}
+.hoy-volver a.chip{height:var(--tap);padding:0 14px}
+.hoy-volver span{color:var(--text-2);font-size:var(--fs-sm)}
+.hoy-card>.card-f:not(:last-child){margin-bottom:0}
+.hoy-card>.card-f+.franja{margin-top:0}
+.hoy-fz-crit{margin:0;padding-left:18px;color:var(--text-2);font-size:var(--fs-sm)}
+.hoy-fz-crit li+li{margin-top:4px}
+.hoy-dec-av{margin-top:var(--sp-3)}
+.hoy-fue-rep{grid-template-columns:auto minmax(0,1fr) 76px}
+.hoy-fue-rep .seg button{padding:0 2px}
+.hoy-fue-rep input[type=text]{padding:0 6px;text-align:center}
+.hoy-fue-a{display:grid;grid-template-columns:repeat(auto-fit,minmax(44px,1fr));gap:var(--sp-2)}
+.hoy-fue-a input[type=text]{text-align:center;padding:0}
+.hoy-fue .hoy-linea{margin:0}
+.hoy-fz .hoy-enl{margin:0}
+.hoy-card .card-h .t{flex:1 1 auto}
+.hoy-vchip{margin-top:6px;display:flex;flex-wrap:wrap;gap:6px}
+/* el modo pista es una columna flexible con desplazamiento: sin esto, la cabecera encoge y el título se monta */
+#focus>.focus-h,#focus>.focus-nota,#focus>.focus-b{flex-shrink:0}
+.hoy-fz-card p.big{font:var(--fw-bold) 56px/1 var(--font);color:var(--text);margin:var(--sp-2) 0}
+.hoy-fue .chips button.chip{min-width:var(--tap);justify-content:center}
+.hoy-fue-rep{grid-template-columns:auto minmax(0,1fr) 60px}
+.hoy-fue-rep>span{min-width:0}
+.hoy-fue-rep .seg button{min-width:44px}
+.focus .big.hoy-rg{font-size:var(--fs-3xl)}
+.hoy-pasos .ex .tags .chip,.hoy-gb .chips .chip{height:auto;min-height:28px;max-width:100%;white-space:normal;line-height:1.25;padding-top:4px;padding-bottom:4px}

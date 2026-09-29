@@ -1,0 +1,243 @@
+/* 50_tecnica.css · M5 · Técnica (§5.4). build.py lo envuelve en @layer modulos.
+   Todo con prefijo te-. Las herramientas T7 (.te-dom) y T8 (.te-cir) también se pintan en Hoy y en la hoja
+   «Cómo fue», así que su CSS no depende de #v-tecnica. Colores solo con variables (§4.2). */
+
+/* ---------- cabecera: las tres pruebas en orden (#te-pruebas, N4) ---------- */
+#te-pruebas{margin-top:2px}
+.te-pr-l{margin:0;color:var(--text-2);font-size:var(--fs-sm);line-height:var(--tap)}
+.te-pr{display:inline-block;min-height:var(--tap);min-width:var(--tap);padding:0 6px;border-radius:var(--r-sm);white-space:nowrap;
+  color:var(--primary);font-weight:var(--fw-semi);text-decoration:none}
+.te-pr .icon{display:inline-block;width:20px;height:20px;vertical-align:-5px;margin-right:6px}
+.te-pr-f{color:var(--text-3)}
+.te-pr-g{white-space:nowrap} /* M8: flecha y prueba siguiente en la misma línea */
+.te-pr-n{margin:2px 0 0;font-size:var(--fs-sm);color:var(--text-3);line-height:1.45}
+
+/* ---------- secciones y tarjetas de la vista ---------- */
+#v-tecnica .te-sec{margin-top:var(--sp-8)}
+#v-tecnica .te-sec:first-child{margin-top:var(--sp-2)}
+.te-st{margin:0 0 var(--sp-3)}
+.te-st h2{font-size:var(--fs-xl);font-weight:var(--fw-bold)}
+.te-st p{margin:4px 0 0;color:var(--text-2);font-size:var(--fs-sm)}
+.te .card-h .t h3,.te-card-h3{margin:0;font-size:var(--fs-lg);font-weight:var(--fw-bold);line-height:1.3}
+.te .card-h .t small{display:block;color:var(--text-3);font-size:var(--fs-sm)}
+.te .card-h .ic b{font:var(--fw-bold) var(--fs-lg)/1 var(--font)}
+.te h4{margin:var(--sp-4) 0 var(--sp-1);font-size:var(--fs-md);font-weight:var(--fw-bold)}
+.te p{line-height:1.5}
+.te .faint{color:var(--text-3);font-size:var(--fs-sm)}
+.te-g2{display:block}
+@media (min-width:1024px){
+  .te-g2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--sp-6);align-items:start;margin-bottom:var(--sp-6)}
+  .te-g2>.card{margin:0}
+}
+.te-link{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin:var(--sp-2) 0 0}
+.te-clave{display:flex;gap:var(--sp-2);align-items:flex-start;margin:var(--sp-3) 0 0;padding:var(--sp-3);border-radius:var(--r-sm);
+  background:var(--primary-soft);color:var(--text);font-weight:var(--fw-semi)}
+.te-clave .icon{color:var(--primary);margin-top:1px}
+.te-oblig{display:flex;gap:var(--sp-2);align-items:flex-start;margin:var(--sp-3) 0 0;padding:var(--sp-3);border-radius:var(--r-sm);
+  background:var(--warn-soft);color:var(--text);font-size:var(--fs-sm)}
+.te-oblig .icon{color:var(--warn);flex:none}
+.te-nota{margin:0 0 var(--sp-3);color:var(--text-2);font-size:var(--fs-sm)}
+.te .acc.why{margin-top:var(--sp-3)}
+.te .acc.why>summary .chip{margin-left:4px}
+.te .acc .in>p:last-child{margin-bottom:0}
+.te-foco{animation:te-foco 1.4s var(--ease)}
+@keyframes te-foco{0%,40%{box-shadow:0 0 0 3px var(--primary)}100%{box-shadow:var(--sh-1)}}
+
+/* listas de técnica (3 visibles y «Más») */
+ol.te-tec{margin:var(--sp-2) 0 0;padding-left:1.5em;display:grid;gap:6px}
+ol.te-tec li{padding-left:2px}
+ol.te-tec li::marker{color:var(--text-3);font-weight:var(--fw-semi);font-variant-numeric:tabular-nums}
+details.te-mas>summary{list-style:none;display:inline-flex;align-items:center;gap:6px;min-height:var(--tap);cursor:pointer;
+  color:var(--primary);font-weight:var(--fw-semi);font-size:var(--fs-sm)}
+details.te-mas>summary::-webkit-details-marker{display:none}
+details.te-mas>summary .icon{width:18px;height:18px;transition:transform var(--dur-2) var(--ease)}
+details.te-mas[open]>summary .icon{transform:rotate(180deg)}
+details.te-mas>ol.te-tec{margin-top:0}
+
+/* clave-valor apilada en móvil */
+.te-kv{display:grid;grid-template-columns:minmax(0,1fr);margin:0}
+.te-kv dt{margin:var(--sp-3) 0 2px;font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-3)}
+.te-kv dt:first-child{margin-top:0}
+.te-kv dd{margin:0}
+.te-kv dd .chip{margin-top:6px}
+@media (min-width:600px){
+  .te-kv{grid-template-columns:minmax(150px,max-content) minmax(0,1fr);column-gap:0}
+  .te-kv dt{padding-right:var(--sp-5)!important}
+  .te-kv dt,.te-kv dd{margin:0;padding:var(--sp-3) 0;border-top:1px solid var(--border)}
+  .te-kv dt:first-of-type,.te-kv dd:first-of-type{border-top:0;padding-top:0}
+}
+
+/* ---------- TE-1 · lámina, reglas y escalera del lastre (G15) ---------- */
+/* móvil: el orden de la especificación (contador, escalera, reglas, prep-hombro); escritorio: los cortos arriba */
+.te-dom-g{display:block}
+@media (min-width:1024px){
+  .te-dom-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--sp-6);align-items:start;margin-bottom:var(--sp-6)}
+  .te-dom-g>*{margin:0}
+  .te-dom-g>#te-contador{order:1} .te-dom-g>.te-dom-prep{order:2} .te-dom-g>#te-lastre{order:3} .te-dom-g>#te-reglas{order:4}
+  .te-dom-prep>.card{margin-top:0}
+  /* láminas en escritorio: los paneles 2 × 2 a la izquierda y la leyenda (la lista) al lado */
+  #te-lamina .ill-lamina,.te-ej.ancha .ill-lamina{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);column-gap:var(--sp-6);align-items:start}
+  #te-lamina .ill-lamina>:not(.ill-car):not(.ill-ley):not(.ill-dots),.te-ej.ancha .ill-lamina>:not(.ill-car):not(.ill-ley):not(.ill-dots){grid-column:1/-1}
+  #te-lamina .ill-ley,.te-ej.ancha .ill-ley{grid-template-columns:minmax(0,1fr);margin-top:0}
+}
+#te-expectativa{margin:0 0 var(--sp-3)}
+#te-expectativa .acc.why{margin-top:0}
+ol.te-tec li>b{font-weight:var(--fw-bold)}
+.te-lam .te-clave{margin:0 0 var(--sp-3)}
+.te-reglas .rule h3{font-size:var(--fs-md);font-weight:var(--fw-bold);line-height:1.35}
+.te-reglas .rule p{margin:var(--sp-1) 0 0}
+.te-reglas .rule .num{display:inline-grid;place-items:center;min-width:24px;height:24px;margin-right:8px;border-radius:12px;
+  background:var(--surface-2);color:var(--text-2);font-size:var(--fs-xs);font-weight:var(--fw-bold);vertical-align:1px}
+
+.te-esc{list-style:none;margin:0;padding:0;display:grid;gap:var(--sp-2)}
+.te-esc>li{position:relative;margin-left:calc(min(var(--n,0),5) * 6px);padding:var(--sp-3);border:1px solid var(--border);
+  border-left:4px solid var(--s2);border-radius:var(--r-sm);background:var(--surface)}
+.te-esc>li.pasada{border-left-color:var(--border-strong);background:var(--surface-2);color:var(--text-3)}
+.te-esc>li.pasada .te-esc-p{color:var(--text-2)}
+.te-esc>li.ahora{border-color:var(--primary);border-left-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.te-esc-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-bottom:6px}
+.te-esc-h b{font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+.te-esc-p{margin:0 0 2px;font:var(--fw-bold) var(--fs-lg)/1.25 var(--font);font-variant-numeric:tabular-nums}
+.te-esc-f{margin:0;font-size:var(--fs-sm);line-height:1.45}
+.te-esc-x{margin:6px 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.te-esc>li.pasada .te-esc-x{color:var(--text-3)}
+.te-esc .acc.why{margin:var(--sp-2) 0 0}
+.te-esc .acc.why>summary{min-height:var(--tap)}
+
+/* ---------- T7 · contador de dominadas válidas ---------- */
+.te-dom .seg{margin-bottom:var(--sp-3)}
+.te-dom-b{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2);margin:0 0 var(--sp-3)}
+.te-big{min-height:56px;padding:0 var(--sp-3);border-radius:var(--r-sm);border:2px solid transparent;display:flex;align-items:center;justify-content:center;gap:8px;
+  font:var(--fw-bold) var(--fs-lg)/1.1 var(--font);cursor:pointer;transition:transform var(--dur-1) var(--ease)}
+.te-big:active{transform:scale(.97)}
+.te-big.ok{background:var(--ok-soft);color:var(--ok)}
+.te-big.bad{background:var(--bad-soft);color:var(--bad)}
+.te-big[aria-expanded="true"]{border-color:var(--bad)}
+.te-dom-n{display:grid;gap:var(--sp-2);margin:0 0 var(--sp-3)}
+.te-dom-n>p{margin:0;font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.te-dom-n button{min-height:56px;display:grid;grid-template-columns:28px minmax(0,1fr);align-items:center;gap:10px;padding:6px 12px;text-align:left;
+  border:1px solid var(--border-strong);border-left:4px solid var(--bad);border-radius:var(--r-sm);background:var(--surface);color:var(--text);
+  font:var(--fw-reg) var(--fs-sm)/1.35 var(--font);cursor:pointer}
+.te-dom-n button b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--text);color:var(--surface);font-size:var(--fs-sm)}
+.te-tira{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 var(--sp-3);padding:0}
+.te-tira li{display:inline-flex;align-items:center;gap:4px;height:30px;padding:0 10px;border-radius:var(--r-pill);font-size:var(--fs-sm);
+  font-weight:var(--fw-semi);font-variant-numeric:tabular-nums}
+.te-tira li.v{background:var(--ok-soft);color:var(--ok)}
+.te-tira li.n{background:var(--bad-soft);color:var(--bad)}
+.te-tira .icon{width:16px;height:16px}
+.te-tira li.vacia{background:none;color:var(--text-3);padding:0;font-weight:var(--fw-reg)}
+.te-dom .stats{margin-bottom:var(--sp-2)}
+.te-dom .stat b.elim{color:var(--bad)}
+.te-dom-mas{margin:0 0 var(--sp-3);font-size:var(--fs-sm);color:var(--text-2)}
+.te-dec{margin:var(--sp-3) 0;padding-top:var(--sp-3);border-top:1px solid var(--border)}
+.te-dec>h4{margin:0 0 var(--sp-2)}
+.te-aparte{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.te-acc{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:var(--sp-3)}
+.te-conf{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2);padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2);font-size:var(--fs-sm)}
+.te-conf>span{flex:1 1 160px}
+
+/* ---------- T6 · reparto del 1.000 y carrera fantasma ---------- */
+.te-rp .chips{margin:0 0 var(--sp-4)}
+.te-rp-g{display:grid;gap:var(--sp-4)}
+@media (min-width:768px){.te-rp-g{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--sp-6)}}
+.te-rp-ed{display:grid;gap:6px;align-content:start}
+.te-rp-ed>p{margin:0 0 2px;font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.te-rp-row{display:grid;grid-template-columns:minmax(76px,1fr) auto;align-items:center;gap:var(--sp-2)}
+@media (min-width:768px){.te-rp-row{grid-template-columns:96px auto;justify-content:start}}
+.te-el{color:var(--elim)}
+.te-rp-row>span{font-size:var(--fs-sm);color:var(--text-2);font-variant-numeric:tabular-nums}
+.stepper.te-stp{grid-template-columns:var(--tap) 76px var(--tap)}
+.stepper input{width:100%;min-width:0;height:var(--tap);border:0;background:transparent;text-align:center;color:var(--text);
+  font:var(--fw-bold) var(--fs-lg)/1 var(--font);font-variant-numeric:tabular-nums;padding:0}
+.stepper input:focus-visible{outline:2px solid var(--primary);outline-offset:-2px}
+.te-rp .stats{margin-bottom:var(--sp-3)}
+.te-rp .stat b.elim{color:var(--bad)}
+.te-rp-t th.elim,.te-rp-t td.elim{color:var(--elim)}
+.te-rp-t td,.te-rp-t th{text-align:right}
+.te-rp-t td:first-child,.te-rp-t th:first-child{text-align:left}
+.te-rp-av{display:grid;gap:var(--sp-2);margin-top:var(--sp-3)}
+.te-rp-av .aviso{margin:0}
+.te-rp-av .chip,.te-aparte .chip,.te-cir-sec .chip{height:auto;min-height:28px;padding:4px 10px;white-space:normal;line-height:1.3}
+.te-fant{margin:var(--sp-4) 0 0}
+.te-fant-c{min-height:172px}
+.te-fant svg{display:block;overflow:visible}
+.te-fant svg text{font-family:var(--font);font-size:12px;font-variant-numeric:tabular-nums;fill:var(--text-2)}
+.te-fant svg text.lab{font-weight:var(--fw-semi);fill:var(--text)}
+.te-fant svg text.elim{font-weight:var(--fw-semi);fill:var(--elim)}
+.te-fant .calle{fill:var(--ill-pista)}
+.te-fant .eje{stroke:var(--border-strong);stroke-width:1}
+.te-fant .meta{stroke:var(--text);stroke-width:2;stroke-dasharray:3 3}
+.te-fant .l349{stroke:var(--elim);stroke-width:2}
+.te-fant-b{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2)}
+.te-fant-b small{color:var(--text-3);font-size:var(--fs-xs)}
+
+/* ---------- T8 · registro del circuito (también en la tarjeta del jueves en Hoy) ---------- */
+.te-cir{display:grid;gap:var(--sp-3)}
+.te-cir-i{display:grid;gap:6px;padding-bottom:var(--sp-3);border-bottom:1px solid var(--border)}
+.te-cir-l{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);font-weight:var(--fw-semi);font-size:var(--fs-sm)}
+.te-cir-l button.chip{height:var(--tap);min-width:72px;justify-content:center;background:var(--surface-2);color:var(--text-2);border:1px solid var(--border-strong)}
+.te-cir-l button.chip[aria-pressed="true"]{background:var(--bad-soft);color:var(--bad);border-color:var(--bad)}
+.te-cir-r{display:grid;grid-template-columns:var(--tap) minmax(56px,1fr) var(--tap) minmax(56px,auto);gap:6px;align-items:center}
+.te-pm{height:var(--tap);min-width:var(--tap);padding:0 4px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);
+  color:var(--text);font:var(--fw-semi) var(--fs-sm)/1 var(--font);font-variant-numeric:tabular-nums;cursor:pointer}
+.te-in{height:var(--tap);width:100%;min-width:0;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);
+  color:var(--text);font:var(--fw-reg) var(--fs-md)/1 var(--font)}
+.te-in.t{font:var(--fw-bold) var(--fs-lg)/1 var(--font);font-variant-numeric:tabular-nums;text-align:center;padding:0 6px}
+.te-in[aria-invalid="true"]{border-color:var(--bad)}
+.te-cir .dv{font-style:normal;font-weight:var(--fw-semi);font-size:var(--fs-sm);text-align:right;color:var(--text-2);font-variant-numeric:tabular-nums}
+.te-cir .dv.bad{color:var(--bad)}
+.te-quien{display:grid;gap:6px;font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.te-cir-sue{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0;font-size:var(--fs-sm);color:var(--text-2)}
+.te-cir-out .stats{margin-bottom:var(--sp-3)}
+.te-cir-out .stat small{display:block;font-size:var(--fs-sm);color:var(--text-2)}
+.te-cir-out .stat b.elim{color:var(--bad)}
+.te-cir-sec{display:grid;gap:4px;margin:0;padding:0;list-style:none;font-size:var(--fs-sm)}
+.te-cir-sec li{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;padding:6px 0;border-top:1px solid var(--border)}
+.te-cir-sec li:first-child{border-top:0}
+.te-cir-sec b{font-variant-numeric:tabular-nums}
+.te-cir-sec .n{color:var(--bad);font-weight:var(--fw-semi)}
+.te-cir-sec .nh{color:var(--warn);font-weight:var(--fw-semi)}
+.te-cir-sec .te-cir-x{flex-basis:100%;color:var(--text-2)}
+.te-pm[disabled]{opacity:.45;cursor:default}
+.te-valla{margin:0 0 var(--sp-2)}
+
+/* ---------- TE-4 y TE-5 · fichas ---------- */
+.te-fichas{display:grid;gap:0}
+@media (min-width:768px){
+  .te-fichas{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--sp-4);align-items:start}
+  .te-fichas>.te-ej.ancha,.te-fichas>.te-sub{grid-column:1/-1}
+}
+@media (min-width:1024px){.te-fichas{column-gap:var(--sp-6)}}
+.te-sub{margin:var(--sp-4) 0 var(--sp-3)}
+@media (min-width:768px){.te-fichas>.te-mini{grid-column:1/-1}}
+.te-sub h3{font-size:var(--fs-lg);font-weight:var(--fw-bold)}
+.te-sub p{margin:2px 0 0;font-size:var(--fs-sm);color:var(--text-3)}
+.te-ej .chips{margin:0 0 var(--sp-2)}
+.te-ej .te-lamh{margin-top:var(--sp-3)}
+.te-ej-f{display:flex;flex-wrap:wrap;gap:var(--sp-2);margin-top:var(--sp-3)}
+.te-ej-f .btn{min-height:var(--tap)}
+.te-ej .te-para{margin:0 0 var(--sp-2);font-size:var(--fs-sm);color:var(--text-2)}
+.te-aviso-ej{margin:var(--sp-2) 0 0;padding:var(--sp-2) var(--sp-3);border-left:3px solid var(--primary);background:var(--primary-soft);
+  border-radius:0 var(--r-xs) var(--r-xs) 0;font-size:var(--fs-sm)}
+.te-mini{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2) var(--sp-3)}
+.te-mini p{margin:0;flex:1 1 200px}
+
+/* calentamiento como línea temporal */
+.te .tl{margin-top:var(--sp-2)}
+.te .tl li{padding-bottom:var(--sp-4)}
+.te .tl li p.te-paso{margin:0;color:var(--text);font-size:var(--fs-md);line-height:1.45}
+.te .tl li p.te-paso b{font-weight:var(--fw-bold)}
+.te .tl li .te-oblig{margin-top:var(--sp-2)}
+.te .tl li .btn{margin-top:4px}
+
+/* reloj: qué programar en cada sesión */
+.te-prog{display:grid;gap:0;margin:var(--sp-3) 0 0;padding:0;list-style:none}
+.te-prog>li{padding:var(--sp-3) 0;border-top:1px solid var(--border)}
+.te-prog>li:first-child{border-top:0;padding-top:0}
+.te-prog h4{margin:0}
+.te-prog small{display:block;color:var(--text-3);font-size:var(--fs-sm)}
+.te-prog ul{margin:6px 0 0;padding-left:1.2em;display:grid;gap:4px;font-size:var(--fs-sm)}
+
+@media print{
+  .te-fant-b,.te-dom-b,.te-dom-n,.te-acc,.te-pm{display:none!important}
+}

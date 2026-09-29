@@ -1,0 +1,457 @@
+{
+  "_nota": "Frases clave por ID del inventario (§10.5 M1 y criterio global 5 de §10.6). Cada ID con eliminado:false de inventario_ids.json tiene de 1 a 3 frases literales que la web nueva tiene que pintar en el texto (innerText) de alguna de las cinco vistas con ?qa=1&abrir=1, con ?hoy=2026-09-29 y a 1280 px (a esa anchura el calendario rotula los días). Se comparan sin distinguir mayúsculas y con los espacios normalizados (también el no separable). Salen de plan.json, historial.json, web.json, el corpus congelado de la web antigua o los textos fijos de la especificación (Anexo C, §3.2, §5). C1 (marca de la barra de escritorio, fuera de las vistas), C6 (<head>) y C7 (@media print) no tienen texto dentro de las vistas: su lista va vacía y se comprueban por su data-inv y por el CSS. Las de «Cádiz · ≥ 27 días» y «martes 29 de septiembre» dependen de la fecha: valen con hoy=2026-09-29. La comparación recomendada es sin distinguir mayúsculas (text-transform cambia el innerText); todas están escritas con las mayúsculas exactas de su fuente.",
+  "C1": [],
+  "C2": [
+    "Cádiz · ≥ 27 días"
+  ],
+  "C3": [
+    "4,67 · no apto",
+    "3:49 o más elimina"
+  ],
+  "C4": [
+    "Técnica",
+    "Marcas"
+  ],
+  "C5": [
+    "Datos hasta",
+    "construido"
+  ],
+  "C6": [],
+  "C7": [],
+  "D1": [
+    "Tu pauta con la nutricionista. Aquí no se modifica.",
+    "Dieta"
+  ],
+  "D2": [
+    "Calorías",
+    "trabaja con 130–145 g de proteína al día"
+  ],
+  "D3": [
+    "Lun",
+    "Dom"
+  ],
+  "D4": [
+    "Día de calidad · gofio a 40 g",
+    "Añadir post-entreno"
+  ],
+  "D5": [
+    "Cantidades originales"
+  ],
+  "D6": [
+    "Marcar día como hecho"
+  ],
+  "D7": [
+    "Comida",
+    "Cena"
+  ],
+  "D8": [
+    "Desayuno",
+    "Merienda"
+  ],
+  "D9": [
+    "Proteína",
+    "Hidratos"
+  ],
+  "D10": [
+    "Podrías añadir"
+  ],
+  "D11": [
+    "añadir algo que hayas comido"
+  ],
+  "D12": [
+    "Cómo se cocina"
+  ],
+  "D13": [
+    "Valores aproximados. Pesos en crudo."
+  ],
+  "D14": [
+    "Alrededor del entreno",
+    "Sin cafeína después de las 14:00"
+  ],
+  "E1": [
+    "Dominadas lastradas",
+    "Jalón al pecho"
+  ],
+  "E2": [
+    "Si falta tiempo: A, H, B, D y a casa",
+    "H (glúteo medio) va JUSTO DESPUÉS de A"
+  ],
+  "E3": [
+    "Gimnasio del Arsenal: tirón, piernas y core",
+    "Calidad 2: kilómetro partido o series largas"
+  ],
+  "E5": [
+    "Es el orden del examen: llegas a la carrera con dorsales y antebrazo cargados",
+    "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso)"
+  ],
+  "E7": [
+    "Cronometrar como el examen: voz de «ya» hasta el pie en el suelo tras la última valla",
+    "el mejor es el techo"
+  ],
+  "E8": [
+    "Solo el circuito y fresco. Nada de piernas por la mañana"
+  ],
+  "E9": [
+    "Elevación de talón a una pierna",
+    "Saltos al cajón"
+  ],
+  "E10": [
+    "El 3-10 y el 17-10, sesión corta de barra (unos 20 min) ANTES del rodaje",
+    "Antepié en el borde de un escalón"
+  ],
+  "E11": [
+    "La barbilla debe superar claramente la barra, quedando ésta a la altura del tercio inferior del cuello",
+    "Se deberá realizar una mínima pausa entre cada repetición"
+  ],
+  "E12": [
+    "3 × 5 dominadas dentro del calentamiento",
+    "Único día con lastre"
+  ],
+  "E13": [
+    "4 × 3. El peso lo decide la quinta serie del 6",
+    "Nunca un salto de 5 kg"
+  ],
+  "E14": [
+    "Tres minutos de descanso, sin excepciones",
+    "Nunca al fallo con lastre"
+  ],
+  "E15": [
+    "Escalera con 10 kg"
+  ],
+  "E16": [
+    "Trote suave 12-15 min GOBERNADO POR PULSO",
+    "Trote muy suave + 3–4 min de estiramiento"
+  ],
+  "E17": [
+    "Tira llevando los codos hacia las costillas y el pecho hacia la barra, no la barbilla",
+    "Agarre pronado, palmas al frente, manos algo más anchas que los hombros"
+  ],
+  "E18": [
+    "Muslos fijados bajo el rodillo",
+    "Agarre pronado, algo más ancho que los hombros"
+  ],
+  "E19": [
+    "Pies a la anchura de la cadera, rodillas ligeramente flexionadas",
+    "Bisagra de cadera —culo atrás, espalda neutra—"
+  ],
+  "E20": [
+    "Barra apoyada en la parte alta de la espalda, sobre el trapecio. Nunca en el cuello.",
+    "De pie con la barra, rodillas ligeramente flexionadas y fijas durante todo el movimiento"
+  ],
+  "E21": [
+    "Plancha lateral con elevación 10 POR LADO",
+    "Brazos extendidos, hombros abajo, no encogidos hacia las orejas"
+  ],
+  "E22": [
+    "Baja el talón todo lo que puedas y aguanta 1 segundo abajo",
+    "Cajón a una altura que puedas aterrizar cómodo, 40–50 cm"
+  ],
+  "E23": [
+    "Aceleraciones de 80–100 m que van de menos a más",
+    "Primera mitad y segunda mitad al mismo tiempo"
+  ],
+  "E26": [
+    "Vídeo"
+  ],
+  "E28": [
+    "Crear una sesión de entrenamiento",
+    "Enviar al dispositivo"
+  ],
+  "E30": [
+    "repeticiones por distancia y desactivar el Auto Lap",
+    "No hace falta reconfigurarlo"
+  ],
+  "E31": [
+    "Repeticiones estructuradas",
+    "El reloj guarda solo una sesión de este tipo"
+  ],
+  "E32": [
+    "No pongas alerta de ritmo en los rodajes",
+    "Sonido y vibración"
+  ],
+  "E33": [
+    "Comprueba que no estás doblando plantilla",
+    "Las elevaciones de talón pasan a ser innegociables"
+  ],
+  "E34": [
+    "Resuelto: lo tiene el instructor",
+    "Exportar original"
+  ],
+  "G1": [
+    "Con las marcas de hoy no apruebas: 4,67",
+    "autoinformado",
+    "al 60 %"
+  ],
+  "G2": [
+    "Velocidad de sobra, falta sostenerla.",
+    "El tramo del metro 600 al 1.000"
+  ],
+  "G3": [
+    "Ver estimaciones"
+  ],
+  "G4": [
+    "Sueño"
+  ],
+  "G6": [
+    "Barra"
+  ],
+  "G7": [
+    "Carga"
+  ],
+  "G8": [
+    "1.000 ≤ 3:33 con reparto plano",
+    "acabar con sensación de sobra"
+  ],
+  "G9": [
+    "se fijan tres cosas: misma hora, misma pista con el perímetro ya medido, y vídeo de las dominadas"
+  ],
+  "G10": [
+    "el número equivocado era el del plan",
+    "Eso no es el perfil de alguien fundido"
+  ],
+  "G11": [
+    "MEDIDO, ya no es estimación"
+  ],
+  "G12": [
+    "6 × 400 m, rec. 90 s · pista de atletismo de Arucas (complejo Tonono)",
+    "Subida a Teror (día de descanso)"
+  ],
+  "G13": [
+    "Arsenal · sesión de fuerza A–G",
+    "CONTROL · una serie al máximo"
+  ],
+  "G14": [
+    "El 11-9 otra báscula dio 67,4 kg y 14,3 % de grasa. No es comparable con esta serie.",
+    "Composición con la Tanita del dietista"
+  ],
+  "H2": [
+    "Trabajo específico",
+    "Arsenal: sesión completa"
+  ],
+  "H3": [
+    "Kilómetro partido × 2"
+  ],
+  "H4": [
+    "Hoy haces:",
+    "Cómo fue"
+  ],
+  "H5": [
+    "¿Cómo has dormido? (Garmin, sin la siesta)",
+    "Reloj normal · sin síntomas · sin dolor"
+  ],
+  "H6": [
+    "Hacer 13 por tu cuenta para que el tribunal cuente 12",
+    "9-13 válidas el día de la prueba, centro 11-12"
+  ],
+  "H7": [
+    "Diagnóstico del control",
+    "Control en San Cristóbal"
+  ],
+  "H8": [
+    "Con las marcas de hoy no apruebas: 4,67",
+    "NO APTO"
+  ],
+  "H9": [
+    "Realista",
+    "Partiendo del escenario realista (3:34 · 12 dominadas · 9,0 s)"
+  ],
+  "H10": [
+    "Cuánto aguanta el escenario realista",
+    "3:37 + 11 dominadas + 9,8 s = 4,33. Hace falta que fallen las tres a la vez."
+  ],
+  "H11": [
+    "Todo esto descansa sobre un número que no existe",
+    "El circuito del 24 no se hizo"
+  ],
+  "H16": [
+    "Confirmar que la pista de Arucas es de 400 m",
+    "Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT."
+  ],
+  "N1": [
+    "Marcas de hoy",
+    "La nota física es la media de las tres pruebas"
+  ],
+  "N2": [
+    "Objetivo nuevo",
+    "Con el kilómetro bajado"
+  ],
+  "N3": [
+    "siguiente punto:",
+    "para el 5,00:"
+  ],
+  "N4": [
+    "El día de la prueba: circuito → dominadas → 1.000 m",
+    "En barra y en los 1.000 metros tienes un único intento"
+  ],
+  "N5": [
+    "Baremo completo, hombres",
+    "BOE-A-2026-15055"
+  ],
+  "N6": [
+    "Cádiz está al nivel del mar",
+    "templado y húmedo"
+  ],
+  "N7": [
+    "Superficie de tartán. Prohibido correr descalzo o con clavos.",
+    "Si pasas el 600 por delante de 2:05, has salido demasiado rápido"
+  ],
+  "P1": [
+    "Tres días de carrera, uno de fuerza y uno de circuito",
+    "Rodaje largo, control o simulacro"
+  ],
+  "P2": [
+    "Circuito con el preparador a las 21:30",
+    "18:00-19:30 (el Arsenal abre hasta las 22:00)"
+  ],
+  "P4": [
+    "≥203 con banda en la sexta serie de 6 × 400 el 28-9",
+    "zonas por FCR"
+  ],
+  "P5": [
+    "Tierra de nadie: no se entrena aquí a propósito",
+    "Trote de recuperación entre series"
+  ],
+  "P6": [
+    "El techo de rodaje se queda en 145 y el umbral en 166-172 aunque las zonas suban",
+    "El techo 145 y el umbral 166–172 no suben"
+  ],
+  "P7": [
+    "Si a 145 ppm va a más de 8:30, ese día no está recuperado",
+    "Por encima del 10 % en llano"
+  ],
+  "P8": [
+    "Anclado al centro de la banda medida",
+    "decide el sáb 10-10"
+  ],
+  "P9": [
+    "El escalón (segundo valor) solo si el 10 de octubre dio ≤ 3:33 en distancia verificada",
+    "0:40-0:41"
+  ],
+  "P10": [
+    "Los 41 segundos del 24/08 eran en realidad unos 175 metros, no 200.",
+    "Programar las sesiones en Garmin Connect con las repeticiones por distancia y desactivar el Auto Lap."
+  ],
+  "P11": [
+    "MANTENER. No se sube la intensidad de ninguna sesión hasta Cádiz",
+    "Semáforo de la mañana con cortes 6h30 / 5h00"
+  ],
+  "P12": [
+    "Descarga y control",
+    "Semana cerrada con el control del 19"
+  ],
+  "P13": [
+    "Examen escrito el sábado 26",
+    "Carga reducida a propósito por el examen escrito"
+  ],
+  "P14": [
+    "Trabajo específico",
+    "Revisión del 28-9 (4 lentes, escépticos y juez)"
+  ],
+  "P15": [
+    "Afilado y simulacro completo"
+  ],
+  "P16": [
+    "Velocidad específica"
+  ],
+  "P17": [
+    "Llegar entero",
+    "Nada de 1.000 a tope esta semana"
+  ],
+  "P18": [
+    "Afinamiento y prueba · dos versiones según la fecha",
+    "la fecha llega con el llamamiento",
+    "La fecha exacta no se conoce (última semana de octubre)"
+  ],
+  "R1": [
+    "Cena terminada antes de las 20:15 · luz apagada a las 22:15",
+    "Luz apagada a las 22:15 entre semana"
+  ],
+  "R2": [
+    "Del 25 al 31 de agosto durmió una media de 4h14 frente a una necesidad de 8h50",
+    "Sustituye el 28-9 a «acostarse antes de las 00:30»"
+  ],
+  "R3": [
+    "80–100 g de hidratos"
+  ],
+  "R4": [
+    "gofio a 40 g"
+  ],
+  "R5": [
+    "Sin cafeína después de las 14:00"
+  ],
+  "R6": [
+    "Creatina: 5 g al día, y que no se te olvide",
+    "échala directamente en el queso batido de la merienda"
+  ],
+  "R7": [
+    "Magnesio quelado",
+    "El resto, por lo que realmente aporta"
+  ],
+  "R8": [
+    "certificación externa tipo Informed Sport o NSF",
+    "Nada de lo que tomas es tu factor limitante."
+  ],
+  "R9": [
+    "Regla de parada: si pasa de 'lo noto' a 'me molesta al correr', esa sesión se acaba.",
+    "Se añade glúteo medio los martes."
+  ],
+  "R10": [
+    "en el semáforo el día es rojo como mínimo",
+    "Fiarse del pulso, no de la sensación."
+  ],
+  "R11": [
+    "Un día de descanso en el plan no son cinco horas subiendo a 600 metros.",
+    "Descanso significa descanso"
+  ],
+  "R12": [
+    "Hacerlo ahora →",
+    "Semáforo de la mañana (regla del día torcido"
+  ],
+  "R13": [
+    "No testear de más",
+    "Test máximo solo el 10-10 y en la prueba."
+  ],
+  "R14": [
+    "Regla de las dos repeticiones",
+    "Si falla el tiempo objetivo por más de 3 s en dos repeticiones seguidas, la sesión se acabó"
+  ],
+  "S1": [
+    "martes 29 de septiembre"
+  ],
+  "S2": [
+    "Movilidad dinámica 5 min",
+    "Técnica: 2 × 20 m de skipping bajo"
+  ],
+  "S4": [
+    "2 suspensiones pasivas de 20 s + 2 × 8 retracciones escapulares",
+    "Dominadas del día"
+  ],
+  "S5": [
+    "Trote muy suave + 3–4 min de estiramiento de gemelo, isquiotibial y cuádriceps. Siempre."
+  ],
+  "S6": [
+    "10 min de gemelo, saltos y core al terminar"
+  ],
+  "S7": [
+    "Los diez primeros minutos con techo 140, no 145."
+  ],
+  "S8": [
+    "Salida de pie desde parado, sin agacharte.",
+    "Recuperación andando o al trote muy suave"
+  ],
+  "S10": [
+    "En Garmin es «Sentadilla con barra»",
+    "unos 85 min con superseries"
+  ],
+  "S13": [
+    "Descanso significa descanso"
+  ],
+  "S14": [
+    "sin registrar",
+    "no mide"
+  ],
+  "S15": [
+    "Una línea al acabar: repeticiones, lastre, reserva de la 5.ª",
+    "Modo gimnasio"
+  ]
+}
