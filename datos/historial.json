@@ -5,6 +5,115 @@
   },
   "carrera": [
     {
+      "fecha": "2026-09-30",
+      "sesion": "Kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min · pista de atletismo de Arucas (complejo Tonono)",
+      "objetivo": "600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero · calentamiento completo con 5 progresivos (los dos últimos a ritmo K, 17,4 s/80 m) y 3 × 5 dominadas",
+      "valida": true,
+      "horaInicioLocal": "18:14 (primera serie 19:06; fin 19:27)",
+      "lugar": "Pista de atletismo del complejo deportivo Tonono (Arucas). Perfil «Pista» del reloj (modo pista, calle 1).",
+      "resultado": {
+        "tiemposS": [
+          131.3,
+          92.2,
+          130.7,
+          86.7
+        ],
+        "parciales200": [
+          [
+            42.2,
+            41.9,
+            47.2
+          ],
+          [
+            43.5,
+            48.7
+          ],
+          [
+            43.3,
+            41.4,
+            46.0
+          ],
+          [
+            43.2,
+            43.5
+          ]
+        ],
+        "fcMaxPorSerie": [
+          191,
+          192,
+          192,
+          195
+        ],
+        "fcMediaPorSerie": [
+          183,
+          185,
+          182,
+          189
+        ],
+        "fcInicioSerie": [
+          139,
+          170,
+          133,
+          170
+        ],
+        "recuperaciones": {
+          "duracionS": 360,
+          "tipo": "45 s parado entre el 600 y el 400; 6 min entre tandas (230 m andando)",
+          "fcFinal": [
+            133
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 179,
+          "60s": 162,
+          "90s": 155,
+          "120s": 140,
+          "180s": 129
+        },
+        "fcMax": 195,
+        "potenciaMediaSerieW": [
+          410,
+          386,
+          413,
+          413
+        ],
+        "contactoMsSerie": [
+          211,
+          221,
+          207,
+          212
+        ],
+        "efectoAerobico": 3.1,
+        "efectoAnaerobico": 3.2,
+        "cargaSesion": 155,
+        "calentamiento": "52 min hasta la primera serie (18:14-19:06): trote 12 min (1.370 m), 5 min andando/movilidad, 22 min de bloque de barra con el cronómetro parado 3 min (18:31-18:53; repeticiones y dolor sin comunicar), técnica 2 × 20 m, 5 progresivos de 80 m con 90 s andando y 4,5 min hasta la primera serie.",
+        "fcTroteCalentamiento": "144,5 de media a 8:22 /km en los minutos 3-12 (el 23-9, a las 20:51, 141,4 a 7:00-8:00 /km): la misma FC con 20-80 s/km más lento",
+        "progresivos": {
+          "n": 5,
+          "distanciaM": 80,
+          "tiemposS": [
+            15.0,
+            17.0,
+            15.4,
+            16.1,
+            16.4
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            162,
+            149,
+            159,
+            162,
+            160
+          ],
+          "nota": "Ritmo K del bloque A: 80 m en 17,4 s. El primero fue el más rápido (15,0 s, 3:07 /km) y el tercero (15,4) también se sale del aviso de 3:20-3:50; los dos últimos, 16,1 y 16,4, dentro de la referencia de 16-18 s pero 1,0-1,3 s más rápidos que el ritmo K. No fueron de menos a más."
+        },
+        "sensorMunecaC": 30.9,
+        "relojConfigurado": "FC máx 202, reposo 46, umbral 181 (zonas por FCR). El aviso de ritmo saltó por lento a las 19:10:32, a los 52 s del primer 400: el segundo 200 de 48,7."
+      },
+      "valoracion": "VÁLIDA PROVISIONALMENTE: falta la hora de sueño de la noche del 29 al 30 (no hay CSV ni semáforo comunicado); si fue menos de 6h30, pasa a no válida. No reestima nada: el kilómetro partido lleva 45 s de pausa y no es un 1.000. MEDIDO (vueltas del reloj, parciales de 200 por distancia cerrados al tiempo de la vuelta): tanda 1, 600 en 2:11,3 (42,2 · 41,9 · 47,2) y 400 en 1:32,2 (43,5 · 48,7); tanda 2, 600 en 2:10,7 (43,3 · 41,4 · 46,0) y 400 en 1:26,7 (43,2 · 43,5). Criterios: los dos 600 clavados en 2:11; el primer 400 a +5,2 s y el segundo clavado; el primer 200 del 600 en 42,2 y 43,3 frente a 43,5: el patrón del primer 200 rápido (40 el 19, 40,6 el 28) NO se repite, así que sigue en dos veces y no pasa a regla; los tres 200 del 600 dentro de 1 s NO se cumple (5,3 y 4,6 s de horquilla); segundo 400 a 2 s o menos del primero se cumple (5,5 s más rápido). Regla de las dos repeticiones: solo una (el primer 400) a más de 3 s; no salta. LECTURA: el ritmo del bloque A se sostiene en el total; el reparto no. Los dos 600 pasaron el 400 en 1:24,1 y 1:24,7 cuando tocaba 1:27,4: 3 s de adelanto que se pagaron en el último 200 (47,2 y 46,0) y, en la tanda 1, también en el 400 siguiente (48,7 el segundo 200). Es la misma forma del control del 19 (40 · 42 · 46 · 46 · 41): segundo 200 por delante y caída después. Dos veces (19 y 30): a la tercera, regla. Coste: FC 191-195, carga 155 (234 el 28), recuperación de 195 a 162 en 60 s (33 ppm; el 28, 25). El trote del calentamiento fue a la misma FC que el 23 pero 20-80 s/km más lento: 24 h después de la fuerza del Arsenal, a las 18:14 y sin dato de sueño; una sesión no basta para achacarlo a la hora, que además la fija el trabajo. NO CAMBIA EL PLAN: el bloque B va a 1:26 / 2:08 como se decidió el 28-9; no hay control, ni sobrecarga (VFC 57, Equilibrado; carga aguda óptima), ni patrón de tres. SIN DATOS: sueño, dominadas del bloque de barra (repeticiones, válidas, codo y hombro) y talón/cintillo."
+    },
+    {
       "fecha": "2026-09-28",
       "sesion": "6 × 400 m, rec. 90 s · pista de atletismo de Arucas (complejo Tonono)",
       "objetivo": "1:27 · las 6 dentro de 3 s · primer 200 en 0:43,5 · aviso 3:30-3:40 · 3 × 5 dominadas en el calentamiento",
@@ -687,6 +796,45 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-09-29",
+      "sesion": "Arsenal · sesión de fuerza A–I (completa)",
+      "horaLocal": "18:37 a 20:22",
+      "duracion": "88:26 de cronómetro (104:20 de reloj). El cronómetro estuvo parado 15:53 en total: 1:23 justo después de H y 14:30 mientras hacía remo y fondos porque la máquina del jalón estaba ocupada",
+      "series": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 15,
+      "lastreKg": 12.5,
+      "descanso": "180 s exactos en las cinco series",
+      "repeticionesEnReserva": 0,
+      "validas": 15,
+      "duracionSeriesS": [
+        25,
+        26,
+        46,
+        43,
+        128
+      ],
+      "fcMedia": 105,
+      "fcMax": 137,
+      "bloquesHechos": {
+        "calentamiento": "Bici 8 min + 2 suspensiones de 20 s + 2 × 8 retracciones",
+        "aproximacion": "3 sin lastre (23 s) y 2 con 10 kg (26 s), 180 s de descanso tras cada una",
+        "A": "Dominadas lastradas 5 × 3 con 12,5 kg (la primera subida de lastre) · descansos de 180 s clavados",
+        "H": "Glúteo medio, primera vez que consta: plancha lateral con elevación, elevación lateral tumbada y pasos laterales, 3 rondas · 15:41 en total (el plan pide 8-9 min) · la ronda 1 duró unos 9 min y las repeticiones que registra el reloj en ella no son fiables",
+        "C+F": "Superserie hecha ANTES del jalón, con el cronómetro parado porque la máquina del jalón estaba ocupada: remo 8 × 4 con 20 kg + fondos 8-6-6-6 (cuatro series; el plan pide tres, lo confirma él) · apuntadas a mano al reanudar el cronómetro, así que sus tiempos y descansos no son fiables",
+        "B+D": "Superserie hecha después de C+F, con el cronómetro ya en marcha (se reanudó a las 19:52): jalón 4 × 6 con 40 kg + sentadilla 4 × 6 con 20 kg · descansos de 118, 111 y 117 s (el 22 la sentadilla llegó a 29 s)",
+        "E+G": "Superserie: peso muerto rumano 3 × 8 con 20 kg + pájaros 3 × 12 con 5 kg · descansos de 105, 117 y 91 s",
+        "I": "Elevación de piernas y plancha, 3 rondas · series apuntadas a mano, tiempos no fiables"
+      },
+      "noHechos": [],
+      "valoracion": "Primera sesión de fuerza completa de las tres: llegó de la A a la I, con H hecha por primera vez (se deduce de las categorías de ejercicio del FIT, no de que lo apuntara). MEDIDO en el FIT: con 12,5 kg las series duraron 25, 26, 46, 43 y 128 s, frente a 22, 22, 19, 18 y 23 s con 10 kg el 22. Las dos primeras salen a unos 8-9 s por repetición y la tercera y la cuarta a unos 15 s: la barra se ralentiza desde la tercera. La quinta (128 s) no puede ser una serie continua de tres repeticiones: lleva pausas, colocación o vídeo, y no se usa para nada. Los descansos de A volvieron a ser 180 s exactos. La superserie B+D arregló el derrumbe de la sentadilla (118, 111 y 117 s de descanso). CONTADO POR ÉL, sin que yo haya visto el vídeo: en las lastradas le quedaba 1 repetición en reserva y en la última repetición de la última serie fue casi fallo (se guarda 0 en repeticionesEnReserva); las 15 repeticiones fueron válidas tras revisar el vídeo; ningún dolor de codo. NO se sabe: las horas de sueño de la noche del 28 al 29 (no las registró y no hay CSV), así que la sesión no se puede dar por verde; el dolor de hombro; y la pausa que hizo en cada repetición. Lectura: 12,5 kg es hoy su límite en 5 × 3: 1 en reserva, la última repetición al límite y la barra frenándose desde la tercera serie, que es lo que se mide. Por la regla del plan («si una serie deja 1 en reserva o menos, es la última del bloque») las cinco series se pasaron de lo prescrito si ya en la primera le quedaba 1; el 6-10 esa regla se aplica desde la primera serie. No cambia el plan: el 6-10 es 12,5 kg tanto si el 29 se da por verde (la quinta dejó 1 o menos, no 2) como si no (estreno de los 12,5 con noche verde); no hay subida a 15 kg. La carga del reloj (7,2, frente a 17,8 el 22) y la FC (105 de media, máxima 137, frente a 109 y 150) no miden el coste de tirar con 12,5 kg: es un esfuerzo de fuerza de poca duración. Explicado por él: el cronómetro parado (máquina del jalón ocupada, hizo remo y fondos aparte y apuntó las series a mano después) y los fondos, cuatro series en vez de tres. Sin resolver: el jalón a 40 kg × 6 cuando el plan dice 38 kg × 8 (la máquina va de 38 a 45 kg y no consta si 40 fue apuntado a mano) y por qué la quinta serie duró 128 s."
+    },
+    {
       "fecha": "2026-09-22",
       "sesion": "Arsenal · sesión de fuerza A–G",
       "horaLocal": "20:37 a 21:53",
@@ -1072,6 +1220,22 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-09-30",
+      "ventanaFocoCarga": "2 sep – 30 sep",
+      "focoCarga": "Equilibrado",
+      "estadoEntreno": "Mantenimiento",
+      "anaerobica": 345,
+      "aerobicaAlta": 597,
+      "aerobicaBaja": 221,
+      "cargaAguda": 287,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.0,
+      "cargaAgudaMensaje": "Tu carga aguda está en el intervalo óptimo para mantener o mejorar tu forma física",
+      "vo2max": 53,
+      "vfc": "57 ms, Equilibrado",
+      "valoracion": "Del 28 al 30: anaeróbica 345 → 345 y aeróbica alta 597 → 597 (sin cambio), aeróbica baja 214 → 221 (+7). Ventana, con el mismo criterio (el primer día de la etiqueta no cuenta): SALEN el 1 y el 2 de septiembre, sin ninguna sesión en el historial, y ENTRA el 29 de septiembre, la fuerza del Arsenal con carga 7,2. Cuadra: los +7 de aeróbica baja son esa fuerza (efecto aeróbico 0,6, anaeróbico 0,0), y las otras dos no se mueven porque no entró ni salió carga de ese tipo (el 10 × 200 del 3-9 sigue dentro). «Equilibrado» se mantiene por el calendario, no porque la base haya crecido: la aeróbica baja está en 221 y solo la mueven los rodajes largos. Carga aguda 391 → 287 (−104) y ratio 1,3 → 1,0: en la ventana de siete días SALIERON la fuerza del 22 (17,8) y el rodaje del 23 (95,4) y ENTRÓ la fuerza del 29 (7,2); 391 − 113,2 + 7,2 = 285, cerca del 287 del reloj. Queda una diferencia fija de unos 45 puntos en las dos lecturas (347 frente a 391 el 28; 241 frente a 287 hoy) que no se puede atribuir: actividades que no están en el archivo o el cálculo propio del reloj. El estado pasa de «Productivo» a «Mantenimiento»: es una sola lectura y viene de la caída de carga de estos días (sin rodajes desde el 23), no de una pérdida de forma. VFC 57 ms Equilibrado (60 el 28): no es rojo por el criterio de VFC. VO2máx 53 (53,4 el 28), redondeado por el reloj."
+    },
     {
       "fecha": "2026-09-28",
       "ventanaFocoCarga": "31 ago – 28 sep",
