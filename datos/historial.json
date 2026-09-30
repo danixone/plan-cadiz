@@ -86,7 +86,7 @@
         "efectoAerobico": 3.1,
         "efectoAnaerobico": 3.2,
         "cargaSesion": 155,
-        "calentamiento": "52 min hasta la primera serie (18:14-19:06): trote 12 min (1.370 m), 5 min andando/movilidad, 22 min de bloque de barra con el cronómetro parado 3 min (18:31-18:53; repeticiones y dolor sin comunicar), técnica 2 × 20 m, 5 progresivos de 80 m con 90 s andando y 4,5 min hasta la primera serie.",
+        "calentamiento": "52 min hasta la primera serie (18:14-19:06): trote 12 min (1.370 m), 5 min andando/movilidad, 22 min de bloque de barra con el cronómetro parado 3 min (18:31-18:53): prep-hombro y 3 × 5 dominadas con 3 min de descanso, técnica 2 × 20 m, 5 progresivos de 80 m con 90 s andando y 4,5 min hasta la primera serie.",
         "fcTroteCalentamiento": "144,5 de media a 8:22 /km en los minutos 3-12 (el 23-9, a las 20:51, 141,4 a 7:00-8:00 /km): la misma FC con 20-80 s/km más lento",
         "progresivos": {
           "n": 5,
@@ -111,7 +111,8 @@
         "sensorMunecaC": 30.9,
         "relojConfigurado": "FC máx 202, reposo 46, umbral 181 (zonas por FCR). El aviso de ritmo saltó por lento a las 19:10:32, a los 52 s del primer 400: el segundo 200 de 48,7."
       },
-      "valoracion": "VÁLIDA PROVISIONALMENTE: falta la hora de sueño de la noche del 29 al 30 (no hay CSV ni semáforo comunicado); si fue menos de 6h30, pasa a no válida. No reestima nada: el kilómetro partido lleva 45 s de pausa y no es un 1.000. MEDIDO (vueltas del reloj, parciales de 200 por distancia cerrados al tiempo de la vuelta): tanda 1, 600 en 2:11,3 (42,2 · 41,9 · 47,2) y 400 en 1:32,2 (43,5 · 48,7); tanda 2, 600 en 2:10,7 (43,3 · 41,4 · 46,0) y 400 en 1:26,7 (43,2 · 43,5). Criterios: los dos 600 clavados en 2:11; el primer 400 a +5,2 s y el segundo clavado; el primer 200 del 600 en 42,2 y 43,3 frente a 43,5: el patrón del primer 200 rápido (40 el 19, 40,6 el 28) NO se repite, así que sigue en dos veces y no pasa a regla; los tres 200 del 600 dentro de 1 s NO se cumple (5,3 y 4,6 s de horquilla); segundo 400 a 2 s o menos del primero se cumple (5,5 s más rápido). Regla de las dos repeticiones: solo una (el primer 400) a más de 3 s; no salta. LECTURA: el ritmo del bloque A se sostiene en el total; el reparto no. Los dos 600 pasaron el 400 en 1:24,1 y 1:24,7 cuando tocaba 1:27,4: 3 s de adelanto que se pagaron en el último 200 (47,2 y 46,0) y, en la tanda 1, también en el 400 siguiente (48,7 el segundo 200). Es la misma forma del control del 19 (40 · 42 · 46 · 46 · 41): segundo 200 por delante y caída después. Dos veces (19 y 30): a la tercera, regla. Coste: FC 191-195, carga 155 (234 el 28), recuperación de 195 a 162 en 60 s (33 ppm; el 28, 25). El trote del calentamiento fue a la misma FC que el 23 pero 20-80 s/km más lento: 24 h después de la fuerza del Arsenal, a las 18:14 y sin dato de sueño; una sesión no basta para achacarlo a la hora, que además la fija el trabajo. NO CAMBIA EL PLAN: el bloque B va a 1:26 / 2:08 como se decidió el 28-9; no hay control, ni sobrecarga (VFC 57, Equilibrado; carga aguda óptima), ni patrón de tres. SIN DATOS: sueño, dominadas del bloque de barra (repeticiones, válidas, codo y hombro) y talón/cintillo."
+      "valoracion": "VÁLIDA (Paso 2): 7 h de sueño (comunicado por él, sin CSV; primero se anotó 6h00 y él lo corrigió), semáforo VERDE: tocaban las dos tandas y se hicieron. Es la sesión válida del bloque A. No reestima nada: el kilómetro partido lleva 45 s de pausa y no es un 1.000. MEDIDO (vueltas del reloj, parciales de 200 por distancia cerrados al tiempo de la vuelta): tanda 1, 600 en 2:11,3 (42,2 · 41,9 · 47,2) y 400 en 1:32,2 (43,5 · 48,7); tanda 2, 600 en 2:10,7 (43,3 · 41,4 · 46,0) y 400 en 1:26,7 (43,2 · 43,5). Criterios: los dos 600 clavados en 2:11; el primer 400 a +5,2 s y el segundo clavado; el primer 200 del 600 en 42,2 y 43,3 frente a 43,5: el patrón del primer 200 rápido (40 el 19, 40,6 el 28) NO se repite, así que sigue en dos veces y no pasa a regla; los tres 200 del 600 dentro de 1 s NO se cumple (5,3 y 4,6 s de horquilla); segundo 400 a 2 s o menos del primero se cumple (5,5 s más rápido). Regla de las dos repeticiones: solo una (el primer 400) a más de 3 s; no salta. LECTURA: el ritmo del bloque A se sostiene en el total; el reparto no. Los dos 600 pasaron el 400 en 1:24,1 y 1:24,7 cuando tocaba 1:27,4: 3 s de adelanto que se pagaron en el último 200 (47,2 y 46,0) y, en la tanda 1, también en el 400 siguiente (48,7 el segundo 200). Es la misma forma del control del 19 (40 · 42 · 46 · 46 · 41): segundo 200 por delante y caída después. Dos veces (19 y 30): a la tercera, regla. Coste: FC 191-195, carga 155 (234 el 28), recuperación de 195 a 162 en 60 s (33 ppm; el 28, 25). El trote del calentamiento fue a la misma FC que el 23 pero 20-80 s/km más lento: 24 h después de la fuerza del Arsenal y a las 18:14, con 7 h de sueño; una sesión no basta para achacarlo a la hora, que además la fija el trabajo. NO CAMBIA EL PLAN: el bloque B va a 1:26 / 2:08 como se decidió el 28-9; no hay control, ni sobrecarga (VFC 57, Equilibrado; carga aguda óptima), ni patrón de tres. Comunicado por él: prep-hombro (2 × 20 s colgado + 2 × 8 retracciones escapulares), 3 × 5 dominadas con 3 min de descanso y ningún dolor. Explicado por él: en el 400 de la tanda 1 se le cruzó gente en la pista y frenó sin darse cuenta; el primer 600 lo notó muy fresco y clavado. Lo que mide el reloj (velocidad cada 5 s): ese 400 fue entero a unos 3:45-3:57 /km, con un bajón corto hacia el metro 340-350; el último 200 del 600 anterior ya iba a ese ritmo (47,2). El frenazo es compatible con los datos, pero no se puede separar del cansancio. El primer 600 fue a 3:15-3:30 /km los primeros 70 s y a 3:46-4:06 /km del 400 al 500: la sensación de ir fresco es la que le adelanta. La tanda 2, más pareja (3:26-3:42 /km), acabó con el 400 plano. Recuperaciones: en los 45 s, de 190 a 170 y de 192 a 170 (igual en las dos tandas); en los 6 min, de 191 a 161 en 60 s, 136 a los 3 min y 133 al salir; al final, de 195 a 162 en 60 s y 129 a los 3 min.",
+      "condiciones": "Él lo notó cerca de 30 °C. Modelo meteorológico (Open-Meteo, punto de rejilla de Arucas a 229 m; no es una estación): 24,6 °C a las 18:00 y 23,8 a las 19:00, humedad 73-77 %, sensación 25-26 °C, viento de 15 km/h. El 28 a la misma hora: 25 °C, 61-63 %, viento 6-7 km/h."
     },
     {
       "fecha": "2026-09-28",
@@ -796,6 +797,18 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-09-30",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "descanso": "3 min",
+      "contexto": "antes del kilómetro partido, 18:31-18:53 hora local, parque de calistenia de Arucas; antes, prep-hombro: 2 × 20 s colgado + 2 × 8 retracciones escapulares",
+      "valoracion": "Como estaba pautado, 24 h después de las lastradas del Arsenal. Ningún dolor de codo ni de hombro (comunicado por él). Sin vídeo: las repeticiones no están auditadas con el estándar BOE, así que no hay dato de válidas. Primera vez en la barra de Arucas (altura y grosor desconocidos)."
+    },
+    {
       "fecha": "2026-09-29",
       "sesion": "Arsenal · sesión de fuerza A–I (completa)",
       "horaLocal": "18:37 a 20:22",
@@ -1024,6 +1037,11 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-09-30",
+      "duracion": "7h00",
+      "nota": "Noche del 29 al 30. Comunicado por él, sin CSV: solo la duración. Semáforo VERDE (6h30 o más). Antes se había registrado 6h00; él lo corrigió a 7 h."
+    },
     {
       "fecha": "2026-09-28",
       "duracion": "2h14",
