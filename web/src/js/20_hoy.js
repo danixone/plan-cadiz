@@ -582,10 +582,28 @@
     out.push(vueltaCalma());
     return out;
   }
+  /* barra del sábado paso a paso (web.dias[f].pasos): numerados, descansos aparte con temporizador;
+     «si» = id de la opción de la condición del día que hace falta para ese paso; «tN» lleva {n} = cifra del cálculo */
+  function pasosBarra(bp, R) {
+    var c = (R.conds || []).filter(function (x) { return x.tipo !== 'prueba'; })[0] || null;
+    var elegida = c && c.elegida ? c.elegida.id : null;
+    var cifra = c && c.tipo === 'calculo' && c.cifra !== null && c.cifra !== undefined ? c.cifra : null;
+    var k = 0, out = [];
+    bp.forEach(function (x) {
+      if (x.si && elegida && elegida !== 'ninguna' && elegida !== x.si) return;
+      var t = x.tN && cifra !== null ? x.tN.replace('{n}', cifra) : x.t;
+      var o = { t: x.antes ? t : 'Barra ' + (++k) + ' · ' + t, d: x.d || '', timer: x.timer ? segDe(x.timer) : null, enlace: x.enlace ? tecnica(x.enlace) : null, barra: true };
+      if (x.tag && !(elegida && elegida === x.si)) o.tags = [x.tag];
+      out.push(o);
+    });
+    return out;
+  }
   function pasosRodaje(dia, color, R) {
     var out = [], sab = PC.fecha(dia.fecha).getDay() === 6;
     var mb = /Sesión corta de barra[^+]*/.exec(dia.sesion || '');
-    if (mb) {
+    var bp = (dia.extra || {}).pasos;
+    if (mb && Array.isArray(bp) && bp.length) out = out.concat(pasosBarra(bp, R));
+    else if (mb) {
       var ob = /^(Barra:.*?)(?:\s*Rodaje:|$)/.exec(dia.objetivo || '');
       var cs = ((plan().protocoloDominadas || {}).cuando || []).filter(function (c) { return /^Sáb/.test(c.dia); })[0] || {};
       out.push({ t: mb[0].trim(), d: ob ? ob[1].trim() : (cs.prescripcion || ''), enlace: tecnica('#tecnica/dominada', 'Técnica de la dominada →') });
@@ -869,7 +887,7 @@
       if (c.tipo === 'calculo') {
         h.push('<p class="hoy-cond-r">' + (c.cifra !== null && c.cifra !== undefined ?
           'Serie técnica de <span class="hoy-cifra">' + c.cifra + '</span> <small>' + esc(c.calculo.desde || '') + '</small>' :
-          'falta el número de válidas del 10-10 (<a href="#tecnica/dominada">cuéntalas en Técnica →</a>)') + '</p>');
+          'falta el número de válidas del ' + ((/(\d{4})-(\d{2})-(\d{2})$/.exec(c.calculo.de || '') || []).slice(2).reverse().join('-') || '') + ' (<a href="#tecnica/dominada">cuéntalas en Técnica →</a>)') + '</p>');
       }
       var ops = (c.opciones || []).concat([NINGUNA]);
       var elegida = c.elegida ? c.elegida.id : null;
@@ -1590,7 +1608,7 @@
     var t = FZ.t && FZ.t.clave === 'hoy-rod-' + FZ.f ? FZ.t : null, el = t ? FZ.dur.seg - t.restante() : 0, h = [];
     FZ.diez = el >= 600;
     var otros = SES.pasos(FZ.dia, FZ.color, FZ.R).filter(function (q) { return !/^Rodaje|^Rodaje de/i.test(q.t) && !/rodaje de \d/i.test(q.t); });
-    var antes = otros.filter(function (q) { return /barra/i.test(q.t); });
+    var antes = otros.filter(function (q) { return q.barra || /barra/i.test(q.t); });
     otros = otros.filter(function (q) { return antes.indexOf(q) < 0; });
     if (antes.length) h.push('<ul class="hoy-fz-crit">' + antes.map(function (q) { return '<li>' + esc(q.t) + '</li>'; }).join('') + '</ul>');
     h.push('<p class="focus-k">Rodaje · ' + esc(FZ.dur.txt) + ' · techo ' + esc(rs().techoFC || '') + '</p><p class="big num" data-z="big">' + PC.fmt.t(Math.floor(el)) + '</p>');

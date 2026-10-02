@@ -304,9 +304,89 @@
           "opcion": "45"
         }
       },
+      "pasos": [
+        {
+          "antes": true,
+          "t": "Antes de la barra: codo y hombro en 2/10 o menos",
+          "d": "Solo con codo y hombro en 2/10 o menos desde el martes.",
+          "desde": [
+            "codo y hombro en 2/10 o menos",
+            "Solo con codo y hombro en 2/10 o menos desde el martes"
+          ]
+        },
+        {
+          "t": "Prep-hombro: 2 suspensiones pasivas de 20 s",
+          "d": "Colgado de la barra, hombros relajados. Obligatorio antes de cualquier trabajo en barra.",
+          "desde": [
+            "2 suspensiones pasivas de 20 s",
+            "Colgado de la barra, hombros relajados",
+            "antes de cualquier trabajo en barra"
+          ]
+        },
+        {
+          "t": "Prep-hombro: 2 × 8 retracciones escapulares colgado",
+          "d": "Sin doblar el codo, solo bajando los hombros.",
+          "desde": [
+            "2 × 8 retracciones escapulares colgado",
+            "sin doblar el codo, solo bajando los hombros"
+          ]
+        },
+        {
+          "t": "Aproximación: 1 serie de 3 dominadas, sin lastre",
+          "d": "Solo 3, lejos del fallo.",
+          "desde": [
+            "1 × 3 de aproximación",
+            "sin lastre y lejos del fallo"
+          ]
+        },
+        {
+          "t": "Descanso 3 min",
+          "d": "Antes de la serie técnica.",
+          "timer": "3 min",
+          "desde": "1 × 3 de aproximación y 3 min"
+        },
+        {
+          "t": "Serie técnica: 1 serie de 7 dominadas, grabada de frente y de lado",
+          "d": "Con el estándar del BOE. Si la sexta ya sale lenta, paras ahí y lo apuntas.",
+          "enlace": "#tecnica/dominada",
+          "desde": [
+            "serie técnica de 7 grabada de frente y de lado con el estándar BOE",
+            "Si la sexta ya sale lenta, paras ahí y lo apuntas"
+          ]
+        },
+        {
+          "t": "Descanso 3 min",
+          "d": "Antes de la primera serie de 5.",
+          "timer": "3 min",
+          "desde": "3 min y 2 × 5"
+        },
+        {
+          "t": "Serie 1 de 2: 5 dominadas, con 4 o más en reserva",
+          "d": "4 o más en reserva: al acabar la quinta todavía podrías hacer al menos 4 más bien hechas. Paras en la quinta aunque puedas más.",
+          "desde": "2 × 5 con 4 o más en reserva"
+        },
+        {
+          "t": "Descanso 3 min",
+          "d": "Entre las dos series de 5.",
+          "timer": "3 min",
+          "desde": "2 × 5 con 4 o más en reserva, 3 min entre ellas"
+        },
+        {
+          "t": "Serie 2 de 2: 5 dominadas, con 4 o más en reserva",
+          "d": "Igual que la anterior. Sin tercera serie: aquí acaba la barra y empieza el rodaje.",
+          "desde": [
+            "2 × 5 con 4 o más en reserva",
+            "Sin tercera serie"
+          ]
+        }
+      ],
       "fuentes": [
         "plan.calendario[2026-10-03].sesion",
-        "plan.calendario[2026-10-03].objetivo"
+        "plan.calendario[2026-10-03].objetivo",
+        "plan.protocoloDominadas.cuando[Sábado].prescripcion",
+        "plan.ejercicios[prep-hombro].tecnica",
+        "plan.sesionesTipo.calentamientoEstandar.obligatorio",
+        "html:2026-10-03"
       ]
     },
     "2026-10-05": {
@@ -1050,8 +1130,104 @@
           "sinRegistros": null
         }
       },
+      "pasos": [
+        {
+          "antes": true,
+          "t": "Antes de la barra: codo y hombro en 2/10 o menos las dos semanas anteriores",
+          "d": "Si se cumple, la barra entera. Si no, solo la serie técnica, con el prep-hombro antes.",
+          "desde": [
+            "solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores; si no, solo la serie técnica",
+            "antes de cualquier trabajo en barra"
+          ]
+        },
+        {
+          "t": "Prep-hombro: 2 suspensiones pasivas de 20 s",
+          "d": "Colgado de la barra, hombros relajados. Obligatorio antes de cualquier trabajo en barra.",
+          "desde": [
+            "2 suspensiones pasivas de 20 s",
+            "Colgado de la barra, hombros relajados",
+            "antes de cualquier trabajo en barra"
+          ]
+        },
+        {
+          "t": "Prep-hombro: 2 × 8 retracciones escapulares colgado",
+          "d": "Sin doblar el codo, solo bajando los hombros.",
+          "desde": [
+            "2 × 8 retracciones escapulares colgado",
+            "sin doblar el codo, solo bajando los hombros"
+          ]
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Aproximación: 1 serie de 3 dominadas, sin lastre",
+          "d": "Solo 3, lejos del fallo.",
+          "desde": [
+            "prep-hombro · 1 × 3",
+            "1 × 3 de aproximación",
+            "sin lastre y lejos del fallo"
+          ]
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Descanso 3 min",
+          "d": "Antes de la serie técnica.",
+          "timer": "3 min",
+          "desde": "1 × 3 de aproximación y 3 min"
+        },
+        {
+          "t": "Serie técnica en vídeo, de frente y de lado: válidas del 17-10 − 4, como mucho 8",
+          "tN": "Serie técnica: 1 serie de {n} dominadas, en vídeo de frente y de lado",
+          "d": "Cuántas: las válidas del 17-10 menos 4, como mucho 8. Si una repetición sale lenta, se para ahí y se anota.",
+          "enlace": "#tecnica/dominada",
+          "desde": [
+            "serie técnica de (válidas del 17-10 − 4), como mucho 8, en vídeo",
+            "las válidas del 17-10 menos 4, como mucho 8",
+            "serie técnica grabada de frente y de lado",
+            "si una repetición sale lenta, se para ahí y se anota"
+          ]
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Descanso 3 min",
+          "d": "Antes de la primera serie de 5.",
+          "timer": "3 min",
+          "desde": "3 min y 2 × 5"
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Serie 1 de 2: 5 dominadas, con 4 o más en reserva",
+          "d": "4 o más en reserva: al acabar la quinta todavía podrías hacer al menos 4 más bien hechas. Paras en la quinta aunque puedas más.",
+          "desde": "2 × 5 con 4 o más en reserva"
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Descanso 3 min",
+          "d": "Entre las dos series de 5.",
+          "timer": "3 min",
+          "desde": "2 × 5 con 4 o más en reserva, 3 min entre ellas"
+        },
+        {
+          "si": "completa",
+          "tag": "solo con codo y hombro en 2/10 o menos",
+          "t": "Serie 2 de 2: 5 dominadas, con 4 o más en reserva",
+          "d": "Igual que la anterior. Sin tercera serie: aquí acaba la barra y empieza el rodaje.",
+          "desde": [
+            "2 × 5 con 4 o más en reserva",
+            "Sin tercera serie"
+          ]
+        }
+      ],
       "fuentes": [
-        "plan.calendario[2026-10-24].objetivo"
+        "plan.calendario[2026-10-24].objetivo",
+        "plan.protocoloDominadas.cuando[Sábado].prescripcion",
+        "plan.ejercicios[prep-hombro].tecnica",
+        "plan.sesionesTipo.calentamientoEstandar.obligatorio",
+        "html:2026-10-03"
       ]
     },
     "2026-10-26": {
