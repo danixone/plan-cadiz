@@ -515,14 +515,14 @@
    "m1": true
   },
   {
-   "nombre": "marcas: 4,67 · no apto",
+   "nombre": "marcas: 5,00 · apto",
    "expr": "PC.notaActual().txt",
-   "esperado": "4,67 · no apto"
+   "esperado": "5,00 · apto"
   },
   {
-   "nombre": "nota: clase warn (no apto sin ceros)",
+   "nombre": "nota: clase ok (apto justo, sin ceros)",
    "expr": "PC.notaActual().cls",
-   "esperado": "warn"
+   "esperado": "ok"
   }
  ]
 }

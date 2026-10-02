@@ -525,29 +525,6 @@
         "plan.ritmos[B].condicion"
       ]
     },
-    "2026-10-08": {
-      "firma": "08479ae30962",
-      "condicion": {
-        "pregunta": "¿Qué toca hoy?",
-        "opciones": [
-          {
-            "id": "sin",
-            "txt": "3 intentos cronometrados como el BOE, el primero comparable",
-            "fuente": "sesion"
-          },
-          {
-            "id": "tecnico",
-            "txt": "bloque técnico solo si se acordó tras el 1-10",
-            "bloqueTecnico": true
-          }
-        ]
-      },
-      "fuentes": [
-        "plan.calendario[2026-10-08].sesion",
-        "plan.calendario[2026-10-08].objetivo",
-        "plan.sesionesTipo.juevesCircuito.bloques[2]"
-      ]
-    },
     "2026-10-10": {
       "firma": "6e257a8ffb24",
       "numeros": {
@@ -601,7 +578,7 @@
       ]
     },
     "2026-10-12": {
-      "firma": "23216ac763c4",
+      "firma": "0633b64f077f",
       "titulo": "5 × 400 m, rec. 2 min",
       "principal": {
         "tipo": "series",
@@ -1017,29 +994,6 @@
       "fuentes": [
         "plan.calendario[2026-10-21].sesion",
         "plan.calendario[2026-10-21].objetivo"
-      ]
-    },
-    "2026-10-22": {
-      "firma": "a2da68de739e",
-      "condicion": {
-        "pregunta": "¿Qué toca hoy?",
-        "opciones": [
-          {
-            "id": "sin",
-            "txt": "3 intentos cronometrados como el BOE, el primero comparable",
-            "fuente": "sesion"
-          },
-          {
-            "id": "tecnico",
-            "txt": "bloque técnico solo si se acordó tras el 1-10",
-            "bloqueTecnico": true
-          }
-        ]
-      },
-      "fuentes": [
-        "plan.calendario[2026-10-22].sesion",
-        "plan.calendario[2026-10-22].objetivo",
-        "plan.sesionesTipo.juevesCircuito.bloques[2]"
       ]
     },
     "2026-10-24": {

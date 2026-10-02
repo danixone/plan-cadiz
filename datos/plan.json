@@ -62,7 +62,7 @@
     "objetivosRevisados": {
       "mil": "Bajar de 3:30 (4 puntos) como objetivo; suelo 3:36 (3 puntos). Se persigue con el reparto y un escalón de ritmo condicionado, no con más intensidad.",
       "dominadas": "Asegurar 12 VÁLIDAS con el estándar del BOE (6 puntos) y que no se anule ninguna. Él pide 14 como mínimo (28-9): posible, no garantizable en las cinco semanas que quedan; rango honesto 9-13 válidas, centro 11-12. 15 sigue siendo el deseable (8 puntos).",
-      "circuito": "9,0-9,3 s → 8 puntos. Es la prueba con más margen y la única sin medir en serio",
+      "circuito": "Medido el 1-10: 9,4 en el primer intento (7 puntos) y 9,2 de techo. Llevar el primer intento a 9,3 o menos es +1 punto (8 puntos, tramo 8,9-9,3).",
       "mediaEsperada": "5,67 con el escenario realista (3:34) · 6,00 si el 1.000 baja de 3:30",
       "prioridad": "Cronometrar el circuito: el primer intento del jueves 1-10 es la primera medición seria. Todo el escenario descansa sobre ese número."
     },
@@ -260,13 +260,13 @@
       "protocolo": "Toda serie máxima se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena."
     },
     "circuito": {
-      "marca": "9,9 s",
-      "fecha": "2026-09-10",
-      "puntos": 6,
-      "condiciones": "al 60 %, contando pasos entre conos y sin saber que le cronometraban",
-      "urgente": "Es el único dato y no es una medición seria. Cronometrarlo fresco y a tope es la prioridad más barata del plan."
+      "marca": "9,4 s",
+      "fecha": "2026-10-01",
+      "puntos": 7,
+      "condiciones": "medido, primer intento como el BOE con el preparador (intentos 9,4 · 9,2 · 9,3; techo 9,2). Horas de sueño de la noche anterior sin dato",
+      "urgente": "El primer intento fue el más lento de los tres. En el examen solo cuenta uno: bajarlo a 9,3 o menos es +1 punto, la décima más barata del plan."
     },
-    "notaImportante": "CON LAS MARCAS DE HOY (3:34 = 3 puntos, 11 dominadas = 5, circuito 9,9 = 6) la media es 4,67 y NO APRUEBA. Hace falta un punto más de donde sea. Los tres más baratos: una dominada más (11→12 = +1 punto), dos décimas en el circuito (9,9→9,7 = +1 punto) o cuatro segundos en el kilómetro (3:34→3:30 = +1 punto)."
+    "notaImportante": "CON LAS MARCAS DE HOY (3:34 = 3 puntos, 11 dominadas = 5, circuito 9,4 = 7) la media es 5,00: APTO JUSTO, sin ningún punto de margen. Cualquier punto que se pierda tumba el apto, y las 11 dominadas son autoinformadas. Los puntos más baratos: una dominada más (11→12 = +1), una décima en el primer intento del circuito (9,4→9,3 = +1) o cuatro segundos en el kilómetro (3:34→3:30 = +1)."
   },
   "diagnostico": {
     "resumen": "Velocidad de sobra, falta sostenerla. Corre 200 m en 43 s sin problema pero se cae cuando lleva tres minutos a ese ritmo.",
@@ -1265,7 +1265,7 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable",
-          "objetivo": "bloque técnico solo si se acordó tras el 1-10"
+          "objetivo": "sin bloque técnico: el 1-10 dio 9,4 en el primer intento (el bloque es para 9,8 o más) · apuntar los tres intentos: el 1-10 el primero fue el más lento"
         },
         {
           "fecha": "2026-10-09",
@@ -1300,7 +1300,7 @@
           "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
           "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · comparar con el 5",
           "hora": "18:00-19:00",
-          "nota": "Comprobar si trabaja el 12-10 (Fiesta Nacional)."
+          "nota": "No trabaja ese día (dato del 2-10). Misma hora, 18:00, para compararla con la del lunes 5."
         },
         {
           "fecha": "2026-10-13",
@@ -1386,7 +1386,7 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable. Último jueves cronometrado en formato entreno",
-          "objetivo": "bloque técnico solo si se acordó tras el 1-10"
+          "objetivo": "sin bloque técnico: el 1-10 dio 9,4 en el primer intento (el bloque es para 9,8 o más) · apuntar los tres intentos: el 1-10 el primero fue el más lento"
         },
         {
           "fecha": "2026-10-23",
@@ -1570,11 +1570,11 @@
       "milPuntos": 3,
       "dominadas": 11,
       "dominadasPuntos": 5,
-      "circuito": 9.9,
-      "circuitoPuntos": 6,
-      "media": 4.67,
-      "resultado": "NO APTO",
-      "nota": "El 9,9 es el dato del 10 de septiembre, al 60 % y sin saber que le cronometraban. No es una medición seria."
+      "circuito": 9.4,
+      "circuitoPuntos": 7,
+      "media": 5.0,
+      "resultado": "APTO",
+      "nota": "Circuito: primer intento del 1-10 (9,4; techo 9,2). Apto justo, sin margen: el 3:34 lleva ±1-2 % de escala por la pista sin medir y las 11 dominadas son autoinformadas."
     },
     {
       "nombre": "Realista (el suyo, 19-9-2026)",
@@ -1796,21 +1796,9 @@
       "desde": "2026-09-28"
     },
     {
-      "id": "circuito-1",
-      "texto": "Circuito del jueves 1-10: primera medición seria (el 24 no se hizo). Los tres intentos en décimas; el primero es el comparable.",
-      "desde": "2026-09-29",
-      "hasta": "2026-10-01"
-    },
-    {
       "id": "sueno",
       "texto": "Luz apagada a las 22:15 entre semana y cena terminada 2 h antes. Mandar los CSV de sueño cada mañana la primera semana de trabajo.",
       "desde": "2026-09-29"
-    },
-    {
-      "id": "fiesta-12",
-      "texto": "¿Trabaja el lunes 12-10 (Fiesta Nacional)? Decide la hora del 5 × 400 de ese día.",
-      "desde": "2026-09-29",
-      "hasta": "2026-10-11"
     },
     {
       "id": "llamamiento",

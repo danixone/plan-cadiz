@@ -16,11 +16,11 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 |---|---|---|---|---|
 | 1.000 m | **3:34 medido el 19-9** (banda 3:30–3:38) | 3 | **Bajar de 3:30** (4 pts, decisión suya del 23-9); suelo 3:36 | **≥ 3:49** |
 | Dominadas | 11 autoinformado el 19-9 | 5 | 15 (suelo 12) | ≤ 4 |
-| Circuito | 9,9 s al 60 %, sin medir en serio | 6 | ≤ 9,3 s (suelo 9,7) | ≥ 11,7 s |
+| Circuito | **9,4 s, primer intento medido el 1-10** (9,4 · 9,2 · 9,3; techo 9,2) | 7 | ≤ 9,3 s en el primer intento (suelo 9,7) | ≥ 11,7 s |
 
 La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**. **Y suma:** la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física, y con ella se ordena a los aspirantes para las 541 plazas de la reserva (base 6.11 del BOE; en empate, primero conocimientos, después la física y, dentro de ella, el circuito). Cada punto físico cuenta para la plaza, no solo para el apto.
 
-**Con las marcas de hoy la media es 4,67 y NO aprueba.** Pero el 9,9 del circuito es del 10-9, al 60 % y sin saber que le cronometraban: no es una medición.
+**Con las marcas de hoy la media es 5,00: APTO JUSTO, sin ningún punto de margen** (3:34 = 3 · 11 dominadas = 5 · circuito 9,4 = 7). Cualquier punto que se pierda lo tumba, y las 11 dominadas son autoinformadas. El circuito, medido por primera vez el 1-10, tuvo el primer intento como el más lento: en el examen solo cuenta uno, y bajarlo a 9,3 es +1 punto.
 
 **Objetivo del 1.000 desde el 23-9-2026: bajar de 3:30.** Es decisión suya y no cambia el veredicto de la revisión: NO se persigue con más intensidad, se persigue con el reparto. El 19-9 hizo 40 · 42 · 46 · 46 · 41; con los dos 46 en 43 habría sido 3:29. Reparto del examen a 42,0 por 200: 0:42 / 1:24 / 2:06 / 2:48. Los ritmos suben UN escalón de 1 s por 400 y solo si el anterior se sostiene (bloque B en 1:26 / 2:08; el simulacro del 17-10 decide C entre 1:25 / 2:07 y 1:24 / 2:06). Un 3:30 en San Cristóbal no cuenta hasta medir el perímetro. Detalle en `plan.json` → `objetivo.objetivoNuevo23sep`.
 
@@ -107,6 +107,7 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 - **Primer 200 rápido en esfuerzos a ritmo de 1.000:** 40 en el control del 19 (pedía 45) y 40,6 en la primera de 6 × 400 el 28 (pedía 43,5), las dos sin progresivos de calibración. Después del primero corrige de más (primeros 200 de 43,6-46,5 y segundos de 41,3-43,9 el 28). Dos veces: a la tercera es regla. Remedio que ya está en el plan: los 5 progresivos del calentamiento, los dos últimos a ritmo K (= el ritmo del kilómetro del bloque: A 3:38 /km, B 3:34, C 3:32 → 3:30), y el aviso de ritmo. **El 30, con progresivos, no se repitió** (42,2 y 43,3 en los 600): sigue en dos.
 - **Segundo 200 por delante y caída después:** control del 19 (40 · 42 · 46 · 46) y kilómetro partido del 30 (600 en 42,2 · 41,9 · 47,2 y 43,3 · 41,4 · 46,0: paso por el 400 en 1:24 cuando tocaba 1:27,4). Dos veces: a la tercera es regla. Es lo que separa el 3:34 del 3:30.
 - **Progresivos que no van de menos a más:** el 30, el primero fue el más rápido (15,0 s/80 m) y los dos últimos, 16,1-16,4 frente a 17,4 del ritmo K.
+- **Primer intento del circuito más lento que los siguientes:** 9,4 · 9,2 · 9,3 el 1-10 (0,2 s = 1 punto). Una vez: a la tercera es regla. En el examen solo hay un intento.
 - **Calidad hecha tras una mala noche:** el 28 (2h14), a pesar de la regla del día torcido. La marca se sostuvo (media 1:26,9) con FC 203 y carga 234, la más alta del historial. Se registra como no válida.
 - **Descansos que se derrumban por tiempo en fuerza** (sentadilla 49/45/29 s el 22): superseries, no recortar.
 - **Sesiones que no se hacen:** el glúteo medio (H) no consta hecho ni una vez; el complemento del sábado (elevaciones de talón) tampoco. Se pregunta y se anota.
@@ -257,7 +258,7 @@ Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 
 | Lun 28 sep | **Hecho en Arucas, NO válido (2h14 de sueño):** 6 × 400 en 84,3 · 89,7 · 86,8 · 87,5 · 86,0 · 86,8 (media 1:26,9), FC 203, carga 234. Sin dominadas (parque vallado) |
 | Mar 29 sep | **Hecho en el Arsenal:** lastradas 5 × 3 con 12,5 kg, 15 válidas, 0 en reserva, 180 s de descanso |
 | Mié 30 sep | **Hecho en Arucas, VÁLIDO (7 h de sueño, verde):** 600 en 2:11,3 + 400 en 1:32,2 · 600 en 2:10,7 + 400 en 1:26,7. Total clavado, reparto no (tercer 200 del 600 en 47,2 y 46,0). Prep-hombro + 3 × 5 dominadas, sin vídeo, ningún dolor |
-| **Jue 1 oct** | 21:30 circuito, 3 intentos como el BOE. **Primera medición seria. El resultado no ha llegado a 2-10:** pedírselo. Decide 9,0–9,3 nada · 9,4–9,7 jueves con técnica · 9,8 o más, bloque técnico los jueves 8 y 22 y reescribir escenarios |
+| Jue 1 oct | **Hecho con el preparador:** 9,4 · 9,2 · 9,3. Primer intento 9,4 = 7 puntos (techo 9,2). Sin bloque técnico (es para 9,8 o más). Sueño de la noche anterior sin dato |
 | Sáb 3 oct | **Barra corta antes del rodaje** (prep-hombro, 1 × 3, serie técnica de 7 en vídeo, 2 × 5 con 4 en reserva) + rodaje 55 min, techo 145. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
 | Lun 5 – Dom 11 oct | **Semana añadida del bloque B:** lunes 5 × 400 en 1:26 · martes Arsenal con la regla del 6-10 · miércoles 3 × 600 en 2:08 · jueves circuito de entreno · sábado rodaje 55 sin barra |
 | Lun 12 – Dom 18 oct | Simulacro: lunes 5 × 400 · martes lastre con la regla (+2,5 kg solo con 2 en reserva el 6) · miércoles 3 × 600 · **jueves 15 circuito del simulacro** · **sábado 17 dominadas al máximo en vídeo + 1.000** |
@@ -280,11 +281,10 @@ El resto del calendario está en `datos/plan.json`.
 
 - **Los pendientes que ve Daniel en la web son `plan.pendientes`.** Los de esta lista que no estén allí no salen en la web: al abrir o cerrar uno, hacerlo en los dos sitios.
 - **Pista para el simulacro del 17: Arucas**, si las marcas pintadas confirman los 400 m (foto de la salida del 1.000 o de las salidas escalonadas). Eso resuelve el perímetro de San Cristóbal, que queda sin medir: el 3:34 del 19 sigue con ±1-2 % de escala y el primer 1.000 de Arucas será la primera marca de baremo.
-- **Cronometrar el circuito en serio el jueves 1-10**, fresco y al principio de la sesión (el 24 no se hizo). Es el punto más barato que queda. El preparador solo hace circuito. Falta saber si el circuito del 17-9 se hizo (no consta).
 - **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27.
-- **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El número del circuito sale el jueves 1-10. El preparador solo hace circuito los jueves, sin fuerza ni tirón.
+- **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El preparador solo hace circuito los jueves, sin fuerza ni tirón. Falta saber si el circuito del 17-9 se hizo (no consta) y las horas de sueño de la noche del 30-9 al 1-10.
 - **Barra de Arucas:** altura y grosor desconocidos. Las cifras de barras distintas no se comparan.
-- **¿Trabaja el 12-10 (Fiesta Nacional)?** Decide la hora del 5 × 400 de ese lunes.
+- ~~¿Trabaja el 12-10?~~ **No trabaja** (dato del 2-10): el 5 × 400 va a las 18:00 igual, para compararlo con el del 5.
 - **Glúteo medio (H): no consta hecho ni una vez.** Del cintillo no hay ningún dato desde el 21-8.
 - Fecha exacta de las pruebas (2 al 6 de noviembre), hora y minutos entre ellas, cuando llegue el llamamiento, y **qué día viaja a Cádiz**: decide qué pueden ser los días −2 y −1. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
 - **Hora fija para los controles del 17 y del 31 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.

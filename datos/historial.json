@@ -1021,6 +1021,16 @@
   ],
   "circuito": [
     {
+      "fecha": "2026-10-01",
+      "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
+      "intentos": [
+        9.4,
+        9.2,
+        9.3
+      ],
+      "valoracion": "PRIMERA MEDICIÓN SERIA del circuito (comunicada por él el 2-10). Primer intento 9,4 s, que es el comparable con el baremo: 7 puntos (tramo 9,4-9,7). Techo 9,2 (8 puntos, tramo 8,9-9,3). El primer intento fue el más lento de los tres: 0,2 s separan 7 de 8 puntos, y en el examen solo hay un intento (el segundo, solo tras un nulo). Es la primera vez que se ve: a la tercera, regla. Decisión del 1-10: 9,4-9,7 → jueves completo con técnica; el bloque técnico de 6-8 repeticiones queda para 9,8 o más, así que no se activa. Con 3:34 (3) + 11 dominadas (5) + 9,4 (7) la media es 5,00: apto justo, sin ningún punto de margen. SIN DATO: horas de sueño de la noche del 30 al 1 (con menos de 6h30 el intento iría con asterisco), si hubo nulos, quién cronometró y con qué. La valoración del 10-9 (9,0-9,4 a tope) se cumple por el lado lento: 9,2-9,4."
+    },
+    {
       "fecha": "2026-09-24",
       "hecho": false,
       "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",

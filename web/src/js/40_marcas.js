@@ -194,8 +194,8 @@
     rot.setAttribute('class', 'mc-g1-rot lab ' + rcls);
     rot.setAttribute('x', (ladoDer ? xp + 8 : xp - 8).toFixed(1));
     rot.setAttribute('text-anchor', ladoDer ? 'start' : 'end');
-    /* el agente: relleno con marcas reales, en contorno con escenario o simulado; celebra solo real y APTO */
-    var pose = res === 'ELIMINADO' ? 'dePie' : (real && res === 'APTO' ? 'celebra' : 'corre');
+    /* el agente: relleno con marcas reales, en contorno con escenario o simulado; celebra solo real, APTO y con las tres marcas medidas */
+    var pose = res === 'ELIMINADO' ? 'dePie' : (real && o.medido !== false && res === 'APTO' ? 'celebra' : 'corre');
     var ag = svg.querySelector('.mc-g1-ag');
     var clave = pose + (real ? 'r' : 'c');
     if (ag.getAttribute('data-clave') !== clave) {
@@ -419,7 +419,7 @@
     } else et.innerHTML = '';
     /* G1 */
     var escM = ESC.filter(function (x) { return !igualV(x.v, REAL); }).map(function (x) { return notaDe(x.v).media; });
-    PC.graf.notaPista(q('[data-m="g1"]'), { media: media, real: real, resultado: res, mediaReal: NR.media, escenarios: escM, eliminaPor: quienElimina(n.pts) });
+    PC.graf.notaPista(q('[data-m="g1"]'), { media: media, real: real, medido: !ORDEN.some(fiabHueca), resultado: res, mediaReal: NR.media, escenarios: escM, eliminaPor: quienElimina(n.pts) });
     /* filas */
     ORDEN.forEach(function (k) {
       var f = sec.querySelector('.mc-fila[data-k="' + k + '"]'), R = PR[k], v = ST.v[k], p = n.pts[k];
