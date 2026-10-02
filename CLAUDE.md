@@ -146,6 +146,10 @@ Errores típicos:
 - **«marcasActuales.X: el baremo da N puntos y el plan escribe M»**: corregir los puntos.
 - **«sello: la web lleva X y los datos actuales dan Y»**: hay datos sin instalar; `sh web/instalar.sh`.
 
+**Cuando Daniel escriba «editor web»**, su petición se pasa literal al subagente `editor-web`, que hace ese cambio concreto en la web, la instala y comprueba que no rompe nada. No toca `datos/` ni publica: lo que necesite de `plan.json` o `historial.json` lo devuelve como propuesta.
+
+**Subagente `comprobador-funcional-web`**: revisa que la web funcione y cumpla los principios de `web/doc/especificacion.md` (§0, §2, §3.3, §3.4, §4.6, §4.7). Se llama cuando Daniel escribe «comprobador funcional de web», después de instalar la web con una sesión que analizó `analista-fit` y después de cada auditoría de `auditor-web`, diciéndole qué ha cambiado. Solo revisa: los fallos que devuelve los arregla la conversación principal o el `editor-web`.
+
 Comprobaciones más completas cuando cambia algo gordo (o delegadas en el subagente `auditor-web`, que las ejecuta y devuelve los fallos sin arreglarlos):
 
 ```bash
