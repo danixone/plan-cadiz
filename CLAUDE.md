@@ -56,7 +56,7 @@ Acepta `.fit`, `.tcx`, `.zip` y el `.csv` de sueño, y admite varios a la vez. L
 
 Si falta la dependencia: `pip install fitdecode --break-system-packages`
 
-El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`, solo en este Mac): devuelve el informe y la validez, y el registro y la decisión de cambiar el plan (Pasos 3 y 4) se quedan en la conversación principal.
+El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`, solo en este Mac): devuelve el informe y la validez, y el registro y la decisión de cambiar el plan (Pasos 3 y 4) se quedan en la conversación principal. **Cada vez que termine `analista-fit`, se le pasa su informe al subagente `entrenador`**, que propone si cambia el entrenamiento, instrucciones para mejorar y un mensaje para Daniel (de ánimo o duro, según los datos). La decisión sigue siendo de la conversación principal, y el mensaje del entrenador se le transmite tal cual.
 
 **Si te pasa un TCX, avísale.** Recorta la cadencia y las dinámicas de carrera. El original se saca en Garmin Connect: actividad → engranaje → **Exportar original**.
 
