@@ -28,7 +28,7 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**. **
 
 **No está estancado en dominadas, aunque él lo crea.** En todo el historial hay DOS tests máximos: 10 el 24 de agosto (4 min después de 8 × 200) y 11 el 19 de septiembre. La primera sesión de fuerza del Arsenal fue el 15 de septiembre: a 19 de septiembre lleva cuatro días. Lo anterior era habituación a peso corporal, que no sube el techo.
 
-**Punto de rotura:** circuito en 10,2 s. Con 9,8 aprueba justo (5,00). Solo le tumba que fallen las tres a la vez (3:37 + 11 dominadas + 9,8 = 4,33).
+**Punto de rotura del escenario realista** (3:34 y 12 dominadas): circuito en 10,2 s; con 9,8 aprueba justo (5,00). Con las marcas de hoy no hay margen: cualquier punto que se pierda lo tumba.
 
 **El riesgo de las dominadas no es llegar a 12: es que el tribunal las cuente.** Las 11 son autoinformadas. Si dos no cumplen la técnica oficial, son 9 y bajan a 4 puntos.
 
@@ -179,9 +179,9 @@ git add -A && git commit -m "Sesión del <fecha>" && git push
 
 GitHub Pages publica desde `docs/`. Tarda un minuto. **Sin coste y sin límite.**
 
-**No publiques por iniciativa propia.** Agrupa los cambios y publica cuando él lo pida o al cerrar un bloque: después de un control, al final de una semana. El 22-9 publiqué sin que lo pidiera: no se repite. Cada respuesta termina diciendo si hay cambios sin publicar.
+**No publiques por iniciativa propia.** Agrupa los cambios y publica cuando él lo pida o al cerrar un bloque: después de un control, al final de una semana. Cada respuesta termina diciendo si hay cambios sin publicar.
 
-**Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»). El 19-9 los creé en Google y hubo que borrarlos.
+**Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»).
 
 **Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
 
@@ -215,7 +215,7 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **El circuito es inamovible: jueves a las 21:30 con el preparador.** No se mueve a otro día ni a un sábado. Por eso el circuito de cada simulacro se hace el jueves anterior (15 y 29 de octubre) con UN intento cronometrado como el BOE, y el sábado quedan dominadas y kilómetro. El miércoles acaba antes de las 20:30. Protocolo de cada jueves: 3 intentos cronometrados como el examen (voz de «ya» hasta el pie en el suelo tras la última valla), **el primero es el comparable con el baremo** (si es nulo, el siguiente válido, como en el examen, que da un segundo intento solo tras un nulo: así lo calcula la web), el mejor es el techo, y se anotan nulos y motivo.
 
-**Sesiones entre semana a las 18:00 desde el 28-9, también el Arsenal los martes (abre hasta las 22:00)**, con el trabajo de 7:30 a 14:30 de lunes a viernes. Se levanta a las 6:00: luz apagada a las 22:15. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
+**Sesiones entre semana a las 18:00 desde el 28-9, también el Arsenal los martes (abre hasta las 22:00)**, con el trabajo de 7:30 a 14:30 de lunes a viernes. Se levanta a las 6:00: luz apagada a las 22:15. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito.
 
 **Reloj en cada sesión de series:** paso con rango de ritmo 3:30-3:40 /km; primer 200 por reloj (0:43,5 en A, 0:43 en B y C); si un 400 baja del objetivo en más de 3 s, la siguiente sale más lenta, no se abandona. Regla de las dos repeticiones: dos seguidas a más de 3 s, a casa; dos semanas seguidas, se bajan los ritmos.
 
@@ -255,10 +255,6 @@ Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 
 
 | Día | Sesión |
 |---|---|
-| Lun 28 sep | **Hecho en Arucas, NO válido (2h14 de sueño):** 6 × 400 en 84,3 · 89,7 · 86,8 · 87,5 · 86,0 · 86,8 (media 1:26,9), FC 203, carga 234. Sin dominadas (parque vallado) |
-| Mar 29 sep | **Hecho en el Arsenal:** lastradas 5 × 3 con 12,5 kg, 15 válidas, 0 en reserva, 180 s de descanso |
-| Mié 30 sep | **Hecho en Arucas, VÁLIDO (7 h de sueño, verde):** 600 en 2:11,3 + 400 en 1:32,2 · 600 en 2:10,7 + 400 en 1:26,7. Total clavado, reparto no (tercer 200 del 600 en 47,2 y 46,0). Prep-hombro + 3 × 5 dominadas, sin vídeo, ningún dolor |
-| Jue 1 oct | **Hecho con el preparador:** 9,4 · 9,2 · 9,3. Primer intento 9,4 = 7 puntos (techo 9,2). Sin bloque técnico (es para 9,8 o más). Sueño de la noche anterior sin dato |
 | Sáb 3 oct | **Barra corta antes del rodaje** (prep-hombro, 1 × 3, serie técnica de 7 en vídeo, 2 × 5 con 4 en reserva) + rodaje 55 min, techo 145. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
 | Lun 5 – Dom 11 oct | **Semana añadida del bloque B:** lunes 5 × 400 en 1:26 · martes Arsenal con la regla del 6-10 · miércoles 3 × 600 en 2:08 · jueves circuito de entreno · sábado rodaje 55 sin barra |
 | Lun 12 – Dom 18 oct | Simulacro: lunes 5 × 400 · martes lastre con la regla (+2,5 kg solo con 2 en reserva el 6) · miércoles 3 × 600 · **jueves 15 circuito del simulacro** · **sábado 17 dominadas al máximo en vídeo + 1.000** |
@@ -284,7 +280,6 @@ El resto del calendario está en `datos/plan.json`.
 - **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27.
 - **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El preparador solo hace circuito los jueves, sin fuerza ni tirón. Falta saber si el circuito del 17-9 se hizo (no consta) y las horas de sueño de la noche del 30-9 al 1-10.
 - **Barra de Arucas:** altura y grosor desconocidos. Las cifras de barras distintas no se comparan.
-- ~~¿Trabaja el 12-10?~~ **No trabaja** (dato del 2-10): el 5 × 400 va a las 18:00 igual, para compararlo con el del 5.
 - **Glúteo medio (H): no consta hecho ni una vez.** Del cintillo no hay ningún dato desde el 21-8.
 - Fecha exacta de las pruebas (2 al 6 de noviembre), hora y minutos entre ellas, cuando llegue el llamamiento, y **qué día viaja a Cádiz**: decide qué pueden ser los días −2 y −1. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
 - **Hora fija para los controles del 17 y del 31 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.
