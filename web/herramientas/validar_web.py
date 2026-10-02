@@ -43,12 +43,13 @@ CLAVES_ESTRUCTURA = {'firma', 'firmaDe', 'fuente', 'fuentes', 'corpusSha256', 'p
 # rutas de §10.6.6 donde tiene que verse el 3:49
 RUTAS_UMBRAL = [
     ('marcas/nota', {'abrir': '1'}), ('marcas/controles', {}), ('plan/ritmos', {}), ('tecnica/mil', {}),
-    ('hoy', {'hoy': '2026-10-10'}), ('hoy', {'hoy': '2026-10-09'}),
-    ('hoy', {'hoy': '2026-10-10', 'abrir': 'focus'}), ('hoy', {'hoy': '2026-10-10', 'abrir': 'fue'}),
+    ('hoy', {'hoy': '2026-10-17'}), ('hoy', {'hoy': '2026-10-16'}),
+    ('hoy', {'hoy': '2026-10-17', 'abrir': 'focus'}), ('hoy', {'hoy': '2026-10-17', 'abrir': 'fue'}),
 ]
 # días en que Hoy tiene que pintar la tarjeta de la fecha (§10.5 M2 y fechas de la matriz de §10.6)
 FECHAS_HOY = ['2026-09-29', '2026-09-30', '2026-10-01', '2026-10-03', '2026-10-04', '2026-10-06',
-              '2026-10-10', '2026-10-12', '2026-10-17', '2026-10-24', '2026-10-27']
+              '2026-10-10', '2026-10-12', '2026-10-17', '2026-10-19', '2026-10-24', '2026-10-31',
+              '2026-11-03']
 IDS_59 = ['figs(', 'FOTO_BASE', 'fotos(', 'bindFotos', 'FICHAS', 'CAL_LARGO', 'CAL_CORTO', 'SABCOMP',
           'drawSueno', 'drawCarga', 'drawTrote', 'drawMil', 'drawDom', 'bindHit', 'IBM Plex Mono', "'s-mil'", "'s-dom'", "'s-cir'"]
 

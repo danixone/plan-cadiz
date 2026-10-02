@@ -1,6 +1,8 @@
 # Preparación física · Policía Nacional · Cádiz
 
-Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación para las pruebas físicas de la Escala Básica, en Cádiz, la última semana de octubre de 2026.
+Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación para las pruebas físicas de la Escala Básica, en Cádiz, la primera semana de noviembre de 2026 (del lunes 2 al viernes 6, día exacto sin confirmar).
+
+**Cambio del 2-10-2026: la prueba pasó de la última semana de octubre a la primera de noviembre.** Se añadió una semana del bloque B (5-11 oct, mismas sesiones que la siguiente) y todo lo demás se corrió siete días: simulacro el 17-10, última sesión pesada de lastre el 20-10, descarga el 27-10. Ninguna estimación de marca cambió por la semana extra. Detalle en `plan.json` → `objetivo.pruebasFisicas.cambio2oct`.
 
 **Al empezar cada sesión de trabajo, lee `datos/plan.json` y `datos/historial.json`.** Contienen todo: baremo, zonas, ritmos, calendario hasta el día de la prueba, protocolos, lesiones, dieta e historial completo desde el 21 de agosto. No le preguntes por datos que ya están ahí.
 
@@ -20,7 +22,7 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**. **
 
 **Con las marcas de hoy la media es 4,67 y NO aprueba.** Pero el 9,9 del circuito es del 10-9, al 60 % y sin saber que le cronometraban: no es una medición.
 
-**Objetivo del 1.000 desde el 23-9-2026: bajar de 3:30.** Es decisión suya y no cambia el veredicto de la revisión: NO se persigue con más intensidad, se persigue con el reparto. El 19-9 hizo 40 · 42 · 46 · 46 · 41; con los dos 46 en 43 habría sido 3:29. Reparto del examen a 42,0 por 200: 0:42 / 1:24 / 2:06 / 2:48. Los ritmos suben UN escalón de 1 s por 400 y solo si el anterior se sostiene (bloque B en 1:26 / 2:08; el simulacro del 10 decide C entre 1:25 / 2:07 y 1:24 / 2:06). Un 3:30 en San Cristóbal no cuenta hasta medir el perímetro. Detalle en `plan.json` → `objetivo.objetivoNuevo23sep`.
+**Objetivo del 1.000 desde el 23-9-2026: bajar de 3:30.** Es decisión suya y no cambia el veredicto de la revisión: NO se persigue con más intensidad, se persigue con el reparto. El 19-9 hizo 40 · 42 · 46 · 46 · 41; con los dos 46 en 43 habría sido 3:29. Reparto del examen a 42,0 por 200: 0:42 / 1:24 / 2:06 / 2:48. Los ritmos suben UN escalón de 1 s por 400 y solo si el anterior se sostiene (bloque B en 1:26 / 2:08; el simulacro del 17-10 decide C entre 1:25 / 2:07 y 1:24 / 2:06). Un 3:30 en San Cristóbal no cuenta hasta medir el perímetro. Detalle en `plan.json` → `objetivo.objetivoNuevo23sep`.
 
 **Escenario realista vigente (suyo, 19-9-2026): 3:34 · 12 dominadas · 9,0 s = 5,67, APTO.** Con el 3:30: 6,00. Se sostiene: a tope el circuito debería estar en 9,0-9,4 (ya era la valoración del 10-9), y de 11 a 12 dominadas es el salto más barato de las tres pruebas (5 → 6 puntos).
 
@@ -53,6 +55,8 @@ python3 herramientas/analizar.py archivos-garmin/<archivo>
 Acepta `.fit`, `.tcx`, `.zip` y el `.csv` de sueño, y admite varios a la vez. Los CSV de VFC y de VO2max los trata como de sueño (solo imprime la fecha y una «necesidad estimada» que no aplica): sus valores se leen a mano y van a `historial.sueno[].vfc7dias` y `historial.garmin[].vo2max`. Saca minuto a minuto, franjas de pulso, **deriva cardíaca**, cadencia, desnivel real y series de fuerza.
 
 Si falta la dependencia: `pip install fitdecode --break-system-packages`
+
+El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`, solo en este Mac): devuelve el informe y la validez, y el registro y la decisión de cambiar el plan (Pasos 3 y 4) se quedan en la conversación principal.
 
 **Si te pasa un TCX, avísale.** Recorta la cadencia y las dinámicas de carrera. El original se saca en Garmin Connect: actividad → engranaje → **Exportar original**.
 
@@ -141,7 +145,7 @@ Errores típicos:
 - **«marcasActuales.X: el baremo da N puntos y el plan escribe M»**: corregir los puntos.
 - **«sello: la web lleva X y los datos actuales dan Y»**: hay datos sin instalar; `sh web/instalar.sh`.
 
-Comprobaciones más completas cuando cambia algo gordo:
+Comprobaciones más completas cuando cambia algo gordo (o delegadas en el subagente `auditor-web`, que las ejecuta y devuelve los fallos sin arreglarlos):
 
 ```bash
 python3 web/herramientas/validar_web.py --render
@@ -178,7 +182,7 @@ GitHub Pages publica desde `docs/`. Tarda un minuto. **Sin coste y sin límite.*
 
 **Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»). El 19-9 los creé en Google y hubo que borrarlos.
 
-**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Creados del 29-9 al 24-10 (19 eventos); la semana de la prueba se añade cuando llegue el llamamiento. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
+**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
 
 ## Paso 7 · Responder
 
@@ -204,11 +208,11 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **Semáforo de la mañana.** Horas de sueño del Garmin sin siesta, VFC de 7 días, dolor de codo/hombro y de talón/cintillo. Verde ≥ 6h30: la sesión entera, la única que mide. Ámbar 5h00-6h29: dos tercios de las repeticiones al mismo ritmo + 15-20 min suaves, o el peso ya dominado (no se estrena peso). Rojo < 5h00, VFC de 7 días «Desequilibrado» o «Bajo», «Sobrecarga» o síntomas por encima del cuello (por debajo, no se entrena): rodaje 30-40 min o fuerza reducida sin pierna; una calidad en rojo se pierde, no se mueve. Dos noches seguidas < 5 h = 48 h en rojo. Cortes convencionales, no de un estudio. Detalle en `plan.json` → `reglas` → `dia-torcido`.
 
-**Dominadas, revisión del 28-9 (9 agentes):** más barra, poca y sin lastre: sesión corta los sábados 3 y 17-10 antes del rodaje. Nada de segundo día con lastre, dominadas diarias ni excéntricas. Test máximo solo el 10-10 y la prueba (el 24-10, serie técnica de 8). Descarga del 20-10: 3 × 2 con el peso del 13. Registro de dolor de codo y hombro 0-10 en cada sesión de barra. Él pide 14 «como sea»: rango honesto 9-13 válidas, centro 11-12; se asegura 12 válidas. Detalle en `plan.json` → `revision28sep`.
+**Dominadas, revisión del 28-9 (9 agentes):** más barra, poca y sin lastre: sesión corta los sábados 3 y 24-10 antes del rodaje (el 10 no lleva barra: se mantienen las dos sesiones de la revisión). Nada de segundo día con lastre, dominadas diarias ni excéntricas. Test máximo solo el 17-10 y la prueba (el 31-10, serie técnica de 8). Martes: el 13 sube 2,5 kg solo si la quinta serie del 6 dejó 2 o más en reserva (la regla de siempre), el 20 es la última sesión pesada (4 × 3) y el 27 la descarga (3 × 2 con el peso del 20). Registro de dolor de codo y hombro 0-10 en cada sesión de barra. Él pide 14 «como sea»: rango honesto 9-13 válidas, centro 11-12; se asegura 12 válidas. Detalle en `plan.json` → `revision28sep`.
 
 **Descanso significa descanso.** Un día de descanso no son cinco horas de monte. Ya pasó el 7 de septiembre y costó un control aplazado y dos semanas.
 
-**El circuito es inamovible: jueves a las 21:30 con el preparador.** No se mueve a otro día ni a un sábado. Por eso el circuito de cada simulacro se hace el jueves anterior (8 y 22 de octubre) con UN intento cronometrado como el BOE, y el sábado quedan dominadas y kilómetro. El miércoles acaba antes de las 20:30. Protocolo de cada jueves: 3 intentos cronometrados como el examen (voz de «ya» hasta el pie en el suelo tras la última valla), **el primero es el comparable con el baremo** (si es nulo, el siguiente válido, como en el examen, que da un segundo intento solo tras un nulo: así lo calcula la web), el mejor es el techo, y se anotan nulos y motivo.
+**El circuito es inamovible: jueves a las 21:30 con el preparador.** No se mueve a otro día ni a un sábado. Por eso el circuito de cada simulacro se hace el jueves anterior (15 y 29 de octubre) con UN intento cronometrado como el BOE, y el sábado quedan dominadas y kilómetro. El miércoles acaba antes de las 20:30. Protocolo de cada jueves: 3 intentos cronometrados como el examen (voz de «ya» hasta el pie en el suelo tras la última valla), **el primero es el comparable con el baremo** (si es nulo, el siguiente válido, como en el examen, que da un segundo intento solo tras un nulo: así lo calcula la web), el mejor es el techo, y se anotan nulos y motivo.
 
 **Sesiones entre semana a las 18:00 desde el 28-9, también el Arsenal los martes (abre hasta las 22:00)**, con el trabajo de 7:30 a 14:30 de lunes a viernes. Se levanta a las 6:00: luz apagada a las 22:15. No más tarde: conserva un día desde el Arsenal y 25 h hasta el circuito. La primera con banda se compara con la del 23 (141 ppm a 7:00-8:00) antes de fijar la hora.
 
@@ -253,18 +257,20 @@ Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 
 | Lun 28 sep | **Hecho en Arucas, NO válido (2h14 de sueño):** 6 × 400 en 84,3 · 89,7 · 86,8 · 87,5 · 86,0 · 86,8 (media 1:26,9), FC 203, carga 234. Sin dominadas (parque vallado) |
 | Mar 29 sep | **Hecho en el Arsenal:** lastradas 5 × 3 con 12,5 kg, 15 válidas, 0 en reserva, 180 s de descanso |
 | Mié 30 sep | **Hecho en Arucas, VÁLIDO (7 h de sueño, verde):** 600 en 2:11,3 + 400 en 1:32,2 · 600 en 2:10,7 + 400 en 1:26,7. Total clavado, reparto no (tercer 200 del 600 en 47,2 y 46,0). Prep-hombro + 3 × 5 dominadas, sin vídeo, ningún dolor |
-| **Jue 1 oct** | 21:30 circuito, 3 intentos como el BOE. **Primera medición seria (el 24 no se hizo):** decide lo del 24 (9,0–9,3 nada · 9,4–9,7 jueves con técnica · 9,8 o más, bloque técnico y reescribir escenarios). Apuntar horas de sueño junto al primer intento |
+| **Jue 1 oct** | 21:30 circuito, 3 intentos como el BOE. **Primera medición seria. El resultado no ha llegado a 2-10:** pedírselo. Decide 9,0–9,3 nada · 9,4–9,7 jueves con técnica · 9,8 o más, bloque técnico los jueves 8 y 22 y reescribir escenarios |
 | Sáb 3 oct | **Barra corta antes del rodaje** (prep-hombro, 1 × 3, serie técnica de 7 en vídeo, 2 × 5 con 4 en reserva) + rodaje 55 min, techo 145. Elevaciones de talón innegociables. 45 si hubo dolor de talón |
+| Lun 5 – Dom 11 oct | **Semana añadida del bloque B:** lunes 5 × 400 en 1:26 · martes Arsenal con la regla del 6-10 · miércoles 3 × 600 en 2:08 · jueves circuito de entreno · sábado rodaje 55 sin barra |
+| Lun 12 – Dom 18 oct | Simulacro: lunes 5 × 400 · martes lastre con la regla (+2,5 kg solo con 2 en reserva el 6) · miércoles 3 × 600 · **jueves 15 circuito del simulacro** · **sábado 17 dominadas al máximo en vídeo + 1.000** |
 
-**Ritmos, con el escalón condicionado del objetivo 3:30.** Bloque A (28 sep – 4 oct): 400 en 1:27 · 600 en 2:11, no se toca. Bloque B (5 – 18 oct): **1:26 / 2:08, decidido el 28-9** (el escalón a 1:25 / 2:07 pedía el 28 y el 30 clavados con sobra, y el 28 no fue válido ni con sobra). Bloque C (19 oct – prueba): 1:25 / 2:07, o 1:24 / 2:06 si el simulacro del 10 dio ≤ 3:33 en distancia verificada con los tramos centrales en 43. Solo se sube un escalón si el anterior se sostiene; la regla de las dos repeticiones sigue mandando para bajar.
+**Ritmos, con el escalón condicionado del objetivo 3:30.** Bloque A (28 sep – 4 oct): 400 en 1:27 · 600 en 2:11, no se toca. Bloque B (5 – 25 oct): **1:26 / 2:08, decidido el 28-9** (el escalón a 1:25 / 2:07 pedía el 28 y el 30 clavados con sobra, y el 28 no fue válido ni con sobra). Bloque C (26 oct – prueba): 1:25 / 2:07, o 1:24 / 2:06 si el simulacro del 17 dio ≤ 3:33 en distancia verificada con los tramos centrales en 43. Solo se sube un escalón si el anterior se sostiene; la regla de las dos repeticiones sigue mandando para bajar.
 
 **Reparto del examen (objetivo 3:30):** 200 en 0:42 · 400 en 1:24 · 600 en 2:06 · 800 en 2:48 · meta 3:29–3:30. Suelo 3:36. Si pasas el 600 por delante de 2:05, has salido demasiado rápido. Lo que decide el objetivo son los tramos 400-600 y 600-800: 43 y 43, no 46 y 46.
 
 El resto del calendario está en `datos/plan.json`.
 
-**Pista de Arucas (desde el 28-9):** pista de atletismo del complejo deportivo Tonono, con parque de calistenia al lado. OpenStreetMap: recinto de 162 × 74 m con el mismo eje que el GPS y un campo de fútbol de 105 × 65 m dentro: compatible con una pista reglamentaria de 400 m (calle 1 ≈ 158 × 74 m). Renovada en 2025. **Homologación sin confirmar:** comprobar las marcas pintadas (salidas escalonadas del 200 y del 400, salida en abanico del 1.000/1.500, números de calle). Si están, la calle 1 mide 400 m y aquí va el simulacro del 10.
+**Pista de Arucas (desde el 28-9):** pista de atletismo del complejo deportivo Tonono, con parque de calistenia al lado. OpenStreetMap: recinto de 162 × 74 m con el mismo eje que el GPS y un campo de fútbol de 105 × 65 m dentro: compatible con una pista reglamentaria de 400 m (calle 1 ≈ 158 × 74 m). Renovada en 2025. **Homologación sin confirmar:** comprobar las marcas pintadas (salidas escalonadas del 200 y del 400, salida en abanico del 1.000/1.500, números de calle). Si están, la calle 1 mide 400 m y aquí va el simulacro del 17.
 
-**Pista de San Cristóbal:** bucle de atletismo **NO homologado**. Rectas de ~170 m y curvas de radio ~8,5 m; una calle 1 homologada tiene rectas de 84,4 m y radio 36,5 m. **Perímetro sin medir: entre 392 y 400 m** según el ajuste del GPS, y el método no los distingue. Por eso toda marca medida ahí lleva ±1-2 % de escala. **No usar la calibración de cuatro vueltas del FR265:** el manual la condiciona a una pista estándar de 400 m. Antes del control del 10 de octubre hay que medir el anillo con rueda o cinta, o llevar el control a una pista homologada.
+**Pista de San Cristóbal:** bucle de atletismo **NO homologado**. Rectas de ~170 m y curvas de radio ~8,5 m; una calle 1 homologada tiene rectas de 84,4 m y radio 36,5 m. **Perímetro sin medir: entre 392 y 400 m** según el ajuste del GPS, y el método no los distingue. Por eso toda marca medida ahí lleva ±1-2 % de escala. **No usar la calibración de cuatro vueltas del FR265:** el manual la condiciona a una pista estándar de 400 m. Antes del simulacro del 17 de octubre hay que medir el anillo con rueda o cinta, o llevar el control a una pista homologada.
 
 ---
 
@@ -273,15 +279,15 @@ El resto del calendario está en `datos/plan.json`.
 # PENDIENTE
 
 - **Los pendientes que ve Daniel en la web son `plan.pendientes`.** Los de esta lista que no estén allí no salen en la web: al abrir o cerrar uno, hacerlo en los dos sitios.
-- **Pista para el simulacro del 10: Arucas**, si las marcas pintadas confirman los 400 m (foto de la salida del 1.000 o de las salidas escalonadas). Eso resuelve el perímetro de San Cristóbal, que queda sin medir: el 3:34 del 19 sigue con ±1-2 % de escala y el primer 1.000 de Arucas será la primera marca de baremo.
+- **Pista para el simulacro del 17: Arucas**, si las marcas pintadas confirman los 400 m (foto de la salida del 1.000 o de las salidas escalonadas). Eso resuelve el perímetro de San Cristóbal, que queda sin medir: el 3:34 del 19 sigue con ±1-2 % de escala y el primer 1.000 de Arucas será la primera marca de baremo.
 - **Cronometrar el circuito en serio el jueves 1-10**, fresco y al principio de la sesión (el 24 no se hizo). Es el punto más barato que queda. El preparador solo hace circuito. Falta saber si el circuito del 17-9 se hizo (no consta).
 - **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27.
 - **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El número del circuito sale el jueves 1-10. El preparador solo hace circuito los jueves, sin fuerza ni tirón.
 - **Barra de Arucas:** altura y grosor desconocidos. Las cifras de barras distintas no se comparan.
-- **¿Trabaja el 12-10 (Fiesta Nacional)?** Decide si el 8 × 200 se adelanta o no.
+- **¿Trabaja el 12-10 (Fiesta Nacional)?** Decide la hora del 5 × 400 de ese lunes.
 - **Glúteo medio (H): no consta hecho ni una vez.** Del cintillo no hay ningún dato desde el 21-8.
-- Fecha exacta de las pruebas, hora y minutos entre ellas, cuando llegue el llamamiento. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
-- **Hora fija para los controles del 10 y del 24 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.
+- Fecha exacta de las pruebas (2 al 6 de noviembre), hora y minutos entre ellas, cuando llegue el llamamiento, y **qué día viaja a Cádiz**: decide qué pueden ser los días −2 y −1. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
+- **Hora fija para los controles del 17 y del 31 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.
 - Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT.
 - Segunda zapatilla de rodaje, aplazada por coste.
 

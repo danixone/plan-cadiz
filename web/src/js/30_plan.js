@@ -482,7 +482,7 @@
     var filas = [];
     if (RS) filas.push([RS.clave, RS.nombre, 'techo ' + RS.techoFC + ' ppm' + (RS.mediaFC ? ' · media ' + RS.mediaFC.join('–') : '') + (RS.ritmoEsperado ? ' · ' + RS.ritmoEsperado : ''), frases(RS.reglaDeSalida)[0] || '']);
     if (TR) filas.push([TR.clave, TR.nombre, (TR.ritmoKm || '') + ' /km', '']);
-    if (VEL) filas.push([VEL.clave, VEL.nombre, ['200 en ' + VEL.m200, VEL.m400 ? '400 en ' + VEL.m400 : '', VEL.ritmoKm ? VEL.ritmoKm + ' /km' : ''].filter(Boolean).join(' · '), VEL.criterio12oct ? 'Criterio del 12-10: ' + (frases(VEL.criterio12oct)[0] || '') : '']);
+    if (VEL) filas.push([VEL.clave, VEL.nombre, ['200 en ' + VEL.m200, VEL.m400 ? '400 en ' + VEL.m400 : '', VEL.ritmoKm ? VEL.ritmoKm + ' /km' : ''].filter(Boolean).join(' · '), VEL.criterio19oct ? 'Criterio del 19-10: ' + (frases(VEL.criterio19oct)[0] || '') : '']);
     var cab = ['Clave', 'Ritmo', 'Pulso o ritmo', 'Regla de salida o criterio'];
     h += '<div class="card pl-otros"><h3 class="pl-gt">Rodaje, trote y velocidad</h3><div class="tscroll pl-tabla"><table class="t stack"><thead><tr>' + cab.map(function (c) { return '<th scope="col">' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>' +
       filas.map(function (f) { return '<tr>' + f.map(function (c, i) { return '<td data-l="' + esc(cab[i]) + '"' + (c ? '' : ' class="pl-vacia"') + '>' + esc(c || '—') + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table></div>';
@@ -490,7 +490,7 @@
     if (RS && RS.reglaDeSalida) { var r = frases(RS.reglaDeSalida).slice(1).join(' '); if (r) por += '<p><span class="pl-rot">Rodaje suave</span> ' + esc(r) + '</p>'; }
     if (RS && RS.aplicaTambienA) por += '<p><span class="pl-rot">Calentamiento</span> ' + esc(RS.aplicaTambienA) + '</p>';
     if (VEL && VEL.porQue) por += '<p><span class="pl-rot">Velocidad</span> ' + esc(VEL.porQue) + '</p>';
-    if (VEL && VEL.criterio12oct && frases(VEL.criterio12oct).length > 1) por += '<p><span class="pl-rot">Criterio del 12-10</span> ' + esc(frases(VEL.criterio12oct).slice(1).join(' ')) + '</p>';
+    if (VEL && VEL.criterio19oct && frases(VEL.criterio19oct).length > 1) por += '<p><span class="pl-rot">Criterio del 19-10</span> ' + esc(frases(VEL.criterio19oct).slice(1).join(' ')) + '</p>';
     if (por) h += acc('Por qué', por);
     h += '</div>';
     var A = ritmo('A');

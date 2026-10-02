@@ -467,7 +467,8 @@ def hacer_muestra(hoy=None):
                 continue
             desde, hasta = c
             if r['clave'] == 'C' and 'prueba' in (r.get('cuando') or ''):
-                hasta = '2026-10-30'
+                ref = datetime.date.fromisoformat(plan['objetivo']['pruebasFisicas']['fechaReferencia'])
+                hasta = (ref + datetime.timedelta(days=4)).isoformat()
             b = {'clave': r['clave'], 'desde': desde, 'hasta': hasta}
             for k in ('m200', 'm400', 'm600', 'objetivo1000', 'condicion', 'primer200'):
                 if r.get(k):
@@ -502,18 +503,23 @@ def hacer_muestra(hoy=None):
     ult = plan['calendario'][-1]
     versiones = []
     for k, v in enumerate(ult.get('versiones', [])):
-        clave = '26-27' if k == 0 else '28-30'
+        nums = [int(x) for x in re.findall(r'\b(\d{1,2})\b', v.get('nombre') or '')]
+        clave = '%d-%d' % (min(nums), max(nums)) if nums else str(k)
         ds = []
         for e in v.get('dias', []):
             mm = re.match(r'^(Lun|Mar|Mié|Jue|Vie|Sáb|Dom) (\d{1,2})$', e.get('dia', ''))
-            fe = '2026-10-%02d' % int(mm.group(2)) if mm else None
+            fe = None
+            if mm:
+                lunes = datetime.date.fromisoformat(ult['semana'].split('/')[0])
+                fe = next((x.isoformat() for x in (lunes + datetime.timedelta(days=j) for j in range(-21, 21)) if x.day == int(mm.group(2)) and ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'][x.weekday()] == mm.group(1)), None)
             x = {'dia': e.get('dia'), 'fecha': fe, 'tipo': e.get('tipo'), 'sesion': e.get('sesion')}
             if e.get('clave'):
                 x['clave'] = True
             ds.append(x)
         versiones.append({'clave': clave, 'nombre': v.get('nombre'), 'dias': ds})
     final = {'semana': ult.get('semana'), 'titulo': ult.get('titulo'), 'nota': ult.get('nota'), 'versiones': versiones}
-    hitos.append({'fecha': '2026-10-26', 'hasta': '2026-10-30', 'etiqueta': 'Prueba · última semana de octubre', 'tipo': 'prueba'})
+    ref = datetime.date.fromisoformat(plan['objetivo']['pruebasFisicas']['fechaReferencia'])
+    hitos.append({'fecha': ref.isoformat(), 'hasta': (ref + datetime.timedelta(days=4)).isoformat(), 'etiqueta': 'Prueba · ' + plan['objetivo']['pruebasFisicas']['fecha'], 'tipo': 'prueba'})
     # marcas
     B = plan['baremo']
     MA = plan['marcasActuales']

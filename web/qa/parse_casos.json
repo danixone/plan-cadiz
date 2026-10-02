@@ -387,13 +387,13 @@
    "esperado": 1140
   },
   {
-   "nombre": "horaIni 10-10",
-   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-10'))",
+   "nombre": "horaIni 17-10",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-17'))",
    "esperado": 570
   },
   {
-   "nombre": "horaIni 19-10 no confunde «rec. 2:30» con una hora",
-   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-19'))",
+   "nombre": "horaIni 26-10 no confunde «rec. 2:30» con una hora",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-26'))",
    "esperado": 1080
   },
   {
@@ -457,8 +457,8 @@
    "esperado": "C"
   },
   {
-   "nombre": "10-10 sin conflictos (K5 resuelto el 29-9)",
-   "expr": "PC.cal.dia('2026-10-10').conflictos.length",
+   "nombre": "17-10 sin conflictos (K5 resuelto el 29-9)",
+   "expr": "PC.cal.dia('2026-10-17').conflictos.length",
    "esperado": 0
   },
   {
@@ -472,23 +472,23 @@
    "esperado": true
   },
   {
-   "nombre": "27-10 está en la semana final",
-   "expr": "PC.cal.dia('2026-10-27').final.enSemanaFinal",
+   "nombre": "3-11 está en la semana final",
+   "expr": "PC.cal.dia('2026-11-03').final.enSemanaFinal",
    "esperado": true
   },
   {
-   "nombre": "21-10: la versión 26-27 tiene una entrada con esa fecha",
-   "expr": "PC.cal.dia('2026-10-21').final.entradas.length",
+   "nombre": "28-10: la versión 2-3 tiene una entrada con esa fecha",
+   "expr": "PC.cal.dia('2026-10-28').final.entradas.length",
    "esperado": 1
   },
   {
-   "nombre": "24-10: las dos versiones tienen entrada",
-   "expr": "PC.cal.dia('2026-10-24').final.entradas.length",
+   "nombre": "31-10: las dos versiones tienen entrada",
+   "expr": "PC.cal.dia('2026-10-31').final.entradas.length",
    "esperado": 2
   },
   {
-   "nombre": "24-10 sin versión elegida: sesión base del calendario",
-   "expr": "PC.cal.dia('2026-10-24').version === undefined && PC.cal.dia('2026-10-24').tipo",
+   "nombre": "31-10 sin versión elegida: sesión base del calendario",
+   "expr": "PC.cal.dia('2026-10-31').version === undefined && PC.cal.dia('2026-10-31').tipo",
    "esperado": "control"
   },
   {
@@ -497,14 +497,14 @@
    "esperado": true
   },
   {
-   "nombre": "10-10: reparto único del simulacro (K5 resuelto el 29-9)",
-   "expr": "JSON.stringify(PC.cal.dia('2026-10-10').principal.repartos)",
+   "nombre": "17-10: reparto único del simulacro (K5 resuelto el 29-9)",
+   "expr": "JSON.stringify(PC.cal.dia('2026-10-17').principal.repartos)",
    "esperado": "{\"objetivo\":[\"0:42\",\"1:24\",\"2:06\",\"2:48\"]}",
    "m1": true
   },
   {
-   "nombre": "10-10: primer 200 entre 0:42 y 0:43 y aviso 3:25-3:35",
-   "expr": "[PC.cal.dia('2026-10-10').principal.primer200, PC.cal.dia('2026-10-10').principal.aviso].join(' · ')",
+   "nombre": "17-10: primer 200 entre 0:42 y 0:43 y aviso 3:25-3:35",
+   "expr": "[PC.cal.dia('2026-10-17').principal.primer200, PC.cal.dia('2026-10-17').principal.aviso].join(' · ')",
    "esperado": "0:42-0:43 · 3:25-3:35",
    "m1": true
   },

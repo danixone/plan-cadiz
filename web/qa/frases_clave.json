@@ -2,7 +2,7 @@
   "_nota": "Frases clave por ID del inventario (§10.5 M1 y criterio global 5 de §10.6). Cada ID con eliminado:false de inventario_ids.json tiene de 1 a 3 frases literales que la web nueva tiene que pintar en el texto (innerText) de alguna de las cinco vistas con ?qa=1&abrir=1, con ?hoy=2026-09-29 y a 1280 px (a esa anchura el calendario rotula los días). Se comparan sin distinguir mayúsculas y con los espacios normalizados (también el no separable). Salen de plan.json, historial.json, web.json, el corpus congelado de la web antigua o los textos fijos de la especificación (Anexo C, §3.2, §5). C1 (marca de la barra de escritorio, fuera de las vistas), C6 (<head>) y C7 (@media print) no tienen texto dentro de las vistas: su lista va vacía y se comprueban por su data-inv y por el CSS. Las de «Cádiz · ≥ 27 días» y «martes 29 de septiembre» dependen de la fecha: valen con hoy=2026-09-29. La comparación recomendada es sin distinguir mayúsculas (text-transform cambia el innerText); todas están escritas con las mayúsculas exactas de su fuente.",
   "C1": [],
   "C2": [
-    "Cádiz · ≥ 27 días"
+    "Cádiz · ≥ 34 días"
   ],
   "C3": [
     "4,67 · no apto",
@@ -96,7 +96,7 @@
     "Saltos al cajón"
   ],
   "E10": [
-    "El 3-10 y el 17-10, sesión corta de barra (unos 20 min) ANTES del rodaje",
+    "El 3-10 y el 24-10, sesión corta de barra (unos 20 min) ANTES del rodaje",
     "Antepié en el borde de un escalón"
   ],
   "E11": [
@@ -108,7 +108,7 @@
     "Único día con lastre"
   ],
   "E13": [
-    "4 × 3. El peso lo decide la quinta serie del 6",
+    "4 × 3. El peso lo decide la quinta serie del 13",
     "Nunca un salto de 5 kg"
   ],
   "E14": [
@@ -203,7 +203,7 @@
     "acabar con sensación de sobra"
   ],
   "G9": [
-    "se fijan tres cosas: misma hora, misma pista con el perímetro ya medido, y vídeo de las dominadas"
+    "no se puede atribuir solo a la forma"
   ],
   "G10": [
     "el número equivocado era el del plan",
@@ -288,8 +288,7 @@
     "BOE-A-2026-15055"
   ],
   "N6": [
-    "Cádiz está al nivel del mar",
-    "templado y húmedo"
+    "Cádiz está al nivel del mar"
   ],
   "N7": [
     "Superficie de tartán. Prohibido correr descalzo o con clavos.",
@@ -321,10 +320,10 @@
   ],
   "P8": [
     "Anclado al centro de la banda medida",
-    "decide el sáb 10-10"
+    "decide el sáb 17-10"
   ],
   "P9": [
-    "El escalón (segundo valor) solo si el 10 de octubre dio ≤ 3:33 en distancia verificada",
+    "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada",
     "0:40-0:41"
   ],
   "P10": [
@@ -360,7 +359,7 @@
   "P18": [
     "Afinamiento y prueba · dos versiones según la fecha",
     "la fecha llega con el llamamiento",
-    "La fecha exacta no se conoce (última semana de octubre)"
+    "La fecha exacta no se conoce (primera semana de noviembre, del lunes 2 al viernes 6)"
   ],
   "R1": [
     "Cena terminada antes de las 20:15 · luz apagada a las 22:15",
@@ -409,7 +408,7 @@
   ],
   "R13": [
     "No testear de más",
-    "Test máximo solo el 10-10 y en la prueba."
+    "Test máximo solo el 17-10 y en la prueba."
   ],
   "R14": [
     "Regla de las dos repeticiones",

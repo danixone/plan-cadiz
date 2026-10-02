@@ -521,7 +521,7 @@ def frases_vigentes(texto):
 
 def conflictos_dia(clave, dia):
     """Conflicto dentro de un mismo día (§3.4.6): dos campos con repartos de 4 pasos distintos."""
-    campos = ('objetivo', 'protocolo', 'decide', 'semaforo', 'sesion', 'hora', 'siPrueba28a30', 'siPrueba26o27')
+    campos = ('objetivo', 'protocolo', 'decide', 'semaforo', 'sesion', 'hora', 'siPrueba4a6', 'siPrueba2o3')
     vistos = []
     for c in campos:
         txt = frases_vigentes(dia.get(c) or '')
@@ -534,7 +534,7 @@ def conflictos_dia(clave, dia):
     if len(distintos) < 2:
         return []
     (s1, (c1, t1)), (s2, (c2, t2)) = list(distintos.items())[:2]
-    return [{'id': 'K5' if clave == '2026-10-10' else 'R-' + clave,
+    return [{'id': 'K5' if clave == FECHA_SIMULACRO else 'R-' + clave,
              'a': {'campo': c1, 'texto': t1}, 'b': {'campo': c2, 'texto': t2}}]
 
 
@@ -703,11 +703,16 @@ def _k4(P, H, W, C, D):
                 return 'sabadoComplemento.nota dice «sin dominadas los sábados» y el %s lleva barra' % d['fecha']
 
 
+# Días fijos de dos detectores de conflictos (fechas corridas una semana el 2-10: la prueba pasó a noviembre)
+FECHA_SIMULACRO = '2026-10-17'
+FECHA_8X200 = '2026-10-19'
+
+
 def _k5(P, H, W, C, D):
-    d = next((x for x in D.get('dias', []) if x['fecha'] == '2026-10-10'), None)
+    d = next((x for x in D.get('dias', []) if x['fecha'] == FECHA_SIMULACRO), None)
     if d and d.get('conflictos'):
         c = d['conflictos'][0]
-        return '10-10: %s «%s» frente a %s «%s»' % (c['a']['campo'], c['a']['texto'], c['b']['campo'], c['b']['texto'])
+        return '17-10: %s «%s» frente a %s «%s»' % (c['a']['campo'], c['a']['texto'], c['b']['campo'], c['b']['texto'])
 
 
 def _k6(P, H, W, C, D):
@@ -792,10 +797,10 @@ def _k17(P, H, W, C, D):
 
 
 def _k18(P, H, W, C, D):
-    d = dia_plan(P, '2026-10-12') or {}
+    d = dia_plan(P, FECHA_8X200) or {}
     o = d.get('objetivo') or ''
     if re.search(r'(?i)mala noche', o) or (re.search(r'(?i)no cerró la recuperación', o) and not re.search(r'(?i)se sustituye', o)):
-        return '12-10: «mala noche» o «el reloj no cerró la recuperación» sin definir'
+        return '19-10: «mala noche» o «el reloj no cerró la recuperación» sin definir'
 
 
 K_REGLAS = [
@@ -803,7 +808,7 @@ K_REGLAS = [
     ('K2', 'FC máxima frente a la zona 5 y el método de las zonas', _k2),
     ('K3', 'Hora de fin del miércoles antes del circuito', _k3),
     ('K4', 'Barra de los sábados frente al complemento del sábado', _k4),
-    ('K5', 'Reparto del simulacro del 10-10: objetivo frente a protocolo', _k5),
+    ('K5', 'Reparto del simulacro del 17-10: objetivo frente a protocolo', _k5),
     ('K6', '«No testear de más» frente a la regla del test máximo', _k6),
     ('K7', 'Ficha del simulacro frente al circuito del jueves anterior', _k7),
     ('K8', 'Pista del atleta frente a la pista vigente', _k8),
@@ -816,7 +821,7 @@ K_REGLAS = [
     ('K15', 'Umbral sin sesiones programadas', _k15),
     ('K16', 'Fuente de los pendientes', _k16),
     ('K17', 'Recorrido del circuito', _k17),
-    ('K18', '12-10: condiciones sin definir', _k18),
+    ('K18', '19-10: condiciones sin definir', _k18),
 ]
 
 
@@ -1105,7 +1110,7 @@ def construir(plan, historial, web, campos, hoy=None, aceptar=None, **_):
             c['hist'] = 'carrera:' + x['fecha']
         if any(h['src'] == 'dominadas:' + x['fecha'] for h in x['hist']):
             c['histDom'] = 'dominadas:' + x['fecha']
-        for campo in ('sesion', 'siPrueba28a30', 'objetivo', 'protocolo'):
+        for campo in ('sesion', 'siPrueba4a6', 'objetivo', 'protocolo'):
             m = re.search(r'jueves (\d{1,2})\b', dd.get(campo) or '')
             if m:
                 for k in range(1, 8):
@@ -1258,7 +1263,7 @@ def construir(plan, historial, web, campos, hoy=None, aceptar=None, **_):
         condiciones[k] = cc
     if final:
         condiciones['prueba'] = {'pregunta': '¿Cuándo es la prueba?', 'guardar': 'pc-prueba',
-                                 'desde': '2026-10-21' if dia_plan(P, '2026-10-21') else (ventana or {}).get('desde'),
+                                 'desde': min([e['fecha'] for v in final['versiones'] for e in v['dias'] if e.get('fecha')] or [(ventana or {}).get('desde')]),
                                  'hasta': (ventana or {}).get('hasta'),
                                  'opciones': [{'id': v['clave'], 'nombre': v['nombre']} for v in final['versiones']]}
 
@@ -1296,8 +1301,8 @@ def construir(plan, historial, web, campos, hoy=None, aceptar=None, **_):
         elif det:
             avisos.append('%s figura como resuelto pero la regla lo sigue detectando: %s' % (kid, det))
     k5 = next(k for k in conflictosK if k['id'] == 'K5')
-    if k5['detectado'] and hoy >= '2026-10-03':
-        msg = 'El reparto del 10-10 sigue sin decidir (K5): pregúntalo antes del sábado'
+    if k5['detectado'] and hoy >= '2026-10-10':
+        msg = 'El reparto del 17-10 sigue sin decidir (K5): pregúntalo antes del sábado'
         (avisos if 'K5' in aceptar else errores).append(msg + (' [aceptado con --aceptar-conflicto K5]' if 'K5' in aceptar else ''))
 
     # 19 · avisos de mantenimiento

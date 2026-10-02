@@ -731,7 +731,7 @@
     var xa = fx(hoy < L.ini ? L.ini : hoy);
     if (PC.ill && PC.ill.corredor) s.push(PC.ill.corredor('corre', { h: 24, ancla: 'pie', x: xa, y: y - 1 }));
     else s.push('<circle cx="' + xa.toFixed(1) + '" cy="' + (y - 10) + '" r="6" style="fill:var(--primary)"/>');
-    s.push('<g class="hoy-cm-flag"><title>fecha sin confirmar: última semana de octubre</title>' +
+    s.push('<g class="hoy-cm-flag"><title>fecha sin confirmar: ' + esc(((plan().objetivo || {}).pruebasFisicas || {}).fecha || '') + '</title>' +
       '<line x1="' + x1 + '" x2="' + x1 + '" y1="10" y2="' + (y + 2) + '" style="stroke:var(--text-2);stroke-width:1.5"/>' +
       '<rect x="' + x1 + '" y="10" width="' + flagW + '" height="22" rx="3" style="fill:var(--text)"/>' +
       '<text x="' + (x1 + 8) + '" y="25" style="fill:var(--surface)">' + esc(flagTxt) + '</text></g>');
