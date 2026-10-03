@@ -7,3 +7,4 @@ web/capturas/
 web/qa/resultado.json
 __pycache__/
 web/herramientas/centinelas.local.json
+herramientas/modelos/

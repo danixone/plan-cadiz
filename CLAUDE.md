@@ -60,7 +60,7 @@ El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`,
 
 **Si te pasa un TCX, avísale.** Recorta la cadencia y las dinámicas de carrera. El original se saca en Garmin Connect: actividad → engranaje → **Exportar original**.
 
-**La deriva cardíaca es el termómetro principal, y se mide de dos formas.** El analizador saca las dos: el bloque de los minutos 3-8 frente a los últimos ocho (la clásica) y **las mitades desde el minuto 15**, que es inmune a su salida rápida. Se guardan las dos en el historial. El 23-9 la clásica dio 56 s/km y las mitades −2,7 %: la diferencia era la salida. Con base asentada, menos del 5 %.
+**La deriva cardíaca es el termómetro principal, y se mide de dos formas.** El analizador saca las dos: el bloque de los minutos 3-8 frente a los últimos ocho (la clásica) y **las mitades desde el minuto 15**, que es inmune a su salida rápida. Se guardan las dos en el historial. El 23-9 la clásica dio 56 s/km y las mitades +0,3 %: la diferencia era la salida. Con base asentada, menos del 5 %. **Las mitades son Pa:HR (velocidad/FC):** hasta el 3-10 el analizador dividía ritmo entre FC, un ritmo más lento y un pulso más alto se anulaban, y el 23-9 se registró −2,7 %; corregido.
 
 **Lo que se saca de cada archivo, y con qué método:**
 - **Series, progresivos y controles: por las VUELTAS DEL RELOJ** (mensajes `lap`, que el analizador imprime). Nunca por un umbral de velocidad sobre el segundo a segundo: el 16-9 eso dio 82-95 m para pasos que eran de 80,0 exactos.
@@ -73,9 +73,9 @@ El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`,
 
 ## Paso 2 · Decidir si la sesión es válida
 
-Una sesión **no sirve para medir su forma** si se hizo con sueño insuficiente, en ayunas, enfermo, con fatiga de algo no planificado, o en un recorrido que falsee los tiempos.
+Una sesión **no sirve para medir su forma** si se hizo en rojo (menos de 5h00 de sueño, VFC desequilibrada o sobrecarga), en ayunas, enfermo, con fatiga de algo no planificado, o en un recorrido que falsee los tiempos.
 
-Dilo claramente y **no la uses para reestimar nada**. Ya ha pasado cuatro veces y es el error más caro que hemos cometido.
+Dilo claramente y **no la uses para reestimar nada**. En ámbar (5h00-6h29) sí cuenta, pero solo como suelo (ver Semáforo). Ya ha pasado cuatro veces y es el error más caro que hemos cometido.
 
 ## Paso 3 · Registrar
 
@@ -110,7 +110,7 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 - **Primer intento del circuito más lento que los siguientes:** 9,4 · 9,2 · 9,3 el 1-10 (0,2 s = 1 punto). Una vez: a la tercera es regla. En el examen solo hay un intento.
 - **Calidad hecha tras una mala noche:** el 28 (2h14), a pesar de la regla del día torcido. La marca se sostuvo (media 1:26,9) con FC 203 y carga 234, la más alta del historial. Se registra como no válida.
 - **Descansos que se derrumban por tiempo en fuerza** (sentadilla 49/45/29 s el 22): superseries, no recortar.
-- **Sesiones que no se hacen:** el glúteo medio (H) no consta hecho ni una vez; el complemento del sábado (elevaciones de talón) tampoco. Se pregunta y se anota.
+- **Sesiones que no se hacen:** el glúteo medio (H) consta hecho por primera vez el 29-9; las elevaciones de talón y los saltos del sábado, por primera vez el 3-10 (comunicado, sin registro). Se pregunta y se anota.
 
 **Revisión del 23-9-2026 (seis lentes + escépticos, 43 agentes): NO SE SUBE LA INTENSIDAD hasta Cádiz.** Los ritmos A/B/C ya están anclados al 3:34; él ya va por encima de lo prescrito sin planificarlo; el punto extra del kilómetro vale +0,33 y el escenario que aprueba no depende de él. Solo hay regla para BAJAR ritmos (dos semanas de fallo), no para subirlos. Detalle en `plan.json` → `revision23sep`.
 
@@ -187,7 +187,7 @@ GitHub Pages publica desde `docs/`. Tarda un minuto. **Sin coste y sin límite.*
 
 **Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»).
 
-**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
+**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre), más el rodaje opcional del domingo 4-10 (aviso a las 07:30, añadido el 3-10); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
 
 ## Paso 7 · Responder
 
@@ -211,7 +211,7 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **Pies planos y riesgo de fascitis.** Corre con una sola zapatilla; la segunda está aplazada por coste. Las elevaciones de talón a una pierna de los sábados son innegociables. Señal de alarma: dolor de talón en los primeros pasos de la mañana.
 
-**Semáforo de la mañana.** Horas de sueño del Garmin sin siesta, VFC de 7 días, dolor de codo/hombro y de talón/cintillo. Verde ≥ 6h30: la sesión entera, la única que mide. Ámbar 5h00-6h29: dos tercios de las repeticiones al mismo ritmo + 15-20 min suaves, o el peso ya dominado (no se estrena peso). Rojo < 5h00, VFC de 7 días «Desequilibrado» o «Bajo», «Sobrecarga» o síntomas por encima del cuello (por debajo, no se entrena): rodaje 30-40 min o fuerza reducida sin pierna; una calidad en rojo se pierde, no se mueve. Dos noches seguidas < 5 h = 48 h en rojo. Cortes convencionales, no de un estudio. Detalle en `plan.json` → `reglas` → `dia-torcido`.
+**Semáforo de la mañana.** Horas de sueño del Garmin sin siesta, VFC de 7 días, dolor de codo/hombro y de talón/cintillo. Verde ≥ 6h30: la sesión entera; mide en los dos sentidos. Ámbar 5h00-6h29: dos tercios de las repeticiones al mismo ritmo + 15-20 min suaves, o el peso ya dominado (no se estrena peso). Rojo < 5h00, VFC de 7 días «Desequilibrado» o «Bajo», «Sobrecarga» o síntomas por encima del cuello (por debajo, no se entrena): rodaje 30-40 min o fuerza reducida sin pierna; una calidad en rojo se pierde, no se mueve. **Desde el 3-10, a petición suya, una sesión en ámbar cuenta como suelo:** un buen resultado vale y puede confirmar escalones; uno malo no baja ritmos ni cuenta como semana de fallo. Hecha a dos tercios, no decide lo que pedía la sesión entera. Las cargas del ámbar no cambian. Dos noches seguidas < 5 h = 48 h en rojo. Cortes convencionales, no de un estudio. Detalle en `plan.json` → `reglas` → `dia-torcido`.
 
 **Dominadas, revisión del 28-9 (9 agentes):** más barra, poca y sin lastre: sesión corta los sábados 3 y 24-10 antes del rodaje (el 10 no lleva barra: se mantienen las dos sesiones de la revisión). Nada de segundo día con lastre, dominadas diarias ni excéntricas. Test máximo solo el 17-10 y la prueba (el 31-10, serie técnica de 8). Martes: el 13 sube 2,5 kg solo si la quinta serie del 6 dejó 2 o más en reserva (la regla de siempre), el 20 es la última sesión pesada (4 × 3) y el 27 la descarga (3 × 2 con el peso del 20). Registro de dolor de codo y hombro 0-10 en cada sesión de barra. Él pide 14 «como sea»: rango honesto 9-13 válidas, centro 11-12; se asegura 12 válidas. Detalle en `plan.json` → `revision28sep`.
 
@@ -281,10 +281,11 @@ El resto del calendario está en `datos/plan.json`.
 
 - **Los pendientes que ve Daniel en la web son `plan.pendientes`.** Los de esta lista que no estén allí no salen en la web: al abrir o cerrar uno, hacerlo en los dos sitios.
 - **Pista para el simulacro del 17: Arucas**, si las marcas pintadas confirman los 400 m (foto de la salida del 1.000 o de las salidas escalonadas). Eso resuelve el perímetro de San Cristóbal, que queda sin medir: el 3:34 del 19 sigue con ±1-2 % de escala y el primer 1.000 de Arucas será la primera marca de baremo.
-- **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27.
+- **Sueño con horario laboral:** se levanta a las 6:00 → **luz apagada a las 22:15** entre semana y cena terminada 2 h antes. La primera noche fueron 2h14 (28-9): nervios de la vuelta al trabajo y acostarse lleno justo después de comer. Faltan los CSV de sueño del 20, 21, 22 y del 24 al 27. **La regla de las tres noches por debajo de 6 h saltó en la semana del 28-9 al 4-10** (2h14, 5h18 y tres sin medir «parecidas», según él): se cambia el horario, no las sesiones; falta saber a qué hora apaga la luz de verdad y qué lo despierta.
 - **El circuito del 24 y el rodaje del 27 NO se hicieron** (estudiaba para el examen; no sabía que tenía rodaje). El preparador solo hace circuito los jueves, sin fuerza ni tirón. Falta saber si el circuito del 17-9 se hizo (no consta) y las horas de sueño de la noche del 30-9 al 1-10.
+- **Piernas en las dominadas (vídeo del 3-10):** en las 5 de lado la cadera se dobla a 148-159° arriba y los pies se van 35-45 cm por delante; con el BOE literal, 0 válidas de 5, y la serie de 7 de frente da el mismo indicio. Grabar de lado los 3 × 5 del 5 y del 7 con la consigna de piernas juntas y verticales hasta que la cadera quede en 170° o más. Herramientas: `herramientas/pose_video.py`, `dominadas_reps.py` y `dominadas_montaje.py` (modelo en `herramientas/modelos/`, fuera de git).
 - **Barra de Arucas:** altura y grosor desconocidos. Las cifras de barras distintas no se comparan.
-- **Glúteo medio (H): no consta hecho ni una vez.** Del cintillo no hay ningún dato desde el 21-8.
+- **Glúteo medio (H): hecho por primera vez el 29-9.** Del cintillo no hay ningún dato desde el 21-8.
 - Fecha exacta de las pruebas (2 al 6 de noviembre), hora y minutos entre ellas, cuando llegue el llamamiento, y **qué día viaja a Cádiz**: decide qué pueden ser los días −2 y −1. No hay ningún dato verificado de hora ni de temperatura en Cádiz.
 - **Hora fija para los controles del 17 y del 31 de octubre**, la misma en los dos, para que las medidas sean comparables. Propuesta: 09:30–10:00.
 - Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT.

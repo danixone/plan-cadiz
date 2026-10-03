@@ -390,7 +390,7 @@
       ]
     },
     "2026-10-05": {
-      "firma": "f92de8a8866c",
+      "firma": "77d5fcada0c2",
       "titulo": "5 × 400 m, rec. 2 min",
       "principal": {
         "tipo": "series",
@@ -570,7 +570,7 @@
       ]
     },
     "2026-10-07": {
-      "firma": "909a0ec3995c",
+      "firma": "87f61676bdf6",
       "titulo": "3 × 600 m, rec. 3 min",
       "condicion": {
         "pregunta": "¿Saltó el 30 la regla de las dos repeticiones?",
@@ -1575,7 +1575,7 @@
       "verde": "6h30",
       "rojo": "5h00"
     },
-    "verde": "la sesión como está escrita; es la única que mide y decide escalones, subidas de lastre y escenarios",
+    "verde": "la sesión como está escrita; mide y decide escalones, subidas de lastre y escenarios en los dos sentidos",
     "generico": {
       "carrera": {
         "ambar": "carrera con dos tercios de las repeticiones redondeando hacia abajo, al mismo ritmo y con la misma recuperación, más 15-20 min con techo 145",
@@ -1627,7 +1627,8 @@
     "extras": [
       "si una repetición llega a 200 ppm antes de la última, esa es la última",
       "Una calidad que cae en rojo no se mueve: se pierde",
-      "Ninguna sesión hecha en ámbar o en rojo mide nada"
+      "Una sesión hecha en ámbar SÍ cuenta, como suelo",
+      "Una sesión en rojo no mide nada"
     ],
     "racha": "RACHA: dos noches seguidas por debajo de 5h00 son 48 h en rojo",
     "horario": "Si en la semana del 28-9 al 4-10 hay tres noches por debajo de 6 h, lo que se cambia es el horario, no las sesiones",
@@ -1829,6 +1830,11 @@
         "Ninguna estimación de marca cambia: una semana más no se convierte en segundos ni en repeticiones sin inventarlos."
       ],
       "fuente": "plan.objetivo.pruebasFisicas.cambio2oct"
+    },
+    {
+      "fecha": "2026-10-03",
+      "texto": "Una sesión hecha en ámbar SÍ cuenta, como suelo: un buen resultado vale (lo hizo con la noche corta, así que puede al menos eso) y puede confirmar escalones y escenarios; un mal resultado no baja ritmos, no cuenta como semana de fallo para la regla de bajar y no rebaja escenarios.",
+      "fuente": "plan.reglas[dia-torcido].texto"
     }
   ],
   "controlesExtra": [

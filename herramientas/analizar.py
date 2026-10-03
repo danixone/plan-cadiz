@@ -147,7 +147,9 @@ def informe_carrera(rec, ses, sensores):
             if a and b:
                 ra, rb = statistics.mean(f[1] for f in a), statistics.mean(f[1] for f in b)
                 ha, hb = statistics.mean(f[2] for f in a), statistics.mean(f[2] for f in b)
-                pct = 100 * ((rb / hb) - (ra / ha)) / (ra / ha) if ha and hb else 0
+                # Pa:HR: pérdida de velocidad por latido (velocidad/FC = 1/(ritmo·FC)); corregido el 3-10-2026,
+                # antes dividía ritmo entre FC y un ritmo más lento y un pulso más alto se anulaban
+                pct = 100 * (1 - (ra * ha) / (rb * hb)) if ha and hb else 0
                 print(f"    mitades desde el min 15: {mmss(ra)}/km a {ha:.0f} → {mmss(rb)}/km a {hb:.0f}  ({rb-ra:+.0f} s/km, {pct:+.1f} % de desacople; base asentada < 5 %)")
     temps = [r.get("temperature") for r in rec if r.get("temperature") is not None]
     if temps:

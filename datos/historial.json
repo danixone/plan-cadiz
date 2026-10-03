@@ -5,6 +5,69 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-03",
+      "sesion": "Rodaje 55 min, techo 145, primeros 10 min a 140 (después de la barra corta)",
+      "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min",
+      "valida": true,
+      "horaInicioLocal": "09:09 (7 min después de acabar la barra, a las 09:02)",
+      "resultado": {
+        "duracion": "55:00",
+        "km": 6.66,
+        "ritmo": "8:16/km",
+        "fcMedia": 140,
+        "fcMax": 151,
+        "cadencia": 156,
+        "zancadaMm": 771,
+        "contactoMs": 304,
+        "desnivelPos": 19,
+        "terreno": "llano",
+        "franjas": {
+          "<130": "1%",
+          "130-140": "37%",
+          "140-145": "55%",
+          "145-155": "7%",
+          ">155": "0%"
+        },
+        "bloques5min": {
+          "ritmos": [
+            "8:21",
+            "8:25",
+            "8:18",
+            "8:20",
+            "7:56",
+            "7:56",
+            "8:19",
+            "8:01",
+            "8:19",
+            "8:25",
+            "8:35"
+          ],
+          "fc": [
+            134,
+            138,
+            139,
+            139,
+            140,
+            141,
+            142,
+            142,
+            142,
+            143,
+            144
+          ]
+        },
+        "deriva": {
+          "analizador": "+13 s/km (min 3-8 a 8:17,7 y 137 ppm; últimos 8 a 8:31,1 y 144 ppm)",
+          "referenciaBaseAsentada": "por debajo del 5 %",
+          "mitadesDesdeMin15": "+4,0 % (Pa:HR, velocidad/FC: 8:08 a 140 → 8:20 a 143, +12 s/km); recortado a 45 min, ≈ +3,1 %"
+        },
+        "sensorMunecaC": 29.9,
+        "efectoAerobico": 2.1,
+        "efectoAnaerobico": 0.0
+      },
+      "valoracion": "VÁLIDA con asterisco ámbar (5h18 de sueño): desde el 3-10 una sesión en ámbar cuenta como suelo (reglas → dia-torcido); se registró primero como no válida con la regla anterior. La regla de ámbar no recorta un rodaje: hacerlo entero era lo correcto. Primer rodaje con la regla de los 10 primeros minutos a 140, y se cumplió: 8:23/km a 135,9 de media, máximo 144 y solo 38 s por encima de 140 (el 12, el 16 y el 23 salió a 7:08-7:10). Techo 145: 7 % del tiempo por encima (219 s, del minuto 38 al 54, máximo 151 en el 50,7), frente al 18 % del 16-9 y del 23-9. El pulso subió de forma continua, de 134 a 144 por bloques de 5 min, con el ritmo casi plano: deriva por mitades desde el minuto 15 de +4,0 % (Pa:HR), por debajo del 5 % de base asentada, pero es una sola sesión y en ámbar. Es el primer rodaje de 55 min: no hay otro con el que compararlo a esa duración. El ritmo a igual pulso (8:16 a 140, frente a 7:57 a 142 el 23-9) no es lectura de forma: 09:09, siete minutos después de la barra, noche en ámbar y salida lenta a propósito. Elevaciones de talón 3 × 15 y saltos: HECHOS (comunicado por él; sin registro en el reloj ni en el móvil por falta de batería). Es la primera vez que constan las elevaciones de talón."
+    },
+    {
       "fecha": "2026-09-30",
       "sesion": "Kilómetro partido × 2: 600 m + 45 s + 400 m, rec. 6 min · pista de atletismo de Arucas (complejo Tonono)",
       "objetivo": "600 en 2:11 · 400 en 1:27 · primer 200 del 600 en 0:43,5 · los tres 200 del 600 dentro de 1 s · segundo 400 a 2 s o menos del primero · calentamiento completo con 5 progresivos (los dos últimos a ritmo K, 17,4 s/80 m) y 3 × 5 dominadas",
@@ -293,7 +356,7 @@
           "pct": 10,
           "analizador": "56 s/km (min 3-8 frente a últimos 8)",
           "referenciaBaseAsentada": "por debajo del 5 %",
-          "mitadesDesdeMin15": "−2,7 %"
+          "mitadesDesdeMin15": "+0,3 % (8:16 a 142 → 8:10 a 144; recalculado el 3-10 con la fórmula corregida del analizador: se registró −2,7 % porque dividía ritmo entre FC)"
         },
         "fcARitmo7a8": 141.4,
         "sensorMunecaC": 30.3,
@@ -797,6 +860,25 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-03",
+      "series": [
+        3,
+        7,
+        5,
+        5
+      ],
+      "total": 20,
+      "descanso": "180 s (paso programado del reloj)",
+      "duracionSeriesS": [
+        18,
+        34,
+        24,
+        39
+      ],
+      "contexto": "sábado, antes del rodaje, 08:51-09:02 hora local; prep-hombro antes: 2 × 20 s colgado + 2 × 8 retracciones escapulares con 60 s",
+      "valoracion": "La estructura pautada, completa: 1 × 3, serie técnica de 7 y 2 × 5 con 3 min. La serie de 7 es técnica, no un test máximo: no se registra como máximo. Sin vídeo revisado, sin dato de reserva en las de 5 ni de dolor de codo y hombro. Hecha en ámbar (5h18): sin lastre, la regla no la recorta; cuenta como suelo. FC máxima 175 en la serie de 7. La última de 5 duró 39 s frente a 24 de la anterior: el FIT no distingue lentitud real de manejo del reloj. VÍDEOS revisados el 3-10 con detección de pose (MediaPipe, herramientas/pose_video.py y dominadas_reps.py; láminas en archivos-garmin/videos-2026-10-03/): de frente, la serie de 7 (IMG_9656); de lado, la segunda de 5 (IMG_9658). Regla 1, brazos extendidos abajo: CUMPLE (codo 172-174° de frente, 176-178° de lado). Regla 6, mínima pausa: CUMPLE (0,6-1,2 s abajo; subidas de 1,0-1,4 s). Regla 7, menos de 5 s colgado entre repeticiones: CUMPLE. Agarre algo más ancho que los hombros: cumple a ojo. Regla 5, barbilla: de frente supera la barra en las 7; de lado la barra queda tapada por las manos y el poste, así que «tercio inferior del cuello» no se puede verificar: justo. Regla 4, cabeza: NO MEDIDA (los cascos tapan las orejas). Reglas 2 y 3, cuerpo extendido y sin impulso: NO CUMPLE en las 5 de lado. Arriba la cadera se dobla a 159, 159, 155, 154 y 148° (abajo 176-179°) y los tobillos quedan 106-141 px por delante de la cadera (unos 35-45 cm, escala estimada con la longitud de la pierna), y empeora repetición a repetición. Las piernas salen hacia delante durante la subida. Los puntos del lado lejano los infiere el modelo. De frente no se ve el plano lateral, pero la distancia aparente cadera-tobillo arriba baja al 83, 71, 69, 66, 65, 64 y 50 % de la de abajo (de lado, 84-69 %): fuerte indicio de lo mismo en la serie de 7, con la perspectiva de la cámara en el suelo como factor. Con el texto literal del BOE, válidas de la serie de lado: 0 de 5. No se rebajan escenarios por una serie técnica: se corrige y se vuelve a medir el 5 y el 7 de lado."
+    },
+    {
       "fecha": "2026-09-30",
       "series": [
         5,
@@ -1028,7 +1110,7 @@
         9.2,
         9.3
       ],
-      "valoracion": "PRIMERA MEDICIÓN SERIA del circuito (comunicada por él el 2-10). Primer intento 9,4 s, que es el comparable con el baremo: 7 puntos (tramo 9,4-9,7). Techo 9,2 (8 puntos, tramo 8,9-9,3). El primer intento fue el más lento de los tres: 0,2 s separan 7 de 8 puntos, y en el examen solo hay un intento (el segundo, solo tras un nulo). Es la primera vez que se ve: a la tercera, regla. Decisión del 1-10: 9,4-9,7 → jueves completo con técnica; el bloque técnico de 6-8 repeticiones queda para 9,8 o más, así que no se activa. Con 3:34 (3) + 11 dominadas (5) + 9,4 (7) la media es 5,00: apto justo, sin ningún punto de margen. SIN DATO: horas de sueño de la noche del 30 al 1 (con menos de 6h30 el intento iría con asterisco), si hubo nulos, quién cronometró y con qué. La valoración del 10-9 (9,0-9,4 a tope) se cumple por el lado lento: 9,2-9,4."
+      "valoracion": "PRIMERA MEDICIÓN SERIA del circuito (comunicada por él el 2-10). Primer intento 9,4 s, que es el comparable con el baremo: 7 puntos (tramo 9,4-9,7). Techo 9,2 (8 puntos, tramo 8,9-9,3). El primer intento fue el más lento de los tres: 0,2 s separan 7 de 8 puntos, y en el examen solo hay un intento (el segundo, solo tras un nulo). Es la primera vez que se ve: a la tercera, regla. Decisión del 1-10: 9,4-9,7 → jueves completo con técnica; el bloque técnico de 6-8 repeticiones queda para 9,8 o más, así que no se activa. Con 3:34 (3) + 11 dominadas (5) + 9,4 (7) la media es 5,00: apto justo, sin ningún punto de margen. Noche del 30 al 1 sin medir; según él (3-10), parecida a la del 2 al 3 (5h18): ámbar, con asterisco. Con la regla del 3-10 cuenta como suelo, así que el 9,4 se mantiene como marca. No se grabó en el reloj. SIN DATO: si hubo nulos, quién cronometró y con qué. La valoración del 10-9 (9,0-9,4 a tope) se cumple por el lado lento: 9,2-9,4."
     },
     {
       "fecha": "2026-09-24",
@@ -1047,6 +1129,26 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-10-03",
+      "duracion": "5h18",
+      "puntuacion": 69,
+      "calidad": "Aceptable",
+      "fcReposo": 46,
+      "vfc": 61,
+      "profundo": "1h39",
+      "rem": "53m",
+      "despierto": "1m",
+      "inquietud": 24,
+      "bodyBattery": "+65",
+      "estresMedio": 12,
+      "spo2Media": "94%",
+      "spo2Minimo": "82%",
+      "fcMediaNoche": 51,
+      "respiracionMedia": 13,
+      "vfc7dias": "Equilibrado (61 ms; referencia 55-70; media 7 días 56)",
+      "nota": "Noche del 2 al 3. Sueño ligero 2h47. Semáforo ÁMBAR. SpO2 media 94 %, la más baja de la serie (97-99 % antes): dato de muñeca, se anota sin interpretar. Semana del 28-9 al 4-10: las noches 28→29, 30→1 y 1→2 no se midieron; según él (3-10) fueron parecidas a esta (sin cifra). Con 2h14 (27→28) y 5h18 (2→3), son cinco noches por debajo de 6 h y una de 7h00 (29→30): SALTA la regla de las tres noches, se cambia el horario, no las sesiones."
+    },
     {
       "fecha": "2026-09-30",
       "duracion": "7h00",
@@ -1248,6 +1350,22 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-03",
+      "ventanaFocoCarga": "5 sep – 3 oct",
+      "focoCarga": "Anaeróbica",
+      "estadoEntreno": "Mantenimiento",
+      "anaerobica": 391,
+      "aerobicaAlta": 530,
+      "aerobicaBaja": 258,
+      "cargaAguda": 356,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.1,
+      "cargaAgudaMensaje": "Tu carga aguda está en el intervalo óptimo para mantener o mejorar tu forma física.",
+      "vo2max": 53,
+      "vfc": "56 ms, Equilibrado",
+      "valoracion": "Del 30-9 al 3-10: anaeróbica 345 → 391 (+46), aeróbica alta 597 → 530 (−67), aeróbica baja 221 → 258 (+37). Ventana (el primer día de la etiqueta no cuenta): SALEN del 3 al 5 de septiembre, que en el historial es el 10 × 200 y las dominadas del 3-9; ENTRAN el kilómetro partido del 30-9 (carga 155, efectos 3,1/3,2: la captura del 30 se tomó antes de esa sesión, deducido porque anaeróbica y aeróbica alta no cambiaron del 28 al 30), la barra y el rodaje de hoy (el circuito del 1-10 no se grabó en el reloj, confirmado por él) (efecto aeróbico 2,1, anaeróbico 0,0). Los +37 de aeróbica baja cuadran con el rodaje de 55 min; los +46 de anaeróbica, con el kilómetro partido; los −67 de aeróbica alta, con la salida del 10 × 200. La etiqueta pasa a «Anaeróbica» por el calendario (sale una sesión de calidad vieja y entra otra), no porque se haya hecho más intensidad: la aeróbica baja sigue siendo la más baja de las tres. Carga aguda 356 (ratio 1,1): la suma simple no cuadra (28-9 234 + 29-9 7,2 + 30-9 155 ya pasan de 356); no se atribuye. VO2máx semanal del CSV: 53,8 (6-9) · 53,4 (13-9) · 53,3 (20-9) · 53,1 (27-9); estimación del reloj, se anota sin interpretar."
+    },
     {
       "fecha": "2026-09-30",
       "ventanaFocoCarga": "2 sep – 30 sep",
