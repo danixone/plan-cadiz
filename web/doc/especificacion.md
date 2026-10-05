@@ -741,6 +741,8 @@ Cabecera `.vh`: «Técnica» y, como línea de contexto, **las tres pruebas en o
 
 ### 5.5 Dieta (M7)
 
+> **5-10-2026: la pestaña Dieta se retiró de la web a petición de Daniel, para ahorrar espacio.** Todo lo necesario para rehacerla (módulo, estilos, vista, prueba de paridad y los fragmentos del armazón, la QA y el inventario) está en `web/archivo/dieta/`, con los pasos en su `README.md`. Lo que sigue describe cómo era.
+
 La lógica se conserva (§9.1). Maqueta:
 
 1. Cabecera `.vh` «Dieta» y la línea «Tu pauta con la nutricionista. Aquí no se modifica.» (`data-inv="D1"`).
@@ -1440,6 +1442,8 @@ Lo escribe **M1** para esta fase. Con el tiempo pasa a ser `datos/web.json` del 
 ## 9. Qué se conserva intacto por dentro y cómo se reestiliza
 
 ### 9.1 La app de Dieta (M7)
+
+> **5-10-2026: la pestaña Dieta se retiró de la web a petición de Daniel, para ahorrar espacio.** Todo lo necesario para rehacerla (módulo, estilos, vista, prueba de paridad y los fragmentos del armazón, la QA y el inventario) está en `web/archivo/dieta/`, con los pasos en su `README.md`. Lo que sigue describe cómo era.
 
 - **Qué se mueve.** El código de `docs/index.html` (primer `<script>`) desde la declaración `var F` (primera aparición, en el carácter 187.100) hasta justo antes de `['s-mil','s-dom','s-cir'].forEach` (carácter 264.033, el final del IIFE principal): 76.933 caracteres. Se copia **tal cual** a `impl/src/js/60_dieta.js`, dentro de su propio IIFE.
 

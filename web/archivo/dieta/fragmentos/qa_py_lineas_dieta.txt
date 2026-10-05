@@ -1,0 +1,14 @@
+# qa/qa.py (5-10-2026, antes de archivar la Dieta)
+49:    ('dieta', 'dieta', {}, False, False),
+52:RUTAS_ABIERTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta', 'marcas/nota', 'marcas/registro', 'tecnica/dominada']
+288:    C['13_paridad_dieta'] = extra.get('paridad', {'ok': None, 'detalle': 'qa/paridad_dieta.py no existe todavía (M7)'})
+324:    par = os.path.join(AQUI, 'paridad_dieta.py')
+327:        extra['paridad'] = {'ok': p.returncode == 0, 'detalle': p.stdout.decode('utf-8', 'replace').strip().split('\n')[-15:]}
+
+        if r.returncode not in (0, 3):          # 3: out/index.html escrito, solo falla el tamaño (criterio 11)
+            sys.exit('build.py falló')
+    par = os.path.join(AQUI, 'paridad_dieta.py')
+    if os.path.exists(par) and not a.solo_casos:
+        p = subprocess.run([sys.executable, par], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=IMPL)
+        extra['paridad'] = {'ok': p.returncode == 0, 'detalle': p.stdout.decode('utf-8', 'replace').strip().split('\n')[-15:]}
+    os.makedirs(CAPTURAS, exist_ok=True)

@@ -46,10 +46,9 @@ ESTADOS = [
     ('tecnica-dominada', 'tecnica/dominada', {}, False, False),
     ('tecnica-mil', 'tecnica/mil', {}, False, False),
     ('tecnica-circuito', 'tecnica/circuito', {}, False, False),
-    ('dieta', 'dieta', {}, False, False),
 ]
 # pasada «todo abierto» (abrir=1): desbordamiento en 320-390 y frases clave
-RUTAS_ABIERTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta', 'marcas/nota', 'marcas/registro', 'tecnica/dominada']
+RUTAS_ABIERTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'marcas/nota', 'marcas/registro', 'tecnica/dominada']
 # §6.1.7 / criterio 6: dónde tiene que verse el 3:49
 UMBRAL = [
     ('marcas/nota', {'abrir': '1'}, '2026-09-29'), ('marcas/controles', {}, '2026-09-29'), ('plan/ritmos', {}, '2026-09-29'),
@@ -285,7 +284,7 @@ def evaluar(resultados, a, extra):
                 tono.append('%s:%d: %s' % (os.path.relpath(f, IMPL), i, l.strip()[:100]))
     pic = pictogramas(archivos_src())
     C['12_tono'] = {'ok': not tono and not pic, 'tono': tono[:30], 'pictogramas': pic[:30]}
-    C['13_paridad_dieta'] = extra.get('paridad', {'ok': None, 'detalle': 'qa/paridad_dieta.py no existe todavía (M7)'})
+    # 13_paridad_dieta: retirado el 5-10-2026 al archivar la pestaña Dieta (web/archivo/dieta/README.md)
     ms = extra.get('arranque') or []
     C['14_arranque'] = {'ok': (sorted(ms)[len(ms) // 2] < 200) if ms else None, 'medidas_ms': ms, 'mediana_ms': sorted(ms)[len(ms) // 2] if ms else None,
                         'nota': 'tres cargas seguidas de #hoy a 1280 px, sin otras cargas en paralelo (sin contar fuentes); confírmalo en un navegador real'}
@@ -321,10 +320,6 @@ def main():
         extra['construccion'] = {'ok': ok, 'detalle': det}
         if r.returncode not in (0, 3):          # 3: out/index.html escrito, solo falla el tamaño (criterio 11)
             sys.exit('build.py falló')
-    par = os.path.join(AQUI, 'paridad_dieta.py')
-    if os.path.exists(par) and not a.solo_casos:
-        p = subprocess.run([sys.executable, par], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=IMPL)
-        extra['paridad'] = {'ok': p.returncode == 0, 'detalle': p.stdout.decode('utf-8', 'replace').strip().split('\n')[-15:]}
     os.makedirs(CAPTURAS, exist_ok=True)
     # casos de las funciones (una sola carga)
     base = caso({'estado': 'casos', 'ruta': 'hoy', 'extra': {'casos': '1', 'pruebas': '1', 'sinvibrar': '1'}, 'fecha': '2026-09-29', 'hora': '', 'ancho': 390, 'tema': 'light'}, False, a.alto)

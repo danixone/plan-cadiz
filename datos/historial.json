@@ -5,6 +5,133 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-05",
+      "sesion": "5 × 400 m, rec. 2 min · bucle del parque San Cristóbal (sin modo pista)",
+      "objetivo": "1:26 con 2 min · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · 3 × 5 dominadas grabadas de lado",
+      "valida": false,
+      "horaInicioLocal": "20:27 (primera serie 21:13; fin 21:38)",
+      "lugar": "Bucle de atletismo del parque San Cristóbal (NO homologado, perímetro sin medir, 392-400 m): el recuadro GPS de los 400 coincide con el del control del 19-9. Perfil «Carrera» del reloj, no «Pista»: los 400 son distancia GPS sin ajustar.",
+      "resultado": {
+        "tiemposS": [
+          79.8,
+          82.9,
+          86.3,
+          84.9,
+          84.8
+        ],
+        "media": "83,74 s (1:23,7)",
+        "parciales200": [
+          [
+            40.3,
+            39.4
+          ],
+          [
+            41.3,
+            41.6
+          ],
+          [
+            43.9,
+            42.4
+          ],
+          [
+            43.3,
+            41.6
+          ],
+          [
+            44.3,
+            40.5
+          ]
+        ],
+        "fcMaxPorSerie": [
+          192,
+          194,
+          196,
+          198,
+          200
+        ],
+        "fcMediaPorSerie": [
+          181,
+          183,
+          183,
+          186,
+          188
+        ],
+        "fcInicioSerie": [
+          144,
+          152,
+          148,
+          156,
+          153
+        ],
+        "recuperaciones": {
+          "duracionS": 120,
+          "tipo": "de pie o andando (35-47 m en 2 min)",
+          "fcFinal": [
+            153,
+            147,
+            158,
+            154
+          ],
+          "bajadaEn60s": [
+            28,
+            33,
+            33,
+            32
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 184,
+          "60s": 172,
+          "90s": 158,
+          "120s": 153,
+          "180s": 148
+        },
+        "fcMax": 200,
+        "potenciaMediaSerieW": [
+          395,
+          407,
+          407,
+          420,
+          411
+        ],
+        "contactoMsSerie": [
+          189,
+          197,
+          203,
+          204,
+          199
+        ],
+        "efectoAerobico": 3.5,
+        "efectoAnaerobico": 3.7,
+        "cargaSesion": 212,
+        "calentamiento": "46 min hasta la primera serie (20:27-21:13): trote 12 min (1.301 m, con 103 s andando), 5 min de movilidad, una vuelta manual de 15:02 (20:44:54-20:59:56) para el prep-hombro y las dominadas con el reloj en marcha, técnica 2 × 20 m, 5 progresivos de 80 m con 90 s y 4 min hasta la primera serie. Vuelta a la calma: 10 min andando (744 m), no los 15-20 min con techo 145 del ámbar.",
+        "fcTroteCalentamiento": "141 de media a 9:26 /km en los minutos 3-12 con los tramos andando; sin ellos (corte de 1,8 m/s, supuesto), unos 8:32 /km a 143. 135 s por encima de 145, máximo 154. El 30-9: 144,5 a 8:22.",
+        "progresivos": {
+          "n": 5,
+          "distanciaM": 80,
+          "tiemposS": [
+            17.3,
+            17.1,
+            18.0,
+            17.1,
+            17.3
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            155,
+            158,
+            158,
+            161,
+            160
+          ],
+          "nota": "Ritmo K del bloque B: 80 m en 17,1 s. Los cinco en el ritmo K o algo más lentos: ya no son sprints (15,0 el 30-9). Planos, no de menos a más. La velocidad GPS de los últimos segundos llega a 5,4-5,5 m/s (supuesto: GPS segundo a segundo)."
+        },
+        "sensorMunecaC": 28,
+        "relojConfigurado": "FC máx 202, reposo 46, umbral 181 (zonas por FCR). Aviso de ritmo programado a 3:30-3:40 /km: saltó (evento speed_high_alert del FIT: aviso por rápido) a las 21:14:12, a los 34 s de la primera repetición. El entrenamiento cargado se llama «4 octubre» pero sus pasos son los del lunes. En el FIT van RPE 6/10 y sensación «muy débil» (sin confirmar que los pusiera él)."
+      },
+      "valoracion": "NO VÁLIDA (Paso 2): enfermo y con fatiga no planificada. Comunicado por él el 5-10 por la noche: mocos en la garganta y congestión nasal desde la mañana (síntomas por encima del cuello → el semáforo era ROJO como mínimo, no ámbar: tocaba rodaje de 30-40 min con techo 145), Pectox a las 16:00, 2 h de ensayo de desfile al sol con el fusil al hombro derecho, unos 23.000 pasos en el día según él (el FIT de la sesión no los recoge) y baño en el mar en Roque Prieto antes de entrenar. Noche 6h13 (ámbar). Inicio a las 20:27, confirmado por él. Dice que se encontraba bien para entrenar. Se hizo la sesión entera (5 × 400 y 10 min andando). Segunda calidad seguida en la que el semáforo no manda (28-9 en rojo por sueño). Además, en San Cristóbal y sin modo pista (±1-2 % de escala). No se usa para estimar nada. MEDIDO: 79,8 · 82,9 · 86,3 · 84,9 · 84,8, media 83,7 frente a 86 pedidos; FC 200 en la última; carga 212, efecto anaeróbico 3,7. El calentamiento corriendo y andando porque al mínimo trote pasaba de 145 (lo dice él y lo confirma el FIT: 135 s por encima de 145). PRIMER 200: 40,3 frente a 43, tercera vez (40,0 el 19-9, 40,6 el 28-9): pasa a regla. Él cuenta que un aviso le tapó el tiempo y aceleró sin verlo. El FIT registra el aviso como de velocidad alta (por rápido) a los 34 s, cuando ya llevaba unos 170 m a ritmo de 40 por 200: la salida rápida fue antes del aviso, y el aviso tapando la pantalla le quitó la referencia para corregir. Después corrigió de más (segundos 200 de 40,5-42,4 en la 3.ª a la 5.ª): segunda vez. NO CAMBIA LOS RITMOS: no válida, y la revisión del 23-9 no deja subir intensidad; el bloque B sigue en 1:26 / 2:08 y el C lo decide el simulacro del 17-10."
+    },
+    {
       "fecha": "2026-10-03",
       "sesion": "Rodaje 55 min, techo 145, primeros 10 min a 140 (después de la barra corta)",
       "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min",
@@ -860,6 +987,19 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-05",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "lastreKg": 0,
+      "descanso": "unos 3 min (supuesto por los picos de pulso del FIT: 169, 156 y 163 ppm separados unos 3:30)",
+      "contexto": "lunes, dentro del calentamiento de los 5 × 400, tras el prep-hombro; día con síntomas por encima del cuello, 2 h de desfile con el fusil al hombro derecho y baño en el mar antes",
+      "valoracion": "AUTOINFORMADO (5-10): 3 × 5 completas, «un poco costosas» por el cansancio del día y el resfriado. Sin FIT de fuerza (las series no se marcaron en el reloj), sin vídeo recibido, sin repeticiones en reserva ni dolor de codo y hombro anotados. Día rojo por la regla del cuello: no mide nada. El pendiente de las piernas (grabar de lado hasta cadera ≥ 170°) sigue sin datos nuevos. Después de la sesión, omóplato derecho «un poco cargado» (comunicado por él, sin nota 0-10); ese hombro llevó el fusil 2 h en el ensayo de desfile."
+    },
+    {
       "fecha": "2026-10-03",
       "series": [
         3,
@@ -1130,6 +1270,26 @@
   ],
   "sueno": [
     {
+      "fecha": "2026-10-05",
+      "duracion": "6h13",
+      "puntuacion": 76,
+      "calidad": "Aceptable",
+      "fcReposo": 48,
+      "vfc": 58,
+      "profundo": "1h49",
+      "rem": "1h18",
+      "despierto": "1m",
+      "inquietud": 37,
+      "bodyBattery": "+61",
+      "estresMedio": 18,
+      "spo2Media": "93%",
+      "spo2Minimo": "80%",
+      "fcMediaNoche": 54,
+      "respiracionMedia": 14,
+      "vfc7dias": "Equilibrado (58 ms; referencia 55-70; media 7 días 55)",
+      "nota": "Noche del 4 al 5. Sueño ligero 3h06, respiración más baja 8 rpm. Semáforo ÁMBAR (6h13): tocaba 5 × 400 → 3 × 400 + 15-20 min con techo 145. Media de VFC de 7 días en 55, el suelo de su referencia. SpO2 media 93 %, la más baja de la serie (94 % el 3-10): dato de muñeca, se anota sin interpretar. Noche del 3 al 4 sin CSV."
+    },
+    {
       "fecha": "2026-10-03",
       "duracion": "5h18",
       "puntuacion": 69,
@@ -1350,6 +1510,20 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-05",
+      "ventanaFocoCarga": "7 sep – 5 oct",
+      "focoCarga": "Anaeróbica",
+      "estadoEntreno": "Productivo",
+      "anaerobica": 505,
+      "aerobicaAlta": 512,
+      "aerobicaBaja": 258,
+      "cargaAguda": 513,
+      "cargaAgudaEstado": "Alto",
+      "vo2max": 53.3,
+      "vfc": "55 ms, Equilibrado",
+      "valoracion": "Captura tomada después de los 5 × 400 del 5-10 (los +114 de anaeróbica solo pueden venir de esa sesión). Del 3-10 al 5-10: anaeróbica 391 → 505 (+114), aeróbica alta 530 → 512 (−18), aeróbica baja 258 → 258 (0). Ventana (el primer día de la etiqueta no cuenta): SALEN el 6-9 (rodaje de 40 min por encima del techo) y el 7-9 (subida a Teror); ENTRAN el 4-10, sin nada registrado, y los 5 × 400 del 5-10 (carga 212; efectos 3,5 y 3,7). La aeróbica baja no se mueve: la base sigue igual y sigue siendo la más baja de las tres. Carga aguda 513 «Alto»: primera vez fuera de «Óptimo» (356 el 3-10); no es «Sobrecarga», que es lo que pone el semáforo en rojo; la suma simple no cuadra y no se atribuye. Estado «Productivo» (era «Mantenimiento»). VO2máx 53,3 del CSV (la captura redondea a 53); estimación del reloj, se anota sin interpretar."
+    },
     {
       "fecha": "2026-10-03",
       "ventanaFocoCarga": "5 sep – 3 oct",

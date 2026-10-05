@@ -1051,7 +1051,7 @@
 
   /* ------------------------------------------------------------------ enrutador (§3.2) */
   (function () {
-    var VISTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta'];
+    var VISTAS = ['hoy', 'plan', 'marcas', 'tecnica'];
     var ALIAS = { 'marcas/simulador': 'marcas/nota' };
     var reg = {}, pos = {}, actual = null, iniciado = false, primera = true;
     PC.VISTAS = VISTAS.slice();
@@ -1380,7 +1380,7 @@
       var inv = {}, src = {};
       PC.$$('[data-inv]').forEach(function (e) { e.getAttribute('data-inv').split(',').forEach(function (x) { x = x.trim(); if (x) inv[x] = 1; }); });
       PC.$$('[data-src]').forEach(function (e) { var s = e.getAttribute('data-src'); if (s) src[s] = 1; });
-      var pref = { hoy: 'hoy-', plan: 'pl-', marcas: 'mc-', tecnica: 'te-', dieta: 'di-' }[ruta.vista];
+      var pref = { hoy: 'hoy-', plan: 'pl-', marcas: 'mc-', tecnica: 'te-' }[ruta.vista];
       var orden = [];
       if (vista) {
         var ids = PC.$$('[id^="' + pref + '"]', vista);

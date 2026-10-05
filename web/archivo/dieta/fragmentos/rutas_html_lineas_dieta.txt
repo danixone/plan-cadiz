@@ -1,0 +1,3 @@
+# qa/rutas.html
+35:    ['hoy', 'plan', 'marcas', 'tecnica', 'dieta'].forEach(function (v) {
+82:    luego(200, function () { W.location.hash = '#dieta'; });

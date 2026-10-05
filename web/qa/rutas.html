@@ -32,7 +32,7 @@
   function sel(v) { return D.getElementById('t-' + v).getAttribute('aria-selected') === 'true' && D.getElementById('ab-' + v).getAttribute('aria-selected') === 'true'; }
   function preparar() {
     W = f.contentWindow; D = W.document; PC = W.PC;
-    ['hoy', 'plan', 'marcas', 'tecnica', 'dieta'].forEach(function (v) {
+    ['hoy', 'plan', 'marcas', 'tecnica'].forEach(function (v) {
       var c = D.querySelector('#v-' + v + ' .container');
       var pie = c.querySelector('.pie');
       var r = D.createElement('div'); r.className = 'relleno-prueba';
@@ -79,7 +79,7 @@
       W.location.hash = '#hoy/2026-10-01';
     });
     luego(200, function () { var r = PC.ruta(); paso('#hoy/2026-10-01', r.vista === 'hoy' && r.sub === '2026-10-01' && vis('v-hoy')); W.location.hash = '#tecnica'; });
-    luego(200, function () { W.location.hash = '#dieta'; });
+    luego(200, function () { W.location.hash = '#marcas'; });
     luego(200, function () { W.location.hash = '#tecnica/dominada'; });
     luego(200, function () { paso('init de una vista solo la primera vez', inits === 1 && shows.length >= 3, { inits: inits, shows: shows }); W.location.hash = '#nada'; });
     luego(200, function () { paso('ruta desconocida → Hoy', vis('v-hoy') && PC.ruta().vista === 'hoy'); W.location.hash = '#plan'; });

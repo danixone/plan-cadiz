@@ -1259,7 +1259,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · sin recortar a 2 × 600 salvo semáforo ámbar · dominadas: las 3 series grabadas DE LADO, piernas juntas y verticales, glúteo y abdomen apretados, cruzar las piernas si ayuda (el BOE lo permite); si los pies se van por delante, esa repetición no cuenta",
+          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · sin recortar a 2 × 600 salvo semáforo ámbar · dominadas: las 3 series grabadas DE LADO, piernas juntas y verticales, glúteo y abdomen apretados, cruzar las piernas si ayuda (el BOE lo permite); si los pies se van por delante, esa repetición no cuenta",
           "hora": "18:00, acabar antes de las 20:30: mañana hay circuito"
         },
         {
@@ -1267,7 +1267,8 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable",
-          "objetivo": "sin bloque técnico: el 1-10 dio 9,4 en el primer intento (el bloque es para 9,8 o más) · apuntar los tres intentos: el 1-10 el primero fue el más lento"
+          "objetivo": "sin bloque técnico: el 1-10 dio 9,4 en el primer intento (el bloque es para 9,8 o más) · apuntar los tres intentos: el 1-10 el primero fue el más lento",
+          "regla": "Acto de trabajo a las 18:30, duración sin confirmar (comunicado el 5-10). El circuito se queda a las 21:30: no se mueve. Mañana libre: dormir lo que se pueda la noche del 7 al 8 y nada de esfuerzo extra por la mañana. Regla de comer: la toma con hidratos y proteína hacia las 17:30-18:00, antes del acto (3-4 h antes del circuito), y algo ligero de digestión rápida al salir del acto si da tiempo (60-90 min antes); qué se come es de la pauta de la nutricionista. Si el acto deja menos de 45 min para llegar y calentar, se calienta lo que dé y los tres intentos van con asterisco; si se alarga más allá de las 21:30, el circuito de esa semana se pierde (es de entreno, no de simulacro)."
         },
         {
           "fecha": "2026-10-09",
@@ -1300,7 +1301,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
-          "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · comparar con el 5",
+          "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · comparar con el 5",
           "hora": "18:00-19:00",
           "nota": "No trabaja ese día (dato del 2-10). Misma hora, 18:00, para compararla con la del lunes 5."
         },
@@ -1317,7 +1318,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · sin recortar a 2 × 600 salvo semáforo ámbar · comparar con el 7",
+          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · sin recortar a 2 × 600 salvo semáforo ámbar · comparar con el 7",
           "hora": "18:00, acabar antes de las 20:30: mañana el circuito del simulacro"
         },
         {

@@ -1,0 +1,17 @@
+# build.py
+10:2. CSS: src/00_head.html con /*__CSS__*/ -> «@layer sistema, modulos, dieta;» + cada src/css/*.css
+11:   envuelto en su capa (10-15 sistema · 16-59 modulos · 60+ dieta). Ningún CSS queda fuera de capa.
+20:data-sha con el sha256 (12 cifras) del fuente, que es lo que comprueba qa/paridad_dieta.py.
+30:VISTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta']
+51:    return 'dieta'
+228:    partes = ['@layer sistema, modulos, dieta;']
+262:        scripts.append('<script data-mod="%s" data-sha="%s">\n%s\n</script>' % (f, sha12(cuerpo), salida))
+# src/js/00_core.js
+1054:    var VISTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta'];
+1383:      var pref = { hoy: 'hoy-', plan: 'pl-', marcas: 'mc-', tecnica: 'te-', dieta: 'di-' }[ruta.vista];
+# herramientas/validar_web.py
+38:VISTAS = ('hoy', 'plan', 'marcas', 'tecnica', 'dieta')
+# src/css/10_sistema.css (barra de abajo con 5 pestañas)
+158:  display:grid;grid-template-columns:repeat(5,1fr)}
+# src/js/50_tecnica.js (usa el icono i-dieta en Suplementos: el símbolo se queda en el shell)
+971:      h += '<div class="card" id="te-suple">' + cardH('dieta', 'Suplementos', '') + (T.R6 ? p(T.R6) : '') +

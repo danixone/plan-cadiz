@@ -2,7 +2,7 @@
   "_nota": "Lista blanca de lo que se publica en el bloque de datos de la web (especificación §8.2 y §8.3). Por defecto NO se publica nada: todo campo de plan.json o historial.json que no aparezca aquí para la construcción con «campo sin clasificar». Rutas: los arrays llevan [] y «.*» publica el subárbol; una ruta exacta publica también lo que cuelga de ella. Niveles, por prioridad: sensible > revisar > interno > publico. publico = sale; interno = no sale pero no es secreto; sensible = no sale y su texto no puede aparecer en ningún sitio del HTML; revisar = no sale hasta que Daniel lo decida (su texto tampoco puede aparecer). Cada campo publico de plan lleva «usa» con los módulos que lo leen (M0 núcleo, M1 datos, M2 Hoy, M3 Plan, M4 Marcas, M5 Técnica, M7 Dieta): un campo publico con «usa» vacío se clasifica pero NO se incluye, y el constructor lo imprime como descartado.",
 
   "publico": [
-    {"ruta": "plan.atleta.pesoKg", "usa": ["M7"]},
+    {"ruta": "plan.atleta.pesoKg", "usa": []},
     {"ruta": "plan.atleta.fcMaxima", "usa": ["M3"]},
     {"ruta": "plan.atleta.fcMaximaMedidaEl", "usa": ["M3"]},
     {"ruta": "plan.atleta.fcMaximaNota", "usa": ["M3", "M5"]},
@@ -75,9 +75,9 @@
     {"ruta": "plan.calibracion", "usa": []},
     {"ruta": "plan.ejercicios[].*", "usa": ["M2", "M5"]},
     {"ruta": "plan.calendario[].*", "usa": ["M0", "M1", "M2", "M3", "M4"]},
-    {"ruta": "plan.planDeCarrera.*", "usa": ["M4", "M5", "M7"]},
+    {"ruta": "plan.planDeCarrera.*", "usa": ["M4", "M5"]},
     {"ruta": "plan.escenariosNota[].*", "usa": ["M4"]},
-    {"ruta": "plan.reglas[].*", "usa": ["M2", "M3", "M7"]},
+    {"ruta": "plan.reglas[].*", "usa": ["M2", "M3"]},
 
     {"ruta": "plan.contextoDelUsuario.gimnasios", "usa": []},
     {"ruta": "plan.contextoDelUsuario.diasQueCorre", "usa": []},

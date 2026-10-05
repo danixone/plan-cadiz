@@ -155,7 +155,7 @@ a.brand{display:inline-flex;align-items:center;gap:8px;min-height:var(--tap);col
 .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;height:calc(var(--tabbar-h) + env(safe-area-inset-bottom));
   padding-bottom:env(safe-area-inset-bottom);background:color-mix(in srgb,var(--surface) 92%,transparent);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--sh-bar);
-  display:grid;grid-template-columns:repeat(5,1fr)}
+  display:grid;grid-template-columns:repeat(4,1fr)}
 .tabbar button{border:0;background:none;color:var(--text-3);font:var(--fw-semi) var(--fs-xs)/1 var(--font);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:var(--tap);cursor:pointer;position:relative;padding:0}
 .tabbar button .pill{width:56px;height:30px;border-radius:var(--r-pill);display:grid;place-items:center;transition:background var(--dur-2) var(--ease)}

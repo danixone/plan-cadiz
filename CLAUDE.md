@@ -104,7 +104,8 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 **Patrones que se cuentan en cada sesión** (tres seguidas = regla, no consejo):
 - **Salida rápida en rodajes:** 7:08-7:10 los cinco primeros minutos el 12, 16 y 23. Regla desde el 23-9: primeros 10 min con techo 140.
 - **Progresivos como sprints:** 14,8 s/80 m el 16, salida del control a 3:05 el 19, 17,6-18,5 s/100 m el 23 (efecto anaeróbico 2,2-2,9). Regla: paso de 100 m con aviso de ritmo 3:20-3:50 en el reloj. Un progresivo bien hecho no deja huella anaeróbica.
-- **Primer 200 rápido en esfuerzos a ritmo de 1.000:** 40 en el control del 19 (pedía 45) y 40,6 en la primera de 6 × 400 el 28 (pedía 43,5), las dos sin progresivos de calibración. Después del primero corrige de más (primeros 200 de 43,6-46,5 y segundos de 41,3-43,9 el 28). Dos veces: a la tercera es regla. Remedio que ya está en el plan: los 5 progresivos del calentamiento, los dos últimos a ritmo K (= el ritmo del kilómetro del bloque: A 3:38 /km, B 3:34, C 3:32 → 3:30), y el aviso de ritmo. **El 30, con progresivos, no se repitió** (42,2 y 43,3 en los 600): sigue en dos.
+- **Primer 200 rápido en esfuerzos a ritmo de 1.000:** 40 en el control del 19 (pedía 45) y 40,6 en la primera de 6 × 400 el 28 (pedía 43,5), las dos sin progresivos de calibración. Después del primero corrige de más (primeros 200 de 43,6-46,5 y segundos de 41,3-43,9 el 28). Dos veces: a la tercera es regla. Remedio que ya está en el plan: los 5 progresivos del calentamiento, los dos últimos a ritmo K (= el ritmo del kilómetro del bloque: A 3:38 /km, B 3:34, C 3:32 → 3:30), y el aviso de ritmo. **El 30, con progresivos, no se repitió** (42,2 y 43,3 en los 600). **El 5-10, con progresivos al ritmo K (17,1-18,0) y el aviso puesto, 40,3 (pedía 43): tercera vez, ES REGLA, y el remedio no basta** (el aviso saltó a los 34 s, tarde). Después volvió a corregir de más (primeros 200 de 43,3-44,3, segundos de 40,5-42,4): segunda vez. Desde el 7-10, la primera repetición de cada sesión de series sale con el primer 200 en 43 o más lento aunque parezca que va parado; si pasa el 200 por debajo de 42, el segundo 200 va al ritmo objetivo, no por delante. Es un freno, no un cambio de ritmos.
+- **Semáforo que no se aplica en calidades:** 28-9 en rojo (2h14) y 5-10 en rojo por la regla del cuello (mocos y congestión, Pectox, 2 h de desfile al sol y baño en el mar antes; 6h13 de sueño): hizo los 5 × 400 enteros en vez de un rodaje de 30-40 min con techo 145. Las dos, no válidas. Dos veces: a la tercera es regla.
 - **Segundo 200 por delante y caída después:** control del 19 (40 · 42 · 46 · 46) y kilómetro partido del 30 (600 en 42,2 · 41,9 · 47,2 y 43,3 · 41,4 · 46,0: paso por el 400 en 1:24 cuando tocaba 1:27,4). Dos veces: a la tercera es regla. Es lo que separa el 3:34 del 3:30.
 - **Progresivos que no van de menos a más:** el 30, el primero fue el más rápido (15,0 s/80 m) y los dos últimos, 16,1-16,4 frente a 17,4 del ritmo K.
 - **Primer intento del circuito más lento que los siguientes:** 9,4 · 9,2 · 9,3 el 1-10 (0,2 s = 1 punto). Una vez: a la tercera es regla. En el examen solo hay un intento.
@@ -130,7 +131,6 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 | Pendiente | `plan.pendientes` (id, texto, desde, hasta) | Plan › pendientes y el recuento en Hoy |
 | Aviso con fecha, decisión, conflicto resuelto | `web/datos/web.json` (`avisos`, `decisiones`, `resueltos`), cada uno con `fuente` (ruta de plan o historial, o `html:ID`) y texto literal de ella | Hoy, Marcas y Plan (se oculta solo al caducar) |
 | Composición | `historial.composicion`; `bascula` tiene que decir «Tanita» o «dietista» para entrar en la serie comparable | Marcas › Cuerpo |
-| Dieta | nada: la pauta es de la nutricionista | — |
 
 **Después, siempre:**
 
@@ -160,15 +160,15 @@ python3 web/herramientas/validar_web.py --render
 python3 web/qa/qa.py --rapido --paralelo 6
 ```
 
-El primero tarda unos 10 s. El segundo, unos 5 min, e incluye la paridad de Dieta. Sale con 0 aunque falle algo, así que hay que leer la tabla: lo normal es todo PASA salvo «13_paridad_dieta FALLA» (ver Dieta) y «1», «8» y «10» MANUAL/PENDIENTE (capturas en `web/capturas/`). Y abrirla de verdad en el navegador: con `?hoy=AAAA-MM-DD` enseña cualquier día (útil para revisar el de mañana). En una copia o un worktree, `PLAN_RAIZ=<carpeta>` delante de cada orden.
+El primero tarda unos 10 s. El segundo, unos 5 min. Sale con 0 aunque falle algo, así que hay que leer la tabla: lo normal es todo PASA salvo «1», «8» y «10» MANUAL/PENDIENTE y, desde antes del 5-10, «9_primera_pantalla FALLA» (en Hoy a 390 px los números quedan bajo la primera pantalla) (capturas en `web/capturas/`). Y abrirla de verdad en el navegador: con `?hoy=AAAA-MM-DD` enseña cualquier día (útil para revisar el de mañana). En una copia o un worktree, `PLAN_RAIZ=<carpeta>` delante de cada orden.
 
 **Reglas de la web nueva:**
 - **Ninguna cifra inventada.** El validador comprueba que toda cifra de `web.json` sale de `plan.json`, `historial.json` o de la web antigua congelada (`web/datos/corpus_web_antigua.html`).
 - **Lista blanca de lo que se publica en la página:** `web/herramientas/campos.json`. Los relatos, las causas del sueño y los campos `sensible` no salen en la página. **Pero el repositorio es público:** `datos/*.json` y este archivo se leen en GitHub. No se escribe en ellos nada que Daniel no quiera ver publicado.
 - **El 3:49** está en todo lo que pinta un tiempo del 1.000 (`data-umbral="229"`), y la QA lo comprueba.
 - **Láminas técnicas:** si cambian los textos de técnica de `plan.json` (`ejercicios[].tecnica`, `protocoloDominadas.tecnicaExamen`), hay que regenerar los dibujos con `python3 web/herramientas/ilus/exportar.py` (se para si una marca del dibujo ya no casa con su texto) y después `sh web/instalar.sh`, que NO comprueba las láminas por su cuenta.
-- **Dieta:** su código (`web/src/js/60_dieta.js`) es el de la nutricionista trasladado con una lista cerrada de cambios; `python3 web/qa/paridad_dieta.py` lo compara con `docs/anterior/index.html` (que por eso no se borra). Desde el 29-9 acaba en «RESULTADO: FALLA» a propósito, en las comprobaciones 1, 4 y 6, porque la antigua enseñaba mal «Media mañana». Es lo esperado si fallan SOLO esas tres; cualquier otra es un fallo real.
-- **Tamaño:** límite de 240 KB con gzip (225 al instalarla).
+- **Dieta: retirada de la web el 5-10-2026 a petición suya, para ahorrar espacio** (23,9 KB con gzip). La copia y los pasos para reintegrarla están en `web/archivo/dieta/README.md`; la referencia de paridad es `docs/anterior/index.html`, que por eso no se borra y donde la dieta sigue visible (/plan-cadiz/anterior/). Desde el mismo día el constructor minifica también el HTML (`--sin-minificar` para depurar).
+- **Tamaño:** límite de 240 KB con gzip (214,5 al quitar Dieta el 5-10).
 - `herramientas/calendario_web.py` está retirado en `herramientas/antiguos/`: no sirve para la web nueva.
 
 ## Paso 6 · Publicar
@@ -199,7 +199,7 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **El 3:49 elimina.** Es la única cifra del plan que no admite negociación. Debe estar visible en toda gráfica o simulación donde aparezca un tiempo de 1.000 m.
 
-**La dieta es de su nutricionista.** Se muestra, no se modifica. Puedes comentar el momento de las comidas respecto al entrenamiento; no cambies la pauta.
+**La dieta es de su nutricionista.** No se modifica (desde el 5-10 solo está en la web antigua). Puedes comentar el momento de las comidas respecto al entrenamiento; no cambies la pauta.
 
 **No le sugieras perder peso.** 11,0 % de grasa a 172 cm y 66,5 kg, con grasa visceral en 1, es un físico de atleta. Cualquier recomendación de bajar kilos sería contraproducente. Medido el 23-9-2026 con la Tanita MC-780MA del dietista.
 
@@ -239,13 +239,13 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 
 # LA WEB
 
-Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 9 módulos). Cinco pestañas en la barra de abajo:
+Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 9 módulos). Cuatro pestañas en la barra de abajo (eran cinco hasta el 5-10):
 
 **Hoy** · la tarjeta del día: semáforo de un toque (verde, ámbar o rojo) que cambia la sesión, los números del día, modo pista (un toque por serie, temporizador que pita y destella, freno y regla de las dos repeticiones automáticos), modo gimnasio, «Cómo fue» con «Copiar para el entrenador» (lo que Daniel me pega tras entrenar), el camino hasta Cádiz y «Esta noche» (cena 20:15, luz 22:15).
 **Plan** · calendario con bloques A/B/C, hitos y estado real de cada día, hoja de cada día, semana tipo, ritmos (con el 3:49), zonas, reglas en cuatro grupos, decisiones y pendientes.
 **Marcas** · nota y simulador en una tarjeta con la mascota, controles, gráficas (una a la vez en el móvil), registro del 100 % del historial y composición.
 **Técnica** · la dominada con las nueve reglas del BOE dibujadas y el contador de repeticiones válidas para revisar el vídeo, el reparto del 1.000 interactivo, el circuito, las fichas del gimnasio con láminas, técnica de carrera, reloj y material.
-**Dieta** · la app de la nutricionista con el aspecto nuevo.
+**Dieta** · retirada el 5-10-2026 (copia en `web/archivo/dieta/`).
 
 **La mascota** es un corredor con uniforme azul genérico, sin emblemas ni la palabra «Policía»: la web no puede parecer oficial. Solo celebra con datos reales (apto con marcas medidas). Lo simulado, supuesto o autoinformado se dibuja en contorno o discontinuo en toda la web.
 

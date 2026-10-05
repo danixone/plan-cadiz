@@ -1,0 +1,150 @@
+{
+  "inventario_ids": {
+    "D1": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D2": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D3": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D4": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D5": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D6": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D7": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D8": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D9": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D10": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D11": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D12": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D13": {
+      "destino": "Dieta",
+      "tratamiento": "§9.1",
+      "eliminado": false
+    },
+    "D14": {
+      "destino": "Dieta `#di-entreno` y `#di-calidad`",
+      "tratamiento": "La caja se elimina",
+      "eliminado": false
+    },
+    "R3": {
+      "destino": "Dieta `#di-entreno`",
+      "tratamiento": "Café a las 14:00",
+      "eliminado": false
+    },
+    "R4": {
+      "destino": "Dieta `#di-calidad`",
+      "tratamiento": "Sin «umbral»",
+      "eliminado": false
+    },
+    "R5": {
+      "destino": "Dieta `#di-entreno`",
+      "tratamiento": "Café a las 14:00",
+      "eliminado": false
+    }
+  },
+  "frases_clave": {
+    "D1": [
+      "Tu pauta con la nutricionista. Aquí no se modifica.",
+      "Dieta"
+    ],
+    "D2": [
+      "Calorías",
+      "trabaja con 130–145 g de proteína al día"
+    ],
+    "D3": [
+      "Lun",
+      "Dom"
+    ],
+    "D4": [
+      "Día de calidad · gofio a 40 g",
+      "Añadir post-entreno"
+    ],
+    "D5": [
+      "Cantidades originales"
+    ],
+    "D6": [
+      "Marcar día como hecho"
+    ],
+    "D7": [
+      "Comida",
+      "Cena"
+    ],
+    "D8": [
+      "Desayuno",
+      "Merienda"
+    ],
+    "D9": [
+      "Proteína",
+      "Hidratos"
+    ],
+    "D10": [
+      "Podrías añadir"
+    ],
+    "D11": [
+      "añadir algo que hayas comido"
+    ],
+    "D12": [
+      "Cómo se cocina"
+    ],
+    "D13": [
+      "Valores aproximados. Pesos en crudo."
+    ],
+    "D14": [
+      "Alrededor del entreno",
+      "Sin cafeína después de las 14:00"
+    ],
+    "R3": [
+      "80–100 g de hidratos"
+    ],
+    "R4": [
+      "gofio a 40 g"
+    ],
+    "R5": [
+      "Sin cafeína después de las 14:00"
+    ]
+  }
+}

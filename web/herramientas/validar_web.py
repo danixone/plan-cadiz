@@ -35,7 +35,7 @@ import construir_web as cw  # noqa: E402
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 LIMITE_GZIP = 240 * 1024
-VISTAS = ('hoy', 'plan', 'marcas', 'tecnica', 'dieta')
+VISTAS = ('hoy', 'plan', 'marcas', 'tecnica')  # Dieta archivada el 5-10-2026 (web/archivo/dieta/)
 # claves de web.json que no son texto de contenido: no se buscan cifras en ellas
 CLAVES_ESTRUCTURA = {'firma', 'firmaDe', 'fuente', 'fuentes', 'corpusSha256', 'prellenar', 'guardar', 'enlace',
                      'de', 'clave', 'id', 'resueltos', 'registroCampos', 'versiones', 'compartida', 'tipo',

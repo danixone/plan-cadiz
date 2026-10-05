@@ -7,7 +7,7 @@
 1. Datos: importa herramientas/construir_web.py (M1) y llama a
    construir(plan, historial, web, campos) -> (datos, errores, avisos). Con errores, se para.
    Con --muestra, o si el constructor de M1 aún no existe, usa datos/muestra.json.
-2. CSS: src/00_head.html con /*__CSS__*/ -> «@layer sistema, modulos, dieta;» + cada src/css/*.css
+2. CSS: src/00_head.html con /*__CSS__*/ -> «@layer sistema, modulos;» (y «, dieta» si hay un 60+) + cada src/css/*.css
    envuelto en su capa (10-15 sistema · 16-59 modulos · 60+ dieta). Ningún CSS queda fuera de capa.
 3. src/20_shell.html: <!--__VISTA:x--> -> src/views/x.html · <!--__DATOS__--> -> bloque de datos ·
    <!--__JS__--> -> un <script> por archivo de src/js/*.js, por orden de nombre.
@@ -17,7 +17,7 @@ M8 (integración): por defecto el CSS y el JS se minifican al ensamblar (herrami
 fuera comentarios y espacios, con comprobación de tokens; herramientas/acortar_nombres.js: nombres
 locales cortos con el acorn que trae Node, con comprobación del árbol). Los fuentes de src/ no se
 tocan. --sin-minificar ensambla los fuentes tal cual (para depurar). Cada <script data-mod> lleva
-data-sha con el sha256 (12 cifras) del fuente, que es lo que comprueba qa/paridad_dieta.py.
+data-sha con el sha256 (12 cifras) del fuente (lo comprobaba qa/paridad_dieta.py, archivada en archivo/dieta/).
 Si solo falla el tamaño, out/index.html se escribe igual y la salida es 3 (no 1).
 
 Los JSON del proyecto se LEEN; nunca se escriben.
@@ -27,7 +27,7 @@ import argparse, datetime, gzip, hashlib, importlib.util, inspect, json, os, re,
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ_PROYECTO = os.environ.get('PLAN_RAIZ', os.path.dirname(AQUI))  # la carpeta que contiene web/
 SRC = os.path.join(AQUI, 'src')
-VISTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'dieta']
+VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']  # Dieta archivada el 5-10-2026 en archivo/dieta/
 LIMITE_GZIP = 240 * 1024  # subido de 190 a 240 el 29-9 por el entrenador: 225 KB con gzip cargan bien en el móvil
 
 
@@ -216,6 +216,22 @@ def min_js(cuerpo, nombre):
         return cuerpo.strip()
 
 
+_CRUDO = re.compile(r'(<script\b.*?</script>|<style\b.*?</style>|<pre\b.*?</pre>|<textarea\b.*?</textarea>)', re.S | re.I)
+
+
+def min_html(txt):
+    """5-10-2026: el HTML fijo (head, armazón y vistas) pierde los comentarios (salvo las marcas <!--__X__-->)
+    y cada tramo de espacios queda en UNO (nunca en cero, para no pegar palabras entre etiquetas). No toca
+    <script>, <style>, <pre> ni <textarea>. El navegador ya colapsa esos espacios: no cambia lo que se ve."""
+    if not MINIFICAR:
+        return txt
+    trozos = _CRUDO.split(txt)
+    for i in range(0, len(trozos), 2):
+        t = re.sub(r'<!--(?!__)(?!\[).*?-->', '', trozos[i], flags=re.S)
+        trozos[i] = re.sub(r'[ \t\r\n\f]+', ' ', t)  # solo espacios ASCII: el no separable se respeta
+    return ''.join(trozos)
+
+
 def sha12(txt):
     return hashlib.sha256(txt.encode('utf-8')).hexdigest()[:12]
 
@@ -225,7 +241,7 @@ def ensamblar(datos):
     shell = leer(os.path.join(SRC, '20_shell.html'))
     dcss = os.path.join(SRC, 'css')
     css_archivos = sorted(f for f in os.listdir(dcss) if f.endswith('.css')) if os.path.isdir(dcss) else []
-    partes = ['@layer sistema, modulos, dieta;']
+    partes = ['@layer sistema, modulos%s;' % (', dieta' if any(capa_de(f) == 'dieta' for f in css_archivos) else '')]
     for f in css_archivos:
         cuerpo = leer(os.path.join(dcss, f))
         sin_coment = re.sub(r'/\*.*?\*/', '', cuerpo, flags=re.S)
@@ -260,6 +276,7 @@ def ensamblar(datos):
         if re.search(r'</script', salida, re.I):
             sys.exit('ERROR: la salida minificada de %s contiene «</script»' % f)
         scripts.append('<script data-mod="%s" data-sha="%s">\n%s\n</script>' % (f, sha12(cuerpo), salida))
+    head, shell = min_html(head), min_html(shell)
     shell = shell.replace('<!--__DATOS__-->', bloque_datos(datos))
     shell = shell.replace('<!--__JS__-->', '\n'.join(scripts))
     return head + shell, css_archivos, js_archivos
