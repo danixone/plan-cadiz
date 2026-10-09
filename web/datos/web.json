@@ -782,7 +782,7 @@
       ]
     },
     "2026-10-17": {
-      "firma": "03e4ef359ca9",
+      "firma": "6703d76a48d2",
       "numeros": [
         {
           "v": "≤ 3:33",
@@ -1556,7 +1556,7 @@
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "a810a5378049",
+      "firma": "58d4911f9781",
       "firmaDe": [
         "plan.calendario[2026-10-17]",
         "plan.ritmos[C]"
@@ -1684,7 +1684,7 @@
     },
     {
       "fecha": "2026-10-17",
-      "firma": "03e4ef359ca9",
+      "firma": "6703d76a48d2",
       "firmaDe": [
         "plan.calendario[2026-10-17]"
       ],

@@ -1385,19 +1385,23 @@
             },
             "reloj": {
               "nombre": "Simulacro 1.000",
-              "donde": "Garmin Connect en el móvil: Más → Entreno y planificación → Sesiones de entrenamiento → Crear una sesión de entrenamiento → Carrera (ruta sin verificar en tu versión de la app).",
+              "donde": "Garmin Connect en el móvil: Más → Entreno y planificación → Sesiones de entrenamiento → Crear una sesión de entrenamiento → Carrera (ruta sin verificar en tu versión de la app). Lo acordado: 5 series de 200 m y en pantalla tiempo, tiempo de vuelta y distancia total.",
               "pasos": [
-                "Paso 1 · Calentamiento. Duración: «Pulsar botón de vuelta». Cubre todo lo de antes del 1.000: trote, prep-hombro, dominadas y los 20 min. Lo cierras con el botón de vuelta justo en la línea de salida.",
-                "Paso 2 · Intervalo «200 (1)». Duración: distancia 0,20 km. Objetivo: ritmo personalizado 3:30-3:35 /km (0:42-0:43 por 200): el primer 200 no puede bajar de 0:42.",
-                "Pasos 3, 4 y 5 · Intervalos «200 (2)», «200 (3)» y «200 (4)». Duración: distancia 0,20 km. Objetivo: ritmo personalizado 3:25-3:35 /km, el aviso del protocolo.",
-                "Paso 6 · Intervalo «200 (5)». Duración: distancia 0,20 km. Sin objetivo: desde el 800, todo lo que quede.",
-                "Paso 7 · Enfriamiento. Duración: «Pulsar botón de vuelta».",
-                "Cinco intervalos seguidos, sin bloque «Repetir» y sin pasos de recuperación entre ellos. Guardar y enviar al reloj."
+                "La sesión lleva SOLO el 1.000: cinco pasos «Intervalo» seguidos, sin calentamiento, sin bloque «Repetir» y sin recuperaciones entre ellos.",
+                "Intervalo 1 · distancia 0,20 km · ritmo personalizado 3:30-3:35 /km (0:42-0:43 por 200): el primer 200 no puede bajar de 0:42.",
+                "Intervalos 2, 3 y 4 · distancia 0,20 km · ritmo personalizado 3:25-3:35 /km, el aviso del protocolo.",
+                "Intervalo 5 · distancia 0,20 km · sin objetivo: desde el 800, todo lo que quede.",
+                "Pantalla de datos del perfil que uses, con tres campos: Tiempo (el temporizador), Tiempo de vuelta (el 200 que estás corriendo) y Distancia. «Tiempo transcurrido» también vale si no pausas nada: solo se diferencia del Tiempo en que cuenta las pausas (el 5-10 se separaron 84 s por la pausa de las dominadas).",
+                "Guardar y enviar al reloj."
               ],
               "enElReloj": [
-                "Perfil «Pista» (modo pista, calle 1) en Arucas. Que el reloj deje usar una sesión de entrenamiento con el perfil Pista está sin verificar: pruébalo antes (el lunes 12, en el calentamiento). Si no deja, perfil «Carrera» y manda la línea de meta.",
-                "Durante el 1.000 NO se toca el botón de vuelta: en una sesión de entrenamiento salta al paso siguiente y rompe los 200. Cada paso pita solo y queda como una vuelta en el archivo.",
+                "Calentamiento, prep-hombro, dominadas y los 20 min van en OTRA actividad, que guardas antes de ir a la salida. Si van en la misma, el tiempo y la distancia total arrancan en el calentamiento y no te dicen nada del 1.000.",
+                "En la línea de salida, con el GPS ya fijado y la sesión cargada, START al salir: Tiempo y Distancia empiezan en cero. Al 400 tienes que leer 1:24; al 600, 2:06.",
+                "Comprobado en tu archivo del 5-10: los pasos se encadenan sin perder tiempo ni distancia (la suma de las vueltas da exactamente el total de la actividad, 4.243,09 s y 5.232,5 m). Lo que no es exacto es el GPS: cada «200» son 200 m del reloj, no de la pista, así que un parcial puede bailar algún metro.",
+                "En la meta, STOP en cuanto cruzas la línea: ese Tiempo es tu 1.000. Si el reloj aún no había cerrado el quinto 200, da igual; si lo cerró antes de la línea, también: el Tiempo sigue corriendo hasta el STOP.",
+                "Durante el 1.000 NO se toca el botón de vuelta: en una sesión de entrenamiento salta al paso siguiente y rompe los 200.",
                 "El 5-10 un aviso de ritmo te tapó la pantalla y aceleraste sin verlo: si salta, no mires el reloj, mira la pista y sigue a 0:42-0:43.",
+                "Perfil «Pista» (modo pista, calle 1) en Arucas: que el reloj deje usar una sesión de entrenamiento con ese perfil está sin verificar; pruébalo el lunes 12. Si no deja, perfil «Carrera».",
                 "Comprobación sin reloj: en una pista de 400 la salida del 1.000 está a 200 m de la línea de meta. Pasas por la meta en el 200, el 600 y el 1.000. Si el reloj pita lejos de la línea, manda la línea."
               ]
             },
@@ -1420,7 +1424,7 @@
               },
               {
                 "cuando": "9:30",
-                "que": "Calentamiento estándar: trote por pulso con techo 145, movilidad y prep-hombro OBLIGATORIO (2 suspensiones de 20 s + 2 × 8 retracciones)."
+                "que": "Actividad de calentamiento (aparte del 1.000): trote por pulso con techo 145, movilidad y prep-hombro OBLIGATORIO (2 suspensiones de 20 s + 2 × 8 retracciones)."
               },
               {
                 "cuando": "Dominadas",
@@ -1428,7 +1432,7 @@
               },
               {
                 "cuando": "20 min",
-                "que": "Tentempié ligero a 45-60 min del 1.000. Trote suave con techo 145 y los 5 progresivos de 80 m, los dos últimos a ritmo K (bloque B: 17,1 s). A la línea de salida con el reloj en el paso 1."
+                "que": "Tentempié ligero a 45-60 min del 1.000. Trote suave con techo 145 y los 5 progresivos de 80 m, los dos últimos a ritmo K (bloque B: 17,1 s). Guarda esta actividad y ve a la línea con la sesión «Simulacro 1.000» cargada y el GPS fijado."
               },
               {
                 "cuando": "1.000 m",
