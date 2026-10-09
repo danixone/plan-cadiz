@@ -658,7 +658,7 @@
       ]
     },
     "2026-10-12": {
-      "firma": "4a201561242c",
+      "firma": "4f9b45501901",
       "titulo": "5 × 400 m, rec. 2 min",
       "principal": {
         "tipo": "series",
@@ -678,7 +678,7 @@
       ]
     },
     "2026-10-13": {
-      "firma": "4a657f365184",
+      "firma": "7755fcdc5c38",
       "titulo": "Arsenal: sesión completa",
       "numeros": {
         "rojo": [
@@ -692,8 +692,8 @@
         "verde": [
           {
             "v": "5 × 3",
-            "l": "lastradas · regla del 6",
-            "desde": "5 × 3 con la misma regla que el 6"
+            "l": "lastradas · 12,5 kg",
+            "desde": "5 × 3 con 12,5 kg"
           }
         ]
       },
@@ -728,52 +728,52 @@
         "plan.reglas[dia-torcido].texto"
       ],
       "condicion": {
-        "pregunta": "¿Cuánto dejó en reserva la quinta serie del 6?",
+        "pregunta": "¿Cómo está el hombro derecho de 0 a 10 antes de empezar?",
         "opciones": [
           {
-            "id": "sube",
-            "txt": "2,5 kg más solo si la quinta serie del 6 dejó 2 o más en reserva con la pausa del BOE",
+            "id": "igual",
+            "txt": "5 × 3 con 12,5 kg, el peso del 29-9",
             "numeros": [
               {
-                "v": "+2,5 kg",
-                "l": "sobre el peso del 6",
-                "desde": "2,5 kg más"
+                "v": "12,5 kg",
+                "l": "lastre",
+                "desde": "12,5 kg"
               }
             ],
             "fuerza": {
               "A": {
                 "series": 5,
                 "reps": 3,
-                "peso": "el peso del 6 + 2,5 kg"
+                "peso": "12,5 kg"
               },
-              "desde": "2,5 kg más"
+              "desde": "5 × 3 con 12,5 kg"
             }
           },
           {
-            "id": "igual",
-            "txt": "si dejó 1 o menos, el peso del 6",
+            "id": "sinlastre",
+            "txt": "con el hombro en 3 o más, la A va sin lastre (5 × 3 con el estándar BOE) y se anota",
             "numeros": [
               {
-                "v": "peso del 6",
-                "l": "lastre",
-                "desde": "el peso del 6"
+                "v": "sin lastre",
+                "l": "hombro en 3 o más",
+                "desde": "la A va sin lastre"
               }
             ],
             "fuerza": {
               "A": {
                 "series": 5,
                 "reps": 3,
-                "peso": "el peso del 6"
+                "peso": "sin lastre"
               },
-              "desde": "el peso del 6"
+              "desde": "la A va sin lastre"
             }
           }
         ],
-        "comun": "Nunca un salto de 5 kg ni al fallo"
+        "comun": "Nunca al fallo"
       }
     },
     "2026-10-14": {
-      "firma": "b08f72cb9167",
+      "firma": "46b33d75c7b5",
       "titulo": "3 × 600 m, rec. 3 min",
       "calidad": true,
       "fuentes": [
@@ -782,7 +782,7 @@
       ]
     },
     "2026-10-17": {
-      "firma": "7f87209693f5",
+      "firma": "0648109dec32",
       "numeros": [
         {
           "v": "≤ 3:33",
@@ -1556,7 +1556,7 @@
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "25477c1a041a",
+      "firma": "6c9f49be9c6e",
       "firmaDe": [
         "plan.calendario[2026-10-17]",
         "plan.ritmos[C]"
@@ -1564,7 +1564,7 @@
       "pregunta": "¿El 17-10 respaldó el bloque C a 3:30?",
       "guardar": "pc-bloqueC",
       "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30)",
-      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor.",
+      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor.",
       "fuente": "plan.calendario[2026-10-17].decide · plan.ritmos[C].condicion"
     }
   },
@@ -1684,7 +1684,7 @@
     },
     {
       "fecha": "2026-10-17",
-      "firma": "7f87209693f5",
+      "firma": "0648109dec32",
       "firmaDe": [
         "plan.calendario[2026-10-17]"
       ],
@@ -1700,7 +1700,7 @@
               "txt": "≤ 3:33",
               "lte": "3:33",
               "corto": "C a 1:24 / 2:06",
-              "efecto": "C a 1:24 / 2:06 (ritmo 3:30)",
+              "efecto": "C a 1:24 / 2:06 (ritmo 3:30) y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo",
               "condicion": "con los dos tramos centrales en 43",
               "tono": "ok"
             },
@@ -1743,7 +1743,7 @@
           "aparte": "diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica"
         }
       ],
-      "nota": "Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18",
+      "nota": "Mañana del 17 (decidido el 9-10, tras la VFC desequilibrada y el resfriado): VFC de 7 días «Desequilibrado» o «Bajo», o síntomas por encima del cuello, pasa al domingo 18; si el 18 sigue igual, no hay 1.000 a tope en octubre: el C se queda en 1:25 / 2:07 y la serie técnica del 24 sale de las 11 del 19-9. Síntomas por debajo del cuello: no se hace. Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18",
       "fuente": "plan.calendario[2026-10-17].decide · plan.calendario[2026-10-17].semaforo"
     }
   ],

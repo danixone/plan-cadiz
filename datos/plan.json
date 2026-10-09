@@ -394,7 +394,7 @@
       "cuando": "26 oct - 1 nov y día de la prueba",
       "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5 y el 12-10, 1:22 el 26-10), la siguiente sale más lenta, no se abandona. En los 200 del 19-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
-      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor."
+      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor."
     },
     {
       "clave": "VEL",
@@ -1301,7 +1301,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 5 × 400 m, rec. 2 min",
-          "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · comparar con el 5",
+          "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · comparar con el 5 · antes de la barra, codo y hombro derecho de 0 a 10 (el fusil del desfile): con el hombro en 3 o más, sin dominadas ese día y se anota",
           "hora": "18:00-19:00",
           "nota": "No trabaja ese día (dato del 2-10). Misma hora, 18:00, para compararla con la del lunes 5."
         },
@@ -1310,7 +1310,7 @@
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "5 × 3 con la misma regla que el 6: 2,5 kg más solo si la quinta serie del 6 dejó 2 o más en reserva con la pausa del BOE; si dejó 1 o menos, el peso del 6. Nunca un salto de 5 kg ni al fallo",
+          "objetivo": "5 × 3 con 12,5 kg, el peso del 29-9: el 6 no se hizo (resfriado y desfile) y la quinta del 29 dejó 0 en reserva, así que no sube. Nunca al fallo · antes de empezar, codo y hombro derecho de 0 a 10: con el hombro en 3 o más, la A va sin lastre (5 × 3 con el estándar BOE) y se anota",
           "hora": "18:00-19:30"
         },
         {
@@ -1318,7 +1318,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · sin recortar a 2 × 600 salvo semáforo ámbar · comparar con el 7",
+          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · sin recortar a 2 × 600 salvo semáforo ámbar · primer 3 × 600 del bloque B: el 7 no se hizo · antes de la barra, codo y hombro derecho de 0 a 10 (el fusil del desfile): con el hombro en 3 o más, sin dominadas ese día y se anota",
           "hora": "18:00, acabar antes de las 20:30: mañana el circuito del simulacro"
         },
         {
@@ -1326,7 +1326,7 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 CIRCUITO DEL SIMULACRO: fresco, UN intento cronometrado como el BOE (segundo solo si nulo)",
-          "objetivo": "el tiempo de ese intento es el que va al simulacro. Si la noche del 14 baja de 6h30, va con asterisco y para los escenarios vale el primer intento del jueves válido más cercano (el 8 o el 22). El circuito es inamovible con el preparador: por eso no puede ir al sábado",
+          "objetivo": "el tiempo de ese intento es el que va al simulacro. Si la noche del 14 baja de 6h30, va con asterisco y para los escenarios vale el primer intento del jueves válido más cercano (el 22: el 8 no se hizo). El circuito es inamovible con el preparador: por eso no puede ir al sábado",
           "clave": true
         },
         {
@@ -1344,9 +1344,9 @@
           "clave": true,
           "hora": "09:30-10:00, la misma que el 31 de octubre",
           "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con botón de vuelta al pasar por la salida (≈400 y ≈800). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
-          "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30). 3:34-3:36 → C a 1:25 / 2:07. Peor de 3:36 → se revisan todos los ritmos. Objetivo de Cádiz: bajar de 3:30. Dominadas: diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica; 11 o menos válidas → asegurar 12 (técnica); 12 o más → no se añade nada. Es el primer número de dominadas validado del historial.",
+          "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30) y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo; si no, C a 1:25 / 2:07. 3:34-3:36 → C a 1:25 / 2:07. Peor de 3:36 → se revisan todos los ritmos. Objetivo de Cádiz: bajar de 3:30. Dominadas: diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica; 11 o menos válidas → asegurar 12 (técnica); 12 o más → no se añade nada. Es el primer número de dominadas validado del historial.",
           "lugar": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
-          "semaforo": "Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18"
+          "semaforo": "Mañana del 17 (decidido el 9-10, tras la VFC desequilibrada y el resfriado): VFC de 7 días «Desequilibrado» o «Bajo», o síntomas por encima del cuello, pasa al domingo 18; si el 18 sigue igual, no hay 1.000 a tope en octubre: el C se queda en 1:25 / 2:07 y la serie técnica del 24 sale de las 11 del 19-9. Síntomas por debajo del cuello: no se hace. Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18"
         },
         {
           "fecha": "2026-10-18",

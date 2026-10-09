@@ -5,6 +5,14 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-07",
+      "hecho": false,
+      "valida": false,
+      "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
+      "motivo": "No se hizo: resfriado con mocos en la garganta desde el 5-10, trabajo y ensayos del desfile del 12 de octubre (el desfile fue el 8-10 en Las Palmas de Gran Canaria y acabó a las 21:00), mal sueño, mucho estrés y hombros cargados por ensayos y actos con el fusil al hombro derecho (comunicado por él el 9-10).",
+      "valoracion": "El bloque B se queda sin su primer 3 × 600: el del 14 será el primero y no tendrá con qué compararse. No se recupera: una calidad perdida se pierde, no se mueve."
+    },
+    {
       "fecha": "2026-10-05",
       "sesion": "5 × 400 m, rec. 2 min · bucle del parque San Cristóbal (sin modo pista)",
       "objetivo": "1:26 con 2 min · primer 200 en 0:43 · aviso 3:30-3:40 · freno si baja de 1:23 · semáforo de la mañana · 3 × 5 dominadas grabadas de lado",
@@ -987,6 +995,13 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-06",
+      "hecho": false,
+      "sesion": "Arsenal: sesión completa",
+      "motivo": "No se hizo: resfriado con mocos en la garganta desde el 5-10, trabajo y ensayos del desfile del 12 de octubre (el desfile fue el 8-10 en Las Palmas de Gran Canaria y acabó a las 21:00), mal sueño, mucho estrés y hombros cargados por ensayos y actos con el fusil al hombro derecho (comunicado por él el 9-10).",
+      "valoracion": "Sin la sesión del 6 no hay quinta serie que decida el peso del 13: el 13 repite los 12,5 kg del 29-9, cuya quinta serie dejó 0 en reserva. Hombro derecho cargado por el fusil: 3/10 el 9-10 (comunicado por él). Con 3 o más no hay dominadas el 12 ni el 14 y la A del 13 va sin lastre; se vuelve a medir antes de cada barra. El acto del desfile ya pasó (el 8-10): el 12 no tiene acto."
+    },
+    {
       "fecha": "2026-10-05",
       "series": [
         5,
@@ -1243,6 +1258,13 @@
   ],
   "circuito": [
     {
+      "fecha": "2026-10-08",
+      "hecho": false,
+      "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
+      "motivo": "No se hizo: resfriado con mocos en la garganta desde el 5-10, trabajo y ensayos del desfile del 12 de octubre (el desfile fue el 8-10 en Las Palmas de Gran Canaria y acabó a las 21:00), mal sueño, mucho estrés y hombros cargados por ensayos y actos con el fusil al hombro derecho (comunicado por él el 9-10). El desfile acabó a las 21:00, media hora antes del circuito.",
+      "valoracion": "El circuito sigue con una sola medición seria (1-10: 9,4 · 9,2 · 9,3). El 15 es el del simulacro; el jueves válido de reserva queda solo el 22."
+    },
+    {
       "fecha": "2026-10-01",
       "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
       "intentos": [
@@ -1270,6 +1292,54 @@
   ],
   "sueno": [
     {
+      "fecha": "2026-10-09",
+      "duracion": "5h00",
+      "puntuacion": 64,
+      "calidad": "Aceptable",
+      "fcReposo": 49,
+      "bodyBattery": "+61",
+      "spo2Media": "98%",
+      "respiracionMedia": 14,
+      "vfc7dias": "53 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 8 al 9, después del desfile (acabó a las 21:00). Se acostó a la 1:15. 5h00 exactas: ÁMBAR por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (53, por debajo de su referencia 55-70; ver garmin del 9-10). Hora de dormir 1:15, de despertar 6:15 (CSV semanal, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-08",
+      "duracion": "4h43",
+      "puntuacion": 56,
+      "calidad": "Deficiente",
+      "fcReposo": 53,
+      "bodyBattery": "+48",
+      "spo2Media": "96%",
+      "respiracionMedia": 15,
+      "vfc7dias": "54 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 7 al 8. Se acostó a las 0:22 y se despertó a las 5:06. ROJO (menos de 5h00). Segunda noche seguida por debajo de 5 h: 48 h en rojo. FC en reposo 53, la segunda más alta de la serie de 7 días. Hora de dormir 0:22, de despertar 5:06 (CSV semanal, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-07",
+      "duracion": "4h32",
+      "puntuacion": 54,
+      "calidad": "Deficiente",
+      "fcReposo": 57,
+      "bodyBattery": "+30",
+      "spo2Media": "96%",
+      "respiracionMedia": 15,
+      "vfc7dias": "55 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 6 al 7. Se acostó a la 1:02. ROJO (menos de 5h00). FC en reposo 57, la más alta de las siete noches (46-53 en las demás), y Body Battery +30, el más bajo: coincide con el resfriado y los ensayos (comunicado por él el 9-10). Hora de dormir 1:02, de despertar 5:35 (CSV semanal, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-06",
+      "duracion": "4h18",
+      "puntuacion": 51,
+      "calidad": "Deficiente",
+      "fcReposo": 51,
+      "bodyBattery": "+35",
+      "spo2Media": "95%",
+      "respiracionMedia": 14,
+      "vfc7dias": "56 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 5 al 6, después de los 5 × 400 del 5-10 (acabó a las 21:38). Se acostó a la 1:43. ROJO (menos de 5h00), la noche más corta de la semana. Hora de dormir 1:43, de despertar 6:09 (CSV semanal, sin fases del sueño)."
+    },
+    {
       "fecha": "2026-10-05",
       "duracion": "6h13",
       "puntuacion": 76,
@@ -1288,6 +1358,18 @@
       "respiracionMedia": 14,
       "vfc7dias": "Equilibrado (58 ms; referencia 55-70; media 7 días 55)",
       "nota": "Noche del 4 al 5. Sueño ligero 3h06, respiración más baja 8 rpm. Semáforo ÁMBAR (6h13): tocaba 5 × 400 → 3 × 400 + 15-20 min con techo 145. Media de VFC de 7 días en 55, el suelo de su referencia. SpO2 media 93 %, la más baja de la serie (94 % el 3-10): dato de muñeca, se anota sin interpretar. Noche del 3 al 4 sin CSV."
+    },
+    {
+      "fecha": "2026-10-04",
+      "duracion": "5h24",
+      "puntuacion": 69,
+      "calidad": "Aceptable",
+      "fcReposo": 49,
+      "bodyBattery": "+56",
+      "spo2Media": "97%",
+      "respiracionMedia": 14,
+      "vfc7dias": "56 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 3 al 4, que faltaba. Se acostó a las 0:51. ÁMBAR. Hora de dormir 0:51, de despertar 6:37 (CSV semanal, sin fases del sueño)."
     },
     {
       "fecha": "2026-10-03",
@@ -1453,12 +1535,6 @@
       "rem": "48m"
     },
     {
-      "fecha": "2026-08-25/31",
-      "duracion": "media 4h14",
-      "puntuacion": "6 de 7 noches deficientes",
-      "fcReposo": "46-52"
-    },
-    {
       "fecha": "2026-08-31",
       "duracion": "4h09",
       "puntuacion": 52,
@@ -1501,6 +1577,12 @@
       "fcReposo": 48
     },
     {
+      "fecha": "2026-08-25/31",
+      "duracion": "media 4h14",
+      "puntuacion": "6 de 7 noches deficientes",
+      "fcReposo": "46-52"
+    },
+    {
       "fecha": "2026-08-25",
       "duracion": "4h17",
       "puntuacion": 52,
@@ -1510,6 +1592,25 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-09",
+      "hora": "6:19 (predisposición, «Después de levantarte»); capturas guardadas a las 10:17",
+      "focoCarga": "Anaeróbica",
+      "estadoEntreno": "Mantenimiento",
+      "mensajeGarmin": "Tu Carga de entreno actual es suficiente para mantener tu condición física. Para observar mejoras, prueba a incorporar una mayor variedad a tus sesiones de entrenamiento o a cambiar su objetivo.",
+      "cargaAguda": 207,
+      "cargaAgudaEstado": "Baja",
+      "vo2max": 53,
+      "vfc": "53 ms, Desequilibrado",
+      "predisposicion": {
+        "valor": 26,
+        "nivel": "Bajo",
+        "hora": "6:19, después de levantarse",
+        "factores": "puntuación de sueño 64 aceptable · tiempo de recuperación 0 h, recuperado · VFC 53 ms desequilibrada · carga aguda 207 baja · puntuaciones de sueño recientes deficientes · estrés reciente bajo",
+        "mensaje": "Escucha a tu cuerpo. Tu VFC desequilibrada puede indicar un exceso de fatiga."
+      },
+      "valoracion": "PRIMERA VFC DESEQUILIBRADA desde que hay registro (comunicado por capturas del 9-10). La VFC de 7 días baja de forma continua en cada lectura: 62 (19-9), 60 (28-9), 57 (30-9), 56 (3-10), 55 (5-10), 53 (9-10). El 5-10 ya estaba en 55, el suelo de su referencia (55-70); hoy queda por debajo. Coincide con lo medido y comunicado: cinco noches por debajo de 6 h en la semana del 28-9 y el resfriado desde el 5-10 (mocos y congestión), con los 5 × 400 hechos ese día. Que la causa sea el resfriado, el sueño o las dos cosas es una suposición: el dato no las separa. Esta captura no trae los tres valores del foco de carga (anaeróbica, aeróbica alta y baja) ni la ventana, así que no se puede analizar la ventana. Carga aguda 513 «Alto» el 5-10 → 207 «Baja» el 9-10: en el historial no hay ninguna sesión del 6, el 7 ni el 8 (Arsenal, 3 × 600 y circuito); la caída no se atribuye hasta saber qué se hizo. Sin CSV de sueño desde el de la noche del 4 al 5: la puntuación 64 de esta noche no trae la duración. VO2máx 53, sin cambio. Semáforo: VFC de 7 días «Desequilibrado» = ROJO. Hoy toca descanso de todas formas; para el rodaje del sábado manda la lectura de mañana por la mañana."
+    },
     {
       "fecha": "2026-10-05",
       "ventanaFocoCarga": "7 sep – 5 oct",
