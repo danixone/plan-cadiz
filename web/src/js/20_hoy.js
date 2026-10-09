@@ -986,8 +986,16 @@
     h.push('</div>');
     return h.join('');
   }
+  /* enlace al preparatorio del simulacro los 5 días anteriores (plan.calendario[].preparatorio, 9-10) */
+  function enlacePrep(dia) {
+    for (var i = 0; i <= 5; i++) {
+      var d = PC.cal.dia(PC.sumarDias(dia.fecha, i));
+      if (d && d.preparatorio) return '<p class="hoy-linea"><a class="btn sec" href="#tecnica/simulacro">' + PC.icon('reloj', 'sm') + esc(d.preparatorio.titulo || 'Preparatorio') + ' →</a></p>';
+    }
+    return '';
+  }
   function htmlPlegados(dia, R) {
-    var h = [], rl = SES.reloj(dia);
+    var h = [enlacePrep(dia)], rl = SES.reloj(dia);
     if (rl.length && R.tpl !== 'circuito') h.push('<details class="acc why"><summary>' + PC.icon('reloj', 'sm') + 'Configura el reloj' + PC.icon('chev', 'sm chev') + '</summary><div class="in"><ul>' +
       rl.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul></div></details>');
     var q = [];
@@ -1065,6 +1073,7 @@
     if (dia.objetivo) h.push('<p class="hoy-linea">' + esc(dia.objetivo) + '</p>');
     var r = regla('descanso');
     if (dia.tipo === 'descanso' && r) h.push('<div class="hoy-plg"><details class="acc why"><summary>' + PC.icon('info', 'sm') + 'La regla del descanso' + PC.icon('chev', 'sm chev') + '</summary><div class="in"><p>' + esc(r.texto) + '</p></div></details></div>');
+    h.push(enlacePrep(dia));
     var m = PC.cal.dia(PC.sumarDias(dia.fecha, 1));
     if (m && m.tipo) h.push('<p class="hoy-linea"><b>Mañana:</b> ' + esc(tipoTxt(m.tipo)) + (m.sesion && m.tipo !== 'descanso' ? ' · ' + esc(sinHora(m.sesion)) : '') + '</p>');
     return h.join('');

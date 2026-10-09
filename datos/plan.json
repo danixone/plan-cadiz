@@ -1343,10 +1343,103 @@
           "objetivo": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48) y los tramos 400-600 y 600-800 en 43 · dominadas: anotar por separado las que cuentes tú y las VÁLIDAS al revisar el vídeo con las nueve reglas del BOE; objetivo ≥ 12 válidas",
           "clave": true,
           "hora": "09:30-10:00, la misma que el 31 de octubre",
-          "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con botón de vuelta al pasar por la salida (≈400 y ≈800). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
+          "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con la sesión «Simulacro 1.000» de Garmin Connect: cinco pasos de 200 m que pitan solos, y durante el 1.000 no se toca el botón de vuelta (decidido el 9-10; antes, botón de vuelta al pasar por la salida). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
           "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30) y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo; si no, C a 1:25 / 2:07. 3:34-3:36 → C a 1:25 / 2:07. Peor de 3:36 → se revisan todos los ritmos. Objetivo de Cádiz: bajar de 3:30. Dominadas: diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica; 11 o menos válidas → asegurar 12 (técnica); 12 o más → no se añade nada. Es el primer número de dominadas validado del historial.",
           "lugar": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
-          "semaforo": "Mañana del 17 (decidido el 9-10, tras la VFC desequilibrada y el resfriado): VFC de 7 días «Desequilibrado» o «Bajo», o síntomas por encima del cuello, pasa al domingo 18; si el 18 sigue igual, no hay 1.000 a tope en octubre: el C se queda en 1:25 / 2:07 y la serie técnica del 24 sale de las 11 del 19-9. Síntomas por debajo del cuello: no se hace. Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18"
+          "semaforo": "Mañana del 17 (decidido el 9-10, tras la VFC desequilibrada y el resfriado): VFC de 7 días «Desequilibrado» o «Bajo», o síntomas por encima del cuello, pasa al domingo 18; si el 18 sigue igual, no hay 1.000 a tope en octubre: el C se queda en 1:25 / 2:07 y la serie técnica del 24 sale de las 11 del 19-9. Síntomas por debajo del cuello: no se hace. Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18",
+          "preparatorio": {
+            "titulo": "Preparatorio del simulacro del 17-10",
+            "escrito": "9-10-2026, a petición suya",
+            "tiempos": {
+              "nota": "Reparto plano del examen, a 0:42 por 200. El simulacro se aprueba con 3:33 o menos y los tramos 400-600 y 600-800 en 43.",
+              "pasos": [
+                {
+                  "m": "200",
+                  "t": "0:42",
+                  "regla": "primer 200 entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40 y el 5-10 en 0:40,3)"
+                },
+                {
+                  "m": "400",
+                  "t": "1:24",
+                  "regla": "si pasas más de 2 s por detrás (1:26 o peor), no persigas: 0:43 por 200 hasta la meta, y el dato sigue valiendo"
+                },
+                {
+                  "m": "600",
+                  "t": "2:06",
+                  "regla": "si pasas por delante de 2:05, has salido demasiado rápido"
+                },
+                {
+                  "m": "800",
+                  "t": "2:48",
+                  "regla": "el tramo 600-800 en 43, no en 46"
+                },
+                {
+                  "m": "1.000",
+                  "t": "3:29-3:30",
+                  "regla": "desde el 800, todo lo que quede"
+                }
+              ],
+              "corte": "≤ 3:33 en distancia verificada, con los tramos 400-600 y 600-800 en 43",
+              "suelo": "3:36",
+              "elimina": "3:49"
+            },
+            "reloj": {
+              "nombre": "Simulacro 1.000",
+              "donde": "Garmin Connect en el móvil: Más → Entreno y planificación → Sesiones de entrenamiento → Crear una sesión de entrenamiento → Carrera (ruta sin verificar en tu versión de la app).",
+              "pasos": [
+                "Paso 1 · Calentamiento. Duración: «Pulsar botón de vuelta». Cubre todo lo de antes del 1.000: trote, prep-hombro, dominadas y los 20 min. Lo cierras con el botón de vuelta justo en la línea de salida.",
+                "Paso 2 · Intervalo «200 (1)». Duración: distancia 0,20 km. Objetivo: ritmo personalizado 3:30-3:35 /km (0:42-0:43 por 200): el primer 200 no puede bajar de 0:42.",
+                "Pasos 3, 4 y 5 · Intervalos «200 (2)», «200 (3)» y «200 (4)». Duración: distancia 0,20 km. Objetivo: ritmo personalizado 3:25-3:35 /km, el aviso del protocolo.",
+                "Paso 6 · Intervalo «200 (5)». Duración: distancia 0,20 km. Sin objetivo: desde el 800, todo lo que quede.",
+                "Paso 7 · Enfriamiento. Duración: «Pulsar botón de vuelta».",
+                "Cinco intervalos seguidos, sin bloque «Repetir» y sin pasos de recuperación entre ellos. Guardar y enviar al reloj."
+              ],
+              "enElReloj": [
+                "Perfil «Pista» (modo pista, calle 1) en Arucas. Que el reloj deje usar una sesión de entrenamiento con el perfil Pista está sin verificar: pruébalo antes (el lunes 12, en el calentamiento). Si no deja, perfil «Carrera» y manda la línea de meta.",
+                "Durante el 1.000 NO se toca el botón de vuelta: en una sesión de entrenamiento salta al paso siguiente y rompe los 200. Cada paso pita solo y queda como una vuelta en el archivo.",
+                "El 5-10 un aviso de ritmo te tapó la pantalla y aceleraste sin verlo: si salta, no mires el reloj, mira la pista y sigue a 0:42-0:43.",
+                "Comprobación sin reloj: en una pista de 400 la salida del 1.000 está a 200 m de la línea de meta. Pasas por la meta en el 200, el 600 y el 1.000. Si el reloj pita lejos de la línea, manda la línea."
+              ]
+            },
+            "dia": [
+              {
+                "cuando": "Jueves 15, 21:30",
+                "que": "Circuito del simulacro: UN intento cronometrado como el BOE (segundo solo si nulo). Ese tiempo va al simulacro."
+              },
+              {
+                "cuando": "Viernes 16",
+                "que": "Descanso, sin barra. Hombro derecho de 0 a 10: si sigue en 3 o más, ese día se decide si el máximo de dominadas se hace o se mueve. Luz apagada a las 22:15."
+              },
+              {
+                "cuando": "Sábado 17, al levantarte",
+                "que": "Semáforo: VFC de 7 días «Desequilibrado» o «Bajo», o mocos, pasa al domingo 18; por debajo del cuello no se hace; noche de 5h00-6h29 se hace y vale como suelo; menos de 5h00, al domingo 18."
+              },
+              {
+                "cuando": "3-3,5 h antes",
+                "que": "Comida, contada desde la primera prueba (las dominadas, a las 9:30): hacia las 6:00-6:30. Lo que se come es de la pauta de la nutricionista."
+              },
+              {
+                "cuando": "9:30",
+                "que": "Calentamiento estándar: trote por pulso con techo 145, movilidad y prep-hombro OBLIGATORIO (2 suspensiones de 20 s + 2 × 8 retracciones)."
+              },
+              {
+                "cuando": "Dominadas",
+                "que": "Al máximo, en vídeo de lado y de frente. Piernas juntas y verticales, pausa abajo, barra al tercio inferior del cuello. Se anotan las que cuentas tú y, después, las válidas en el vídeo con las nueve reglas del BOE."
+              },
+              {
+                "cuando": "20 min",
+                "que": "Tentempié ligero a 45-60 min del 1.000. Trote suave con techo 145 y los 5 progresivos de 80 m, los dos últimos a ritmo K (bloque B: 17,1 s). A la línea de salida con el reloj en el paso 1."
+              },
+              {
+                "cuando": "1.000 m",
+                "que": "Con la sesión «Simulacro 1.000» y los tiempos de arriba."
+              },
+              {
+                "cuando": "Después",
+                "que": "Mandar el .fit original (Exportar original), las dominadas contadas y los vídeos, y el sueño de la noche."
+              }
+            ]
+          }
         },
         {
           "fecha": "2026-10-18",

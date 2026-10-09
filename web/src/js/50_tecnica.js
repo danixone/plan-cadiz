@@ -946,6 +946,34 @@
     c.innerHTML = h;
   }
 
+
+  /* ------------------------------------------------------------------ preparatorio del simulacro (plan.calendario[].preparatorio, 9-10) */
+  function diaPreparatorio() {
+    var hoy = PC.hoyIso(), out = null;
+    arr(P.calendario).forEach(function (w) { arr(w.dias).forEach(function (d) { if (!out && d.preparatorio && d.fecha >= hoy) out = d; }); });
+    return out;
+  }
+  function pintarSimulacro(c) {
+    var d = diaPreparatorio(), sec = DOC.getElementById('te-simulacro'), nav = DOC.querySelector('[data-te-sim]');
+    if (sec) sec.hidden = !d;
+    if (nav) nav.hidden = !d;
+    if (!d) { c.innerHTML = ''; return; }
+    var pr = d.preparatorio, T0 = pr.tiempos || {}, R = pr.reloj || {}, h = '';
+    var filas = arr(T0.pasos).map(function (x) {
+      return '<tr><th scope="row">' + esc(x.m) + '</th><td><b>' + esc(raya(x.t)) + '</b></td><td>' + esc(x.regla) + '</td></tr>';
+    }).join('');
+    h += '<div class="card" id="te-sim-tiempos">' + cardH('carrera', pr.titulo || 'Preparatorio', PC.fmt.dia(d.fecha, 'larga') + (d.hora ? ' · ' + d.hora : '')) + p(T0.nota) +
+      '<div class="tscroll"><table class="t"><caption>Tiempos de paso</caption><thead><tr><th scope="col">Paso</th><th scope="col">Tiempo</th><th scope="col">Regla</th></tr></thead><tbody>' + filas + '</tbody></table></div>' +
+      '<dl class="te-kv">' + (T0.corte ? '<dt>Aprueba el simulacro</dt><dd>' + esc(T0.corte) + '</dd>' : '') + (T0.suelo ? '<dt>Suelo</dt><dd>' + esc(T0.suelo) + '</dd>' : '') +
+      (T0.elimina ? '<dt>Elimina</dt><dd><b class="te-el" data-umbral="229">' + esc(T0.elimina) + '</b></dd>' : '') + '</dl></div>';
+    h += '<div class="card" id="te-sim-reloj">' + cardH('reloj', 'Sesión «' + (R.nombre || '') + '» en Garmin Connect', '') + '<div class="chips">' + sup('ruta sin verificar') + '</div>' + p(R.donde) +
+      '<ol class="te-tec">' + arr(R.pasos).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol>' +
+      '<h4>En el reloj</h4><ul class="te-tec">' + arr(R.enElReloj).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>';
+    h += '<div class="card" id="te-sim-dia">' + cardH('plan', 'Paso a paso', '') + '<dl class="te-kv">' +
+      arr(pr.dia).map(function (x) { return '<dt>' + esc(x.cuando) + '</dt><dd>' + esc(x.que) + '</dd>'; }).join('') + '</dl></div>';
+    c.innerHTML = h;
+  }
+
   /* ------------------------------------------------------------------ TE-7 · material y salud */
   function pintarMaterial(c) {
     var A = P.atleta || {}, CU = P.contextoDelUsuario || {}, PD = P.protocoloDominadas || {}, LE = P.lesiones || {};
@@ -976,7 +1004,7 @@
 
   /* ------------------------------------------------------------------ vista */
   var root = null;
-  var SECC = [['dominada', pintarDominada], ['mil', pintarMil], ['circuito', pintarCircuito], ['gimnasio', pintarGimnasio], ['carrera', pintarCarrera], ['reloj', pintarReloj], ['material', pintarMaterial]];
+  var SECC = [['simulacro', pintarSimulacro], ['dominada', pintarDominada], ['mil', pintarMil], ['circuito', pintarCircuito], ['gimnasio', pintarGimnasio], ['carrera', pintarCarrera], ['reloj', pintarReloj], ['material', pintarMaterial]];
   function pintarTodo() {
     try { pintarCabecera(); } catch (e) { PC._err('técnica · cabecera', e); }
     SECC.forEach(function (s) {
