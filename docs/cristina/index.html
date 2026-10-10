@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan de carrera</title>
+<meta name="description" content="Plan de carrera de un año para el 1.000 m de las pruebas físicas de la Escala Básica">
+<meta name="theme-color" content="#F3F5F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1117" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   PLAN CÁDIZ · SISTEMA DE DISEÑO (M0)
+   Base: rediseno/visual/sistema.css (contrastes validados) con los cambios
+   de la especificación §4. build.py lo envuelve entero en @layer sistema.
+   Tipografía: solo Barlow (400/600/700); cifras tabulares con .num.
+   ===================================================================== */
+
+/* ---------- 1. Tokens: modo claro (por defecto) ---------- */
+:root{
+  color-scheme: light;
+  /* superficies */
+  --bg:#F3F5F8; --surface:#FFFFFF; --surface-2:#EDF1F5; --surface-3:#E3E9EF;
+  --border:#D9E0E8; --border-strong:#B8C3CF;
+  /* texto: 17,9 · 8,8 · 5,5 : 1 */
+  --text:#0F1822; --text-2:#3E4C5B; --text-3:#5B6B7C;
+  /* marca */
+  --primary:#1E4F91; --primary-strong:#163C70; --primary-soft:#E7EEF8; --on-primary:#FFFFFF;
+  /* estado para TEXTO */
+  --ok:#11734F; --ok-soft:#E2F3EA; --warn:#8F5A00; --warn-soft:#FCEFD6; --bad:#B42318; --bad-soft:#FCE8E4;
+  /* lámparas del semáforo: siempre con texto */
+  --st-good:#0CA30C; --st-warn:#FAB219; --st-crit:#D03B3B;
+  /* series: carrera · barra/fuerza · circuito */
+  --s1:#2A78D6; --s2:#EB6834; --s3:#1BAF7A;
+  /* puntos del baremo 1-2 · 3-4 · 5-6 · 7-8 · 9-10 */
+  --p1:#86B6EF; --p2:#5598E7; --p3:#2A78D6; --p4:#1C5CAB; --p5:#104281;
+  --elim:#D03B3B; --grid:#E6EBF0;
+
+  /* ilustración (§4.2): las escenas usan style="fill:var(--ill-…)" */
+  --ill-camiseta:#1F3D63; --ill-camiseta-2:#16304F; --ill-pantalon:#142840; --ill-gorra:#13243B;
+  --ill-visera:#0C1828; --ill-vivo:#7FB2E5; --ill-piel:#EDBB98; --ill-piel-2:#D49A76; --ill-pelo:#2B2420;
+  --ill-zapa:#2A6FB0; --ill-zapa-2:#1F5A92; --ill-suela:#F4F7FA; --ill-dorsal:#FFFFFF;
+  --ill-mani:#9AA7B4; --ill-mani-2:#C3CCD5; --ill-pista:#E8EEF4; --ill-pista-elim:#F7DED8;
+  --ill-ciudad:#E9EFF5; --ill-estela:#C9D4DE; --ill-sombra:rgba(22,32,43,.10);
+  --ill-elim:#BE2C16; --ill-meta:#12775A; --ill-flag-txt:#FFFFFF;
+
+  /* tipografía: 7 tamaños + el del modo pista */
+  --font:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --fs-xs:.75rem;    /* 12 px: ejes, pies, metadatos. NADA por debajo */
+  --fs-sm:.875rem;   /* 14 px */
+  --fs-md:1rem;      /* 16 px */
+  --fs-lg:1.125rem;  /* 18 px */
+  --fs-xl:1.375rem;  /* 22 px */
+  --fs-2xl:1.75rem;  /* 28 px */
+  --fs-3xl:2.75rem;  /* 44 px: una por vista */
+  --fs-4xl:4.5rem;   /* 72 px: solo .focus .big */
+  --lh-tight:1.15; --lh-snug:1.3; --lh-body:1.5;
+  --fw-reg:400; --fw-semi:600; --fw-bold:700;
+
+  /* espacios: base 4 px */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px;
+  --sp-6:24px; --sp-8:32px; --sp-10:40px; --sp-14:56px;
+  /* radios */
+  --r-xs:6px; --r-sm:10px; --r-md:14px; --r-lg:20px; --r-pill:999px;
+  /* sombras (en oscuro pasan a borde) */
+  --sh-1:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
+  --sh-2:0 6px 16px rgba(16,24,40,.10),0 2px 4px rgba(16,24,40,.06);
+  --sh-bar:0 -1px 0 var(--border),0 -8px 24px rgba(16,24,40,.08);
+  /* movimiento */
+  --dur-1:120ms; --dur-2:200ms; --dur-3:400ms;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  /* maqueta */
+  --tap:44px; --tabbar-h:64px; --appbar-h:56px; --maxw:1120px; --gutter:16px;
+  --subnav-h:60px;
+}
+
+/* ---------- 2. Tokens: modo oscuro (sistema y forzado) ---------- */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0B1117; --surface:#131B24; --surface-2:#1B2530; --surface-3:#243140;
+    --border:#2B3745; --border-strong:#3A4859;
+    --text:#E9EEF3; --text-2:#B4C0CC; --text-3:#8E9DAD;
+    --primary:#8DB8F2; --primary-strong:#B5D1F7; --primary-soft:#172A42; --on-primary:#0B1117;
+    --ok:#4FC48C; --ok-soft:#11271D; --warn:#F0B545; --warn-soft:#2B210D; --bad:#FF8A73; --bad-soft:#33170F;
+    --s1:#3987E5; --s2:#D95926; --s3:#199E70;
+    --p1:#184F95; --p2:#256ABF; --p3:#3987E5; --p4:#6DA7EC; --p5:#9EC5F4;
+    --grid:#223040;
+    --ill-camiseta:#3A5E93; --ill-camiseta-2:#2E4D7A; --ill-pantalon:#22344F; --ill-gorra:#2A4166;
+    --ill-visera:#1B2B44; --ill-vivo:#9EC5F4; --ill-piel:#EDBB98; --ill-piel-2:#C98F6C; --ill-pelo:#2B2420;
+    --ill-zapa:#3987E5; --ill-zapa-2:#2A6FB0; --ill-suela:#E9EEF3; --ill-dorsal:#E9EEF3;
+    --ill-mani:#6F7F90; --ill-mani-2:#4A5868; --ill-pista:#1B2530; --ill-pista-elim:#3A1D17;
+    --ill-ciudad:#18222D; --ill-estela:#3A4859; --ill-sombra:rgba(0,0,0,.35);
+    --ill-elim:#BE2C16; --ill-meta:#12775A; --ill-flag-txt:#FFFFFF;
+    --sh-1:0 0 0 1px var(--border); --sh-2:0 0 0 1px var(--border-strong); --sh-bar:0 -1px 0 var(--border);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0B1117; --surface:#131B24; --surface-2:#1B2530; --surface-3:#243140;
+  --border:#2B3745; --border-strong:#3A4859;
+  --text:#E9EEF3; --text-2:#B4C0CC; --text-3:#8E9DAD;
+  --primary:#8DB8F2; --primary-strong:#B5D1F7; --primary-soft:#172A42; --on-primary:#0B1117;
+  --ok:#4FC48C; --ok-soft:#11271D; --warn:#F0B545; --warn-soft:#2B210D; --bad:#FF8A73; --bad-soft:#33170F;
+  --s1:#3987E5; --s2:#D95926; --s3:#199E70;
+  --p1:#184F95; --p2:#256ABF; --p3:#3987E5; --p4:#6DA7EC; --p5:#9EC5F4;
+  --grid:#223040;
+  --ill-camiseta:#3A5E93; --ill-camiseta-2:#2E4D7A; --ill-pantalon:#22344F; --ill-gorra:#2A4166;
+  --ill-visera:#1B2B44; --ill-vivo:#9EC5F4; --ill-piel:#EDBB98; --ill-piel-2:#C98F6C; --ill-pelo:#2B2420;
+  --ill-zapa:#3987E5; --ill-zapa-2:#2A6FB0; --ill-suela:#E9EEF3; --ill-dorsal:#E9EEF3;
+  --ill-mani:#6F7F90; --ill-mani-2:#4A5868; --ill-pista:#1B2530; --ill-pista-elim:#3A1D17;
+  --ill-ciudad:#18222D; --ill-estela:#3A4859; --ill-sombra:rgba(0,0,0,.35);
+  --ill-elim:#BE2C16; --ill-meta:#12775A; --ill-flag-txt:#FFFFFF;
+  --sh-1:0 0 0 1px var(--border); --sh-2:0 0 0 1px var(--border-strong); --sh-bar:0 -1px 0 var(--border);
+}
+html,body{background:var(--bg)}
+
+/* ---------- 3. Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(env(safe-area-inset-top) + var(--subnav-h) + 8px)}
+body{margin:0;color:var(--text);font:var(--fw-reg) var(--fs-md)/var(--lh-body) var(--font);
+  -webkit-font-smoothing:antialiased;overflow-wrap:anywhere;
+  padding-top:env(safe-area-inset-top);
+  padding-bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom) + var(--sp-6))}
+h1,h2,h3,h4{margin:0;line-height:var(--lh-snug);letter-spacing:-.01em}
+h2{font-size:var(--fs-xl);font-weight:var(--fw-bold)}
+h3{font-size:var(--fs-lg);font-weight:var(--fw-semi)}
+p{margin:0 0 var(--sp-3)}
+a{color:var(--primary)}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--text-2)} .faint{color:var(--text-3);font-size:var(--fs-sm)}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+:focus-visible{outline:2px solid var(--primary);outline-offset:2px;border-radius:4px}
+svg{display:block}
+.icon{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.icon.sm{width:18px;height:18px}
+.vh-oculto{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* ---------- 4. Barra superior (solo ≥ 1024 px) ---------- */
+.appbar{display:none}
+@media (min-width:1024px){
+  .appbar{display:block;position:sticky;top:0;z-index:30;height:56px;background:var(--surface);box-shadow:var(--sh-bar);border-bottom:1px solid var(--border)}
+  .appbar .container{display:flex;align-items:center;gap:var(--sp-4);height:100%}
+  .appbar>.container>*{flex:none}
+  .appbar .ab-tabs{flex:1 1 auto;display:flex;justify-content:center;gap:var(--sp-2)}
+}
+a.brand{display:inline-flex;align-items:center;gap:8px;min-height:var(--tap);color:inherit;text-decoration:none;font-weight:var(--fw-bold)}
+.icon.app{width:28px;height:28px}
+.appbar a.chip{text-decoration:none;height:32px}
+.ab-tabs button{border:0;background:none;color:var(--text-2);font:var(--fw-semi) var(--fs-sm)/1 var(--font);
+  display:inline-flex;align-items:center;gap:var(--sp-2);height:56px;min-height:var(--tap);padding:0 var(--sp-3);cursor:pointer;box-shadow:inset 0 -2px 0 transparent}
+.ab-tabs button .pill{display:inline-flex}
+.ab-tabs button .icon{width:20px;height:20px}
+.ab-tabs button[aria-selected="true"]{color:var(--primary);box-shadow:inset 0 -2px 0 var(--primary)}
+.ab-tabs button:hover{color:var(--text)}
+.icon-btn{width:var(--tap);height:var(--tap);display:grid;place-items:center;border:0;border-radius:var(--r-pill);
+  background:transparent;color:var(--text-2);cursor:pointer;transition:background var(--dur-1)}
+.icon-btn:hover{background:var(--surface-2)} .icon-btn:active{transform:scale(.94)}
+
+/* franja bajo la barra de estado de iOS (black-translucent) */
+.sb-fondo{position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top);background:var(--bg);z-index:35}
+@media (min-width:1024px){.sb-fondo{display:none}}
+
+/* ---------- 5. Pestañas inferiores (móvil y tableta) ---------- */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;height:calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  padding-bottom:env(safe-area-inset-bottom);background:color-mix(in srgb,var(--surface) 92%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--sh-bar);
+  display:grid;grid-template-columns:repeat(4,1fr)}
+.tabbar button{border:0;background:none;color:var(--text-3);font:var(--fw-semi) var(--fs-xs)/1 var(--font);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:var(--tap);cursor:pointer;position:relative;padding:0}
+.tabbar button .pill{width:56px;height:30px;border-radius:var(--r-pill);display:grid;place-items:center;transition:background var(--dur-2) var(--ease)}
+.tabbar button[aria-selected="true"]{color:var(--primary)}
+.tabbar button[aria-selected="true"] .pill{background:var(--primary-soft)}
+@media (min-width:1024px){
+  .tabbar{display:none}
+  body{padding-top:0;padding-bottom:var(--sp-10)}
+  html{scroll-padding-top:calc(var(--appbar-h) + var(--subnav-h) + 8px)}
+}
+
+/* ---------- 6. Vista, cabecera y pie ---------- */
+.view{animation:enter var(--dur-2) var(--ease) both}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}}
+.vh{padding:var(--sp-4) 0 var(--sp-2)} .vt{font:var(--fw-bold) var(--fs-xl)/1.2 var(--font);margin:0}
+.vt-sub{margin:2px 0 0;color:var(--text-3);font-size:var(--fs-sm)}
+.vt-sub:empty{display:none}
+.pie{margin-top:var(--sp-8);padding:var(--sp-4) 0 var(--sp-2);border-top:1px solid var(--border);color:var(--text-3);font-size:var(--fs-xs);
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--sp-3)}
+.pie .seg.tema{min-width:240px}
+.pie .falta{color:var(--warn);font-weight:var(--fw-semi)}
+@media (min-width:1024px){.view>.container{padding-top:var(--sp-2)}}
+
+/* ---------- 7. Tarjeta ---------- */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--sh-1);
+  padding:var(--sp-4);margin-bottom:var(--sp-4)}
+.card-h{display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-3)}
+.card-h .ic{width:40px;height:40px;border-radius:var(--r-sm);display:grid;place-items:center;flex:none;background:var(--primary-soft);color:var(--primary)}
+.card-h .t{min-width:0} .card-h .t h2{font-size:var(--fs-lg);font-weight:var(--fw-bold)} .card-h .t small{display:block;color:var(--text-3);font-size:var(--fs-sm)}
+.card-h .end{margin-left:auto}
+.card.hi{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary),var(--sh-1)}
+.card.flat{box-shadow:none;background:var(--surface-2);border-color:transparent}
+.card>.card-f{margin:var(--sp-4) calc(-1*var(--sp-4)) calc(-1*var(--sp-4));padding:var(--sp-3) var(--sp-4);border-top:1px solid var(--border);display:flex;gap:var(--sp-2);flex-wrap:wrap}
+.card>.franja{margin:var(--sp-3) calc(-1*var(--sp-4)) calc(-1*var(--sp-4));padding:0 var(--sp-4);min-height:52px;display:flex;align-items:center;justify-content:space-between;background:var(--primary-soft);color:var(--primary);font-weight:var(--fw-semi);border-radius:0 0 var(--r-md) var(--r-md);text-decoration:none}
+.section-t{display:flex;align-items:baseline;justify-content:space-between;margin:var(--sp-6) 0 var(--sp-3)}
+.section-t h2{font-size:var(--fs-lg)}
+@media (min-width:768px){
+  .card{padding:var(--sp-5)}
+  .card>.card-f{margin:var(--sp-5) calc(-1*var(--sp-5)) calc(-1*var(--sp-5));padding:var(--sp-3) var(--sp-5)}
+  .card>.franja{margin:var(--sp-4) calc(-1*var(--sp-5)) calc(-1*var(--sp-5));padding:0 var(--sp-5)}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)} .grid-2>.card{margin:0}
+}
+@media (min-width:1024px){.card{margin-bottom:var(--sp-6)} .grid-2{gap:var(--sp-6)}}
+
+/* ---------- 8. Chips ---------- */
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;border-radius:var(--r-pill);
+  font-size:var(--fs-sm);font-weight:var(--fw-semi);background:var(--surface-2);color:var(--text-2);white-space:nowrap;border:0}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+.chip.ok{background:var(--ok-soft);color:var(--ok)} .chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)} .chip.pri{background:var(--primary-soft);color:var(--primary)}
+.chip.sup{background:transparent;border:1px dashed var(--border-strong);color:var(--text-2)}
+.chip.sup::before{content:'';width:8px;height:8px;border-radius:50%;border:1.5px dashed currentColor}
+.chips{display:flex;gap:var(--sp-2);flex-wrap:wrap}
+button.chip{border:0;height:var(--tap);cursor:pointer;font-family:var(--font)}
+button.chip[aria-pressed="true"]{background:var(--primary);color:var(--on-primary)}
+button.chip[aria-disabled="true"]{color:var(--text-3);border:1px dashed var(--border-strong);background:transparent}
+a.chip{text-decoration:none}
+
+/* ---------- 9. Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tap);padding:0 var(--sp-4);border-radius:var(--r-sm);border:1px solid transparent;font:var(--fw-semi) var(--fs-md)/1.1 var(--font);cursor:pointer;text-decoration:none;color:inherit;background:none}
+.btn.pri{background:var(--primary);color:var(--on-primary)}
+.btn.sec{background:var(--surface);color:var(--text);border-color:var(--border-strong)}
+.btn.ghost{color:var(--primary);padding:0 var(--sp-2)}
+.btn.block{display:flex;width:100%} .btn.lg{min-height:56px;font-size:var(--fs-lg)}
+.btn[disabled]{opacity:1;color:var(--text-3);border-color:var(--border);cursor:not-allowed}
+
+/* ---------- 10. Segmentado (44 px) ---------- */
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;padding:4px;background:var(--surface-2);border-radius:var(--r-sm)}
+.seg button{min-height:var(--tap);border:0;border-radius:8px;background:transparent;color:var(--text-2);
+  font:var(--fw-semi) var(--fs-sm)/1.1 var(--font);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;padding:0 6px;
+  transition:background var(--dur-1),color var(--dur-1)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:var(--sh-1)}
+.seg .lamp{width:10px;height:10px;border-radius:50%}
+
+/* ---------- 11. Lámparas del semáforo ---------- */
+.lamps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2)}
+.lamps button{min-height:56px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:8px;align-items:center;text-align:left;padding:6px 10px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text);cursor:pointer;font-family:var(--font)}
+.lamps .lamp{grid-row:1/3;width:14px;height:14px;border-radius:50%} .lamp.g{background:var(--st-good)} .lamp.a{background:var(--st-warn)} .lamp.r{background:var(--st-crit)}
+.lamps b{font-size:var(--fs-md)} .lamps small{font-size:var(--fs-xs);color:var(--text-3)}
+.lamps button[aria-checked="true"]{border-width:2px;border-color:var(--text);background:var(--surface-2)}
+/* M8: por debajo de 375 px cada lámpara mide unos 70 px y el rótulo se partía a media palabra («Ver/de»):
+   la bola pasa encima del rótulo y las palabras no se parten */
+@media (max-width:374px){
+  .lamps{gap:6px}
+  .lamps button{grid-template-columns:1fr;grid-template-rows:auto auto auto;row-gap:2px;align-items:start;padding:8px}
+  .lamps .lamp{grid-row:auto;width:12px;height:12px}
+  .lamps b,.lamps small{overflow-wrap:normal;word-break:normal;hyphens:none}
+}
+
+/* deslizador de sueño (180-600 min: rojo hasta 299, ámbar 300-389, verde desde 390) */
+input[type=range].rango{-webkit-appearance:none;appearance:none;width:100%;height:var(--tap);background:transparent;margin:0;cursor:pointer}
+input[type=range].rango::-webkit-slider-runnable-track{height:10px;border-radius:var(--r-pill);background:var(--pista,var(--surface-2));border:1px solid var(--border)}
+input[type=range].rango::-moz-range-track{height:10px;border-radius:var(--r-pill);background:var(--pista,var(--surface-2));border:1px solid var(--border)}
+input[type=range].rango::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;margin-top:-10px;border-radius:50%;background:var(--surface);border:2px solid var(--text);box-shadow:var(--sh-1)}
+input[type=range].rango::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--surface);border:2px solid var(--text)}
+input[type=range].rango.sueno{--pista:linear-gradient(90deg,var(--bad-soft) 0 28.57%,var(--warn-soft) 28.57% 50%,var(--ok-soft) 50% 100%)}
+
+/* ---------- 12. Stepper ---------- */
+.stepper{display:inline-grid;grid-template-columns:var(--tap) minmax(76px,auto) var(--tap);align-items:center;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface)}
+.stepper button{height:var(--tap);border:0;background:none;color:var(--text);font:var(--fw-semi) var(--fs-lg)/1 var(--font);cursor:pointer}
+.stepper output{text-align:center;font:var(--fw-bold) var(--fs-lg)/1 var(--font);font-variant-numeric:tabular-nums}
+.focus .stepper{grid-template-columns:64px minmax(120px,auto) 64px} .focus .stepper button{height:64px}
+
+/* ---------- 13. Cifras ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:var(--sp-3)}
+.stat b{display:block;font:var(--fw-bold) var(--fs-2xl)/var(--lh-tight) var(--font);font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:var(--fs-sm);color:var(--text-3)}
+.stat.hero b{font-size:var(--fs-3xl)}
+
+/* ---------- 14. Aviso ---------- */
+.aviso{display:flex;gap:var(--sp-3);align-items:flex-start;padding:var(--sp-3) var(--sp-4);border-radius:var(--r-sm);border-left:4px solid var(--border-strong);background:var(--surface-2);margin-bottom:var(--sp-4)}
+.aviso>div{min-width:0}
+.aviso.ok{background:var(--ok-soft);border-left-color:var(--st-good)} .aviso.warn{background:var(--warn-soft);border-left-color:var(--st-warn)}
+.aviso.bad{background:var(--bad-soft);border-left-color:var(--st-crit)} .aviso.info{background:var(--primary-soft);border-left-color:var(--primary)}
+.aviso small{display:block;color:var(--text-3);font-size:var(--fs-xs);margin-top:2px}
+.aviso .dos{display:grid;gap:var(--sp-2);margin-top:var(--sp-2)} .aviso .dos q{display:block;font-size:var(--fs-sm);quotes:"«" "»"}
+
+/* ---------- 15. Acordeón (sin overflow:hidden: no recorta tablas) ---------- */
+.acc{border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);margin-bottom:var(--sp-2)}
+.acc>summary{list-style:none;min-height:52px;display:flex;align-items:center;gap:var(--sp-3);padding:0 var(--sp-4);cursor:pointer;font-weight:var(--fw-semi)}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary .chev{margin-left:auto;transition:transform var(--dur-2) var(--ease);color:var(--text-3)}
+.acc[open]>summary .chev{transform:rotate(180deg)}
+.acc>.in{padding:0 var(--sp-4) var(--sp-4)}
+.acc.why{background:transparent}
+.acc.why>summary{color:var(--text-2)}
+
+/* ---------- 16. Umbrales de decisión ---------- */
+.umb{display:flex;gap:2px;border-radius:var(--r-sm);overflow:hidden}
+.umb>*{flex:var(--w,1) 1 0;min-width:0;min-height:56px;padding:8px 10px;border:0;font:inherit;font-size:var(--fs-xs);line-height:1.3;display:flex;flex-direction:column;justify-content:center;text-align:left;cursor:pointer}
+.umb b{font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+.umb .ok{background:var(--ok-soft);color:var(--ok)} .umb .warn{background:var(--warn-soft);color:var(--warn)} .umb .bad{background:var(--bad-soft);color:var(--bad)}
+.umb .elim{background:var(--elim);color:var(--ill-flag-txt);--w:2}
+.umb>.tu{outline:2px solid var(--text);outline-offset:-2px}
+.umb>[aria-pressed="true"]{box-shadow:inset 0 -3px 0 currentColor}
+.umb-t{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+@media (max-width:599px){.umb{flex-direction:column}.umb>*{min-height:48px}}
+
+/* ---------- 17. Tablas ---------- */
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 calc(-1*var(--sp-4));padding:0 var(--sp-4);
+  background:linear-gradient(90deg,var(--surface) 30%,transparent) left/24px 100% no-repeat local,
+             linear-gradient(-90deg,var(--surface) 30%,transparent) right/24px 100% no-repeat local,
+             radial-gradient(farthest-side at 0 50%,rgba(16,24,40,.14),transparent) left/10px 100% no-repeat scroll,
+             radial-gradient(farthest-side at 100% 50%,rgba(16,24,40,.14),transparent) right/10px 100% no-repeat scroll}
+table.t{border-collapse:collapse;width:100%;font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+table.t th{font-size:var(--fs-xs);font-weight:var(--fw-semi);color:var(--text-3);text-align:left;padding:8px 10px;border-bottom:1px solid var(--border-strong);white-space:nowrap}
+table.t td{padding:10px;border-bottom:1px solid var(--border);vertical-align:top}
+table.t th:first-child,table.t td:first-child{position:sticky;left:0;background:var(--surface)}
+@media (max-width:599px){
+  table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:100%}
+  table.stack thead{display:none}
+  table.stack tr{border:1px solid var(--border);border-radius:var(--r-sm);padding:var(--sp-3);margin-bottom:var(--sp-2)}
+  table.stack td{border:0;padding:2px 0} table.stack td::before{content:attr(data-l);display:block;font-size:var(--fs-xs);color:var(--text-3);font-weight:var(--fw-semi)}
+  table.stack td:first-child{position:static}
+}
+
+/* ---------- 18. Lista con casillas y temporizador (44 px) ---------- */
+.ex{display:grid;grid-template-columns:var(--tap) 1fr auto;align-items:center;gap:var(--sp-2);padding:6px 0;border-top:1px solid var(--border)}
+.ex:first-child{border-top:0}
+.ex .ck{width:var(--tap);height:var(--tap);display:grid;place-items:center;border:0;background:none;cursor:pointer;color:var(--text-3)}
+.ex .ck svg{width:26px;height:26px}
+.ex .ck .cbox{fill:none;stroke:currentColor;stroke-width:1.75}
+.ex .ck .tick{fill:none;stroke:var(--on-primary);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:14;stroke-dashoffset:14;transition:stroke-dashoffset var(--dur-2) var(--ease)}
+.ex.done .ck{color:var(--primary)} .ex.done .ck .cbox{fill:var(--primary);stroke:var(--primary)} .ex.done .ck .tick{stroke-dashoffset:0}
+.ex.done .nm{color:var(--text-3);text-decoration:line-through;text-decoration-thickness:1px}
+.ex .nm{font-weight:var(--fw-semi);line-height:1.25;min-width:0} .ex .nm small{display:block;font-weight:var(--fw-reg);color:var(--text-3);font-size:var(--fs-sm)}
+.ex .tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:4px}
+.timer{min-width:64px;height:var(--tap);border-radius:var(--r-pill);border:1px solid var(--border-strong);background:var(--surface);
+  color:var(--text-2);font:var(--fw-semi) var(--fs-sm)/1 var(--font);font-variant-numeric:tabular-nums;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:4px;padding:0 10px}
+.timer.run{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+
+/* ---------- 19. Tira de la semana ---------- */
+.week{display:grid;grid-template-columns:repeat(7,minmax(44px,1fr));gap:6px}
+.week button{border:1px solid var(--border);background:var(--surface);border-radius:var(--r-sm);min-height:68px;min-width:44px;padding:6px 2px;
+  display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--text-2);font:var(--fw-semi) var(--fs-xs)/1 var(--font);cursor:pointer;position:relative}
+.week button b{font-size:var(--fs-md);color:var(--text)}
+.week button .icon{width:18px;height:18px}
+.week button.done{background:var(--ok-soft);border-color:transparent;color:var(--ok)}
+.week button.nomide{background:var(--warn-soft);border-color:transparent;color:var(--warn)}
+.week button.nomide::before{content:'';position:absolute;top:5px;right:5px;width:6px;height:6px;border-radius:50%;background:var(--st-warn)}
+.week button.miss{border:1px dashed var(--bad);color:var(--bad)} .week button.miss b{text-decoration:line-through;color:var(--bad)}
+.week button.noreg{border:1px dashed var(--border-strong)}
+.week button.today{background:var(--primary);border-color:var(--primary);color:var(--on-primary)} .week button.today b{color:var(--on-primary)}
+.week button.key::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--s2)}
+.week button.rest{color:var(--text-3)}
+.week button[aria-current="date"]{font-weight:var(--fw-bold)}
+.week button[aria-pressed="true"]{outline:2px solid var(--primary);outline-offset:2px}
+/* 7 celdas de 44 px: el hueco entre celdas se estrecha con la pantalla; por debajo de 360 la tira
+   usa también el margen lateral (va directamente en el .container, fuera de tarjetas) */
+@media (max-width:389px){.week{gap:3px}}
+@media (max-width:359px){.week{gap:1px;margin-left:calc(2px - var(--gutter));margin-right:calc(2px - var(--gutter))}.week button{min-height:56px;padding:6px 0}}
+
+/* ---------- 20. Gráficas ---------- */
+.chart{position:relative;margin:0}
+.chart-h{margin-bottom:var(--sp-2)} .chart-h h3{font-size:var(--fs-md);font-weight:var(--fw-bold)} .chart-h small{display:block;color:var(--text-3);font-size:var(--fs-sm)}
+.chart-c{position:relative;min-height:160px}
+.chart svg text{font-family:var(--font);font-size:12px;fill:var(--text-3);font-variant-numeric:tabular-nums}
+.chart svg .lab{fill:var(--text);font-weight:var(--fw-semi)}
+.chart svg .lab.elim{fill:var(--bad)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .eje{stroke:var(--border-strong);stroke-width:1}
+.chart .umbral{stroke:var(--elim);stroke-width:2}
+.chart svg:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+.chart svg .sel{stroke:var(--text);stroke-width:2}
+.chart svg .dim{opacity:.35}
+.chart .toque{fill:transparent;cursor:pointer}
+.chart svg text,.chart .gl,.chart .eje{pointer-events:none}
+.pick{margin-top:var(--sp-2);padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2);font-size:var(--fs-sm);min-height:52px}
+.pick b{font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:var(--sp-3);font-size:var(--fs-sm);color:var(--text-2);margin:var(--sp-2) 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:50%;display:block}
+.acc.datos{margin-top:var(--sp-2)}
+
+/* ---------- 21. Hoja (detalle de un día, «Cómo fue») ---------- */
+.sheet-bg{position:fixed;inset:0;background:rgba(11,17,23,.45);z-index:60}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-height:88vh;overflow:auto;z-index:61;background:var(--surface);border-radius:var(--r-lg) var(--r-lg) 0 0;padding:var(--sp-2) var(--gutter) calc(var(--sp-6) + env(safe-area-inset-bottom));box-shadow:var(--sh-2);animation:sheet-in var(--dur-2) var(--ease);overscroll-behavior:contain}
+.sheet .grab{width:40px;height:4px;border-radius:2px;background:var(--border-strong);margin:0 auto var(--sp-3)}
+.sheet .sh-x{position:absolute;right:8px;top:8px}
+.sheet>h2{font-size:var(--fs-lg);padding-right:52px;margin-bottom:var(--sp-3)}
+@media (min-width:1024px){.sheet{left:auto;top:0;width:440px;max-height:none;border-radius:0;padding-top:var(--sp-4)}.sheet .grab{display:none}}
+@keyframes sheet-in{from{transform:translateY(24px);opacity:0}}
+html.bloqueo,html.bloqueo body{overflow:hidden}
+
+/* ---------- 22. Modo pista y modo gimnasio ---------- */
+.focus{position:fixed;inset:0;z-index:80;background:var(--bg);color:var(--text);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top) + 8px) var(--gutter) calc(env(safe-area-inset-bottom) + 16px);overflow:auto}
+.focus-h{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-1);min-height:var(--tap)}
+.focus-h .btn{flex:none;white-space:nowrap;overflow-wrap:normal}
+@media (max-width:479px){
+  .focus-h{flex-wrap:wrap}
+  .focus-h [data-act="sonido"]{margin-left:auto}
+  .focus-h .focus-t{order:9;flex:1 0 100%;text-align:left;padding:0 var(--sp-2) var(--sp-1)}
+}
+.focus-h .focus-t{flex:1 1 auto;min-width:0;text-align:center;font-weight:var(--fw-semi);font-size:var(--fs-sm);line-height:1.25;color:var(--text-2);overflow-wrap:normal}
+.focus-h .btn[aria-pressed="false"]{color:var(--text-3)}
+.focus-nota{margin:0;font-size:var(--fs-xs);color:var(--text-3)}
+.focus-b{flex:1 1 auto;max-width:640px;width:100%;margin:0 auto}
+.focus .big{font:var(--fw-bold) var(--fs-4xl)/1 var(--font);letter-spacing:-.02em;margin:var(--sp-2) 0;font-variant-numeric:tabular-nums}
+.focus-k{font:var(--fw-semi) var(--fs-lg)/1.2 var(--font);color:var(--text-2)}
+.focus.sol{--bg:#FFFFFF;--surface:#FFFFFF;--surface-2:#F0F0F0;--text:#000000;--text-2:#1A1A1A;--text-3:#333333;--border:#000000;--primary:#003A8C}
+.rep-btns{display:grid;gap:var(--sp-2)} .rep-btns button{min-height:64px;border-radius:var(--r-sm);border:2px solid transparent;font:var(--fw-bold) var(--fs-lg)/1.1 var(--font);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer}
+.rep-btns small{font:var(--fw-semi) var(--fs-sm)/1.2 var(--font)}
+.rep-btns .ok{background:var(--ok-soft);color:var(--ok)} .rep-btns .warn{background:var(--warn-soft);color:var(--warn)} .rep-btns .bad{background:var(--bad-soft);color:var(--bad)}
+.destello{position:fixed;inset:0;z-index:85;background:var(--text);opacity:0;pointer-events:none;animation:destello .6s ease-out 2}
+@keyframes destello{0%{opacity:.85}100%{opacity:0}}
+
+/* ---------- 23. Subnavegación ---------- */
+.subnav{position:sticky;top:env(safe-area-inset-top);z-index:20;display:flex;gap:var(--sp-2);overflow-x:auto;scrollbar-width:none;padding:var(--sp-2) var(--gutter);margin:0 calc(-1*var(--gutter)) var(--sp-4);background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.subnav::-webkit-scrollbar{display:none}
+.subnav a{flex:none;display:inline-flex;align-items:center;min-height:var(--tap);padding:0 14px;border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--border);color:var(--text-2);font:var(--fw-semi) var(--fs-sm)/1 var(--font);text-decoration:none}
+.subnav a[aria-current="true"]{background:var(--primary-soft);border-color:transparent;color:var(--primary)}
+@media (min-width:1024px){.subnav{top:56px;flex-wrap:wrap;-webkit-mask-image:none}}
+
+/* ---------- 24. Línea temporal ---------- */
+.tl{list-style:none;margin:0;padding:0}
+.tl li{position:relative;padding:0 0 var(--sp-5) 28px}
+.tl li::before{content:'';position:absolute;left:7px;top:18px;bottom:0;width:2px;background:var(--border)}
+.tl li:last-child::before{display:none}
+.tl .dot{position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:2px solid var(--primary)}
+.tl li.hecho .dot{background:var(--primary)} .tl li.futuro .dot{border-style:dashed;border-color:var(--text-3)}
+.tl li.hoy .dot{box-shadow:0 0 0 4px var(--primary-soft)}
+.tl p{margin:2px 0 0;color:var(--text-2)}
+
+/* ---------- 25. Clave-valor, notificación, vacío, regla ---------- */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:var(--fs-sm);margin:0} .kv dt{color:var(--text-3)} .kv dd{margin:0;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:50%;bottom:calc(var(--tabbar-h) + 16px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:90;background:var(--text);color:var(--surface);padding:10px 16px;border-radius:var(--r-pill);font-size:var(--fs-sm);box-shadow:var(--sh-2);max-width:calc(100vw - 32px);text-align:center}
+@media (min-width:1024px){.toast{bottom:24px}}
+.empty{padding:var(--sp-6) var(--sp-4);text-align:center;color:var(--text-3);font-size:var(--fs-sm)}
+.rule{padding:var(--sp-4) 0;border-top:1px solid var(--border)} .rule:first-child{border-top:0}
+.rule h3{font-size:var(--fs-md);font-weight:var(--fw-bold)} .rule p{color:var(--text-2);margin:var(--sp-1) 0 var(--sp-2)}
+
+/* ---------- 26. Entrada de tiempo ---------- */
+.tin{display:grid;grid-template-columns:72px 1fr 72px;align-items:center;gap:var(--sp-2);min-height:var(--tap)}
+.tin input{height:var(--tap);font:var(--fw-bold) var(--fs-lg)/1 var(--font);font-variant-numeric:tabular-nums;padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text);width:100%;min-width:0}
+.tin .dv{font-style:normal;font-weight:var(--fw-semi);text-align:right} .dv.ok{color:var(--ok)} .dv.warn{color:var(--warn)} .dv.bad{color:var(--bad)}
+
+/* ---------- 27. Rejillas de escritorio ---------- */
+@media (min-width:1024px){
+  .g-7-5{display:grid;grid-template-columns:7fr 5fr;gap:var(--sp-6);align-items:start}
+}
+
+/* ---------- 28. Microinteracciones ---------- */
+button:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .destello{animation:destello .3s steps(1) 2!important}
+}
+
+/* ---------- 29. Impresión (C7) ---------- */
+@media print{
+  .tabbar,.appbar,.sb-fondo,.focus,.sheet,.sheet-bg,.destello,.toast,.subnav,.pie .seg{display:none!important}
+  .view[hidden]{display:block!important}
+  .view{animation:none}
+  body{background:#fff;padding:0}
+  .card{box-shadow:none;break-inside:avoid}
+  details:not([open])>*:not(summary){display:block}
+}
+
+/* Página de Cristina: encima del sistema de diseño de la web de Daniel (10_sistema.css) */
+body.cr{padding-bottom:var(--sp-10)}
+.cr-top{background:var(--surface);border-bottom:1px solid var(--border);padding:var(--sp-3) 0 0;margin-bottom:var(--sp-4)}
+.cr-top h1{font-size:var(--fs-xl);font-weight:var(--fw-bold);margin:var(--sp-3) 0 var(--sp-1)}
+.cr-top p{margin:0 0 var(--sp-2);font-size:var(--fs-sm)}
+.atleta{display:inline-flex;border:1px solid var(--border-strong);border-radius:var(--r-pill);overflow:hidden}
+.atleta a{display:inline-flex;align-items:center;min-height:36px;padding:0 var(--sp-4);font-weight:var(--fw-semi);font-size:var(--fs-sm);color:var(--text-2);text-decoration:none}
+.atleta a[aria-current="page"]{background:var(--primary);color:var(--on-primary)}
+.cr-sub{display:flex;gap:var(--sp-1);overflow-x:auto;margin:0 calc(-1 * var(--gutter));padding:0 var(--gutter) var(--sp-2)}
+.cr-sub a{flex:none;display:inline-flex;align-items:center;min-height:var(--tap);padding:0 var(--sp-3);border-radius:var(--r-pill);color:var(--text-2);text-decoration:none;font-weight:var(--fw-semi);font-size:var(--fs-sm)}
+.cr-sub a:hover{background:var(--surface-2)}
+.cr-sec{margin:0 0 var(--sp-8);scroll-margin-top:var(--sp-4)}
+.cr-sec h2{margin:0 0 var(--sp-3)}
+.cr-sec h3{margin:var(--sp-5) 0 var(--sp-2)}
+.cr-hoy{padding:var(--sp-4);border-radius:var(--r-md);background:var(--surface);box-shadow:var(--sh-1)}
+.cr-hoy .cr-h-f{font-size:var(--fs-sm);color:var(--text-2);margin:0 0 var(--sp-1)}
+.cr-hoy .cr-h-t{font-size:var(--fs-2xl);font-weight:var(--fw-bold);line-height:var(--lh-tight);margin:0 0 var(--sp-3)}
+.cr-hoy .cr-h-d{margin:0 0 var(--sp-3)}
+.cr-hoy .cr-h-o{margin:0;padding:var(--sp-2) var(--sp-3);border-left:3px solid var(--s1);background:var(--surface-2);border-radius:0 var(--r-xs) var(--r-xs) 0;font-size:var(--fs-sm)}
+.cr-hoy.ctl .cr-h-o{border-left-color:var(--s3)}
+.cr-hoy .cr-h-sig{margin:var(--sp-3) 0 0;font-size:var(--fs-sm);color:var(--text-2)}
+.cr-semana{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;margin:var(--sp-3) 0}
+.cr-semana a{display:flex;flex-direction:column;align-items:center;gap:2px;min-height:56px;padding:6px 2px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--border);text-decoration:none;color:var(--text-2);font-size:var(--fs-xs);text-align:center}
+.cr-semana a b{font-size:var(--fs-md);color:var(--text)}
+.cr-semana a.corre{border-color:var(--s1)}
+.cr-semana a.ctl{border-color:var(--s3);border-width:2px}
+.cr-semana a.otro{opacity:.6}
+.cr-semana a[aria-current="date"]{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.cr-semana a[aria-current="date"] b{color:var(--on-primary)}
+.cr-cuenta{font-size:var(--fs-sm);color:var(--text-2)}
+.cr-esc{padding-left:1.25em;margin:0 0 var(--sp-2)}
+.cr-esc li{margin:0 0 var(--sp-1)}
+.cr-fases{display:grid;gap:var(--sp-2)}
+.cr-fase{display:grid;gap:2px;padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--border)}
+.cr-fase.ahora{border:2px solid var(--primary)}
+.cr-tipo{list-style:none;padding:0;margin:0;display:grid;gap:2px;font-size:var(--fs-sm)}
+.cr-tipo b{display:inline-block;min-width:3em}
+.cr-acc{margin:0 0 var(--sp-2);background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm)}
+.cr-acc>summary{padding:var(--sp-3);cursor:pointer;min-height:var(--tap)}
+.cr-wk{padding:0 var(--sp-3) var(--sp-2)}
+.cr-wk-t{margin:var(--sp-2) 0 var(--sp-1);font-size:var(--fs-sm)}
+.cr-wk ul{list-style:none;padding:0;margin:0}
+.cr-d{display:grid;grid-template-columns:6.5em 1fr;gap:var(--sp-2);padding:4px 0 4px 8px;border-left:3px solid var(--border-strong);font-size:var(--fs-sm)}
+.cr-d.cal{border-left-color:var(--s1)}
+.cr-d.ctl{border-left-color:var(--s3);font-weight:var(--fw-semi)}
+.cr-d.hoy{background:var(--primary-soft)}
+.cr-d-f{color:var(--text-3);font-variant-numeric:tabular-nums}
+.cr-tab{border-collapse:collapse;width:100%;max-width:420px;font-size:var(--fs-sm)}
+.cr-tab th,.cr-tab td{padding:6px 8px;border-bottom:1px solid var(--border);text-align:left}
+.cr-bar{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:4px;margin:0 0 var(--sp-2)}
+.cr-tr{display:grid;padding:6px 8px;border-radius:var(--r-xs);background:var(--surface);border:1px solid var(--border);font-size:var(--fs-sm)}
+.cr-tr b{font-size:var(--fs-lg)}
+.cr-tr.elim{border-color:var(--elim);color:var(--bad)}
+.cr-tr.aqui{outline:2px solid var(--primary)}
+.cr-regla{padding:var(--sp-3);margin:0 0 var(--sp-2)}
+.cr-regla p{margin:var(--sp-1) 0 0;font-size:var(--fs-sm)}
+.cr-glo dt{font-weight:var(--fw-semi);margin-top:var(--sp-2)}
+.cr-glo dd{margin:0;font-size:var(--fs-sm);color:var(--text-2)}
+.cr-reloj,.cr-reg{padding-left:1.25em;font-size:var(--fs-sm)}
+.cr-reloj li,.cr-reg li{margin:0 0 var(--sp-1)}
+.cr-pie{margin:var(--sp-8) 0 0}
+
+</style>
+</head>
+<body class="cr">
+<header class="cr-top"><div class="container">
+<nav class="atleta" aria-label="De quién es el plan"><a href="../">Daniel</a><a aria-current="page">Cristina</a></nav>
+<h1>Plan de carrera · Cristina</h1>
+<p class="muted">Pruebas físicas de la Escala Básica, convocatoria de 2027 (44.ª promoción), turno libre. Solo carrera: lunes, miércoles y sábado.</p>
+<nav class="cr-sub" aria-label="Secciones"><a href="#hoy">Hoy</a><a href="#plan">Plan</a><a href="#ritmos">Ritmos</a><a href="#reglas">Reglas</a><a href="#registro">Registro</a></nav>
+</div></header><main class="container">
+<section id="hoy" class="cr-sec"><h2 class="vh-oculto">Hoy</h2><div id="cr-hoy" class="card cr-hoy"><p class="muted">Cargando el día…</p></div>
+<div id="cr-semana" class="cr-semana" aria-label="Esta semana"></div>
+<div id="cr-cuenta" class="cr-cuenta"></div></section>
+<section class="cr-sec"><h2>El objetivo</h2>
+<p>Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.</p><ol class="cr-esc">
+<li><b class="num">4:45</b> Dejar de eliminar (4:46 o más da 0 y elimina)</li>
+<li><b class="num">4:09</b> 5 puntos</li>
+<li><b class="num">4:00</b> 6 puntos, y desde ahí cada punto son 8-9 s</li>
+</ol><div class="aviso"><div><b>Qué esperar.</b> Sin una marca medida no hay previsión. Hoy solo hay una estimación: más de 5:00. El rodaje del 10-10 apunta a que puede estar bastante por encima, pero eso tampoco es una medida: el punto de partida lo da el primer control, el sábado 21-11. Criterio de entrenador, no dato: si ese control sale entre 5:00 y 5:15 y el año va sin lesiones, lo razonable es acabar entre 4:05 y 4:35; si sale de 5:30 o más, el objetivo del año es alejarse de la eliminación, en torno a 4:30. 4:00 o menos (6 puntos) pide una respuesta muy buena. Se revisa tras el control de diciembre.</div></div><p class="faint">Fecha: sin convocar: se supone el sábado 9 de octubre de 2027 y se recoloca el final cuando salga la fecha.</p></section>
+<section id="plan" class="cr-sec"><h2>Plan</h2><div class="cr-fases">
+<div class="cr-fase" data-fase="F0"><b>F0 · Evaluación</b><span class="faint">semanas 1-2 · 12 oct a 25 oct</span><span>Correr y andar, y tu primer 1.000: saber de dónde partes.</span></div>
+<div class="cr-fase" data-fase="F1"><b>F1 · Base: correr seguido</b><span class="faint">semanas 3-10 · 26 oct a 20 dic</span><span>Llegar a correr 35-48 min seguidos y suave. Es lo que más mejora el 1.000 al principio.</span></div>
+<div class="cr-fase" data-fase="F2"><b>F2 · Base II: primeros intervalos</b><span class="faint">semanas 11-22 · 21 dic a 14 mar 2027</span><span>Intervalos cortos cerca del ritmo de la prueba, algo de umbral y la larga a 60-65 min.</span></div>
+<div class="cr-fase" data-fase="F3"><b>F3 · Potencia aeróbica</b><span class="faint">semanas 23-34 · 15 mar 2027 a 6 jun 2027</span><span>Series de 400 a 1.000 m a ritmo K y K + 4: subir el techo.</span></div>
+<div class="cr-fase" data-fase="F4"><b>F4 · Ritmo del examen</b><span class="faint">semanas 35-46 · 7 jun 2027 a 29 ago 2027</span><span>Series al ritmo objetivo y 200 rápidos: aprender a sostener el ritmo del 1.000.</span></div>
+<div class="cr-fase" data-fase="F5"><b>F5 · Afinado</b><span class="faint">semanas 47-52 · 30 ago 2027 a 10 oct 2027</span><span>Simulacro y llegar fresca a la prueba.</span></div>
+</div><h3>Semana tipo</h3><ul class="cr-tipo">
+<li><b>Lun</b> Carrera: la sesión de calidad (en las primeras semanas, correr y andar o suave con rectas o cuestas)</li>
+<li><b>Mar</b> Martín Freire: barra y circuito</li>
+<li><b>Mié</b> Carrera: suave con rectas, cuestas o 200 a ritmo K</li>
+<li><b>Jue</b> Martín Freire: barra y circuito</li>
+<li><b>Vie</b> CrossFit (sin piernas ni saltos antes de un control: ver Reglas)</li>
+<li><b>Sáb</b> Carrera: la larga suave, o el control de 1.000 m cada cuatro semanas</li>
+<li><b>Dom</b> CrossFit (sin piernas pesadas si puedes: el lunes toca la calidad)</li>
+</ul><h3>Las 52 semanas</h3>
+<details class="acc cr-acc" data-fase="F0"><summary><b>F0 · Evaluación</b> <span class="faint">semanas 1-2</span></summary>
+<div class="cr-wk" data-sem="1"><p class="cr-wk-t"><b>Semana 1</b> · desde el 12 oct</p><ul>
+<li class="cr-d sua" data-fecha="2026-10-12"><span class="cr-d-f">Lun 12 oct</span><span>7 × (2 min corriendo + 1 andando)</span></li>
+<li class="cr-d sua" data-fecha="2026-10-14"><span class="cr-d-f">Mié 14 oct</span><span>6 × (3 min corriendo + 1 andando)</span></li>
+<li class="cr-d sua" data-fecha="2026-10-17"><span class="cr-d-f">Sáb 17 oct</span><span>28 min: 7 × (3 min corriendo + 1 andando)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="2"><p class="cr-wk-t"><b>Semana 2</b> · desde el 19 oct</p><ul>
+<li class="cr-d sua" data-fecha="2026-10-19"><span class="cr-d-f">Lun 19 oct</span><span>6 × (3 min corriendo + 1 andando)</span></li>
+<li class="cr-d sua" data-fecha="2026-10-21"><span class="cr-d-f">Mié 21 oct</span><span>5 × (4 min corriendo + 1 andando)</span></li>
+<li class="cr-d sua" data-fecha="2026-10-24"><span class="cr-d-f">Sáb 24 oct</span><span>28 min: correr y andar al escalón que toque</span></li>
+</ul></div>
+</details>
+<details class="acc cr-acc" data-fase="F1"><summary><b>F1 · Base: correr seguido</b> <span class="faint">semanas 3-10</span></summary>
+<div class="cr-wk" data-sem="3"><p class="cr-wk-t"><b>Semana 3</b> · desde el 26 oct</p><ul>
+<li class="cr-d sua" data-fecha="2026-10-26"><span class="cr-d-f">Lun 26 oct</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-10-28"><span class="cr-d-f">Mié 28 oct</span><span>25 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-10-31"><span class="cr-d-f">Sáb 31 oct</span><span>31 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="4"><p class="cr-wk-t"><b>Semana 4</b> · desde el 2 nov</p><ul>
+<li class="cr-d sua" data-fecha="2026-11-02"><span class="cr-d-f">Lun 2 nov</span><span>28 min suave + 5 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-11-04"><span class="cr-d-f">Mié 4 nov</span><span>28 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-11-07"><span class="cr-d-f">Sáb 7 nov</span><span>34 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="5"><p class="cr-wk-t"><b>Semana 5</b> · desde el 9 nov</p><ul>
+<li class="cr-d sua" data-fecha="2026-11-09"><span class="cr-d-f">Lun 9 nov</span><span>30 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-11-11"><span class="cr-d-f">Mié 11 nov</span><span>30 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-11-14"><span class="cr-d-f">Sáb 14 nov</span><span>37 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="6"><p class="cr-wk-t"><b>Semana 6</b> · desde el 16 nov · <span class="chip">descarga</span></p><ul>
+<li class="cr-d sua" data-fecha="2026-11-16"><span class="cr-d-f">Lun 16 nov</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-11-18"><span class="cr-d-f">Mié 18 nov</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2026-11-21"><span class="cr-d-f">Sáb 21 nov</span><span>Control de 1.000 m (1.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="7"><p class="cr-wk-t"><b>Semana 7</b> · desde el 23 nov</p><ul>
+<li class="cr-d sua" data-fecha="2026-11-23"><span class="cr-d-f">Lun 23 nov</span><span>30 min suave + 6 cuestas de 15 s</span></li>
+<li class="cr-d sua" data-fecha="2026-11-25"><span class="cr-d-f">Mié 25 nov</span><span>32 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-11-28"><span class="cr-d-f">Sáb 28 nov</span><span>40 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="8"><p class="cr-wk-t"><b>Semana 8</b> · desde el 30 nov</p><ul>
+<li class="cr-d sua" data-fecha="2026-11-30"><span class="cr-d-f">Lun 30 nov</span><span>32 min suave + 8 cuestas de 15 s</span></li>
+<li class="cr-d sua" data-fecha="2026-12-02"><span class="cr-d-f">Mié 2 dic</span><span>35 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-12-05"><span class="cr-d-f">Sáb 5 dic</span><span>44 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="9"><p class="cr-wk-t"><b>Semana 9</b> · desde el 7 dic</p><ul>
+<li class="cr-d sua" data-fecha="2026-12-07"><span class="cr-d-f">Lun 7 dic</span><span>35 min con 6 × (1 min alegre + 1 min suave)</span></li>
+<li class="cr-d sua" data-fecha="2026-12-09"><span class="cr-d-f">Mié 9 dic</span><span>35 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-12-12"><span class="cr-d-f">Sáb 12 dic</span><span>48 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="10"><p class="cr-wk-t"><b>Semana 10</b> · desde el 14 dic · <span class="chip">descarga</span></p><ul>
+<li class="cr-d sua" data-fecha="2026-12-14"><span class="cr-d-f">Lun 14 dic</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2026-12-16"><span class="cr-d-f">Mié 16 dic</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2026-12-19"><span class="cr-d-f">Sáb 19 dic</span><span>Control de 1.000 m (2.º)</span></li>
+</ul></div>
+</details>
+<details class="acc cr-acc" data-fase="F2"><summary><b>F2 · Base II: primeros intervalos</b> <span class="faint">semanas 11-22</span></summary>
+<div class="cr-wk" data-sem="11"><p class="cr-wk-t"><b>Semana 11</b> · desde el 21 dic</p><ul>
+<li class="cr-d cal" data-fecha="2026-12-21"><span class="cr-d-f">Lun 21 dic</span><span>6 × 2 min a ritmo K + 4, rec. 2 min trotando</span></li>
+<li class="cr-d sua" data-fecha="2026-12-23"><span class="cr-d-f">Mié 23 dic</span><span>30 min suave</span></li>
+<li class="cr-d sua" data-fecha="2026-12-26"><span class="cr-d-f">Sáb 26 dic</span><span>48 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="12"><p class="cr-wk-t"><b>Semana 12</b> · desde el 28 dic</p><ul>
+<li class="cr-d cal" data-fecha="2026-12-28"><span class="cr-d-f">Lun 28 dic</span><span>4 × 5 min a umbral, rec. 1 min</span></li>
+<li class="cr-d sua" data-fecha="2026-12-30"><span class="cr-d-f">Mié 30 dic</span><span>35 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-01-02"><span class="cr-d-f">Sáb 2 ene 2027</span><span>52 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="13"><p class="cr-wk-t"><b>Semana 13</b> · desde el 4 ene 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-01-04"><span class="cr-d-f">Lun 4 ene 2027</span><span>8 × 2 min a ritmo K + 4, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-01-06"><span class="cr-d-f">Mié 6 ene 2027</span><span>38 min suave + 6 × 200 m a ritmo K</span></li>
+<li class="cr-d sua" data-fecha="2027-01-09"><span class="cr-d-f">Sáb 9 ene 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="14"><p class="cr-wk-t"><b>Semana 14</b> · desde el 11 ene 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d sua" data-fecha="2027-01-11"><span class="cr-d-f">Lun 11 ene 2027</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-01-13"><span class="cr-d-f">Mié 13 ene 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-01-16"><span class="cr-d-f">Sáb 16 ene 2027</span><span>Control de 1.000 m (3.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="15"><p class="cr-wk-t"><b>Semana 15</b> · desde el 18 ene 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-01-18"><span class="cr-d-f">Lun 18 ene 2027</span><span>5 × 3 min a ritmo K + 4, rec. 2 min 30 s</span></li>
+<li class="cr-d sua" data-fecha="2027-01-20"><span class="cr-d-f">Mié 20 ene 2027</span><span>40 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-01-23"><span class="cr-d-f">Sáb 23 ene 2027</span><span>58 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="16"><p class="cr-wk-t"><b>Semana 16</b> · desde el 25 ene 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-01-25"><span class="cr-d-f">Lun 25 ene 2027</span><span>3 × 8 min a umbral, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-01-27"><span class="cr-d-f">Mié 27 ene 2027</span><span>40 min suave + 6 × 200 m a ritmo K</span></li>
+<li class="cr-d sua" data-fecha="2027-01-30"><span class="cr-d-f">Sáb 30 ene 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="17"><p class="cr-wk-t"><b>Semana 17</b> · desde el 1 feb 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-02-01"><span class="cr-d-f">Lun 1 feb 2027</span><span>6 × 3 min a ritmo K + 4, rec. 2 min 30 s</span></li>
+<li class="cr-d sua" data-fecha="2027-02-03"><span class="cr-d-f">Mié 3 feb 2027</span><span>40 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-02-06"><span class="cr-d-f">Sáb 6 feb 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="18"><p class="cr-wk-t"><b>Semana 18</b> · desde el 8 feb 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d sua" data-fecha="2027-02-08"><span class="cr-d-f">Lun 8 feb 2027</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-02-10"><span class="cr-d-f">Mié 10 feb 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-02-13"><span class="cr-d-f">Sáb 13 feb 2027</span><span>Control de 1.000 m (4.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="19"><p class="cr-wk-t"><b>Semana 19</b> · desde el 15 feb 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-02-15"><span class="cr-d-f">Lun 15 feb 2027</span><span>6 × 400 m a ritmo K, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-02-17"><span class="cr-d-f">Mié 17 feb 2027</span><span>45 min suave + 6 × 200 m a ritmo K</span></li>
+<li class="cr-d sua" data-fecha="2027-02-20"><span class="cr-d-f">Sáb 20 feb 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="20"><p class="cr-wk-t"><b>Semana 20</b> · desde el 22 feb 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-02-22"><span class="cr-d-f">Lun 22 feb 2027</span><span>2 × 12 min a umbral, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-02-24"><span class="cr-d-f">Mié 24 feb 2027</span><span>45 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-02-27"><span class="cr-d-f">Sáb 27 feb 2027</span><span>62 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="21"><p class="cr-wk-t"><b>Semana 21</b> · desde el 1 mar 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-03-01"><span class="cr-d-f">Lun 1 mar 2027</span><span>4 × 600 m a ritmo K, rec. 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-03-03"><span class="cr-d-f">Mié 3 mar 2027</span><span>45 min suave + 6 × 200 m a ritmo K</span></li>
+<li class="cr-d sua" data-fecha="2027-03-06"><span class="cr-d-f">Sáb 6 mar 2027</span><span>65 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="22"><p class="cr-wk-t"><b>Semana 22</b> · desde el 8 mar 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d sua" data-fecha="2027-03-08"><span class="cr-d-f">Lun 8 mar 2027</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-03-10"><span class="cr-d-f">Mié 10 mar 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-03-13"><span class="cr-d-f">Sáb 13 mar 2027</span><span>Control de 1.000 m (5.º)</span></li>
+</ul></div>
+</details>
+<details class="acc cr-acc" data-fase="F3"><summary><b>F3 · Potencia aeróbica</b> <span class="faint">semanas 23-34</span></summary>
+<div class="cr-wk" data-sem="23"><p class="cr-wk-t"><b>Semana 23</b> · desde el 15 mar 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-03-15"><span class="cr-d-f">Lun 15 mar 2027</span><span>6 × 400 m a ritmo K, rec. 2 min trotando</span></li>
+<li class="cr-d sua" data-fecha="2027-03-17"><span class="cr-d-f">Mié 17 mar 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-03-20"><span class="cr-d-f">Sáb 20 mar 2027</span><span>65 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="24"><p class="cr-wk-t"><b>Semana 24</b> · desde el 22 mar 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-03-22"><span class="cr-d-f">Lun 22 mar 2027</span><span>4 × 600 m a ritmo K, rec. 3 min</span></li>
+<li class="cr-d cal" data-fecha="2027-03-24"><span class="cr-d-f">Mié 24 mar 2027</span><span>2 × 8 min a umbral + 15 min suave</span></li>
+<li class="cr-d sua" data-fecha="2027-03-27"><span class="cr-d-f">Sáb 27 mar 2027</span><span>65 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="25"><p class="cr-wk-t"><b>Semana 25</b> · desde el 29 mar 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-03-29"><span class="cr-d-f">Lun 29 mar 2027</span><span>4 × 800 m a ritmo K + 4, rec. 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-03-31"><span class="cr-d-f">Mié 31 mar 2027</span><span>50 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-04-03"><span class="cr-d-f">Sáb 3 abr 2027</span><span>65 min: suave y los 10 últimos alegres</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="26"><p class="cr-wk-t"><b>Semana 26</b> · desde el 5 abr 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-04-05"><span class="cr-d-f">Lun 5 abr 2027</span><span>4 × 400 m a ritmo K, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-04-07"><span class="cr-d-f">Mié 7 abr 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-04-10"><span class="cr-d-f">Sáb 10 abr 2027</span><span>Control de 1.000 m (6.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="27"><p class="cr-wk-t"><b>Semana 27</b> · desde el 12 abr 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-04-12"><span class="cr-d-f">Lun 12 abr 2027</span><span>6 × 400 m a ritmo K, rec. 1 min 45 s</span></li>
+<li class="cr-d sua" data-fecha="2027-04-14"><span class="cr-d-f">Mié 14 abr 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-04-17"><span class="cr-d-f">Sáb 17 abr 2027</span><span>65 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="28"><p class="cr-wk-t"><b>Semana 28</b> · desde el 19 abr 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-04-19"><span class="cr-d-f">Lun 19 abr 2027</span><span>5 × 600 m a ritmo K, rec. 3 min</span></li>
+<li class="cr-d cal" data-fecha="2027-04-21"><span class="cr-d-f">Mié 21 abr 2027</span><span>2 × 8 min a umbral + 15 min suave</span></li>
+<li class="cr-d sua" data-fecha="2027-04-24"><span class="cr-d-f">Sáb 24 abr 2027</span><span>68 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="29"><p class="cr-wk-t"><b>Semana 29</b> · desde el 26 abr 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-04-26"><span class="cr-d-f">Lun 26 abr 2027</span><span>5 × 800 m a ritmo K + 4, rec. 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-04-28"><span class="cr-d-f">Mié 28 abr 2027</span><span>50 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-05-01"><span class="cr-d-f">Sáb 1 may 2027</span><span>70 min: suave y los 10 últimos alegres</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="30"><p class="cr-wk-t"><b>Semana 30</b> · desde el 3 may 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-05-03"><span class="cr-d-f">Lun 3 may 2027</span><span>4 × 400 m a ritmo K, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-05-05"><span class="cr-d-f">Mié 5 may 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-05-08"><span class="cr-d-f">Sáb 8 may 2027</span><span>Control de 1.000 m (7.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="31"><p class="cr-wk-t"><b>Semana 31</b> · desde el 10 may 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-05-10"><span class="cr-d-f">Lun 10 may 2027</span><span>3 × 1.000 m a ritmo K + 4, rec. 4 min</span></li>
+<li class="cr-d sua" data-fecha="2027-05-12"><span class="cr-d-f">Mié 12 may 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-05-15"><span class="cr-d-f">Sáb 15 may 2027</span><span>65 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="32"><p class="cr-wk-t"><b>Semana 32</b> · desde el 17 may 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-05-17"><span class="cr-d-f">Lun 17 may 2027</span><span>6 × 400 m a ritmo K, rec. 1 min 30 s</span></li>
+<li class="cr-d cal" data-fecha="2027-05-19"><span class="cr-d-f">Mié 19 may 2027</span><span>2 × 10 min a umbral + 15 min suave</span></li>
+<li class="cr-d sua" data-fecha="2027-05-22"><span class="cr-d-f">Sáb 22 may 2027</span><span>68 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="33"><p class="cr-wk-t"><b>Semana 33</b> · desde el 24 may 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-05-24"><span class="cr-d-f">Lun 24 may 2027</span><span>5 × 600 m a ritmo K, rec. 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-05-26"><span class="cr-d-f">Mié 26 may 2027</span><span>50 min suave + 8 cuestas de 20 s</span></li>
+<li class="cr-d sua" data-fecha="2027-05-29"><span class="cr-d-f">Sáb 29 may 2027</span><span>70 min: suave y los 10 últimos alegres</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="34"><p class="cr-wk-t"><b>Semana 34</b> · desde el 31 may 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-05-31"><span class="cr-d-f">Lun 31 may 2027</span><span>4 × 400 m a ritmo K, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-06-02"><span class="cr-d-f">Mié 2 jun 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-06-05"><span class="cr-d-f">Sáb 5 jun 2027</span><span>Control de 1.000 m (8.º)</span></li>
+</ul></div>
+</details>
+<details class="acc cr-acc" data-fase="F4"><summary><b>F4 · Ritmo del examen</b> <span class="faint">semanas 35-46</span></summary>
+<div class="cr-wk" data-sem="35"><p class="cr-wk-t"><b>Semana 35</b> · desde el 7 jun 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-06-07"><span class="cr-d-f">Lun 7 jun 2027</span><span>5 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-06-09"><span class="cr-d-f">Mié 9 jun 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-06-12"><span class="cr-d-f">Sáb 12 jun 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="36"><p class="cr-wk-t"><b>Semana 36</b> · desde el 14 jun 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-06-14"><span class="cr-d-f">Lun 14 jun 2027</span><span>3 × 600 m a ritmo O, rec. 3 min</span></li>
+<li class="cr-d cal" data-fecha="2027-06-16"><span class="cr-d-f">Mié 16 jun 2027</span><span>8 × 200 m rápidos, rec. 200 m andando</span></li>
+<li class="cr-d sua" data-fecha="2027-06-19"><span class="cr-d-f">Sáb 19 jun 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="37"><p class="cr-wk-t"><b>Semana 37</b> · desde el 21 jun 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-06-21"><span class="cr-d-f">Lun 21 jun 2027</span><span>2 × (600 + 400 m) a ritmo O: 1 min entre el 600 y el 400, 5 min entre las dos</span></li>
+<li class="cr-d sua" data-fecha="2027-06-23"><span class="cr-d-f">Mié 23 jun 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-06-26"><span class="cr-d-f">Sáb 26 jun 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="38"><p class="cr-wk-t"><b>Semana 38</b> · desde el 28 jun 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-06-28"><span class="cr-d-f">Lun 28 jun 2027</span><span>4 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-06-30"><span class="cr-d-f">Mié 30 jun 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-07-03"><span class="cr-d-f">Sáb 3 jul 2027</span><span>Control de 1.000 m (9.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="39"><p class="cr-wk-t"><b>Semana 39</b> · desde el 5 jul 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-07-05"><span class="cr-d-f">Lun 5 jul 2027</span><span>6 × 400 m a ritmo O, rec. 1 min 45 s</span></li>
+<li class="cr-d sua" data-fecha="2027-07-07"><span class="cr-d-f">Mié 7 jul 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-07-10"><span class="cr-d-f">Sáb 10 jul 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="40"><p class="cr-wk-t"><b>Semana 40</b> · desde el 12 jul 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-07-12"><span class="cr-d-f">Lun 12 jul 2027</span><span>3 × 600 m a ritmo O, rec. 2 min 30 s + 2 × 200 m rápidos</span></li>
+<li class="cr-d cal" data-fecha="2027-07-14"><span class="cr-d-f">Mié 14 jul 2027</span><span>8 × 200 m rápidos, rec. 200 m andando</span></li>
+<li class="cr-d sua" data-fecha="2027-07-17"><span class="cr-d-f">Sáb 17 jul 2027</span><span>60 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="41"><p class="cr-wk-t"><b>Semana 41</b> · desde el 19 jul 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-07-19"><span class="cr-d-f">Lun 19 jul 2027</span><span>2 × (600 + 400 m) a ritmo O: 1 min y 4 min</span></li>
+<li class="cr-d sua" data-fecha="2027-07-21"><span class="cr-d-f">Mié 21 jul 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-07-24"><span class="cr-d-f">Sáb 24 jul 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="42"><p class="cr-wk-t"><b>Semana 42</b> · desde el 26 jul 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-07-26"><span class="cr-d-f">Lun 26 jul 2027</span><span>4 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-07-28"><span class="cr-d-f">Mié 28 jul 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-07-31"><span class="cr-d-f">Sáb 31 jul 2027</span><span>Control de 1.000 m (10.º)</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="43"><p class="cr-wk-t"><b>Semana 43</b> · desde el 2 ago 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-08-02"><span class="cr-d-f">Lun 2 ago 2027</span><span>5 × 400 m a ritmo O, rec. 1 min 30 s</span></li>
+<li class="cr-d sua" data-fecha="2027-08-04"><span class="cr-d-f">Mié 4 ago 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-08-07"><span class="cr-d-f">Sáb 7 ago 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="44"><p class="cr-wk-t"><b>Semana 44</b> · desde el 9 ago 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-08-09"><span class="cr-d-f">Lun 9 ago 2027</span><span>2 × 600 m a ritmo O, rec. 3 min + 3 × 200 m rápidos</span></li>
+<li class="cr-d cal" data-fecha="2027-08-11"><span class="cr-d-f">Mié 11 ago 2027</span><span>8 × 200 m rápidos, rec. 200 m andando</span></li>
+<li class="cr-d sua" data-fecha="2027-08-14"><span class="cr-d-f">Sáb 14 ago 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="45"><p class="cr-wk-t"><b>Semana 45</b> · desde el 16 ago 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-08-16"><span class="cr-d-f">Lun 16 ago 2027</span><span>2 × (600 + 400 m) a ritmo O: 1 min y 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-08-18"><span class="cr-d-f">Mié 18 ago 2027</span><span>50 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-08-21"><span class="cr-d-f">Sáb 21 ago 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="46"><p class="cr-wk-t"><b>Semana 46</b> · desde el 23 ago 2027 · <span class="chip">descarga</span></p><ul>
+<li class="cr-d cal" data-fecha="2027-08-23"><span class="cr-d-f">Lun 23 ago 2027</span><span>4 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-08-25"><span class="cr-d-f">Mié 25 ago 2027</span><span>20 min suave + 3 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-08-28"><span class="cr-d-f">Sáb 28 ago 2027</span><span>Control de 1.000 m (11.º)</span></li>
+</ul></div>
+</details>
+<details class="acc cr-acc" data-fase="F5"><summary><b>F5 · Afinado</b> <span class="faint">semanas 47-52</span></summary>
+<div class="cr-wk" data-sem="47"><p class="cr-wk-t"><b>Semana 47</b> · desde el 30 ago 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-08-30"><span class="cr-d-f">Lun 30 ago 2027</span><span>5 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d cal" data-fecha="2027-09-01"><span class="cr-d-f">Mié 1 sep 2027</span><span>8 × 200 m rápidos, rec. 200 m andando</span></li>
+<li class="cr-d sua" data-fecha="2027-09-04"><span class="cr-d-f">Sáb 4 sep 2027</span><span>55 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="48"><p class="cr-wk-t"><b>Semana 48</b> · desde el 6 sep 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-09-06"><span class="cr-d-f">Lun 6 sep 2027</span><span>3 × 600 m a ritmo O, rec. 3 min</span></li>
+<li class="cr-d sua" data-fecha="2027-09-08"><span class="cr-d-f">Mié 8 sep 2027</span><span>45 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-09-11"><span class="cr-d-f">Sáb 11 sep 2027</span><span>50 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="49"><p class="cr-wk-t"><b>Semana 49</b> · desde el 13 sep 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-09-13"><span class="cr-d-f">Lun 13 sep 2027</span><span>2 × (600 + 400 m) a ritmo O: 1 min y 4 min</span></li>
+<li class="cr-d sua" data-fecha="2027-09-15"><span class="cr-d-f">Mié 15 sep 2027</span><span>45 min suave + 6 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-09-18"><span class="cr-d-f">Sáb 18 sep 2027</span><span>50 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="50"><p class="cr-wk-t"><b>Semana 50</b> · desde el 20 sep 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-09-20"><span class="cr-d-f">Lun 20 sep 2027</span><span>4 × 400 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-09-22"><span class="cr-d-f">Mié 22 sep 2027</span><span>25 min suave + 4 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-09-25"><span class="cr-d-f">Sáb 25 sep 2027</span><span>SIMULACRO: circuito, barra y 1.000 m</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="51"><p class="cr-wk-t"><b>Semana 51</b> · desde el 27 sep 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-09-27"><span class="cr-d-f">Lun 27 sep 2027</span><span>4 × 300 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-09-29"><span class="cr-d-f">Mié 29 sep 2027</span><span>30 min suave + 4 rectas</span></li>
+<li class="cr-d sua" data-fecha="2027-10-02"><span class="cr-d-f">Sáb 2 oct 2027</span><span>40 min suave</span></li>
+</ul></div>
+<div class="cr-wk" data-sem="52"><p class="cr-wk-t"><b>Semana 52</b> · desde el 4 oct 2027</p><ul>
+<li class="cr-d cal" data-fecha="2027-10-04"><span class="cr-d-f">Lun 4 oct 2027</span><span>3 × 300 m a ritmo O, rec. 2 min</span></li>
+<li class="cr-d sua" data-fecha="2027-10-06"><span class="cr-d-f">Mié 6 oct 2027</span><span>20 min suave + 4 rectas</span></li>
+<li class="cr-d ctl" data-fecha="2027-10-09"><span class="cr-d-f">Sáb 9 oct 2027</span><span>Prueba (fecha por confirmar)</span></li>
+</ul></div>
+</details>
+</section>
+<section id="ritmos" class="cr-sec"><h2>Ritmos</h2>
+<div class="aviso"><div><b>Sin control todavía.</b> Los ritmos salen del primer control de 1.000 m, el 21 nov en Arucas. Hasta entonces, todo por sensación.</div></div>
+<h3>Baremo del 1.000 m, mujeres</h3><div class="cr-bar" role="img" aria-label="Baremo del 1.000 m de mujeres">
+<div class="cr-tr" data-pts="10"><b>10</b><span class="num">3:24 o menos</span></div>
+<div class="cr-tr" data-pts="9"><b>9</b><span class="num">3:25-3:33</span></div>
+<div class="cr-tr" data-pts="8"><b>8</b><span class="num">3:34-3:42</span></div>
+<div class="cr-tr" data-pts="7"><b>7</b><span class="num">3:43-3:51</span></div>
+<div class="cr-tr" data-pts="6"><b>6</b><span class="num">3:52-4:00</span></div>
+<div class="cr-tr" data-pts="5"><b>5</b><span class="num">4:01-4:09</span></div>
+<div class="cr-tr" data-pts="4"><b>4</b><span class="num">4:10-4:18</span></div>
+<div class="cr-tr" data-pts="3"><b>3</b><span class="num">4:19-4:27</span></div>
+<div class="cr-tr" data-pts="2"><b>2</b><span class="num">4:28-4:36</span></div>
+<div class="cr-tr" data-pts="1"><b>1</b><span class="num">4:37-4:45</span></div>
+<div class="cr-tr elim" data-pts="0"><b>0</b><span class="num">4:46 o más</span><small>elimina</small></div>
+</div><p class="faint">En grupo, sobre superficie lisa, plana y dura. Calzado deportivo, sin clavos. Un solo intento. Salida de pie con «listo»… «ya». La nota física es la media de los tres ejercicios; hace falta un 5 de media y un 0 en cualquiera elimina. BOE-A-2026-15055 (convocatoria de la 43.ª), Anexo II, tercer ejercicio. Comprobado en boe.es el 11-10-2026. La convocatoria de 2027 no ha salido: se supone el mismo baremo.</p>
+</section>
+<section id="reglas" class="cr-sec"><h2>Reglas</h2>
+<div class="card flat cr-regla"><b>Lo suave, suave de verdad</b><p>Los rodajes suaves son la mayor parte del plan y lo que más te va a mejorar. Si un día vas ahogada, vas demasiado rápido: baja o anda un minuto.</p></div>
+<div class="card flat cr-regla"><b>Correr y andar</b><p>Escalones: 2:1 → 3:1 → 4:1 → 6:1 → 8:1 → seguido (minutos corriendo : andando). Se sube de escalón cuando el anterior sale entero, pudiendo hablar con frases y sin dolor al día siguiente. Si en la semana 6 aún no corres 20 min seguidos, la base se alarga.</p></div>
+<div class="card flat cr-regla"><b>El primer 200 no se regala</b><p>En series y controles, el primer 200 sale al ritmo de los demás. Salir a sprint es el error más caro del 1.000.</p></div>
+<div class="card flat cr-regla"><b>Regla de las dos repeticiones</b><p>Si dos repeticiones seguidas salen más de 3 s más lentas que el objetivo, se acaba la sesión: 10 min suaves y a casa.</p></div>
+<div class="card flat cr-regla"><b>Cómo se fijan los ritmos</b><p>Ritmo K: el mejor de tus dos últimos controles. K + 4: K más 4 s por cada 400. Umbral: K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15). Ritmo O (desde junio): K menos 2 s por cada 400. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada.</p></div>
+<div class="card flat cr-regla"><b>Dolor</b><p>Dolor de 0 a 10. Se puede correr con molestia de 3 o menos si no sube mientras corres y a la mañana siguiente está igual o mejor. Se para ese día si cambia tu forma de correr, si va a más o si pasa de 3. No se corre y se va al médico si te duele un punto concreto de un hueso al apretarlo con el dedo, al saltar a la pata coja o al andar, o si duele en reposo o de noche. Aquiles o talón rígidos los primeros pasos de la mañana, rodilla que duele al bajar escaleras o cadera que duele al tumbarte de lado: avisas ese día y la siguiente carrera es suave y más corta.</p></div>
+<div class="card flat cr-regla"><b>Si llegas cargada</b><p>Primero se toca el miércoles: todo suave, sin rectas ni cuestas; y si además hay molestia o dormiste mal, se quita. Si hace falta, el lunes se queda en 30 min suaves. Lo que se pierde no se recupera.</p></div>
+<div class="card flat cr-regla"><b>Sin día libre</b><p>Decidido el 11-10: el domingo sigue con CrossFit, así que no tienes ningún día sin entrenar. Eso es lo que más riesgo de lesión mete en el año, y se compensa así: el domingo, si puedes, sin piernas pesadas, porque el lunes toca la calidad. El viernes antes de un control, del simulacro o de la prueba, sin CrossFit, o sin piernas ni saltos. Si la larga del sábado es de 50 min o más, el CrossFit del viernes sin saltos. Y la regla «Si llegas cargada» se cumple siempre.</p></div>
+<div class="card flat cr-regla"><b>Elevaciones de talón</b><p>Después del rodaje del miércoles y de la larga del sábado: 3 × 15 elevaciones de talón a una pierna. Tres minutos que protegen el tendón de Aquiles y la tibia.</p></div>
+<div class="card flat cr-regla"><b>Comer y descansar</b><p>Come lo suficiente para entrenar; las calidades no se hacen en ayunas. Si la regla se vuelve irregular o falta tres meses, no es «normal por entrenar»: vas al médico. Si el cansancio no se va al descansar, también; que sea el médico quien decida si te pide una analítica. No tomes hierro por tu cuenta. Un día de regla malo cuenta como día malo: el control lleva asterisco.</p></div>
+<div class="card flat cr-regla"><b>Calor (julio y agosto)</b><p>En verano se corre al amanecer o al anochecer. Si AEMET avisa de calor o calima en tu zona, la calidad pasa a rodaje suave por sensación. Un control con calor no baja el ritmo K. Si corres más de 45 min con calor, llevas agua. Si te mareas, tienes náuseas o te duele la cabeza: paras, sombra y agua. Si hay confusión, 112.</p></div>
+<div class="card flat cr-regla"><b>Zapatillas de correr</b><p>Para correr, zapatillas de correr, no las de CrossFit. En los controles, las mismas que el día de la prueba: el BOE prohíbe los clavos.</p></div>
+<div class="card flat cr-regla"><b>Qué mandar después de cada sesión</b><p>El entreno del Apple Watch (ver Reloj) y una línea: cómo te has sentido de 1 a 10 y si algo te ha molestado. También del CrossFit y de Martín Freire: minutos y esfuerzo de 1 a 10. Si un WOD lleva carrera, apúntalo: cuenta como carrera.</p></div>
+<h3>Qué significa cada palabra</h3><dl class="cr-glo">
+<dt>Suave</dt><dd>Puedes hablar con frases enteras. Manda poder hablar, no el reloj.</dd>
+<dt>Correr y andar</dt><dd>Al principio, bloques de correr y andar: 2:1, 3:1, 4:1, 6:1, 8:1 y seguido. No es hacer trampa: es como se construye la base sin lesionarse.</dd>
+<dt>Rectas</dt><dd>80 m acelerando poco a poco hasta un ritmo rápido pero suelto, sin sprintar. Vuelves andando. Mejoran la zancada sin cansar.</dd>
+<dt>Cuestas</dt><dd>En una subida del 5 al 8 %: subir fuerte sin llegar a tope el tiempo que diga la sesión y bajar andando.</dd>
+<dt>Umbral</dt><dd>«Cómodamente duro»: frases cortas, no conversación. Su ritmo sale de tu ritmo K (ver Ritmos).</dd>
+<dt>Ritmo K</dt><dd>El mejor de tus dos últimos controles de 1.000 m. Por ejemplo, con 5:00, cada 400 en 2:00 y cada 200 en 1:00.</dd>
+<dt>Ritmo K + 4</dt><dd>4 s más lento por cada 400 que el ritmo K. Para series de 2-4 min.</dd>
+<dt>Ritmo O</dt><dd>El ritmo del objetivo del próximo control: K menos 2 s por cada 400. Desde junio.</dd>
+<dt>Descarga</dt><dd>La cuarta semana de cada bloque: menos carrera para llegar fresca al control del sábado.</dd>
+</dl><h3>El reloj (Apple Watch Series 10)</h3><ul class="cr-reloj">
+<li>Rodajes: app Entreno → Carrera al aire libre, con las zonas de frecuencia cardiaca en pantalla. Pero en lo suave manda poder hablar: las zonas automáticas salen de una máxima estimada y pueden fallar.</li>
+<li>Después del primer control, las zonas se pueden poner a mano (en la guía de Apple: Ajustes › Entreno › Zonas de frecuencia cardiaca › Manual; los nombres en español sin comprobar).</li>
+<li>Series: la app Entreno permite entrenos personalizados con calentamiento, series, recuperaciones y aviso de ritmo. En los controles manda el cronómetro, no el GPS.</li>
+<li>Mandar cada entreno por separado: lo ideal es un archivo .fit por entreno, exportado desde Salud con una app de iPhone (por ejemplo HealthFit; precio y versión sin comprobar). La exportación completa de la app Salud saca TODOS tus datos de salud: solo si no hay otra forma, y nunca se sube a ningún sitio.</li>
+</ul><p class="faint">El pulso de muñeca va con retraso en las series cortas y no vale en CrossFit ni en la barra: ahí manda el esfuerzo de 1 a 10.</p></section>
+<section id="registro" class="cr-sec"><h2>Registro</h2>
+<h3>Sesiones</h3><ul class="cr-reg">
+<li><b>10 oct</b> · Rodaje de 55 min con Daniel, antes de empezar el plan · Primer dato. Al ritmo de un rodaje suave de Daniel (él, 8:26/km), para ella fue un esfuerzo alto de principio a fin: no era suave. Ritmo irregular (de 7:57 a 9:35 por bloques de 5 min) y unos 2 min andando o parada. Confirma el arranque del plan: correr y andar, más despacio que este día. Los rodajes juntos, al ritmo de ella.</li>
+</ul>
+<h3>Pendiente</h3><ul class="cr-reg"><li>Primer control de 1.000 m el sábado 21-11 en Arucas: fija el ritmo K. Hasta entonces, todo por sensación.</li><li>Fecha de la prueba de 2027: cuando salga la convocatoria, recolocar las semanas finales.</li></ul>
+</section>
+<footer class="cr-pie faint">Plan de carrera hecho el 11 oct. Solo carrera: barra, circuito y CrossFit los lleva ella aparte.</footer>
+</main>
+<script>window.CR={"dias":[{"fecha":"2026-10-12","dia":"Lun","tipo":"suave","titulo":"7 × (2 min corriendo + 1 andando)","detalle":"Correr y andar: 7 veces 2 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas). Más despacio que el rodaje del 10-10 con Daniel: ese ritmo, para ti, no es suave.","sem":1,"fase":"F0"},{"fecha":"2026-10-13","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":1,"fase":"F0"},{"fecha":"2026-10-14","dia":"Mié","tipo":"suave","titulo":"6 × (3 min corriendo + 1 andando)","detalle":"Correr y andar: 6 veces 3 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas).","sem":1,"fase":"F0"},{"fecha":"2026-10-15","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":1,"fase":"F0"},{"fecha":"2026-10-16","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":1,"fase":"F0"},{"fecha":"2026-10-17","dia":"Sáb","tipo":"suave","titulo":"28 min: 7 × (3 min corriendo + 1 andando)","detalle":"La larga: 7 veces 3 min corriendo suave y 1 min andando. Si corres con Daniel, él va a tu ritmo, no tú al suyo. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":1,"fase":"F0"},{"fecha":"2026-10-18","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":1,"fase":"F0"},{"fecha":"2026-10-19","dia":"Lun","tipo":"suave","titulo":"6 × (3 min corriendo + 1 andando)","detalle":"Correr y andar: 6 veces 3 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas).","sem":2,"fase":"F0"},{"fecha":"2026-10-20","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":2,"fase":"F0"},{"fecha":"2026-10-21","dia":"Mié","tipo":"suave","titulo":"5 × (4 min corriendo + 1 andando)","detalle":"Correr y andar: 5 veces 4 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas).","sem":2,"fase":"F0"},{"fecha":"2026-10-22","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":2,"fase":"F0"},{"fecha":"2026-10-23","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":2,"fase":"F0"},{"fecha":"2026-10-24","dia":"Sáb","tipo":"suave","titulo":"28 min: correr y andar al escalón que toque","detalle":"La larga: 28 min con el escalón de correr y andar en el que estés (ver Reglas). Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":2,"fase":"F0"},{"fecha":"2026-10-25","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":2,"fase":"F0"},{"fecha":"2026-10-26","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 4 rectas.","sem":3,"fase":"F1"},{"fecha":"2026-10-27","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":3,"fase":"F1"},{"fecha":"2026-10-28","dia":"Mié","tipo":"suave","titulo":"25 min suave","detalle":"Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":3,"fase":"F1"},{"fecha":"2026-10-29","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":3,"fase":"F1"},{"fecha":"2026-10-30","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":3,"fase":"F1"},{"fecha":"2026-10-31","dia":"Sáb","tipo":"suave","titulo":"31 min suave","detalle":"La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":3,"fase":"F1"},{"fecha":"2026-11-01","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":3,"fase":"F1"},{"fecha":"2026-11-02","dia":"Lun","tipo":"suave","titulo":"28 min suave + 5 rectas","detalle":"Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 5 rectas.","sem":4,"fase":"F1"},{"fecha":"2026-11-03","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":4,"fase":"F1"},{"fecha":"2026-11-04","dia":"Mié","tipo":"suave","titulo":"28 min suave","detalle":"Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":4,"fase":"F1"},{"fecha":"2026-11-05","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":4,"fase":"F1"},{"fecha":"2026-11-06","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":4,"fase":"F1"},{"fecha":"2026-11-07","dia":"Sáb","tipo":"suave","titulo":"34 min suave","detalle":"La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":4,"fase":"F1"},{"fecha":"2026-11-08","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":4,"fase":"F1"},{"fecha":"2026-11-09","dia":"Lun","tipo":"suave","titulo":"30 min suave + 6 rectas","detalle":"Al final, 6 rectas.","sem":5,"fase":"F1"},{"fecha":"2026-11-10","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":5,"fase":"F1"},{"fecha":"2026-11-11","dia":"Mié","tipo":"suave","titulo":"30 min suave","detalle":"Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":5,"fase":"F1"},{"fecha":"2026-11-12","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":5,"fase":"F1"},{"fecha":"2026-11-13","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":5,"fase":"F1"},{"fecha":"2026-11-14","dia":"Sáb","tipo":"suave","titulo":"37 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":5,"fase":"F1"},{"fecha":"2026-11-15","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":5,"fase":"F1"},{"fecha":"2026-11-16","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Semana de descarga. Al final, 4 rectas.","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-17","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-18","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-19","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-20","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-21","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (1.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Tu primer tiempo de referencia: fija el ritmo K del bloque siguiente.","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-22","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":6,"fase":"F1","descarga":true},{"fecha":"2026-11-23","dia":"Lun","tipo":"suave","titulo":"30 min suave + 6 cuestas de 15 s","detalle":"Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando.","sem":7,"fase":"F1"},{"fecha":"2026-11-24","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":7,"fase":"F1"},{"fecha":"2026-11-25","dia":"Mié","tipo":"suave","titulo":"32 min suave","detalle":"Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":7,"fase":"F1"},{"fecha":"2026-11-26","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":7,"fase":"F1"},{"fecha":"2026-11-27","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":7,"fase":"F1"},{"fecha":"2026-11-28","dia":"Sáb","tipo":"suave","titulo":"40 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":7,"fase":"F1"},{"fecha":"2026-11-29","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":7,"fase":"F1"},{"fecha":"2026-11-30","dia":"Lun","tipo":"suave","titulo":"32 min suave + 8 cuestas de 15 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando.","sem":8,"fase":"F1"},{"fecha":"2026-12-01","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":8,"fase":"F1"},{"fecha":"2026-12-02","dia":"Mié","tipo":"suave","titulo":"35 min suave","detalle":"Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":8,"fase":"F1"},{"fecha":"2026-12-03","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":8,"fase":"F1"},{"fecha":"2026-12-04","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":8,"fase":"F1"},{"fecha":"2026-12-05","dia":"Sáb","tipo":"suave","titulo":"44 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":8,"fase":"F1"},{"fecha":"2026-12-06","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":8,"fase":"F1"},{"fecha":"2026-12-07","dia":"Lun","tipo":"suave","titulo":"35 min con 6 × (1 min alegre + 1 min suave)","detalle":"Fartlek: 10 min suaves, 6 veces 1 min a ritmo alegre (respiras fuerte pero controlas) y 1 min suave, y suave hasta el final.","sem":9,"fase":"F1"},{"fecha":"2026-12-08","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":9,"fase":"F1"},{"fecha":"2026-12-09","dia":"Mié","tipo":"suave","titulo":"35 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":9,"fase":"F1"},{"fecha":"2026-12-10","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":9,"fase":"F1"},{"fecha":"2026-12-11","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":9,"fase":"F1"},{"fecha":"2026-12-12","dia":"Sáb","tipo":"suave","titulo":"48 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":9,"fase":"F1"},{"fecha":"2026-12-13","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":9,"fase":"F1"},{"fecha":"2026-12-14","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Semana de descarga. Al final, 4 rectas.","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-15","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-16","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-17","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-18","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-19","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (2.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-20","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":10,"fase":"F1","descarga":true},{"fecha":"2026-12-21","dia":"Lun","tipo":"calidad","titulo":"6 × 2 min a ritmo K + 4, rec. 2 min trotando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":11,"fase":"F2"},{"fecha":"2026-12-22","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":11,"fase":"F2"},{"fecha":"2026-12-23","dia":"Mié","tipo":"suave","titulo":"30 min suave","detalle":"Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":11,"fase":"F2"},{"fecha":"2026-12-24","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":11,"fase":"F2"},{"fecha":"2026-12-25","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":11,"fase":"F2"},{"fecha":"2026-12-26","dia":"Sáb","tipo":"suave","titulo":"48 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":11,"fase":"F2"},{"fecha":"2026-12-27","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":11,"fase":"F2"},{"fecha":"2026-12-28","dia":"Lun","tipo":"calidad","titulo":"4 × 5 min a umbral, rec. 1 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave.","sem":12,"fase":"F2"},{"fecha":"2026-12-29","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":12,"fase":"F2"},{"fecha":"2026-12-30","dia":"Mié","tipo":"suave","titulo":"35 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":12,"fase":"F2"},{"fecha":"2026-12-31","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":12,"fase":"F2"},{"fecha":"2027-01-01","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":12,"fase":"F2"},{"fecha":"2027-01-02","dia":"Sáb","tipo":"suave","titulo":"52 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":12,"fase":"F2"},{"fecha":"2027-01-03","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":12,"fase":"F2"},{"fecha":"2027-01-04","dia":"Lun","tipo":"calidad","titulo":"8 × 2 min a ritmo K + 4, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":13,"fase":"F2"},{"fecha":"2027-01-05","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":13,"fase":"F2"},{"fecha":"2027-01-06","dia":"Mié","tipo":"suave","titulo":"38 min suave + 6 × 200 m a ritmo K","detalle":"Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":13,"fase":"F2"},{"fecha":"2027-01-07","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":13,"fase":"F2"},{"fecha":"2027-01-08","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":13,"fase":"F2"},{"fecha":"2027-01-09","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":13,"fase":"F2"},{"fecha":"2027-01-10","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":13,"fase":"F2"},{"fecha":"2027-01-11","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Semana de descarga. Al final, 4 rectas.","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-12","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-13","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-14","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-15","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-16","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (3.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-17","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":14,"fase":"F2","descarga":true},{"fecha":"2027-01-18","dia":"Lun","tipo":"calidad","titulo":"5 × 3 min a ritmo K + 4, rec. 2 min 30 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":15,"fase":"F2"},{"fecha":"2027-01-19","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":15,"fase":"F2"},{"fecha":"2027-01-20","dia":"Mié","tipo":"suave","titulo":"40 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":15,"fase":"F2"},{"fecha":"2027-01-21","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":15,"fase":"F2"},{"fecha":"2027-01-22","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":15,"fase":"F2"},{"fecha":"2027-01-23","dia":"Sáb","tipo":"suave","titulo":"58 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":15,"fase":"F2"},{"fecha":"2027-01-24","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":15,"fase":"F2"},{"fecha":"2027-01-25","dia":"Lun","tipo":"calidad","titulo":"3 × 8 min a umbral, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave.","sem":16,"fase":"F2"},{"fecha":"2027-01-26","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":16,"fase":"F2"},{"fecha":"2027-01-27","dia":"Mié","tipo":"suave","titulo":"40 min suave + 6 × 200 m a ritmo K","detalle":"Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":16,"fase":"F2"},{"fecha":"2027-01-28","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":16,"fase":"F2"},{"fecha":"2027-01-29","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":16,"fase":"F2"},{"fecha":"2027-01-30","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":16,"fase":"F2"},{"fecha":"2027-01-31","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":16,"fase":"F2"},{"fecha":"2027-02-01","dia":"Lun","tipo":"calidad","titulo":"6 × 3 min a ritmo K + 4, rec. 2 min 30 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":17,"fase":"F2"},{"fecha":"2027-02-02","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":17,"fase":"F2"},{"fecha":"2027-02-03","dia":"Mié","tipo":"suave","titulo":"40 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":17,"fase":"F2"},{"fecha":"2027-02-04","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":17,"fase":"F2"},{"fecha":"2027-02-05","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":17,"fase":"F2"},{"fecha":"2027-02-06","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":17,"fase":"F2"},{"fecha":"2027-02-07","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":17,"fase":"F2"},{"fecha":"2027-02-08","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Semana de descarga. Al final, 4 rectas.","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-09","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-10","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-11","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-12","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-13","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (4.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-14","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":18,"fase":"F2","descarga":true},{"fecha":"2027-02-15","dia":"Lun","tipo":"calidad","titulo":"6 × 400 m a ritmo K, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las seis dentro de 3 s del objetivo.","sem":19,"fase":"F2"},{"fecha":"2027-02-16","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":19,"fase":"F2"},{"fecha":"2027-02-17","dia":"Mié","tipo":"suave","titulo":"45 min suave + 6 × 200 m a ritmo K","detalle":"Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":19,"fase":"F2"},{"fecha":"2027-02-18","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":19,"fase":"F2"},{"fecha":"2027-02-19","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":19,"fase":"F2"},{"fecha":"2027-02-20","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":19,"fase":"F2"},{"fecha":"2027-02-21","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":19,"fase":"F2"},{"fecha":"2027-02-22","dia":"Lun","tipo":"calidad","titulo":"2 × 12 min a umbral, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave.","sem":20,"fase":"F2"},{"fecha":"2027-02-23","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":20,"fase":"F2"},{"fecha":"2027-02-24","dia":"Mié","tipo":"suave","titulo":"45 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":20,"fase":"F2"},{"fecha":"2027-02-25","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":20,"fase":"F2"},{"fecha":"2027-02-26","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":20,"fase":"F2"},{"fecha":"2027-02-27","dia":"Sáb","tipo":"suave","titulo":"62 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":20,"fase":"F2"},{"fecha":"2027-02-28","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":20,"fase":"F2"},{"fecha":"2027-03-01","dia":"Lun","tipo":"calidad","titulo":"4 × 600 m a ritmo K, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las cuatro dentro de 3 s del objetivo.","sem":21,"fase":"F2"},{"fecha":"2027-03-02","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":21,"fase":"F2"},{"fecha":"2027-03-03","dia":"Mié","tipo":"suave","titulo":"45 min suave + 6 × 200 m a ritmo K","detalle":"Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":21,"fase":"F2"},{"fecha":"2027-03-04","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":21,"fase":"F2"},{"fecha":"2027-03-05","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":21,"fase":"F2"},{"fecha":"2027-03-06","dia":"Sáb","tipo":"suave","titulo":"65 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":21,"fase":"F2"},{"fecha":"2027-03-07","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":21,"fase":"F2"},{"fecha":"2027-03-08","dia":"Lun","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Semana de descarga. Al final, 4 rectas.","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-09","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-10","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-11","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-12","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-13","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (5.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-14","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":22,"fase":"F2","descarga":true},{"fecha":"2027-03-15","dia":"Lun","tipo":"calidad","titulo":"6 × 400 m a ritmo K, rec. 2 min trotando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las seis dentro de 3 s del objetivo.","sem":23,"fase":"F3"},{"fecha":"2027-03-16","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":23,"fase":"F3"},{"fecha":"2027-03-17","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":23,"fase":"F3"},{"fecha":"2027-03-18","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":23,"fase":"F3"},{"fecha":"2027-03-19","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":23,"fase":"F3"},{"fecha":"2027-03-20","dia":"Sáb","tipo":"suave","titulo":"65 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":23,"fase":"F3"},{"fecha":"2027-03-21","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":23,"fase":"F3"},{"fecha":"2027-03-22","dia":"Lun","tipo":"calidad","titulo":"4 × 600 m a ritmo K, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las cuatro dentro de 3 s del objetivo.","sem":24,"fase":"F3"},{"fecha":"2027-03-23","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":24,"fase":"F3"},{"fecha":"2027-03-24","dia":"Mié","tipo":"calidad","titulo":"2 × 8 min a umbral + 15 min suave","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave.","sem":24,"fase":"F3"},{"fecha":"2027-03-25","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":24,"fase":"F3"},{"fecha":"2027-03-26","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":24,"fase":"F3"},{"fecha":"2027-03-27","dia":"Sáb","tipo":"suave","titulo":"65 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":24,"fase":"F3"},{"fecha":"2027-03-28","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":24,"fase":"F3"},{"fecha":"2027-03-29","dia":"Lun","tipo":"calidad","titulo":"4 × 800 m a ritmo K + 4, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las cuatro dentro de 4 s del objetivo.","sem":25,"fase":"F3"},{"fecha":"2027-03-30","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":25,"fase":"F3"},{"fecha":"2027-03-31","dia":"Mié","tipo":"suave","titulo":"50 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":25,"fase":"F3"},{"fecha":"2027-04-01","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":25,"fase":"F3"},{"fecha":"2027-04-02","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":25,"fase":"F3"},{"fecha":"2027-04-03","dia":"Sáb","tipo":"suave","titulo":"65 min: suave y los 10 últimos alegres","detalle":"La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":25,"fase":"F3"},{"fecha":"2027-04-04","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":25,"fase":"F3"},{"fecha":"2027-04-05","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo K, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-06","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-07","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-08","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-09","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-10","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (6.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-11","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":26,"fase":"F3","descarga":true},{"fecha":"2027-04-12","dia":"Lun","tipo":"calidad","titulo":"6 × 400 m a ritmo K, rec. 1 min 45 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","objetivo":"Misma velocidad que en marzo, algo menos de descanso.","sem":27,"fase":"F3"},{"fecha":"2027-04-13","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":27,"fase":"F3"},{"fecha":"2027-04-14","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":27,"fase":"F3"},{"fecha":"2027-04-15","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":27,"fase":"F3"},{"fecha":"2027-04-16","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":27,"fase":"F3"},{"fecha":"2027-04-17","dia":"Sáb","tipo":"suave","titulo":"65 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":27,"fase":"F3"},{"fecha":"2027-04-18","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":27,"fase":"F3"},{"fecha":"2027-04-19","dia":"Lun","tipo":"calidad","titulo":"5 × 600 m a ritmo K, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","sem":28,"fase":"F3"},{"fecha":"2027-04-20","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":28,"fase":"F3"},{"fecha":"2027-04-21","dia":"Mié","tipo":"calidad","titulo":"2 × 8 min a umbral + 15 min suave","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave.","sem":28,"fase":"F3"},{"fecha":"2027-04-22","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":28,"fase":"F3"},{"fecha":"2027-04-23","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":28,"fase":"F3"},{"fecha":"2027-04-24","dia":"Sáb","tipo":"suave","titulo":"68 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":28,"fase":"F3"},{"fecha":"2027-04-25","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":28,"fase":"F3"},{"fecha":"2027-04-26","dia":"Lun","tipo":"calidad","titulo":"5 × 800 m a ritmo K + 4, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":29,"fase":"F3"},{"fecha":"2027-04-27","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":29,"fase":"F3"},{"fecha":"2027-04-28","dia":"Mié","tipo":"suave","titulo":"50 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":29,"fase":"F3"},{"fecha":"2027-04-29","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":29,"fase":"F3"},{"fecha":"2027-04-30","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":29,"fase":"F3"},{"fecha":"2027-05-01","dia":"Sáb","tipo":"suave","titulo":"70 min: suave y los 10 últimos alegres","detalle":"La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":29,"fase":"F3"},{"fecha":"2027-05-02","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":29,"fase":"F3"},{"fecha":"2027-05-03","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo K, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-04","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-05","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-06","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-07","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-08","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (7.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-09","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":30,"fase":"F3","descarga":true},{"fecha":"2027-05-10","dia":"Lun","tipo":"calidad","titulo":"3 × 1.000 m a ritmo K + 4, rec. 4 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.","sem":31,"fase":"F3"},{"fecha":"2027-05-11","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":31,"fase":"F3"},{"fecha":"2027-05-12","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":31,"fase":"F3"},{"fecha":"2027-05-13","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":31,"fase":"F3"},{"fecha":"2027-05-14","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":31,"fase":"F3"},{"fecha":"2027-05-15","dia":"Sáb","tipo":"suave","titulo":"65 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":31,"fase":"F3"},{"fecha":"2027-05-16","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":31,"fase":"F3"},{"fecha":"2027-05-17","dia":"Lun","tipo":"calidad","titulo":"6 × 400 m a ritmo K, rec. 1 min 30 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","sem":32,"fase":"F3"},{"fecha":"2027-05-18","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":32,"fase":"F3"},{"fecha":"2027-05-19","dia":"Mié","tipo":"calidad","titulo":"2 × 10 min a umbral + 15 min suave","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave.","sem":32,"fase":"F3"},{"fecha":"2027-05-20","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":32,"fase":"F3"},{"fecha":"2027-05-21","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":32,"fase":"F3"},{"fecha":"2027-05-22","dia":"Sáb","tipo":"suave","titulo":"68 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":32,"fase":"F3"},{"fecha":"2027-05-23","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":32,"fase":"F3"},{"fecha":"2027-05-24","dia":"Lun","tipo":"calidad","titulo":"5 × 600 m a ritmo K, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.","sem":33,"fase":"F3"},{"fecha":"2027-05-25","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":33,"fase":"F3"},{"fecha":"2027-05-26","dia":"Mié","tipo":"suave","titulo":"50 min suave + 8 cuestas de 20 s","detalle":"Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":33,"fase":"F3"},{"fecha":"2027-05-27","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":33,"fase":"F3"},{"fecha":"2027-05-28","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":33,"fase":"F3"},{"fecha":"2027-05-29","dia":"Sáb","tipo":"suave","titulo":"70 min: suave y los 10 últimos alegres","detalle":"La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":33,"fase":"F3"},{"fecha":"2027-05-30","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":33,"fase":"F3"},{"fecha":"2027-05-31","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo K, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-01","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-02","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-03","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-04","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-05","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (8.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-06","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":34,"fase":"F3","descarga":true},{"fecha":"2027-06-07","dia":"Lun","tipo":"calidad","titulo":"5 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las cinco dentro de 3 s del objetivo.","sem":35,"fase":"F4"},{"fecha":"2027-06-08","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":35,"fase":"F4"},{"fecha":"2027-06-09","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":35,"fase":"F4"},{"fecha":"2027-06-10","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":35,"fase":"F4"},{"fecha":"2027-06-11","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":35,"fase":"F4"},{"fecha":"2027-06-12","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":35,"fase":"F4"},{"fecha":"2027-06-13","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":35,"fase":"F4"},{"fecha":"2027-06-14","dia":"Lun","tipo":"calidad","titulo":"3 × 600 m a ritmo O, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","objetivo":"Las tres dentro de 3 s del objetivo.","sem":36,"fase":"F4"},{"fecha":"2027-06-15","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":36,"fase":"F4"},{"fecha":"2027-06-16","dia":"Mié","tipo":"calidad","titulo":"8 × 200 m rápidos, rec. 200 m andando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave.","sem":36,"fase":"F4"},{"fecha":"2027-06-17","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":36,"fase":"F4"},{"fecha":"2027-06-18","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":36,"fase":"F4"},{"fecha":"2027-06-19","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":36,"fase":"F4"},{"fecha":"2027-06-20","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":36,"fase":"F4"},{"fecha":"2027-06-21","dia":"Lun","tipo":"calidad","titulo":"2 × (600 + 400 m) a ritmo O: 1 min entre el 600 y el 400, 5 min entre las dos","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Es el kilómetro partido. Después, 10 min muy suave.","sem":37,"fase":"F4"},{"fecha":"2027-06-22","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":37,"fase":"F4"},{"fecha":"2027-06-23","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":37,"fase":"F4"},{"fecha":"2027-06-24","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":37,"fase":"F4"},{"fecha":"2027-06-25","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":37,"fase":"F4"},{"fecha":"2027-06-26","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":37,"fase":"F4"},{"fecha":"2027-06-27","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":37,"fase":"F4"},{"fecha":"2027-06-28","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-06-29","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-06-30","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-07-01","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-07-02","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-07-03","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (9.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-07-04","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":38,"fase":"F4","descarga":true},{"fecha":"2027-07-05","dia":"Lun","tipo":"calidad","titulo":"6 × 400 m a ritmo O, rec. 1 min 45 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":39,"fase":"F4"},{"fecha":"2027-07-06","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":39,"fase":"F4"},{"fecha":"2027-07-07","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":39,"fase":"F4"},{"fecha":"2027-07-08","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":39,"fase":"F4"},{"fecha":"2027-07-09","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":39,"fase":"F4"},{"fecha":"2027-07-10","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":39,"fase":"F4"},{"fecha":"2027-07-11","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":39,"fase":"F4"},{"fecha":"2027-07-12","dia":"Lun","tipo":"calidad","titulo":"3 × 600 m a ritmo O, rec. 2 min 30 s + 2 × 200 m rápidos","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":40,"fase":"F4"},{"fecha":"2027-07-13","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":40,"fase":"F4"},{"fecha":"2027-07-14","dia":"Mié","tipo":"calidad","titulo":"8 × 200 m rápidos, rec. 200 m andando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave.","sem":40,"fase":"F4"},{"fecha":"2027-07-15","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":40,"fase":"F4"},{"fecha":"2027-07-16","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":40,"fase":"F4"},{"fecha":"2027-07-17","dia":"Sáb","tipo":"suave","titulo":"60 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":40,"fase":"F4"},{"fecha":"2027-07-18","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":40,"fase":"F4"},{"fecha":"2027-07-19","dia":"Lun","tipo":"calidad","titulo":"2 × (600 + 400 m) a ritmo O: 1 min y 4 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":41,"fase":"F4"},{"fecha":"2027-07-20","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":41,"fase":"F4"},{"fecha":"2027-07-21","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":41,"fase":"F4"},{"fecha":"2027-07-22","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":41,"fase":"F4"},{"fecha":"2027-07-23","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":41,"fase":"F4"},{"fecha":"2027-07-24","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":41,"fase":"F4"},{"fecha":"2027-07-25","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":41,"fase":"F4"},{"fecha":"2027-07-26","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-07-27","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-07-28","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-07-29","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-07-30","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-07-31","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (10.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-08-01","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":42,"fase":"F4","descarga":true},{"fecha":"2027-08-02","dia":"Lun","tipo":"calidad","titulo":"5 × 400 m a ritmo O, rec. 1 min 30 s","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":43,"fase":"F4"},{"fecha":"2027-08-03","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":43,"fase":"F4"},{"fecha":"2027-08-04","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":43,"fase":"F4"},{"fecha":"2027-08-05","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":43,"fase":"F4"},{"fecha":"2027-08-06","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":43,"fase":"F4"},{"fecha":"2027-08-07","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":43,"fase":"F4"},{"fecha":"2027-08-08","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":43,"fase":"F4"},{"fecha":"2027-08-09","dia":"Lun","tipo":"calidad","titulo":"2 × 600 m a ritmo O, rec. 3 min + 3 × 200 m rápidos","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":44,"fase":"F4"},{"fecha":"2027-08-10","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":44,"fase":"F4"},{"fecha":"2027-08-11","dia":"Mié","tipo":"calidad","titulo":"8 × 200 m rápidos, rec. 200 m andando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave.","sem":44,"fase":"F4"},{"fecha":"2027-08-12","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":44,"fase":"F4"},{"fecha":"2027-08-13","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":44,"fase":"F4"},{"fecha":"2027-08-14","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":44,"fase":"F4"},{"fecha":"2027-08-15","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":44,"fase":"F4"},{"fecha":"2027-08-16","dia":"Lun","tipo":"calidad","titulo":"2 × (600 + 400 m) a ritmo O: 1 min y 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":45,"fase":"F4"},{"fecha":"2027-08-17","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":45,"fase":"F4"},{"fecha":"2027-08-18","dia":"Mié","tipo":"suave","titulo":"50 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":45,"fase":"F4"},{"fecha":"2027-08-19","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":45,"fase":"F4"},{"fecha":"2027-08-20","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":45,"fase":"F4"},{"fecha":"2027-08-21","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":45,"fase":"F4"},{"fecha":"2027-08-22","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":45,"fase":"F4"},{"fecha":"2027-08-23","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave.","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-24","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-25","dia":"Mié","tipo":"suave","titulo":"20 min suave + 3 rectas","detalle":"Al final, 3 rectas.","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-26","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-27","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-28","dia":"Sáb","tipo":"control","titulo":"Control de 1.000 m (11.º)","detalle":"En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.","objetivo":"Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos).","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-29","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":46,"fase":"F4","descarga":true},{"fecha":"2027-08-30","dia":"Lun","tipo":"calidad","titulo":"5 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":47,"fase":"F5"},{"fecha":"2027-08-31","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":47,"fase":"F5"},{"fecha":"2027-09-01","dia":"Mié","tipo":"calidad","titulo":"8 × 200 m rápidos, rec. 200 m andando","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave.","sem":47,"fase":"F5"},{"fecha":"2027-09-02","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":47,"fase":"F5"},{"fecha":"2027-09-03","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":47,"fase":"F5"},{"fecha":"2027-09-04","dia":"Sáb","tipo":"suave","titulo":"55 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":47,"fase":"F5"},{"fecha":"2027-09-05","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":47,"fase":"F5"},{"fecha":"2027-09-06","dia":"Lun","tipo":"calidad","titulo":"3 × 600 m a ritmo O, rec. 3 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":48,"fase":"F5"},{"fecha":"2027-09-07","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":48,"fase":"F5"},{"fecha":"2027-09-08","dia":"Mié","tipo":"suave","titulo":"45 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":48,"fase":"F5"},{"fecha":"2027-09-09","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":48,"fase":"F5"},{"fecha":"2027-09-10","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":48,"fase":"F5"},{"fecha":"2027-09-11","dia":"Sáb","tipo":"suave","titulo":"50 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":48,"fase":"F5"},{"fecha":"2027-09-12","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":48,"fase":"F5"},{"fecha":"2027-09-13","dia":"Lun","tipo":"calidad","titulo":"2 × (600 + 400 m) a ritmo O: 1 min y 4 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":49,"fase":"F5"},{"fecha":"2027-09-14","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":49,"fase":"F5"},{"fecha":"2027-09-15","dia":"Mié","tipo":"suave","titulo":"45 min suave + 6 rectas","detalle":"Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":49,"fase":"F5"},{"fecha":"2027-09-16","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":49,"fase":"F5"},{"fecha":"2027-09-17","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":49,"fase":"F5"},{"fecha":"2027-09-18","dia":"Sáb","tipo":"suave","titulo":"50 min suave","detalle":"La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna.","sem":49,"fase":"F5"},{"fecha":"2027-09-19","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":49,"fase":"F5"},{"fecha":"2027-09-20","dia":"Lun","tipo":"calidad","titulo":"4 × 400 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":50,"fase":"F5"},{"fecha":"2027-09-21","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":50,"fase":"F5"},{"fecha":"2027-09-22","dia":"Mié","tipo":"suave","titulo":"25 min suave + 4 rectas","detalle":"Al final, 4 rectas.","sem":50,"fase":"F5"},{"fecha":"2027-09-23","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":50,"fase":"F5"},{"fecha":"2027-09-24","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":50,"fase":"F5"},{"fecha":"2027-09-25","dia":"Sáb","tipo":"control","titulo":"SIMULACRO: circuito, barra y 1.000 m","detalle":"En el orden del BOE: circuito, barra y 1.000 m, con los descansos que te den. Calentamiento: 15 min suave + movilidad + 4 rectas. Después, 10 min muy suave. El viernes antes, descanso.","objetivo":"El último dato antes de la prueba. Decide el ritmo de la última semana.","sem":50,"fase":"F5"},{"fecha":"2027-09-26","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":50,"fase":"F5"},{"fecha":"2027-09-27","dia":"Lun","tipo":"calidad","titulo":"4 × 300 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":51,"fase":"F5"},{"fecha":"2027-09-28","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":51,"fase":"F5"},{"fecha":"2027-09-29","dia":"Mié","tipo":"suave","titulo":"30 min suave + 4 rectas","detalle":"Al final, 4 rectas.","sem":51,"fase":"F5"},{"fecha":"2027-09-30","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":51,"fase":"F5"},{"fecha":"2027-10-01","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":51,"fase":"F5"},{"fecha":"2027-10-02","dia":"Sáb","tipo":"suave","titulo":"40 min suave","detalle":"Suave, sin nada más.","sem":51,"fase":"F5"},{"fecha":"2027-10-03","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":51,"fase":"F5"},{"fecha":"2027-10-04","dia":"Lun","tipo":"calidad","titulo":"3 × 300 m a ritmo O, rec. 2 min","detalle":"Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.","sem":52,"fase":"F5"},{"fecha":"2027-10-05","dia":"Mar","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":52,"fase":"F5"},{"fecha":"2027-10-06","dia":"Mié","tipo":"suave","titulo":"20 min suave + 4 rectas","detalle":"Al final, 4 rectas.","sem":52,"fase":"F5"},{"fecha":"2027-10-07","dia":"Jue","tipo":"otro","titulo":"Martín Freire: barra y circuito","sem":52,"fase":"F5"},{"fecha":"2027-10-08","dia":"Vie","tipo":"otro","titulo":"CrossFit","sem":52,"fase":"F5"},{"fecha":"2027-10-09","dia":"Sáb","tipo":"prueba","titulo":"Prueba (fecha por confirmar)","detalle":"La fecha real la fija la convocatoria de 2027. Cuando salga, se recolocan las semanas finales. El viernes antes, descanso.","sem":52,"fase":"F5"},{"fecha":"2027-10-10","dia":"Dom","tipo":"otro","titulo":"CrossFit","sem":52,"fase":"F5"}],"fases":[{"id":"F0","nombre":"Evaluación","desde":1,"hasta":2,"objetivo":"Correr y andar, y tu primer 1.000: saber de dónde partes."},{"id":"F1","nombre":"Base: correr seguido","desde":3,"hasta":10,"objetivo":"Llegar a correr 35-48 min seguidos y suave. Es lo que más mejora el 1.000 al principio."},{"id":"F2","nombre":"Base II: primeros intervalos","desde":11,"hasta":22,"objetivo":"Intervalos cortos cerca del ritmo de la prueba, algo de umbral y la larga a 60-65 min."},{"id":"F3","nombre":"Potencia aeróbica","desde":23,"hasta":34,"objetivo":"Series de 400 a 1.000 m a ritmo K y K + 4: subir el techo."},{"id":"F4","nombre":"Ritmo del examen","desde":35,"hasta":46,"objetivo":"Series al ritmo objetivo y 200 rápidos: aprender a sostener el ritmo del 1.000."},{"id":"F5","nombre":"Afinado","desde":47,"hasta":52,"objetivo":"Simulacro y llegar fresca a la prueba."}],"hechos":{"2026-10-10":{"hecho":true,"resumen":"55 min · 6,2 km · 8:54/km"}},"prueba":"2027-10-09"};</script>
+<script>
+/* Página de Cristina: Hoy, la semana y la cuenta atrás. Los datos van en window.CR (construir.py). */
+(function () {
+  var D = window.CR || { dias: [] };
+  var POR = {};
+  D.dias.forEach(function (d) { POR[d.fecha] = d; });
+  function iso(dt) { return dt.getFullYear() + '-' + ('0' + (dt.getMonth() + 1)).slice(-2) + '-' + ('0' + dt.getDate()).slice(-2); }
+  function deIso(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function mas(s, n) { var d = deIso(s); d.setDate(d.getDate() + n); return iso(d); }
+  var q = /[?&]hoy=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+  var HOY = q ? q[1] : iso(new Date());
+  var MES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  var DSEM = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  function largo(s) { var d = deIso(s); return DSEM[d.getDay()] + ' ' + d.getDate() + ' de ' + MES[d.getMonth()]; }
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function corre(d) { return d && d.tipo && d.tipo !== 'otro'; }
+
+  /* ---------- Hoy ---------- */
+  var caja = document.getElementById('cr-hoy');
+  var d = POR[HOY];
+  var primero = D.dias.length ? D.dias[0].fecha : null;
+  var h = [];
+  if (!d) {
+    if (primero && HOY < primero) { d = POR[primero]; h.push('<p class="cr-h-f">El plan empieza el ' + esc(largo(primero)) + '</p>'); }
+    else h.push('<p class="cr-h-f">' + esc(largo(HOY)) + '</p><p class="cr-h-t">Fuera del plan</p><p>El plan termina con la prueba de 2027.</p>');
+  } else {
+    h.push('<p class="cr-h-f">Hoy · ' + esc(largo(HOY)) + ' · semana ' + d.sem + (d.descarga ? ' · descarga' : '') + '</p>');
+  }
+  if (d && corre(d)) {
+    var hecho = (D.hechos || {})[d.fecha];
+    caja.className = 'card cr-hoy' + (d.tipo === 'control' || d.tipo === 'prueba' ? ' ctl' : '');
+    h.push('<p class="cr-h-t">' + esc(d.titulo) + '</p>');
+    if (d.detalle) h.push('<p class="cr-h-d">' + esc(d.detalle) + '</p>');
+    if (d.objetivo) h.push('<p class="cr-h-o">' + esc(d.objetivo) + '</p>');
+    if (hecho) h.push('<p class="cr-h-sig"><b>' + (hecho.hecho === false ? 'No hecho' : 'Hecho') + '</b>' + (hecho.resumen ? ' · ' + esc(hecho.resumen) : '') + '</p>');
+  } else if (d) {
+    h.push('<p class="cr-h-t">' + esc(d.titulo) + '</p><p class="muted">No es de este plan: hoy no se corre.</p>');
+    var f = d.fecha;
+    for (var i = 1; i < 8; i++) { var n = POR[mas(f, i)]; if (corre(n)) { h.push('<p class="cr-h-sig">Próxima carrera, el ' + esc(largo(n.fecha)) + ': <b>' + esc(n.titulo) + '</b></p>'); break; } }
+  }
+  caja.innerHTML = h.join('');
+
+  /* ---------- la semana ---------- */
+  var sem = document.getElementById('cr-semana');
+  var base = deIso(d ? d.fecha : HOY), lun = new Date(base); lun.setDate(base.getDate() - ((base.getDay() + 6) % 7));
+  var LETRA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'], s = [];
+  for (var k = 0; k < 7; k++) {
+    var dd = new Date(lun); dd.setDate(lun.getDate() + k);
+    var f2 = iso(dd), x = POR[f2];
+    var cls = !x ? '' : (x.tipo === 'otro' ? 'otro' : (x.tipo === 'control' || x.tipo === 'prueba' ? 'corre ctl' : 'corre'));
+    var lab = !x ? '' : (x.tipo === 'otro' ? (/CrossFit/.test(x.titulo) ? 'CrossFit' : 'Barra') : (x.tipo === 'control' ? 'Control' : (x.tipo === 'calidad' ? 'Series' : 'Suave')));
+    s.push('<a href="?hoy=' + f2 + '#hoy" class="' + cls + '"' + (f2 === HOY ? ' aria-current="date"' : '') + '><span>' + LETRA[k] + '</span><b>' + dd.getDate() + '</b><span>' + lab + '</span></a>');
+  }
+  sem.innerHTML = s.join('');
+
+  /* ---------- cuenta atrás y fase de ahora ---------- */
+  var cu = document.getElementById('cr-cuenta');
+  if (D.prueba) {
+    var dias = Math.round((deIso(D.prueba) - deIso(HOY)) / 864e5);
+    if (dias >= 0) cu.textContent = 'Quedan unos ' + dias + ' días hasta la prueba (fecha supuesta: 9 de octubre de 2027).';
+  }
+  if (d) {
+    document.querySelectorAll('[data-fase="' + d.fase + '"]').forEach(function (el) {
+      if (el.tagName === 'DETAILS') el.open = true; else el.classList.add('ahora');
+    });
+    var li = document.querySelector('.cr-d[data-fecha="' + d.fecha + '"]');
+    if (li) li.classList.add('hoy');
+  }
+})();
+
+</script>
+</body>
+</html>

@@ -582,14 +582,14 @@
     if (!s || (!s.banda && (s.min === null || s.min === undefined))) return null;
     var min = s.min !== null && s.min !== undefined && isFinite(s.min) ? +s.min : null;
     var banda = s.banda || (min !== null && PC.sem && PC.sem.bandaDeMin ? PC.sem.bandaDeMin(min) : null);
-    return { banda: banda, min: min };
+    return { banda: banda, min: min, asterisco: !!s.asterisco };
   }
   var NBANDA = { verde: 'verde', ambar: 'ámbar', rojo: 'rojo' };
   herr.cirResumen = function (fecha) {
     var o = herr.cir(fecha); if (!o) return null;
     var C = cirCalc(o), S = suenoDe(fecha);
     C.banda = S ? S.banda : null; C.min = S ? S.min : null;
-    C.asterisco = !!(S && S.banda && S.banda !== 'verde');
+    C.asterisco = !!(S && S.asterisco);
     var partes = arr(o.intentos).map(function (x, i) {
       if (!x) return null;
       if (x.nulo) return 'intento ' + (i + 1) + ': nulo' + (x.motivo ? ' (' + x.motivo + ')' : '');

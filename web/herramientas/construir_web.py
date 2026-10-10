@@ -741,9 +741,10 @@ def _k9(P, H, W, C, D):
 
 
 def _k10(P, H, W, C, D):
+    # desde el 10-10 no hay semáforo: los síntomas por encima del cuello ponen el asterisco
     t = _txt((por_id(P.get('reglas'), 'dia-torcido') or {}).get('texto'))
-    if not re.search(r'(?i)encima del cuello[^.]*(rojo|verde|ámbar)', t):
-        return 'el semáforo no fija color para los síntomas por encima del cuello'
+    if not re.search(r'(?i)asterisco[^.]*encima del cuello|encima del cuello[^.]*asterisco', t):
+        return 'la regla no dice qué pasa con los síntomas por encima del cuello'
 
 
 def _k11(P, H, W, C, D):
@@ -813,7 +814,7 @@ K_REGLAS = [
     ('K7', 'Ficha del simulacro frente al circuito del jueves anterior', _k7),
     ('K8', 'Pista del atleta frente a la pista vigente', _k8),
     ('K9', 'Recuperación de las series cortas: andando o al trote', _k9),
-    ('K10', 'Color del semáforo con síntomas por encima del cuello', _k10),
+    ('K10', 'Qué pasa con síntomas por encima del cuello (desde el 10-10, asterisco)', _k10),
     ('K11', 'Cifras de carga sin fuente en el historial', _k11),
     ('K12', 'Relatos y causas: publicados o retenidos', _k12),
     ('K13', 'Inicio del bloque A', _k13),
@@ -1128,14 +1129,16 @@ def construir(plan, historial, web, campos, hoy=None, aceptar=None, **_):
         controles.append({'fecha': ventana['desde'], 'hasta': ventana['hasta'], 'titulo': 'Prueba', 'prueba': True})
     controles.sort(key=lambda c: c['fecha'])
 
-    # 12 · noches (cortes del semáforo: 6h30 y 5h00, literales de reglas[dia-torcido])
+    # 12 · noches (desde el 10-10: 5h00 pone el asterisco, literal de reglas[dia-torcido];
+    #      6h30 es el corte de la siesta, literal de reglas[dormir])
     dt_txt = _txt((por_id(P.get('reglas'), 'dia-torcido') or {}).get('texto'))
-    mv = re.search(r'VERDE \((\d+h\d{2}) o más', dt_txt)
-    mr = re.search(r'ROJO \(menos de (\d+h\d{2})', dt_txt)
+    do_txt = _txt((por_id(P.get('reglas'), 'dormir') or {}).get('texto'))
+    mv = re.search(r'noche de menos de (\d+h\d{2})', do_txt)
+    mr = re.search(r'noche de menos de (\d+h\d{2})', dt_txt)
     c_verde = minutos_sueno(mv.group(1)) if mv else None
     c_rojo = minutos_sueno(mr.group(1)) if mr else None
     if c_verde is None or c_rojo is None:
-        errores.append('reglas[dia-torcido]: no encuentro los cortes «VERDE (…h… o más» y «ROJO (menos de …h…»')
+        errores.append('reglas: no encuentro los cortes «noche de menos de …h…» en dormir (6h30) y en dia-torcido (5h00)')
     noches = []
     for n in sorted((x for x in H.get('sueno') or [] if '/' not in x.get('fecha', '')), key=lambda x: x['fecha']):
         mn = n.get('min')

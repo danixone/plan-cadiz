@@ -44,7 +44,7 @@ La nota es la media de las tres. Hace falta un 5 de media y **ningún cero**. **
 
 Cuando te pase un archivo de entrenamiento, ejecuta esto entero sin que te lo pidan.
 
-**Esto vale para todo lo que me mande, no solo para los archivos de carrera:** archivos `.fit`, `.zip` o `.tcx`, los `.csv` de sueño, VFC y VO2max, el texto de «Copiar para el entrenador» de la web (semáforo, tiempos, codo y hombro, talón y cintillo, intentos del circuito, dominadas contadas y válidas), capturas del reloj o de Garmin Connect (estado de entrenamiento, foco de carga, predisposición, recuperación, VFC) y cualquier otro dato. Cada envío se analiza de forma minuciosa, no solo se registra: se cruza con el historial, se dice qué se mide y qué se supone, y **siempre se valora si cambia algo de los entrenos futuros** (Paso 4), diciéndolo de forma explícita aunque la respuesta sea que no cambia nada.
+**Esto vale para todo lo que me mande, no solo para los archivos de carrera:** archivos `.fit`, `.zip` o `.tcx`, los `.csv` de sueño, VFC y VO2max, el texto de «Copiar para el entrenador» de la web (noche y asterisco, tiempos, codo y hombro, talón y cintillo, intentos del circuito, dominadas contadas y válidas), capturas del reloj o de Garmin Connect (estado de entrenamiento, foco de carga, predisposición, recuperación, VFC) y cualquier otro dato. Cada envío se analiza de forma minuciosa, no solo se registra: se cruza con el historial, se dice qué se mide y qué se supone, y **siempre se valora si cambia algo de los entrenos futuros** (Paso 4), diciéndolo de forma explícita aunque la respuesta sea que no cambia nada.
 
 ## Paso 1 · Analizar
 
@@ -68,14 +68,12 @@ El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`,
 - **Fuerza:** cada `set` con su categoría decodificada (el SDK está dentro de `fitdecode`), reps, peso, duración y descansos reales. Los descansos que se derrumban se dicen.
 - **Perfil «Pista» del reloj (modo pista):** ajusta el GPS a una pista de 400 m, así que la forma y el perímetro que salen del FIT NO verifican la pista: dan 400,0 por construcción. La comprobación tiene que ser externa (OpenStreetMap, marcas pintadas, medición). En modo pista se corre por la calle que se le dice al reloj (la 1).
 - **La temperatura del FIT es del sensor de muñeca**, no ambiental: sirve para comparar sesiones entre sí (28,1 la noche del 16, 31,0 a las 13:01 del 19) y nada más.
-- **El sueño (CSV): se registra SIEMPRE en `historial.sueno`.** La gráfica y el «ayer» del semáforo salen solos al instalar la web, y el constructor avisa de las noches sin CSV.
+- **El sueño (CSV): se registra SIEMPRE en `historial.sueno`.** La gráfica de sueño sale sola al instalar la web, y el constructor avisa de las noches sin CSV.
 - **Un Health Snapshot** hecho después de entrenar mide el estado tras el esfuerzo, no el basal: no se compara con la VFC nocturna. Solo vale por la mañana, sentado, a la misma hora.
 
 ## Paso 2 · Decidir si la sesión es válida
 
-Una sesión **no sirve para medir su forma** si se hizo en rojo (menos de 5h00 de sueño, VFC desequilibrada o sobrecarga), en ayunas, enfermo, con fatiga de algo no planificado, o en un recorrido que falsee los tiempos.
-
-Dilo claramente y **no la uses para reestimar nada**. En ámbar (5h00-6h29) sí cuenta, pero solo como suelo (ver Semáforo). Ya ha pasado cuatro veces y es el error más caro que hemos cometido.
+**Desde el 10-10-2026 no hay semáforo: todo cuenta, con asterisco** (ver «Sesión escrita siempre» en las reglas). Un **buen resultado vale siempre**, aunque la noche fuera corta o la VFC estuviera baja. Un **mal resultado con asterisco** (noche de menos de 5h00, VFC de 7 días «Desequilibrado» o «Bajo», «Sobrecarga», síntomas por encima del cuello, en ayunas o con fatiga de algo no planificado) se registra y **no se usa para bajar nada**: ni ritmos, ni estimaciones, ni escenarios. Un recorrido que falsee los tiempos sigue invalidando la medida en los dos sentidos. Lo que se quiere evitar es el error más caro que hemos cometido: reestimar a la baja con malos resultados de días malos (la estimación de 3:52, que falló por 14-22 s).
 
 ## Paso 3 · Registrar
 
@@ -102,14 +100,15 @@ El historial vive **solo** en `historial.json`. No copies sesiones, sueño, lect
 Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la sesión siguiente.
 
 **Patrones que se cuentan en cada sesión** (tres seguidas = regla, no consejo):
-- **Salida rápida en rodajes:** 7:08-7:10 los cinco primeros minutos el 12, 16 y 23. Regla desde el 23-9: primeros 10 min con techo 140.
+- **Salida rápida en rodajes:** 7:08-7:10 los cinco primeros minutos el 12, 16 y 23. Regla desde el 23-9: primeros 10 min con techo 140. Cumplida el 3-10 y el 10-10 (media 131,7, 8 s por encima de 140).
+- **Acelerones tras la alarma de suelo del reloj en rodajes:** el 10-10, dos (min 33-34 y 42-43, a 7:27-7:47), cada uno 1-2 min después del aviso de 135 del entreno «Rodaje sábado» (rango 135-145 para todo el rodaje). Causa supuesta. Una vez. Propuesto: entreno en dos pasos (10 min con techo 140 + resto con techo 145) y sin aviso de suelo.
 - **Progresivos como sprints:** 14,8 s/80 m el 16, salida del control a 3:05 el 19, 17,6-18,5 s/100 m el 23 (efecto anaeróbico 2,2-2,9). Regla: paso de 100 m con aviso de ritmo 3:20-3:50 en el reloj. Un progresivo bien hecho no deja huella anaeróbica.
 - **Primer 200 rápido en esfuerzos a ritmo de 1.000:** 40 en el control del 19 (pedía 45) y 40,6 en la primera de 6 × 400 el 28 (pedía 43,5), las dos sin progresivos de calibración. Después del primero corrige de más (primeros 200 de 43,6-46,5 y segundos de 41,3-43,9 el 28). Dos veces: a la tercera es regla. Remedio que ya está en el plan: los 5 progresivos del calentamiento, los dos últimos a ritmo K (= el ritmo del kilómetro del bloque: A 3:38 /km, B 3:34, C 3:32 → 3:30), y el aviso de ritmo. **El 30, con progresivos, no se repitió** (42,2 y 43,3 en los 600). **El 5-10, con progresivos al ritmo K (17,1-18,0) y el aviso puesto, 40,3 (pedía 43): tercera vez, ES REGLA, y el remedio no basta** (el aviso saltó a los 34 s, tarde). Después volvió a corregir de más (primeros 200 de 43,3-44,3, segundos de 40,5-42,4): segunda vez. Desde el 7-10, la primera repetición de cada sesión de series sale con el primer 200 en 43 o más lento aunque parezca que va parado; si pasa el 200 por debajo de 42, el segundo 200 va al ritmo objetivo, no por delante. Es un freno, no un cambio de ritmos.
-- **Semáforo que no se aplica en calidades:** 28-9 en rojo (2h14) y 5-10 en rojo por la regla del cuello (mocos y congestión, Pectox, 2 h de desfile al sol y baño en el mar antes; 6h13 de sueño): hizo los 5 × 400 enteros en vez de un rodaje de 30-40 min con techo 145. Las dos, no válidas. Dos veces: a la tercera es regla.
+- **Semáforo que no se aplica (patrón CERRADO el 10-10):** el 28-9 (2h14) y el 5-10 (resfriado) hizo las series enteras en rojo, y el 10-10 el rodaje de 55 en rojo por la VFC. En las tres se sentía bien y los resultados fueron buenos. De ahí salió quitar el semáforo, a petición suya.
 - **Segundo 200 por delante y caída después:** control del 19 (40 · 42 · 46 · 46) y kilómetro partido del 30 (600 en 42,2 · 41,9 · 47,2 y 43,3 · 41,4 · 46,0: paso por el 400 en 1:24 cuando tocaba 1:27,4). Dos veces: a la tercera es regla. Es lo que separa el 3:34 del 3:30.
 - **Progresivos que no van de menos a más:** el 30, el primero fue el más rápido (15,0 s/80 m) y los dos últimos, 16,1-16,4 frente a 17,4 del ritmo K.
 - **Primer intento del circuito más lento que los siguientes:** 9,4 · 9,2 · 9,3 el 1-10 (0,2 s = 1 punto). Una vez: a la tercera es regla. En el examen solo hay un intento.
-- **Calidad hecha tras una mala noche:** el 28 (2h14), a pesar de la regla del día torcido. La marca se sostuvo (media 1:26,9) con FC 203 y carga 234, la más alta del historial. Se registra como no válida.
+- **Calidad hecha tras una mala noche:** el 28 (2h14). La marca se sostuvo (media 1:26,9) con FC 203 y carga 234, la más alta del historial. Se registró como no válida con el semáforo; con la regla del 10-10 habría contado (buen resultado con asterisco). No cambia ninguna decisión: no tuvo sobra para el escalón del B.
 - **Descansos que se derrumban por tiempo en fuerza** (sentadilla 49/45/29 s el 22): superseries, no recortar.
 - **Sesiones que no se hacen:** el glúteo medio (H) consta hecho por primera vez el 29-9; las elevaciones de talón y los saltos del sábado, por primera vez el 3-10 (comunicado, sin registro). Se pregunta y se anota.
 
@@ -124,7 +123,7 @@ Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la
 | Sesión de carrera (FIT) | `historial.carrera`: `sesion` (con «N × D m» si son series), `objetivo`, `valida`, `valoracion`; si no se hizo, `hecho: false` y `motivo`. Las métricas van DENTRO de `resultado`: `tiemposS`, `parciales200` (una pareja [1.º, 2.º] por repetición; en un control del 1.000, `{"tramosS": […]}`), `fcMaxPorSerie`; en rodajes, `deriva.mitadesDesdeMin15`. Kilómetro partido: `tiemposS` en el orden corrido (600, 400, 600, 400) y `parciales200` con una lista por parte | Hoy (estado del día), Plan (celda), Marcas: registro y gráficas |
 | Fuerza o dominadas | `historial.dominadas`: `maximo` (serie máxima contada), `validas` (válidas en vídeo), `lastreKg` y `series` (lista) | Marcas, registro, Técnica (escalera del lastre), Hoy |
 | Circuito | `historial.circuito`: `intentos` en orden, por ejemplo `[9.4, {"t": 9.6, "nulo": true, "motivo": "…"}, 9.3]`. La web toma como comparable el primero no nulo y como techo el mejor; con solo `segundos` lo pinta como supuesto. Si no se hizo, `hecho: false` y `motivo` | Marcas, Técnica, Hoy |
-| CSV de sueño | `historial.sueno` | Gráfica de sueño y el «ayer» del semáforo |
+| CSV de sueño | `historial.sueno` | Gráfica de sueño |
 | Captura del Garmin | `historial.garmin`: `anaerobica`, `aerobicaAlta`, `aerobicaBaja` (números), `focoCarga`, `ventanaFocoCarga` | Gráfica del foco de carga |
 | Marca o estimación nueva | `plan.marcasActuales` y su registro. 1.000: `marca` «m:ss», `puntos`, `medidoEl`, `banda` y una entrada de `historial.evolucionEstimacion` con la MISMA fecha y `medido: true` (si no, la web dice «estimado»). Dominadas: `marca` que empiece por el número y lleve «el D-M-AAAA», sin «autoinformado» si se contó en vídeo. Circuito: `marca` «9,3 s», `fecha` y `condiciones` nuevas (su primer trozo hasta la coma es la etiqueta de fiabilidad: hoy dice «al 60 %»). El constructor recalcula puntos y escenarios y se para si no cuadran con el baremo. Actualizar también «Quién es» en este archivo | Chip de nota, simulador, gráficas |
 | Cambio de plan | `plan.calendario`. **La firma es del día ENTERO, incluido `hecho`:** si el día tiene entrada en `web/datos/web.json`, la construcción se para y hay que revisar esa entrada. El estado del día ya sale del historial, así que no hace falta escribir `hecho` | Hoy, Plan, Técnica › Reloj |
@@ -187,7 +186,7 @@ GitHub Pages publica desde `docs/`. Tarda un minuto. **Sin coste y sin límite.*
 
 **Calendario del Mac, no Google Calendar.** Los eventos se crean con `osascript` en la app Calendario (calendarios «Dieta» y «Calendario»).
 
-**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y el semáforo en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre), más el rodaje opcional del domingo 4-10 (aviso a las 07:30, añadido el 3-10); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
+**Los entrenos van al calendario «Calendario» del Mac desde el 29-9** (el rodaje del 27 no se hizo porque no sabía que lo tenía). Un evento por sesión, con la sesión, el objetivo y la regla de la mañana en las notas y la marca `[plan-cadiz]` al final para poder encontrarlos. **Un solo aviso, el MISMO día por la mañana: 06:15 entre semana, 07:30 los sábados. Nunca el día antes.** Hay 24 del 29-9 al 31-10 (rehechos el 2-10 al pasar la prueba a noviembre), más el rodaje opcional del domingo 4-10 (aviso a las 07:30, añadido el 3-10); la semana de la prueba se añade cuando llegue el llamamiento. Si `osascript` no reconoce `calendars`, la app Calendario está cerrada: `open -a Calendar` y repetir. Si el plan cambia un día, se cambia también su evento. Los eventos «Trabajo de tarde» del calendario «Trabajo» son de Cristina (invitaciones suyas), no suyos: no chocan con nada.
 
 ## Paso 7 · Responder
 
@@ -205,13 +204,17 @@ Análisis primero, veredicto claro, y qué hacer mañana. Sin rodeos.
 
 **Dos básculas no son comparables.** La serie buena es la del dietista (8 jul, 5 ago, 23 sep). La medida del 11-9 salió de otro aparato y daba 67,4 kg con 14,3 % de grasa: no se mezcla con la serie Tanita ni se presenta esa diferencia como una mejora.
 
-**Regla del cuello.** Síntomas por encima del cuello, se entrena suave. Por debajo —pecho cargado, tos, fiebre, dolor muscular—, no se entrena. Los antigripales tapan las señales: fiarse del pulso.
+**Regla del cuello.** Síntomas por encima del cuello: la sesión escrita con sus frenos y, si sale mal, con asterisco (desde el 10-10). Por debajo —pecho cargado, tos, fiebre, dolor muscular—, no se entrena. Los antigripales tapan las señales: fiarse del pulso.
 
 **Cintillo iliotibial izquierdo.** No se cambian sesiones por esto. No hay sesiones de umbral hasta la prueba; si vuelven, van *en* umbral (166-172), no por encima, que es lo que se lo despierta. Se compensa con glúteo medio los martes. **Regla de parada:** si pasa de «lo noto» a «me molesta al correr», esa sesión se acaba.
 
 **Pies planos y riesgo de fascitis.** Corre con una sola zapatilla; la segunda está aplazada por coste. Las elevaciones de talón a una pierna de los sábados son innegociables. Señal de alarma: dolor de talón en los primeros pasos de la mañana.
 
-**Semáforo de la mañana.** Horas de sueño del Garmin sin siesta, VFC de 7 días, dolor de codo/hombro y de talón/cintillo. Verde ≥ 6h30: la sesión entera; mide en los dos sentidos. Ámbar 5h00-6h29: dos tercios de las repeticiones al mismo ritmo + 15-20 min suaves, o el peso ya dominado (no se estrena peso). Rojo < 5h00, VFC de 7 días «Desequilibrado» o «Bajo», «Sobrecarga» o síntomas por encima del cuello (por debajo, no se entrena): rodaje 30-40 min o fuerza reducida sin pierna; una calidad en rojo se pierde, no se mueve. **Desde el 3-10, a petición suya, una sesión en ámbar cuenta como suelo:** un buen resultado vale y puede confirmar escalones; uno malo no baja ritmos ni cuenta como semana de fallo. Hecha a dos tercios, no decide lo que pedía la sesión entera. Las cargas del ámbar no cambian. Dos noches seguidas < 5 h = 48 h en rojo. Cortes convencionales, no de un estudio. Detalle en `plan.json` → `reglas` → `dia-torcido`.
+**Sesión escrita siempre (desde el 10-10-2026 sustituye al semáforo de la mañana, a petición suya).** El sueño y la VFC ya no deciden qué se hace: le frustraba sentirse bien y que después la sesión «no contara», y en su historial los días malos que entrenó dieron buenos resultados (28-9: 6 × 400 en 1:26,9 con 2h14; 5-10: 5 × 400 en 1:23,7 resfriado). Tres partes:
+1. **Salud, lo único que quita o cambia una sesión:** síntomas por debajo del cuello → no se entrena; cintillo o talón que molesta al correr → se acaba la sesión; codo u hombro en 3 o más → sin dominadas (el martes, la A sin lastre).
+2. **La sesión escrita, con los frenos de dentro:** si una repetición llega a 200 ppm antes de la última, esa es la última; si un 400 baja del objetivo en más de 3 s, la siguiente más lenta; dos seguidas a más de 3 s, a casa; en la barra, si una serie deja 1 en reserva o menos, es la última del bloque, y nunca al fallo.
+3. **Todo cuenta, con asterisco:** un buen resultado vale siempre. Uno malo con asterisco (noche < 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o síntomas por encima del cuello) se anota y no baja ritmos, no cuenta como semana de fallo y no rebaja escenarios.
+Sueño y VFC se siguen registrando cada día. Riesgo asumido: entrenar fuerte con fatiga acumulada puede alargarla. Detalle en `plan.json` → `reglas` → `dia-torcido` (id antiguo; el texto del semáforo queda en su `origen`).
 
 **Dominadas, revisión del 28-9 (9 agentes):** más barra, poca y sin lastre: sesión corta los sábados 3 y 24-10 antes del rodaje (el 10 no lleva barra: se mantienen las dos sesiones de la revisión). Nada de segundo día con lastre, dominadas diarias ni excéntricas. Test máximo solo el 17-10 y la prueba (el 31-10, serie técnica de 8). Martes: el 13 sube 2,5 kg solo si la quinta serie del 6 dejó 2 o más en reserva (la regla de siempre), el 20 es la última sesión pesada (4 × 3) y el 27 la descarga (3 × 2 con el peso del 20). Registro de dolor de codo y hombro 0-10 en cada sesión de barra. Él pide 14 «como sea»: rango honesto 9-13 válidas, centro 11-12; se asegura 12 válidas. Detalle en `plan.json` → `revision28sep`.
 
@@ -241,7 +244,7 @@ Directo y sin adornos. Encaja bien las malas noticias y corrige rápido; lo que 
 
 Rediseñada el 29-9-2026 (diagnóstico de 6 lentes, especificación, crítica y 9 módulos). Cuatro pestañas en la barra de abajo (eran cinco hasta el 5-10):
 
-**Hoy** · la tarjeta del día: semáforo de un toque (verde, ámbar o rojo) que cambia la sesión, los números del día, modo pista (un toque por serie, temporizador que pita y destella, freno y regla de las dos repeticiones automáticos), modo gimnasio, «Cómo fue» con «Copiar para el entrenador» (lo que Daniel me pega tras entrenar), el camino hasta Cádiz y «Esta noche» (cena 20:15, luz 22:15).
+**Hoy** · la tarjeta del día: la noche, el reloj, los síntomas y los dolores de un toque (desde el 10-10 solo deciden «No se entrena» con síntomas por debajo del cuello o el asterisco; la sesión no cambia), los números del día, modo pista (un toque por serie, temporizador que pita y destella, freno y regla de las dos repeticiones automáticos), modo gimnasio, «Cómo fue» con «Copiar para el entrenador» (lo que Daniel me pega tras entrenar), el camino hasta Cádiz y «Esta noche» (cena 20:15, luz 22:15).
 **Plan** · calendario con bloques A/B/C, hitos y estado real de cada día, hoja de cada día, semana tipo, ritmos (con el 3:49), zonas, reglas en cuatro grupos, decisiones y pendientes.
 **Marcas** · nota y simulador en una tarjeta con la mascota, controles, gráficas (una a la vez en el móvil), registro del 100 % del historial y composición.
 **Técnica** · la dominada con las nueve reglas del BOE dibujadas y el contador de repeticiones válidas para revisar el vídeo, el reparto del 1.000 interactivo, el circuito, las fichas del gimnasio con láminas, técnica de carrera, reloj y material.
@@ -309,3 +312,39 @@ Cada una salió de un error real del entrenador; las demás correcciones ya est�
 - **Los ajustes del reloj se leen en `time_in_zone` de cada FIT antes de pedir que se cambien.**
 
 **Protocolo nuevo:** toda serie máxima de dominadas se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena. **Técnica oficial (BOE-A-2026-15055, comprobada en boe.es el 28-9):** agarre prono **ligeramente más ancho que los hombros**; cada dominada parte de brazos completamente extendidos; cuerpo extendido; sin oscilaciones, balanceos ni impulso; cabeza en posición anatómica; barbilla claramente por encima y **la barra a la altura del tercio inferior del cuello**; **mínima pausa entre repeticiones**; no soltarse ni más de 5 s colgado; sin guantes, objetos ni sustancias, y no descalzo; se pueden cruzar las piernas; un solo intento; **es nula toda dominada que incumpla cualquier regla.** Literal en `plan.json` → `protocoloDominadas.tecnicaExamen`. Solo cuentan las válidas en vídeo.
+
+---
+
+# CRISTINA (desde el 11-10-2026)
+
+Cristina es la pareja de Daniel. Se presenta a las pruebas físicas de la convocatoria de 2027 (44.ª promoción) por **turno libre**: la nota física suma para la plaza, así que se busca su máximo en el 1.000 m, no solo el apto. Fecha sin convocar: se supone la primera semana de octubre de 2027 (`objetivo.fechaSupuesta`), y el final del plan se recoloca cuando salga.
+
+**Solo se le diseña la carrera.** Desde el 11-10 (versión 3, a petición de Daniel) **corre lunes, miércoles y sábado, como él**; viernes y domingo, CrossFit; Martín Freire (barra y circuitos), martes y jueves (confirmado el 11-10). **Sin día libre:** el domingo sigue con CrossFit (decisión suya del 11-10, aunque los dos diagnósticos recomendaban dejarlo libre); se compensa con la regla «descanso» y se quitó el cuarto rodaje opcional. Las series van en la pista de Arucas. **No hay test el 17-10**: Daniel no la ve lista y el punto de partida es su estimación (más de 5:00). El primer control es el sábado 21-11. Barra: unos 51 s (3 puntos). 1.000 m: más de 5:00, sin cronometrar en serio (elimina desde 4:46). Entrena con un **Apple Watch Series 10**: sus archivos no son los de Garmin.
+
+**Baremo de mujeres** (BOE-A-2026-15055, comprobado el 11-10-2026), en `datos/cristina/plan.json` → `baremo1000Mujeres`. Elimina desde 4:46; 5 puntos entre 4:01 y 4:09; 10 puntos con 3:24 o menos.
+
+**Privacidad (decisión del 11-10-2026): en la web y en el repositorio solo sale su nombre**, con sus entrenos y tiempos. Edad, altura, peso, pulso, sueño, molestias y salud van a `datos/cristina/privado.json`, que está en `.gitignore`. El constructor se para si un valor de `privado.json` → `vigilar` aparece en la página.
+
+**Archivos:**
+- `datos/cristina/plan.json`: plan de 52 semanas (fases, calendario, reglas, glosario, reloj).
+- `datos/cristina/historial.json`: `controles` (fecha, tiempo «m:ss», parciales200, valoración) y `carrera` (fecha, sesion, hecho, resumen, valoracion), de más nuevo a más viejo.
+- `web/cristina/`: constructor, estilo y JS.
+
+**Página:** `python3 web/cristina/construir.py` escribe `docs/cristina/index.html` (publicada en /plan-cadiz/cristina/). Su validador y su QA no son los de la web de Daniel: hay que mirarla en el navegador (`?hoy=AAAA-MM-DD`). El selector «Daniel | Cristina» está en las dos páginas.
+
+**Su flujo, cuando mande un entreno:** el mismo espíritu que el de Daniel (analizar, decidir si mide, registrar, valorar si cambia el plan, reconstruir su página, responder), con sus diferencias:
+- Pulso de muñeca: va con retraso en las series cortas, así que en ellas manda el ritmo, no el pulso.
+- Lo ideal es un `.fit` por entreno, exportado desde Salud con una app (por ejemplo HealthFit); con eso sirve `herramientas/analizar.py`. Si manda la exportación completa de Salud (`export.zip`), contiene TODOS sus datos de salud: se analiza en local y nunca se sube.
+- Sus ritmos salen de su último control (`reglas` → `ritmos`): K es el ritmo del control y O es K menos 2 s por 400.
+- **Versión 2 del plan (11-10-2026):** la versión 1 pasó por dos diagnósticos independientes, uno de eficacia y otro de riesgo, que están en `datos/cristina/privado/` (fuera del repositorio). Se aplicó:
+  - correr y andar al principio;
+  - la larga sube poco a poco;
+  - intervalos a ritmo K + 4 desde diciembre en lugar de nueve martes de umbral;
+  - tope de unos 2.400 m a ritmo K por sesión;
+  - jueves de 45-50 min;
+  - K = el mejor de los dos últimos controles;
+  - reglas de dolor, descanso, calor y energía.
+
+  Previsión, que es criterio y no dato: si el test sale entre 5:00 y 5:15, entre 4:05 y 4:35 en un año (centro 4:15-4:20). Se revisa tras el control de diciembre. El generador es `herramientas/cristina_generar_plan.py`: no se vuelve a ejecutar sobre un plan ya editado a mano.
+- **Primer dato (rodaje del 10-10 con Daniel, sacado de su exportación de Salud):** 55 min, 6,2 km a 8:54/km, con un esfuerzo alto para ella; Daniel iba a 8:26/km con 137 de pulso medio. El pulso está en `privado.json`. Lo que es suave para Daniel no lo es para ella: los rodajes juntos van a su ritmo. La exportación completa de Salud se lee en una carpeta temporal (`zipfile` e `iterparse`, solo el día que haga falta) y nunca se copia al proyecto.
+- **Pendiente con ella:** el primer control del 21-11 y la fecha de 2027.

@@ -989,6 +989,8 @@ Prioridad: **P1** imprescindible para la primera versión · **P2** muy útil ·
 
 **T1 · Semáforo de la mañana (P1, M2, dentro de la tarjeta H-1)**
 
+> **Cambiado el 10-10-2026 a petición de Daniel: ya no hay semáforo.** La tarjeta sigue preguntando la noche, el reloj, los síntomas y los dolores, pero la salida solo puede ser «Sesión escrita» (con o sin asterisco: noche de menos de 5h00, VFC desequilibrada o baja, Sobrecarga o síntomas por encima del cuello) o «No se entrena» (síntomas por debajo del cuello). Lo que sigue describe el diseño original; manda `plan.reglas[dia-torcido]`.
+
 - **Entrada obligatoria: una lámpara** (`.lamps`, §4.8): Verde · 6h30 o más / Ámbar · 5h00–6h29 / Rojo · menos de 5h00. Es la banda de sueño de la noche según el Garmin, sin la siesta.
 - **Entradas opcionales**, tras «Cambiar», todas con su valor por defecto ya puesto (la línea plegada las resume: «Reloj normal · sin síntomas · sin dolor»):
 

@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "nota": "Historial de carrera de Cristina. Público: solo entrenos, tiempos y valoraciones de entrenamiento. Pulso, sueño, molestias y datos personales van a privado.json (fuera del repositorio)."
+  },
+  "controles": [],
+  "carrera": [
+    {
+      "fecha": "2026-10-10",
+      "sesion": "Rodaje de 55 min con Daniel, antes de empezar el plan",
+      "hecho": true,
+      "resumen": "55 min · 6,2 km · 8:54/km",
+      "resultado": {
+        "duracion": "55:11",
+        "km": 6.2,
+        "ritmo": "8:54/km",
+        "bloques5min": {
+          "ritmos": [
+            "7:57",
+            "8:10",
+            "8:33",
+            "8:37",
+            "8:21",
+            "9:16",
+            "9:35",
+            "8:25",
+            "9:07",
+            "8:27",
+            "8:50",
+            "8:08"
+          ]
+        },
+        "andandoS": 119,
+        "fuente": "exportación de Salud del Apple Watch (distancia del entreno; el GPS bruto da 6,4 km)"
+      },
+      "valoracion": "Primer dato. Al ritmo de un rodaje suave de Daniel (él, 8:26/km), para ella fue un esfuerzo alto de principio a fin: no era suave. Ritmo irregular (de 7:57 a 9:35 por bloques de 5 min) y unos 2 min andando o parada. Confirma el arranque del plan: correr y andar, más despacio que este día. Los rodajes juntos, al ritmo de ella."
+    }
+  ]
+}

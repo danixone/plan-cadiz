@@ -443,7 +443,7 @@
             "v": "4 × 3",
             "l": "lastradas · peso dominado",
             "desde": "A en 4 × 3 con el peso dominado",
-            "fuente": "plan.reglas[dia-torcido].texto"
+            "fuente": "plan.reglas[dia-torcido].origen"
           }
         ]
       },
@@ -453,7 +453,7 @@
             "E"
           ],
           "desde": "sin peso muerto rumano si al día siguiente hay calidad",
-          "fuente": "plan.reglas[dia-torcido].texto"
+          "fuente": "plan.reglas[dia-torcido].origen"
         },
         "rojo": {
           "A": {
@@ -468,7 +468,7 @@
             "I"
           ],
           "desde": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I",
-          "fuente": "plan.reglas[dia-torcido].texto"
+          "fuente": "plan.reglas[dia-torcido].origen"
         }
       },
       "condicion": {
@@ -566,7 +566,7 @@
       "fuentes": [
         "plan.calendario[2026-10-06].objetivo",
         "plan.protocoloDominadas.progresion[2]",
-        "plan.reglas[dia-torcido].texto"
+        "plan.reglas[dia-torcido].origen"
       ]
     },
     "2026-10-07": {
@@ -658,7 +658,7 @@
       ]
     },
     "2026-10-12": {
-      "firma": "4f9b45501901",
+      "firma": "e11df061d141",
       "titulo": "5 × 400 m, rec. 2 min",
       "principal": {
         "tipo": "series",
@@ -678,17 +678,9 @@
       ]
     },
     "2026-10-13": {
-      "firma": "7755fcdc5c38",
+      "firma": "abfc7c77f09b",
       "titulo": "Arsenal: sesión completa",
       "numeros": {
-        "rojo": [
-          {
-            "v": "4 × 3",
-            "l": "lastradas · peso dominado",
-            "desde": "A en 4 × 3 con el peso dominado",
-            "fuente": "plan.reglas[dia-torcido].texto"
-          }
-        ],
         "verde": [
           {
             "v": "5 × 3",
@@ -697,30 +689,7 @@
           }
         ]
       },
-      "fuerza": {
-        "ambar": {
-          "quitar": [
-            "E"
-          ],
-          "desde": "sin peso muerto rumano si al día siguiente hay calidad",
-          "fuente": "plan.reglas[dia-torcido].texto"
-        },
-        "rojo": {
-          "A": {
-            "series": 4,
-            "reps": 3,
-            "peso": "el peso dominado"
-          },
-          "solo": [
-            "A",
-            "G",
-            "H",
-            "I"
-          ],
-          "desde": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I",
-          "fuente": "plan.reglas[dia-torcido].texto"
-        }
-      },
+      "fuerza": {},
       "calidad": false,
       "fuentes": [
         "plan.calendario[2026-10-13].objetivo",
@@ -773,7 +742,7 @@
       }
     },
     "2026-10-14": {
-      "firma": "46b33d75c7b5",
+      "firma": "d529349c4d27",
       "titulo": "3 × 600 m, rec. 3 min",
       "calidad": true,
       "fuentes": [
@@ -782,7 +751,7 @@
       ]
     },
     "2026-10-17": {
-      "firma": "6703d76a48d2",
+      "firma": "38040a246b44",
       "numeros": [
         {
           "v": "≤ 3:33",
@@ -859,7 +828,7 @@
       ]
     },
     "2026-10-19": {
-      "firma": "17b1c6d3c5e9",
+      "firma": "097a2632e8c6",
       "titulo": "8 × 200 m, rec. 2 min",
       "numeros": {
         "verde": [
@@ -878,31 +847,10 @@
             "l": "recuperación",
             "desde": "rec. 2 min"
           }
-        ],
-        "ambar": [
-          {
-            "v": "5 × 200",
-            "l": "mismo criterio",
-            "desde": "5 × 200 con el mismo criterio"
-          },
-          {
-            "v": "15-20 min",
-            "l": "techo 145",
-            "desde": "15-20 min con techo 145"
-          }
-        ],
-        "rojo": [
-          {
-            "v": "40 min",
-            "l": "rodaje · techo 145",
-            "desde": "40 min de rodaje con techo 145"
-          }
         ]
       },
       "variantes": {
         "base": "0:41-0:43 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44",
-        "ambar": "5 × 200 con el mismo criterio + 15-20 min con techo 145",
-        "rojo": "40 min de rodaje con techo 145",
         "comun": "Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro"
       },
       "principal": {
@@ -931,7 +879,7 @@
           },
           {
             "id": "domingo",
-            "txt": "si el simulacro pasó al domingo 18, rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
+            "txt": "si el simulacro pasó al domingo 18 (solo por síntomas por debajo del cuello), rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
             "principal": {
               "tipo": "rodaje",
               "min": "40"
@@ -940,8 +888,8 @@
         ],
         "prellenar": {
           "clave": "pc-sem-2026-10-17",
-          "campo": "banda",
-          "igual": "rojo",
+          "campo": "sintomas",
+          "igual": "debajo",
           "opcion": "domingo"
         }
       },
@@ -961,14 +909,6 @@
             "l": "lastradas · peso del 13",
             "desde": "4 × 3 con el peso que salió del 13"
           }
-        ],
-        "rojo": [
-          {
-            "v": "4 × 3",
-            "l": "lastradas · peso dominado",
-            "desde": "A en 4 × 3 con el peso dominado",
-            "fuente": "plan.reglas[dia-torcido].texto"
-          }
         ]
       },
       "fuerza": {
@@ -979,28 +919,6 @@
             "peso": "el peso que salió del 13"
           },
           "desde": "4 × 3 con el peso que salió del 13, sin perseguir cifra"
-        },
-        "ambar": {
-          "quitar": [
-            "E"
-          ],
-          "desde": "sin peso muerto rumano si al día siguiente hay calidad",
-          "fuente": "plan.reglas[dia-torcido].texto"
-        },
-        "rojo": {
-          "A": {
-            "series": 4,
-            "reps": 3,
-            "peso": "el peso dominado"
-          },
-          "solo": [
-            "A",
-            "G",
-            "H",
-            "I"
-          ],
-          "desde": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I",
-          "fuente": "plan.reglas[dia-torcido].texto"
         }
       },
       "calidad": false,
@@ -1556,7 +1474,7 @@
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "58d4911f9781",
+      "firma": "aa97b7831a4c",
       "firmaDe": [
         "plan.calendario[2026-10-17]",
         "plan.ritmos[C]"
@@ -1570,72 +1488,18 @@
   },
   "series": {},
   "semaforo": {
+    "_nota": "Desde el 10-10 no hay semáforo: siempre la sesión escrita; solo los síntomas por debajo del cuello paran. La noche corta, la VFC, la Sobrecarga o los mocos ponen el asterisco.",
     "fuente": "plan.reglas[dia-torcido].texto",
     "cortes": {
-      "verde": "6h30",
       "rojo": "5h00"
     },
-    "verde": "la sesión como está escrita; mide y decide escalones, subidas de lastre y escenarios en los dos sentidos",
-    "generico": {
-      "carrera": {
-        "ambar": "carrera con dos tercios de las repeticiones redondeando hacia abajo, al mismo ritmo y con la misma recuperación, más 15-20 min con techo 145",
-        "rojo": "rodaje de 30-40 min con techo 145 y los diez primeros a 140"
-      },
-      "fuerza": {
-        "ambar": "fuerza con el peso ya dominado, sin estrenar peso, sin peso muerto rumano si al día siguiente hay calidad, H siempre",
-        "rojo": "A en 4 × 3 con el peso dominado, sin sentadilla ni peso muerto rumano, con G, H e I (unos 45 min)"
-      },
-      "circuito": {
-        "ambar": "circuito con sus 3 intentos, con asterisco",
-        "rojo": "solo técnica, sin cronómetro"
-      }
-    },
-    "recortes": [
-      [
-        "6 × 400",
-        "4"
-      ],
-      [
-        "5 × 400",
-        "3"
-      ],
-      [
-        "4 × 400",
-        "2"
-      ],
-      [
-        "3 × 600",
-        "2"
-      ],
-      [
-        "8 × 200",
-        "5"
-      ],
-      [
-        "2 × 600 + 2 × 200",
-        "1 + 1"
-      ],
-      [
-        "kilómetro partido × 2",
-        "× 1"
-      ],
-      [
-        "600 + 400",
-        "solo el 600"
-      ]
-    ],
+    "verde": "LA SESIÓN ESCRITA, SIEMPRE, con los frenos de dentro, que miden cómo estás ese día",
+    "asterisco": "se anota, pero no baja ritmos, no cuenta como semana de fallo y no rebaja escenarios",
     "extras": [
-      "si una repetición llega a 200 ppm antes de la última, esa es la última",
-      "Una calidad que cae en rojo no se mueve: se pierde",
-      "Una sesión hecha en ámbar SÍ cuenta, como suelo",
-      "Una sesión en rojo no mide nada"
+      "si una repetición llega a 200 ppm antes de la última, esa es la última"
     ],
-    "racha": "RACHA: dos noches seguidas por debajo de 5h00 son 48 h en rojo",
-    "horario": "Si en la semana del 28-9 al 4-10 hay tres noches por debajo de 6 h, lo que se cambia es el horario, no las sesiones",
     "cuello": {
-      "encima": "Síntomas por encima del cuello (mocos, garganta, estornudos): el día es ROJO como mínimo (se entrena suave, regla del cuello)",
-      "debajo": "Por debajo del cuello (pecho, tos, fiebre, dolor muscular): no se entrena",
-      "colorEncima": "rojo"
+      "debajo": "síntomas por debajo del cuello (pecho cargado, tos persistente, fiebre, dolor muscular) → no se entrena"
     }
   },
   "decide": [
@@ -1684,7 +1548,7 @@
     },
     {
       "fecha": "2026-10-17",
-      "firma": "6703d76a48d2",
+      "firma": "38040a246b44",
       "firmaDe": [
         "plan.calendario[2026-10-17]"
       ],
@@ -1743,7 +1607,7 @@
           "aparte": "diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica"
         }
       ],
-      "nota": "Mañana del 17 (decidido el 9-10, tras la VFC desequilibrada y el resfriado): VFC de 7 días «Desequilibrado» o «Bajo», o síntomas por encima del cuello, pasa al domingo 18; si el 18 sigue igual, no hay 1.000 a tope en octubre: el C se queda en 1:25 / 2:07 y la serie técnica del 24 sale de las 11 del 19-9. Síntomas por debajo del cuello: no se hace. Noche del 16: 6h30 o más, vale entero; 5h00-6h29, se hace y vale como suelo (el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica); menos de 5h00, pasa al domingo 18",
+      "nota": "Mañana del 17 (cambiado el 10-10 al quitar el semáforo): el simulacro se hace el 17. Síntomas por debajo del cuello: no se hace y pasa al domingo 18. Un buen resultado vale siempre y decide el bloque C. Si sale peor de lo que pedía y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no baja nada: el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica",
       "fuente": "plan.calendario[2026-10-17].decide · plan.calendario[2026-10-17].semaforo"
     }
   ],
@@ -1814,7 +1678,7 @@
     {
       "fecha": "2026-09-29",
       "texto": "Síntomas por encima del cuello (mocos, garganta, estornudos): el día es ROJO como mínimo (se entrena suave, regla del cuello).",
-      "fuente": "plan.reglas[dia-torcido].texto"
+      "fuente": "plan.reglas[dia-torcido].origen"
     },
     {
       "fecha": "2026-09-29",
@@ -1834,6 +1698,11 @@
     {
       "fecha": "2026-10-03",
       "texto": "Una sesión hecha en ámbar SÍ cuenta, como suelo: un buen resultado vale (lo hizo con la noche corta, así que puede al menos eso) y puede confirmar escalones y escenarios; un mal resultado no baja ritmos, no cuenta como semana de fallo para la regla de bajar y no rebaja escenarios.",
+      "fuente": "plan.reglas[dia-torcido].origen"
+    },
+    {
+      "fecha": "2026-10-10",
+      "texto": "Desde el 10-10, a petición suya, no hay semáforo de la mañana: el sueño y la VFC ya no deciden qué se hace.",
       "fuente": "plan.reglas[dia-torcido].texto"
     }
   ],

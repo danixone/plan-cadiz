@@ -232,3 +232,10 @@
 .hoy-fue-rep .seg button{min-width:44px}
 .focus .big.hoy-rg{font-size:var(--fs-3xl)}
 .hoy-pasos .ex .tags .chip,.hoy-gb .chips .chip{height:auto;min-height:28px;max-width:100%;white-space:normal;line-height:1.25;padding-top:4px;padding-bottom:4px}
+
+/* selector Daniel · Cristina (11-10-2026): la página de Cristina está en cristina/ */
+.atleta{display:inline-flex;border:1px solid var(--border-strong);border-radius:var(--r-pill);overflow:hidden}
+.atleta a{display:inline-flex;align-items:center;min-height:36px;padding:0 var(--sp-4);font-weight:var(--fw-semi);font-size:var(--fs-sm);color:var(--text-2);text-decoration:none}
+.atleta a[aria-current="page"]{background:var(--primary);color:var(--on-primary)}
+.hoy-atleta{margin:var(--sp-3) 0 0}
+@media (min-width:1024px){.hoy-atleta{display:none}}

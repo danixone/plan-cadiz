@@ -5,6 +5,70 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-10",
+      "sesion": "Rodaje 55 min, techo 145, primeros 10 min a 140",
+      "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min · sin barra: las sesiones cortas de barra son el 3 y el 24",
+      "valida": true,
+      "horaInicioLocal": "19:40 (fin 20:35)",
+      "resultado": {
+        "duracion": "55:00",
+        "km": 6.52,
+        "ritmo": "8:26/km",
+        "fcMedia": 137,
+        "fcMax": 149,
+        "cadencia": 160,
+        "zancadaMm": 731,
+        "contactoMs": 296,
+        "desnivelPos": 18,
+        "terreno": "llano",
+        "franjas": {
+          "<130": "4%",
+          "130-140": "61%",
+          "140-145": "32%",
+          "145-155": "3%",
+          ">155": "0%"
+        },
+        "bloques5min": {
+          "ritmos": [
+            "8:00",
+            "8:20",
+            "8:35",
+            "8:40",
+            "8:33",
+            "8:30",
+            "8:08",
+            "8:31",
+            "8:17",
+            "8:23",
+            "8:48"
+          ],
+          "fc": [
+            127,
+            137,
+            136,
+            139,
+            137,
+            139,
+            140,
+            139,
+            141,
+            139,
+            140
+          ]
+        },
+        "deriva": {
+          "analizador": "+34 s/km (min 3-8 a 8:05,1 y 134 ppm; últimos 8 a 8:38,8 y 140 ppm): la inflan la salida y el pulso que aún subía desde 127",
+          "referenciaBaseAsentada": "por debajo del 5 %",
+          "mitadesDesdeMin15": "+1,5 % (Pa:HR, velocidad/FC: 8:28,6 a 138 → 8:31,5 a 140, +3 s/km)"
+        },
+        "sensorMunecaC": 26.5,
+        "efectoAerobico": 2.1,
+        "efectoAnaerobico": 0.0,
+        "cargaSesion": 26
+      },
+      "valoracion": "VÁLIDA CON ASTERISCO (regla del 10-10, que quitó el semáforo): VFC de 7 días «Desequilibrada» (52 ms, la segunda lectura seguida por debajo de su referencia 55-70), aunque la noche fue de 7h42. Se registró primero como no válida con el semáforo, que pedía 30-40 min en rojo; hizo los 55 del plan. Con la regla nueva es la sesión escrita y el resultado es bueno, así que cuenta. Primeros 10 min con techo 140: CUMPLIDO (media 131,7, máximo 142, solo 8 s por encima); segundo rodaje seguido sin la salida rápida. Techo 145 después del minuto 10: 94 s por encima (3,5 %, máximo 149), frente a 219 s (8,1 %) el 3-10. Deriva por mitades desde el minuto 15: +1,5 % (el 3-10, +4,0 %); la clásica da +34 s/km por la salida, como el 23-9. Eficiencia global (velocidad/FC) idéntica a la del 3-10, y la FC a 8:15-8:45 /km fue 2-4 ppm más baja; con seis cosas distintas a la vez (hora, barra previa del 3-10, temperatura del sensor 26,5 frente a 29,9, sentido del recorrido, sueño y VFC), no se lee como mejora de forma. Dos acelerones (minutos 33-34 a 7:27-7:47 y 42-43 a 7:31-7:38), cada uno 1-2 min después de saltar la alarma de suelo de 135 del entreno del reloj (rango 135-145 para los 55 min; el techo de 140 de los diez primeros solo va en una nota): la secuencia está medida, la causa es supuesta. Entre los dos y el último minuto suman casi todos los segundos por encima de 145. Sin sets de fuerza en el FIT, pero elevaciones de talón 3 × 15, saltos y core HECHOS (comunicado por él el 10-10 por la noche). Sin síntomas del resfriado ese día («ya estoy bien», comunicado el 10-10): la regla del cuello no aplica; el rojo es solo por la VFC. Alertas de FC del reloj: 31 de suelo y 6 de techo (el 3-10, 13 y 17). Carga de la sesión 26 (training_load_peak del FIT)."
+    },
+    {
       "fecha": "2026-10-07",
       "hecho": false,
       "valida": false,
@@ -1292,6 +1356,18 @@
   ],
   "sueno": [
     {
+      "fecha": "2026-10-10",
+      "duracion": "7h42",
+      "puntuacion": 90,
+      "calidad": "Excelente",
+      "fcReposo": 49,
+      "bodyBattery": "+67",
+      "spo2Media": "94%",
+      "respiracionMedia": 15,
+      "vfc7dias": "52 ms (media de 7 días del CSV semanal; referencia 55-70)",
+      "nota": "Noche del 9 al 10, la primera tras la semana del desfile. Se acostó a las 0:56 y se despertó a las 8:43 (sábado, sin trabajo). 7h42 y puntuación 90: la mejor noche desde que hay CSV de octubre. VERDE por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (52, un punto menos que el 9-10 y por debajo de su referencia 55-70). Una noche buena no arrastra la media de 7 días: arrastra cinco noches de 4h18-5h24. Hora de dormir 0:56, de despertar 8:43 (CSV semanal, sin fases del sueño)."
+    },
+    {
       "fecha": "2026-10-09",
       "duracion": "5h00",
       "puntuacion": 64,
@@ -1592,6 +1668,31 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-10",
+      "hora": "20:36 (predisposición, «Después de una actividad»); capturas guardadas a las 23:13",
+      "ventanaFocoCarga": "12 sep – 10 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Recuperación",
+      "mensajeGarmin": "Tu carga de entreno ha sido baja últimamente, pero está ayudando a que tu cuerpo se recupere bien. Tu forma física general se mantiene estable.",
+      "anaerobica": 505,
+      "aerobicaAlta": 402,
+      "aerobicaBaja": 230,
+      "cargaAguda": 188,
+      "cargaAgudaEstado": "Baja",
+      "ratioCargaAguda": 0.6,
+      "cargaAgudaMensaje": "Una carga aguda por debajo del intervalo óptimo ayuda a la recuperación, pero puede llevar a la pérdida de forma.",
+      "vo2max": 53,
+      "vfc": "52 ms, Desequilibrado",
+      "predisposicion": {
+        "valor": 52,
+        "nivel": "Moderada",
+        "hora": "20:36, después de una actividad",
+        "factores": "puntuación de sueño 90 excelente · tiempo de recuperación 10 h, poca necesidad · VFC 52 ms desequilibrada · carga aguda 188 baja · puntuaciones de sueño recientes aceptables · estrés reciente bajo",
+        "mensaje": "Parece que tu predisposición está bien, pero controla tu VFC. Está desequilibrada, lo que puede indicar fatiga."
+      },
+      "valoracion": "SEGUNDA VFC DESEQUILIBRADA seguida (53 el 9-10, 52 hoy): sigue bajando en cada lectura desde el 19-9 (62, 60, 57, 56, 55, 53, 52). Semáforo: ROJO, aunque la noche fue de 7h42. Foco de carga, del 5-10 (ventana 7 sep – 5 oct) al 10-10 (12 sep – 10 oct; el primer día de la etiqueta no cuenta): anaeróbica 505 → 505 (0), aeróbica alta 512 → 402 (−110), aeróbica baja 258 → 230 (−28). SALEN del 8 al 12-9: el umbral de 4 × 8 min del 9-9 (lo único de esa ventana que explica −110 de aeróbica alta), el circuito del 10-9 y el rodaje de 35 min del 12-9. ENTRA solo el rodaje de 55 min de hoy (del 6 al 9-10 no se hizo nada: resfriado y desfile; efecto aeróbico 2,1, carga 26). Que la aeróbica baja baje con un rodaje dentro quiere decir que lo que salió pesaba más que lo que entró: no se reparte entre sesiones. La etiqueta pasa de «Anaeróbica» a «Aeróbica baja insuficiente» por el calendario (sale el umbral) y no por un cambio de la base: la aeróbica baja sigue siendo la más baja de las tres, como en todas las lecturas. Carga aguda 513 «Alto» el 5-10 → 207 el 9-10 → 188 «Baja» hoy (ratio 0,6): cuatro días sin entrenar. Estado «Recuperación» (era «Mantenimiento»). VO2máx 53, sin cambio. Predisposición 52 medida después del rodaje: no es la de la mañana y no se compara con el 26 del 9-10."
+    },
     {
       "fecha": "2026-10-09",
       "hora": "6:19 (predisposición, «Después de levantarte»); capturas guardadas a las 10:17",

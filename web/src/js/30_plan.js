@@ -686,15 +686,14 @@
     return o;
   }
   function frase(txt, re) { return frases(txt).filter(function (f) { return re.test(f); })[0] || ''; }
-  /* leyenda de las lámparas con los cortes del plan (derivados.cortesSueno en minutos; web.semaforo.cortes en texto) */
+  /* desde el 10-10 no hay semáforo: la leyenda solo dice qué pone el asterisco (derivados.cortesSueno en minutos) */
   function lamparas() {
     var C = DER.cortesSueno || {}, T = (WEB.semaforo || {}).cortes || {};
-    var v = typeof C.verde === 'number' ? C.verde : PC.fmt.parseSueno(T.verde || '');
     var r = typeof C.rojo === 'number' ? C.rojo : PC.fmt.parseSueno(T.rojo || '');
-    if (!v || !r) return '';
-    return '<p class="pl-lamps"><span><i class="lp g"></i>' + esc('Verde · ' + PC.fmt.sueno(v) + ' o más') + '</span>' +
-      '<span><i class="lp a"></i>' + esc('Ámbar · ' + PC.fmt.sueno(r) + '–' + PC.fmt.sueno(v - 1)) + '</span>' +
-      '<span><i class="lp r"></i>' + esc('Rojo · menos de ' + PC.fmt.sueno(r)) + '</span></p>';
+    if (!r) return '';
+    return '<p class="pl-lamps"><span><i class="lp g"></i>' + esc('Siempre la sesión escrita') + '</span>' +
+      '<span><i class="lp a"></i>' + esc('Asterisco · noche de menos de ' + PC.fmt.sueno(r) + ', VFC desequilibrada o baja, Sobrecarga o mocos') + '</span>' +
+      '<span><i class="lp r"></i>' + esc('No se entrena · síntomas por debajo del cuello') + '</span></p>';
   }
   function grupos() {
     var L = P.lesiones || {}, rec = DER.recortados || {};
@@ -707,7 +706,7 @@
     }
     var cu = reglaPlan('cuello', 'R10');
     if (cu) {
-      /* el 29-9 (K10) el semáforo trata los síntomas por encima del cuello como día rojo como mínimo */
+      /* hasta el 10-10 (K10) el semáforo trataba los síntomas por encima del cuello como día rojo; ya no hay colorEncima */
       var ce = ((WEB.semaforo || {}).cuello || {}).colorEncima;
       if (ce) {
         var COL = { verde: ['g', 'verde'], ambar: ['a', 'ámbar'], 'ámbar': ['a', 'ámbar'], rojo: ['r', 'rojo'] }[ce];

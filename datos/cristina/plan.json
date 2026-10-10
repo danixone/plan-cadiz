@@ -1,0 +1,3174 @@
+{
+  "meta": {
+    "atleta": "Cristina",
+    "creado": "2026-10-11",
+    "version": 3,
+    "diasCarrera": "lunes, miércoles y sábado",
+    "nota": "Plan de carrera de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). Solo carrera. Los datos personales (edad, altura, pulso, salud) no van aquí: el repositorio es público.",
+    "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre."
+  },
+  "objetivo": {
+    "prueba": "Pruebas físicas de la Escala Básica, convocatoria de 2027 (44.ª promoción), turno libre",
+    "fecha": "sin convocar: se supone el sábado 9 de octubre de 2027 y se recoloca el final cuando salga la fecha",
+    "fechaSupuesta": "2027-10-09",
+    "escalones": [
+      {
+        "id": "E1",
+        "marca": "4:45",
+        "que": "Dejar de eliminar (4:46 o más da 0 y elimina)"
+      },
+      {
+        "id": "E2",
+        "marca": "4:09",
+        "que": "5 puntos"
+      },
+      {
+        "id": "E3",
+        "marca": "4:00",
+        "que": "6 puntos, y desde ahí cada punto son 8-9 s"
+      }
+    ],
+    "porQue": "Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.",
+    "primerControl": "2026-11-21",
+    "expectativa": "Sin una marca medida no hay previsión. Hoy solo hay una estimación: más de 5:00. El rodaje del 10-10 apunta a que puede estar bastante por encima, pero eso tampoco es una medida: el punto de partida lo da el primer control, el sábado 21-11. Criterio de entrenador, no dato: si ese control sale entre 5:00 y 5:15 y el año va sin lesiones, lo razonable es acabar entre 4:05 y 4:35; si sale de 5:30 o más, el objetivo del año es alejarse de la eliminación, en torno a 4:30. 4:00 o menos (6 puntos) pide una respuesta muy buena. Se revisa tras el control de diciembre."
+  },
+  "baremo1000Mujeres": {
+    "fuente": "BOE-A-2026-15055 (convocatoria de la 43.ª), Anexo II, tercer ejercicio. Comprobado en boe.es el 11-10-2026. La convocatoria de 2027 no ha salido: se supone el mismo baremo.",
+    "tramos": [
+      {
+        "puntos": 10,
+        "desde": null,
+        "hasta": "3:24"
+      },
+      {
+        "puntos": 9,
+        "desde": "3:25",
+        "hasta": "3:33"
+      },
+      {
+        "puntos": 8,
+        "desde": "3:34",
+        "hasta": "3:42"
+      },
+      {
+        "puntos": 7,
+        "desde": "3:43",
+        "hasta": "3:51"
+      },
+      {
+        "puntos": 6,
+        "desde": "3:52",
+        "hasta": "4:00"
+      },
+      {
+        "puntos": 5,
+        "desde": "4:01",
+        "hasta": "4:09"
+      },
+      {
+        "puntos": 4,
+        "desde": "4:10",
+        "hasta": "4:18"
+      },
+      {
+        "puntos": 3,
+        "desde": "4:19",
+        "hasta": "4:27"
+      },
+      {
+        "puntos": 2,
+        "desde": "4:28",
+        "hasta": "4:36"
+      },
+      {
+        "puntos": 1,
+        "desde": "4:37",
+        "hasta": "4:45"
+      },
+      {
+        "puntos": 0,
+        "desde": "4:46",
+        "hasta": null,
+        "elimina": true
+      }
+    ],
+    "reglasBOE": "En grupo, sobre superficie lisa, plana y dura. Calzado deportivo, sin clavos. Un solo intento. Salida de pie con «listo»… «ya».",
+    "calificacion": "La nota física es la media de los tres ejercicios; hace falta un 5 de media y un 0 en cualquiera elimina."
+  },
+  "semanaTipo": [
+    {
+      "dia": "Lun",
+      "que": "Carrera: la sesión de calidad (en las primeras semanas, correr y andar o suave con rectas o cuestas)"
+    },
+    {
+      "dia": "Mar",
+      "que": "Martín Freire: barra y circuito"
+    },
+    {
+      "dia": "Mié",
+      "que": "Carrera: suave con rectas, cuestas o 200 a ritmo K"
+    },
+    {
+      "dia": "Jue",
+      "que": "Martín Freire: barra y circuito"
+    },
+    {
+      "dia": "Vie",
+      "que": "CrossFit (sin piernas ni saltos antes de un control: ver Reglas)"
+    },
+    {
+      "dia": "Sáb",
+      "que": "Carrera: la larga suave, o el control de 1.000 m cada cuatro semanas"
+    },
+    {
+      "dia": "Dom",
+      "que": "CrossFit (sin piernas pesadas si puedes: el lunes toca la calidad)"
+    }
+  ],
+  "fases": [
+    {
+      "id": "F0",
+      "nombre": "Evaluación",
+      "desde": 1,
+      "hasta": 2,
+      "objetivo": "Correr y andar, y tu primer 1.000: saber de dónde partes."
+    },
+    {
+      "id": "F1",
+      "nombre": "Base: correr seguido",
+      "desde": 3,
+      "hasta": 10,
+      "objetivo": "Llegar a correr 35-48 min seguidos y suave. Es lo que más mejora el 1.000 al principio."
+    },
+    {
+      "id": "F2",
+      "nombre": "Base II: primeros intervalos",
+      "desde": 11,
+      "hasta": 22,
+      "objetivo": "Intervalos cortos cerca del ritmo de la prueba, algo de umbral y la larga a 60-65 min."
+    },
+    {
+      "id": "F3",
+      "nombre": "Potencia aeróbica",
+      "desde": 23,
+      "hasta": 34,
+      "objetivo": "Series de 400 a 1.000 m a ritmo K y K + 4: subir el techo."
+    },
+    {
+      "id": "F4",
+      "nombre": "Ritmo del examen",
+      "desde": 35,
+      "hasta": 46,
+      "objetivo": "Series al ritmo objetivo y 200 rápidos: aprender a sostener el ritmo del 1.000."
+    },
+    {
+      "id": "F5",
+      "nombre": "Afinado",
+      "desde": 47,
+      "hasta": 52,
+      "objetivo": "Simulacro y llegar fresca a la prueba."
+    }
+  ],
+  "glosario": [
+    {
+      "t": "Suave",
+      "d": "Puedes hablar con frases enteras. Manda poder hablar, no el reloj."
+    },
+    {
+      "t": "Correr y andar",
+      "d": "Al principio, bloques de correr y andar: 2:1, 3:1, 4:1, 6:1, 8:1 y seguido. No es hacer trampa: es como se construye la base sin lesionarse."
+    },
+    {
+      "t": "Rectas",
+      "d": "80 m acelerando poco a poco hasta un ritmo rápido pero suelto, sin sprintar. Vuelves andando. Mejoran la zancada sin cansar."
+    },
+    {
+      "t": "Cuestas",
+      "d": "En una subida del 5 al 8 %: subir fuerte sin llegar a tope el tiempo que diga la sesión y bajar andando."
+    },
+    {
+      "t": "Umbral",
+      "d": "«Cómodamente duro»: frases cortas, no conversación. Su ritmo sale de tu ritmo K (ver Ritmos)."
+    },
+    {
+      "t": "Ritmo K",
+      "d": "El mejor de tus dos últimos controles de 1.000 m. Por ejemplo, con 5:00, cada 400 en 2:00 y cada 200 en 1:00."
+    },
+    {
+      "t": "Ritmo K + 4",
+      "d": "4 s más lento por cada 400 que el ritmo K. Para series de 2-4 min."
+    },
+    {
+      "t": "Ritmo O",
+      "d": "El ritmo del objetivo del próximo control: K menos 2 s por cada 400. Desde junio."
+    },
+    {
+      "t": "Descarga",
+      "d": "La cuarta semana de cada bloque: menos carrera para llegar fresca al control del sábado."
+    }
+  ],
+  "reglas": [
+    {
+      "id": "suave",
+      "titulo": "Lo suave, suave de verdad",
+      "texto": "Los rodajes suaves son la mayor parte del plan y lo que más te va a mejorar. Si un día vas ahogada, vas demasiado rápido: baja o anda un minuto."
+    },
+    {
+      "id": "correr-andar",
+      "titulo": "Correr y andar",
+      "texto": "Escalones: 2:1 → 3:1 → 4:1 → 6:1 → 8:1 → seguido (minutos corriendo : andando). Se sube de escalón cuando el anterior sale entero, pudiendo hablar con frases y sin dolor al día siguiente. Si en la semana 6 aún no corres 20 min seguidos, la base se alarga."
+    },
+    {
+      "id": "primer200",
+      "titulo": "El primer 200 no se regala",
+      "texto": "En series y controles, el primer 200 sale al ritmo de los demás. Salir a sprint es el error más caro del 1.000."
+    },
+    {
+      "id": "dos-rep",
+      "titulo": "Regla de las dos repeticiones",
+      "texto": "Si dos repeticiones seguidas salen más de 3 s más lentas que el objetivo, se acaba la sesión: 10 min suaves y a casa."
+    },
+    {
+      "id": "ritmos",
+      "titulo": "Cómo se fijan los ritmos",
+      "texto": "Ritmo K: el mejor de tus dos últimos controles. K + 4: K más 4 s por cada 400. Umbral: K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15). Ritmo O (desde junio): K menos 2 s por cada 400. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada."
+    },
+    {
+      "id": "dolor",
+      "titulo": "Dolor",
+      "texto": "Dolor de 0 a 10. Se puede correr con molestia de 3 o menos si no sube mientras corres y a la mañana siguiente está igual o mejor. Se para ese día si cambia tu forma de correr, si va a más o si pasa de 3. No se corre y se va al médico si te duele un punto concreto de un hueso al apretarlo con el dedo, al saltar a la pata coja o al andar, o si duele en reposo o de noche. Aquiles o talón rígidos los primeros pasos de la mañana, rodilla que duele al bajar escaleras o cadera que duele al tumbarte de lado: avisas ese día y la siguiente carrera es suave y más corta."
+    },
+    {
+      "id": "cansancio",
+      "titulo": "Si llegas cargada",
+      "texto": "Primero se toca el miércoles: todo suave, sin rectas ni cuestas; y si además hay molestia o dormiste mal, se quita. Si hace falta, el lunes se queda en 30 min suaves. Lo que se pierde no se recupera."
+    },
+    {
+      "id": "descanso",
+      "titulo": "Sin día libre",
+      "texto": "Decidido el 11-10: el domingo sigue con CrossFit, así que no tienes ningún día sin entrenar. Eso es lo que más riesgo de lesión mete en el año, y se compensa así: el domingo, si puedes, sin piernas pesadas, porque el lunes toca la calidad. El viernes antes de un control, del simulacro o de la prueba, sin CrossFit, o sin piernas ni saltos. Si la larga del sábado es de 50 min o más, el CrossFit del viernes sin saltos. Y la regla «Si llegas cargada» se cumple siempre."
+    },
+    {
+      "id": "gemelo",
+      "titulo": "Elevaciones de talón",
+      "texto": "Después del rodaje del miércoles y de la larga del sábado: 3 × 15 elevaciones de talón a una pierna. Tres minutos que protegen el tendón de Aquiles y la tibia."
+    },
+    {
+      "id": "energia",
+      "titulo": "Comer y descansar",
+      "texto": "Come lo suficiente para entrenar; las calidades no se hacen en ayunas. Si la regla se vuelve irregular o falta tres meses, no es «normal por entrenar»: vas al médico. Si el cansancio no se va al descansar, también; que sea el médico quien decida si te pide una analítica. No tomes hierro por tu cuenta. Un día de regla malo cuenta como día malo: el control lleva asterisco."
+    },
+    {
+      "id": "calor",
+      "titulo": "Calor (julio y agosto)",
+      "texto": "En verano se corre al amanecer o al anochecer. Si AEMET avisa de calor o calima en tu zona, la calidad pasa a rodaje suave por sensación. Un control con calor no baja el ritmo K. Si corres más de 45 min con calor, llevas agua. Si te mareas, tienes náuseas o te duele la cabeza: paras, sombra y agua. Si hay confusión, 112."
+    },
+    {
+      "id": "zapatillas",
+      "titulo": "Zapatillas de correr",
+      "texto": "Para correr, zapatillas de correr, no las de CrossFit. En los controles, las mismas que el día de la prueba: el BOE prohíbe los clavos."
+    },
+    {
+      "id": "datos",
+      "titulo": "Qué mandar después de cada sesión",
+      "texto": "El entreno del Apple Watch (ver Reloj) y una línea: cómo te has sentido de 1 a 10 y si algo te ha molestado. También del CrossFit y de Martín Freire: minutos y esfuerzo de 1 a 10. Si un WOD lleva carrera, apúntalo: cuenta como carrera."
+    }
+  ],
+  "reloj": {
+    "modelo": "Apple Watch Series 10",
+    "pasos": [
+      "Rodajes: app Entreno → Carrera al aire libre, con las zonas de frecuencia cardiaca en pantalla. Pero en lo suave manda poder hablar: las zonas automáticas salen de una máxima estimada y pueden fallar.",
+      "Después del primer control, las zonas se pueden poner a mano (en la guía de Apple: Ajustes › Entreno › Zonas de frecuencia cardiaca › Manual; los nombres en español sin comprobar).",
+      "Series: la app Entreno permite entrenos personalizados con calentamiento, series, recuperaciones y aviso de ritmo. En los controles manda el cronómetro, no el GPS.",
+      "Mandar cada entreno por separado: lo ideal es un archivo .fit por entreno, exportado desde Salud con una app de iPhone (por ejemplo HealthFit; precio y versión sin comprobar). La exportación completa de la app Salud saca TODOS tus datos de salud: solo si no hay otra forma, y nunca se sube a ningún sitio."
+    ],
+    "nota": "El pulso de muñeca va con retraso en las series cortas y no vale en CrossFit ni en la barra: ahí manda el esfuerzo de 1 a 10."
+  },
+  "calendario": [
+    {
+      "n": 1,
+      "desde": "2026-10-12",
+      "fase": "F0",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-10-12",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "7 × (2 min corriendo + 1 andando)",
+          "min": 21,
+          "detalle": "Correr y andar: 7 veces 2 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas). Más despacio que el rodaje del 10-10 con Daniel: ese ritmo, para ti, no es suave."
+        },
+        {
+          "fecha": "2026-10-13",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-14",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "6 × (3 min corriendo + 1 andando)",
+          "min": 24,
+          "detalle": "Correr y andar: 6 veces 3 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas)."
+        },
+        {
+          "fecha": "2026-10-15",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-16",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-10-17",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "28 min: 7 × (3 min corriendo + 1 andando)",
+          "min": 28,
+          "detalle": "La larga: 7 veces 3 min corriendo suave y 1 min andando. Si corres con Daniel, él va a tu ritmo, no tú al suyo. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-10-18",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "desde": "2026-10-19",
+      "fase": "F0",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-10-19",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "6 × (3 min corriendo + 1 andando)",
+          "min": 24,
+          "detalle": "Correr y andar: 6 veces 3 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas)."
+        },
+        {
+          "fecha": "2026-10-20",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-21",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "5 × (4 min corriendo + 1 andando)",
+          "min": 25,
+          "detalle": "Correr y andar: 5 veces 4 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas)."
+        },
+        {
+          "fecha": "2026-10-22",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-23",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-10-24",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "28 min: correr y andar al escalón que toque",
+          "min": 28,
+          "detalle": "La larga: 28 min con el escalón de correr y andar en el que estés (ver Reglas). Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-10-25",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "desde": "2026-10-26",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-10-26",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2026-10-27",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-28",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "25 min suave",
+          "min": 25,
+          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-10-29",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-10-30",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-10-31",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "31 min suave",
+          "min": 31,
+          "detalle": "La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-01",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "desde": "2026-11-02",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-11-02",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "28 min suave + 5 rectas",
+          "min": 28,
+          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 5 rectas."
+        },
+        {
+          "fecha": "2026-11-03",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-04",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "28 min suave",
+          "min": 28,
+          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-05",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-06",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-11-07",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "34 min suave",
+          "min": 34,
+          "detalle": "La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-08",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "desde": "2026-11-09",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-11-09",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "30 min suave + 6 rectas",
+          "min": 30,
+          "detalle": "Al final, 6 rectas."
+        },
+        {
+          "fecha": "2026-11-10",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-11",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "30 min suave",
+          "min": 30,
+          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-12",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-13",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-11-14",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "37 min suave",
+          "min": 37,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-15",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "desde": "2026-11-16",
+      "fase": "F1",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2026-11-16",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Semana de descarga. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2026-11-17",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-18",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2026-11-19",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-20",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-11-21",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (1.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Tu primer tiempo de referencia: fija el ritmo K del bloque siguiente."
+        },
+        {
+          "fecha": "2026-11-22",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "desde": "2026-11-23",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-11-23",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "30 min suave + 6 cuestas de 15 s",
+          "min": 30,
+          "detalle": "Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando."
+        },
+        {
+          "fecha": "2026-11-24",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-25",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "32 min suave",
+          "min": 32,
+          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-26",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-11-27",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-11-28",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "40 min suave",
+          "min": 40,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-11-29",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "desde": "2026-11-30",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-11-30",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "32 min suave + 8 cuestas de 15 s",
+          "min": 32,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando."
+        },
+        {
+          "fecha": "2026-12-01",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-02",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "35 min suave",
+          "min": 35,
+          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-03",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-04",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-12-05",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "44 min suave",
+          "min": 44,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-06",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "desde": "2026-12-07",
+      "fase": "F1",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-12-07",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "35 min con 6 × (1 min alegre + 1 min suave)",
+          "min": 35,
+          "detalle": "Fartlek: 10 min suaves, 6 veces 1 min a ritmo alegre (respiras fuerte pero controlas) y 1 min suave, y suave hasta el final."
+        },
+        {
+          "fecha": "2026-12-08",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-09",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "35 min suave + 6 rectas",
+          "min": 35,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-10",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-11",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-12-12",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "48 min suave",
+          "min": 48,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-13",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "desde": "2026-12-14",
+      "fase": "F1",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2026-12-14",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Semana de descarga. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2026-12-15",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-16",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2026-12-17",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-18",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-12-19",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (2.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2026-12-20",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "desde": "2026-12-21",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-12-21",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 2 min a ritmo K + 4, rec. 2 min trotando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2026-12-22",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-23",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "30 min suave",
+          "min": 30,
+          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-24",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-25",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2026-12-26",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "48 min suave",
+          "min": 48,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-27",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "desde": "2026-12-28",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2026-12-28",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 5 min a umbral, rec. 1 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2026-12-29",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2026-12-30",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "35 min suave + 8 cuestas de 20 s",
+          "min": 35,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2026-12-31",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-01",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-01-02",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "52 min suave",
+          "min": 52,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-03",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "desde": "2027-01-04",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-01-04",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "8 × 2 min a ritmo K + 4, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-01-05",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-06",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "38 min suave + 6 × 200 m a ritmo K",
+          "min": 38,
+          "detalle": "Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-07",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-08",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-01-09",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-10",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "desde": "2027-01-11",
+      "fase": "F2",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-01-11",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Semana de descarga. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-01-12",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-13",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-01-14",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-15",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-01-16",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (3.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-01-17",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "desde": "2027-01-18",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-01-18",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 3 min a ritmo K + 4, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-01-19",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-20",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "40 min suave + 8 cuestas de 20 s",
+          "min": 40,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-21",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-22",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-01-23",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "58 min suave",
+          "min": 58,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-24",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "desde": "2027-01-25",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-01-25",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 8 min a umbral, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-01-26",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-27",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "40 min suave + 6 × 200 m a ritmo K",
+          "min": 40,
+          "detalle": "Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-28",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-01-29",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-01-30",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-01-31",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "desde": "2027-02-01",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-02-01",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 3 min a ritmo K + 4, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-02-02",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-03",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "40 min suave + 6 rectas",
+          "min": 40,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-04",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-05",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-02-06",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-07",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "desde": "2027-02-08",
+      "fase": "F2",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-02-08",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Semana de descarga. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-02-09",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-10",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-02-11",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-12",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-02-13",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (4.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-02-14",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "desde": "2027-02-15",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-02-15",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo K, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las seis dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-02-16",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-17",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "45 min suave + 6 × 200 m a ritmo K",
+          "min": 45,
+          "detalle": "Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-18",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-19",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-02-20",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-21",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "desde": "2027-02-22",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-02-22",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × 12 min a umbral, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-02-23",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-24",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "45 min suave + 8 cuestas de 20 s",
+          "min": 45,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-25",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-02-26",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-02-27",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "62 min suave",
+          "min": 62,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-02-28",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "desde": "2027-03-01",
+      "fase": "F2",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-03-01",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 600 m a ritmo K, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-03-02",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-03",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "45 min suave + 6 × 200 m a ritmo K",
+          "min": 45,
+          "detalle": "Suave y, al final, 6 × 200 m a ritmo K con 200 m andando entre cada uno. Sueltos, sin apretar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-03-04",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-05",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-03-06",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min suave",
+          "min": 65,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-03-07",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "desde": "2027-03-08",
+      "fase": "F2",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-03-08",
+          "dia": "Lun",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Semana de descarga. Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-03-09",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-10",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-03-11",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-12",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-03-13",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (5.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-03-14",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 23,
+      "desde": "2027-03-15",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-03-15",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo K, rec. 2 min trotando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las seis dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-03-16",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-17",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-03-18",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-19",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-03-20",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min suave",
+          "min": 65,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-03-21",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "desde": "2027-03-22",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-03-22",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 600 m a ritmo K, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-03-23",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-24",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "2 × 8 min a umbral + 15 min suave",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-03-25",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-26",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-03-27",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min suave",
+          "min": 65,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-03-28",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 25,
+      "desde": "2027-03-29",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-03-29",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 800 m a ritmo K + 4, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 4 s del objetivo."
+        },
+        {
+          "fecha": "2027-03-30",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-03-31",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 8 cuestas de 20 s",
+          "min": 50,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-01",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-02",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-04-03",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min: suave y los 10 últimos alegres",
+          "min": 65,
+          "detalle": "La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-04",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 26,
+      "desde": "2027-04-05",
+      "fase": "F3",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-04-05",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo K, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-04-06",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-07",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-04-08",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-09",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-04-10",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (6.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-04-11",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "desde": "2027-04-12",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-04-12",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo K, rec. 1 min 45 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Misma velocidad que en marzo, algo menos de descanso."
+        },
+        {
+          "fecha": "2027-04-13",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-14",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-15",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-16",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-04-17",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min suave",
+          "min": 65,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-18",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 28,
+      "desde": "2027-04-19",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-04-19",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 600 m a ritmo K, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-04-20",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-21",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "2 × 8 min a umbral + 15 min suave",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-04-22",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-23",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-04-24",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "68 min suave",
+          "min": 68,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-25",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 29,
+      "desde": "2027-04-26",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-04-26",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 800 m a ritmo K + 4, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-04-27",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-28",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 8 cuestas de 20 s",
+          "min": 50,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-04-29",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-04-30",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-05-01",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "70 min: suave y los 10 últimos alegres",
+          "min": 70,
+          "detalle": "La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-02",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 30,
+      "desde": "2027-05-03",
+      "fase": "F3",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-05-03",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo K, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-05-04",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-05",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-05-06",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-07",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-05-08",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (7.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-05-09",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 31,
+      "desde": "2027-05-10",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-05-10",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 1.000 m a ritmo K + 4, rec. 4 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-05-11",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-12",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-13",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-14",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-05-15",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "65 min suave",
+          "min": 65,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-16",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "desde": "2027-05-17",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-05-17",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo K, rec. 1 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-05-18",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-19",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "2 × 10 min a umbral + 15 min suave",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-05-20",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-21",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-05-22",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "68 min suave",
+          "min": 68,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-23",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "desde": "2027-05-24",
+      "fase": "F3",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-05-24",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 600 m a ritmo K, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-05-25",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-26",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 8 cuestas de 20 s",
+          "min": 50,
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 20 s subiendo fuerte sin llegar a tope; bajas andando. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-27",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-05-28",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-05-29",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "70 min: suave y los 10 últimos alegres",
+          "min": 70,
+          "detalle": "La larga: suave y los últimos 10 min a ritmo alegre (respiras fuerte pero controlas). Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-05-30",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 34,
+      "desde": "2027-05-31",
+      "fase": "F3",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-05-31",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo K, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-06-01",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-02",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-06-03",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-04",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-06-05",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (8.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-06-06",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 35,
+      "desde": "2027-06-07",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-06-07",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cinco dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-06-08",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-09",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-06-10",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-11",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-06-12",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-06-13",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "desde": "2027-06-14",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-06-14",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 600 m a ritmo O, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las tres dentro de 3 s del objetivo."
+        },
+        {
+          "fecha": "2027-06-15",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-16",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "8 × 200 m rápidos, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-06-17",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-18",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-06-19",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-06-20",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 37,
+      "desde": "2027-06-21",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-06-21",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × (600 + 400 m) a ritmo O: 1 min entre el 600 y el 400, 5 min entre las dos",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Es el kilómetro partido. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-06-22",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-23",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-06-24",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-25",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-06-26",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-06-27",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 38,
+      "desde": "2027-06-28",
+      "fase": "F4",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-06-28",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-06-29",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-06-30",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-07-01",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-02",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-07-03",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (9.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-07-04",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "desde": "2027-07-05",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-07-05",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo O, rec. 1 min 45 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-07-06",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-07",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-07-08",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-09",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-07-10",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-07-11",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 40,
+      "desde": "2027-07-12",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-07-12",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 600 m a ritmo O, rec. 2 min 30 s + 2 × 200 m rápidos",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-07-13",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-14",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "8 × 200 m rápidos, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-07-15",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-16",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-07-17",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "60 min suave",
+          "min": 60,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-07-18",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 41,
+      "desde": "2027-07-19",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-07-19",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × (600 + 400 m) a ritmo O: 1 min y 4 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-07-20",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-21",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-07-22",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-23",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-07-24",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-07-25",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "desde": "2027-07-26",
+      "fase": "F4",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-07-26",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-07-27",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-28",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-07-29",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-07-30",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-07-31",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (10.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-08-01",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 43,
+      "desde": "2027-08-02",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-08-02",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 400 m a ritmo O, rec. 1 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-03",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-04",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-08-05",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-06",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-08-07",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-08-08",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 44,
+      "desde": "2027-08-09",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-08-09",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × 600 m a ritmo O, rec. 3 min + 3 × 200 m rápidos",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-10",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-11",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "8 × 200 m rápidos, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-12",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-13",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-08-14",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-08-15",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 45,
+      "desde": "2027-08-16",
+      "fase": "F4",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-08-16",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × (600 + 400 m) a ritmo O: 1 min y 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-17",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-18",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "50 min suave + 6 rectas",
+          "min": 50,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-08-19",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-20",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-08-21",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-08-22",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 46,
+      "desde": "2027-08-23",
+      "fase": "F4",
+      "descarga": true,
+      "dias": [
+        {
+          "fecha": "2027-08-23",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Semana de descarga: solo 4. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-24",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-25",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 3 rectas",
+          "min": 20,
+          "detalle": "Al final, 3 rectas."
+        },
+        {
+          "fecha": "2027-08-26",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-08-27",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-08-28",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (11.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
+        },
+        {
+          "fecha": "2027-08-29",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 47,
+      "desde": "2027-08-30",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-08-30",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "5 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-08-31",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-01",
+          "dia": "Mié",
+          "tipo": "calidad",
+          "titulo": "8 × 200 m rápidos, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-09-02",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-03",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-09-04",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "55 min suave",
+          "min": 55,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-09-05",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "desde": "2027-09-06",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-09-06",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 600 m a ritmo O, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-09-07",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-08",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "45 min suave + 6 rectas",
+          "min": 45,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-09-09",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-10",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-09-11",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "50 min suave",
+          "min": 50,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-09-12",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 49,
+      "desde": "2027-09-13",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-09-13",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "2 × (600 + 400 m) a ritmo O: 1 min y 4 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-09-14",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-15",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "45 min suave + 6 rectas",
+          "min": 45,
+          "detalle": "Al final, 6 rectas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-09-16",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-17",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-09-18",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "50 min suave",
+          "min": 50,
+          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+        },
+        {
+          "fecha": "2027-09-19",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 50,
+      "desde": "2027-09-20",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-09-20",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 400 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-09-21",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-22",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "25 min suave + 4 rectas",
+          "min": 25,
+          "detalle": "Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-09-23",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-24",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-09-25",
+          "dia": "Sáb",
+          "tipo": "control",
+          "titulo": "SIMULACRO: circuito, barra y 1.000 m",
+          "detalle": "En el orden del BOE: circuito, barra y 1.000 m, con los descansos que te den. Calentamiento: 15 min suave + movilidad + 4 rectas. Después, 10 min muy suave. El viernes antes, descanso.",
+          "objetivo": "El último dato antes de la prueba. Decide el ritmo de la última semana."
+        },
+        {
+          "fecha": "2027-09-26",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 51,
+      "desde": "2027-09-27",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-09-27",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "4 × 300 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-09-28",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-09-29",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "30 min suave + 4 rectas",
+          "min": 30,
+          "detalle": "Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-09-30",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-10-01",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-10-02",
+          "dia": "Sáb",
+          "tipo": "suave",
+          "titulo": "40 min suave",
+          "min": 40,
+          "detalle": "Suave, sin nada más."
+        },
+        {
+          "fecha": "2027-10-03",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    },
+    {
+      "n": 52,
+      "desde": "2027-10-04",
+      "fase": "F5",
+      "descarga": false,
+      "dias": [
+        {
+          "fecha": "2027-10-04",
+          "dia": "Lun",
+          "tipo": "calidad",
+          "titulo": "3 × 300 m a ritmo O, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+        },
+        {
+          "fecha": "2027-10-05",
+          "dia": "Mar",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-10-06",
+          "dia": "Mié",
+          "tipo": "suave",
+          "titulo": "20 min suave + 4 rectas",
+          "min": 20,
+          "detalle": "Al final, 4 rectas."
+        },
+        {
+          "fecha": "2027-10-07",
+          "dia": "Jue",
+          "tipo": "otro",
+          "titulo": "Martín Freire: barra y circuito"
+        },
+        {
+          "fecha": "2027-10-08",
+          "dia": "Vie",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        },
+        {
+          "fecha": "2027-10-09",
+          "dia": "Sáb",
+          "tipo": "prueba",
+          "titulo": "Prueba (fecha por confirmar)",
+          "detalle": "La fecha real la fija la convocatoria de 2027. Cuando salga, se recolocan las semanas finales. El viernes antes, descanso."
+        },
+        {
+          "fecha": "2027-10-10",
+          "dia": "Dom",
+          "tipo": "otro",
+          "titulo": "CrossFit"
+        }
+      ]
+    }
+  ],
+  "pendientes": [
+    {
+      "id": "primer-control",
+      "texto": "Primer control de 1.000 m el sábado 21-11 en Arucas: fija el ritmo K. Hasta entonces, todo por sensación.",
+      "desde": "2026-10-11"
+    },
+    {
+      "id": "fecha-2027",
+      "texto": "Fecha de la prueba de 2027: cuando salga la convocatoria, recolocar las semanas finales.",
+      "desde": "2026-10-11"
+    }
+  ]
+}

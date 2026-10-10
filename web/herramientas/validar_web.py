@@ -122,7 +122,9 @@ def textos_dia(dia):
 
 def comprobar_literalidad(inf, plan, hist, web, corpus):
     raices = {'plan': plan, 'historial': hist, 'web': web}
-    dia_torcido = (cw.por_id(plan.get('reglas'), 'dia-torcido') or {}).get('texto') or ''
+    _dt = cw.por_id(plan.get('reglas'), 'dia-torcido') or {}
+    # el origen guarda el texto del semáforo (hasta el 10-10): los días pasados siguen siendo literales de él
+    dia_torcido = (_dt.get('texto') or '') + ' ' + (_dt.get('origen') or '')
     n_cif = n_txt = 0
 
     # 1 · toda cifra de un texto de web.json está en el corpus (se admiten 1 a 9: reglas del BOE y ordinales)

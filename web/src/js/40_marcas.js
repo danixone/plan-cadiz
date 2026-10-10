@@ -1122,7 +1122,8 @@
 
   /* G8 · pulso en rodaje: deriva de cada rodaje (y ritmo a 145 cuando exista) */
   function derivas() {
-    return lista(H.carrera).filter(function (e) { return e.resultado && e.resultado.deriva && typeof e.resultado.deriva.pct === 'number' && esIso(e.fecha); }).slice().sort(ordenFecha);
+    /* desde el 3-10 los rodajes solo traen la deriva por mitades (Paso 5): también entran */
+    return lista(H.carrera).filter(function (e) { var d = e.resultado && e.resultado.deriva; return d && (typeof d.pct === 'number' || pctDe(d.mitadesDesdeMin15) !== null) && esIso(e.fecha); }).slice().sort(ordenFecha);
   }
   function ritmos145() {
     return lista(H.carrera).filter(function (e) { var m = e.resultado && e.resultado.metricas; return m && m.ritmoA145 && fmt.parseT(String(m.ritmoA145).split('/')[0]) !== null; }).slice().sort(ordenFecha);
@@ -1138,7 +1139,7 @@
     var E = derivas(); if (!E.length) return;
     var TD = termometro(/deriva/i) || {}, base = pctDe(TD.normal), alarma = pctDe(TD.alarma);
     var vals = [];
-    E.forEach(function (e) { vals.push(e.resultado.deriva.pct); var m = pctDe(e.resultado.deriva.mitadesDesdeMin15); if (m !== null) vals.push(m); });
+    E.forEach(function (e) { if (typeof e.resultado.deriva.pct === 'number') vals.push(e.resultado.deriva.pct); var m = pctDe(e.resultado.deriva.mitadesDesdeMin15); if (m !== null) vals.push(m); });
     if (base !== null) vals.push(base); if (alarma !== null) vals.push(alarma);
     var lo = Math.min(0, Math.min.apply(null, vals)) - 2, hi = Math.max.apply(null, vals) + 3;
     var ctx = PC.chart.base(fig, { h: 220, m: { t: 16, r: 14, b: 28, l: 40 } }), g = ctx.g;
@@ -1150,28 +1151,31 @@
     if (lo < 0) hl(g, fy(0), ctx.iw, 'eje');
     if (base !== null) { hl(g, fy(base), ctx.iw, 'mc-l-obj'); tx(g, 4, fy(base) + 14, num(base) + ' % base asentada', 'lab mc-t-ok'); }
     if (alarma !== null) { hl(g, fy(alarma), ctx.iw, 'mc-l-alarma'); tx(g, 4, fy(alarma) - 5, num(alarma) + ' % alarma en llano', 'lab mc-t-warn'); }
-    var pts = [], hayMit = false;
+    var pts = [], hayMit = false, hayNoValida = false;
     E.forEach(function (e) {
-      var dv = e.resultado.deriva, x = fx(e.fecha), nodos = [], mit = pctDe(dv.mitadesDesdeMin15);
-      nodos.push(punto(g, x, fy(dv.pct), 'mc-s1'));
-      tx(g, x - 9, fy(dv.pct) + 4, num(dv.pct) + ' %', 'lab', 'end');
+      var dv = e.resultado.deriva, x = fx(e.fecha), nodos = [], mit = pctDe(dv.mitadesDesdeMin15), hayPct = typeof dv.pct === 'number', noVal = e.valida === false;
+      if (noVal) hayNoValida = true;
+      if (hayPct) {
+        nodos.push(punto(g, x, fy(dv.pct), 'mc-s1' + (noVal ? ' mc-hueco' : '')));
+        tx(g, x - 9, fy(dv.pct) + 4, num(dv.pct) + ' %', 'lab', 'end');
+      }
       if (mit !== null) {
         hayMit = true;
         var ym = fy(mit);
-        nodos.push(svgEl('path', { d: 'M' + x.toFixed(1) + ' ' + (ym - 6).toFixed(1) + 'l6 6l-6 6l-6 -6z', 'class': 'mc-pt mc-rombo' }, g));
+        nodos.push(svgEl('path', { d: 'M' + x.toFixed(1) + ' ' + (ym - 6).toFixed(1) + 'l6 6l-6 6l-6 -6z', 'class': 'mc-pt mc-rombo' + (noVal ? ' mc-hueco' : '') }, g));
         tx(g, x - 9, ym + 4, num(mit) + ' %', 'mc-t-2', 'end');
       }
       var met = metodoDe(dv), ks = Object.keys(dv).filter(function (k) { return /^min\d+a\d+$/.test(k); });
-      pts.push({ x: x, nodo: nodos, html: '<b>' + esc(corta(e.fecha) + ' · deriva ' + num(dv.pct) + ' %') + '</b>' + (dv.sKm != null ? ' (' + esc(dv.sKm) + ' s/km)' : '') +
+      pts.push({ x: x, nodo: nodos, html: '<b>' + esc(corta(e.fecha) + (hayPct ? ' · deriva ' + num(dv.pct) + ' %' : ' · deriva por mitades ' + num(mit) + ' %')) + '</b>' + (noVal ? ' · no mide' : '') + (dv.sKm != null ? ' (' + esc(dv.sKm) + ' s/km)' : '') +
         (met ? ' · ' + esc(met) + ': ' + ks.map(function (k) { return esc(dv[k]); }).join(' → ') : '') +
         (mit !== null ? '<br>Por mitades desde el minuto 15: ' + esc(dv.mitadesDesdeMin15) : '<br>Sin el dato de deriva por mitades desde el minuto 15.') +
         (dv.analizador ? '<br>Analizador: ' + esc(dv.analizador) : '') + (e.sesion ? '<br>' + esc(e.sesion) : '') });
     });
     PC.chart.seleccion(ctx, pts, pts.length - 1);
-    leyenda(fig, hayMit ? [['mc-lg-s1', 'deriva del rodaje (primer bloque frente al último)'], ['mc-lg-rombo', 'por mitades desde el minuto 15']] : null);
-    PC.chart.etiqueta(ctx, 'Deriva cardíaca de los rodajes: ' + E.map(function (e) { var m = e.resultado.deriva.mitadesDesdeMin15; return num(e.resultado.deriva.pct) + ' % el ' + dm(e.fecha) + (m ? ' (por mitades ' + m + ')' : ''); }).join('; ') +
+    leyenda(fig, hayMit ? [['mc-lg-s1', 'deriva del rodaje (primer bloque frente al último)'], ['mc-lg-rombo', 'por mitades desde el minuto 15']].concat(hayNoValida ? [['mc-lg-hueco3', 'discontinuo: sesión que no mide']] : []) : null);
+    PC.chart.etiqueta(ctx, 'Deriva cardíaca de los rodajes: ' + E.map(function (e) { var d = e.resultado.deriva, m = d.mitadesDesdeMin15; return (typeof d.pct === 'number' ? num(d.pct) + ' % el ' + dm(e.fecha) + (m ? ' (por mitades ' + m + ')' : '') : 'por mitades ' + m + ' el ' + dm(e.fecha)) + (e.valida === false ? ', no mide' : ''); }).join('; ') +
       (base !== null ? '. Base asentada por debajo del ' + num(base) + ' %' : '') + (alarma !== null ? '; alarma por encima del ' + num(alarma) + ' % en llano.' : '.'));
-    tablaDatos(fig, [{ cab: ['Fecha', 'Deriva', 's/km', 'Método', 'Por mitades'], filas: E.slice().reverse().map(function (e) { var d = e.resultado.deriva; return [corta(e.fecha), num(d.pct) + ' %', d.sKm, metodoDe(d), d.mitadesDesdeMin15 || '—']; }) }]);
+    tablaDatos(fig, [{ cab: ['Fecha', 'Deriva', 's/km', 'Método', 'Por mitades'], filas: E.slice().reverse().map(function (e) { var d = e.resultado.deriva; return [corta(e.fecha), typeof d.pct === 'number' ? num(d.pct) + ' %' : '—', d.sKm != null ? d.sKm : '—', metodoDe(d), d.mitadesDesdeMin15 || '—']; }) }]);
     /* termómetros del plan, literales */
     var T145 = termometro(/145/), R = ritmos145(), notas = [];
     if (TD.nombre) notas.push('<dt>' + esc(TD.nombre) + '</dt><dd>' + esc([TD.normal ? 'Normal: ' + TD.normal : '', TD.alarma ? 'Alarma: ' + TD.alarma : ''].filter(Boolean).join('. ')) + '</dd>');

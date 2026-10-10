@@ -70,9 +70,9 @@
   }
   var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba' };
   var LETRA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
-  var NCOLOR = { verde: 'Verde', ambar: 'Ámbar', rojo: 'Rojo', parada: 'No se entrena' };
-  var CCOLOR = { verde: 'ok', ambar: 'warn', rojo: 'bad', parada: 'bad' };
-  var LAMP = { verde: 'g', ambar: 'a', rojo: 'r' };
+  var NCOLOR = { verde: 'Sesión escrita', ambar: 'Sesión escrita', rojo: 'Sesión escrita', parada: 'No se entrena' };
+  var CCOLOR = { verde: 'ok', ambar: 'ok', rojo: 'ok', parada: 'bad' };
+  var LAMP = { verde: 'g', ambar: 'g', rojo: 'g' };
 
   /* ================================================================ T1 · semáforo (PC.sem) */
   var SEM = PC.sem = PC.sem || {};
@@ -89,37 +89,32 @@
     return m ? m[0] : 'agujetas 3-4';
   }
   function textoRacha() { return wsem().racha || frase(reglaTxt('dia-torcido'), 'RACHA'); }
+  /* desde el 10-10 no hay semáforo: la sesión escrita siempre (verde) salvo síntomas por debajo del cuello (parada);
+     la noche corta, la VFC, la sobrecarga o los mocos solo ponen el asterisco (reglas[dia-torcido]) */
   SEM.calcular = function (ent) {
     var e = mezclar(SEM_DEF, ent || {});
     var cu = wsem().cuello || {};
     var min = (e.min === null || e.min === undefined || e.min === '') ? null : +e.min;
     if (min !== null && isNaN(min)) min = null;
     var banda = e.banda || (min !== null ? SEM.bandaDeMin(min) : null);
-    var out = { banda: banda, min: min, color: banda, mide: false, racha: false, motivos: [], avisos: [] };
-    if (!banda) { out.color = null; return out; }
-    var dia = null;
-    try { dia = e.fecha && PC.cal ? PC.cal.dia(e.fecha) : null; } catch (x) { dia = null; }
-    var color = banda;
-    if (e.reloj === 'vfc' || e.reloj === 'sobrecarga') { color = 'rojo'; out.motivos.push(motivoRojo()); }
-    if (banda === 'rojo' && e.ayerRojo === true) { color = 'rojo'; out.racha = true; out.motivos.push(textoRacha()); }
-    if (e.rachaAyer === true) { color = 'rojo'; if (out.motivos.indexOf(textoRacha()) < 0) out.motivos.push(textoRacha()); }
+    var out = { banda: banda, min: min, color: banda ? 'verde' : null, mide: !!banda, racha: false, asterisco: false, motivos: [], avisos: [] };
+    if (!banda) return out;
+    var ast = [];
+    if (banda === 'rojo') ast.push('noche de menos de ' + PC.fmt.sueno(cortes().rojo));
+    if (e.reloj === 'vfc') ast.push('VFC de 7 días desequilibrada o baja');
+    if (e.reloj === 'sobrecarga') ast.push('Sobrecarga');
+    if (e.sintomas === 'encima') { ast.push('síntomas por encima del cuello'); out.avisos.push({ txt: cu.encima || frase(reglaTxt('cuello'), 'encima del cuello'), tono: 'warn' }); }
+    if (ast.length) { out.asterisco = true; out.motivos.push('Con asterisco (' + ast.join(', ') + '): ' + (wsem().asterisco || 'si sale peor de lo que pide, se anota y no baja nada')); }
     var agu = +e.agujetas || 0;
-    if (agu >= 3 && agu <= 4 && color === 'verde') { color = 'ambar'; out.motivos.push(motivoAgujetas(dia)); }
     if (agu >= 5) out.avisos.push({ txt: 'el plan no fija qué hacer con agujetas de 5 o más: pregúntale al entrenador', tono: 'warn' });
-    if (e.sintomas === 'encima') {
-      if (color === 'verde' || color === 'ambar') color = cu.colorEncima || 'rojo';
-      out.avisos.push({ txt: cu.encima || frase(reglaTxt('dia-torcido'), 'Síntomas por encima'), tono: 'warn' });
-    }
     var reg10 = ((plan().protocoloDominadas || {}).reglas || [])[10] || '';
     var codo = +e.codo || 0;
     if (codo >= 3 && codo <= 4) out.avisos.push({ txt: frase(reg10, '3-4/10'), tono: 'warn' });
     else if (codo >= 5) out.avisos.push({ txt: frase(reg10, '5/10 o más'), tono: 'bad' });
     if (e.talon === 'duele') out.avisos.push({ txt: frase((plan().lesiones || {}).pies, 'Señal de alarma'), tono: 'warn' });
     if (e.cintillo === 'molesta') out.avisos.push({ txt: frase((plan().lesiones || {}).cintillo, 'Regla de parada'), tono: 'bad' });
-    if (e.sintomas === 'debajo') { color = 'parada'; out.motivos.push(cu.debajo || 'Por debajo del cuello: no se entrena'); }
-    if (color === 'ambar' || color === 'rojo') out.avisos.push({ txt: frase(reglaTxt('dormir'), 'Siesta solo'), tono: 'info' });
-    out.color = color;
-    out.mide = color === 'verde';
+    if (e.sintomas === 'debajo') { out.color = 'parada'; out.mide = false; out.motivos = [cu.debajo || 'Por debajo del cuello: no se entrena']; }
+    if (min !== null && min < cortes().verde || banda !== 'verde') out.avisos.push({ txt: frase(reglaTxt('dormir'), 'Siesta solo'), tono: 'info' });
     return out;
   };
   SEM.leer = function (fecha) { var g = st().get('sem-' + fecha, null); return g && typeof g === 'object' ? g : null; };
@@ -797,15 +792,15 @@
       return m ? '<span class="chip ' + m[0] + '">' + m[1] + '</span>' : '';
     }
     if (dia.tipo === 'descanso' || dia.tipo === 'examen') return sal && sal.color ? '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>' : '';
-    if (!sal || !sal.color) return '<span class="chip sup">semáforo sin rellenar</span>';
-    return '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>';
+    if (!sal || !sal.color) return '<span class="chip sup">noche sin anotar</span>';
+    return '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>' + (sal.asterisco ? ' <span class="chip warn">con asterisco</span>' : '');
   }
   function consecuencia(dia, sal) {
     if (!sal || !sal.color) return '';
     if (dia.tipo === 'descanso' || dia.tipo === 'examen') return 'Hoy es descanso';
     if (sal.color === 'parada') return 'No se entrena: regla del cuello';
     if (dia.semaforo) return dia.semaforo;
-    return sal.color === 'verde' ? 'Sesión como está escrita. Es la única que mide.' : 'Solo la versión verde mide.';
+    return sal.asterisco ? 'Sesión como está escrita. Un buen resultado vale; si sale peor de lo que pide, no baja nada.' : 'Sesión como está escrita. Todo cuenta.';
   }
   function diaConBarra(dia) { return dia.tipo === 'fuerza' || /dominadas|barra/i.test(dia.sesion || ''); }
   function diaConCintillo(dia) { return /^(carrera|control|circuito|prueba)$/.test(dia.tipo || ''); }
@@ -830,6 +825,7 @@
   function stepperHTML(campo, valor, etq) {
     return '<div class="stepper" role="group" aria-label="' + esc(etq) + '"><button type="button" data-st="' + campo + '" data-d="-1" aria-label="Menos">−</button><output class="num">' + (valor || 0) + '</output><button type="button" data-st="' + campo + '" data-d="1" aria-label="Más">+</button></div>';
   }
+  function fmtC(m) { return PC.fmt.sueno(m); }
   function htmlSem(dia) {
     var f = dia.fecha, g = SEM.leer(f), sal = SEM.salida(f), desc = dia.tipo === 'descanso' || dia.tipo === 'examen';
     var abierto = UI.abierto[f] || (!sal && !desc), opc = UI.opc[f];
@@ -846,22 +842,17 @@
       var ban = g ? g.banda : null;
       h.push('<div class="hoy-sem"><p class="hoy-sem-q" id="hoy-sem-q-' + f + '">¿Cómo has dormido? (Garmin, sin la siesta)</p>' +
         '<div class="lamps" role="radiogroup" aria-labelledby="hoy-sem-q-' + f + '" data-qa-clave="lamparas">' +
-        [['verde', 'g', 'Verde', '6h30 o más'], ['ambar', 'a', 'Ámbar', '5h00–6h29'], ['rojo', 'r', 'Rojo', 'menos de 5h00']].map(function (l) {
+        [['verde', 'g', fmtC(cortes().verde) + ' o más', ''], ['ambar', 'g', fmtC(cortes().rojo) + '–' + fmtC(cortes().verde - 1), ''], ['rojo', 'a', 'menos de ' + fmtC(cortes().rojo), 'asterisco']].map(function (l) {
           return '<button type="button" role="radio" aria-checked="' + (ban === l[0] ? 'true' : 'false') + '" data-a="lamp" data-banda="' + l[0] + '"><i class="lamp ' + l[1] + '"></i><b>' + l[2] + '</b><small>' + l[3] + '</small></button>';
         }).join('') + '</div>' +
         '<div class="hoy-sem-l"><span>' + esc(resumenOpc(g)) + '</span><button type="button" class="btn ghost" data-a="opc" aria-expanded="' + (opc ? 'true' : 'false') + '">Cambiar</button></div>');
       if (opc) h.push(htmlOpciones(dia, g || {}));
     }
-    if (sal && sal.color && sal.banda === 'rojo' && (!g || g.ayerRojo === null || g.ayerRojo === undefined) && SEM.ayerRojo(f) === null) {
-      h.push('<div class="hoy-ayer"><p>¿Anoche también por debajo de 5h00?</p>' + segHTML('ayer', null, [['no', 'No'], ['si', 'Sí']], '¿Anoche también por debajo de 5h00?') + '</div>');
-    }
     if (sal && sal.color && !abierto) {
       var li = [];
-      sal.motivos.forEach(function (m) { li.push('<li class="bad">' + esc(m) + '</li>'); });
+      sal.motivos.forEach(function (m) { li.push('<li class="' + (sal.color === 'parada' ? 'bad' : 'warn') + '">' + esc(m) + '</li>'); });
       sal.avisos.forEach(function (a) { li.push('<li class="' + (a.tono === 'info' ? '' : a.tono) + '">' + esc(a.txt) + '</li>'); });
-      var rr = SEM.rachaSemana(f);
-      if (rr && rr.salta) li.push('<li class="warn">' + esc(rr.texto) + ' (' + rr.seguro + ' noches seguro' + (rr.dudosas ? '; ' + rr.dudosas + ' ámbar sin minutos' : '') + ')</li>');
-      if (li.length) h.push('<ul class="hoy-sem-av">' + li.join('') + '<li><a href="#plan/reglas">Reglas del semáforo →</a></li></ul>');
+      if (li.length) h.push('<ul class="hoy-sem-av">' + li.join('') + '<li><a href="#plan/reglas">La regla →</a></li></ul>');
     }
     h.push('</div>');
     return h.join('');
@@ -871,7 +862,7 @@
     o.push('<div class="hoy-opt">');
     o.push('<div><label for="hoy-min-' + dia.fecha + '">Horas exactas: <output class="num">' + (min !== null ? PC.fmt.sueno(min) : 'sin fijar') + '</output></label>' +
       '<input type="range" class="rango sueno" id="hoy-min-' + dia.fecha + '" data-s="min" min="180" max="600" step="5" value="' + (min !== null ? min : 390) + '" aria-valuetext="' +
-      (min !== null ? esc(PC.fmt.sueno(min).replace('h', ' horas ') + ' minutos, ' + NCOLOR[SEM.bandaDeMin(min)].toLowerCase()) : 'sin fijar') + '"></div>');
+      (min !== null ? esc(PC.fmt.sueno(min).replace('h', ' horas ') + ' minutos') : 'sin fijar') + '"></div>');
     o.push('<div><span class="hoy-opt-t">Reloj</span>' + segHTML('reloj', g.reloj || 'normal', [['normal', 'Normal'], ['vfc', 'VFC de 7 días desequilibrada o baja'], ['sobrecarga', 'Sobrecarga']], 'Reloj') + '</div>');
     o.push('<div><span class="hoy-opt-t">Síntomas</span>' + segHTML('sintomas', g.sintomas || 'ninguno', [['ninguno', 'Ninguno'], ['encima', 'Encima del cuello'], ['debajo', 'Debajo del cuello']], 'Síntomas') + '</div>');
     if (diaConBarra(dia)) o.push('<div><span class="hoy-opt-t">Codo u hombro, el que más duela (0–10)</span>' + stepperHTML('codo', g.codo, 'Codo u hombro, de 0 a 10') + '</div>');
@@ -1599,7 +1590,7 @@
           (FZ.escribir ? '<input type="text" inputmode="decimal" autocomplete="off" data-z="tin" value="' + fmtT(FZ.tval) + '" aria-label="Tiempo exacto">' : '<output class="num" data-z="tout" tabindex="0" aria-label="Tocar para escribir el tiempo">' + fmtT(FZ.tval) + '</output>') +
           '<button type="button" data-z="tst" data-d="0.5" aria-label="Medio segundo más">+</button></div><button type="button" class="btn pri" data-z="tok">Anotar ' + fmtT(FZ.tval) + '</button></div>');
       } else h.push('<button type="button" class="btn sec" data-z="exacto">Poner el tiempo</button>');
-      if (FZ.color === 'ambar' && !S.ultima200) h.push('<p class="hoy-fz-l">' + esc((wsem().extras || [])[0] || '') + '</p><button type="button" class="btn sec" data-z="u200">Llegué a 200 ppm: esta es la última</button>');
+      if (FZ.tipo === 'series' && !S.ultima200) h.push('<p class="hoy-fz-l">' + esc((wsem().extras || [])[0] || '') + '</p><button type="button" class="btn sec" data-z="u200">Llegué a 200 ppm: esta es la última</button>');
       if (S.ultima200 && S.ultima200 === k + 1) h.push('<p class="hoy-fz-l"><b>Esta es la última.</b></p>');
       if (R.principal && R.principal.criterios && R.principal.tipo === 'km-partido') h.push('<ul class="hoy-fz-crit">' + R.principal.criterios.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ul>');
     }
@@ -1823,12 +1814,12 @@
     guardarSes(f, { fue: fu });
   }
   function semTxt(f) {
-    var s = SEM.salida(f); if (!s || !s.color) return 'semáforo sin rellenar';
+    var s = SEM.salida(f); if (!s || !s.color) return 'noche sin anotar';
     var g = s.entrada || {}, p = [];
     if (s.min !== null && s.min !== undefined) p.push(PC.fmt.sueno(s.min));
     p.push(g.reloj === 'vfc' ? 'VFC de 7 días desequilibrada o baja' : g.reloj === 'sobrecarga' ? 'sobrecarga' : 'reloj normal');
     if (g.sintomas === 'encima') p.push('síntomas por encima del cuello'); else if (g.sintomas === 'debajo') p.push('síntomas por debajo del cuello');
-    return 'semáforo ' + NCOLOR[s.color].toLowerCase() + ' (' + p.join(', ') + ')';
+    return (s.color === 'parada' ? 'no se entrena' : 'sesión escrita' + (s.asterisco ? ' con asterisco' : '')) + ' (' + p.join(', ') + ')';
   }
   function repsDe(dia, R) {
     var seq = SES.secuencia(R.principal, R.color), S = ses(dia.fecha);

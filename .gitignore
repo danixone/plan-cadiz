@@ -8,3 +8,7 @@ web/qa/resultado.json
 __pycache__/
 web/herramientas/centinelas.local.json
 herramientas/modelos/
+
+# Datos personales de Cristina: no se publican
+datos/cristina/privado.json
+datos/cristina/privado/
