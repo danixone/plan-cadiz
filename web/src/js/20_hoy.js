@@ -756,8 +756,7 @@
       }
     });
     var xa = fx(hoy < L.ini ? L.ini : hoy);
-    /* web de Cristina: su monigote, vestido de rosa, corre detrás del de Daniel hasta el día de su prueba */
-    if (PC.ill && PC.ill.corredor && perfil() && perfil().rosa) s.push('<g class="ill-rosa">' + PC.ill.corredor('corre', { h: 24, ancla: 'pie', x: Math.max(x0 + 4, xa - 12), y: y - 1 }) + '</g>');
+    /* web de Cristina: solo su monigote, vestido de rosa (los colores los pone 90_cristina.css), hasta el día de su prueba */
     if (PC.ill && PC.ill.corredor) s.push(PC.ill.corredor('corre', { h: 24, ancla: 'pie', x: xa, y: y - 1 }));
     else s.push('<circle cx="' + xa.toFixed(1) + '" cy="' + (y - 10) + '" r="6" style="fill:var(--primary)"/>');
     s.push('<g class="hoy-cm-flag"><title>fecha sin confirmar: ' + esc((perfil() || {}).fechaMeta || ((plan().objetivo || {}).pruebasFisicas || {}).fecha || '') + '</title>' +
