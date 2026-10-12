@@ -321,10 +321,16 @@ def ritmo_txt_rep(R, ritmo, dist):
 
 
 # ---------------------------------------------------------------------------------------------- pasos de cada día
+def suave_de(RE, p):
+    """Ritmo suave que se enseña: en «correr y andar», el de los tramos (ritmosEstimados.suaveTramos, medido el 12-10) si existe."""
+    r = RE.get('suaveTramos') if p.get('tipo') == 'correrAndar' and RE.get('suaveTramos') else RE.get('suave')
+    return (r or {}).get('txt')
+
+
 def pasos_de(p, R, RE):
     """Pasos de la tarjeta de Hoy y del modo pista: {t, d, seg (temporizador), parte, n/de, ritmo}."""
     P = []
-    suave = (RE.get('suave') or {}).get('txt')
+    suave = suave_de(RE, p)
 
     def paso(t, d='', seg=None, parte='principal', **kw):
         x = {'t': t, 'parte': parte}
@@ -450,7 +456,7 @@ def pasos_de(p, R, RE):
 
 def numeros_de(p, R, RE):
     """Los tres números grandes del día (como «stats» en la web de Daniel)."""
-    suave = (RE.get('suave') or {}).get('txt')
+    suave = suave_de(RE, p)
     t = p['tipo']
     N = []
     if t == 'correrAndar':
@@ -513,7 +519,7 @@ def numeros_de(p, R, RE):
 
 def resumen_hoy(p, R, RE):
     """«Hoy haces:» en una línea."""
-    suave = (RE.get('suave') or {}).get('txt')
+    suave = suave_de(RE, p)
     t = p['tipo']
     if t == 'correrAndar':
         base = ('%d min de correr y andar con tu escalón' % p['min']) if p.get('escalon') else \

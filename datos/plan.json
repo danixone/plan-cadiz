@@ -1318,7 +1318,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 3 × 600 m, rec. 3 min",
-          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · si una llega a 200 ppm antes de la última, esa es la última · primer 3 × 600 del bloque B: el 7 no se hizo · antes de la barra, codo y hombro derecho de 0 a 10 (el fusil del desfile): con el hombro en 3 o más, sin dominadas ese día y se anota",
+          "objetivo": "2:08 con 3 min (bloque B) · los tres dentro de 3 s · primer 200 en 0:43 · primera repetición: primer 200 en 0:43 o más lento aunque parezca que vas parado (el 5-10 salió en 0:40,3 con progresivos y aviso: tercera vez); si lo pasas por debajo de 0:42, el segundo 200 va al ritmo, no por delante · si una llega a 200 ppm antes de la última, esa es la última · primer 3 × 600 del bloque B: el 7 no se hizo · antes de la barra, codo y hombro derecho de 0 a 10 (el fusil del desfile): con el hombro en 3 o más, sin dominadas ese día y se anota · cada 200, a ±1 s de su paso (0:42,7 en 2:08): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (el 12-10, 45,6 + 39,7: tercera sesión seguida corrigiendo de más, es regla)",
           "hora": "18:00, acabar antes de las 20:30: mañana el circuito del simulacro"
         },
         {
@@ -1478,7 +1478,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
-          "objetivo": "600 en 2:07, o 2:06 si el 17 respaldó el bloque C a 3:30 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · último miércoles con series largas",
+          "objetivo": "600 en 2:07, o 2:06 si el 17 respaldó el bloque C a 3:30 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · último miércoles con series largas · cada 200 de los 600, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
           "hora": "18:00-19:00"
         },
         {
@@ -1519,7 +1519,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30",
-          "objetivo": "1:25 con 2:30; 1:24 si el 17 respaldó el bloque C a 3:30 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4",
+          "objetivo": "1:25 con 2:30; 1:24 si el 17 respaldó el bloque C a 3:30 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25; 0:42 a 1:24): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
           "hora": "18:00-19:00"
         },
         {
@@ -1535,7 +1535,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:07 y 1:25; o 2:06 y 1:24 si el 17 respaldó el 3:30 · primer 200 en 0:42 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad",
+          "objetivo": "2:07 y 1:25; o 2:06 y 1:24 si el 17 respaldó el 3:30 · primer 200 en 0:42 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
           "hora": "18:00-19:00"
         },
         {

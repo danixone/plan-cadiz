@@ -3192,9 +3192,21 @@
         "4:00",
         "4:24"
       ],
-      "que": "Los rodajes suaves, la larga y los minutos de correr de «correr y andar».",
+      "que": "Los rodajes suaves y la larga, cuando ya corres seguido (el primero, el 26-10).",
       "comoSaberlo": "Puedes decir frases enteras sin cortarte a mitad. Si a 10:00 el km ya no puedes, ve más despacio o anda un minuto: manda poder hablar, no el reloj.",
-      "nota": "Es más lento que el 10-10 a propósito: aquel ritmo fue duro para ti, y lo suave tiene que ser suave de verdad."
+      "nota": "Es más lento que el 10-10 a propósito: aquel ritmo fue duro para ti, y lo suave tiene que ser suave de verdad. El 12-10, en tramos de 2 min con 1 andando, corriste a 7:18-7:57 hablando con frases enteras: para los tramos de «correr y andar» este 10:00-11:00 salió lento (ver «suave en correr y andar»). Para correr seguido no hay dato propio: el 10-10, 55 min a 8:54, fue duro. Se revisa con el primer rodaje seguido."
+    },
+    "suaveTramos": {
+      "txt": "7:20-8:00",
+      "porKm": [
+        "7:20",
+        "8:00"
+      ],
+      "estado": "medido el 12-10",
+      "que": "Los minutos de correr de «correr y andar» (tramos de 2 a 8 min con 1 andando).",
+      "base": "12-10: siete tramos de 2 min a 7:18-7:57 /km, hablando con frases enteras (dicho por Daniel).",
+      "comoSaberlo": "Manda poder hablar, no el reloj: si a ese ritmo no puedes decir frases enteras, más despacio. Cuando los tramos se alarguen (3, 4, 6 min), lo normal es que salga algo más lento.",
+      "nota": "Corrige al 10:00-11:00 estimado, que venía del rodaje del 10-10 corrido seguido. Un solo día y en tramos cortos: se revisa con cada sesión."
     },
     "andar": {
       "txt": "paso vivo",

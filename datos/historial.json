@@ -5,6 +5,130 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-12",
+      "sesion": "5 × 400 m, rec. 2 min · bucle del parque San Cristóbal (sin modo pista)",
+      "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primera repetición con el primer 200 en 0:43 o más lento (si baja de 0:42, el segundo 200 al ritmo) · freno si baja de 1:23 · si una llega a 200 ppm antes de la última, esa es la última · comparar con el 5",
+      "valida": true,
+      "horaInicioLocal": "20:41 (primera serie 21:26; fin 21:53)",
+      "resultado": {
+        "tiemposS": [
+          83.2,
+          85.6,
+          85.4,
+          88.1,
+          85.3
+        ],
+        "media": "85,52 s (1:25,5)",
+        "parciales200": [
+          [
+            41.3,
+            41.9
+          ],
+          [
+            43.1,
+            42.5
+          ],
+          [
+            43.3,
+            42.1
+          ],
+          [
+            46.2,
+            41.9
+          ],
+          [
+            45.6,
+            39.7
+          ]
+        ],
+        "fcMaxPorSerie": [
+          191,
+          193,
+          195,
+          196,
+          198
+        ],
+        "fcMediaPorSerie": [
+          181,
+          182,
+          183,
+          184,
+          186
+        ],
+        "fcInicioSerie": [
+          132,
+          154,
+          147,
+          149,
+          158
+        ],
+        "recuperaciones": {
+          "duracionS": 120,
+          "tipo": "andando (40-50 m en 2 min)",
+          "fcFinal": [
+            152,
+            147,
+            150,
+            158
+          ],
+          "bajadaEn60s": [
+            30,
+            29,
+            34,
+            28
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 184,
+          "60s": 169,
+          "90s": 157,
+          "120s": 156,
+          "180s": 139
+        },
+        "fcMax": 198,
+        "potenciaMediaSerieW": [
+          450,
+          431,
+          438,
+          432,
+          438
+        ],
+        "contactoMsSerie": [
+          190,
+          193,
+          197,
+          205,
+          199
+        ],
+        "efectoAerobico": 3.3,
+        "efectoAnaerobico": 3.7,
+        "cargaSesion": 218,
+        "calentamiento": "45 min hasta la primera serie (20:41-21:26), en dos actividades del reloj: trote 12 min (1.484 m a 8:05 /km), movilidad 2 min (vuelta manual a los 120 s de los 300 del paso), una vuelta manual de 14:47 (20:55-21:10) en el paso de la barra (prep-hombro y dominadas, con el reloj en marcha; FC máxima 176), técnica 20 m + 11 m y 46 s de pausa; después, 4 progresivos de 80 m con 90 s y 4 min hasta la primera serie. Vuelta a la calma: 11:47 andando (814 m), no el trote muy suave con estiramientos del plan. Carga del día, sumando las tres actividades: 316 (57 + 42 + 218).",
+        "fcTroteCalentamiento": "137 de media a 8:05 /km en los 12 min (máximo 155), sin tramos andando. El 30-9, 144,5 a 8:22; el 5-10 (resfriado), 141 a 9:26 con tramos andando. Sensor de muñeca 26,8 frente a 28,0 el 5-10: con otra temperatura no se lee como mejora de forma.",
+        "progresivos": {
+          "n": 4,
+          "distanciaM": 80,
+          "tiemposS": [
+            17.4,
+            16.9,
+            15.9,
+            16.4
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            157,
+            160,
+            139,
+            164
+          ],
+          "nota": "Cuatro de los cinco del plan: el entreno del reloj «Progresivos 100M» tiene cuatro. De menos a más hasta el tercero; los dos últimos, 15,9 y 16,4, por delante del ritmo K del bloque B (17,1 en 80 m)."
+        },
+        "sensorMunecaC": 26.2,
+        "relojConfigurado": "Entreno «12 de octubre»: 4 min de pausa, cada 400 en dos pasos de 200 m con rango de ritmo 3:30-3:40 /km (4,545-4,762 m/s), 2 min de recuperación y vuelta a la calma abierta. El FIT no guarda ningún aviso de ritmo como evento (el 5-10 guardó uno de «rápido»)."
+      },
+      "valoracion": "VÁLIDA (regla del 10-10): buen resultado. Lleva asterisco por el reloj (VFC de 7 días «Bajo», 51, y estado «Sobrecarga»), aunque la noche fue de 7h19 y la VFC de esa noche, 60, estaba dentro de su referencia. Lunes festivo, sin trabajo. San Cristóbal, como el 5-10 y a la misma hora (20:41 frente a 20:27): comparable con el 5-10, con ±1-2 % de escala por el perímetro sin medir. MEDIDO: 1:23,2 · 1:25,6 · 1:25,4 · 1:28,1 · 1:25,3, media 1:25,5 frente a 1:26; los cinco dentro de 3 s (la primera, 2,8 s por delante; la cuarta, 2,1 s por detrás). El freno de 1:23 no saltó y ninguna llegó a 200 ppm antes de la última (198 en la quinta). Frente al 5-10 (resfriado, 1:23,7 de media): 1,8 s más lento por repetición y en el objetivo, con FC media parecida (181-186 frente a 181-188), máxima 1-2 ppm más baja y la misma recuperación (bajada en 60 s de 28-34 frente a 28-33; FC a los 2 min, 147-158 en las dos). PRIMER 200 de la primera: 41,3 cuando pedía 0:43 o más lento; cuarta vez (40,0 · 40,6 · 40,3 · 41,3), la primera con la regla del 7-10 escrita, y el segundo 200 fue a 41,9, por delante, cuando la regla pedía el ritmo. Más cerca que las otras tres veces, pero no cumplida. CORRIGE DE MÁS: de la segunda a la quinta, primeros 200 de 43,1-46,2 y segundos de 39,7-42,5 (la quinta, 45,6 + 39,7). Tercera sesión seguida (28-9, 5-10 y 12-10): pasa a regla. El 46,2 y el 45,6 son el hueco que el 1.000 del 19-9 tuvo en los 200 centrales (46 y 46), y el 39,7 dice que velocidad sobraba: el diagnóstico de siempre, sostener, dentro de un 400. Barra: 3 × 5 dominadas antes de las series, «todo bien» (comunicado por él; ver dominadas del 12-10). Lo cuenta él: en las dos primeras notó bajón de técnica y pesadez de piernas hacia los 200 m, y desde la tercera salió más lento el primer 200 y apretó el segundo; lo vivió como mejor gestión. Es justo lo que la regla nueva no deja hacer en las series (ver la respuesta del 12-10 sobre la estrategia de Ferrol). Progresivos, 4 de 5. Vuelta a la calma andando."
+    },
+    {
       "fecha": "2026-10-10",
       "sesion": "Rodaje 55 min, techo 145, primeros 10 min a 140",
       "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · saltos solo con calidad · si hubo dolor de talón por la mañana esa semana, 45 min · sin barra: las sesiones cortas de barra son el 3 y el 24",
@@ -1059,6 +1183,19 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-12",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "lastreKg": 0,
+      "descanso": "sin dato del tiempo exacto (el plan pide 3 min): el paso de la barra del reloj duró 14:47, de 20:55 a 21:10, con FC máxima 176",
+      "contexto": "lunes festivo, dentro del calentamiento de los 5 × 400, en el paso de la barra (prep-hombro antes, según el entreno del reloj)",
+      "valoracion": "AUTOINFORMADO (12-10): 3 × 5 completas, «todo bien». Sin molestias según él, sin la nota de 0 a 10 de codo y hombro que pedía el plan (el hombro derecho estaba en 3/10 el 9-10). Sin FIT de fuerza, sin vídeo y sin reserva anotada."
+    },
+    {
       "fecha": "2026-10-06",
       "hecho": false,
       "sesion": "Arsenal: sesión completa",
@@ -1355,6 +1492,31 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-10-12",
+      "duracion": "7h19",
+      "puntuacion": 80,
+      "calidad": "Bueno",
+      "fcReposo": 48,
+      "bodyBattery": "+64",
+      "spo2Media": "95%",
+      "respiracionMedia": 14,
+      "vfc": 60,
+      "vfc7dias": "51 ms, «Bajo» (media de 7 días; referencia 55-69)",
+      "nota": "Noche del 11 al 12, de domingo a lunes festivo. Se acostó a las 2:57 y se despertó a las 10:34 (CSV semanal, sin fases del sueño). La VFC de la noche, 60, dentro de su referencia 55-69 (CSV de VFC del 12-10); la media de 7 días sigue bajando (56 → 51 del 6 al 12) porque arrastra las noches del 6 al 9 (4h18-5h00)."
+    },
+    {
+      "fecha": "2026-10-11",
+      "duracion": "7h43",
+      "puntuacion": 80,
+      "calidad": "Bueno",
+      "fcReposo": 49,
+      "bodyBattery": "+54",
+      "spo2Media": "97%",
+      "respiracionMedia": 15,
+      "vfc7dias": "51 ms (media de 7 días del CSV semanal)",
+      "nota": "Noche del 10 al 11. Se acostó a las 2:23 y se despertó a las 10:44 (CSV semanal, sin fases del sueño)."
+    },
     {
       "fecha": "2026-10-10",
       "duracion": "7h42",
@@ -1668,6 +1830,24 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-12",
+      "hora": "capturas mandadas el 12-10 por la noche, después de las series",
+      "ventanaFocoCarga": "14 sep – 12 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Sobrecarga",
+      "mensajeGarmin": "Tu estado de VFC indica fatiga acumulada. Asegúrate de descansar el tiempo suficiente para recuperarte.",
+      "anaerobica": 676,
+      "aerobicaAlta": 493,
+      "aerobicaBaja": 224,
+      "cargaAguda": 516,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.4,
+      "cargaAgudaMensaje": "Tu carga aguda está en el límite superior del intervalo óptimo para mejorar tu forma física.",
+      "vo2max": 53,
+      "vfc": "51 ms (media de 7 días), Bajo; la noche, 60 ms, dentro de la referencia 55-69",
+      "valoracion": "PRIMER «SOBRECARGA» del historial. La etiqueta la pone la VFC: lo dice el propio mensaje del reloj, y la carga aguda está en «Óptimo». Carga aguda de 188 (10-10, baja, ratio 0,6) a 516 (ratio 1,4) en dos días: entró la sesión del 12, 316 sumando las tres actividades. Foco de carga, ventana 14-9 a 12-10 frente a 12-9 a 10-10: entraron el 11-10 (descanso) y el 12-10 (series); salieron el 12-9 (rodaje de 35 min) y el 13-9 (sin carrera en el historial). Anaeróbica +171 y aeróbica alta +91 por las series; aeróbica baja −6 al salir el rodaje del 12-9. La aeróbica baja sigue insuficiente: solo la mueven los rodajes. VO2max 53, igual. La VFC de 7 días baja de «Desequilibrado» (52, el 10-10) a «Bajo» (51) con la noche ya dentro de su referencia (60): la media arrastra las noches del 6 al 9. Con la regla del 10-10, pone asterisco a lo que salga mal esta semana y no cambia las sesiones."
+    },
     {
       "fecha": "2026-10-10",
       "hora": "20:36 (predisposición, «Después de una actividad»); capturas guardadas a las 23:13",

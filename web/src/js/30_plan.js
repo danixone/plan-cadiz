@@ -422,16 +422,16 @@
         '<p class="pl-dt-t">' + esc(d.que) + '</p></li>';
     }).join('') + '</ol>';
   }
-  var RE_ORDEN = [['suave', 'Suave'], ['andar', 'Andar'], ['alegre', 'Alegre'], ['rectas', 'Rectas'], ['cuestas', 'Cuestas'], ['rapidos', '200 m rápidos'], ['primerControl', 'Primer control de 1.000 m']];
+  var RE_ORDEN = [['suave', 'Suave (correr seguido)'], ['suaveTramos', 'Suave en correr y andar'], ['andar', 'Andar'], ['alegre', 'Alegre'], ['rectas', 'Rectas'], ['cuestas', 'Cuestas'], ['rapidos', '200 m rápidos'], ['primerControl', 'Primer control de 1.000 m']];
   function ritmosPF(box) {
     var RE = P.ritmosEstimados || {}, RD = DER.ritmos || {}, h = '<div class="pl-grupos">';
     RE_ORDEN.forEach(function (k) {
       var r = RE[k[0]]; if (!r) return;
       var cifra = r.txt + (r.porKm ? ' /km' : ''), sub = r.que || '';
       h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>' + esc(k[1]) + '</h3><small>' + esc(sub) + '</small></div>' +
-        (RE.estado && (r.porKm || r.rango) ? '<span class="end chip sup">' + esc(RE.estado) + '</span>' : '') + '</div>' +
+        ((r.estado || RE.estado) && (r.porKm || r.rango) ? '<span class="end chip' + (r.estado ? '' : ' sup') + '">' + esc(r.estado || RE.estado) + '</span>' : '') + '</div>' +
         '<div class="stats pl-stats"><div class="stat">' + statVal(cifra) + '<span>' + esc(r.por400 ? 'cada 400: ' + r.por400.join('-') : (r.rango ? 'margen ' + r.rango.join('-') : 'ritmo')) + '</span></div></div>' +
-        (r.comoSaberlo ? '<p>' + esc(r.comoSaberlo) + '</p>' : '') +
+        (r.base ? '<p class="faint">' + esc(r.base) + '</p>' : '') + (r.comoSaberlo ? '<p>' + esc(r.comoSaberlo) + '</p>' : '') +
         ((r.estrategia || []).length ? '<ol class="te-tec">' + r.estrategia.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol>' : '') +
         (r.nota ? acc('Por qué', '<p>' + esc(r.nota) + '</p>') : '') + '</article>';
     });

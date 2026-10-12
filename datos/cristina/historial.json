@@ -5,6 +5,87 @@
   "controles": [],
   "carrera": [
     {
+      "fecha": "2026-10-12",
+      "sesion": "7 × (2 min corriendo + 1 andando)",
+      "hecho": true,
+      "resumen": "7 × (2 + 1) entero · corriendo a 7:18-7:57 /km · 2,71 km",
+      "resultado": {
+        "duracion": "29:12 de reloj (26:18 en marcha: dos pausas al empezar, de 2:26 y 0:28)",
+        "km": 2.71,
+        "ritmoCorriendo": "7:18-7:57 /km en los siete tramos (suave estimado del plan: 10:00-11:00)",
+        "bloquesCorriendo": [
+          {
+            "inicio": "20:46:09",
+            "s": 115,
+            "m": 249,
+            "ritmo": "7:42",
+            "fcMedia": 151,
+            "fcMax": 162
+          },
+          {
+            "inicio": "20:49:09",
+            "s": 105,
+            "m": 221,
+            "ritmo": "7:55",
+            "fcMedia": 144,
+            "fcMax": 159
+          },
+          {
+            "inicio": "20:52:14",
+            "s": 95,
+            "m": 206,
+            "ritmo": "7:41",
+            "fcMedia": 150,
+            "fcMax": 162
+          },
+          {
+            "inicio": "20:55:14",
+            "s": 95,
+            "m": 207,
+            "ritmo": "7:40",
+            "fcMedia": 148,
+            "fcMax": 161
+          },
+          {
+            "inicio": "20:58:14",
+            "s": 105,
+            "m": 229,
+            "ritmo": "7:39",
+            "fcMedia": 154,
+            "fcMax": 167
+          },
+          {
+            "inicio": "21:01:14",
+            "s": 100,
+            "m": 210,
+            "ritmo": "7:57",
+            "fcMedia": 151,
+            "fcMax": 167
+          },
+          {
+            "inicio": "21:04:14",
+            "s": 95,
+            "m": 217,
+            "ritmo": "7:18",
+            "fcMedia": 148,
+            "fcMax": 166
+          }
+        ],
+        "medicionBloques": "Por cadencia (corriendo con 140 pasos por minuto o más, en ventanas de 5 s): los bordes quedan difuminados, así que cada tramo mide 95-115 s corriendo y 65-85 s andando; los ciclos son de unos 3:00, lo que encaja con 2 + 1.",
+        "andandoAntesS": 305,
+        "salidaCorta": "35 s corriendo a 6:50 /km a las 20:43, seguidos de 2:30 andando, antes del primer tramo",
+        "andandoDespuesS": 85,
+        "fcMedia": 139,
+        "fcMax": 168,
+        "fcFinTramo": "159-167 al acabar cada tramo corriendo; 122-134 al acabar cada minuto andando",
+        "lugar": "San Cristóbal (GPS), el mismo sitio y la misma hora que Daniel",
+        "tiempo": "22 °C y 73 % de humedad (dato del tiempo que guarda el reloj)",
+        "fuente": "exportación de Salud del Apple Watch (app Entreno), leída en una carpeta temporal; el archivo no entra en el proyecto",
+        "fcRecuperacion": "En el minuto andando baja de 159-168 a 122-134 (entre 26 y 44 pulsaciones en 65-85 s), sin empeorar de tramo a tramo. Los picos de los tres últimos tramos, 166-167, unos 5 por encima de los cuatro primeros (159-162), con el último el más rápido (7:18)."
+      },
+      "valoracion": "Hecha entera: 5 min andando antes, la salida corta de 35 s y los siete tramos de 2 + 1. El plan pedía correr suave (10:00-11:00 /km, «puedes hablar con frases») y más despacio que el 10-10 (8:54): corrió a 7:18-7:57, más de 2 min por km por delante de lo pedido y 1 min más rápido que el 10-10. El pulso lo confirma: en cada tramo de 2 min sube de 122-136 a 159-167 (la más alta registrada es 175, el 10-10) y en el minuto andando baja a 122-134. Podía hablar con frases enteras (dicho por Daniel el 12-10): con la regla del plan, que manda poder hablar y no el reloj, fue suave. Se había valorado como demasiado rápida por el pulso; corregido. El 10:00-11:00 estimado salió lento para tramos de 2 min: se corrige para «correr y andar» (ritmosEstimados.suaveTramos, 7:20-8:00). Escalón: entera y hablando; falta «sin dolor al día siguiente» para que el 3:1 del 14-10 vaya como está. Pulso (12-10): picos estables, sin subida que se dispare, y buena bajada en cada minuto andando; los tres últimos, unos 5 pulsaciones más altos. Sin su máxima medida no se sabe en qué zona fue, y el pulso de muñeca va con retraso en tramos cortos: sirve para la tendencia, no para fijar zonas."
+    },
+    {
       "fecha": "2026-10-10",
       "sesion": "Rodaje de 55 min con Daniel, antes de empezar el plan",
       "hecho": true,
