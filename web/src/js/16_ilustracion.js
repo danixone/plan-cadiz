@@ -200,7 +200,7 @@
   };
 
   function limitesMil() {
-    var t = baremoTramos('mil'), elim = 229, meta = 210;
+    var t = baremoTramos('mil'), elim = (PC.baremo && PC.baremo.ELIMINA_MIL) || 229, meta = (PC.PERFIL && PC.PERFIL.meta1000) || 210;
     for (var i = 0; i < t.length; i++) {
       if (t[i].pts === 0 && t[i].min != null) elim = t[i].min;
       if (t[i].pts === 4 && t[i].max != null) meta = t[i].max;

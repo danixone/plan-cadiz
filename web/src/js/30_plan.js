@@ -55,9 +55,9 @@
   function tiempos(txt) { return (String(txt || '').match(/\d:\d{2}(?:,\d)?/g) || []).map(function (x) { return PC.fmt.parseT(x); }); }
   /* «1:25 → 1:24» → ['1:25', '1:24'] */
   function dosValores(txt) { var p = String(txt || '').split(/\s*→\s*/); return [p[0], p[1] || null]; }
-  var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba' };
-  var TIPO_TXT = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba' };
-  var EST_CLS = { hoy: 'today', hecho: 'done', nomide: 'nomide', miss: 'miss', noreg: 'noreg', futuro: 'fut', rest: 'rest' };
+  var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba', otro: 'fuerza' };
+  var TIPO_TXT = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba', otro: 'otro entreno' };
+  var EST_CLS = { hoy: 'today', hecho: 'done', nomide: 'nomide', miss: 'miss', noreg: 'noreg', futuro: 'fut', rest: 'rest', otro: 'otro' };
   var EST_TXT = { hoy: 'hoy', hecho: 'hecho', nomide: 'no mide', miss: 'no hecho', noreg: 'sin registrar', futuro: 'futuro', rest: 'descanso' };
   var EST_CHIP = { hecho: 'ok', nomide: 'warn', miss: 'bad', noreg: 'sup', futuro: 'sup', hoy: 'pri', rest: '' };
   function estadoTxt(dia) { return dia.tipo === 'examen' && dia.estado === 'rest' ? 'examen' : EST_TXT[dia.estado] || ''; }
@@ -65,6 +65,7 @@
   function bloques() { return (DER.bloques || []).slice(); }
   /* ritmos de un bloque para un rótulo: «1:27 / 2:11» o, con escalón, «1:25 / 2:07 → 1:24 / 2:06» */
   function ritmoBloque(bl, conCondicion) {
+    if (!bl.m400 && !bl.m600) return '';   /* fases de Cristina: sin ritmos de bloque */
     var a = dosValores(bl.m400), c = dosValores(bl.m600);
     var t = a[0] + ' / ' + c[0];
     if (a[1] || c[1]) {
@@ -109,17 +110,18 @@
   }
 
   /* ------------------------------------------------------------------ cabecera: «Bloque A hasta el dom 4-10 · después, bloque B a 1:26 / 2:08» */
+  function aRitmo(bl) { var r = ritmoBloque(bl, true); return r ? ' a ' + r : (bl.nombre ? ': ' + String(bl.nombre).toLowerCase() : ''); }
   function lineaCabecera() {
     var hoy = PC.hoyIso(), B = bloques();
     var b = PC.cal.bloque(hoy);
     for (var i = 0; i < B.length; i++) {
       if (B[i].clave !== b) continue;
       var t = 'Bloque ' + b + ' hasta el ' + corta(B[i].hasta);
-      if (B[i + 1]) t += ' · después, bloque ' + B[i + 1].clave + ' a ' + ritmoBloque(B[i + 1], true);
+      if (B[i + 1]) t += ' · después, bloque ' + B[i + 1].clave + aRitmo(B[i + 1]);
       return t;
     }
     var prox = B.filter(function (x) { return x.desde > hoy; })[0];
-    if (prox) return 'Bloque ' + prox.clave + ' desde el ' + corta(prox.desde) + ' a ' + ritmoBloque(prox, true);
+    if (prox) return 'Bloque ' + prox.clave + ' desde el ' + corta(prox.desde) + aRitmo(prox);
     var S = semanas(), ult = S.length ? S[S.length - 1].hasta : null;
     if (ult && hoy > ult) return 'El plan terminó el ' + corta(ult);
     return '';
@@ -153,7 +155,7 @@
     var bl = b ? PC.cal.bloqueInfo(b) : null;
     var rango = dm(s.desde) + ' al ' + dm(s.hasta);
     var dentro = '<span class="cs-r num">' + esc(rango) + '</span><span class="cs-t">' + esc(s.titulo) + '</span>' +
-      (bl ? '<span class="chip pri cs-b">' + esc(b + ' · ' + ritmoBloque(bl, false)) + '</span>' : '');
+      (bl ? '<span class="chip pri cs-b">' + esc(b + (ritmoBloque(bl, false) ? ' · ' + ritmoBloque(bl, false) : '')) + '</span>' : '');
     if (s.nota) return '<details class="cal-sem b-' + bloqueColor(b) + '"><summary>' + dentro + PC.icon('chev', 'sm chev') + '</summary><p class="cs-n">' + esc(s.nota) + '</p></details>';
     return '<div class="cal-sem b-' + bloqueColor(b) + '">' + dentro + '</div>';
   }
@@ -411,8 +413,65 @@
     if (partes.length < 2) return partes.join('');
     return partes.slice(0, -1).join(', ') + ' y ' + partes[partes.length - 1];
   }
+  /* ------------------------------------------------------------------ web de Cristina (PC.PERFIL): su semana, sus ritmos y sus reglas */
+  var PF = PC.PERFIL || null;
+  function semanaPF(box) {
+    box.innerHTML = '<ol class="pl-st">' + (P.semanaTipo || []).map(function (d) {
+      var tipo = /^Carrera/.test(d.que || '') ? 'carrera' : 'otro';
+      return '<li class="pl-dt t-' + tipo + '"><div class="pl-dt-c"><span class="ic">' + PC.icon(ICONO[tipo] || 'plan') + '</span><div class="pl-dt-d"><b>' + esc(d.dia) + '</b></div></div>' +
+        '<p class="pl-dt-t">' + esc(d.que) + '</p></li>';
+    }).join('') + '</ol>';
+  }
+  var RE_ORDEN = [['suave', 'Suave'], ['andar', 'Andar'], ['alegre', 'Alegre'], ['rectas', 'Rectas'], ['cuestas', 'Cuestas'], ['rapidos', '200 m rápidos'], ['primerControl', 'Primer control de 1.000 m']];
+  function ritmosPF(box) {
+    var RE = P.ritmosEstimados || {}, RD = DER.ritmos || {}, h = '<div class="pl-grupos">';
+    RE_ORDEN.forEach(function (k) {
+      var r = RE[k[0]]; if (!r) return;
+      var cifra = r.txt + (r.porKm ? ' /km' : ''), sub = r.que || '';
+      h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>' + esc(k[1]) + '</h3><small>' + esc(sub) + '</small></div>' +
+        (RE.estado && (r.porKm || r.rango) ? '<span class="end chip sup">' + esc(RE.estado) + '</span>' : '') + '</div>' +
+        '<div class="stats pl-stats"><div class="stat">' + statVal(cifra) + '<span>' + esc(r.por400 ? 'cada 400: ' + r.por400.join('-') : (r.rango ? 'margen ' + r.rango.join('-') : 'ritmo')) + '</span></div></div>' +
+        (r.comoSaberlo ? '<p>' + esc(r.comoSaberlo) + '</p>' : '') +
+        ((r.estrategia || []).length ? '<ol class="te-tec">' + r.estrategia.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol>' : '') +
+        (r.nota ? acc('Por qué', '<p>' + esc(r.nota) + '</p>') : '') + '</article>';
+    });
+    var rk = regla('ritmos');
+    h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>' + esc(rk ? rk.titulo : 'Ritmos K, K + 4 y O') + '</h3><small>' +
+      esc(RD.K ? 'K = ' + RD.K.txt + ', el mejor de los dos últimos controles' : 'Salen del primer control: hasta entonces, por sensación') + '</small></div></div>' +
+      (RD.tabla ? '<div class="tscroll"><table class="t"><thead><tr><th scope="col">Distancia</th><th scope="col">K</th><th scope="col">K + 4</th><th scope="col">O</th></tr></thead><tbody>' +
+        RD.tabla.map(function (f) { return '<tr><th scope="row">' + f.dist + ' m</th><td>' + esc(f.K) + '</td><td>' + esc(f['K+4']) + '</td><td>' + esc(f.O) + '</td></tr>'; }).join('') + '</tbody></table></div>' : '') +
+      (rk ? enParrafos(rk.texto) : '') + '</article>';
+    if (RE.metodo || RE.base) h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>De dónde salen</h3><small>' + esc(RE.fecha ? 'estimación del ' + dm(RE.fecha) : '') + '</small></div></div>' +
+      (RE.base ? '<p>' + esc(RE.base) + '</p>' : '') + (RE.metodo ? acc('El método', parrafos(RE.metodo)) : '') + (RE.revisar ? '<p class="faint">Se revisa: ' + esc(RE.revisar) + '</p>' : '') + '</article>';
+    box.innerHTML = h + '</div>';
+  }
+  function reglasPF(box) {
+    var R = P.reglas || [], G = P.glosario || [];
+    var h = '<div class="pl-grupos"><div class="card pl-grupo"><h3 class="pl-gt">Reglas</h3>' + R.map(function (r) {
+      var pt = partir(r.texto);
+      return reglaHtml({ id: r.id, inv: '', titulo: r.titulo, vis: pt.vis, resto: pt.resto });
+    }).join('') + '</div>';
+    if (G.length) h += '<div class="card pl-grupo"><h3 class="pl-gt">Palabras del plan</h3>' + G.map(function (g) {
+      return '<article class="rule"><h4>' + esc(g.t) + '</h4><p>' + esc(g.d) + '</p></article>';
+    }).join('') + '</div>';
+    box.innerHTML = h + '</div>';
+  }
+  /* su pulso (público desde el 12-10): reposo, la más alta registrada y el de cada sesión; sin máxima medida no hay zonas */
+  function zonasPF(box) {
+    var Z = P.pulso || {}, S = ((PC.D.historial || {}).carrera || []).filter(function (e) { return e.resultado && e.resultado.fcMedia; });
+    var h = '<article class="card"><div class="card-h"><div class="t"><h3>Pulso</h3><small>' + esc(Z.reposoFuente ? 'reposo: ' + Z.reposoFuente : '') + '</small></div></div>' +
+      '<div class="stats"><div class="stat"><b>' + esc(Z.reposo || '—') + '</b><span>en reposo</span></div>' +
+      '<div class="stat"><b>' + esc(Z.maxima || 'sin medir') + '</b><span>máxima</span></div></div>' +
+      (Z.maximaNota ? '<p>' + esc(Z.maximaNota) + '</p>' : '') + (Z.nota ? '<p class="faint">' + esc(Z.nota) + '</p>' : '') + '</article>';
+    if (S.length) h += '<article class="card"><div class="card-h"><div class="t"><h3>Pulso de cada sesión</h3></div></div><div class="tscroll"><table class="t"><thead><tr>' +
+      '<th scope="col">Día</th><th scope="col">Sesión</th><th scope="col">Media</th><th scope="col">Más alto</th></tr></thead><tbody>' +
+      S.map(function (e) { return '<tr><th scope="row">' + esc(dm(e.fecha)) + '</th><td>' + esc(e.resumen || e.sesion || '') + '</td><td>' + esc(e.resultado.fcMedia) + '</td><td>' + esc(e.resultado.fcMax || '') + '</td></tr>'; }).join('') +
+      '</tbody></table></div></article>';
+    box.innerHTML = '<div class="pl-grupos">' + h + '</div>';
+  }
   function pintarSemana() {
     var box = root.querySelector('.pl-semana-in'); if (!box) return;
+    if (PF) { semanaPF(box); return; }
     var E = P.estructuraSemanal || [];
     var C = (P.protocoloDominadas || {}).cuando || [];
     var jc = ((P.sesionesTipo || {}).juevesCircuito || {}).hora || null;
@@ -468,6 +527,7 @@
   function flecha() { return '<span class="pl-fl" aria-hidden="true">' + PC.icon('flecha') + '</span>'; }
   function pintarRitmos() {
     var box = root.querySelector('.pl-ritmos-in'); if (!box) return;
+    if (PF) { ritmosPF(box); return; }
     var B = bloques(), act = PC.cal.bloque(PC.hoyIso());
     var h = '<div class="pl-esc-g">';
     B.forEach(function (bl, i) {
@@ -583,6 +643,7 @@
   }
   function pintarZonas() {
     var box = root.querySelector('.pl-zonas-in'); if (!box) return;
+    if (PF) { zonasPF(box); return; }
     var A = P.atleta || {}, Z = P.zonasFC || {}, M = marcasFC();
     var cab = [];
     if (A.fcMaxima) cab.push('FC máx ≥ ' + A.fcMaxima + (A.fcMaximaMedidaEl ? ' (' + dm(A.fcMaximaMedidaEl) + ')' : ''));
@@ -745,6 +806,7 @@
   }
   function pintarReglas() {
     var box = root.querySelector('.pl-reglas-in'); if (!box) return;
+    if (PF) { reglasPF(box); return; }
     box.innerHTML = '<div class="pl-grupos">' + grupos().map(function (g) {
       return '<div class="card pl-grupo"><h3 class="pl-gt">' + esc(g[0]) + '</h3>' + g[1].map(reglaHtml).join('') + '</div>';
     }).join('') + '</div>';

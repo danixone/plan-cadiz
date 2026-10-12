@@ -4,7 +4,7 @@
     "creado": "2026-10-11",
     "version": 3,
     "diasCarrera": "lunes, miércoles y sábado",
-    "nota": "Plan de carrera de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). Solo carrera. Los datos personales (edad, altura, pulso, salud) no van aquí: el repositorio es público.",
+    "nota": "Plan de carrera de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). Solo carrera. Los datos personales (edad, altura, salud) no van aquí; el pulso sí, desde el 12-10-2026: el repositorio es público.",
     "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre."
   },
   "objetivo": {
@@ -31,6 +31,13 @@
     "porQue": "Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.",
     "primerControl": "2026-11-21",
     "expectativa": "Sin una marca medida no hay previsión. Hoy solo hay una estimación: más de 5:00. El rodaje del 10-10 apunta a que puede estar bastante por encima, pero eso tampoco es una medida: el punto de partida lo da el primer control, el sábado 21-11. Criterio de entrenador, no dato: si ese control sale entre 5:00 y 5:15 y el año va sin lesiones, lo razonable es acabar entre 4:05 y 4:35; si sale de 5:30 o más, el objetivo del año es alejarse de la eliminación, en torno a 4:30. 4:00 o menos (6 puntos) pide una respuesta muy buena. Se revisa tras el control de diciembre."
+  },
+  "pulso": {
+    "reposo": 67,
+    "reposoFuente": "Apple Watch, registro del 9-10",
+    "maxima": null,
+    "maximaNota": "Sin medir. La más alta registrada es 175, en el rodaje del 10-10, que no fue a tope: no es su máxima.",
+    "nota": "Público desde el 12-10-2026 (decisión de Daniel). Sin máxima medida no hay zonas: las automáticas del reloj salen de una máxima estimada y pueden fallar. En lo suave manda poder hablar."
   },
   "baremo1000Mujeres": {
     "fuente": "BOE-A-2026-15055 (convocatoria de la 43.ª), Anexo II, tercer ejercicio. Comprobado en boe.es el 11-10-2026. La convocatoria de 2027 no ha salido: se supone el mismo baremo.",
@@ -3169,6 +3176,660 @@
       "id": "fecha-2027",
       "texto": "Fecha de la prueba de 2027: cuando salga la convocatoria, recolocar las semanas finales.",
       "desde": "2026-10-11"
+    }
+  ],
+  "ritmosEstimados": {
+    "fecha": "2026-10-12",
+    "estado": "estimado",
+    "base": "Tu rodaje del 10-10 con Daniel: 55 min y 6,2 km a 8:54 el km, con un esfuerzo alto de principio a fin.",
+    "suave": {
+      "txt": "10:00-11:00",
+      "porKm": [
+        "10:00",
+        "11:00"
+      ],
+      "por400": [
+        "4:00",
+        "4:24"
+      ],
+      "que": "Los rodajes suaves, la larga y los minutos de correr de «correr y andar».",
+      "comoSaberlo": "Puedes decir frases enteras sin cortarte a mitad. Si a 10:00 el km ya no puedes, ve más despacio o anda un minuto: manda poder hablar, no el reloj.",
+      "nota": "Es más lento que el 10-10 a propósito: aquel ritmo fue duro para ti, y lo suave tiene que ser suave de verdad."
+    },
+    "andar": {
+      "txt": "paso vivo",
+      "que": "Los minutos de andar de «correr y andar» y los 5 min de antes.",
+      "comoSaberlo": "Como cuando llegas tarde a algo, pero sin correr: pasos largos y los brazos moviéndose."
+    },
+    "alegre": {
+      "txt": "por sensación",
+      "que": "Los minutos «alegres» de algunos rodajes (el primero, el 7-12).",
+      "comoSaberlo": "Respiras fuerte pero controlas: solo te salen frases cortas. Un 6-7 de 10.",
+      "nota": "Va entre tu suave y tu umbral. Cuando tengas el ritmo de umbral (sale del primer control), alegre es algo más lento que él."
+    },
+    "rectas": {
+      "txt": "por sensación",
+      "que": "Las rectas de 80 m al final de algunos rodajes y en el calentamiento.",
+      "comoSaberlo": "Empiezas trotando y aceleras poco a poco; los últimos 20 m van rápidos pero sueltos, un 7-8 de 10. Nunca a tope."
+    },
+    "cuestas": {
+      "txt": "por sensación",
+      "que": "Las cuestas de 15-20 s.",
+      "comoSaberlo": "Fuerte sin llegar a tope, un 8 de 10: la última tiene que salir igual de fuerte que la primera."
+    },
+    "primerControl": {
+      "txt": "sin estimación fiable",
+      "rango": [
+        "5:00",
+        "8:00"
+      ],
+      "que": "El 1.000 m del sábado 21-11 en la pista de Arucas.",
+      "nota": "Hoy no hay forma de saber tu 1.000 con precisión. Con las cuentas del método (abajo), el 10-10 equivale a un 1.000 en unos 8:00 si aquel día hubieras ido a tope; no fuiste a tope, y el 1.000 depende más de la potencia que trabajas en CrossFit, así que lo esperable es mejor. Daniel calcula que estás por encima de 5:00. Un margen de 5:00 a 8:00 no sirve para fijar ritmos: por eso el primer control se corre por sensación y el reloj solo apunta los tiempos.",
+      "estrategia": [
+        "Los dos primeros 200 m, a un 7 de 10: respiras fuerte pero controlas. Al salir con más gente es fácil ir más rápido de la cuenta: no los sigas.",
+        "Del 400 al 800, aguanta ese ritmo aunque empiece a costar.",
+        "Los últimos 200 m, todo lo que te quede.",
+        "Apunta el tiempo final y, si puedes, los cinco parciales de 200: con ellos se fijan todos tus ritmos."
+      ]
+    },
+    "metodo": [
+      "El ritmo suave sale de las ecuaciones de Daniels y Gilbert (las de las tablas VDOT del entrenador Jack Daniels), aplicadas a tu rodaje del 10-10. Con ellas, tu ritmo suave sería de 10:13 a 11:12 el km si aquel día hubieras ido al máximo que aguantas 55 min, y de 9:43 a 10:40 si ibas al 95 % de ese máximo. Es la parte alta de la zona suave de esas tablas (del 65 al 74 % de tu nivel).",
+      "Se redondea a la franja que comparten los dos casos: 10:00-11:00 el km.",
+      "Con las mismas ecuaciones, el 10-10 equivale a un 1.000 m en 7:58 si hubiera sido a tope.",
+      "Son estimaciones, no medidas. Se revisan con tus primeros entrenos y se cambian por números de verdad tras el control del 21-11: desde ahí, todos los ritmos de series salen de tu ritmo K (ver Reglas › Cómo se fijan los ritmos)."
+    ],
+    "revisar": "Con los primeros entrenos que mandes y, sobre todo, con el control del 21-11.",
+    "rapidos": {
+      "txt": "por sensación",
+      "que": "Los 200 m rápidos (desde junio).",
+      "comoSaberlo": "Más rápido que tu ritmo O, pero suelta, sin llegar a sprint: un 8-9 de 10."
+    }
+  },
+  "ejercicios": [
+    {
+      "id": "tecnica-carrera",
+      "nombre": "Cómo se corre",
+      "icono": "carrera",
+      "enUnaFrase": "Correr bien no es correr rápido: es correr relajada, con pasos cortos y ligeros, sin gastar fuerza en lo que no empuja.",
+      "paraQue": "Con una técnica sencilla gastas menos energía y cada pisada golpea menos. No hace falta copiar a nadie: con estas seis cosas basta, y lo demás llega corriendo.",
+      "antes": [],
+      "pasos": [
+        "Cuerpo: erguido y alto, como si un hilo tirara de tu cabeza hacia arriba. Si te inclinas, muy poco y desde los tobillos, no doblando la cintura.",
+        "Mirada: al frente, a unos 10-20 m, no a los pies. Cuello y hombros sueltos, lejos de las orejas.",
+        "Brazos: codos doblados más o menos en ángulo recto y manos sueltas, como si llevaras un pañuelo de papel sin aplastarlo. Van hacia delante y hacia atrás pegados al cuerpo, sin cruzar por delante del pecho.",
+        "Pasos: cortos y ligeros. El pie cae más o menos debajo de tu cuerpo, no muy por delante. Si oyes un golpe fuerte en cada pisada, acorta el paso.",
+        "Pisada: no la cambies a propósito. Que el pie caiga suave, sin taconazos, y ruede hacia delante.",
+        "Respiración: por la nariz y la boca a la vez, como te pida el cuerpo. No hace falta contar. Si te ahogas, no es la respiración: vas demasiado rápido."
+      ],
+      "sensacion": "Relajada: cara, manos y hombros sueltos. Si notas que aprietas la mandíbula o los puños, suéltalos.",
+      "errores": [
+        "Dar zancadas largas para ir más rápido: frenan y cargan rodillas y tibias.",
+        "Mirar el suelo o el reloj todo el rato.",
+        "Brazos rígidos o cruzando por delante del pecho.",
+        "Correr de puntillas o dando taconazos a propósito."
+      ],
+      "siAlgoVaMal": [
+        "Si algo duele, la técnica no lo arregla: manda la regla «Dolor»."
+      ],
+      "reloj": [],
+      "video": "técnica de carrera para principiantes"
+    },
+    {
+      "id": "andar",
+      "nombre": "Andar a paso vivo",
+      "icono": "carrera",
+      "enUnaFrase": "Andar rápido sin llegar a correr: es el calentamiento antes de correr y el descanso entre bloques.",
+      "paraQue": "Sube las pulsaciones poco a poco y calienta piernas y tobillos antes de los golpes de correr. Entre bloques, te deja recuperar el aliento sin pararte del todo.",
+      "ritmo": "andar",
+      "esfuerzo": "2 de 10",
+      "antes": [],
+      "pasos": [
+        "Pasos largos y rápidos, como cuando llegas tarde a algo.",
+        "Brazos doblados, moviéndose al ritmo de las piernas.",
+        "Antes de correr, 5 min. Entre bloques, lo que diga la sesión.",
+        "No te pares ni te sientes: andando se recupera mejor que parada."
+      ],
+      "sensacion": "Respiras algo más rápido que paseando, pero hablas sin problema.",
+      "errores": [
+        "Pasear mirando el móvil.",
+        "Pararte del todo entre bloques."
+      ],
+      "siAlgoVaMal": [],
+      "reloj": []
+    },
+    {
+      "id": "correr-andar",
+      "nombre": "Correr y andar",
+      "icono": "carrera",
+      "enUnaFrase": "Bloques de correr muy suave y de andar, uno detrás de otro: así aguantas más minutos y las piernas se acostumbran sin lesionarse.",
+      "paraQue": "Al correr, cada pisada es un pequeño golpe. El corazón y los pulmones se adaptan en pocas semanas, pero tendones y huesos tardan meses. Alternar con andar deja sumar más minutos con menos golpes seguidos. Es como empiezan casi todos los planes para quien no ha corrido nunca: no es hacer trampa.",
+      "ritmo": "suave",
+      "esfuerzo": "3-4 de 10 corriendo · 2 de 10 andando",
+      "antes": [
+        "Zapatillas de correr, no las de CrossFit (regla «Zapatillas de correr»), y ropa cómoda. Si hace fresco, una capa que puedas quitarte y atarte a la cintura.",
+        "Un sitio llano, sin tráfico y que conozcas: un paseo, un parque o la pista. Mejor tierra compacta o asfalto liso que adoquines o piedras.",
+        "El reloj con el entreno preparado (abajo, «Cómo ponerlo en el reloj») o la web en Hoy › Modo pista, que pita en cada cambio.",
+        "Si has comido fuerte, deja pasar unas 2 horas; con algo ligero (una fruta, un yogur), basta con 30-60 min.",
+        "Si hace calor, bebe agua antes."
+      ],
+      "pasos": [
+        "Anda 5 min a paso vivo para entrar en calor.",
+        "Empieza el primer bloque corriendo muy suave: pasos cortos, como si no quisieras hacer ruido al pisar. El primer bloque es el más lento de todos.",
+        "Cuando pite (o se acaben los minutos), pasa a andar a paso vivo. No te pares: andar es parte del ejercicio.",
+        "Cuando vuelva a pitar, otra vez a correr suave. Repite las veces que diga la sesión.",
+        "Al acabar, anda 3-5 min hasta que respires normal.",
+        "Si la sesión lo dice, las elevaciones de talón (3 × 15 por pierna)."
+      ],
+      "sensacion": "Corriendo puedes decir frases enteras, por ejemplo «hoy hace buen día para correr», sin cortarte a mitad. Si solo te salen palabras sueltas, vas demasiado rápido: frena o anda. Al acabar tienes que sentir que habrías podido hacer un bloque más.",
+      "errores": [
+        "Salir rápido en el primer bloque porque estás fresca.",
+        "Ir al ritmo de otra persona: si corres con Daniel, él va a tu ritmo, no tú al suyo.",
+        "Pararte o sentarte en los minutos de andar.",
+        "Subir de escalón antes de tiempo o, al revés, no subir por miedo cuando el anterior ya salió entero."
+      ],
+      "siAlgoVaMal": [
+        "Te ahogas: anda hasta que puedas hablar y vuelve a correr más despacio.",
+        "Flato (un pinchazo en un costado): anda, suelta el aire despacio y aprieta con los dedos donde duele. Cuando se pase, vuelve a trotar suave.",
+        "Dolor: si cambia tu forma de correr, si va a más o si pasa de 3 de 10, se acaba la sesión (regla «Dolor»).",
+        "Mareo, náuseas o dolor de cabeza: para, ponte a la sombra y bebe agua."
+      ],
+      "escalones": "2:1 → 3:1 → 4:1 → 6:1 → 8:1 → seguido (minutos corriendo : minutos andando). Subes de escalón cuando el anterior sale entero, pudiendo hablar con frases y sin dolor al día siguiente. Si en la semana 6 todavía no corres 20 min seguidos, la base se alarga: no pasa nada.",
+      "reloj": [],
+      "video": "correr y andar para principiantes"
+    },
+    {
+      "id": "suave",
+      "nombre": "Rodaje suave",
+      "icono": "carrera",
+      "enUnaFrase": "Correr seguido y despacio, pudiendo hablar: es la mayor parte del plan y lo que más te va a mejorar.",
+      "paraQue": "Correr suave hace que el corazón mueva más sangre en cada latido, que los músculos aprovechen mejor el oxígeno y que piernas, tendones y huesos se acostumbren a correr. Es la base de todo lo demás: sin ella, las series no sirven.",
+      "ritmo": "suave",
+      "esfuerzo": "3-4 de 10",
+      "antes": [
+        "Lo mismo que en «Correr y andar»: zapatillas de correr, sitio llano y conocido y el reloj preparado.",
+        "Si todavía no llegas a los minutos seguidos, haz la sesión con tu escalón de correr y andar: cuenta igual."
+      ],
+      "pasos": [
+        "Anda 5 min a paso vivo.",
+        "Empieza a trotar más despacio de lo que creas que debes. Los primeros 10 min, los más lentos.",
+        "Mantén un ritmo en el que puedas hablar con frases enteras. Si vas sola, di una frase en voz alta de vez en cuando para comprobarlo.",
+        "Si te cuesta, anda un minuto y sigue: no se ha estropeado nada.",
+        "Si la sesión lleva rectas o cuestas, van al final, cuando ya has acabado los minutos suaves.",
+        "Al acabar, anda 3-5 min y, si toca, las elevaciones de talón."
+      ],
+      "sensacion": "Cómoda de principio a fin. Al acabar podrías seguir un rato más. Si acabas destrozada, ibas rápido.",
+      "errores": [
+        "Ir cada día un poco más rápido para «mejorar»: lo suave mejora siendo suave.",
+        "Mirar el ritmo en el reloj cada minuto: manda poder hablar.",
+        "Hacer más minutos de los que pone porque te encuentras bien."
+      ],
+      "siAlgoVaMal": [
+        "Vas ahogada: baja el ritmo o anda un minuto (regla «Lo suave, suave de verdad»).",
+        "Llegas cargada de la semana: regla «Si llegas cargada».",
+        "Dolor: regla «Dolor»."
+      ],
+      "reloj": [],
+      "video": "rodaje suave para principiantes"
+    },
+    {
+      "id": "larga",
+      "nombre": "La larga del sábado",
+      "icono": "carrera",
+      "enUnaFrase": "El rodaje más largo de la semana, siempre suave: los minutos que más base construyen.",
+      "paraQue": "Correr más rato seguido es lo que más acostumbra al cuerpo a aguantar. En el plan sube poco a poco, unos minutos cada semana, para que las piernas lleguen a tiempo.",
+      "ritmo": "suave",
+      "esfuerzo": "3-4 de 10",
+      "antes": [
+        "Si va a durar más de 45 min y hace calor, lleva agua (regla «Calor»).",
+        "Si corres con Daniel, él va a tu ritmo, no tú al suyo.",
+        "Si dura 50 min o más, el CrossFit del viernes, sin saltos (regla «Sin día libre»)."
+      ],
+      "pasos": [
+        "Anda 5 min a paso vivo.",
+        "Trota suave todo el tiempo de la sesión; los primeros 10 min, más lentos todavía.",
+        "Desde abril, alguna larga acaba con 10 min alegres: lo dice la sesión.",
+        "Al acabar, anda 3-5 min y haz las elevaciones de talón (3 × 15 por pierna)."
+      ],
+      "sensacion": "Como el rodaje suave. Los últimos minutos cuestan más: es normal, siempre que puedas hablar.",
+      "errores": [
+        "Empezar rápido y acabar arrastrándote.",
+        "Querer recuperar en la larga lo que no hiciste entre semana: lo que se pierde no se recupera (regla «Si llegas cargada»)."
+      ],
+      "siAlgoVaMal": [
+        "Vas ahogada: baja el ritmo o anda un minuto.",
+        "Dolor: regla «Dolor»."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "vuelta-calma",
+      "nombre": "Vuelta a la calma",
+      "icono": "carrera",
+      "enUnaFrase": "Unos minutos muy suaves al acabar para que el cuerpo baje de vueltas poco a poco.",
+      "paraQue": "Parar de golpe después de un esfuerzo puede marear. Bajar poco a poco deja que la respiración y las pulsaciones vuelvan a la normalidad.",
+      "esfuerzo": "2 de 10",
+      "antes": [],
+      "pasos": [
+        "Después de series y controles: 10 min de trote muy suave, más lento que tu suave. Si no puedes trotar, andando.",
+        "Después de correr y andar y de los rodajes: 3-5 min andando.",
+        "Si quieres, estira suave gemelos, la parte de atrás del muslo y el cuádriceps: unos 20-30 s cada uno, sin rebotes y sin dolor."
+      ],
+      "sensacion": "Al acabar respiras normal y hablas sin esfuerzo.",
+      "errores": [
+        "Saltártela porque lo importante ya está hecho.",
+        "Sentarte nada más acabar la última serie."
+      ],
+      "siAlgoVaMal": [
+        "Mareo al parar: siéntate o túmbate a la sombra, con las piernas en alto si puedes, y bebe."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "talon",
+      "nombre": "Elevaciones de talón a una pierna",
+      "icono": "fuerza",
+      "enUnaFrase": "Subir y bajar de puntillas sobre una sola pierna: tres minutos que protegen el tendón de Aquiles y la tibia.",
+      "paraQue": "El gemelo y el sóleo, los músculos de la pantorrilla, frenan cada pisada. Si son fuertes, el tendón de Aquiles y la tibia sufren menos. Van después del rodaje del miércoles y de la larga del sábado (regla «Elevaciones de talón»).",
+      "esfuerzo": "las últimas de cada serie, 7-8 de 10",
+      "antes": [
+        "Junto a una pared, una farola o una valla donde apoyar una mano."
+      ],
+      "pasos": [
+        "De pie, apoya una mano en la pared solo para el equilibrio.",
+        "Levanta un pie del suelo. Con la otra pierna estirada, sube de puntillas todo lo alto que puedas, en 2 s.",
+        "Baja despacio, en otros 2 s, hasta apoyar el talón.",
+        "15 veces seguidas y cambias de pierna: eso es una serie.",
+        "3 series con cada pierna, descansando lo que tardas en cambiar de pierna.",
+        "Si al principio no llegas a 15 bien hechas, haz las que puedas y apúntalo."
+      ],
+      "sensacion": "La pantorrilla quema al final de cada serie. El tendón no tiene que doler.",
+      "errores": [
+        "Subir y bajar rápido, rebotando.",
+        "Apoyar fuerza en la pared: la mano es solo para no caerte.",
+        "Doblar la rodilla de la pierna que trabaja."
+      ],
+      "siAlgoVaMal": [
+        "Dolor en el tendón de Aquiles o en el talón: para y dilo ese día (regla «Dolor»)."
+      ],
+      "reloj": [],
+      "video": "elevación de talón a una pierna"
+    },
+    {
+      "id": "rectas",
+      "nombre": "Rectas",
+      "icono": "carrera",
+      "enUnaFrase": "80 m acelerando poco a poco hasta ir rápido pero suelta, y la vuelta andando.",
+      "paraQue": "Enseñan a las piernas a moverse más rápido sin cansarte: mejoran la zancada y la coordinación y preparan para las series. Al final de un rodaje, además, quitan la sensación de ir pesada.",
+      "ritmo": "rectas",
+      "esfuerzo": "7-8 de 10 al final de cada una",
+      "antes": [
+        "Una recta llana de unos 80 m. En la pista, una de las rectas (mide unos 84 m); en un paseo, entre dos farolas o árboles que te sirvan de marca."
+      ],
+      "pasos": [
+        "Termina antes los minutos suaves de la sesión.",
+        "Sales trotando y aceleras poco a poco: los primeros 30 m, suave; los 30 siguientes, más rápido; los últimos 20 m, rápido pero suelta.",
+        "Frena poco a poco, sin pararte en seco.",
+        "Vuelve andando a la salida: esa es la recuperación. Cuando respires tranquila, la siguiente.",
+        "Las que diga la sesión."
+      ],
+      "sensacion": "Rápida y suelta, con la cara y los hombros relajados. Nunca a tope: si aprietas los dientes, te pasas.",
+      "errores": [
+        "Salir a sprint desde el primer metro.",
+        "Hacerlas cuesta abajo o con viento fuerte de cara.",
+        "Volver trotando rápido en vez de andando."
+      ],
+      "siAlgoVaMal": [
+        "Un tirón en la parte de atrás del muslo o en el gemelo: para, no hagas más ese día y mira la regla «Dolor»."
+      ],
+      "reloj": [],
+      "video": "aceleraciones progresivas atletismo"
+    },
+    {
+      "id": "calentamiento",
+      "nombre": "Calentamiento de series y controles",
+      "icono": "carrera",
+      "enUnaFrase": "15 min de trote suave, movilidad y 4 rectas: prepara el cuerpo para correr rápido sin hacerse daño.",
+      "paraQue": "Correr rápido en frío es la forma más fácil de lesionarse y de que la primera serie salga mal. El calentamiento sube la temperatura de los músculos y despierta las piernas.",
+      "ritmo": "suave",
+      "esfuerzo": "de 3 a 7 de 10, subiendo",
+      "antes": [],
+      "pasos": [
+        "Trote suave 15 min, a tu ritmo suave.",
+        "Movilidad, unos 5 min (ficha «Movilidad»).",
+        "4 rectas de 80 m (ficha «Rectas»).",
+        "2-3 min andando, un trago de agua si quieres, y a la primera serie."
+      ],
+      "sensacion": "Al acabar estás caliente, algo sudada y con las piernas sueltas, pero no cansada.",
+      "errores": [
+        "Recortarlo por prisa.",
+        "Hacer las rectas a tope: son para despertar, no para cansar."
+      ],
+      "siAlgoVaMal": [
+        "Si en el calentamiento aparece un dolor de más de 3 de 10, o que va a más, ese día no hay series (regla «Dolor»)."
+      ],
+      "reloj": [],
+      "video": "calentamiento antes de series atletismo"
+    },
+    {
+      "id": "movilidad",
+      "nombre": "Movilidad",
+      "icono": "carrera",
+      "enUnaFrase": "Unos 5 min de movimientos amplios y suaves de cadera, piernas y tobillos, sin pararte a estirar.",
+      "paraQue": "Despierta las articulaciones y los músculos que vas a usar rápido. A diferencia de estirar quieta, no enfría.",
+      "esfuerzo": "2-3 de 10",
+      "antes": [],
+      "pasos": [
+        "Balanceos de pierna adelante y atrás, agarrada a algo: 10 con cada pierna.",
+        "Balanceos de pierna de lado a lado, por delante del cuerpo: 10 con cada pierna.",
+        "Círculos de tobillo: 10 en cada sentido con cada pie.",
+        "Zancadas andando: 10 pasos largos bajando la rodilla de atrás cerca del suelo, sin tocarlo.",
+        "Skipping suave: 20 m trotando con las rodillas un poco más altas de lo normal.",
+        "Talones al glúteo: 20 m trotando y llevando los talones hacia el culo."
+      ],
+      "sensacion": "Movimientos amplios pero cómodos, sin dolor.",
+      "errores": [
+        "Hacerlo con prisa y a tirones.",
+        "Quedarte quieta estirando mucho rato antes de correr rápido: si quieres estirar, mejor al acabar."
+      ],
+      "siAlgoVaMal": [],
+      "reloj": [],
+      "video": "movilidad dinámica antes de correr"
+    },
+    {
+      "id": "control",
+      "nombre": "Control de 1.000 m",
+      "icono": "control",
+      "enUnaFrase": "Un 1.000 m a tope en la pista, como en la prueba: el tiempo que sale fija todos tus ritmos.",
+      "paraQue": "Es tu marca real y la que manda: con ella se calculan los ritmos K, K + 4, O y umbral (regla «Cómo se fijan los ritmos»). Además enseña a repartir el esfuerzo, que en un 1.000 vale casi tanto como estar en forma.",
+      "ritmo": "primerControl",
+      "esfuerzo": "10 de 10 al final, no al principio",
+      "antes": [
+        "En la pista de Arucas y a la misma hora que los demás controles: así se pueden comparar.",
+        "Las zapatillas que llevarás el día de la prueba. Sin clavos: lo prohíbe el BOE.",
+        "El viernes antes, sin CrossFit, o sin piernas ni saltos (regla «Sin día libre»).",
+        "Come algo ligero 2-3 horas antes y nada nuevo ese día. En ayunas, no (regla «Comer y descansar»).",
+        "Alguien con cronómetro, o el reloj preparado. En el control manda el cronómetro, no el GPS.",
+        "Con fiebre o el pecho cargado, no se corre: avisa y se decide."
+      ],
+      "pasos": [
+        "Calentamiento completo: 15 min suave, movilidad y 4 rectas.",
+        "2-3 min de pausa y a la salida. Corre por la calle 1, la de dentro, y no te abras en las curvas: por fuera son más metros. En una pista de 400 m, 1.000 m son dos vueltas y media.",
+        "Salida de pie, con «listo»… «ya», como en la prueba.",
+        "Los dos primeros 200 m, a un 7 de 10: respiras fuerte pero controlas. Si sale alguien más rápido, no le sigas.",
+        "Del 400 al 800, aguanta ese ritmo aunque cueste.",
+        "Los últimos 200 m, todo lo que te quede.",
+        "El tiempo se para al cruzar la línea, no antes. Anda un par de minutos y apunta el tiempo y, si puedes, los cinco parciales de 200.",
+        "10 min de trote muy suave para acabar."
+      ],
+      "sensacion": "Los primeros 200 parecen fáciles: es la trampa. Del 600 al 800 es lo más duro. Al acabar no puedes hablar.",
+      "errores": [
+        "Salir a sprint: es el error más caro del 1.000 (regla «El primer 200 no se regala»).",
+        "Abrirte en las curvas.",
+        "Aflojar justo antes de la línea.",
+        "Llegar con las piernas cargadas del CrossFit."
+      ],
+      "siAlgoVaMal": [
+        "Si llegas con mala noche, con calor o con CrossFit de piernas el día antes y el control sale mal, se apunta con asterisco y no baja ningún ritmo (regla «Cómo se fijan los ritmos»).",
+        "Un dolor que cambia tu forma de correr: se para (regla «Dolor»)."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "cuestas",
+      "nombre": "Cuestas cortas",
+      "icono": "carrera",
+      "enUnaFrase": "Subir 15-20 s fuerte por una cuesta y bajar andando: fuerza para correr, con menos golpe que en llano.",
+      "paraQue": "Subiendo, las piernas empujan más y cada pisada golpea menos que en llano. Es fuerza específica para correr y prepara para las series.",
+      "ritmo": "cuestas",
+      "esfuerzo": "8 de 10",
+      "antes": [
+        "Una cuesta de asfalto o tierra firme, sin tráfico, que puedas subir 20 s seguidos.",
+        "Pendiente del 5 al 8 %: se nota que sube, pero la subes corriendo con normalidad. Si tienes que ir casi andando, es demasiado; si apenas notas que sube, es poco."
+      ],
+      "pasos": [
+        "Haz los minutos suaves de la sesión y acaba al pie de la cuesta.",
+        "Sube fuerte: pasos cortos y rápidos, el cuerpo un poco hacia delante desde los tobillos, los brazos empujando más que en llano y la mirada hacia lo alto de la cuesta.",
+        "Cuenta los segundos de la sesión (15 o 20) con el reloj y para.",
+        "Baja andando hasta la salida: esa es la recuperación. Sin prisa.",
+        "Las que diga la sesión."
+      ],
+      "sensacion": "Fuerte sin llegar a tope: la última tiene que salir igual que la primera. Si la última sale mucho peor, ibas demasiado fuerte.",
+      "errores": [
+        "Bajar corriendo: castiga rodillas y tibias.",
+        "Dar zancadas largas cuesta arriba.",
+        "Hacer la primera a tope."
+      ],
+      "siAlgoVaMal": [
+        "Molestia en el tendón de Aquiles o en el gemelo: para (regla «Dolor»)."
+      ],
+      "reloj": [],
+      "video": "cuestas cortas técnica de carrera"
+    },
+    {
+      "id": "alegre",
+      "nombre": "Ritmo alegre",
+      "icono": "carrera",
+      "enUnaFrase": "Dentro de un rodaje, minutos un poco más rápidos que suave: respiras fuerte pero controlas.",
+      "paraQue": "Es el primer paso entre lo suave y las series: el cuerpo aprende a ir más rápido sin pasarse. A mezclar minutos alegres y suaves se le llama «fartlek».",
+      "ritmo": "alegre",
+      "esfuerzo": "6-7 de 10",
+      "antes": [],
+      "pasos": [
+        "Haz primero los minutos suaves que diga la sesión.",
+        "Sube el ritmo hasta que solo te salgan frases cortas: eso es «alegre». Lo mantienes el tiempo de la sesión.",
+        "Vuelve a suave el tiempo que toque, sin pararte.",
+        "Repite las veces que diga y termina suave.",
+        "Cuando la sesión dice «los 10 últimos alegres», es lo mismo pero al final del rodaje."
+      ],
+      "sensacion": "Al acabar cada minuto alegre respiras fuerte, pero en el suave te recuperas.",
+      "errores": [
+        "Convertir los minutos alegres en sprints.",
+        "Que los minutos suaves no sean suaves."
+      ],
+      "siAlgoVaMal": [
+        "Si no te recuperas en los minutos suaves, el alegre era demasiado rápido: la siguiente, más despacio."
+      ],
+      "reloj": [],
+      "video": "fartlek para principiantes"
+    },
+    {
+      "id": "intervalos-k4",
+      "nombre": "Intervalos a ritmo K + 4",
+      "icono": "carrera",
+      "enUnaFrase": "Repeticiones de 2-3 min algo más lentas que tu ritmo del 1.000, con la recuperación trotando.",
+      "paraQue": "Trabajan cerca del ritmo de la prueba pero durante más tiempo: suben el techo de tu corazón y tus pulmones. Son el puente entre lo suave y las series de pista.",
+      "ritmo": "K+4",
+      "esfuerzo": "7-8 de 10",
+      "antes": [
+        "En llano: la pista o un paseo sin cruces."
+      ],
+      "pasos": [
+        "Calentamiento completo (15 min suave, movilidad y 4 rectas).",
+        "Corre los minutos de la repetición a ritmo K + 4: 4 s más lento por cada 400 m que tu ritmo K. Mira el reloj al principio para coger el ritmo y después ve por sensación.",
+        "Recupera trotando muy suave el tiempo de la sesión. No te pares.",
+        "Repite. Todas al mismo ritmo: la primera no es más rápida.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Duro pero controlado: puedes decir dos o tres palabras seguidas. Al acabar la última, podrías haber hecho otra.",
+      "errores": [
+        "Hacer la primera demasiado rápido.",
+        "Pararte del todo en la recuperación."
+      ],
+      "siAlgoVaMal": [
+        "Si dos repeticiones seguidas salen más de 3 s por 400 más lentas de lo que toca, se acaba la sesión: 10 min suaves y a casa (regla de las dos repeticiones).",
+        "Dolor: regla «Dolor»."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "umbral",
+      "nombre": "Umbral",
+      "icono": "carrera",
+      "enUnaFrase": "Bloques de 5 a 10 min «cómodamente duros»: frases cortas, no conversación.",
+      "paraQue": "El umbral es, más o menos, el ritmo más rápido que aguantas mucho rato sin que el cansancio se dispare. Entrenarlo hace que ese ritmo suba, y con él todo lo demás.",
+      "ritmo": "umbral",
+      "esfuerzo": "6-7 de 10",
+      "antes": [
+        "En llano: la pista o un paseo sin cruces."
+      ],
+      "pasos": [
+        "Calentamiento completo.",
+        "Cada bloque a ritmo de umbral, constante de principio a fin (sale de tu ritmo K: de K × 1,20 a K × 1,25 por km).",
+        "Entre bloques, lo que diga la sesión, trotando suave.",
+        "Si la sesión lo dice, 15 min suaves después.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Puedes decir frases cortas pero no conversar. Al acabar cada bloque podrías haber seguido unos minutos más.",
+      "errores": [
+        "Ir más rápido de la cuenta: el umbral no es una serie.",
+        "Hacerlo con las piernas cargadas."
+      ],
+      "siAlgoVaMal": [
+        "Si el lunes no salió sin dolor o llegas cargada, el umbral del miércoles se cambia por 50 min suaves (lo dice la sesión)."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "series-k",
+      "nombre": "Series a ritmo K",
+      "icono": "carrera",
+      "enUnaFrase": "Repeticiones de 200 a 1.000 m al ritmo de tu mejor 1.000 reciente, con descanso entre medias.",
+      "paraQue": "Acostumbran al cuerpo a ir al ritmo de la prueba y a sostenerlo. Partir el 1.000 en trozos permite hacer más metros a ese ritmo que en un control.",
+      "ritmo": "K",
+      "esfuerzo": "8 de 10",
+      "antes": [
+        "En la pista. Se corre por la calle 1, la de dentro, en sentido contrario a las agujas del reloj, como todo el mundo.",
+        "En una pista de 400 m, una vuelta por la calle 1 son 400 m y media vuelta, 200."
+      ],
+      "pasos": [
+        "Calentamiento completo.",
+        "Cada repetición al tiempo que pone la sesión (sale de tu ritmo K). El primer 200 al mismo ritmo que los demás, no a sprint (regla «El primer 200 no se regala»).",
+        "Al acabar cada una, recupera el tiempo de la sesión andando o trotando muy suave.",
+        "Repite las que diga la sesión.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Duro: al final de cada una solo te salen palabras sueltas. La primera parece fácil; la última, no.",
+      "errores": [
+        "Salir rápido en la primera.",
+        "Recortar las recuperaciones.",
+        "Correr por las calles de fuera: son más metros."
+      ],
+      "siAlgoVaMal": [
+        "Si dos repeticiones seguidas salen más de 3 s más lentas que el objetivo, se acaba la sesión: 10 min suaves y a casa (regla de las dos repeticiones)."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "series-o",
+      "nombre": "Series a ritmo O",
+      "icono": "carrera",
+      "enUnaFrase": "Como las de ritmo K, pero 2 s más rápidas por cada 400: el ritmo del objetivo de tu próximo control.",
+      "paraQue": "Desde junio el plan te pide ir un poco más rápido que tu marca: así aprendes el ritmo que quieres hacer en el siguiente control.",
+      "ritmo": "O",
+      "esfuerzo": "8-9 de 10",
+      "antes": [
+        "En la pista, por la calle 1."
+      ],
+      "pasos": [
+        "Calentamiento completo.",
+        "Cada repetición al tiempo que pone la sesión (ritmo O = K menos 2 s por 400). El primer 200, al ritmo de los demás.",
+        "Recupera el tiempo de la sesión andando o trotando muy suave.",
+        "Repite las que diga la sesión.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Más duro que a ritmo K. Si cada repetición sale bien, el siguiente control puede salir así de rápido.",
+      "errores": [
+        "Querer hacerlas aún más rápido.",
+        "Recortar las recuperaciones."
+      ],
+      "siAlgoVaMal": [
+        "Regla de las dos repeticiones: dos seguidas más de 3 s lentas, se acaba la sesión."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "rapidos",
+      "nombre": "200 m rápidos",
+      "icono": "carrera",
+      "enUnaFrase": "200 m más rápidos que tu ritmo O pero sueltos, con la vuelta andando.",
+      "paraQue": "Dan velocidad y soltura para el final del 1.000 sin cansar demasiado, porque la recuperación es completa.",
+      "ritmo": "rapidos",
+      "esfuerzo": "8-9 de 10",
+      "antes": [
+        "En la pista: media vuelta son 200 m."
+      ],
+      "pasos": [
+        "Calentamiento completo.",
+        "200 m rápidos: más rápido que tu ritmo O, pero suelta, sin apretar los dientes.",
+        "Recupera andando 200 m hasta la salida.",
+        "Repite las que diga la sesión.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Rápida y suelta. Si te agarrotas, aflojas un poco.",
+      "errores": [
+        "Convertirlos en sprints a tope.",
+        "Volver trotando rápido en vez de andando."
+      ],
+      "siAlgoVaMal": [
+        "Un tirón en el muslo o en el gemelo: para y regla «Dolor»."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "km-partido",
+      "nombre": "Kilómetro partido",
+      "icono": "carrera",
+      "enUnaFrase": "Un 600 y un 400 a ritmo O con 1 min entre medias: casi un 1.000 entero al ritmo que quieres hacer.",
+      "paraQue": "Es lo más parecido a la prueba sin hacer un control: aprendes a sostener el ritmo objetivo cuando ya pesan las piernas.",
+      "ritmo": "O",
+      "esfuerzo": "9 de 10",
+      "antes": [
+        "En la pista, por la calle 1."
+      ],
+      "pasos": [
+        "Calentamiento completo.",
+        "600 m a ritmo O: una vuelta y media.",
+        "1 min de pausa, andando.",
+        "400 m a ritmo O: una vuelta.",
+        "La recuperación larga que diga la sesión y el segundo kilómetro partido.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "El 400 de después cuesta mucho: es lo que se siente del 600 al 1.000 en la prueba.",
+      "errores": [
+        "Salir rápido en el 600.",
+        "Alargar el minuto de pausa."
+      ],
+      "siAlgoVaMal": [
+        "Regla de las dos repeticiones.",
+        "Dolor: regla «Dolor»."
+      ],
+      "reloj": []
+    },
+    {
+      "id": "simulacro",
+      "nombre": "Simulacro",
+      "icono": "prueba",
+      "enUnaFrase": "Las tres pruebas seguidas, en el orden del BOE: circuito, barra y 1.000 m.",
+      "paraQue": "Es el último dato antes de la prueba y decide el ritmo de la última semana. Además practicas el día entero: calentar, esperar y volver a correr.",
+      "esfuerzo": "10 de 10 en cada prueba",
+      "antes": [
+        "El viernes antes, descanso.",
+        "Las zapatillas y la ropa del día de la prueba."
+      ],
+      "pasos": [
+        "Calentamiento completo antes del circuito.",
+        "Circuito, barra y 1.000 m, con los descansos que te den, como el día de la prueba.",
+        "Antes del 1.000, si te has enfriado, trota suave unos minutos y haz una o dos rectas.",
+        "10 min muy suaves para acabar."
+      ],
+      "sensacion": "Como la prueba de verdad.",
+      "errores": [
+        "Gastar en el circuito y la barra lo que necesitas para el 1.000: cada prueba, a tope, pero con el calentamiento hecho."
+      ],
+      "siAlgoVaMal": [
+        "Dolor: regla «Dolor»."
+      ],
+      "reloj": []
     }
   ]
 }

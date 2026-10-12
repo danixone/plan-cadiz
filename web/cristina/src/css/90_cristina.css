@@ -1,0 +1,16 @@
+/* 90_cristina.css · lo que la web de Cristina necesita y la de Daniel no tiene (capa «cristina», detrás de las de Daniel).
+   · Estado «otro»: días de Martín Freire y CrossFit (no se registran aquí).
+   · Colores de las seis fases (F0-F5) con la paleta de bloques de Daniel (--p1…--p5 y --s3). */
+.hoy-sw.otro{background:var(--surface-2);border-color:transparent}
+.week button.otro{color:var(--text-3);background:var(--surface-2);border-color:transparent}
+.cal-d.otro{background:var(--surface-2);border-color:transparent;color:var(--text-3)}
+.b-f0{--fase:var(--p1)} .b-f1{--fase:var(--p2)} .b-f2{--fase:var(--p3)} .b-f3{--fase:var(--p4)} .b-f4{--fase:var(--p5)} .b-f5{--fase:var(--s3)}
+.cal-sem.b-f0,.cal-sem.b-f1,.cal-sem.b-f2,.cal-sem.b-f3,.cal-sem.b-f4,.cal-sem.b-f5{border-left-color:var(--fase)}
+.pl-banda.b-f0,.pl-banda.b-f1,.pl-banda.b-f2,.pl-banda.b-f3,.pl-banda.b-f4,.pl-banda.b-f5{background:var(--fase)}
+/* Monigote de Cristina en el camino de Hoy: el mismo corredor, vestido de rosa */
+/* el dorsal del monigote dice 43 (la promoción de Daniel): en el de Cristina no se pinta */
+.ill-rosa text{visibility:hidden}
+.ill-rosa{--ill-camiseta:#E0569A;--ill-camiseta-2:#C2407F;--ill-pantalon:#7A2350;--ill-gorra:#C2407F;--ill-visera:#5E1A3D;--ill-vivo:#F7B8D6;
+  --ill-zapa:#E0569A;--ill-zapa-2:#C2407F;--ill-pelo:#3B2A22}
+/* «Sesión de Cristina» encima de la tarjeta del día */
+.hoy-quien{margin:0 0 6px;color:#C2407F;font-weight:700;letter-spacing:.02em}

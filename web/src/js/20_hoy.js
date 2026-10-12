@@ -68,7 +68,11 @@
     for (var i = 0; i < arr.length; i++) if (arr[i].fecha === p.slice(1).join(':')) return arr[i];
     return null;
   }
-  var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba' };
+  var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba', otro: 'fuerza' };
+  /* web de Cristina (web/cristina/): PC.PERFIL lo pone su 10_cristina.js; en la de Daniel no existe */
+  function perfil() { return PC.PERFIL || null; }
+  /* días sin sesión que hacer aquí: descanso, examen y, en la web de Cristina, «otro» (Martín Freire, CrossFit) */
+  function sinSesion(dia) { return dia.tipo === 'descanso' || dia.tipo === 'examen' || dia.tipo === 'otro'; }
   var LETRA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
   var NCOLOR = { verde: 'Sesión escrita', ambar: 'Sesión escrita', rojo: 'Sesión escrita', parada: 'No se entrena' };
   var CCOLOR = { verde: 'ok', ambar: 'ok', rojo: 'ok', parada: 'bad' };
@@ -542,9 +546,7 @@
     var R = opcion && opcion.tpl ? opcion : SES.contexto(dia, color);
     if (!dia || color === 'parada') return [];
     var ex = dia.extra || {};
-    if (ex.pasos && R.tpl !== 'rodaje') return ex.pasos.map(function (x) {
-      return { t: x.t, d: x.d || '', timer: x.timer ? segDe(x.timer) : null, enlace: x.enlace ? tecnica(x.enlace) : null };
-    });
+    if (ex.pasos && R.tpl !== 'rodaje') return ex.pasos.map(pasoWeb);
     if (R.tpl === 'series') return pasosSeries(dia, color, R);
     if (R.tpl === 'rodaje') return pasosRodaje(dia, color, R);
     if (R.tpl === 'fuerza') return pasosFuerza(dia, color, R);
@@ -552,6 +554,13 @@
     if (dia.tipo === 'prueba' && dia.sesion) return [{ t: sinHora(dia.sesion) }];
     return [];
   };
+  /* un paso de web.dias[f].pasos; con «grupo», un plegable con sus pasos dentro (calentamiento de Cristina) */
+  function pasoWeb(x) {
+    var o = { t: x.t, d: x.d || '', timer: x.timer ? segDe(x.timer) : null, enlace: x.enlace ? tecnica(x.enlace, x.enlaceTxt) : null };
+    if (x.grupo) { o.grupo = true; o.meta = x.meta || ''; o.pasos = (x.pasos || []).map(pasoWeb); }
+    if (x.tras) o.tras = true;   /* el temporizador va DESPUÉS del paso (recuperación de una repetición) */
+    return o;
+  }
   function calentamiento(dia) {
     var ce = (plan().sesionesTipo || {}).calentamientoEstandar || {};
     var conDom = /dominadas/i.test(dia.sesion || '');
@@ -662,6 +671,10 @@
   }
   SES.reloj = function (dia) {
     if (!dia) return [];
+    if (perfil()) {
+      var rj = (plan().reloj || {}).pasos || [], ctl = /^(control|prueba)$/.test(dia.tipo || '') || /series|×.*m a ritmo|intervalo|umbral/i.test(dia.sesion || '');
+      return rj.filter(function (x) { return ctl ? !/^Rodajes/.test(x) : !/^Series/.test(x); });
+    }
     var R = SES.contexto(dia, 'verde'), p = R.principal, L = [], tpl = R.tpl;
     var medir = (der().recortados || {})['plan.reglas[medir-distancias].texto'] || reglaTxt('medir-distancias');
     if (tpl === 'control') {
@@ -713,7 +726,8 @@
     host.hidden = false;
     var w = Math.floor(host.clientWidth || (host.parentNode && host.parentNode.clientWidth) || 320), h = 56, y = 40;
     var faltan = PC.dias(hoy, L.desde);
-    var flagTxt = hoy < L.desde ? 'Cádiz · ≥ ' + faltan + (faltan === 1 ? ' día' : ' días') : 'Cádiz · semana de la prueba';
+    var meta = (perfil() || {}).meta || 'Cádiz';
+    var flagTxt = hoy < L.desde ? meta + ' · ≥ ' + faltan + (faltan === 1 ? ' día' : ' días') : meta + ' · semana de la prueba';
     var flagW = Math.ceil(flagTxt.length * 6.6) + 16;
     var id = 'hoy-cm-' + (++nCamino);
     var x0 = 6, x1 = w - flagW - 4, total = PC.dias(L.ini, L.fin) || 1;
@@ -721,10 +735,10 @@
     var paso = (x1 - x0) / total, s = [];
     s.push('<defs><pattern id="' + id + '-r" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" style="fill:var(--warn-soft)"/><rect width="2.5" height="6" style="fill:var(--warn)"/></pattern></defs>');
     s.push('<line x1="' + x0 + '" x2="' + x1 + '" y1="' + y + '" y2="' + y + '" style="stroke:var(--border-strong);stroke-width:2;stroke-linecap:round"/>');
-    var colB = { A: 'var(--p2)', B: 'var(--p3)', C: 'var(--p5)' };
-    (der().bloques || []).forEach(function (b) {
+    var colB = { A: 'var(--p2)', B: 'var(--p3)', C: 'var(--p5)' }, PAL_B = ['var(--p1)', 'var(--p2)', 'var(--p3)', 'var(--p4)', 'var(--p5)', 'var(--s3)'];
+    (der().bloques || []).forEach(function (b, i) {
       var a = fx(b.desde), z = Math.min(x1, fx(b.hasta) + paso);
-      s.push('<rect x="' + a.toFixed(1) + '" y="' + (y - 2.5) + '" width="' + Math.max(2, z - a - 1).toFixed(1) + '" height="5" rx="2.5" style="fill:' + (colB[b.clave] || 'var(--p3)') + '"/>');
+      s.push('<rect x="' + a.toFixed(1) + '" y="' + (y - 2.5) + '" width="' + Math.max(2, z - a - 1).toFixed(1) + '" height="5" rx="2.5" style="fill:' + (colB[b.clave] || PAL_B[i % PAL_B.length]) + '"/>');
       s.push('<text class="hoy-cm-b" x="' + ((a + z) / 2).toFixed(1) + '" y="' + (y + 15) + '" text-anchor="middle">' + esc(b.clave) + '</text>');
     });
     if (L.desde) {
@@ -742,14 +756,16 @@
       }
     });
     var xa = fx(hoy < L.ini ? L.ini : hoy);
+    /* web de Cristina: su monigote, vestido de rosa, corre detrás del de Daniel hasta el día de su prueba */
+    if (PC.ill && PC.ill.corredor && perfil() && perfil().rosa) s.push('<g class="ill-rosa">' + PC.ill.corredor('corre', { h: 24, ancla: 'pie', x: Math.max(x0 + 4, xa - 12), y: y - 1 }) + '</g>');
     if (PC.ill && PC.ill.corredor) s.push(PC.ill.corredor('corre', { h: 24, ancla: 'pie', x: xa, y: y - 1 }));
     else s.push('<circle cx="' + xa.toFixed(1) + '" cy="' + (y - 10) + '" r="6" style="fill:var(--primary)"/>');
-    s.push('<g class="hoy-cm-flag"><title>fecha sin confirmar: ' + esc(((plan().objetivo || {}).pruebasFisicas || {}).fecha || '') + '</title>' +
+    s.push('<g class="hoy-cm-flag"><title>fecha sin confirmar: ' + esc((perfil() || {}).fechaMeta || ((plan().objetivo || {}).pruebasFisicas || {}).fecha || '') + '</title>' +
       '<line x1="' + x1 + '" x2="' + x1 + '" y1="10" y2="' + (y + 2) + '" style="stroke:var(--text-2);stroke-width:1.5"/>' +
       '<rect x="' + x1 + '" y="10" width="' + flagW + '" height="22" rx="3" style="fill:var(--text)"/>' +
       '<text x="' + (x1 + 8) + '" y="25" style="fill:var(--surface)">' + esc(flagTxt) + '</text></g>');
     var bl = PC.cal.bloque(hoy);
-    var lab = 'Camino a Cádiz del ' + PC.fmt.dia(L.ini, 'dm') + ' al ' + PC.fmt.dia(L.fin, 'dm') + ': hoy ' + PC.fmt.dia(hoy, 'dm') +
+    var lab = 'Camino a ' + (perfil() ? 'la prueba de ' + perfil().nombre : 'Cádiz') + ' del ' + PC.fmt.dia(L.ini, 'dm') + ' al ' + PC.fmt.dia(L.fin, 'dm') + ': hoy ' + PC.fmt.dia(hoy, 'dm') +
       (bl ? ', bloque ' + bl : '') + '; ' + flagTxt + ' (fecha sin confirmar). Abre el calendario.';
     host.innerHTML = '<a href="#plan/calendario" aria-label="' + esc(lab) + '"><svg width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' + s.join('') + '</svg></a>';
     var tx = host.querySelector('.hoy-cm-flag text');
@@ -781,7 +797,7 @@
     var rango = dia.hora && /^\s*\d{1,2}:\d{2}\s*[-–]\s*\d{1,2}:\d{2}/.test(dia.hora);
     return rango ? hm(ini) + '–' + hm(PC.cal.horaFin(dia)) : hm(ini);
   }
-  function tipoTxt(t) { return { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba' }[t] || ''; }
+  function tipoTxt(t) { return { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba', otro: 'otro entreno' }[t] || ''; }
   function ses(fecha) { return st().get('ses-' + fecha, {}) || {}; }
   function guardarSes(fecha, cambio) { var o = ses(fecha); Object.keys(cambio).forEach(function (k) { o[k] = cambio[k]; }); o.t = Date.now(); st().set('ses-' + fecha, o); return o; }
   function chipCab(dia, rel, sal) {
@@ -791,13 +807,13 @@
       var m = { hecho: ['ok', 'hecho'], nomide: ['warn', 'no mide'], miss: ['bad', 'no hecho'], noreg: ['', 'sin registrar'], rest: ['', 'descanso'] }[e];
       return m ? '<span class="chip ' + m[0] + '">' + m[1] + '</span>' : '';
     }
-    if (dia.tipo === 'descanso' || dia.tipo === 'examen') return sal && sal.color ? '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>' : '';
+    if (sinSesion(dia)) return sal && sal.color ? '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>' : '';
     if (!sal || !sal.color) return '<span class="chip sup">noche sin anotar</span>';
     return '<span class="chip ' + CCOLOR[sal.color] + '">' + NCOLOR[sal.color] + '</span>' + (sal.asterisco ? ' <span class="chip warn">con asterisco</span>' : '');
   }
   function consecuencia(dia, sal) {
     if (!sal || !sal.color) return '';
-    if (dia.tipo === 'descanso' || dia.tipo === 'examen') return 'Hoy es descanso';
+    if (sinSesion(dia)) return dia.tipo === 'otro' ? 'Hoy no corres' : 'Hoy es descanso';
     if (sal.color === 'parada') return 'No se entrena: regla del cuello';
     if (dia.semaforo) return dia.semaforo;
     return sal.asterisco ? 'Sesión como está escrita. Un buen resultado vale; si sale peor de lo que pide, no baja nada.' : 'Sesión como está escrita. Todo cuenta.';
@@ -827,11 +843,11 @@
   }
   function fmtC(m) { return PC.fmt.sueno(m); }
   function htmlSem(dia) {
-    var f = dia.fecha, g = SEM.leer(f), sal = SEM.salida(f), desc = dia.tipo === 'descanso' || dia.tipo === 'examen';
+    var f = dia.fecha, g = SEM.leer(f), sal = SEM.salida(f), desc = sinSesion(dia);
     var abierto = UI.abierto[f] || (!sal && !desc), opc = UI.opc[f];
     var h = [];
     if (!abierto && !sal) {
-      return '<div class="hoy-sem cerrado"><div class="hoy-sem-l"><span>Hoy es descanso</span><button type="button" class="btn ghost" data-a="anotar">Anotar la noche (opcional)</button></div></div>';
+      return '<div class="hoy-sem cerrado"><div class="hoy-sem-l"><span>' + (dia.tipo === 'otro' ? 'Hoy no corres' : 'Hoy es descanso') + '</span><button type="button" class="btn ghost" data-a="anotar">Anotar la noche (opcional)</button></div></div>';
     }
     if (!abierto) {
       var lamp = LAMP[sal.color] || (sal.color === 'parada' ? 'r' : 'g');
@@ -840,7 +856,7 @@
         '<button type="button" class="btn ghost" data-a="cambiar" aria-expanded="false">Cambiar</button></div>');
     } else {
       var ban = g ? g.banda : null;
-      h.push('<div class="hoy-sem"><p class="hoy-sem-q" id="hoy-sem-q-' + f + '">¿Cómo has dormido? (Garmin, sin la siesta)</p>' +
+      h.push('<div class="hoy-sem"><p class="hoy-sem-q" id="hoy-sem-q-' + f + '">¿Cómo has dormido? (' + (perfil() ? 'el reloj' : 'Garmin') + ', sin la siesta)</p>' +
         '<div class="lamps" role="radiogroup" aria-labelledby="hoy-sem-q-' + f + '" data-qa-clave="lamparas">' +
         [['verde', 'g', fmtC(cortes().verde) + ' o más', ''], ['ambar', 'g', fmtC(cortes().rojo) + '–' + fmtC(cortes().verde - 1), ''], ['rojo', 'a', 'menos de ' + fmtC(cortes().rojo), 'asterisco']].map(function (l) {
           return '<button type="button" role="radio" aria-checked="' + (ban === l[0] ? 'true' : 'false') + '" data-a="lamp" data-banda="' + l[0] + '"><i class="lamp ' + l[1] + '"></i><b>' + l[2] + '</b><small>' + l[3] + '</small></button>';
@@ -867,7 +883,7 @@
     o.push('<div><span class="hoy-opt-t">Síntomas</span>' + segHTML('sintomas', g.sintomas || 'ninguno', [['ninguno', 'Ninguno'], ['encima', 'Encima del cuello'], ['debajo', 'Debajo del cuello']], 'Síntomas') + '</div>');
     if (diaConBarra(dia)) o.push('<div><span class="hoy-opt-t">Codo u hombro, el que más duela (0–10)</span>' + stepperHTML('codo', g.codo, 'Codo u hombro, de 0 a 10') + '</div>');
     o.push('<div><span class="hoy-opt-t">Talón al dar los primeros pasos</span>' + segHTML('talon', g.talon || 'nada', [['nada', 'Nada'], ['duele', 'Duele']], 'Talón') + '</div>');
-    if (diaConCintillo(dia)) o.push('<div><span class="hoy-opt-t">Cintillo (rodilla izquierda)</span>' + segHTML('cintillo', g.cintillo || 'nada', [['nada', 'Nada'], ['noto', 'Lo noto'], ['molesta', 'Molesta al correr']], 'Cintillo') + '</div>');
+    if (diaConCintillo(dia) && !perfil()) o.push('<div><span class="hoy-opt-t">Cintillo (rodilla izquierda)</span>' + segHTML('cintillo', g.cintillo || 'nada', [['nada', 'Nada'], ['noto', 'Lo noto'], ['molesta', 'Molesta al correr']], 'Cintillo') + '</div>');
     if (/agujetas/i.test(dia.objetivo || '')) o.push('<div><span class="hoy-opt-t">Agujetas (0–10)</span>' + stepperHTML('agujetas', g.agujetas, 'Agujetas, de 0 a 10') + '</div>');
     o.push('</div>');
     return o.join('');
@@ -945,9 +961,9 @@
       return '<tr><td>' + m + ' m</td>' + cols.map(function (c) { return '<td>' + esc(c.v[i] || '') + '</td>'; }).join('') + '<td class="hoy-elim">' + PC.fmt.t(por * (i + 1), 1) + '</td></tr>';
     });
     filas.push('<tr><td>1.000 m</td>' + cols.map(function (c) { return '<td>' + esc(c.meta || p.meta || (p.obj ? '≤ ' + p.obj : '')) + '</td>'; }).join('') +
-      '<td class="hoy-elim" data-umbral="229">3:49 elimina</td></tr>');
+      '<td class="hoy-elim" data-umbral="' + el + '">' + PC.fmt.t(el) + ' elimina</td></tr>');
     return '<div class="hoy-rep"><div class="tscroll"><table class="t"><caption>Paso por cada 200 m</caption><thead><tr><th scope="col">paso</th>' +
-      cols.map(function (c) { return '<th scope="col">' + esc(c.t) + '</th>'; }).join('') + '<th scope="col" class="hoy-elim" data-umbral="229">ritmo del 3:49</th></tr></thead><tbody>' +
+      cols.map(function (c) { return '<th scope="col">' + esc(c.t) + '</th>'; }).join('') + '<th scope="col" class="hoy-elim" data-umbral="' + el + '">ritmo del ' + PC.fmt.t(el) + '</th></tr></thead><tbody>' +
       filas.join('') + '</tbody></table></div></div>';
   }
   function htmlPaso(p, clave, conCk, conTimer, hecho) {
@@ -955,7 +971,7 @@
     var d = p.d ? esc(p.d) : '';
     if (p.enlace) d += (d ? ' ' : '') + '<a href="' + esc(p.enlace.href) + '">' + esc(p.enlace.txt) + '</a>';
     var ck = conCk ? '<button type="button" class="ck" data-ck="' + clave + '" aria-pressed="' + (hecho ? 'true' : 'false') + '" aria-label="Hecho: ' + esc(p.t) + '"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="cbox" x="2" y="2" width="22" height="22" rx="6"/><path class="tick" d="M7.5 13.5l4 4 7-8.5"/></svg></button>' : '';
-    var tm = conTimer && p.timer ? '<button type="button" class="timer" data-tm="' + clave + '" data-t="' + p.timer + '" aria-label="Descanso de ' + PC.fmt.t(p.timer) + '">' + PC.icon('temporizador', 'sm') + '<span>' + PC.fmt.t(p.timer) + '</span></button>' : (conTimer ? '<span></span>' : '');
+    var tm = conTimer && p.timer ? '<button type="button" class="timer" data-tm="' + clave + '" data-t="' + p.timer + '" aria-label="' + (perfil() ? 'Temporizador de ' : 'Descanso de ') + PC.fmt.t(p.timer) + '">' + PC.icon('temporizador', 'sm') + '<span>' + PC.fmt.t(p.timer) + '</span></button>' : (conTimer ? '<span></span>' : '');
     return '<div class="ex' + (hecho ? ' done' : '') + (conCk ? '' : ' hoy-ex-sin') + '">' + ck + '<div class="nm">' + esc(p.t) + (d ? '<small>' + d + '</small>' : '') +
       (tags ? '<div class="tags">' + tags + '</div>' : '') + '</div>' + tm + '</div>';
   }
@@ -1060,7 +1076,7 @@
   }
   function htmlDescanso(dia, rel, modo) {
     var h = [];
-    if (dia.sesion && !/^descanso\.?$/i.test(String(dia.sesion).trim())) h.push('<p class="hoy-linea">' + esc(dia.sesion) + '</p>');
+    if (dia.sesion && !/^descanso\.?$/i.test(String(dia.sesion).trim()) && dia.sesion !== tituloDe(dia)) h.push('<p class="hoy-linea">' + esc(dia.sesion) + '</p>');
     if (dia.objetivo) h.push('<p class="hoy-linea">' + esc(dia.objetivo) + '</p>');
     var r = regla('descanso');
     if (dia.tipo === 'descanso' && r) h.push('<div class="hoy-plg"><details class="acc why"><summary>' + PC.icon('info', 'sm') + 'La regla del descanso' + PC.icon('chev', 'sm chev') + '</summary><div class="in"><p>' + esc(r.texto) + '</p></div></details></div>');
@@ -1071,7 +1087,7 @@
   }
   function htmlTarjeta(dia, modo) {
     var f = dia.fecha, rel = relDe(f), vivo = modo === 'hoy' && rel === 'hoy';
-    var reposo = dia.tipo === 'descanso' || dia.tipo === 'examen';
+    var reposo = sinSesion(dia);
     var sal = rel === 'hoy' ? SEM.salida(f) : null, color = colorTarjeta(dia, rel);
     var R = SES.contexto(dia, color === 'parada' ? 'verde' : color);
     R.color = color;
@@ -1248,7 +1264,7 @@
     var fin = F.semana ? String(F.semana).split('/')[1] : (cal.length && cal[cal.length - 1].semana ? String(cal[cal.length - 1].semana).split('/')[1] : null);
     return { ini: ini ? PC.lunes(ini) : null, fin: fin ? PC.lunes(fin) : null };
   }
-  var EST_CLS = { hecho: 'done', nomide: 'nomide', miss: 'miss', noreg: 'noreg', rest: 'rest' };
+  var EST_CLS = { hecho: 'done', nomide: 'nomide', miss: 'miss', noreg: 'noreg', rest: 'rest', otro: 'otro' };
   var EST_TXT = { hecho: 'hecho', nomide: 'hecho, no mide', miss: 'no hecho', noreg: 'sin registrar', rest: 'descanso', futuro: 'por venir' };
   function pintarSemana() {
     var root = UI.root, hoy = PC.hoyIso(), sel = UI.sel || hoy, lun = UI.lunes || PC.lunes(sel);
@@ -1284,6 +1300,7 @@
     host.innerHTML = '';
     if (f !== hoy) host.appendChild(PC.el('p', { 'class': 'hoy-volver' }, '<a class="chip pri" href="#hoy">' + PC.icon('hoy', 'sm') + 'Volver a hoy</a><span>' + esc(PC.fmt.dia(f, 'larga')) + '</span>'));
     var dia = PC.cal.dia(f);
+    if (perfil()) host.appendChild(PC.el('p', { 'class': 'hoy-sub hoy-quien' }, 'Sesión de ' + esc(perfil().nombre)));
     UI.card = SES.tarjeta(dia || { fecha: f }, { modo: 'hoy' });
     host.appendChild(UI.card);
     ajustarMas(UI.card);
@@ -1469,6 +1486,7 @@
     else if (p && p.tipo === 'series') t = (p.n || 1) + ' × ' + p.dist;
     else if (p && p.tipo === 'km-partido') t = 'Kilómetro partido × ' + (p.nColor || 1);
     else if (p && p.tipo === 'compuesta') t = (p.partes || []).map(function (x) { return ((x.n || 1) > 1 ? x.n + ' × ' : '') + x.dist; }).join(' + ');
+    if (perfil()) return t;
     return t + (dia.bloque ? ' · bloque ' + dia.bloque : '') + ' · ' + (NCOLOR[color] || '').toLowerCase();
   }
   function durRodaje(dia, R, color) {
@@ -1492,8 +1510,13 @@
   function cargarFZ() {
     var dia = FZ.dia = PC.cal.dia(FZ.f), R = FZ.R = SES.contexto(dia, FZ.color);
     R.color = FZ.color;
-    FZ.tipo = dia.tipo === 'fuerza' ? 'gym' : (R.tpl === 'control' ? 'control' : (esRodaje(R, FZ.color) ? 'rodaje' : (R.principal ? 'series' : 'texto')));
+    FZ.tipo = dia.tipo === 'fuerza' ? 'gym' : (R.tpl === 'control' ? 'control' : (R.tpl === 'cr' ? 'pasos' : (esRodaje(R, FZ.color) ? 'rodaje' : (R.principal ? 'series' : 'texto'))));
     var S = ses(FZ.f);
+    if (FZ.tipo === 'pasos') {
+      FZ.lista = [];
+      SES.pasos(dia, FZ.color, R).forEach(function (q) { if (q.grupo) (q.pasos || []).forEach(function (x) { FZ.lista.push(x); }); else FZ.lista.push(q); });
+      if (FZ.paso === undefined) FZ.paso = Math.min(+S.pasoFZ || 0, FZ.lista.length);
+    }
     if (FZ.tipo === 'series') { FZ.seq = SES.secuencia(R.principal, FZ.color); FZ.reps = (S.reps || []).slice(0, FZ.seq.length); FZ.fase = FZ.reps.length >= nEf() ? 'fin' : 'rep'; }
     if (FZ.tipo === 'gym') {
       FZ.g = S.gym || { series: {}, reserva5: null, codo: 0, hombro: 0 };
@@ -1647,6 +1670,39 @@
     h.push('<button type="button" class="btn pri lg block" data-z="fue">Apuntar cómo fue</button>');
     return h.join('');
   }
+  /* modo pista paso a paso: un paso cada vez; los que tienen tiempo cuentan hacia atrás, pitan y pasan solos al siguiente */
+  function htmlPasosFZ() {
+    var L = FZ.lista || [], i = FZ.paso || 0, q = L[i], h = [];
+    if (!q) return '<p class="focus-k">Sesión terminada</p><p class="big num" data-z="big">' + L.length + ' / ' + L.length + '</p>' +
+      '<button type="button" class="btn pri lg block" data-z="fue">Apuntar cómo fue</button><button type="button" class="btn ghost" data-z="pprev">Paso anterior</button>';
+    var t = FZ.t && FZ.t.clave === 'hoy-pas-' + FZ.f ? FZ.t : null;
+    h.push('<p class="focus-k">Paso ' + (i + 1) + ' de ' + L.length + '</p><section class="hoy-fz-card act"><h3>' + esc(q.t) + '</h3>' + (q.d ? '<p>' + esc(q.d) + '</p>' : ''));
+    if (q.timer && q.tras && !t) h.push('<button type="button" class="btn pri lg block" data-z="pempieza">Hecho: recuperación de ' + PC.fmt.t(q.timer) + '</button>');
+    else if (q.timer) {
+      if (q.tras) h.push('<p class="hoy-fz-l">Recuperación</p>');
+      h.push('<p class="big num" data-z="big">' + PC.fmt.t(Math.ceil(t ? t.restante() : q.timer)) + '</p>');
+      h.push(t && !t.acabado() ? '<div class="hoy-fz-ctl"><button type="button" class="btn sec" data-z="mas15">+15 s</button><button type="button" class="btn sec" data-z="saltar">Saltar</button><button type="button" class="btn sec" data-z="pausa">' + (t.activo() ? 'Pausa' : 'Seguir') + '</button></div>' :
+        '<button type="button" class="btn pri lg block" data-z="pempieza">Empezar</button>');
+    } else h.push('<button type="button" class="btn pri lg block" data-z="psig">Hecho: siguiente paso</button>');
+    if (q.enlace) h.push('<p class="hoy-enl"><a href="' + esc(q.enlace.href) + '">' + esc(q.enlace.txt) + '</a></p>');
+    h.push('</section>');
+    var sig = L[i + 1];
+    if (sig) h.push('<p class="hoy-fz-l">Después: ' + esc(sig.t) + (sig.timer && !sig.tras ? ' · ' + PC.fmt.t(sig.timer) + (q.timer ? ' (empieza solo al pitar)' : '') : '') + '</p>');
+    if (i > 0) h.push('<button type="button" class="btn ghost" data-z="pprev">Paso anterior</button>');
+    return h.join('');
+  }
+  function irPaso(i, auto) {
+    if (FZ.t) { FZ.t.parar(); FZ.t = null; }
+    FZ.paso = Math.max(0, Math.min((FZ.lista || []).length, i));
+    guardarSes(FZ.f, { pasoFZ: FZ.paso });
+    var q = (FZ.lista || [])[FZ.paso];
+    if (auto && q && q.timer && !q.tras) empezarPaso();
+    pintarFocus();
+  }
+  function empezarPaso() {
+    var q = (FZ.lista || [])[FZ.paso]; if (!q || !q.timer) return;
+    timerFZ(q.timer, 'hoy-pas-' + FZ.f, function () { irPaso(FZ.paso + 1, true); });
+  }
   var TRAMO200 = ['0–200', '200–400', '400–600', '600–800', '800–1.000'];
   /* marcador de los parciales: el primer paso del reparto del día (0:42 → 42,0) */
   function ph200(p) { var r = p && p.repartos && p.repartos.objetivo, v = r ? PC.fmt.parseT(r[0]) : null; return v ? PC.fmt.num(v, 1) : ''; }
@@ -1699,6 +1755,7 @@
     if (FZ.tipo === 'series') h.push(htmlSeries());
     else if (FZ.tipo === 'rodaje') h.push(htmlRodaje());
     else if (FZ.tipo === 'control') h.push(htmlControl());
+    else if (FZ.tipo === 'pasos') h.push(htmlPasosFZ());
     else if (FZ.tipo === 'gym') h.push(htmlGym());
     else h.push('<p class="focus-k">' + esc(SES.haces(FZ.dia, FZ.color, FZ.R)) + '</p>' + (FZ.dia.tipo === 'prueba' ? htmlReparto(FZ.dia, FZ.R.principal) : ''));
     h.push('</div>');
@@ -1742,6 +1799,9 @@
     if (z === 'parar' && FZ.t) { guardarSes(FZ.f, { min: Math.round((FZ.dur.seg - FZ.t.restante()) / 60) }); FZ.t.parar(); FZ.t = null; PC.focus.cerrar(); return; }
     if (z === 'espera') { FZ.paso = +t.getAttribute('data-i'); timerFZ(+t.getAttribute('data-t'), 'hoy-ctl-' + FZ.f, function () { FZ.paso = Math.min(2, FZ.paso + 1); pintarFocus(); }); pintarFocus(); return; }
     if (z === 'paso') { FZ.paso = +t.getAttribute('data-i'); pintarFocus(); return; }
+    if (z === 'pempieza') { empezarPaso(); pintarFocus(); return; }
+    if (z === 'psig') { irPaso(FZ.paso + 1, true); return; }
+    if (z === 'pprev') { irPaso(FZ.paso - 1, false); return; }
     if (z === 'serie') {
       var k = t.getAttribute('data-k'), on = !FZ.g.series[k];
       FZ.g.series[k] = on; guardarSes(FZ.f, { gym: FZ.g });

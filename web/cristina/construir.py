@@ -1,225 +1,800 @@
 #!/usr/bin/env python3
-"""Construye docs/cristina/index.html: el plan de carrera de Cristina.
+"""Construye docs/cristina/index.html: la web de Cristina con el MISMO armazón que la de Daniel.
 
-Lee datos/cristina/plan.json y datos/cristina/historial.json (públicos) y reutiliza el sistema de
-diseño de la web de Daniel (web/src/css/10_sistema.css). Los datos personales de Cristina viven en
-datos/cristina/privado.json, que está en .gitignore: el constructor se para si alguno de sus valores
-aparece en la página.
+Desde el 12-10-2026 la página de Cristina es la misma aplicación que la de Daniel: las cuatro pestañas
+(Hoy, Plan, Marcas, Técnica), la barra de abajo, la hoja, el modo pista, el tema y el sistema de diseño.
+Se comparte, sin copiarlo:
+  · web/src/00_head.html (cabecera), web/src/20_shell.html (armazón), web/src/css/*.css (todos los estilos),
+    web/src/js/00_core.js (núcleo PC) y web/src/js/99_arranque.js;
+  · web/build.py (capas de CSS y minificado).
+Es propio de Cristina:
+  · web/cristina/src/views/*.html (el contenido fijo de cada pestaña),
+  · web/cristina/src/js/*.js (10_cristina.js ajusta el núcleo; 20-50 pintan cada pestaña),
+  · web/cristina/src/css/*.css (solo lo que su web necesita y la de Daniel no tiene; capa «cristina»).
 
-Uso: python3 web/cristina/construir.py            (escribe docs/cristina/index.html)
+Los datos salen de datos/cristina/plan.json e historial.json (públicos). Lo personal vive en
+datos/cristina/privado.json (en .gitignore): la construcción se para si alguno de sus valores
+vigilados aparece en la página.
+
+Uso:
+  python3 web/cristina/construir.py                       escribe docs/cristina/index.html
+  python3 web/cristina/construir.py --salida x.html       escribe en otro sitio (pruebas)
+  python3 web/cristina/construir.py --hoy 2026-10-12      fecha de construcción (si no, la del día)
+  python3 web/cristina/construir.py --modulos hoy,plan    solo esos módulos de pestaña (pruebas)
+  python3 web/cristina/construir.py --sin-minificar       fuentes tal cual (depurar)
+  python3 web/cristina/construir.py --datos x.json        vuelca el bloque de datos (para revisar)
 """
-import html
+import argparse
+import datetime as dt
+import gzip
+import hashlib
+import importlib.util
 import json
 import os
 import re
 import sys
 
-RAIZ = os.environ.get('PLAN_RAIZ', os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+AQUI = os.path.dirname(os.path.abspath(__file__))            # web/cristina
+WEB = os.path.dirname(AQUI)                                    # web
+RAIZ = os.environ.get('PLAN_RAIZ', os.path.dirname(WEB))       # raíz del proyecto
 DATOS = os.path.join(RAIZ, 'datos', 'cristina')
+SRC_D = os.path.join(WEB, 'src')                               # fuentes de Daniel (compartidas)
+SRC_C = os.path.join(AQUI, 'src')                              # fuentes de Cristina
 SALIDA = os.path.join(RAIZ, 'docs', 'cristina', 'index.html')
-CSS_SISTEMA = os.path.join(RAIZ, 'web', 'src', 'css', '10_sistema.css')
-CSS_PROPIO = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'estilo.css')
-JS_PROPIO = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pagina.js')
+VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']
+MOD_DE = {'hoy': '20_hoy.js', 'plan': '30_plan.js', 'marcas': '40_marcas.js', 'tecnica': '50_tecnica.js'}
+DOW = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom']
+LIMITE_GZIP = 240 * 1024
 
 
-def leer(ruta, defecto=None):
-    if not os.path.exists(ruta):
+def leer(p):
+    with open(p, encoding='utf-8') as f:
+        return f.read()
+
+
+def leer_json(p, defecto=None):
+    if not os.path.exists(p):
         return defecto
-    with open(ruta, encoding='utf-8') as f:
+    with open(p, encoding='utf-8') as f:
         return json.load(f)
 
 
-def e(t):
-    return html.escape(str(t if t is not None else ''), quote=True)
+def cargar_build():
+    """web/build.py como módulo: capas de CSS y minificado idénticos a los de la web de Daniel."""
+    spec = importlib.util.spec_from_file_location('build_daniel', os.path.join(WEB, 'build.py'))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
+# ---------------------------------------------------------------------------------------------- tiempos
 def seg(txt):
-    """'4:45' → 285"""
-    m = re.match(r'^\s*(\d+):(\d{2})(?:[,.](\d))?\s*$', str(txt or ''))
+    """'4:45' → 285 · '0:43,5' → 43.5 · None si no es un tiempo."""
+    m = re.match(r'^\s*(\d+):(\d{2})(?:[,.](\d+))?\s*$', str(txt or ''))
     if not m:
         return None
-    return int(m.group(1)) * 60 + int(m.group(2)) + (int(m.group(3)) / 10 if m.group(3) else 0)
+    return int(m.group(1)) * 60 + int(m.group(2)) + (float('0.' + m.group(3)) if m.group(3) else 0)
 
 
-def mmss(s, dec=False):
+def mmss(s, dec=0):
+    """285 → '4:45' · (43.5, 1) → '0:43,5'. Redondeo normal."""
     if s is None:
-        return ''
+        return None
+    f = 10 ** dec
+    s = round(s * f) / f
+    m = int(s // 60)
+    r = s - m * 60
     if dec:
-        s = round(s, 1)
-        m, r = divmod(s, 60)
-        txt = '%d:%04.1f' % (m, r)
-        return txt.replace('.', ',')
-    s = int(round(s))
-    return '%d:%02d' % divmod(s, 60)
+        txt = ('%0' + str(3 + dec) + '.' + str(dec) + 'f') % r
+        return ('%d:%s' % (m, txt)).replace('.', ',')
+    r = int(round(r))
+    if r == 60:
+        m, r = m + 1, 0
+    return '%d:%02d' % (m, r)
 
 
-def puntos(t, tramos):
-    for tr in tramos:
-        lo = seg(tr['desde']) if tr.get('desde') else None
-        hi = seg(tr['hasta']) if tr.get('hasta') else None
-        if (lo is None or t >= lo) and (hi is None or t <= hi):
-            return tr['puntos']
+def t_rep(s, dist):
+    """Tiempo de una repetición: medio segundo en 200 y 300, segundo entero desde 400."""
+    if dist <= 300:
+        return mmss(round(s * 2) / 2, 1) if abs(round(s * 2) / 2 - round(s)) > 1e-9 else mmss(s)
+    return mmss(s)
+
+
+def F(s):
+    return dt.date.fromisoformat(s[:10])
+
+
+def mas(s, n):
+    return (F(s) + dt.timedelta(days=n)).isoformat()
+
+
+# ---------------------------------------------------------------------------------------------- baremo
+def tramos_mil(plan):
+    out = []
+    for t in plan['baremo1000Mujeres']['tramos']:
+        out.append({'pts': t['puntos'], 'min': seg(t['desde']) or 0.0, 'max': seg(t['hasta']) if t.get('hasta') else None,
+                    'elimina': bool(t.get('elimina'))})
+    out.sort(key=lambda x: -x['pts'])
+    return out
+
+
+def pts_mil(T, s):
+    if s is None:
+        return None
+    for t in T:
+        if t['max'] is not None and s <= t['max'] + 1e-9:
+            return t['pts']
+    return 0
+
+
+# ---------------------------------------------------------------------------------------------- sesiones
+NUM = r'(\d+(?:[.,]\d+)?)'
+
+
+def n_(x):
+    return float(str(x).replace(',', '.'))
+
+
+def rec_seg(txt):
+    """'2 min' → 120 · '2 min 30 s' → 150 · '90 s' → 90."""
+    m = re.match(r'^\s*(?:(\d+)\s*min)?\s*(?:(\d+)\s*s)?\s*$', txt or '')
+    if not m or not (m.group(1) or m.group(2)):
+        return None
+    return int(m.group(1) or 0) * 60 + int(m.group(2) or 0)
+
+
+def parsear(d, sem):
+    """Del título y el detalle de un día de carrera de plan.json saca su estructura. Se para si no lo entiende."""
+    t = d['titulo']
+    det = d.get('detalle') or ''
+    p = None
+    m = re.match(r'^(?:(\d+) min: )?(\d+) × \((\d+) min corriendo \+ (\d+) andando\)$', t)
+    if m:
+        p = {'tipo': 'correrAndar', 'n': int(m.group(2)), 'corre': int(m.group(3)), 'anda': int(m.group(4))}
+        p['min'] = int(m.group(1)) if m.group(1) else p['n'] * (p['corre'] + p['anda'])
+    if not p:
+        m = re.match(r'^(\d+) min: correr y andar al escalón que toque$', t)
+        if m:
+            p = {'tipo': 'correrAndar', 'min': int(m.group(1)), 'escalon': True}
+    if not p:
+        m = re.match(r'^(\d+) min suave(?: \+ (\d+) rectas| \+ (\d+) cuestas de (\d+) s| \+ (\d+) × (\d+) m a ritmo K)?$', t)
+        if m:
+            p = {'tipo': 'rodaje', 'min': int(m.group(1))}
+            if m.group(2):
+                p['rectas'] = int(m.group(2))
+            if m.group(3):
+                p['cuestas'] = {'n': int(m.group(3)), 's': int(m.group(4))}
+            if m.group(5):
+                rec = '200 m andando' if '200 m andando' in det else None
+                if not rec:
+                    raise SystemExit('ERROR: %s · no encuentro la recuperación de los %s × %s m' % (d['fecha'], m.group(5), m.group(6)))
+                p['extra'] = {'n': int(m.group(5)), 'dist': int(m.group(6)), 'ritmo': 'K', 'rec': rec}
+    if not p:
+        m = re.match(r'^(\d+) min con (\d+) × \((\d+) min alegre \+ (\d+) min suave\)$', t)
+        if m:
+            ini = re.search(r'(\d+) min suaves, ', det)
+            p = {'tipo': 'rodaje', 'min': int(m.group(1)), 'fartlek': {'n': int(m.group(2)), 'alegre': int(m.group(3)),
+                                                                        'suave': int(m.group(4)), 'antes': int(ini.group(1)) if ini else None}}
+    if not p:
+        m = re.match(r'^(\d+) min: suave y los (\d+) últimos alegres$', t)
+        if m:
+            p = {'tipo': 'rodaje', 'min': int(m.group(1)), 'alegreFinal': int(m.group(2))}
+    if not p:
+        m = re.match(r'^(\d+) × (\d+) min a (ritmo K \+ 4|umbral)(?:, rec\. ([\d a-z]+?)( trotando)?| \+ (\d+) min suave)$', t)
+        if m:
+            p = {'tipo': 'intervalos', 'n': int(m.group(1)), 'dur': int(m.group(2)) * 60,
+                 'ritmo': 'K+4' if 'K' in m.group(3) else 'umbral'}
+            if m.group(4):
+                p['rec'] = rec_seg(m.group(4))
+                p['recTxt'] = m.group(4) + (' trotando' if m.group(5) else '')
+                if p['rec'] is None:
+                    raise SystemExit('ERROR: %s · recuperación ilegible «%s»' % (d['fecha'], m.group(4)))
+            if m.group(6):
+                p['despues'] = int(m.group(6))
+    if not p:
+        m = re.match(r'^(\d+) × (\d+(?:\.\d{3})?) m (?:a ritmo (K \+ 4|K|O)|(rápidos)), rec\. (.+?)(?: \+ (\d+) × (\d+) m rápidos)?$', t)
+        if m:
+            ritmo = {'K + 4': 'K+4', 'K': 'K', 'O': 'O'}.get(m.group(3)) if m.group(3) else 'rapidos'
+            rec = m.group(5)
+            p = {'tipo': 'series', 'n': int(m.group(1)), 'dist': int(m.group(2).replace('.', '')), 'ritmo': ritmo}
+            mr = re.match(r'^(\d+) m andando$', rec)
+            if mr:
+                p['recDist'] = int(mr.group(1))
+                p['recTxt'] = rec
+            else:
+                mt = re.match(r'^(.+?)( trotando)?$', rec)
+                p['rec'] = rec_seg(mt.group(1))
+                p['recTxt'] = rec
+                if p['rec'] is None:
+                    raise SystemExit('ERROR: %s · recuperación ilegible «%s»' % (d['fecha'], rec))
+            if m.group(6):
+                p['extra'] = {'n': int(m.group(6)), 'dist': int(m.group(7)), 'ritmo': 'rapidos'}
+                if 'rec. 200 m andando' not in det and 'andando' not in det:
+                    p['extra']['rec'] = None
+    if not p:
+        m = re.match(r'^(\d+) × \((\d+) \+ (\d+) m\) a ritmo O: (\d+) min (?:entre el \d+ y el \d+, )?(?:y )?(\d+) min(?: entre las dos)?$', t)
+        if m:
+            p = {'tipo': 'kmPartido', 'n': int(m.group(1)), 'partes': [int(m.group(2)), int(m.group(3))], 'ritmo': 'O',
+                 'recEntre': int(m.group(4)) * 60, 'recSeries': int(m.group(5)) * 60}
+    if not p:
+        m = re.match(r'^Control de 1\.000 m \((\d+)\.º\)$', t)
+        if m:
+            p = {'tipo': 'control1000', 'n': int(m.group(1))}
+    if not p and t.startswith('SIMULACRO'):
+        p = {'tipo': 'simulacro'}
+    if not p and t.startswith('Prueba'):
+        p = {'tipo': 'prueba'}
+    if not p:
+        raise SystemExit('ERROR: %s · no entiendo la sesión «%s». Añade su forma a parsear() en web/cristina/construir.py' % (d['fecha'], t))
+    # lo que dice el detalle
+    if re.search(r'La larga', det) or (d['dia'] == 'Sáb' and p['tipo'] in ('rodaje', 'correrAndar')):
+        p['larga'] = True
+    if 'Calentamiento: 15 min suave + movilidad + 4 rectas' in det:
+        p['calentamiento'] = {'min': 15, 'rectas': 4}
+    elif 'Calentamiento' in det:
+        raise SystemExit('ERROR: %s · calentamiento con otra forma: «%s»' % (d['fecha'], det))
+    if 'Después, 10 min muy suave' in det:
+        p['calma'] = 10
+    if '3 × 15 elevaciones de talón a una pierna' in det:
+        p['talon'] = True
+    if 'Semana de descarga' in det or sem.get('descarga'):
+        p['descarga'] = True
+    if re.search(r'Solo si el lunes salió sin dolor y no llegas cargada; si no, (\d+) min suave', det):
+        p['siNo'] = int(re.search(r'si no, (\d+) min suave', det).group(1))
+    return p
+
+
+def ejercicios_de(p):
+    """Ids de plan.ejercicios que explican la sesión (en el orden en que se hacen)."""
+    out = []
+    if p.get('calentamiento'):
+        out += ['calentamiento', 'movilidad', 'rectas']
+    t = p['tipo']
+    if t == 'correrAndar':
+        out += ['correr-andar']
+    elif t == 'rodaje':
+        out += ['larga' if p.get('larga') else 'suave']
+        if p.get('rectas'):
+            out += ['rectas']
+        if p.get('cuestas'):
+            out += ['cuestas']
+        if p.get('fartlek') or p.get('alegreFinal'):
+            out += ['alegre']
+        if p.get('extra'):
+            out += ['series-k']
+    elif t == 'intervalos':
+        out += ['umbral' if p['ritmo'] == 'umbral' else 'intervalos-k4']
+        if p.get('despues'):
+            out += ['suave']
+    elif t == 'series':
+        out += {'K': ['series-k'], 'K+4': ['series-k'], 'O': ['series-o'], 'rapidos': ['rapidos']}[p['ritmo']]
+        if p.get('extra'):
+            out += ['rapidos']
+    elif t == 'kmPartido':
+        out += ['km-partido']
+    elif t == 'control1000':
+        out += ['control']
+    elif t == 'simulacro':
+        out += ['simulacro']
+    elif t == 'prueba':
+        out += ['control']
+    if p.get('calma'):
+        out += ['vuelta-calma']
+    if p.get('talon'):
+        out += ['talon']
+    vistos = []
+    for x in out:
+        if x not in vistos:
+            vistos.append(x)
+    return vistos
+
+
+# ---------------------------------------------------------------------------------------------- ritmos
+def ritmos_de_k(k):
+    """Ritmos del plan a partir de K (segundos del 1.000). reglas[ritmos] de plan.json."""
+    if k is None:
+        return None
+    k400 = k * 0.4
+    return {
+        'K': {'km': k, '400': k400, '200': k * 0.2},
+        'K+4': {'km': (k400 + 4) * 2.5, '400': k400 + 4, '200': (k400 + 4) / 2},
+        'O': {'km': (k400 - 2) * 2.5, '400': k400 - 2, '200': (k400 - 2) / 2},
+        'umbral': {'km': [k * 1.20, k * 1.25]},
+    }
+
+
+def k_en(controles, fecha, incluir=False):
+    """K en una fecha: el mejor de los dos últimos controles anteriores (o del mismo día si incluir)."""
+    previos = [c for c in controles if (c['fecha'] <= fecha if incluir else c['fecha'] < fecha)]
+    dos = previos[-2:]
+    if not dos:
+        return None, []
+    mejor = min(dos, key=lambda c: c['s'])
+    return mejor['s'], [c['fecha'] for c in dos]
+
+
+def ritmo_txt_rep(R, ritmo, dist):
+    """'2:24' para un 400 a ritmo K (None si no hay K o el ritmo va por sensación)."""
+    if not R or ritmo not in ('K', 'K+4', 'O'):
+        return None
+    return t_rep(R[ritmo]['400'] * dist / 400, dist)
+
+
+# ---------------------------------------------------------------------------------------------- pasos de cada día
+def pasos_de(p, R, RE):
+    """Pasos de la tarjeta de Hoy y del modo pista: {t, d, seg (temporizador), parte, n/de, ritmo}."""
+    P = []
+    suave = (RE.get('suave') or {}).get('txt')
+
+    def paso(t, d='', seg=None, parte='principal', **kw):
+        x = {'t': t, 'parte': parte}
+        if d:
+            x['d'] = d
+        if seg:
+            x['seg'] = seg
+        x.update({k: v for k, v in kw.items() if v is not None})
+        P.append(x)
+
+    tipo = p['tipo']
+    if tipo in ('correrAndar', 'rodaje'):
+        paso('Anda 5 min a paso vivo', 'Para entrar en calor antes de correr. No cuenta en los minutos de la sesión.', 300, 'antes', ej='andar')
+    if p.get('calentamiento'):
+        c = p['calentamiento']
+        paso('Trote suave %d min' % c['min'], ('A tu ritmo suave (%s): puedes hablar con frases enteras.' % suave) if suave else 'Puedes hablar con frases enteras.',
+             c['min'] * 60, 'calentamiento', ej='suave')
+        paso('Movilidad', 'Los ejercicios de movilidad de Técnica › Carrera, unos 5 min.', None, 'calentamiento', ej='movilidad')
+        paso('%d rectas de 80 m' % c['rectas'], 'Aceleras poco a poco hasta rápido pero suelto y vuelves andando.', None, 'calentamiento', ej='rectas')
+        paso('Pausa de 2-3 min y empiezas', '', 150, 'calentamiento')
+    if tipo == 'correrAndar':
+        if p.get('escalon'):
+            paso('Correr y andar %d min con tu escalón' % p['min'],
+                 'El escalón en el que estés (2:1, 3:1, 4:1, 6:1, 8:1 o seguido). Suave: puedes hablar con frases.', p['min'] * 60, 'principal', ej='correr-andar')
+        else:
+            for i in range(p['n']):
+                paso('Corre %d min suave' % p['corre'], 'Bloque %d de %d%s' % (i + 1, p['n'], (' · ' + suave + ' /km') if suave else ''),
+                     p['corre'] * 60, 'principal', n=i + 1, de=p['n'], fase='corre', ej='correr-andar')
+                paso('Anda %d min' % p['anda'], 'Paso vivo, sin pararte.', p['anda'] * 60, 'principal', n=i + 1, de=p['n'], fase='anda', ej='correr-andar')
+    elif tipo == 'rodaje':
+        fk = p.get('fartlek')
+        if fk:
+            if fk.get('antes'):
+                paso('%d min suaves' % fk['antes'], (suave + ' /km') if suave else '', fk['antes'] * 60, 'principal', ej='suave')
+            for i in range(fk['n']):
+                paso('%d min alegre' % fk['alegre'], 'Respiras fuerte pero controlas · %d de %d' % (i + 1, fk['n']), fk['alegre'] * 60, 'principal',
+                     n=i + 1, de=fk['n'], fase='rapido', ej='alegre')
+                paso('%d min suave' % fk['suave'], '', fk['suave'] * 60, 'principal', n=i + 1, de=fk['n'], fase='suave', ej='suave')
+            resto = p['min'] - (fk.get('antes') or 0) - fk['n'] * (fk['alegre'] + fk['suave'])
+            if resto > 0:
+                paso('%d min suaves hasta el final' % resto, '', resto * 60, 'principal', ej='suave')
+        elif p.get('alegreFinal'):
+            paso('%d min suave' % (p['min'] - p['alegreFinal']), (suave + ' /km') if suave else '', (p['min'] - p['alegreFinal']) * 60, 'principal', ej='suave')
+            paso('%d min alegres' % p['alegreFinal'], 'Los últimos: respiras fuerte pero controlas.', p['alegreFinal'] * 60, 'principal', fase='rapido', ej='alegre')
+        else:
+            paso('%d min suave%s' % (p['min'], ' · la larga' if p.get('larga') else ''),
+                 ('%s /km. Puedes hablar con frases enteras.' % suave) if suave else 'Puedes hablar con frases enteras.', p['min'] * 60, 'principal',
+                 ej='larga' if p.get('larga') else 'suave')
+        if p.get('rectas'):
+            for i in range(p['rectas']):
+                paso('Recta de 80 m', 'Recta %d de %d · vuelves andando' % (i + 1, p['rectas']), None, 'final', n=i + 1, de=p['rectas'], ej='rectas')
+        if p.get('cuestas'):
+            c = p['cuestas']
+            for i in range(c['n']):
+                paso('Cuesta de %d s' % c['s'], 'Cuesta %d de %d · subes fuerte sin llegar a tope y bajas andando' % (i + 1, c['n']), c['s'], 'final',
+                     n=i + 1, de=c['n'], ej='cuestas')
+        if p.get('extra'):
+            x = p['extra']
+            rt = ritmo_txt_rep(R, 'K', x['dist'])
+            for i in range(x['n']):
+                paso('%d m a ritmo K%s' % (x['dist'], (' · ' + rt) if rt else ''), 'Repetición %d de %d · %s entre cada uno' % (i + 1, x['n'], x['rec']),
+                     None, 'final', n=i + 1, de=x['n'], dist=x['dist'], obj=rt, ej='series-k')
+    elif tipo == 'intervalos':
+        ritmo = 'umbral' if p['ritmo'] == 'umbral' else 'ritmo K + 4'
+        for i in range(p['n']):
+            obj = None
+            if R:
+                if p['ritmo'] == 'umbral':
+                    obj = '%s-%s /km' % (mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1]))
+                else:
+                    obj = '%s /km' % mmss(R['K+4']['km'])
+            paso('%d min a %s%s' % (p['dur'] // 60, ritmo, (' · ' + obj) if obj else ''), 'Repetición %d de %d' % (i + 1, p['n']),
+                 p['dur'], 'principal', n=i + 1, de=p['n'], fase='rapido', obj=obj, ej='umbral' if p['ritmo'] == 'umbral' else 'intervalos-k4')
+            if i < p['n'] - 1 and p.get('rec'):
+                paso('Recupera %s' % p['recTxt'], '', p['rec'], 'principal', n=i + 1, de=p['n'], fase='rec')
+            elif i < p['n'] - 1 and p['ritmo'] == 'umbral' and not p.get('rec'):
+                paso('Recupera 2 min trotando suave', 'El plan no fija esta pausa: 2 min trotando muy suave.', 120, 'principal', n=i + 1, de=p['n'], fase='rec',
+                     sinPlan=True)
+        if p.get('despues'):
+            paso('%d min suaves' % p['despues'], (suave + ' /km') if suave else '', p['despues'] * 60, 'principal', ej='suave')
+    elif tipo == 'series':
+        nombre = {'K': 'a ritmo K', 'K+4': 'a ritmo K + 4', 'O': 'a ritmo O', 'rapidos': 'rápidos'}[p['ritmo']]
+        rt = ritmo_txt_rep(R, p['ritmo'], p['dist'])
+        for i in range(p['n']):
+            paso('%d m %s%s' % (p['dist'], nombre, (' · ' + rt) if rt else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
+                 ((' · recuperación %s' % p['recTxt']) if i < p['n'] - 1 else ''),
+                 p.get('rec') if i < p['n'] - 1 else None, 'principal', n=i + 1, de=p['n'], dist=p['dist'], obj=rt,
+                 recDist=p.get('recDist') if i < p['n'] - 1 else None, ej={'K': 'series-k', 'K+4': 'series-k', 'O': 'series-o', 'rapidos': 'rapidos'}[p['ritmo']])
+        if p.get('extra'):
+            x = p['extra']
+            paso('Pausa de 3 min', 'Antes de los %d × %d m rápidos.' % (x['n'], x['dist']), 180, 'principal', sinPlan=True)
+            for i in range(x['n']):
+                paso('%d m rápidos' % x['dist'], 'Repetición %d de %d · vuelves andando' % (i + 1, x['n']), None, 'principal', n=i + 1, de=x['n'],
+                     dist=x['dist'], ej='rapidos')
+    elif tipo == 'kmPartido':
+        a, b = p['partes']
+        for i in range(p['n']):
+            for j, dist in enumerate((a, b)):
+                rt = ritmo_txt_rep(R, 'O', dist)
+                paso('%d m a ritmo O%s' % (dist, (' · ' + rt) if rt else ''), 'Kilómetro partido %d de %d' % (i + 1, p['n']), None, 'principal',
+                     n=i + 1, de=p['n'], dist=dist, obj=rt, ej='km-partido')
+                if j == 0:
+                    paso('Pausa de %d min' % (p['recEntre'] // 60), 'Entre el %d y el %d' % (a, b), p['recEntre'], 'principal')
+            if i < p['n'] - 1:
+                paso('Recupera %d min' % (p['recSeries'] // 60), 'Entre los dos kilómetros partidos', p['recSeries'], 'principal')
+    elif tipo == 'control1000':
+        paso('1.000 m a tope', 'El primer 200 al mismo ritmo que los demás, no a sprint. Apunta el tiempo y, si puedes, los cinco parciales de 200.',
+             None, 'principal', dist=1000, ej='control')
+    elif tipo == 'simulacro':
+        paso('Circuito', 'En el orden del BOE, con los descansos que te den.', None, 'principal')
+        paso('Barra', '', None, 'principal')
+        paso('1.000 m a tope', 'Con el reparto de Técnica › 1.000.', None, 'principal', dist=1000, ej='control')
+    elif tipo == 'prueba':
+        paso('Prueba', 'La fecha la fija la convocatoria de 2027.', None, 'principal')
+    if p.get('calma'):
+        paso('Vuelta a la calma · %d min' % p['calma'], 'Trote muy suave. Si no puedes trotar, andando.', p['calma'] * 60, 'calma', ej='vuelta-calma')
+    if tipo in ('correrAndar', 'rodaje'):
+        paso('Anda 3-5 min para acabar', 'Hasta que respires normal.', None, 'calma', ej='vuelta-calma')
+    if p.get('talon'):
+        paso('Elevaciones de talón · 3 × 15 por pierna', 'A una pierna, lentas: 2 s arriba y 2 s abajo.', None, 'calma', ej='talon')
+    return P
+
+
+def numeros_de(p, R, RE):
+    """Los tres números grandes del día (como «stats» en la web de Daniel)."""
+    suave = (RE.get('suave') or {}).get('txt')
+    t = p['tipo']
+    N = []
+    if t == 'correrAndar':
+        if p.get('escalon'):
+            N = [{'v': '%d min' % p['min'], 'l': 'correr y andar'}, {'v': 'tu escalón', 'l': '2:1 → 3:1 → 4:1 → …'}]
+        else:
+            N = [{'v': '%d × %d min' % (p['n'], p['corre']), 'l': 'corriendo'}, {'v': '%d min' % p['anda'], 'l': 'andando entre medias'}]
+        if suave:
+            N.append({'v': suave, 'l': 'ritmo suave /km', 'est': True})
+    elif t == 'rodaje':
+        N = [{'v': '%d min' % p['min'], 'l': 'la larga, suave' if p.get('larga') else 'suave'}]
+        if p.get('rectas'):
+            N.append({'v': '%d rectas' % p['rectas'], 'l': 'de 80 m al final'})
+        elif p.get('cuestas'):
+            N.append({'v': '%d × %d s' % (p['cuestas']['n'], p['cuestas']['s']), 'l': 'cuestas al final'})
+        elif p.get('fartlek'):
+            N.append({'v': '%d × %d min' % (p['fartlek']['n'], p['fartlek']['alegre']), 'l': 'alegres'})
+        elif p.get('alegreFinal'):
+            N.append({'v': '%d min' % p['alegreFinal'], 'l': 'últimos, alegres'})
+        elif p.get('extra'):
+            N.append({'v': '%d × %d m' % (p['extra']['n'], p['extra']['dist']), 'l': 'a ritmo K al final'})
+        if suave:
+            N.append({'v': suave, 'l': 'ritmo suave /km', 'est': True})
+    elif t == 'intervalos':
+        N = [{'v': '%d × %d min' % (p['n'], p['dur'] // 60), 'l': 'a umbral' if p['ritmo'] == 'umbral' else 'a ritmo K + 4'}]
+        if R:
+            if p['ritmo'] == 'umbral':
+                N.append({'v': '%s-%s' % (mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1])), 'l': 'por km'})
+            else:
+                N.append({'v': mmss(R['K+4']['km']), 'l': 'por km'})
+        else:
+            N.append({'v': 'tras el control', 'l': 'el ritmo sale de K', 'pend': True})
+        if p.get('rec'):
+            N.append({'v': p['recTxt'].replace(' trotando', ''), 'l': 'recuperación' + (' trotando' if 'trotando' in p['recTxt'] else '')})
+        elif p.get('despues'):
+            N.append({'v': '%d min' % p['despues'], 'l': 'suaves después'})
+    elif t == 'series':
+        N = [{'v': '%d × %d m' % (p['n'], p['dist']), 'l': 'series'}]
+        rt = ritmo_txt_rep(R, p['ritmo'], p['dist'])
+        if p['ritmo'] == 'rapidos':
+            N.append({'v': 'rápidos', 'l': 'sueltos, sin sprint'})
+        elif rt:
+            N.append({'v': rt, 'l': 'cada %d · ritmo %s' % (p['dist'], p['ritmo'].replace('+', ' + '))})
+        else:
+            N.append({'v': 'tras el control', 'l': 'el ritmo sale de K', 'pend': True})
+        N.append({'v': p['recTxt'].replace(' andando', '').replace(' trotando', ''), 'l': 'recuperación' + (' andando' if 'andando' in p['recTxt'] else '')})
+    elif t == 'kmPartido':
+        N = [{'v': '%d × (%d + %d)' % (p['n'], p['partes'][0], p['partes'][1]), 'l': 'kilómetro partido'}]
+        rt = ritmo_txt_rep(R, 'O', p['partes'][0])
+        N.append({'v': rt, 'l': 'cada 600 · ritmo O'} if rt else {'v': 'tras el control', 'l': 'el ritmo sale de K', 'pend': True})
+        N.append({'v': '%d min' % (p['recEntre'] // 60), 'l': 'entre el 600 y el 400'})
+    elif t == 'control1000':
+        N = [{'v': '1.000 m', 'l': 'a tope, reparto regular'}, {'v': '4:45', 'l': 'deja de eliminar'}]
+    elif t == 'simulacro':
+        N = [{'v': '3 pruebas', 'l': 'circuito, barra y 1.000'}]
+    elif t == 'prueba':
+        N = [{'v': '1.000 m', 'l': 'la prueba'}]
+    return N[:3]
+
+
+def resumen_hoy(p, R, RE):
+    """«Hoy haces:» en una línea."""
+    suave = (RE.get('suave') or {}).get('txt')
+    t = p['tipo']
+    if t == 'correrAndar':
+        base = ('%d min de correr y andar con tu escalón' % p['min']) if p.get('escalon') else \
+            '%d veces: %d min corriendo suave y %d min andando' % (p['n'], p['corre'], p['anda'])
+        return base + ((' · suave a %s /km' % suave) if suave else '') + ' · 5 min andando antes'
+    if t == 'rodaje':
+        x = '%d min suave' % p['min']
+        if p.get('rectas'):
+            x += ' y %d rectas' % p['rectas']
+        if p.get('cuestas'):
+            x += ' y %d cuestas de %d s' % (p['cuestas']['n'], p['cuestas']['s'])
+        if p.get('fartlek'):
+            x = '%d min con %d × (%d min alegre + %d min suave)' % (p['min'], p['fartlek']['n'], p['fartlek']['alegre'], p['fartlek']['suave'])
+        if p.get('alegreFinal'):
+            x = '%d min: suave y los %d últimos alegres' % (p['min'], p['alegreFinal'])
+        if p.get('extra'):
+            x += ' y %d × %d m a ritmo K' % (p['extra']['n'], p['extra']['dist'])
+        return x + ((' · suave a %s /km' % suave) if suave else '') + (' · elevaciones de talón' if p.get('talon') else '')
     return None
 
 
-def main():
-    plan = leer(os.path.join(DATOS, 'plan.json'))
-    hist = leer(os.path.join(DATOS, 'historial.json'), {'carrera': [], 'controles': []})
-    privado = leer(os.path.join(DATOS, 'privado.json'), {})
-    errores = []
+# ---------------------------------------------------------------------------------------------- construcción de datos
+def construir(plan, hist, hoy):
+    errores, avisos = [], []
+    T = tramos_mil(plan)
+    RE = plan.get('ritmosEstimados') or {}
 
-    tramos = plan['baremo1000Mujeres']['tramos']
-    controles = sorted([c for c in hist.get('controles', []) if seg(c.get('tiempo'))], key=lambda c: c['fecha'])
-    ult = controles[-1] if controles else None
-    # reglas[ritmos]: K es el mejor de los dos últimos controles
-    dos = controles[-2:]
-    mejor = min(dos, key=lambda c: seg(c['tiempo'])) if dos else None
-    t_k = seg(mejor['tiempo']) if mejor else None
+    # controles (de más viejo a más nuevo) con sus puntos
+    controles = []
+    for c in hist.get('controles') or []:
+        s = seg(c.get('tiempo'))
+        if s is None:
+            errores.append('controles %s: tiempo ilegible «%s»' % (c.get('fecha'), c.get('tiempo')))
+            continue
+        x = dict(c)
+        x['s'] = s
+        x['pts'] = pts_mil(T, s)
+        controles.append(x)
+    controles.sort(key=lambda c: c['fecha'])
 
-    # ---------- ritmos derivados del último control (reglas[ritmos]: O = K − 2 s por 400) ----------
-    ritmos = None
-    if t_k:
-        k400 = t_k * 0.4
-        o400 = k400 - 2
-        ritmos = {
-            'K': {d: t_k * d / 1000 for d in (200, 300, 400, 600, 800, 1000)},
-            'K4': {d: (k400 + 4) * d / 400 for d in (200, 300, 400, 600, 800, 1000)},
-            'O': {d: o400 * d / 400 for d in (200, 300, 400, 600, 800, 1000)},
-            'umbral': (t_k * 1.20, t_k * 1.25),
-        }
-
-    # ---------- datos para el JS (solo lo público) ----------
-    dias = []
-    for w in plan['calendario']:
-        for d in w['dias']:
-            dias.append({k: d.get(k) for k in ('fecha', 'dia', 'tipo', 'titulo', 'detalle', 'objetivo') if d.get(k)})
-            dias[-1]['sem'] = w['n']
-            dias[-1]['fase'] = w['fase']
-            if w.get('descarga'):
-                dias[-1]['descarga'] = True
-    hechos = {c['fecha']: c for c in hist.get('carrera', [])}
+    # calendario en la forma del núcleo (semana «a/b», sesion, tipo de Daniel) y días derivados
+    cal, dias, fases = [], [], {f['id']: f for f in plan['fases']}
+    bloques = []
+    for f in plan['fases']:
+        w0, w1 = plan['calendario'][f['desde'] - 1], plan['calendario'][f['hasta'] - 1]
+        bloques.append({'clave': f['id'], 'nombre': f['nombre'], 'objetivo': f['objetivo'], 'desde': w0['desde'],
+                        'hasta': w1['dias'][-1]['fecha'], 'semanas': [f['desde'], f['hasta']]})
+    hist_por_fecha = {}
+    for i, e in enumerate(hist.get('carrera') or []):
+        hist_por_fecha.setdefault(e['fecha'], []).append({'src': 'carrera:' + e['fecha'], 'arr': 'carrera', 'i': i, 'hecho': e.get('hecho', True),
+                                                          'valida': e.get('valida', True), 'resumen': e.get('resumen') or e.get('sesion') or ''})
     for c in controles:
-        hechos.setdefault(c['fecha'], {'fecha': c['fecha'], 'hecho': True, 'resumen': 'Control: ' + c['tiempo']})
-    datos_js = {
-        'dias': dias,
-        'fases': plan['fases'],
-        'hechos': {f: {'hecho': v.get('hecho', True), 'resumen': v.get('resumen') or v.get('sesion') or ''} for f, v in hechos.items()},
-        'prueba': plan['objetivo'].get('fechaSupuesta'),
-    }
+        hist_por_fecha.setdefault(c['fecha'], []).append({'src': 'controles:' + c['fecha'], 'arr': 'controles', 'hecho': True, 'valida': c.get('valida', True),
+                                                          'resumen': 'Control: %s (%s)' % (c['tiempo'], pts_txt(c['pts']))})
+    semanas = []
+    web_dias = {}
+    vistos = set()
+    for wi, w in enumerate(plan['calendario']):
+        a, b = w['desde'], w['dias'][-1]['fecha']
+        fase = fases[w['fase']]
+        sem = {'semana': '%s/%s' % (a, b), 'n': w['n'], 'fase': w['fase'], 'descarga': bool(w.get('descarga')),
+               'titulo': 'Semana %d · %s' % (w['n'], fase['nombre']) + (' · descarga' if w.get('descarga') else ''),
+               'nota': 'Semana de descarga: menos carrera para llegar fresca al control del sábado.' if w.get('descarga') else None, 'dias': []}
+        if F(a).weekday() != 0:
+            errores.append('calendario: la semana %d no empieza en lunes (%s)' % (w['n'], a))
+        min_plan = 0
+        for di, d in enumerate(w['dias']):
+            f = d['fecha']
+            if f in vistos:
+                errores.append('calendario: %s repetido' % f)
+            vistos.add(f)
+            if not (a <= f <= b):
+                errores.append('calendario: %s fuera de su semana %d' % (f, w['n']))
+            if d['dia'] != DOW[F(f).weekday()]:
+                errores.append('calendario: %s dice «%s» y es %s' % (f, d['dia'], DOW[F(f).weekday()]))
+            tipo = {'suave': 'carrera', 'calidad': 'carrera', 'control': 'control', 'prueba': 'prueba', 'otro': 'otro'}[d['tipo']]
+            sub = d['tipo'] if d['tipo'] != 'otro' else ('martin' if 'Martín Freire' in d['titulo'] else 'crossfit' if 'CrossFit' in d['titulo'] else 'otro')
+            base = {'fecha': f, 'dia': d['dia'], 'tipo': tipo, 'sub': sub, 'sesion': d['titulo']}
+            for k in ('objetivo', 'min'):
+                if d.get(k) not in (None, ''):
+                    base[k] = d[k]
+            if d.get('detalle'):
+                base['nota'] = d['detalle']      # «Por qué › Nota» en la tarjeta de Daniel
+            if tipo in ('control', 'prueba'):
+                base['clave'] = True
+            sem['dias'].append(base)
+            dd = {'fecha': f, 'ref': [wi, di], 'semana': sem['semana'], 'bloque': w['fase'], 'titulo': d['titulo'], 'hist': hist_por_fecha.get(f, []),
+                  'sub': sub, 'n': w['n']}
+            if tipo != 'otro':
+                p = parsear(d, w)
+                K, deK = k_en(controles, f)
+                R = ritmos_de_k(K)
+                dd['cr'] = p                     # estructura de Cristina (no es el «principal» de Daniel)
+                dd['ej'] = ejercicios_de(p)
+                # web.dias en la forma de la tarjeta de Daniel: pasos con temporizador y enlace, números y «Hoy haces»
+                wd = {'plantilla': 'control' if p['tipo'] == 'control1000' else 'cr',
+                      'numeros': [{'v': n['v'], 'l': n['l']} for n in numeros_de(p, R, RE)],
+                      'pasos': pasos_web(pasos_de(p, R, RE))}
+                rh = resumen_hoy(p, R, RE) or ('%s · %s' % (d['titulo'], d['objetivo']) if d.get('objetivo') else None)
+                if rh:
+                    wd['variantes'] = {'verde': rh}
+                web_dias[f] = wd
+                if K:
+                    dd['K'] = {'s': K, 'txt': mmss(K), 'de': deK}
+                if d.get('min'):
+                    min_plan += d['min']
+            dias.append(dd)
+        sem['minPlan'] = min_plan
+        cal.append(sem)
+        semanas.append({'n': w['n'], 'desde': a, 'hasta': b, 'fase': w['fase'], 'descarga': bool(w.get('descarga')), 'minPlan': min_plan})
 
-    # ---------- HTML ----------
-    h = []
-    h.append('<header class="cr-top"><div class="container">')
-    h.append('<nav class="atleta" aria-label="De quién es el plan"><a href="../">Daniel</a><a aria-current="page">Cristina</a></nav>')
-    h.append('<h1>Plan de carrera · Cristina</h1>')
-    h.append('<p class="muted">%s. Solo carrera: %s.</p>' % (e(plan['objetivo']['prueba']), e(plan['meta'].get('diasCarrera', ''))))
-    h.append('<nav class="cr-sub" aria-label="Secciones"><a href="#hoy">Hoy</a><a href="#plan">Plan</a><a href="#ritmos">Ritmos</a><a href="#reglas">Reglas</a><a href="#registro">Registro</a></nav>')
-    h.append('</div></header><main class="container">')
+    # hitos (para el camino de Hoy y el calendario)
+    hitos = []
+    nc = 0
+    for sem in cal:
+        for d in sem['dias']:
+            if d['tipo'] == 'control':
+                nc += 1
+                hitos.append({'fecha': d['fecha'], 'etiqueta': d['sesion'], 'tipo': 'control', 'clave': True})
+            elif d['tipo'] == 'prueba':
+                hitos.append({'fecha': d['fecha'], 'etiqueta': 'Prueba (fecha supuesta)', 'tipo': 'prueba', 'clave': True})
+    for b in bloques:
+        hitos.append({'fecha': b['desde'], 'etiqueta': '%s · %s' % (b['clave'], b['nombre']), 'tipo': 'fase'})
+    hitos.sort(key=lambda h: (h['fecha'], h['tipo'] != 'fase'))
 
-    # Hoy
-    h.append('<section id="hoy" class="cr-sec"><h2 class="vh-oculto">Hoy</h2><div id="cr-hoy" class="card cr-hoy"><p class="muted">Cargando el día…</p></div>')
-    h.append('<div id="cr-semana" class="cr-semana" aria-label="Esta semana"></div>')
-    h.append('<div id="cr-cuenta" class="cr-cuenta"></div></section>')
+    # ritmos de hoy (K = el mejor de los dos últimos controles)
+    K, deK = k_en(controles, hoy, incluir=True)
+    R = ritmos_de_k(K)
+    ritmos = {'K': None, 'tabla': None, 'umbral': None}
+    if R:
+        ritmos['K'] = {'s': K, 'txt': mmss(K), 'de': deK}
+        ritmos['tabla'] = [{'dist': d, 'K': t_rep(R['K']['400'] * d / 400, d), 'K+4': t_rep(R['K+4']['400'] * d / 400, d),
+                            'O': t_rep(R['O']['400'] * d / 400, d)} for d in (200, 300, 400, 600, 800, 1000)]
+        ritmos['umbral'] = [mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1])]
 
-    # Objetivo y escalones
-    h.append('<section class="cr-sec"><h2>El objetivo</h2>')
-    h.append('<p>%s</p><ol class="cr-esc">' % e(plan['objetivo']['porQue']))
-    exp_txt = plan['objetivo'].get('expectativa')
-    for s in plan['objetivo']['escalones']:
-        h.append('<li><b class="num">%s</b> %s</li>' % (e(s['marca']), e(s['que'])))
-    h.append('</ol>' + ('<div class="aviso"><div><b>Qué esperar.</b> %s</div></div>' % e(exp_txt) if exp_txt else '') + '<p class="faint">Fecha: %s.</p></section>' % e(plan['objetivo']['fecha']))
-
-    # Plan: fases y semanas
-    h.append('<section id="plan" class="cr-sec"><h2>Plan</h2><div class="cr-fases">')
-    for f in plan['fases']:
-        w0 = plan['calendario'][f['desde'] - 1]['desde']
-        w1 = plan['calendario'][f['hasta'] - 1]['dias'][-1]['fecha']
-        h.append('<div class="cr-fase" data-fase="%s"><b>%s · %s</b><span class="faint">semanas %d-%d · %s a %s</span><span>%s</span></div>' % (
-            e(f['id']), e(f['id']), e(f['nombre']), f['desde'], f['hasta'], fecha_corta(w0), fecha_corta(w1), e(f['objetivo'])))
-    h.append('</div><h3>Semana tipo</h3><ul class="cr-tipo">')
-    for s in plan['semanaTipo']:
-        h.append('<li><b>%s</b> %s</li>' % (e(s['dia']), e(s['que'])))
-    h.append('</ul><h3>Las 52 semanas</h3>')
-    for f in plan['fases']:
-        h.append('<details class="acc cr-acc" data-fase="%s"><summary><b>%s · %s</b> <span class="faint">semanas %d-%d</span></summary>' % (
-            e(f['id']), e(f['id']), e(f['nombre']), f['desde'], f['hasta']))
-        for w in plan['calendario'][f['desde'] - 1:f['hasta']]:
-            h.append('<div class="cr-wk" data-sem="%d"><p class="cr-wk-t"><b>Semana %d</b> · desde el %s%s</p><ul>' % (
-                w['n'], w['n'], fecha_corta(w['desde']), ' · <span class="chip">descarga</span>' if w.get('descarga') else ''))
-            for d in w['dias']:
-                if d['tipo'] == 'otro':
-                    continue
-                cls = {'control': 'ctl', 'prueba': 'ctl', 'calidad': 'cal'}.get(d['tipo'], 'sua')
-                h.append('<li class="cr-d %s" data-fecha="%s"><span class="cr-d-f">%s %s</span><span>%s</span></li>' % (
-                    cls, e(d['fecha']), e(d['dia']), fecha_corta(d['fecha']), e(d['titulo'])))
-            h.append('</ul></div>')
-        h.append('</details>')
-    h.append('</section>')
-
-    # Ritmos
-    h.append('<section id="ritmos" class="cr-sec"><h2>Ritmos</h2>')
-    if ritmos:
-        h.append('<p>Último control: <b class="num">%s</b> el %s (%s). Ritmo K: <b class="num">%s</b>, el mejor de los dos últimos controles.</p>' % (
-            e(ult['tiempo']), fecha_corta(ult['fecha']), pts_txt(puntos(seg(ult['tiempo']), tramos)), mmss(t_k)))
-        h.append('<table class="cr-tab"><thead><tr><th>Distancia</th><th>K</th><th>K + 4</th><th>O</th></tr></thead><tbody>')
-        for d in (200, 300, 400, 600, 800, 1000):
-            h.append('<tr><td class="num">%s m</td><td class="num">%s</td><td class="num">%s</td><td class="num">%s</td></tr>' % (
-                '{:,}'.format(d).replace(',', '.'), mmss(ritmos['K'][d], d <= 400), mmss(ritmos['K4'][d], d <= 400), mmss(ritmos['O'][d], d <= 400)))
-        h.append('</tbody></table><p>Umbral: <b class="num">%s a %s</b> por kilómetro.</p>' % (mmss(ritmos['umbral'][0]), mmss(ritmos['umbral'][1])))
-        h.append('<p class="faint">K: el mejor de tus dos últimos controles. K + 4: 4 s más por cada 400. O: K menos 2 s por cada 400 (desde junio). Umbral: K más un 20-25 % por kilómetro.</p>')
-    else:
-        h.append('<div class="aviso"><div><b>Sin control todavía.</b> Los ritmos salen del primer control de 1.000 m, el %s en Arucas. Hasta entonces, todo por sensación.</div></div>' % fecha_corta(plan['objetivo']['primerControl']))
-    h.append('<h3>Baremo del 1.000 m, mujeres</h3><div class="cr-bar" role="img" aria-label="Baremo del 1.000 m de mujeres">')
-    for tr in tramos:
-        txt = ('%s o menos' % tr['hasta']) if not tr.get('desde') else (('%s o más' % tr['desde']) if not tr.get('hasta') else '%s-%s' % (tr['desde'], tr['hasta']))
-        aqui = ult is not None and puntos(seg(ult['tiempo']), tramos) == tr['puntos']
-        h.append('<div class="cr-tr%s%s" data-pts="%d"><b>%d</b><span class="num">%s</span>%s</div>' % (
-            ' elim' if tr.get('elimina') else '', ' aqui' if aqui else '', tr['puntos'], tr['puntos'], e(txt), '<small>elimina</small>' if tr.get('elimina') else ''))
-    h.append('</div><p class="faint">%s %s %s</p>' % (e(plan['baremo1000Mujeres']['reglasBOE']), e(plan['baremo1000Mujeres']['calificacion']), e(plan['baremo1000Mujeres']['fuente'])))
-    h.append('</section>')
-
-    # Reglas, glosario y reloj
-    h.append('<section id="reglas" class="cr-sec"><h2>Reglas</h2>')
-    for r in plan['reglas']:
-        h.append('<div class="card flat cr-regla"><b>%s</b><p>%s</p></div>' % (e(r['titulo']), e(r['texto'])))
-    h.append('<h3>Qué significa cada palabra</h3><dl class="cr-glo">')
-    for g in plan['glosario']:
-        h.append('<dt>%s</dt><dd>%s</dd>' % (e(g['t']), e(g['d'])))
-    h.append('</dl><h3>El reloj (%s)</h3><ul class="cr-reloj">' % e(plan['reloj']['modelo']))
-    for p in plan['reloj']['pasos']:
-        h.append('<li>%s</li>' % e(p))
-    h.append('</ul><p class="faint">%s</p></section>' % e(plan['reloj']['nota']))
-
-    # Registro
-    h.append('<section id="registro" class="cr-sec"><h2>Registro</h2>')
+    # marca del 1.000 para el chip y el simulador
+    marcas = {'mil': None}
     if controles:
-        h.append('<h3>Controles de 1.000 m</h3><ul class="cr-reg">')
-        for c in reversed(controles):
-            h.append('<li><b class="num">%s</b> · %s · %s%s</li>' % (e(c['tiempo']), fecha_corta(c['fecha']), pts_txt(puntos(seg(c['tiempo']), tramos)),
-                                                                         (' · ' + e(c['valoracion'])) if c.get('valoracion') else ''))
-        h.append('</ul>')
-    car = sorted(hist.get('carrera', []), key=lambda c: c['fecha'], reverse=True)
-    if car:
-        h.append('<h3>Sesiones</h3><ul class="cr-reg">')
-        for c in car:
-            h.append('<li><b>%s</b> · %s%s</li>' % (fecha_corta(c['fecha']), e(c.get('sesion', '')), (' · ' + e(c['valoracion'])) if c.get('valoracion') else ''))
-        h.append('</ul>')
-    if not controles and not car:
-        h.append('<p class="muted">Todavía no hay sesiones registradas.</p>')
-    pend = plan.get('pendientes') or []
-    if pend:
-        h.append('<h3>Pendiente</h3><ul class="cr-reg">' + ''.join('<li>%s</li>' % e(p['texto']) for p in pend) + '</ul>')
-    h.append('</section>')
-    h.append('<footer class="cr-pie faint">Plan de carrera hecho el %s. Solo carrera: barra, circuito y CrossFit los lleva ella aparte.</footer>' % fecha_corta(plan['meta']['creado']))
-    h.append('</main>')
+        u = controles[-1]
+        marcas['mil'] = {'txt': u['tiempo'], 's': u['s'], 'pts': u['pts'], 'fecha': u['fecha'], 'fiab': 'medido'}
 
-    cuerpo = '\n'.join(h)
-    pagina = PLANTILLA.replace('/*__CSS__*/', open(CSS_SISTEMA, encoding='utf-8').read() + '\n' + open(CSS_PROPIO, encoding='utf-8').read())
-    pagina = pagina.replace('<!--__CUERPO__-->', cuerpo)
-    pagina = pagina.replace('/*__DATOS__*/', json.dumps(datos_js, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
-    pagina = pagina.replace('/*__JS__*/', open(JS_PROPIO, encoding='utf-8').read())
+    # fechas y avisos
+    fechas = [e['fecha'] for e in (hist.get('carrera') or [])] + [c['fecha'] for c in controles]
+    datos_hasta = max(fechas) if fechas else None
+    fs = plan['objetivo'].get('fechaSupuesta')
+    der = {
+        'bloques': bloques, 'datosHasta': datos_hasta, 'dias': dias, 'hitos': hitos, 'controles': [
+            {'fecha': d['fecha'], 'titulo': d['sesion'], 'ref': [i, j], 'tipo': d['tipo']}
+            for i, sem in enumerate(cal) for j, d in enumerate(sem['dias']) if d['tipo'] in ('control', 'prueba')],
+        'marcas': marcas, 'ritmos': ritmos, 'semanas': semanas, 'final': None,
+        'ventanaPrueba': {'desde': fs, 'hasta': fs} if fs else None,
+        'baremo': {'mil': T}, 'controlesHechos': [{'fecha': c['fecha'], 'tiempo': c['tiempo'], 's': c['s'], 'pts': c['pts'],
+                                                   'parciales200': c.get('parciales200'), 'valoracion': c.get('valoracion'),
+                                                   'valida': c.get('valida', True)} for c in controles],
+    }
+    # plan público en la forma del núcleo (baremo.mil_metros para PC.baremo)
+    pub = {k: v for k, v in plan.items() if k != 'calendario'}
+    pub['calendario'] = cal
+    pub['baremo'] = {'mil_metros': [{'puntos': t['puntos'], 'desde': t['desde'], 'hasta': t['hasta'], 'elimina': bool(t.get('elimina'))}
+                                    for t in plan['baremo1000Mujeres']['tramos']]}
+    for d in ejercicios_usados(dias):
+        if d not in {e['id'] for e in plan.get('ejercicios') or []}:
+            avisos.append('ejercicio sin explicar en plan.ejercicios: %s' % d)
+    # cada control medido es un punto de la gráfica «El 1.000, control a control» de Marcas (historial.evolucionEstimacion en la de Daniel)
+    hist = dict(hist)
+    hist['evolucionEstimacion'] = [{'fecha': c['fecha'], 'estimacion': c['tiempo'], 'medido': True, 'motivo': 'Control de 1.000 m'}
+                                   for c in reversed(controles)]
+    datos = {'version': 1, 'atleta': 'Cristina', 'plan': pub, 'historial': hist, 'web': {'dias': web_dias}, 'derivados': der,
+             'fuente': {'construido': hoy}}
+    return datos, errores, avisos
 
-    # privacidad: ningún valor de privado.json puede salir en la página
+
+def ejercicios_usados(dias):
+    out = []
+    for d in dias:
+        for x in d.get('ej') or []:
+            if x not in out:
+                out.append(x)
+    return out
+
+
+def pasos_web(P):
+    """Pasos de pasos_de() en la forma de web.dias[f].pasos de Daniel: {t, d, timer (s), enlace}; el calentamiento, en un grupo plegable."""
+    out, grupo, cal, vistos = [], None, [], set()
+    for x in P:
+        o = {'t': x['t']}
+        if x.get('d'):
+            o['d'] = x['d']
+        if x.get('seg'):
+            o['timer'] = x['seg']
+            if x.get('dist'):
+                o['tras'] = True          # repetición de series: el temporizador es la recuperación, corre al acabarla
+        if x.get('ej') and x['ej'] not in vistos:     # «Cómo se hace» solo la primera vez que sale cada ejercicio
+            vistos.add(x['ej'])
+            o['enlace'] = '#tecnica/ej/' + x['ej']
+            o['enlaceTxt'] = 'Cómo se hace →'
+        if x.get('parte') == 'calentamiento':
+            if grupo is None:
+                grupo = {'grupo': True, 't': 'Calentamiento', 'meta': '', 'pasos': []}
+                out.append(grupo)
+            grupo['pasos'].append(o)
+            cal.append(x['t'])
+        else:
+            out.append(o)
+    if grupo:
+        grupo['meta'] = ' · '.join(c for c in cal if not c.startswith('Pausa')).lower()
+    return out
+
+
+def pts_txt(p):
+    return '0 puntos: elimina' if p == 0 else ('1 punto' if p == 1 else '%s puntos' % p)
+
+
+# ---------------------------------------------------------------------------------------------- ensamblado
+def sustituir(txt, viejo, nuevo, donde, veces=None):
+    n = txt.count(viejo)
+    if n == 0 or (veces is not None and n != veces):
+        raise SystemExit('ERROR: %s ya no contiene «%s» (%d veces): revisa web/cristina/construir.py' % (donde, viejo[:70], n))
+    return txt.replace(viejo, nuevo)
+
+
+def ensamblar(datos, B, modulos):
+    head = leer(os.path.join(SRC_D, '00_head.html'))
+    head = sustituir(head, '<title data-inv="C1">Plan Cádiz</title>', '<title>Plan 2027</title>', '00_head.html')
+    head = sustituir(head, 'content="Plan de preparación física para las pruebas de la Escala Básica: 1.000 m, dominadas y circuito"',
+                     'content="Plan de carrera de un año para el 1.000 m de las pruebas físicas de la Escala Básica"', '00_head.html')
+    head = sustituir(head, '<meta name="apple-mobile-web-app-title" content="Plan Cádiz">', '<meta name="apple-mobile-web-app-title" content="Plan 2027">', '00_head.html')
+    head = sustituir(head, "localStorage.getItem('pc-tema')", "localStorage.getItem('cr-tema')", '00_head.html')
+
+    shell = leer(os.path.join(SRC_D, '20_shell.html'))
+    shell = sustituir(shell, '<span class="brand-t">Plan Cádiz</span>', '<span class="brand-t">Plan 2027</span>', '20_shell.html')
+    shell = sustituir(shell, '<a aria-current="page">Daniel</a><a href="cristina/">Cristina</a>', '<a href="../">Daniel</a><a aria-current="page">Cristina</a>',
+                      '20_shell.html', veces=2)
+
+    # CSS: los de Daniel en sus capas y los de Cristina en la capa «cristina», detrás
+    dcss = os.path.join(SRC_D, 'css')
+    css_d = sorted(f for f in os.listdir(dcss) if f.endswith('.css') and B.capa_de(f) in ('sistema', 'modulos'))
+    ccss = os.path.join(SRC_C, 'css')
+    css_c = sorted(f for f in os.listdir(ccss) if f.endswith('.css')) if os.path.isdir(ccss) else []
+    partes = ['@layer sistema, modulos, cristina;']
+    for f in css_d:
+        partes.append('@layer %s{\n%s\n}' % (B.capa_de(f), B.min_css(leer(os.path.join(dcss, f)), f)))
+    for f in css_c:
+        cuerpo = leer(os.path.join(ccss, f))
+        if re.search(r'@(import|layer)\b', re.sub(r'/\*.*?\*/', '', cuerpo, flags=re.S)):
+            raise SystemExit('ERROR: %s usa @import o @layer: el constructor ya lo pone en la capa «cristina»' % f)
+        partes.append('@layer cristina{\n%s\n}' % B.min_css(cuerpo, f))
+    css = '\n'.join(partes)
+    fuera = B.css_fuera_de_capa(css)
+    if fuera:
+        raise SystemExit('ERROR: CSS fuera de capa: %s' % fuera[:120])
+    head = head.replace('/*__CSS__*/', css)
+
+    for v in VISTAS:   # las vistas de Daniel tal cual: mismo menú, misma estructura
+        shell = sustituir(shell, '<!--__VISTA:%s-->' % v, leer(os.path.join(SRC_D, 'views', v + '.html')).strip(), '20_shell.html', veces=1)
+
+    # JS: núcleo de Daniel (con el prefijo de almacenamiento de Cristina), los de Cristina y el arranque de Daniel
+    core = leer(os.path.join(SRC_D, 'js', '00_core.js'))
+    core = sustituir(core, "function k(c) { return /^pc-/.test(c) ? c : 'pc-' + c; }", "function k(c) { return /^cr-/.test(c) ? c : 'cr-' + c; }", '00_core.js', veces=1)
+    # detrás del núcleo, los ajustes de Cristina (10_cristina.js); después TODOS los módulos de Daniel, sin copiarlos
+    archivos = [('00_core.js', core), ('10_cristina.js', leer(os.path.join(SRC_C, 'js', '10_cristina.js')))]
+    djs = os.path.join(SRC_D, 'js')
+    for f in sorted(x for x in os.listdir(djs) if x.endswith('.js') and x != '00_core.js'):
+        vista = {v: k for k, v in MOD_DE.items()}.get(f)
+        if vista and modulos is not None and vista not in modulos:
+            continue
+        archivos.append((f, leer(os.path.join(djs, f))))
+    scripts = []
+    for f, cuerpo in archivos:
+        if re.search(r'</script', cuerpo, re.I):
+            raise SystemExit('ERROR: %s contiene «</script»; escríbelo como «<\\/script»' % f)
+        salida = B.min_js(cuerpo, f)
+        scripts.append('<script data-mod="%s" data-sha="%s">\n%s\n</script>' % (f, B.sha12(cuerpo), salida))
+    head, shell = B.min_html(head), B.min_html(shell)
+    txt = json.dumps(datos, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/').replace('<!--', '\\u003c!--')
+    shell = sustituir(shell, '<!--__DATOS__-->', '<script id="datos" type="application/json">' + txt + '</script>', '20_shell.html', veces=1)
+    shell = sustituir(shell, '<!--__JS__-->', '\n'.join(scripts), '20_shell.html', veces=1)
+    return head + shell
+
+
+def comprobar_privacidad(pagina, privado):
     def valores(o):
         if isinstance(o, dict):
             for v in o.values():
@@ -229,58 +804,55 @@ def main():
                 yield from valores(v)
         elif o not in (None, '', True, False):
             yield str(o)
-    for v in valores(privado.get('vigilar', {})):
-        if v and v in pagina:
-            errores.append('privacidad: la página contiene «%s» (de privado.json)' % v)
+    return ['privacidad: la página contiene «%s» (de privado.json)' % v for v in valores(privado.get('vigilar', {})) if v and v in pagina]
 
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument('--hoy', help='fecha de construcción (AAAA-MM-DD); por defecto, la del día')
+    ap.add_argument('--salida', default=SALIDA)
+    ap.add_argument('--modulos', help='solo estos módulos de pestaña, separados por comas (pruebas)')
+    ap.add_argument('--sin-minificar', action='store_true')
+    ap.add_argument('--datos', help='vuelca el bloque de datos en este archivo (para revisar)')
+    a = ap.parse_args()
+    hoy = a.hoy or dt.date.today().isoformat()
+    plan = leer_json(os.path.join(DATOS, 'plan.json'))
+    hist = leer_json(os.path.join(DATOS, 'historial.json'), {'carrera': [], 'controles': []})
+    privado = leer_json(os.path.join(DATOS, 'privado.json'), {})
+    datos, errores, avisos = construir(plan, hist, hoy)
+    for x in avisos:
+        print('AVISO:', x)
     if errores:
         print('ERRORES (%d)' % len(errores))
         for x in errores:
             print('  x', x)
         sys.exit(1)
-    os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
-    with open(SALIDA, 'w', encoding='utf-8') as f:
+    if a.datos:
+        with open(a.datos, 'w', encoding='utf-8') as f:
+            json.dump(datos, f, ensure_ascii=False, indent=1)
+    B = cargar_build()
+    B.MINIFICAR = not a.sin_minificar
+    modulos = set(a.modulos.split(',')) if a.modulos else None
+    pagina = ensamblar(datos, B, modulos)
+    for x in B._MIN_INFO:
+        print(x)
+    # los valores vigilados se buscan en los DATOS de la página: el código de Daniel nombra campos genéricos («FC media», «VO2»)
+    priv = comprobar_privacidad(json.dumps(datos, ensure_ascii=False), privado)
+    if priv:
+        print('ERRORES (%d)' % len(priv))
+        for x in priv:
+            print('  x', x)
+        sys.exit(1)
+    os.makedirs(os.path.dirname(os.path.abspath(a.salida)), exist_ok=True)
+    with open(a.salida, 'w', encoding='utf-8') as f:
         f.write(pagina)
-    print('docs/cristina/index.html · %.1f KB · %d días · %d controles' % (len(pagina.encode()) / 1024, len(dias), len(controles)))
+    crudo = len(pagina.encode('utf-8'))
+    comp = len(gzip.compress(pagina.encode('utf-8'), 9))
+    nd = sum(1 for d in datos['derivados']['dias'] if d.get('cr'))
+    print('%s · %.1f KB · %.1f KB con gzip%s · %d días de carrera · %d controles hechos · construido %s' % (
+        os.path.relpath(a.salida, RAIZ), crudo / 1024, comp / 1024, '' if comp <= LIMITE_GZIP else ' (PASA DEL LÍMITE)', nd,
+        len(datos['derivados']['controlesHechos']), hoy))
 
-
-def pts_txt(p):
-    return '0 puntos: elimina' if p == 0 else ('1 punto' if p == 1 else '%s puntos' % p)
-
-
-MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
-
-
-def fecha_corta(iso):
-    a, m, d = iso.split('-')
-    return '%d %s' % (int(d), MESES[int(m) - 1]) + ('' if a == '2026' else ' ' + a)
-
-
-PLANTILLA = '''<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Plan de carrera</title>
-<meta name="description" content="Plan de carrera de un año para el 1.000 m de las pruebas físicas de la Escala Básica">
-<meta name="theme-color" content="#F3F5F8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B1117" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/*__CSS__*/
-</style>
-</head>
-<body class="cr">
-<!--__CUERPO__-->
-<script>window.CR=/*__DATOS__*/;</script>
-<script>
-/*__JS__*/
-</script>
-</body>
-</html>
-'''
 
 if __name__ == '__main__':
     main()

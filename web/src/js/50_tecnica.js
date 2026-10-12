@@ -22,6 +22,7 @@
   var T = WB.textos || {};
   var esc = PC.esc, ic = PC.icon;
   var herr = PC.herr = PC.herr || {};
+  var PF = PC.PERFIL || null;   /* web de Cristina (web/cristina/): solo carrera; sus fichas tienen otra forma (enUnaFrase, pasos, errores…) */
 
   /* ------------------------------------------------------------------ utilidades */
   function el(tag, cls, html) { var e = DOC.createElement(tag); if (cls) e.className = cls; if (html !== undefined && html !== null) e.innerHTML = html; return e; }
@@ -136,6 +137,7 @@
   /* ------------------------------------------------------------------ cabecera: las tres pruebas en orden (N4) */
   function pintarCabecera() {
     var host = DOC.getElementById('vt-tecnica'); if (!host) return;
+    if (PF) { host.innerHTML = ''; return; }
     var ex = (P.planDeCarrera || {}).examen || {};
     var orden = String(ex.orden || 'circuito → dominadas → 1.000 m').split(/\s*→\s*/);
     var partes = orden.map(function (o) {
@@ -389,6 +391,12 @@
         out.push({ id: 'central', txt: dm(ctl.fecha) + ' con los ' + de.map(function (x) { return coma(x, x % 1 ? 1 : 0); }).join(' y ') + ' en ' + en.map(function (x) { return coma(x, x % 1 ? 1 : 0); }).join(' y '), tr: alt });
       }
     }
+    /* web de Cristina: un reparto regular por cada escalón de su objetivo (4:45 deja de eliminar, 4:09 = 5 puntos…) */
+    if (PF) arr((P.objetivo || {}).escalones).forEach(function (e) {
+      var m = seg(e.marca); if (!m) return;
+      var v = Math.round(m / 5 * 10) / 10;
+      out.push({ id: 'esc' + e.id, txt: PC.fmt.t(m) + ' plano', tr: [v, v, v, v, v], meta: m });
+    });
     var mA = /(\d+,\d)\s*s por 200/.exec(((ritmo('A') || {}).porQue) || '');
     if (mA) { var v = +mA[1].replace(',', '.'); out.push({ id: 'plano', txt: PC.fmt.t(v * 5) + ' plano', tr: [v, v, v, v, v] }); }
     return out;
@@ -536,7 +544,8 @@
   }
   function pintarMil(c) {
     var ex = examen(), N6 = T.N6 || {};
-    var h = '<div class="card" id="te-reparto">' + cardH('carrera', 'Reparto del 1.000', 'Toca un reparto o ajusta cada 200: la meta, los puntos y el margen al 3:49 se recalculan.') + p(ex.nota, 'te-nota') + '<div class="te-rp-h"></div></div>';
+    var h = '<div class="card" id="te-reparto">' + cardH('carrera', 'Reparto del 1.000', 'Toca un reparto o ajusta cada 200: la meta, los puntos y el margen al ' + PC.fmt.t(eliminaS() || 229) + ' se recalculan.') + p(ex.nota, 'te-nota') + '<div class="te-rp-h"></div></div>';
+    if (PF) { c.innerHTML = h; herr.reparto(c.querySelector('.te-rp-h')); return; }
     var kv = '';
     if (ex.suelo) kv += '<dt>Suelo</dt><dd>' + esc(ex.suelo) + '</dd>';
     if (ex.elimina) kv += '<dt>Elimina</dt><dd><b class="te-el" data-umbral="229">' + esc(ex.elimina) + '</b></dd>';
@@ -877,7 +886,25 @@
   }
 
   /* ------------------------------------------------------------------ TE-5 · carrera */
+  /* ficha de un ejercicio de Cristina (datos/cristina/plan.json → ejercicios): para alguien que no ha corrido nunca */
+  function listaHtml(L, ord) { L = arr(L); var tg = ord ? 'ol' : 'ul'; return L.length ? '<' + tg + ' class="te-tec">' + L.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</' + tg + '>' : ''; }
+  function fichaCR(e) {
+    var RE = P.ritmosEstimados || {}, ch = [];
+    if (e.ritmo) ch.push(e.ritmo === 'suave' && RE.suave ? 'ritmo suave · ' + RE.suave.txt + ' /km' : 'ritmo ' + e.ritmo);
+    if (e.esfuerzo) ch.push('esfuerzo ' + e.esfuerzo);
+    var est = e.ritmo === 'suave' && RE.suave ? ' ' + sup('estimado') : '';
+    return '<article class="card te-ej" id="te-ej-' + esc(e.id) + '">' + cardH(e.icono || 'carrera', e.nombre, e.enUnaFrase || '') +
+      (ch.length ? '<div class="chips">' + ch.map(function (x) { return '<span class="chip">' + esc(x) + '</span>'; }).join('') + est + '</div>' : '') +
+      p(e.paraQue, 'te-para') +
+      (arr(e.pasos).length ? '<h4>Cómo se hace</h4>' + listaHtml(e.pasos, true) : '') +
+      (e.sensacion ? '<h4>Cómo se tiene que sentir</h4>' + p(e.sensacion) : '') +
+      why('Antes de empezar', listaHtml(e.antes)) + why('Errores típicos', listaHtml(e.errores)) + why('Si algo va mal', listaHtml(e.siAlgoVaMal)) +
+      (e.escalones ? why('Los escalones', p(e.escalones)) : '') + why('En el reloj', listaHtml(e.reloj)) +
+      (e.video ? '<div class="te-ej-f"><a class="btn sec" href="https://www.youtube.com/results?search_query=' + encodeURIComponent(e.video) + '" target="_blank" rel="noopener">' + ic('video', 'sm') + 'Vídeo</a></div>' : '') +
+      '</article>';
+  }
   function pintarCarrera(c) {
+    if (PF) { c.innerHTML = '<div class="te-fichas">' + arr(P.ejercicios).map(fichaCR).join('') + '</div>'; return; }
     var ST = P.sesionesTipo || {}, CE = ST.calentamientoEstandar || {}, VC = ST.vueltaALaCalma || {}, RS = ritmo('RS') || {};
     var pasos = arr(CE.pasos).map(function (x, i) {
       var t = limpio(x), c = cabeza(t);
@@ -912,6 +939,12 @@
     return null;
   }
   function pintarReloj(c) {
+    if (PF) {
+      var RJ = P.reloj || {};
+      c.innerHTML = '<div class="card" id="te-reloj-conf">' + cardH('reloj', RJ.modelo || 'Reloj', 'Cómo usarlo en cada tipo de sesión') + '<div class="chips">' + sup('rutas sin verificar') + '</div>' +
+        listaHtml(RJ.pasos, true) + '<p class="te-link"><a class="btn sec" href="#hoy">Hoy › Modo pista: la web pita en cada cambio →</a></p></div>';
+      return;
+    }
     var A = P.atleta || {}, ZF = P.zonasFC || {};
     var h = '<div class="te-g2"><div class="card" id="te-reloj-conf">' + cardH('reloj', A.reloj ? 'Configuración del ' + A.reloj : 'Configuración del reloj', 'Lo que tiene puesto ahora') +
       (A.relojConfigurado ? p(A.relojConfigurado) : '') + (A.fcMaximaNota ? '<h4>FC máxima</h4>' + p(A.fcMaximaNota) : '') +
@@ -1005,9 +1038,17 @@
   /* ------------------------------------------------------------------ vista */
   var root = null;
   var SECC = [['simulacro', pintarSimulacro], ['dominada', pintarDominada], ['mil', pintarMil], ['circuito', pintarCircuito], ['gimnasio', pintarGimnasio], ['carrera', pintarCarrera], ['reloj', pintarReloj], ['material', pintarMaterial]];
+  /* web de Cristina: fuera lo que solo es de Daniel (dominada, circuito, gimnasio, material) */
+  var SOLO_DANIEL = ['dominada', 'circuito', 'gimnasio', 'material'];
   function pintarTodo() {
+    if (PF) SOLO_DANIEL.forEach(function (s) {
+      var sec = root.querySelector('#te-' + s), a = DOC.querySelector('.subnav a[href="#tecnica/' + s + '"]');
+      if (sec) sec.hidden = true;
+      if (a) a.hidden = true;
+    });
     try { pintarCabecera(); } catch (e) { PC._err('técnica · cabecera', e); }
     SECC.forEach(function (s) {
+      if (PF && SOLO_DANIEL.indexOf(s[0]) >= 0) return;
       var c = root.querySelector('#te-' + s[0] + ' > .te-c'); if (!c) return;
       try { s[1](c); } catch (e) { PC._err('técnica · ' + s[0], e); c.innerHTML = '<p class="empty">No se ha podido pintar esta sección.</p>'; }
     });

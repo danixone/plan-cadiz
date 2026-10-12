@@ -17,7 +17,9 @@
   var W = window, DOC = document;
   var D = PC.D || {}, P = D.plan || {}, H = D.historial || {}, DV = D.derivados || {}, WJ = D.web || {};
   var esc = PC.esc, fmt = PC.fmt;
-  var ELIM = 229;
+  var ELIM = (PC.baremo && PC.baremo.ELIMINA_MIL) || 229;
+  var PF = PC.PERFIL || null;   /* web de Cristina (web/cristina/): solo el 1.000, con el baremo de mujeres */
+  var ELIM_T = fmt.t(ELIM);
   var raiz = null;
 
   /* ------------------------------------------------------------------ utilidades */
@@ -70,12 +72,12 @@
       v2s: function (v) { return v; }, s2v: function (s) { return Math.round(s); },
       txt: function (s) { return String(s); }, corte: function (s) { return s + ' o más'; },
       sig: function (o) { return o.objetivo + ' (' + dif(o.diferencia, 0) + ')'; } },
-    mil: { n: '1.000 m', N: 100, icono: 'carrera',
-      v2s: function (v) { return 265 - v; }, s2v: function (s) { return Math.round(265 - s); },
+    mil: { n: '1.000 m', N: PF ? 120 : 100, icono: 'carrera',
+      v2s: function (v) { return ELIM + 36 - v; }, s2v: function (s) { return Math.round(ELIM + 36 - s); },
       txt: function (s) { return mmss(s); }, corte: function (s) { return mmss(s) + ' o menos'; },
       sig: function (o) { return mmss(o.objetivo) + ' (' + dif(o.diferencia, 0, ' s') + ')'; } }
   };
-  var ORDEN = ['cir', 'dom', 'mil'];            /* el orden de la prueba: circuito → dominadas → 1.000 m */
+  var ORDEN = PF ? ['mil'] : ['cir', 'dom', 'mil'];            /* el orden de la prueba: circuito → dominadas → 1.000 m */
   function elimTxt(k) {
     var t = tramo0(k); if (!t) return '';
     if (k === 'dom') return t.max + ' o menos elimina';
@@ -104,7 +106,7 @@
   if (M.resultado) NR.txt = M.resultado;
 
   /* estado del simulador (T5) */
-  var ST = { v: { mil: REAL.mil, dom: REAL.dom, cir: REAL.cir }, base: 'hoy', estado: 'hoy' };
+  var ST = { v: { mil: REAL.mil === null && PF ? PF.inicio1000 || ELIM : REAL.mil, dom: REAL.dom, cir: REAL.cir }, base: 'hoy', estado: 'hoy' };
   function valoresBase(base) {
     if (base === 'hoy') return REAL;
     var x = ESC[+String(base).replace('esc', '')]; return x ? x.v : REAL;
@@ -212,6 +214,8 @@
 
   /* ------------------------------------------------------------------ M-1 · tu nota y simulador (T5, G1, G2, G10) */
   function tituloReal() {
+    if (PF) return REAL.mil === null ? 'Tu 1.000 todavía no está medido' + (PF.primerControl ? ': el primer control es el ' + corta(PF.primerControl) : '') :
+      'Con tu 1.000 de hoy: ' + mmss(REAL.mil) + ', ' + (PC.baremo.pts('mil', REAL.mil) === 0 ? 'elimina' : ptsTxt(PC.baremo.pts('mil', REAL.mil)));
     if (NR.txt === 'APTO') return 'Con las marcas de hoy apruebas: ' + num(NR.media, 2);
     if (NR.txt === 'ELIMINADO') return 'Con las marcas de hoy quedas eliminado por ' + quienElimina(NR.pts);
     return 'Con las marcas de hoy no apruebas: ' + num(NR.media, 2);
@@ -231,7 +235,7 @@
   function pct(f) { return (f * 100).toFixed(3) + '%'; }
   function filaHtml(k) {
     var R = PR[k], T = tramosV(k), t0 = T[0];
-    var mil = k === 'mil' ? ' data-umbral="229"' : '';
+    var mil = k === 'mil' ? ' data-umbral="' + ELIM + '"' : '';
     var bloques = T.map(function (t) {
       return '<i class="mc-tb mc-c' + Math.ceil(t.pts / 2) + '" style="left:' + pct(t.f0) + ';width:' + pct(t.f1 - t.f0) + '"' +
         (t.pts === 0 ? ' data-tramo="elimina"' + mil : '') + '></i>';
@@ -271,7 +275,7 @@
       '<div class="mc-est-r"><span class="chip" data-m="res"></span><span class="chip sup" data-m="sim" hidden></span>' +
       '<button type="button" class="btn sec" data-m="volver" hidden>Volver a hoy</button></div></div>');
     if (P.objetivo && P.objetivo.reglaDeNota) h.push('<p class="mc-regla">' + esc(P.objetivo.reglaDeNota) + '</p>');
-    h.push('<div class="mc-g1" data-m="g1"></div>');
+    if (!PF) h.push('<div class="mc-g1" data-m="g1"></div>');
     h.push('<div class="chips mc-escs" role="group" aria-label="Escenarios del plan">' + ESC.map(function (x) {
       return '<button type="button" class="chip" aria-pressed="false" data-esc="' + x.i + '">' + esc(x.corto) + '</button>';
     }).join('') + '</div>');
@@ -351,11 +355,11 @@
     var chip = mB ? '<span class="chip">' + esc(mB[1] + (mV ? ' · verificado el ' + mV[1] : '')) + '</span>' : '';
     var tb = ps.map(function (p) {
       var f = fil[p], cel = function (c, u) { return c ? '<td' + (u && c.elim ? ' class="mc-td-elim" data-umbral="229"' : (p === 0 ? ' class="mc-td-elim"' : '')) + '>' + esc(c.txt) + '</td>' : '<td></td>'; };
-      return '<tr><th scope="row">' + p + '</th>' + cel(f.mil, true) + cel(f.dom) + cel(f.cir) + '</tr>';
+      return '<tr><th scope="row">' + p + '</th>' + cel(f.mil, true) + (PF ? '' : cel(f.dom) + cel(f.cir)) + '</tr>';
     }).join('');
     var d = '<p class="chips">' + chip + '</p>' +
-      '<div class="tscroll"><table class="t mc-baremo"><thead><tr><th scope="col">Puntos</th><th scope="col">1.000 m</th><th scope="col">Dominadas</th><th scope="col">Circuito (s)</th></tr></thead><tbody>' + tb + '</tbody></table></div>';
-    return acc('Baremo completo, hombres', d, 'mc-bar');
+      '<div class="tscroll"><table class="t mc-baremo"><thead><tr><th scope="col">Puntos</th><th scope="col">1.000 m</th>' + (PF ? '' : '<th scope="col">Dominadas</th><th scope="col">Circuito (s)</th>') + '</tr></thead><tbody>' + tb + '</tbody></table></div>';
+    return acc(PF ? 'Baremo del 1.000, mujeres' : 'Baremo completo, hombres', d, 'mc-bar');
   }
 
   function enlazarNota(sec) {
@@ -396,11 +400,22 @@
       }
     } catch (e) { PC._err('marcas escena', e); }
   }
+  /* web de Cristina: la cifra grande son los puntos del 1.000 (su nota física también lleva barra y circuito, que este plan no mide) */
+  function cabeceraPF(q) {
+    var v = ST.v.mil, pm = PC.baremo.pts('mil', v), sin = REAL.mil === null, suya = !sin && Math.abs(v - REAL.mil) < 1e-6;
+    q('[data-m="media"]').textContent = String(pm);
+    q('[data-m="estado"]').textContent = 'puntos del 1.000 · ' + (suya ? 'tu marca' : 'simulado');
+    var cr = q('[data-m="res"]'); cr.textContent = pm === 0 ? 'ELIMINA' : ptsTxt(pm); cr.className = 'chip ' + (pm === 0 ? 'bad' : pm >= 5 ? 'ok' : 'warn');
+    var cs = q('[data-m="sim"]'); cs.hidden = suya; cs.textContent = 'simulado';
+    q('[data-m="volver"]').hidden = sin || suya;
+  }
   function actualizar(fuente) {
     var sec = raiz && raiz.querySelector('#mc-nota'); if (!sec) return;
     var n = notaDe(ST.v), real = ST.estado === 'hoy';
     var media = real ? NR.media : n.media, res = real ? NR.txt : n.txt;
     var q = function (s) { return sec.querySelector(s); };
+    if (PF) cabeceraPF(q);
+    else {
     q('[data-m="media"]').textContent = num(media, 2);
     var iEsc = ST.estado.indexOf('esc') === 0 ? +ST.estado.slice(3) : -1;
     if (real) ESC.forEach(function (x) { if (iEsc < 0 && igualV(x.v, REAL)) iEsc = x.i; });
@@ -420,20 +435,22 @@
     /* G1 */
     var escM = ESC.filter(function (x) { return !igualV(x.v, REAL); }).map(function (x) { return notaDe(x.v).media; });
     PC.graf.notaPista(q('[data-m="g1"]'), { media: media, real: real, medido: !ORDEN.some(fiabHueca), resultado: res, mediaReal: NR.media, escenarios: escM, eliminaPor: quienElimina(n.pts) });
+    }
     /* filas */
     ORDEN.forEach(function (k) {
-      var f = sec.querySelector('.mc-fila[data-k="' + k + '"]'), R = PR[k], v = ST.v[k], p = n.pts[k];
+      var f = sec.querySelector('.mc-fila[data-k="' + k + '"]'), R = PR[k], v = ST.v[k], p = PF ? PC.baremo.pts(k, v) : n.pts[k];
       var esRealK = Math.abs(v - REAL[k]) < 1e-6;
       f.querySelector('[data-f="val"]').textContent = R.txt(v);
       var cp = f.querySelector('[data-f="pts"]');
       cp.textContent = p === 0 ? '0 pts · elimina' : ptsTxt(p); cp.className = 'chip' + (p === 0 ? ' bad' : '');
       var cf = f.querySelector('[data-f="fiab"]');
       if (esRealK) { cf.textContent = FIAB[k] || ''; cf.className = 'chip' + (fiabHueca(k) ? ' sup' : ''); cf.hidden = !FIAB[k]; }
-      else { cf.textContent = ST.estado === 'sim' ? 'simulado' : 'supuesto'; cf.className = 'chip sup'; cf.hidden = false; }
+      else { cf.textContent = ST.estado === 'sim' || PF ? 'simulado' : 'supuesto'; cf.className = 'chip sup'; cf.hidden = false; }
       var inp = f.querySelector('.mc-rango');
       if (fuente !== k) inp.value = clampV(k, R.s2v(v));
       inp.setAttribute('aria-valuetext', R.txt(v) + ', ' + (p === 1 ? '1 punto' : p + ' puntos') + (p === 0 ? ', elimina' : ''));
-      var c = corteVivo(k, ST.v), cm = f.querySelector('[data-f="cmark"]');
+      var c = PF ? { tipo: 'todo', txt: '' } : corteVivo(k, ST.v), cm = f.querySelector('[data-f="cmark"]');
+      f.querySelector('.mc-ct').hidden = !!PF;
       f.querySelector('[data-f="corte"]').textContent = c.txt;
       f.querySelector('.mc-ct').className = 'mc-ct ' + c.tipo;
       if (c.tipo === 'marca') { cm.hidden = false; cm.style.left = pct((clampV(k, R.s2v(c.s)) - 0.5) / R.N); }
@@ -632,7 +649,7 @@
     var EV = lista(H.evolucionEstimacion).slice().sort(ordenFecha);
     var fechas = EV.map(function (e) { return e.fecha; }).concat(CT.map(function (c) { return c.fecha; })).sort();
     var x0 = fechas[0], x1 = (DV.ventanaPrueba && DV.ventanaPrueba.hasta) || fechas[fechas.length - 1];
-    var fx = PC.chart.tiempo(x0, x1, 6, ctx.iw - 6), Y0 = 190, Y1 = 265, fy = yTiempos(ctx, Y0, Y1), g = ctx.g;
+    var fx = PC.chart.tiempo(x0, x1, 6, ctx.iw - 6), Y1 = ELIM + 36, Y0 = Y1 - 75, fy = yTiempos(ctx, Y0, Y1), g = ctx.g;
     /* franjas del baremo, con sus puntos a la derecha */
     var bandas = svgEl('g', { 'class': 'mc-bandas' }, g), prev = Y0;
     BT.mil.slice().sort(function (a, b) { return b.pts - a.pts; }).forEach(function (t) {
@@ -644,7 +661,7 @@
       if (y1 - y0 >= 12) tx(bandas, ctx.iw + 6, (y0 + y1) / 2 + 4, String(t.pts), 'mc-bpts');
     });
     tx(g, ctx.iw + 6, ctx.ih + 18, 'pts', 'mc-bpts');
-    PC.chart.ejeY(ctx, fy, [195, 210, 225, 240, 255], function (v) { return mmss(v); });
+    PC.chart.ejeY(ctx, fy, [Y0 + 5, Y0 + 20, Y0 + 35, Y0 + 50, Y0 + 65], function (v) { return mmss(v); });
     PC.chart.ejeFechas(ctx, fx, x0, x1);
     /* prueba y controles por venir */
     var hoy = PC.hoyIso(), rot = [];
@@ -686,7 +703,7 @@
     leyenda(fig, verEst ? [['mc-lg-s1', 'medido'], ['mc-lg-est', 'estimación (hueca, con su rango)']] : null);
     var med = EV.filter(function (e) { return e.medido; }), um = med[med.length - 1];
     PC.chart.etiqueta(ctx, 'Evolución del 1.000 del ' + dm(x0) + ' a la prueba: ' + (um ? 'medido ' + um.estimacion + ' el ' + dm(um.fecha) + (um.banda ? ' (banda ' + um.banda.join('–') + ')' : '') : 'sin medición') +
-      (obj !== null ? '; objetivo ' + mmss(obj) : '') + (suelo !== null ? '; suelo ' + mmss(suelo) : '') + '; 3:49 elimina' + (verEst ? '; con ' + (EV.length - med.length) + ' estimaciones' : '') + '.');
+      (obj !== null ? '; objetivo ' + mmss(obj) : '') + (suelo !== null ? '; suelo ' + mmss(suelo) : '') + '; ' + ELIM_T + ' elimina' + (verEst ? '; con ' + (EV.length - med.length) + ' estimaciones' : '') + '.');
     tablaDatos(fig, [{ cab: ['Fecha', 'Valor', 'Tipo', 'Motivo'], filas: EV.map(function (e) { return [corta(e.fecha), e.estimacion + (e.banda ? ' (' + e.banda.join('–') + ')' : ''), e.medido ? 'medido' : 'estimación', e.motivo || '']; }) }]);
   }
 
@@ -701,7 +718,7 @@
     hl(eje, ctx.ih + 0.5, ctx.iw, 'eje');
     ['200', '400', '600', '800', '1.000'].forEach(function (t, i) { tx(eje, fx(i), ctx.ih + 18, t, null, 'middle'); });
     if (REF200 !== null) { hl(g, fy(REF200), ctx.iw, 'mc-l-obj'); tx(g, 4, fy(REF200) - 4, num(REF200, 1) + ' objetivo', 'lab mc-t-ok'); }
-    var u3b = PC.chart.umbral1000(ctx, { y: fy(ELIM200), etiqueta: 'ritmo del 3:49 · ' + num(ELIM200, 1) + ' s' });
+    var u3b = PC.chart.umbral1000(ctx, { y: fy(ELIM200), etiqueta: 'ritmo del ' + ELIM_T + ' · ' + num(ELIM200, 1) + ' s' });
     var t3b = u3b && u3b.querySelector('text'); if (t3b) { t3b.setAttribute('x', 4); t3b.setAttribute('text-anchor', 'start'); t3b.setAttribute('y', (fy(ELIM200) + 15).toFixed(1)); }
     var nodos = [[], [], [], [], []];
     PF.forEach(function (p, j) {
@@ -719,7 +736,7 @@
     });
     PC.chart.seleccion(ctx, puntos, 2);
     leyenda(fig, PF.map(function (p, j) { return ['mc-lg-s' + (j % 3 + 1), p.etiqueta]; }));
-    PC.chart.etiqueta(ctx, 'Perfil por 200 m: ' + PF.map(function (p) { return p.etiqueta + ' ' + lista(p.tramosS).map(function (t) { return num(t, 1); }).join(', '); }).join('; ') + '. Objetivo ' + num(REF200, 1) + ' s; ritmo del 3:49, ' + num(ELIM200, 1) + ' s.');
+    PC.chart.etiqueta(ctx, 'Perfil por 200 m: ' + PF.map(function (p) { return p.etiqueta + ' ' + lista(p.tramosS).map(function (t) { return num(t, 1); }).join(', '); }).join('; ') + '. Objetivo ' + num(REF200, 1) + ' s; ritmo del ' + ELIM_T + ', ' + num(ELIM200, 1) + ' s.');
     tablaDatos(fig, [{ cab: ['Perfil'].concat(['200', '400', '600', '800', '1.000']), filas: PF.map(function (p) { return [p.etiqueta].concat([0, 1, 2, 3, 4].map(function (i) { var t = lista(p.tramosS)[i]; return t == null ? '' : num(t, 1); })); }) }]);
   }
 
@@ -742,7 +759,7 @@
       nod.push([b]);
     });
     hl(g, fy(REF200), ctx.iw, 'mc-l-obj'); tx(g, -6, fy(REF200) + 4, '', null, 'end');
-    var u12 = PC.chart.umbral1000({ g: g, iw: ctx.iw, ih: alto }, { y: fy(ELIM200), etiqueta: 'ritmo del 3:49 · ' + num(ELIM200, 1) + ' s' });
+    var u12 = PC.chart.umbral1000({ g: g, iw: ctx.iw, ih: alto }, { y: fy(ELIM200), etiqueta: 'ritmo del ' + ELIM_T + ' · ' + num(ELIM200, 1) + ' s' });
     var t12 = u12 && u12.querySelector('text'); if (t12) { t12.setAttribute('x', 4); t12.setAttribute('text-anchor', 'start'); t12.setAttribute('y', (fy(ELIM200) + 15).toFixed(1)); }
     function filaPuntos(vals, y, etq, uni) {
       if (!vals.length) return;

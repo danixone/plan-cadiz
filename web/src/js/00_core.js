@@ -1021,7 +1021,7 @@
       /* línea o raya del 3:49 con data-umbral="229" y rótulo siempre visible */
       umbral1000: function (ctx, op) {
         op = op || {};
-        var etq = op.etiqueta || '3:49 elimina';
+        var etq = op.etiqueta || PC.fmt.t(PC.baremo.ELIMINA_MIL || 229) + ' elimina';
         var g = PC.svg('g', { 'class': 'umbral-1000', 'data-umbral': '229' }, op.padre || ctx.g);
         if (op.orient === 'v') {
           var x = Math.round(op.x) + 0.5;
