@@ -720,13 +720,13 @@
       {
         "semana": "2026-10-13",
         "habituacion": "3 × 5",
-        "fuerza": "5 × 3 con 12,5 kg, el peso del 29-9: el 6 no se hizo (resfriado y desfile) y la quinta del 29 dejó 0 en reserva, así que no sube. Si una serie deja 1 en reserva o menos, es la última del bloque. Nunca un salto de 5 kg",
+        "fuerza": "5 × 3 con 12,5 kg, el peso del 29-9: el 6 no se hizo (resfriado y desfile) y la quinta del 29 dejó 0 en reserva, así que no sube. Si una serie deja 1 en reserva o menos, es la última del bloque. Nunca un salto de 5 kg. Hecho con 12 kg: 1 en reserva desde la primera serie y 0 en la quinta (dicho por él)",
         "porQue": "Semana añadida el 2-10, al pasar la prueba a noviembre: una sesión más de lastre con la regla de siempre, sin cambiarla. Reescrito el 10-10: la regla dependía de la quinta serie del 6, que no se hizo."
       },
       {
         "semana": "2026-10-20",
         "habituacion": "3 × 5",
-        "fuerza": "4 × 3. El peso lo decide la quinta serie del 13. Última sesión pesada, a 13 días del 2 de noviembre",
+        "fuerza": "4 × 3 con 10 kg. Lo decidió la quinta serie del 13: con 12 kg dejó 0 en reserva (y 1 desde la primera), así que no sube ni repite: vuelve al último peso dominado, 10 kg (2 en reserva el 22-9). Última sesión pesada, a 13 días del 2 de noviembre",
         "sabado": "24-10: serie técnica de (válidas del 17-10 − 4), como mucho 8, en vídeo + 2 × 5 con 4 o más en reserva. Solo si codo y hombro han estado en 2/10 o menos"
       },
       {
@@ -1470,7 +1470,7 @@
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "4 × 3 con el peso que salió del 13, sin perseguir cifra. Última sesión pesada, a 13 días del 2 de noviembre",
+          "objetivo": "4 × 3 con 10 kg, el último peso dominado (dejó 2 en reserva el 22-9): el 13, con 12 kg, quedó 1 en reserva desde la primera serie y 0 en la quinta, así que 12 kg no está dominado · si una serie deja 1 en reserva o menos, es la última del bloque, y nunca al fallo. Última sesión pesada, a 13 días del 2 de noviembre",
           "hora": "18:00-19:30"
         },
         {
@@ -1892,7 +1892,7 @@
   "pendientes": [
     {
       "id": "piernas-dominadas",
-      "texto": "Dominadas: en el vídeo del 3-10 las piernas se van por delante en cada subida (cadera a 148-159° arriba, pies 106-141 px por delante). Con el BOE literal, nulas. Grabar de lado cada serie de 3 × 5 hasta que la cadera se quede en 170° o más arriba.",
+      "texto": "Dominadas: en el vídeo del 3-10 las piernas se van por delante en cada subida (cadera a 148-159° arriba, pies 106-141 px por delante). Con el BOE literal, nulas. Grabar de lado cada serie de 3 × 5 hasta que la cadera se quede en 170° o más arriba. Vídeo de lado del 14-10 (3 repeticiones, sesión por confirmar): cadera 171-177° arriba y 177-178° abajo, cumple; los pies, 17-29 cm por delante arriba con el cuerpo recto (se inclina entero, no se dobla). La barbilla no se puede juzgar: la barra va hacia la cámara y la tapa el poste.",
       "desde": "2026-10-03"
     },
     {

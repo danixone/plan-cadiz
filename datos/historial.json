@@ -1183,6 +1183,47 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-13",
+      "sesion": "Arsenal · A y B+D (sesión parcial)",
+      "horaLocal": "20:38 a 21:34",
+      "duracion": "55:30 de reloj, con el entreno «Martes» del reloj (descansos por temporizador)",
+      "series": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 15,
+      "lastreKg": 12,
+      "descanso": "180 s exactos en las cinco series (temporizador del entreno)",
+      "duracionSeriesS": [
+        38,
+        24,
+        30,
+        33,
+        74
+      ],
+      "fcMedia": 88,
+      "fcMax": 129,
+      "bloquesHechos": {
+        "calentamiento": "Bici 8 min + 2 suspensiones de 20 s + 2 × 8 retracciones",
+        "aproximacion": "3 sin lastre (30 s) y 2 con 10 kg (41 s), 180 s de descanso tras cada una",
+        "A": "Dominadas lastradas 5 × 3 con 12 kg según el reloj (el plan pedía 12,5 kg, el peso del 29-9) · descansos de 180 s",
+        "B+D": "Superserie: jalón con 40 kg 6-8-8-8 + sentadilla 4 × 6 con 20 kg · 120 s al final de cada par"
+      },
+      "noHechos": [
+        "H",
+        "C+F",
+        "E+G",
+        "I"
+      ],
+      "valoracion": "SESIÓN PARCIAL, por falta de tiempo y porque el reloj no recomendaba entrenar (dicho por él): A y B+D sí; glúteo medio (H), remo y fondos (C+F), peso muerto rumano y pájaros (E+G) y la I no constan. Empezó a las 20:38, no a las 18:00 del plan. MEDIDO en el FIT: series de A de 38, 24, 30, 33 y 74 s, frente a 25, 26, 46, 43 y 128 s con 12,5 kg el 29-9 (cuya quinta dejó 0 en reserva); si el lastre fue el mismo, más rápidas, lo que apunta a más fáciles (supuesto: la duración no mide la reserva). Fueron 12 kg (confirmado por él), no los 12,5 del plan. Jalón: 8 repeticiones con 40 kg en tres de las cuatro series (el 29-9, 4 × 6; el plan, 4 × 8 con 38 kg). RESERVA (dicha por él): 1 desde la primera serie y 0 en la quinta. La regla del día era que una serie con 1 o menos en reserva fuese la última del bloque, y se hicieron las cinco: segunda vez seguida con la quinta a 0 (el 29-9 también). 12 kg no está dominado: el martes 20 va con 10 kg. Codo y hombro, 0/10. Sin vídeo. Carga del reloj 3 y efecto aeróbico 0,2: no explica las 63 h de recuperación que marcó el reloj el 14.",
+      "repeticionesEnReserva": 0,
+      "reservaPorSerie": "1 en las cuatro primeras y 0 en la quinta, «no es fallo pero no queda ninguna» (dicho por él el 14-10; «casi siempre me queda solo 1»)",
+      "dolorCodoHombro": "0/10 (dicho por él el 14-10)"
+    },
+    {
       "fecha": "2026-10-12",
       "series": [
         5,
@@ -1492,6 +1533,15 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-10-14",
+      "duracion": "5h30",
+      "puntuacion": 70,
+      "calidad": "Aceptable",
+      "vfc": 55,
+      "vfc7dias": "54 ms, «Desequilibrado» (media de 7 días; el 12-10, 51 «Bajo»)",
+      "nota": "Noche del 13 al 14, la primera de trabajo tras el festivo. Captura de Garmin Connect a las 6:53, sin CSV: «Corto, continuo» (poco sueño pero sin interrupciones). VFC de la noche 55 ms, el borde bajo de su referencia (55-69), y 77 ms de máximo en 5 min. Sin hora de dormir ni de despertar. De la noche del 12 al 13 no hay dato."
+    },
     {
       "fecha": "2026-10-12",
       "duracion": "7h19",
@@ -1830,6 +1880,19 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-14",
+      "hora": "6:52-6:53, al levantarse (capturas de Garmin Connect)",
+      "vfc": "54 ms (media de 7 días), Desequilibrada; la noche, 55 ms; máximo de 5 min, 77 ms",
+      "predisposicion": {
+        "valor": 1,
+        "nivel": "Deficiente",
+        "hora": "6:52, al levantarse",
+        "factores": "puntuación de sueño 70 aceptable · tiempo de recuperación 63 h, gran necesidad · VFC 54 ms desequilibrada · carga aguda (cortada en la captura)",
+        "mensaje": "Es hora de reducir el ritmo. Tu VFC desequilibrada puede indicar un exceso de fatiga."
+      },
+      "valoracion": "La predisposición más baja del historial (1; antes, 26 el 28-9 y el 9-10) y el tiempo de recuperación más largo (63 h; el 28-9, 37 h). La VFC de 7 días mejora de «Bajo» (51, el 12-10) a «Desequilibrado» (54), con la noche en 55, el borde bajo de su referencia. Tras el 1.000 del 19-9 el reloj pidió 55 h y tras los 6 × 400 del 28-9, 37 h; el Arsenal del 13 se grabó y apenas suma (carga 3, efecto aeróbico 0,2), así que no viene de ahí. De dónde salen no se puede saber: no se predice lo que calcula el reloj. Con la regla del 10-10, la VFC desequilibrada pone asterisco a la sesión del 14 y no la cambia; la noche de 5h30 no llega al corte del asterisco (5h00)."
+    },
     {
       "fecha": "2026-10-12",
       "hora": "capturas mandadas el 12-10 por la noche, después de las series",

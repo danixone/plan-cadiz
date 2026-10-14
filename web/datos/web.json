@@ -900,14 +900,14 @@
       ]
     },
     "2026-10-20": {
-      "firma": "86c78e45d71a",
+      "firma": "5f8bb6747d45",
       "titulo": "Arsenal: sesión completa",
       "numeros": {
         "verde": [
           {
             "v": "4 × 3",
-            "l": "lastradas · peso del 13",
-            "desde": "4 × 3 con el peso que salió del 13"
+            "l": "lastradas · 10 kg",
+            "desde": "4 × 3 con 10 kg"
           }
         ]
       },
@@ -916,9 +916,9 @@
           "A": {
             "series": 4,
             "reps": 3,
-            "peso": "el peso que salió del 13"
+            "peso": "10 kg"
           },
-          "desde": "4 × 3 con el peso que salió del 13, sin perseguir cifra"
+          "desde": "4 × 3 con 10 kg"
         }
       },
       "calidad": false,
