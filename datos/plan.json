@@ -257,7 +257,7 @@
       "puntos": 5,
       "maximoRegistrado": "10, el 24-8-2026 (y fueron 4 min después de 8 × 200)",
       "aviso": "El «máximo confirmado 12» del plan anterior no aparece en ninguna sesión del historial. La estimación de 13-15 se retira: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza máxima.",
-      "protocolo": "Toda serie máxima se graba en vídeo, de frente y de lado, para contarla y para auditar si el tribunal la daría por buena."
+      "protocolo": "Toda serie máxima se graba en vídeo, con una cámara de tres cuartos a la altura de la barra y la barra a la vista, para contarla y para auditar si el tribunal la daría por buena."
     },
     "circuito": {
       "marca": "9,4 s",
@@ -688,7 +688,7 @@
       {
         "dia": "Sábado",
         "tipo": "técnica + volumen corto, SOLO 3-10 y 24-10",
-        "prescripcion": "Unos 20 min ANTES del rodaje: prep-hombro; 1 × 3 de aproximación y 3 min; serie técnica grabada de frente y de lado (7 el 3-10; el 24-10, las válidas del 17-10 menos 4, como mucho 8; si una repetición sale lenta, se para ahí y se anota); 3 min y 2 × 5 con 4 o más en reserva. Solo con codo y hombro en 2/10 o menos desde el martes",
+        "prescripcion": "Unos 20 min ANTES del rodaje: prep-hombro; 1 × 3 de aproximación y 3 min; serie técnica grabada de tres cuartos (7 el 3-10; el 24-10, las válidas del 17-10 menos 4, como mucho 8; si una repetición sale lenta, se para ahí y se anota); 3 min y 2 × 5 con 4 o más en reserva. Solo con codo y hombro en 2/10 o menos desde el martes",
         "nota": "Cambia de forma expresa la regla anterior «sábado: sin dominadas» (revisión del 28-9). El 17-10 es el simulacro y el 31-10 no lleva máximo"
       },
       {
@@ -746,7 +746,7 @@
       "Criterio de repeticiones en reserva: al acabar la última serie deben quedar 3 o 4 dentro. Si queda solo una, esa sesión se baja a series de 4.",
       "Solo se sube el lastre si la quinta serie dejó 2 repeticiones en reserva. Si costó, se repite peso otra semana.",
       "Nunca al fallo con lastre: ahí se lesionan el codo y el hombro, no el músculo.",
-      "Toda serie máxima se graba en vídeo, de frente y de lado. Un 11 contado por ti puede ser un 9 para el tribunal.",
+      "Toda serie máxima se graba en vídeo. Con una sola cámara (no se pueden grabar dos tomas a la vez, 14-10): de tres cuartos, a unos 45° del lateral, a la altura de la barra y a 3-4 m, con la barra a la vista (no detrás del poste) y el cuerpo entero; así se ven la barbilla frente a la barra, la cadera y las piernas. Un 11 contado por ti puede ser un 9 para el tribunal.",
       "El prep-hombro es obligatorio antes de la barra, también en controles. El 19-9 se saltó y el relato fue «no supe activar los omóplatos» con los bíceps hinchados: patrón de tirar con el codo en vez de con la escápula.",
       "Test máximo solo el 17-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
       "Solo cuentan las repeticiones VÁLIDAS al revisar el vídeo con las nueve reglas del BOE. Las que cuentes tú se anotan aparte y no deciden nada.",
@@ -1892,7 +1892,7 @@
   "pendientes": [
     {
       "id": "piernas-dominadas",
-      "texto": "Dominadas: en el vídeo del 3-10 las piernas se van por delante en cada subida (cadera a 148-159° arriba, pies 106-141 px por delante). Con el BOE literal, nulas. Grabar de lado cada serie de 3 × 5 hasta que la cadera se quede en 170° o más arriba. Vídeo de lado del 14-10 (3 repeticiones, sesión por confirmar): cadera 171-177° arriba y 177-178° abajo, cumple; los pies, 17-29 cm por delante arriba con el cuerpo recto (se inclina entero, no se dobla). La barbilla no se puede juzgar: la barra va hacia la cámara y la tapa el poste.",
+      "texto": "Dominadas: en el vídeo del 3-10 las piernas se van por delante en cada subida (cadera a 148-159° arriba, pies 106-141 px por delante). Con el BOE literal, nulas. Grabar de lado cada serie de 3 × 5 hasta que la cadera se quede en 170° o más arriba. Vídeo de lado de la aproximación de 3 sin lastre del 13-10: cadera 171-177° arriba y 177-178° abajo, cumple; los pies, 17-29 cm por delante arriba con el cuerpo recto (se inclina entero, no se dobla). La barbilla no se puede juzgar: la barra va hacia la cámara y la tapa el poste.",
       "desde": "2026-10-03"
     },
     {
