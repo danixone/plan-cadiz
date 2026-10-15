@@ -751,7 +751,33 @@
       ]
     },
     "2026-10-17": {
-      "firma": "38040a246b44",
+      "firma": "2563a95e03ec",
+      "numeros": {
+        "verde": [
+          {
+            "v": "40 min",
+            "l": "rodaje",
+            "desde": "Rodaje 40 min"
+          },
+          {
+            "v": "techo 145",
+            "l": "primeros 10 min a 140",
+            "desde": "techo 145 · primeros 10 min a 140"
+          }
+        ]
+      },
+      "principal": {
+        "tipo": "rodaje",
+        "min": "40",
+        "desde": "Rodaje 40 min"
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-17].sesion",
+        "plan.calendario[2026-10-17].objetivo"
+      ]
+    },
+    "2026-10-19": {
+      "firma": "07b8180c24c8",
       "numeros": [
         {
           "v": "≤ 3:33",
@@ -772,11 +798,11 @@
       "pasos": [
         {
           "t": "Dominadas al máximo en vídeo",
-          "d": "prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE",
+          "d": "prep-hombro obligatorio, vídeo de tres cuartos (una sola cámara), válidas contadas con las nueve reglas del BOE",
           "enlace": "#tecnica/dominada",
           "desde": [
             "dominadas al máximo en vídeo",
-            "prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE"
+            "prep-hombro obligatorio, vídeo de tres cuartos (una sola cámara), válidas contadas con las nueve reglas del BOE"
           ]
         },
         {
@@ -822,85 +848,13 @@
         "nota"
       ],
       "fuentes": [
-        "plan.calendario[2026-10-17].sesion",
-        "plan.calendario[2026-10-17].objetivo",
-        "plan.calendario[2026-10-17].protocolo"
-      ]
-    },
-    "2026-10-19": {
-      "firma": "097a2632e8c6",
-      "titulo": "8 × 200 m, rec. 2 min",
-      "numeros": {
-        "verde": [
-          {
-            "v": "8 × 200 m",
-            "l": "series",
-            "desde": "8 × 200 m, rec. 2 min"
-          },
-          {
-            "v": "0:41-0:43",
-            "l": "cada una",
-            "desde": "0:41-0:43"
-          },
-          {
-            "v": "2 min",
-            "l": "recuperación",
-            "desde": "rec. 2 min"
-          }
-        ]
-      },
-      "variantes": {
-        "base": "0:41-0:43 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44",
-        "comun": "Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro"
-      },
-      "principal": {
-        "tipo": "series",
-        "n": 8,
-        "dist": 200,
-        "rec": "2 min",
-        "obj": "0:41-0:43",
-        "criterio": {
-          "ok": [
-            "0:41",
-            "0:43"
-          ],
-          "min": "0:40",
-          "corte": "0:44"
-        },
-        "desde": "las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44"
-      },
-      "condicion": {
-        "pregunta": "¿Qué toca hoy?",
-        "opciones": [
-          {
-            "id": "base",
-            "txt": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
-            "fuente": "sesion"
-          },
-          {
-            "id": "domingo",
-            "txt": "si el simulacro pasó al domingo 18 (solo por síntomas por debajo del cuello), rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
-            "principal": {
-              "tipo": "rodaje",
-              "min": "40"
-            }
-          }
-        ],
-        "prellenar": {
-          "clave": "pc-sem-2026-10-17",
-          "campo": "sintomas",
-          "igual": "debajo",
-          "opcion": "domingo"
-        }
-      },
-      "calidad": true,
-      "fuentes": [
         "plan.calendario[2026-10-19].sesion",
-        "plan.calendario[2026-10-19].objetivo"
+        "plan.calendario[2026-10-19].objetivo",
+        "plan.calendario[2026-10-19].protocolo"
       ]
     },
     "2026-10-20": {
-      "firma": "5f8bb6747d45",
+      "firma": "a8e99f84777a",
       "titulo": "Arsenal: sesión completa",
       "numeros": {
         "verde": [
@@ -928,7 +882,7 @@
       ]
     },
     "2026-10-21": {
-      "firma": "f97664e036a2",
+      "firma": "f0978d0cdfa9",
       "titulo": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
       "numeros": {
         "verde": [
@@ -986,7 +940,7 @@
             null
           ]
         },
-        "desde": "600 en 2:07, o 2:06 si el 17 respaldó el bloque C a 3:30"
+        "desde": "600 en 2:07, o 2:06 si el 19 respaldó el bloque C a 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -995,13 +949,13 @@
       ]
     },
     "2026-10-24": {
-      "firma": "2feb0c3da00e",
+      "firma": "b9009dcf517c",
       "numeros": {
         "verde": [
           {
             "v": "serie técnica",
-            "l": "válidas del 17-10 − 4, como mucho 8",
-            "desde": "serie técnica de (válidas del 17-10 − 4), como mucho 8"
+            "l": "válidas del 19-10 − 4, como mucho 8",
+            "desde": "serie técnica de (válidas del 19-10 − 4), como mucho 8"
           },
           {
             "v": "45 min",
@@ -1017,11 +971,11 @@
       },
       "condicion": {
         "calculo": {
-          "de": "pc-dom-2026-10-17",
+          "de": "pc-dom-2026-10-19",
           "campo": "validas",
           "resta": 4,
           "max": 8,
-          "desde": "serie técnica de (válidas del 17-10 − 4), como mucho 8"
+          "desde": "serie técnica de (válidas del 19-10 − 4), como mucho 8"
         },
         "pregunta": "¿Codo y hombro en 2/10 o menos las dos semanas anteriores?",
         "opciones": [
@@ -1095,13 +1049,13 @@
           "desde": "1 × 3 de aproximación y 3 min"
         },
         {
-          "t": "Serie técnica en vídeo, de tres cuartos: válidas del 17-10 − 4, como mucho 8",
+          "t": "Serie técnica en vídeo, de tres cuartos: válidas del 19-10 − 4, como mucho 8",
           "tN": "Serie técnica: 1 serie de {n} dominadas, en vídeo de tres cuartos",
-          "d": "Cuántas: las válidas del 17-10 menos 4, como mucho 8. Si una repetición sale lenta, se para ahí y se anota.",
+          "d": "Cuántas: las válidas del 19-10 menos 4, como mucho 8. Si una repetición sale lenta, se para ahí y se anota.",
           "enlace": "#tecnica/dominada",
           "desde": [
-            "serie técnica de (válidas del 17-10 − 4), como mucho 8, en vídeo",
-            "las válidas del 17-10 menos 4, como mucho 8",
+            "serie técnica de (válidas del 19-10 − 4), como mucho 8, en vídeo",
+            "las válidas del 19-10 menos 4, como mucho 8",
             "serie técnica grabada de tres cuartos",
             "si una repetición sale lenta, se para ahí y se anota"
           ]
@@ -1149,7 +1103,7 @@
       ]
     },
     "2026-10-26": {
-      "firma": "5ab83169083b",
+      "firma": "1204b7237ddd",
       "titulo": "4 × 400 m, rec. 2:30",
       "principal": {
         "tipo": "series",
@@ -1170,7 +1124,7 @@
         "si": {
           "obj": "1:24"
         },
-        "desde": "1:25 con 2:30; 1:24 si el 17 respaldó el bloque C a 3:30"
+        "desde": "1:25 con 2:30; 1:24 si el 19 respaldó el bloque C a 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -1237,7 +1191,7 @@
       ]
     },
     "2026-10-28": {
-      "firma": "25baaad97cd4",
+      "firma": "b8d1fae79496",
       "titulo": "600 m + 400 m, rec. 5 min",
       "numeros": {
         "verde": [
@@ -1248,8 +1202,8 @@
           },
           {
             "v": "2:07 y 1:25",
-            "l": "o 2:06 y 1:24 si el 17 respaldó el 3:30",
-            "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 17 respaldó el 3:30"
+            "l": "o 2:06 y 1:24 si el 19 respaldó el 3:30",
+            "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 19 respaldó el 3:30"
           },
           {
             "v": "0:42",
@@ -1296,7 +1250,7 @@
             }
           ]
         },
-        "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 17 respaldó el 3:30"
+        "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 19 respaldó el 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -1304,11 +1258,21 @@
         "plan.calendario[2026-10-28].objetivo"
       ]
     },
-    "2026-10-31": {
-      "firma": "167384725f4f",
-      "titulo": "Simulacro ligero o sesión «−2 días»",
+    "2026-10-30": {
+      "firma": "e2d0514534a4",
+      "titulo": "Simulacro ligero o descanso",
       "versiones": {
-        "4-6": "v2:Sáb 31",
+        "4-6": "v2:Vie 30"
+      },
+      "fuentes": [
+        "plan.calendario[2026-10-30].siPrueba4a6",
+        "plan.calendario[2026-10-30].siPrueba2o3"
+      ]
+    },
+    "2026-10-31": {
+      "firma": "728522dfd6d9",
+      "titulo": "Sesión «−2 días» o descanso",
+      "versiones": {
         "2-3": "v1:Sáb 31"
       },
       "fuentes": [
@@ -1383,8 +1347,8 @@
         "plan.calendario[v1:Sáb 31].sesion"
       ]
     },
-    "v2:Sáb 31": {
-      "firma": "2839f34dd56c",
+    "v2:Vie 30": {
+      "firma": "4d83bcd53625",
       "numeros": [
         {
           "v": "8",
@@ -1428,7 +1392,7 @@
         "desde": "600 a 2:06 (o 2:07)"
       },
       "fuentes": [
-        "plan.calendario[v2:Sáb 31].sesion"
+        "plan.calendario[v2:Vie 30].sesion"
       ]
     },
     "v2:Lun 2": {
@@ -1474,16 +1438,16 @@
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "aa97b7831a4c",
+      "firma": "500253583287",
       "firmaDe": [
-        "plan.calendario[2026-10-17]",
+        "plan.calendario[2026-10-19]",
         "plan.ritmos[C]"
       ],
-      "pregunta": "¿El 17-10 respaldó el bloque C a 3:30?",
+      "pregunta": "¿El 19-10 respaldó el bloque C a 3:30?",
       "guardar": "pc-bloqueC",
       "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30)",
-      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor.",
-      "fuente": "plan.calendario[2026-10-17].decide · plan.ritmos[C].condicion"
+      "condicion": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor.",
+      "fuente": "plan.calendario[2026-10-19].decide · plan.ritmos[C].condicion"
     }
   },
   "series": {},
@@ -1547,12 +1511,12 @@
       "fuente": "plan.calendario[2026-10-01].objetivo · plan.sesionesTipo.juevesCircuito.decisionSegunEl24"
     },
     {
-      "fecha": "2026-10-17",
-      "firma": "38040a246b44",
+      "fecha": "2026-10-19",
+      "firma": "07b8180c24c8",
       "firmaDe": [
-        "plan.calendario[2026-10-17]"
+        "plan.calendario[2026-10-19]"
       ],
-      "titulo": "Sáb 17-10 · simulacro",
+      "titulo": "Lun 19-10 · simulacro",
       "que": "dominadas al máximo en vídeo · 1.000 m en pista medida",
       "barras": [
         {
@@ -1607,8 +1571,8 @@
           "aparte": "diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica"
         }
       ],
-      "nota": "Mañana del 17 (cambiado el 10-10 al quitar el semáforo): el simulacro se hace el 17. Síntomas por debajo del cuello: no se hace y pasa al domingo 18. Un buen resultado vale siempre y decide el bloque C. Si sale peor de lo que pedía y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no baja nada: el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica",
-      "fuente": "plan.calendario[2026-10-17].decide · plan.calendario[2026-10-17].semaforo"
+      "nota": "El día 19 (desde el 10-10 sin semáforo): el simulacro se hace. Síntomas por debajo del cuello: no se hace y pasa al miércoles 21 a las 18:00, en lugar de los 2 × 600 + 2 × 200",
+      "fuente": "plan.calendario[2026-10-19].decide · plan.calendario[2026-10-19].semaforo"
     }
   ],
   "avisos": [
@@ -1646,18 +1610,18 @@
     {
       "fecha": "2026-09-28",
       "texto": "El bloque B va a 1:26 / 2:08.",
-      "porQue": "El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 17-10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11.",
+      "porQue": "El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 19-10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11.",
       "fuente": "plan.ritmos[B].condicion"
     },
     {
       "fecha": "2026-09-28",
-      "texto": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor.",
+      "texto": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43. Si dio 3:34-3:36, el primer valor.",
       "fuente": "plan.ritmos[C].condicion"
     },
     {
       "fecha": "2026-09-28",
       "texto": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
-      "fuente": "plan.calendario[2026-10-17].lugar"
+      "fuente": "plan.calendario[2026-10-19].lugar"
     },
     {
       "fecha": "2026-09-28",
@@ -1672,7 +1636,7 @@
     },
     {
       "fecha": "2026-09-28",
-      "texto": "Test máximo solo el 17-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
+      "texto": "Test máximo solo el 19-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
       "fuente": "plan.protocoloDominadas.reglas[6]"
     },
     {
@@ -1704,6 +1668,12 @@
       "fecha": "2026-10-10",
       "texto": "Desde el 10-10, a petición suya, no hay semáforo de la mañana: el sueño y la VFC ya no deciden qué se hace.",
       "fuente": "plan.reglas[dia-torcido].texto"
+    },
+    {
+      "fecha": "2026-10-14",
+      "texto": "Decisión suya: el simulacro pasa del sábado 17 al lunes 19 a las 18:00, y el simulacro ligero del sábado 31 (si la prueba es el 4, el 5 o el 6), al viernes 30 a las 18:00.",
+      "porQue": "El 14-10 Daniel avisó de que la pista de Arucas no abre los sábados (según él, sin confirmar); entre semana sí, allí se hicieron los 6 × 400 del 28-9 a las 18:00.",
+      "fuente": "plan.objetivo.pruebasFisicas.cambio14oct"
     }
   ],
   "controlesExtra": [

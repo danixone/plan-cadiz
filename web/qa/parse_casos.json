@@ -387,9 +387,9 @@
    "esperado": 1140
   },
   {
-   "nombre": "horaIni 17-10",
-   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-17'))",
-   "esperado": 570
+   "nombre": "horaIni 19-10 (simulacro a las 18:00 desde el 14-10)",
+   "expr": "PC.cal.horaIni(PC.cal.dia('2026-10-19'))",
+   "esperado": 1080
   },
   {
    "nombre": "horaIni 26-10 no confunde «rec. 2:30» con una hora",
@@ -457,8 +457,8 @@
    "esperado": "C"
   },
   {
-   "nombre": "17-10 sin conflictos (K5 resuelto el 29-9)",
-   "expr": "PC.cal.dia('2026-10-17').conflictos.length",
+   "nombre": "19-10 sin conflictos (K5 resuelto el 29-9)",
+   "expr": "PC.cal.dia('2026-10-19').conflictos.length",
    "esperado": 0
   },
   {
@@ -489,7 +489,7 @@
   {
    "nombre": "31-10 sin versión elegida: sesión base del calendario",
    "expr": "PC.cal.dia('2026-10-31').version === undefined && PC.cal.dia('2026-10-31').tipo",
-   "esperado": "control"
+   "esperado": "carrera"
   },
   {
    "nombre": "entradas sin fecha fija (Prueba, −2 días, −1 día)",
@@ -497,14 +497,14 @@
    "esperado": true
   },
   {
-   "nombre": "17-10: reparto único del simulacro (K5 resuelto el 29-9)",
-   "expr": "JSON.stringify(PC.cal.dia('2026-10-17').principal.repartos)",
+   "nombre": "19-10: reparto único del simulacro (K5 resuelto el 29-9)",
+   "expr": "JSON.stringify(PC.cal.dia('2026-10-19').principal.repartos)",
    "esperado": "{\"objetivo\":[\"0:42\",\"1:24\",\"2:06\",\"2:48\"]}",
    "m1": true
   },
   {
-   "nombre": "17-10: primer 200 entre 0:42 y 0:43 y aviso 3:25-3:35",
-   "expr": "[PC.cal.dia('2026-10-17').principal.primer200, PC.cal.dia('2026-10-17').principal.aviso].join(' · ')",
+   "nombre": "19-10: primer 200 entre 0:42 y 0:43 y aviso 3:25-3:35",
+   "expr": "[PC.cal.dia('2026-10-19').principal.primer200, PC.cal.dia('2026-10-19').principal.aviso].join(' · ')",
    "esperado": "0:42-0:43 · 3:25-3:35",
    "m1": true
   },

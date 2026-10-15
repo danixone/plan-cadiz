@@ -43,8 +43,8 @@ CLAVES_ESTRUCTURA = {'firma', 'firmaDe', 'fuente', 'fuentes', 'corpusSha256', 'p
 # rutas de §10.6.6 donde tiene que verse el 3:49
 RUTAS_UMBRAL = [
     ('marcas/nota', {'abrir': '1'}), ('marcas/controles', {}), ('plan/ritmos', {}), ('tecnica/mil', {}),
-    ('hoy', {'hoy': '2026-10-17'}), ('hoy', {'hoy': '2026-10-16'}),
-    ('hoy', {'hoy': '2026-10-17', 'abrir': 'focus'}), ('hoy', {'hoy': '2026-10-17', 'abrir': 'fue'}),
+    ('hoy', {'hoy': '2026-10-19'}), ('hoy', {'hoy': '2026-10-18'}),
+    ('hoy', {'hoy': '2026-10-19', 'abrir': 'focus'}), ('hoy', {'hoy': '2026-10-19', 'abrir': 'fue'}),
 ]
 # días en que Hoy tiene que pintar la tarjeta de la fecha (§10.5 M2 y fechas de la matriz de §10.6)
 FECHAS_HOY = ['2026-09-29', '2026-09-30', '2026-10-01', '2026-10-03', '2026-10-04', '2026-10-06',

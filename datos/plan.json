@@ -54,7 +54,8 @@
       "lugar": "Cádiz",
       "fecha": "Primera semana de noviembre de 2026 (del lunes 2 al viernes 6; día exacto sin confirmar)",
       "fechaReferencia": "2026-11-02",
-      "cambio2oct": "El 2-10 Daniel comunicó que las pruebas físicas pasan de la última semana de octubre a la primera de noviembre. Decisión: se añade una semana más del bloque B (del 5 al 11 de octubre, con las mismas sesiones que la siguiente) y todo lo que venía del 5-10 en adelante se corre siete días. Así el simulacro (17-10), la última sesión pesada de lastre (20-10) y la descarga (27-10) quedan a la misma distancia de la prueba que antes: el último esfuerzo máximo a 16-20 días y la descarga a 6-10 días. Ninguna estimación de marca cambia: una semana más no se convierte en segundos ni en repeticiones sin inventarlos. Sesiones cortas de barra: siguen siendo dos (3-10 y 24-10), como fijó la revisión del 28-9."
+      "cambio2oct": "El 2-10 Daniel comunicó que las pruebas físicas pasan de la última semana de octubre a la primera de noviembre. Decisión: se añade una semana más del bloque B (del 5 al 11 de octubre, con las mismas sesiones que la siguiente) y todo lo que venía del 5-10 en adelante se corre siete días. Así el simulacro (17-10), la última sesión pesada de lastre (20-10) y la descarga (27-10) quedan a la misma distancia de la prueba que antes: el último esfuerzo máximo a 16-20 días y la descarga a 6-10 días. Ninguna estimación de marca cambia: una semana más no se convierte en segundos ni en repeticiones sin inventarlos. Sesiones cortas de barra: siguen siendo dos (3-10 y 24-10), como fijó la revisión del 28-9.",
+      "cambio14oct": "El 14-10 Daniel avisó de que la pista de Arucas no abre los sábados (según él, sin confirmar); entre semana sí, allí se hicieron los 6 × 400 del 28-9 a las 18:00. Decisión suya: el simulacro pasa del sábado 17 al lunes 19 a las 18:00, y el simulacro ligero del sábado 31 (si la prueba es el 4, el 5 o el 6), al viernes 30 a las 18:00. El sábado 17 queda un rodaje de 40 min, el domingo 18 descanso y el 8 × 200 del 19 se pierde; el martes 20 el lastre va al día siguiente del máximo de dominadas y el miércoles 21, a 48 h del 1.000."
     },
     "examenEscrito": "2026-09-26",
     "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física, y con ella se ordena a los aspirantes para las plazas (base 6.11 del BOE). Corregido el 29-9: la web decía que las físicas no sumaban a la nota final, y era falso.",
@@ -72,7 +73,7 @@
       "comoSePersigue": "NO con más intensidad (revisión del 23-9): con el reparto. El 19-9 corrió 40 / 42 / 46 / 46 / 41 = 3:35 en 1010 m. Con los dos tramos de 46 en 43, el mismo día habría sido 40 / 42 / 43 / 43 / 41 = 3:29. El 3:30 está entero en el tramo 400-800, que es justo lo que atacan el kilómetro partido y los 600. Reparto de examen a 42,0 por 200: 0:42 / 1:24 / 2:06 / 2:48 / meta 3:29-3:30.",
       "condiciones": [
         "Los ritmos suben un escalón SOLO si el anterior se sostiene: el bloque A (1:27 / 2:11) no se toca y se mide el 28 y el 30. Si sale clavado con sobra, el bloque B pasa a 1:25 / 2:07 (ritmo 3:32) y el C a 1:24 / 2:06 (ritmo 3:30). Si la regla de las dos repeticiones salta, se queda en lo que había.",
-        "El simulacro del 17-10 decide el bloque C: ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 → C a 1:24 / 2:06. Entre 3:34 y 3:36 → C a 1:25 / 2:07. Peor → se revisa todo.",
+        "El simulacro del 19-10 decide el bloque C: ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 → C a 1:24 / 2:06. Entre 3:34 y 3:36 → C a 1:25 / 2:07. Peor → se revisa todo.",
         "Sin el perímetro de San Cristóbal medido, un 3:30 en esa pista puede ser 3:26 o 3:34 reales: el objetivo solo se da por conseguido en pista medida u homologada.",
         "Suelo que no se negocia: 3:36 (3 puntos) y, sobre todo, lejos del 3:49."
       ],
@@ -382,19 +383,19 @@
       "porQue": "Anclado al centro de la banda medida. La diferencia con A es 0,8 s por 200, menos que el ruido de una repetición suelta: lo que cambia de verdad no es el ritmo, es la exigencia de regularidad.",
       "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5 y el 12-10, 1:22 el 26-10), la siguiente sale más lenta, no se abandona. En los 200 del 19-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
-      "condicion": "DECIDIDO el 28-9: el bloque B va a 1:26 / 2:08. El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 17-10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11."
+      "condicion": "DECIDIDO el 28-9: el bloque B va a 1:26 / 2:08. El escalón a 1:25 / 2:07 exigía que el 28 y el 30 salieran clavados con sobra. El 28 no es válido (2h14 de sueño) y tampoco fue con sobra (FC 203, casi vómito): la condición ya no se puede cumplir. No es bajar ritmos, es no subirlos (revisión del 23-9). El C sigue pudiendo llegar a 1:24 / 2:06 si el simulacro del 19-10 lo respalda. Si el 30 salta la regla de las dos repeticiones, el B va a 1:27 / 2:11."
     },
     {
       "clave": "C",
       "nombre": "Ritmo de prueba",
-      "objetivo1000": "3:32 → 3:30 si el simulacro del 17-10 lo respalda",
+      "objetivo1000": "3:32 → 3:30 si el simulacro del 19-10 lo respalda",
       "m200": "0:42,5 → 0:42",
       "m400": "1:25 → 1:24",
       "m600": "2:07 → 2:06",
       "cuando": "26 oct - 1 nov y día de la prueba",
       "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5 y el 12-10, 1:22 el 26-10), la siguiente sale más lenta, no se abandona. En los 200 del 19-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
-      "condicion": "El escalón (segundo valor) solo si el 17 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor."
+      "condicion": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor."
     },
     {
       "clave": "VEL",
@@ -403,7 +404,7 @@
       "m200": "0:40-0:41",
       "m400": "1:20-1:22",
       "porQue": "SIN CAMBIOS: 0:40-0:41 es exactamente su máximo medido de 200, el que abrió el 19-9. En los archivos no hay ni un 200 por debajo de 40 s.",
-      "criterio19oct": "Bajada del 23-9: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Antes decía 0:40-0:42."
+      "criterio19oct": "Sin 8 × 200 desde el 14-10: el lunes 19 pasó a ser el simulacro. Los 200 del 21 van a 0:41-0:42. Antes: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44 (bajada del 23-9)."
     }
   ],
   "estructuraSemanal": [
@@ -621,7 +622,7 @@
           "duracionMin": 10
         }
       ],
-      "inamovible": "Los jueves a las 21:30 con el preparador. No se puede hacer otro día ni un sábado. Por eso el circuito de los simulacros del 17 y del 31 se hace el jueves anterior (15 y 29).",
+      "inamovible": "Los jueves a las 21:30 con el preparador. No se puede hacer otro día ni un sábado. Por eso el circuito de los simulacros del 19 y del 30 (este, si la prueba es el 4, el 5 o el 6) se hace el jueves anterior (15 y 29).",
       "decisionSegunEl24": {
         "9,0-9,3": "8 puntos. Nada cambia.",
         "9,4-9,7": "7 puntos. Jueves completo con técnica.",
@@ -654,7 +655,7 @@
     }
   },
   "protocoloDominadas": {
-    "puntoDePartida": "11 autoinformado el 19-9-2026, sin vídeo y probablemente sin la pausa de la regla 6 del BOE: con el estándar estricto pueden ser 9-11. No hay ni una repetición validada todavía. El primer número que vale es el del 17-10 en vídeo.",
+    "puntoDePartida": "11 autoinformado el 19-9-2026, sin vídeo y probablemente sin la pausa de la regla 6 del BOE: con el estándar estricto pueden ser 9-11. No hay ni una repetición validada todavía. El primer número que vale es el del 19-10 en vídeo.",
     "diagnostico": "El 24/08 hizo 10 · 7 · 4 con casi 4 min de descanso. Conservar solo el 40 % de la primera serie con descanso completo significa falta de reserva de fuerza, no de aguante. Por eso más repeticiones a peso corporal no suben el techo: lo que lo sube es la fuerza máxima relativa.",
     "cuando": [
       {
@@ -688,8 +689,8 @@
       {
         "dia": "Sábado",
         "tipo": "técnica + volumen corto, SOLO 3-10 y 24-10",
-        "prescripcion": "Unos 20 min ANTES del rodaje: prep-hombro; 1 × 3 de aproximación y 3 min; serie técnica grabada de tres cuartos (7 el 3-10; el 24-10, las válidas del 17-10 menos 4, como mucho 8; si una repetición sale lenta, se para ahí y se anota); 3 min y 2 × 5 con 4 o más en reserva. Solo con codo y hombro en 2/10 o menos desde el martes",
-        "nota": "Cambia de forma expresa la regla anterior «sábado: sin dominadas» (revisión del 28-9). El 17-10 es el simulacro y el 31-10 no lleva máximo"
+        "prescripcion": "Unos 20 min ANTES del rodaje: prep-hombro; 1 × 3 de aproximación y 3 min; serie técnica grabada de tres cuartos (7 el 3-10; el 24-10, las válidas del 19-10 menos 4, como mucho 8; si una repetición sale lenta, se para ahí y se anota); 3 min y 2 × 5 con 4 o más en reserva. Solo con codo y hombro en 2/10 o menos desde el martes",
+        "nota": "Cambia de forma expresa la regla anterior «sábado: sin dominadas» (revisión del 28-9). El 19-10 (lunes) es el simulacro y el 31-10 no lleva máximo"
       },
       {
         "dia": "Domingo",
@@ -727,7 +728,7 @@
         "semana": "2026-10-20",
         "habituacion": "3 × 5",
         "fuerza": "4 × 3 con 10 kg. Lo decidió la quinta serie del 13: con 12 kg dejó 0 en reserva (y 1 desde la primera), así que no sube ni repite: vuelve al último peso dominado, 10 kg (2 en reserva el 22-9). Última sesión pesada, a 13 días del 2 de noviembre",
-        "sabado": "24-10: serie técnica de (válidas del 17-10 − 4), como mucho 8, en vídeo + 2 × 5 con 4 o más en reserva. Solo si codo y hombro han estado en 2/10 o menos"
+        "sabado": "24-10: serie técnica de (válidas del 19-10 − 4), como mucho 8, en vídeo + 2 × 5 con 4 o más en reserva. Solo si codo y hombro han estado en 2/10 o menos"
       },
       {
         "semana": "2026-10-27",
@@ -748,7 +749,7 @@
       "Nunca al fallo con lastre: ahí se lesionan el codo y el hombro, no el músculo.",
       "Toda serie máxima se graba en vídeo. Con una sola cámara (no se pueden grabar dos tomas a la vez, 14-10): de tres cuartos, a unos 45° del lateral, a la altura de la barra y a 3-4 m, con la barra a la vista (no detrás del poste) y el cuerpo entero; así se ven la barbilla frente a la barra, la cadera y las piernas. Un 11 contado por ti puede ser un 9 para el tribunal.",
       "El prep-hombro es obligatorio antes de la barra, también en controles. El 19-9 se saltó y el relato fue «no supe activar los omóplatos» con los bíceps hinchados: patrón de tirar con el codo en vez de con la escápula.",
-      "Test máximo solo el 17-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
+      "Test máximo solo el 19-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
       "Solo cuentan las repeticiones VÁLIDAS al revisar el vídeo con las nueve reglas del BOE. Las que cuentes tú se anotan aparte y no deciden nada.",
       "Sesión extra de barra solo los sábados 3-10 y 24-10, antes del rodaje. Nunca después de series, nunca en jueves, viernes o domingo. Si se pierde, no se suma a otra sesión. Nada de dominadas diarias, repartidas por el día ni excéntricas: con el lastre subiendo, más volumen de golpe es la vía típica al dolor de codo.",
       "Mala noche en día de fuerza: se hace con el peso ya dominado y se pierde la subida, no el día.",
@@ -1026,7 +1027,7 @@
       "material": [],
       "tecnica": [
         "Las tres pruebas en el orden del BOE: circuito → dominadas → 1.000 m.",
-        "El circuito es inamovible los jueves con el preparador: el del simulacro se hace el jueves anterior (15-10) con UN intento como el BOE, y el sábado (17-10) van dominadas al máximo en vídeo y, 20 min después, el 1.000. Corregido el 29-9 (K7): antes decía «un jueves en el gimnasio»."
+        "El circuito es inamovible los jueves con el preparador: el del simulacro se hace el jueves anterior (15-10) con UN intento como el BOE, y el lunes (19-10) van dominadas al máximo en vídeo y, 20 min después, el 1.000. Corregido el 29-9 (K7): antes decía «un jueves en el gimnasio»."
       ]
     },
     {
@@ -1326,7 +1327,7 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 CIRCUITO DEL SIMULACRO: fresco, UN intento cronometrado como el BOE (segundo solo si nulo)",
-          "objetivo": "el tiempo de ese intento es el que va al simulacro. Si sale peor que el 9,4 del 1-10 y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no rebaja escenarios. El circuito es inamovible con el preparador: por eso no puede ir al sábado",
+          "objetivo": "el tiempo de ese intento es el que va al simulacro. Si sale peor que el 9,4 del 1-10 y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no rebaja escenarios. El circuito es inamovible con el preparador: por eso no puede ir al lunes 19",
           "clave": true
         },
         {
@@ -1338,18 +1339,38 @@
         {
           "fecha": "2026-10-17",
           "dia": "Sáb",
+          "tipo": "carrera",
+          "sesion": "Rodaje 40 min + elevaciones de talón",
+          "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 innegociables · sin saltos ni barra: el lunes 19 es el simulacro, con el máximo de dominadas",
+          "nota": "Era el simulacro: pasó al lunes 19 a las 18:00 el 14-10, porque la pista de Arucas no abre los sábados (según él, sin confirmar)."
+        },
+        {
+          "fecha": "2026-10-18",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Descanso. Mañana, el simulacro"
+        }
+      ]
+    },
+    {
+      "semana": "2026-10-19/2026-10-25",
+      "titulo": "Velocidad específica",
+      "dias": [
+        {
+          "fecha": "2026-10-19",
+          "dia": "Lun",
           "tipo": "control",
           "sesion": "SIMULACRO: dominadas al máximo en vídeo → 20 min → 1.000 m en pista medida (el circuito se hizo el jueves 15)",
           "objetivo": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48) y los tramos 400-600 y 600-800 en 43 · dominadas: anotar por separado las que cuentes tú y las VÁLIDAS al revisar el vídeo con las nueve reglas del BOE; objetivo ≥ 12 válidas",
           "clave": true,
-          "hora": "09:30-10:00, la misma que el 31 de octubre",
-          "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con la sesión «Simulacro 1.000» de Garmin Connect: cinco pasos de 200 m que pitan solos, y durante el 1.000 no se toca el botón de vuelta (decidido el 9-10; antes, botón de vuelta al pasar por la salida). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo lateral y frontal, válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
+          "hora": "18:00, después del trabajo: la misma hora que el simulacro ligero del viernes 30 (si la prueba es el 4, el 5 o el 6)",
+          "protocolo": "Pista: la de Arucas si sus marcas confirman los 400 m; si no, pista homologada o perímetro medido con rueda o cinta. Sin calibración de cuatro vueltas. Reparto del examen: 0:42 / 1:24 / 2:06 / 2:48, meta 3:29-3:30, con la sesión «Simulacro 1.000» de Garmin Connect: cinco pasos de 200 m que pitan solos, y durante el 1.000 no se toca el botón de vuelta (decidido el 9-10; antes, botón de vuelta al pasar por la salida). Primer 200 por reloj entre 0:42 y 0:43, nunca por debajo de 0:42 (el 19-9 salió en 0:40). Aviso de ritmo 3:25-3:35. Si al 400 vas más de 2 s por detrás del reparto, no se persigue: se sostiene 0:43 por 200 hasta la meta y el dato sigue valiendo para decidir el bloque C. Anotar juntos los tramos 400-600 y 600-800. Dominadas: prep-hombro obligatorio, vídeo de tres cuartos (una sola cámara), válidas contadas con las nueve reglas del BOE. Comida 3-3,5 h antes de la primera prueba (a la salida del trabajo) y tentempié a 45-60 min del 1.000. Resuelto el 29-9 (K5): antes el protocolo decía 0:43 / 1:26 / 2:09 / 2:52 y primer 200 entre 0:42 y 0:45, un texto anterior al objetivo de bajar de 3:30 que no se había actualizado.",
           "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30) y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo; si no, C a 1:25 / 2:07. 3:34-3:36 → C a 1:25 / 2:07. Peor de 3:36 → se revisan todos los ritmos. Objetivo de Cádiz: bajar de 3:30. Dominadas: diferencia de 2 o más entre las contadas y las válidas → la prioridad es la técnica; 11 o menos válidas → asegurar 12 (técnica); 12 o más → no se añade nada. Es el primer número de dominadas validado del historial.",
           "lugar": "Pista de Arucas si las marcas pintadas confirman los 400 m (o perímetro medido); si no, pista homologada",
-          "semaforo": "Mañana del 17 (cambiado el 10-10 al quitar el semáforo): el simulacro se hace el 17. Síntomas por debajo del cuello: no se hace y pasa al domingo 18. Un buen resultado vale siempre y decide el bloque C. Si sale peor de lo que pedía y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no baja nada: el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica",
+          "semaforo": "El día 19 (desde el 10-10 sin semáforo): el simulacro se hace. Síntomas por debajo del cuello: no se hace y pasa al miércoles 21 a las 18:00, en lugar de los 2 × 600 + 2 × 200. Un buen resultado vale siempre y decide el bloque C. Si sale peor de lo que pedía y hay asterisco (noche de menos de 5h00, VFC «Desequilibrado» o «Bajo», «Sobrecarga» o mocos), se anota y no baja nada: el C se queda en 1:25 / 2:07 y las dominadas no bajan objetivos; el vídeo sí vale para la técnica",
           "preparatorio": {
-            "titulo": "Preparatorio del simulacro del 17-10",
-            "escrito": "9-10-2026, a petición suya",
+            "titulo": "Preparatorio del simulacro del 19-10",
+            "escrito": "9-10-2026, a petición suya; pasado al lunes 19 el 14-10",
             "tiempos": {
               "nota": "Reparto plano del examen, a 0:42 por 200. El simulacro se aprueba con 3:33 o menos y los tramos 400-600 y 600-800 en 43.",
               "pasos": [
@@ -1412,23 +1433,31 @@
               },
               {
                 "cuando": "Viernes 16",
-                "que": "Descanso, sin barra. Hombro derecho de 0 a 10: si sigue en 3 o más, ese día se decide si el máximo de dominadas se hace o se mueve. Luz apagada a las 22:15."
+                "que": "Descanso, sin barra. Luz apagada a las 22:15."
               },
               {
-                "cuando": "Sábado 17, al levantarte",
-                "que": "Semáforo quitado el 10-10: se hace. Solo con síntomas por debajo del cuello no se hace (pasa al domingo 18). Apunta las horas de sueño y la VFC: si sale peor de lo que pedía, con asterisco no baja nada."
+                "cuando": "Sábado 17",
+                "que": "Rodaje 40 min con techo 145 y elevaciones de talón. Sin barra ni saltos."
+              },
+              {
+                "cuando": "Domingo 18",
+                "que": "Descanso. Hombro derecho de 0 a 10: si sigue en 3 o más, ese día se decide si el máximo de dominadas se hace o se mueve. Luz apagada a las 22:15."
+              },
+              {
+                "cuando": "Lunes 19, al levantarte",
+                "que": "Semáforo quitado el 10-10: se hace. Solo con síntomas por debajo del cuello no se hace (pasa al miércoles 21 a las 18:00). Apunta las horas de sueño y la VFC: si sale peor de lo que pedía, con asterisco no baja nada."
               },
               {
                 "cuando": "3-3,5 h antes",
-                "que": "Comida, contada desde la primera prueba (las dominadas, a las 9:30): hacia las 6:00-6:30. Lo que se come es de la pauta de la nutricionista."
+                "que": "Comida a la salida del trabajo, hacia las 14:45-15:15, contada desde la primera prueba (las dominadas, hacia las 18:15). Lo que se come es de la pauta de la nutricionista."
               },
               {
-                "cuando": "9:30",
+                "cuando": "18:00",
                 "que": "Actividad de calentamiento (aparte del 1.000): trote por pulso con techo 145, movilidad y prep-hombro OBLIGATORIO (2 suspensiones de 20 s + 2 × 8 retracciones)."
               },
               {
                 "cuando": "Dominadas",
-                "que": "Al máximo, en vídeo de lado y de frente. Piernas juntas y verticales, pausa abajo, barra al tercio inferior del cuello. Se anotan las que cuentas tú y, después, las válidas en el vídeo con las nueve reglas del BOE."
+                "que": "Al máximo, en vídeo de tres cuartos (una sola cámara a la altura de la barra, con la barra a la vista y el cuerpo entero). Piernas juntas y verticales, pausa abajo, barra al tercio inferior del cuello. Se anotan las que cuentas tú y, después, las válidas en el vídeo con las nueve reglas del BOE."
               },
               {
                 "cuando": "20 min",
@@ -1440,37 +1469,17 @@
               },
               {
                 "cuando": "Después",
-                "que": "Mandar el .fit original (Exportar original), las dominadas contadas y los vídeos, y el sueño de la noche."
+                "que": "Mandar el .fit original (Exportar original), las dominadas contadas y el vídeo, y el sueño de la noche."
               }
             ]
           }
-        },
-        {
-          "fecha": "2026-10-18",
-          "dia": "Dom",
-          "tipo": "descanso",
-          "sesion": "Descanso. No añadir rodaje: tras el 1.000 del 19-9 el reloj pidió 55 h"
-        }
-      ]
-    },
-    {
-      "semana": "2026-10-19/2026-10-25",
-      "titulo": "Velocidad específica",
-      "dias": [
-        {
-          "fecha": "2026-10-19",
-          "dia": "Lun",
-          "tipo": "carrera",
-          "sesion": "3 × 5 dominadas + 8 × 200 m, rec. 2 min",
-          "objetivo": "0:41-0:43 · criterio: las 8 entre 0:41 y 0:43, ninguna por debajo de 0:40, corte a 0:44. Es una BAJADA respecto a 0:40-0:42: cae a 55 h del simulacro · si una llega a 200 ppm antes de la última, esa es la última · si el simulacro pasó al domingo 18 (solo por síntomas por debajo del cuello), rodaje de 40 min con techo 145 y el 8 × 200 se pierde",
-          "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-20",
           "dia": "Mar",
           "tipo": "fuerza",
           "sesion": "Arsenal: sesión completa",
-          "objetivo": "4 × 3 con 10 kg, el último peso dominado (dejó 2 en reserva el 22-9): el 13, con 12 kg, quedó 1 en reserva desde la primera serie y 0 en la quinta, así que 12 kg no está dominado · si una serie deja 1 en reserva o menos, es la última del bloque, y nunca al fallo. Última sesión pesada, a 13 días del 2 de noviembre",
+          "objetivo": "4 × 3 con 10 kg, el último peso dominado (dejó 2 en reserva el 22-9): el 13, con 12 kg, quedó 1 en reserva desde la primera serie y 0 en la quinta, así que 12 kg no está dominado · si una serie deja 1 en reserva o menos, es la última del bloque, y nunca al fallo. Última sesión pesada, a 13 días del 2 de noviembre · al día siguiente del simulacro: con codo u hombro en 3 o más tras el máximo, la A sin lastre (regla 10 de la barra)",
           "hora": "18:00-19:30"
         },
         {
@@ -1478,7 +1487,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
-          "objetivo": "600 en 2:07, o 2:06 si el 17 respaldó el bloque C a 3:30 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · último miércoles con series largas · cada 200 de los 600, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
+          "objetivo": "600 en 2:07, o 2:06 si el 19 respaldó el bloque C a 3:30 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · último miércoles con series largas · cada 200 de los 600, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · a 48 h del 1.000 del simulacro",
           "hora": "18:00-19:00"
         },
         {
@@ -1499,7 +1508,7 @@
           "dia": "Sáb",
           "tipo": "carrera",
           "sesion": "Sesión corta de barra ANTES del rodaje (unos 20 min) + rodaje 45 min + 10 min de gemelo, saltos y core",
-          "objetivo": "Barra: prep-hombro · 1 × 3 · serie técnica de (válidas del 17-10 − 4), como mucho 8, en vídeo · 2 × 5 con 4 o más en reserva · solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores; si no, solo la serie técnica. Rodaje: techo 145 · primeros 10 min a 140 · 45 min y NO 55: bajada deliberada antes de «llegar entero» · elevaciones de talón 3 × 15 · comparar deriva con el 16-9 y con el 3-10 y el 10-10 recortados a 45"
+          "objetivo": "Barra: prep-hombro · 1 × 3 · serie técnica de (válidas del 19-10 − 4), como mucho 8, en vídeo · 2 × 5 con 4 o más en reserva · solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores; si no, solo la serie técnica. Rodaje: techo 145 · primeros 10 min a 140 · 45 min y NO 55: bajada deliberada antes de «llegar entero» · elevaciones de talón 3 × 15 · comparar deriva con el 16-9 y con el 3-10 y el 10-10 recortados a 45"
         },
         {
           "fecha": "2026-10-25",
@@ -1519,7 +1528,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30",
-          "objetivo": "1:25 con 2:30; 1:24 si el 17 respaldó el bloque C a 3:30 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25; 0:42 a 1:24): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
+          "objetivo": "1:25 con 2:30; 1:24 si el 19 respaldó el bloque C a 3:30 · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25; 0:42 a 1:24): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
           "hora": "18:00-19:00"
         },
         {
@@ -1535,7 +1544,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:07 y 1:25; o 2:06 y 1:24 si el 17 respaldó el 3:30 · primer 200 en 0:42 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
+          "objetivo": "2:07 y 1:25; o 2:06 y 1:24 si el 19 respaldó el 3:30 · primer 200 en 0:42 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
           "hora": "18:00-19:00"
         },
         {
@@ -1548,20 +1557,22 @@
         {
           "fecha": "2026-10-30",
           "dia": "Vie",
-          "tipo": "descanso",
-          "sesion": "Descanso"
-        },
-        {
-          "fecha": "2026-10-31",
-          "dia": "Sáb",
           "tipo": "control",
           "sesion": "Depende de la fecha de la prueba (dos versiones)",
           "objetivo": "acabar con sensación de sobra",
           "clave": true,
-          "hora": "09:30-10:00",
-          "protocolo": "Sin máximo de dominadas: serie técnica de 8 en vídeo con prep-hombro (cambio del 28-9: los máximos quedan en el 17-10 y la prueba).",
-          "siPrueba4a6": "SIMULACRO LIGERO: serie técnica de 8 dominadas en vídeo (prep-hombro obligatorio), NO un máximo, + 600 m a 2:06 (o 2:07 si el bloque C se quedó en 3:32). Sin circuito: se hizo el jueves 29.",
-          "siPrueba2o3": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. SIN test máximo de dominadas ni 600: el último test fue el 17."
+          "hora": "18:00, después del trabajo: la misma hora que el simulacro del lunes 19",
+          "protocolo": "Sin máximo de dominadas: serie técnica de 8 en vídeo con prep-hombro (cambio del 28-9: los máximos quedan en el 19-10 y la prueba).",
+          "siPrueba4a6": "SIMULACRO LIGERO: serie técnica de 8 dominadas en vídeo (prep-hombro obligatorio), NO un máximo, + 600 m a 2:06 (o 2:07 si el bloque C se quedó en 3:32). A las 18:00 en Arucas. Sin circuito: se hizo el jueves 29.",
+          "siPrueba2o3": "Descanso"
+        },
+        {
+          "fecha": "2026-10-31",
+          "dia": "Sáb",
+          "tipo": "carrera",
+          "sesion": "Depende de la fecha de la prueba (dos versiones)",
+          "siPrueba4a6": "Descanso, o 15 min muy suaves: el simulacro ligero pasó al viernes 30 a las 18:00 (14-10)",
+          "siPrueba2o3": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. SIN test máximo de dominadas ni 600: el último test fue el 19."
         },
         {
           "fecha": "2026-11-01",
@@ -1574,7 +1585,7 @@
     {
       "semana": "2026-11-02/2026-11-08",
       "titulo": "Afinamiento y prueba · dos versiones según la fecha",
-      "nota": "La fecha exacta no se conoce (primera semana de noviembre, del lunes 2 al viernes 6). Se elige la versión en cuanto llegue el llamamiento. En las dos: un solo 1.000 a tope en octubre (el 17), el último esfuerzo máximo de carrera a 16-20 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba.",
+      "nota": "La fecha exacta no se conoce (primera semana de noviembre, del lunes 2 al viernes 6). Se elige la versión en cuanto llegue el llamamiento. En las dos: un solo 1.000 a tope en octubre (el 19), el último esfuerzo máximo de carrera a 14-18 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba.",
       "versiones": [
         {
           "nombre": "Si la prueba es el lunes 2 o el martes 3",
@@ -1597,7 +1608,7 @@
             {
               "dia": "Prueba",
               "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 17-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 19-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
               "clave": true
             }
           ]
@@ -1606,10 +1617,15 @@
           "nombre": "Si la prueba es el miércoles 4, el jueves 5 o el viernes 6",
           "dias": [
             {
-              "dia": "Sáb 31",
+              "dia": "Vie 30",
               "tipo": "control",
-              "sesion": "Simulacro ligero: serie técnica de 8 dominadas en vídeo (no un máximo) + 600 a 2:06 (o 2:07). El circuito, el jueves 29",
+              "sesion": "Simulacro ligero: serie técnica de 8 dominadas en vídeo (no un máximo) + 600 a 2:06 (o 2:07). A las 18:00 en Arucas. El circuito, el jueves 29",
               "clave": true
+            },
+            {
+              "dia": "Sáb 31",
+              "tipo": "descanso",
+              "sesion": "Descanso, o 15 min muy suaves"
             },
             {
               "dia": "Lun 2",
@@ -1629,7 +1645,7 @@
             {
               "dia": "Prueba",
               "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 17-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 19-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
               "clave": true
             }
           ]
@@ -1659,7 +1675,7 @@
       "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
       "orden": "circuito → dominadas → 1.000 m",
       "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz.",
-      "nota": "Reparto plano a 42,0 por 200 para bajar de 3:30. Es el reparto que también manda en el simulacro del 17-10 (allí con meta ≤ 3:33, porque está a 16-20 días).",
+      "nota": "Reparto plano a 42,0 por 200 para bajar de 3:30. Es el reparto que también manda en el simulacro del 19-10 (allí con meta ≤ 3:33, porque está a 16-20 días).",
       "dominadas": "Hacer 13 por tu cuenta para que el tribunal cuente 12: la repetición de margen es la única cobertura frente al recuento."
     }
   },
@@ -1759,7 +1775,7 @@
     {
       "id": "no-testear",
       "titulo": "No testear de más",
-      "texto": "Solo los controles marcados: el simulacro del 17 de octubre y la prueba. El 31 de octubre no lleva máximo de dominadas (serie técnica de 8) y su carrera depende de la fecha de la prueba. Testear cada semana desgasta y no informa. Actualizado el 29-9 (K6) y el 2-10 (la prueba pasa a noviembre)."
+      "texto": "Solo los controles marcados: el simulacro del 19 de octubre y la prueba. El 31 de octubre no lleva máximo de dominadas (serie técnica de 8) y su carrera depende de la fecha de la prueba. Testear cada semana desgasta y no informa. Actualizado el 29-9 (K6) y el 2-10 (la prueba pasa a noviembre)."
     },
     {
       "id": "dos-repeticiones",
@@ -1897,7 +1913,7 @@
     },
     {
       "id": "pista-arucas",
-      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. Si lo es, el simulacro del 17 va allí.",
+      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. Si lo es, el simulacro del lunes 19 va allí (entre semana abre: allí se hicieron los 6 × 400 del 28-9; los sábados no abre, según él).",
       "desde": "2026-09-28"
     },
     {

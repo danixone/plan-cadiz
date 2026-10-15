@@ -5,6 +5,111 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-14",
+      "sesion": "3 × 600 m, rec. 3 min · pista de Arucas, perfil Pista del reloj",
+      "objetivo": "2:08 con 3 min · los tres dentro de 3 s · primera repetición con el primer 200 en 0:43 o más lento · cada 200 a ±1 s de su paso (0:42,7): si uno sale lento, el siguiente no lo compensa · si una llega a 200 ppm antes de la última, esa es la última",
+      "valida": true,
+      "horaInicioLocal": "18:56 la barra, 19:13 el trote (primera serie 19:43; fin hacia las 20:00)",
+      "resultado": {
+        "tiemposS": [
+          125.7,
+          129.8,
+          130.8
+        ],
+        "media": "128,77 s (2:08,8)",
+        "parciales200": [
+          [
+            40.7,
+            42.0,
+            43.0
+          ],
+          [
+            43.1,
+            43.6,
+            43.1
+          ],
+          [
+            43.2,
+            44.9,
+            42.7
+          ]
+        ],
+        "fcMaxPorSerie": [
+          192,
+          193,
+          196
+        ],
+        "fcMediaPorSerie": [
+          182,
+          183,
+          185
+        ],
+        "fcInicioSerie": [
+          129,
+          142,
+          150
+        ],
+        "recuperaciones": {
+          "duracionS": 180,
+          "tipo": "andando (200-210 m en 3 min)",
+          "fcFinal": [
+            141,
+            150
+          ],
+          "bajadaEn60s": [
+            31,
+            36
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 180,
+          "60s": 167,
+          "90s": 162,
+          "120s": 153,
+          "180s": 155,
+          "240s": 138
+        },
+        "fcMax": 196,
+        "potenciaMediaSerieW": [
+          427,
+          437,
+          435
+        ],
+        "contactoMsSerie": [
+          203,
+          207,
+          209
+        ],
+        "efectoAerobico": 3.0,
+        "efectoAnaerobico": 3.6,
+        "cargaSesion": 192,
+        "calentamiento": "Barra antes del trote (18:56-19:09): 2 × 8 retracciones y 3 × 5 dominadas; las suspensiones no constan en el reloj. Trote 12 min (1.540 m a 7:48 /km, FC 142 de media y 154 de máximo), progresivos 5 × 80 m con 90 s y 4 min hasta la primera serie. Vuelta a la calma: 4:20 (420 m), no los 10 min del plan. Carga del día, sumando las cuatro actividades: 246 (8 + 12 + 36 + 192).",
+        "fcTroteCalentamiento": "142 de media a 7:48 /km, 196 s de 722 por encima de 145 (27 %), máximo 154; el aviso de FC alta saltó varias veces (eventos del FIT). El 12-10, 137 a 8:05: hoy más rápido y por encima del techo.",
+        "progresivos": {
+          "n": 5,
+          "distanciaM": 80,
+          "tiemposS": [
+            17.1,
+            16.4,
+            15.1,
+            16.3,
+            16.3
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            158,
+            157,
+            155,
+            156,
+            163
+          ],
+          "nota": "El tercero, el más rápido (15,1); los dos últimos, 16,3, por delante del ritmo K del bloque B (17,1 en 80 m)."
+        },
+        "relojConfigurado": "Perfil Pista del reloj (modo pista): las vueltas de 200 m salen de una pista de 400 m por construcción, así que no verifican la pista. Entreno «3x600». El FIT no guarda avisos de ritmo; sí los de FC alta del trote."
+      },
+      "valoracion": "VÁLIDA: los tres dentro de 3 s (2:05,7 · 2:09,8 · 2:10,8, media 2:08,8 frente a 2:08). Con asterisco por la VFC (54, «Desequilibrada»), que no hace falta: el resultado es bueno. En Arucas, que entre semana abre (lugar medido por GPS: 28,1125 N, 15,5200 O), con el perfil Pista: los 200 salen de una pista de 400 por construcción y la homologación sigue sin confirmar. PRIMER 200 de la primera: 40,7 cuando pedía 0:43 o más lento; quinta vez (40,0 · 40,6 · 40,3 · 41,3 · 40,7), segunda con la regla escrita, sin cumplir; el segundo 200 fue a 42,0, algo por delante del paso (42,7). La primera, la más rápida (2:05,7), y las otras dos 4-5 s más lentas: el dibujo de siempre, salir por delante y pagarlo después. REGLA DE LOS 200 (del 12-10), primera vez aplicada: en la tercera, tras un 44,9, el siguiente fue 42,7, sin compensar; cumplida. El 40,7 del principio la incumple. FC máxima 192-196, sin llegar a 200; recuperación en 3 min andando hasta 141-150 (bajada de 31-36 en el primer minuto). Comparación: los 600 del kilómetro partido del 30-9, 2:11,3 y 2:10,7 con otra recuperación; no se comparan como mejora. Trote del calentamiento por encima del techo 145 un 27 % del tiempo, más rápido que el 12-10. Progresivos: el tercero a 15,1 y los dos últimos a 16,3, por delante del ritmo K: tercera sesión seguida con los últimos por delante del K (30-9, 12-10, 14-10). Vuelta a la calma de 4 min. Codo y hombro sin dato."
+    },
+    {
       "fecha": "2026-10-12",
       "sesion": "5 × 400 m, rec. 2 min · bucle del parque San Cristóbal (sin modo pista)",
       "objetivo": "1:26 con 2 min · los cinco dentro de 3 s · primera repetición con el primer 200 en 0:43 o más lento (si baja de 0:42, el segundo 200 al ritmo) · freno si baja de 1:23 · si una llega a 200 ppm antes de la última, esa es la última · comparar con el 5",
@@ -1183,6 +1288,24 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-14",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "lastreKg": 0,
+      "duracionSeriesS": [
+        20,
+        19,
+        18
+      ],
+      "descanso": "sin dato exacto: la actividad de barra duró 12:31 con 2 × 8 retracciones antes",
+      "contexto": "miércoles, antes del trote de los 3 × 600, en Arucas (actividad de fuerza aparte, 18:56)",
+      "valoracion": "Del FIT: 3 × 5 sin lastre, 18-20 s por serie, tras 2 × 8 retracciones; las suspensiones no constan. Sin reserva, sin nota de codo y hombro y sin vídeo."
+    },
+    {
       "fecha": "2026-10-13",
       "sesion": "Arsenal · A y B+D (sesión parcial)",
       "horaLocal": "20:38 a 21:34",
@@ -1541,7 +1664,18 @@
       "calidad": "Aceptable",
       "vfc": 55,
       "vfc7dias": "54 ms, «Desequilibrado» (media de 7 días; el 12-10, 51 «Bajo»)",
-      "nota": "Noche del 13 al 14, la primera de trabajo tras el festivo. Captura de Garmin Connect a las 6:53, sin CSV: «Corto, continuo» (poco sueño pero sin interrupciones). VFC de la noche 55 ms, el borde bajo de su referencia (55-69), y 77 ms de máximo en 5 min. Sin hora de dormir ni de despertar. De la noche del 12 al 13 no hay dato."
+      "nota": "Noche del 13 al 14, la primera de trabajo tras el festivo. Captura de Garmin Connect a las 6:53 y CSV del día: «Corto, continuo» (poco sueño pero sin interrupciones). VFC de la noche 55 ms, el borde bajo de su referencia (55-69), y 77 ms de máximo en 5 min. Sin hora de dormir ni de despertar. De la noche del 12 al 13 no hay dato. Sueño ligero 3h45, respiración más baja 8 rpm.",
+      "fcReposo": 47,
+      "profundo": "0h57",
+      "rem": "0h48",
+      "despierto": "2m",
+      "inquietud": 30,
+      "bodyBattery": "+56",
+      "estresMedio": 13,
+      "spo2Media": "94%",
+      "spo2Minimo": "79%",
+      "fcMediaNoche": 52,
+      "respiracionMedia": 14
     },
     {
       "fecha": "2026-10-12",
@@ -1566,7 +1700,8 @@
       "spo2Media": "97%",
       "respiracionMedia": 15,
       "vfc7dias": "51 ms (media de 7 días del CSV semanal)",
-      "nota": "Noche del 10 al 11. Se acostó a las 2:23 y se despertó a las 10:44 (CSV semanal, sin fases del sueño)."
+      "nota": "Noche del 10 al 11. Se acostó a las 2:23 y se despertó a las 10:44 (CSV semanal, sin fases del sueño).",
+      "vfc": 51
     },
     {
       "fecha": "2026-10-10",
@@ -1578,7 +1713,8 @@
       "spo2Media": "94%",
       "respiracionMedia": 15,
       "vfc7dias": "52 ms (media de 7 días del CSV semanal; referencia 55-70)",
-      "nota": "Noche del 9 al 10, la primera tras la semana del desfile. Se acostó a las 0:56 y se despertó a las 8:43 (sábado, sin trabajo). 7h42 y puntuación 90: la mejor noche desde que hay CSV de octubre. VERDE por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (52, un punto menos que el 9-10 y por debajo de su referencia 55-70). Una noche buena no arrastra la media de 7 días: arrastra cinco noches de 4h18-5h24. Hora de dormir 0:56, de despertar 8:43 (CSV semanal, sin fases del sueño)."
+      "nota": "Noche del 9 al 10, la primera tras la semana del desfile. Se acostó a las 0:56 y se despertó a las 8:43 (sábado, sin trabajo). 7h42 y puntuación 90: la mejor noche desde que hay CSV de octubre. VERDE por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (52, un punto menos que el 9-10 y por debajo de su referencia 55-70). Una noche buena no arrastra la media de 7 días: arrastra cinco noches de 4h18-5h24. Hora de dormir 0:56, de despertar 8:43 (CSV semanal, sin fases del sueño).",
+      "vfc": 51
     },
     {
       "fecha": "2026-10-09",
@@ -1590,7 +1726,8 @@
       "spo2Media": "98%",
       "respiracionMedia": 14,
       "vfc7dias": "53 ms (media de 7 días del CSV semanal; referencia 55-70)",
-      "nota": "Noche del 8 al 9, después del desfile (acabó a las 21:00). Se acostó a la 1:15. 5h00 exactas: ÁMBAR por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (53, por debajo de su referencia 55-70; ver garmin del 9-10). Hora de dormir 1:15, de despertar 6:15 (CSV semanal, sin fases del sueño)."
+      "nota": "Noche del 8 al 9, después del desfile (acabó a las 21:00). Se acostó a la 1:15. 5h00 exactas: ÁMBAR por sueño, pero el día es ROJO por la VFC de 7 días «Desequilibrado» (53, por debajo de su referencia 55-70; ver garmin del 9-10). Hora de dormir 1:15, de despertar 6:15 (CSV semanal, sin fases del sueño).",
+      "vfc": 49
     },
     {
       "fecha": "2026-10-08",
@@ -1602,7 +1739,8 @@
       "spo2Media": "96%",
       "respiracionMedia": 15,
       "vfc7dias": "54 ms (media de 7 días del CSV semanal; referencia 55-70)",
-      "nota": "Noche del 7 al 8. Se acostó a las 0:22 y se despertó a las 5:06. ROJO (menos de 5h00). Segunda noche seguida por debajo de 5 h: 48 h en rojo. FC en reposo 53, la segunda más alta de la serie de 7 días. Hora de dormir 0:22, de despertar 5:06 (CSV semanal, sin fases del sueño)."
+      "nota": "Noche del 7 al 8. Se acostó a las 0:22 y se despertó a las 5:06. ROJO (menos de 5h00). Segunda noche seguida por debajo de 5 h: 48 h en rojo. FC en reposo 53, la segunda más alta de la serie de 7 días. Hora de dormir 0:22, de despertar 5:06 (CSV semanal, sin fases del sueño).",
+      "vfc": 47
     },
     {
       "fecha": "2026-10-07",
@@ -1883,7 +2021,7 @@
   "garmin": [
     {
       "fecha": "2026-10-14",
-      "hora": "6:52-6:53, al levantarse (capturas de Garmin Connect)",
+      "hora": "6:52-6:53, al levantarse, y 20:00 después de las series (capturas de Garmin Connect)",
       "vfc": "54 ms (media de 7 días), Desequilibrada; la noche, 55 ms; máximo de 5 min, 77 ms",
       "predisposicion": {
         "valor": 1,
@@ -1892,7 +2030,26 @@
         "factores": "puntuación de sueño 70 aceptable · tiempo de recuperación 63 h, gran necesidad · VFC 54 ms desequilibrada · carga aguda (cortada en la captura)",
         "mensaje": "Es hora de reducir el ritmo. Tu VFC desequilibrada puede indicar un exceso de fatiga."
       },
-      "valoracion": "La predisposición más baja del historial (1; antes, 26 el 28-9 y el 9-10) y el tiempo de recuperación más largo (63 h; el 28-9, 37 h). La VFC de 7 días mejora de «Bajo» (51, el 12-10) a «Desequilibrado» (54), con la noche en 55, el borde bajo de su referencia. Tras el 1.000 del 19-9 el reloj pidió 55 h y tras los 6 × 400 del 28-9, 37 h; el Arsenal del 13 se grabó y apenas suma (carga 3, efecto aeróbico 0,2), así que no viene de ahí. De dónde salen no se puede saber: no se predice lo que calcula el reloj. Con la regla del 10-10, la VFC desequilibrada pone asterisco a la sesión del 14 y no la cambia; la noche de 5h30 no llega al corte del asterisco (5h00)."
+      "valoracion": "La predisposición más baja del historial (1; antes, 26 el 28-9 y el 9-10) y el tiempo de recuperación más largo (63 h; el 28-9, 37 h). La VFC de 7 días mejora de «Bajo» (51, el 12-10) a «Desequilibrado» (54), con la noche en 55, el borde bajo de su referencia. Tras el 1.000 del 19-9 el reloj pidió 55 h y tras los 6 × 400 del 28-9, 37 h; el Arsenal del 13 se grabó y apenas suma (carga 3, efecto aeróbico 0,2), así que no viene de ahí. De dónde salen no se puede saber: no se predice lo que calcula el reloj. Con la regla del 10-10, la VFC desequilibrada pone asterisco a la sesión del 14 y no la cambia; la noche de 5h30 no llega al corte del asterisco (5h00). Tarde (20:00, tras los 3 × 600): estado «Productivo» (ya no «Sobrecarga»), carga aguda 685 «Alto» (ratio 1,7; por la mañana 516) y recuperación de 96 h. Foco de carga, ventana 16-9 a 14-10 frente a 14-9 a 12-10: entraron el 13 (Arsenal, carga 3) y el 14 (246 entre las cuatro actividades); salieron el 14-9 (rodaje de 40 min) y el 15-9. Anaeróbica +112 y aeróbica alta +70 por las series; aeróbica baja −42 al salir el rodaje del 14-9. VFC de cada noche (CSV del 14-10): 47, 49, 51, 51, 60, 63 y 55 del 8 al 14; la media de 7 días sube de 51 a 54 desde el 12.",
+      "ventanaFocoCarga": "16 sep – 14 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Productivo",
+      "mensajeGarmin": "Es posible que la alta carga de entreno reciente esté desequilibrando tu VFC. Céntrate en equilibrar el entreno y la recuperación para que el entreno siga siendo productivo.",
+      "anaerobica": 788,
+      "aerobicaAlta": 563,
+      "aerobicaBaja": 182,
+      "cargaAguda": 685,
+      "cargaAgudaEstado": "Alto",
+      "ratioCargaAguda": 1.7,
+      "cargaAgudaMensaje": "Tu carga aguda está por encima del intervalo óptimo. Plantéate dedicar más tiempo a la recuperación.",
+      "vo2max": 53,
+      "predisposicionTarde": {
+        "valor": 1,
+        "nivel": "Deficiente",
+        "hora": "20:00, después de una actividad",
+        "factores": "puntuación de sueño 70 aceptable · tiempo de recuperación 96 h, gran necesidad · VFC 54 ms desequilibrada · carga aguda 685 alta · puntuaciones de sueño recientes aceptables · estrés reciente bajo",
+        "mensaje": "Es hora de reducir el ritmo. Tu VFC desequilibrada puede indicar un exceso de fatiga."
+      }
     },
     {
       "fecha": "2026-10-12",

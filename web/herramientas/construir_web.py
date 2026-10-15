@@ -703,8 +703,9 @@ def _k4(P, H, W, C, D):
                 return 'sabadoComplemento.nota dice «sin dominadas los sábados» y el %s lleva barra' % d['fecha']
 
 
-# Días fijos de dos detectores de conflictos (fechas corridas una semana el 2-10: la prueba pasó a noviembre)
-FECHA_SIMULACRO = '2026-10-17'
+# Días fijos de dos detectores de conflictos (fechas corridas una semana el 2-10: la prueba pasó a noviembre;
+# el 14-10 el simulacro pasó del sábado 17 al lunes 19, que era el día del 8 × 200)
+FECHA_SIMULACRO = '2026-10-19'
 FECHA_8X200 = '2026-10-19'
 
 
@@ -712,7 +713,7 @@ def _k5(P, H, W, C, D):
     d = next((x for x in D.get('dias', []) if x['fecha'] == FECHA_SIMULACRO), None)
     if d and d.get('conflictos'):
         c = d['conflictos'][0]
-        return '17-10: %s «%s» frente a %s «%s»' % (c['a']['campo'], c['a']['texto'], c['b']['campo'], c['b']['texto'])
+        return '19-10: %s «%s» frente a %s «%s»' % (c['a']['campo'], c['a']['texto'], c['b']['campo'], c['b']['texto'])
 
 
 def _k6(P, H, W, C, D):
@@ -809,7 +810,7 @@ K_REGLAS = [
     ('K2', 'FC máxima frente a la zona 5 y el método de las zonas', _k2),
     ('K3', 'Hora de fin del miércoles antes del circuito', _k3),
     ('K4', 'Barra de los sábados frente al complemento del sábado', _k4),
-    ('K5', 'Reparto del simulacro del 17-10: objetivo frente a protocolo', _k5),
+    ('K5', 'Reparto del simulacro del 19-10: objetivo frente a protocolo', _k5),
     ('K6', '«No testear de más» frente a la regla del test máximo', _k6),
     ('K7', 'Ficha del simulacro frente al circuito del jueves anterior', _k7),
     ('K8', 'Pista del atleta frente a la pista vigente', _k8),
