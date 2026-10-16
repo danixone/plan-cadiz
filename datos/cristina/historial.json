@@ -5,6 +5,14 @@
   "controles": [],
   "carrera": [
     {
+      "fecha": "2026-10-14",
+      "sesion": "6 × (3 min corriendo + 1 andando)",
+      "hecho": false,
+      "motivo": "Sin dato del motivo (comunicado por Daniel el 16-10). Tampoco fue a Martín Freire el jueves 15 ni a CrossFit el viernes 16.",
+      "resumen": "No corrió",
+      "valoracion": "No se recupera (regla «Si llegas cargada»: lo que se pierde no se recupera). El escalón 3:1 queda sin estrenar."
+    },
+    {
       "fecha": "2026-10-12",
       "sesion": "7 × (2 min corriendo + 1 andando)",
       "hecho": true,
