@@ -14,3 +14,27 @@
 .ill-agente text{visibility:hidden}
 /* «Sesión de Cristina» encima de la tarjeta del día */
 .hoy-quien{margin:0 0 6px;color:#C2407F;font-weight:700;letter-spacing:.02em}
+
+/* «Cómo llegas hoy» (60_consejo.js): debajo de la tarjeta del día */
+.cr-cl{margin-top:var(--sp-4)}
+.cr-cl-r{border-radius:var(--r-sm);padding:var(--sp-3);margin-bottom:var(--sp-3);background:var(--surface-2)}
+.cr-cl-r.ok{background:var(--ok-soft)} .cr-cl-r.warn{background:var(--warn-soft)} .cr-cl-r.bad{background:var(--bad-soft)}
+.cr-cl-rt{display:flex;align-items:center;gap:8px;margin:0}
+.cr-cl-rt b{font-size:var(--fs-lg);line-height:1.25}
+.cr-cl-r.ok .cr-cl-rt b{color:var(--ok)} .cr-cl-r.warn .cr-cl-rt b{color:var(--warn)} .cr-cl-r.bad .cr-cl-rt b{color:var(--bad)}
+.cr-cl .lamp{flex:none;width:14px;height:14px;border-radius:50%}
+.cr-cl-que{margin:var(--sp-2) 0 0;padding-left:1.2em;display:grid;gap:4px}
+.cr-cl-pq{margin:var(--sp-2) 0 0;font-size:var(--fs-sm);color:var(--text-2)} .cr-cl-pq span{font-weight:var(--fw-semi)}
+.cr-cl-f{display:grid;gap:var(--sp-3)}
+.cr-cl-q{display:grid;gap:4px}
+.cr-cl-t{font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.cr-cl-q small{font-size:var(--fs-xs);color:var(--text-3)}
+.cr-cl-q .seg button{padding:0 4px;text-align:center;line-height:1.15}
+.cr-cl-q .stepper{justify-self:start}
+.cr-cl-ops{display:flex;flex-wrap:wrap;gap:6px}
+.cr-cl-ops button{min-height:var(--tap);padding:0 12px;border:1px solid var(--border-strong);border-radius:var(--r-pill);background:var(--surface);color:var(--text-2);font:inherit;cursor:pointer}
+.cr-cl-ops button[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.cr-cl-al{display:grid;gap:6px}
+.cr-cl-al button{display:flex;align-items:center;gap:8px;min-height:var(--tap);padding:6px 12px;text-align:left;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text-2);font:inherit;cursor:pointer}
+.cr-cl-al button[aria-pressed="true"]{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:var(--fw-semi)}
+.cr-cl-pie{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;margin-top:var(--sp-4)}

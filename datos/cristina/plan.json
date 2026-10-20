@@ -251,6 +251,12 @@
       "texto": "Primero se toca el miércoles: todo suave, sin rectas ni cuestas; y si además hay molestia o dormiste mal, se quita. Si hace falta, el lunes se queda en 30 min suaves. Lo que se pierde no se recupera."
     },
     {
+      "id": "como-llegas",
+      "titulo": "Cómo llegas hoy",
+      "texto": "Cada día, en Hoy, marcas cómo llegas y la web te dice qué hacer con la sesión. Manda en este orden. 1) Alarmas: si te duele un punto del hueso al apretarlo, al saltar a la pata coja o al andar, o en reposo o de noche, no corres ni saltas y vas al médico (regla «Dolor»). Con fiebre, pecho cargado o tos, ese día no se entrena. 2) Dolor de 4 o más, o peor que ayer: sin carrera, y en Martín Freire o CrossFit, ni piernas ni saltos. 3) Si no, se suman factores: piernas cargadas (1; muy cargadas, 2), menos de 6 h de sueño (1), mucho estrés (1), energía floja, porque comiste poco o es un día malo de regla (1), piernas o saltos el día antes de correr (1), dolor de 1 a 3 que no va a más (1) y talón o Aquiles rígidos al levantarte (1). Con 0, la sesión tal cual; con 1, tal cual y con los frenos; con 2, más suave y más corta (unos dos tercios, en la mitad lenta de tu ritmo y sin rectas ni cuestas); con 3 o más, sin carrera. La rigidez al levantarte deja siempre la carrera suave y más corta. El miércoles se toca primero (regla «Si llegas cargada»): con las piernas cargadas, todo suave; si además hay molestia o dormiste mal, se quita. Lo que marcas se queda en tu móvil: no se publica.",
+      "origen": "Creada el 20-10-2026, tras el 19-10 (paró por cansancio con molestias, a 48 h de una larga exigente) y con su horario partido de trabajo. Los umbrales (dos tercios, tres factores) son criterio del entrenador, no un estudio: se ajustan con lo que vaya pasando."
+    },
+    {
       "id": "descanso",
       "titulo": "Sin día libre",
       "texto": "Decidido el 11-10: el domingo sigue con CrossFit, así que no tienes ningún día sin entrenar. Eso es lo que más riesgo de lesión mete en el año, y se compensa así: el domingo, si puedes, sin piernas pesadas, porque el lunes toca la calidad. El viernes antes de un control, del simulacro o de la prueba, sin CrossFit, o sin piernas ni saltos. Si la larga del sábado es de 50 min o más, el CrossFit del viernes sin saltos. Y la regla «Si llegas cargada» se cumple siempre."

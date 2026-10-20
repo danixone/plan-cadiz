@@ -9,7 +9,8 @@ Se comparte, sin copiarlo:
   · web/build.py (capas de CSS y minificado).
 Es propio de Cristina:
   · web/cristina/src/views/*.html (el contenido fijo de cada pestaña),
-  · web/cristina/src/js/*.js (10_cristina.js ajusta el núcleo; 20-50 pintan cada pestaña),
+  · web/cristina/src/js/*.js (10_cristina.js ajusta el núcleo; 60_consejo.js pinta «Cómo llegas hoy» en Hoy,
+    detrás de los módulos de Daniel y delante del arranque),
   · web/cristina/src/css/*.css (solo lo que su web necesita y la de Daniel no tiene; capa «cristina»).
 
 Los datos salen de datos/cristina/plan.json e historial.json (públicos). Lo personal vive en
@@ -787,6 +788,11 @@ def ensamblar(datos, B, modulos):
         if vista and modulos is not None and vista not in modulos:
             continue
         archivos.append((f, leer(os.path.join(djs, f))))
+    # módulos propios de Cristina (60_consejo.js…): detrás de los de Daniel y delante del arranque, que lanza la primera vista
+    cjs = os.path.join(SRC_C, 'js')
+    extra = [(f, leer(os.path.join(cjs, f))) for f in sorted(os.listdir(cjs)) if f.endswith('.js') and f != '10_cristina.js']
+    i99 = next((i for i, (f, _) in enumerate(archivos) if f.startswith('99_')), len(archivos))
+    archivos[i99:i99] = extra
     scripts = []
     for f, cuerpo in archivos:
         if re.search(r'</script', cuerpo, re.I):
