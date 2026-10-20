@@ -515,9 +515,9 @@
    "m1": true
   },
   {
-   "nombre": "marcas: 5,00 · apto",
+   "nombre": "marcas: 5,67 · apto",
    "expr": "PC.notaActual().txt",
-   "esperado": "5,00 · apto"
+   "esperado": "5,67 · apto"
   },
   {
    "nombre": "nota: clase ok (apto justo, sin ceros)",

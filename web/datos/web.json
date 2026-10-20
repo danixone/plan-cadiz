@@ -1396,14 +1396,14 @@
       ]
     },
     "v2:Lun 2": {
-      "firma": "8d452ee54c82",
+      "firma": "e3f191acad29",
       "titulo": "Última calidad o sesión «−2 días»",
       "condicion": {
         "pregunta": "¿Cuándo es la prueba?",
         "opciones": [
           {
             "id": "5-6",
-            "txt": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:42-0:43 con 3 min + 3 × 4 dominadas suaves"
+            "txt": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24) + 3 × 4 dominadas suaves"
           },
           {
             "id": "4",
@@ -1438,7 +1438,7 @@
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "500253583287",
+      "firma": "16a2abe2a630",
       "firmaDe": [
         "plan.calendario[2026-10-19]",
         "plan.ritmos[C]"
@@ -1447,7 +1447,9 @@
       "guardar": "pc-bloqueC",
       "decide": "El bloque C: ≤ 3:33 en distancia verificada con los dos tramos centrales en 43 → C a 1:24 / 2:06 (ritmo 3:30)",
       "condicion": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor.",
-      "fuente": "plan.calendario[2026-10-19].decide · plan.ritmos[C].condicion"
+      "fuente": "plan.calendario[2026-10-19].decide · plan.ritmos[C].condicion",
+      "resuelta": "no",
+      "resueltaNota": "RESUELTO el 20-10: el simulacro del 19 dio unos 3:27 (3:28,3 por las vueltas, 3:26,3 por el logro del reloj), pero con los tramos 400-600 y 600-800 en 44,2 y 44,6 (no en 43) y la distancia sin verificar: el C va al primer valor, 1:25 / 2:07."
     }
   },
   "series": {},
@@ -1674,6 +1676,11 @@
       "texto": "Decisión suya: el simulacro pasa del sábado 17 al lunes 19 a las 18:00, y el simulacro ligero del sábado 31 (si la prueba es el 4, el 5 o el 6), al viernes 30 a las 18:00.",
       "porQue": "El 14-10 Daniel avisó de que la pista de Arucas no abre los sábados (según él, sin confirmar); entre semana sí, allí se hicieron los 6 × 400 del 28-9 a las 18:00.",
       "fuente": "plan.objetivo.pruebasFisicas.cambio14oct"
+    },
+    {
+      "fecha": "2026-10-20",
+      "texto": "3:24 o menos (5 puntos, tramo 3:19-3:24). Decisión de Daniel el 20-10-2026, tras el simulacro del 19. · 0:41 / 1:22 / 2:03 / 2:44 / meta 3:23-3:24",
+      "fuente": "plan.objetivo.objetivoNuevo20oct.mil · plan.objetivo.objetivoNuevo20oct.comoSePersigue"
     }
   ],
   "controlesExtra": [

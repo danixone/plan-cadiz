@@ -5,6 +5,126 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-19",
+      "sesion": "SIMULACRO: dominadas al máximo → 20 min → 1.000 m · pista de Arucas, perfil Pista del reloj",
+      "objetivo": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48) y los tramos 400-600 y 600-800 en 43 · primer 200 entre 0:42 y 0:43, nunca por debajo de 0:42 · dominadas ≥ 12 válidas en vídeo",
+      "valida": true,
+      "horaInicioLocal": "18:17 la espera de 20 min tras las dominadas; el 1.000 a las 18:37",
+      "resultado": {
+        "tiempo": "3:27 (entre 3:26,3 y 3:28,3)",
+        "tiempoS": 207.3,
+        "tiempoVueltasS": 208.3,
+        "parciales200": {
+          "tramosS": [
+            38.7,
+            41.9,
+            44.2,
+            44.6,
+            37.9
+          ]
+        },
+        "vueltasRelojS": [
+          39.7,
+          41.9,
+          44.2,
+          44.6,
+          37.9
+        ],
+        "arranque": "La vuelta del primer 200 empezó a contar sola al acabar el paso de 20 min de espera. La distancia del reloj no se mueve hasta el segundo 2 y luego avanza 6,4 m en un segundo, algo imposible saliendo de parado: el GPS registró tarde el arranque. Así que salió entre el segundo 0 y el 2: el primer 200 corriendo, entre 37,7 y 39,7 (lo más probable, unos 38,7), y el 1.000 entre 3:26,3 y 3:28,3 (lo más probable, unos 3:27).",
+        "logroReloj": "1000 m en 206,322 s: la ventana más rápida de 1.000 m de la actividad, que empieza a 471 m, cuando la distancia del GPS se mueve; en una salida de parado eso es algo después de salir, así que es el extremo rápido del rango. El 19-9, el 3:34 también salió de este logro (214,1 s).",
+        "pasos200": [
+          "0:38,7",
+          "1:20,6",
+          "2:04,8",
+          "2:49,4",
+          "3:27,3"
+        ],
+        "parciales50S": [
+          10.0,
+          8.8,
+          10.3,
+          9.6,
+          10.9,
+          10.6,
+          10.2,
+          10.3,
+          11.7,
+          10.4,
+          11.5,
+          10.6,
+          11.2,
+          10.9,
+          11.5,
+          10.9,
+          10.1,
+          9.7,
+          8.9,
+          9.3
+        ],
+        "parciales50Nota": "Anclados a las vueltas de 200 del reloj (rehechos el 20-10): dentro de cada vuelta, la distancia del GPS segundo a segundo se reparte en sus 200 m, así que cada 200 cuadra con su vuelta y los 50 m llevan el error del GPS, de algún segundo. El primero, con 1 s menos por la salida (lo más probable). Los dos primeros (10,0 y 8,8) juntos valen; el reparto entre ellos no, porque el GPS registró tarde el arranque.",
+        "fcMediaPorTramo": [
+          165,
+          184,
+          185,
+          186,
+          190
+        ],
+        "fcMaxPorTramo": [
+          182,
+          186,
+          186,
+          188,
+          192
+        ],
+        "fcMax": 193,
+        "fcInicio": 129,
+        "esperaAntes": "20 min tras las dominadas (470 m andando o parado, FC media 125)",
+        "calentamiento": "Ninguno: decisión suya, «empezar frío» porque cree que el día de la prueba no habrá tiempo para calentar (sin confirmar: no hay dato del horario de Cádiz).",
+        "distanciaReloj": "1.003,8 m en modo pista: la pista se da por buena de 400 m por construcción; la de Arucas sigue sin verificar",
+        "relojConfigurado": "Entreno «Simulacro Km»: cinco pasos de 200 m con rango 4,587-5,0 m/s (3:20-3:38 /km).",
+        "efectoAerobico": 2.2,
+        "efectoAnaerobico": 3.0,
+        "cargaSesion": 104,
+        "tiempoLogroS": 206.3
+      },
+      "valoracion": "VÁLIDO y el mejor 1.000 del historial: unos 3:27, entre 3:26,3 (logro del reloj, que empieza cuando la distancia del GPS se mueve) y 3:28,3 (vueltas, que empezaron a contar al acabar la espera de 20 min, antes de salir). Comparado con el mismo método que el 3:34 del 19-9 (logro contra logro, 214,1 → 206,3), 7,8 s mejor. Corregido dos veces el 20-10: primero di 3:28,3 por las vueltas y luego 3:26,3 por el logro, sin mirar en ninguna cómo empezaba la vuelta. En Arucas, con el perfil Pista: la distancia la pone el reloj y la pista sigue sin verificar (±1 %). Con el baremo, 3:25-3:30 son 4 puntos; si la pista fuera más de un 1 % corta, podría pasar de 3:30. PRIMER 200: entre 37,7 y 39,7 corriendo, la sexta vez seguida por debajo de 42. Él contaba «50 m cada 10 s»: eso son 40 s por 200, 3:20 /km; el reparto de 0:42 son 10,5 s cada 50 m. TRAMOS CENTRALES: 44,2 y 44,6, no los 43 que pedía el bloque C, pero 2 s mejores que los 46 y 46 del 19-9. FINAL: 37,9 en los últimos 200, con «gasolina» según él. BLOQUE C: la regla pedía ≤ 3:33 en distancia verificada con los dos tramos centrales en 43; los tramos fueron 44,2 y 44,6 y la distancia no está verificada → C a 1:25 / 2:07 (el primer valor). Sin calentamiento por decisión suya; FC de 129 a 182 en el primer 200. Sus sensaciones: más libertad al respirar, sin sentirse forzado, sprint final todavía corrigiendo la técnica."
+    },
+    {
+      "fecha": "2026-10-17",
+      "sesion": "Rodaje 40 min + elevaciones de talón",
+      "objetivo": "techo 145 · primeros 10 min a 140 · sin progresivos · elevaciones de talón 3 × 15 · sin saltos ni barra",
+      "valida": true,
+      "horaInicioLocal": "20:29",
+      "resultado": {
+        "duracion": "40:00",
+        "km": 5.06,
+        "ritmo": "7:55/km",
+        "fcMedia": 143,
+        "fcMax": 154,
+        "cadencia": 158,
+        "zancadaMm": 795,
+        "contactoMs": 299,
+        "franjas": {
+          "<130": "2%",
+          "130-140": "24%",
+          "140-145": "32%",
+          "145-155": "42%"
+        },
+        "primeros10min": "media 135,2, máximo 149, 59 s por encima de 140",
+        "sobreTecho": "Desde el minuto 10, 1.000 s de 1.803 por encima de 145 (55 %), máximo 154",
+        "deriva": {
+          "analizador": "−11 s/km (min 3-8 a 7:52 y 137 ppm; últimos 8 a 7:41 y 149): el ritmo subió con el pulso",
+          "referenciaBaseAsentada": "por debajo del 5 %",
+          "mitadesDesdeMin15": "−1,1 % (Pa:HR: 8:10,7 a 144 → 7:51,2 a 148)"
+        },
+        "relojConfigurado": "Entreno «Rodaje sábado»: un paso de 40 min con rango de FC 135-145 y la nota «10’ con 140 techo»; el suelo de 135 es el que le hace ir cambiando de zona 1 a zona 2 (dicho por él el 20-10).",
+        "efectoAerobico": 2.0,
+        "efectoAnaerobico": 0.0,
+        "cargaSesion": 26
+      },
+      "valoracion": "VÁLIDO. Primeros 10 min con techo 140: cumplidos (media 135, 59 s por encima de 140). Desde el minuto 10, el 55 % del tiempo por encima de 145 (máximo 154): su zona 2 (139-155), no el techo del plan. Deriva por mitades −1,1 %: a 144-148 de pulso no se desacopla en 40 min (el 10-10, +1,5 % a 137-140; el 16-9, 38 s/km). Las elevaciones de talón no constan."
+    },
+    {
       "fecha": "2026-10-14",
       "sesion": "3 × 600 m, rec. 3 min · pista de Arucas, perfil Pista del reloj",
       "objetivo": "2:08 con 3 min · los tres dentro de 3 s · primera repetición con el primer 200 en 0:43 o más lento · cada 200 a ±1 s de su paso (0:42,7): si uno sale lento, el siguiente no lo compensa · si una llega a 200 ppm antes de la última, esa es la última",
@@ -1288,6 +1408,17 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-19",
+      "maximo": 12,
+      "series": [
+        12
+      ],
+      "total": 12,
+      "lastreKg": 0,
+      "contexto": "SIMULACRO, en Arucas, antes del 1.000 (20 min entre medias). Sin vídeo.",
+      "valoracion": "AUTOINFORMADO: 12 por primera vez (su máximo anterior, 11 el 19-9). Pausa en la 11 para coger fuerza para la 12, y la 12 quizá no válida por levantar demasiado el pie, según él. Con el BOE, «mínima pausa entre repeticiones» y cuerpo extendido sin impulso: la 12 es dudosa por las dos cosas. Sin vídeo, no hay válidas: seguras, 11. No consta el prep-hombro ni el dolor de codo y hombro."
+    },
+    {
       "fecha": "2026-10-14",
       "series": [
         5,
@@ -1658,6 +1789,66 @@
   ],
   "sueno": [
     {
+      "fecha": "2026-10-19",
+      "duracion": "8h04",
+      "puntuacion": 87,
+      "calidad": "Bueno",
+      "fcReposo": 46,
+      "bodyBattery": "+57",
+      "spo2Media": "97%",
+      "respiracionMedia": 14,
+      "vfc7dias": "59 ms (media de 7 días)",
+      "nota": "Hora de dormir 1:00, de despertar 9:16 (CSV semanal del 20-10, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-18",
+      "duracion": "8h26",
+      "puntuacion": 82,
+      "calidad": "Bueno",
+      "fcReposo": 49,
+      "bodyBattery": "+74",
+      "spo2Media": "94%",
+      "respiracionMedia": 14,
+      "vfc7dias": "60 ms (media de 7 días)",
+      "nota": "Hora de dormir 1:41, de despertar 10:22 (CSV semanal del 20-10, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-17",
+      "duracion": "8h58",
+      "puntuacion": 94,
+      "calidad": "Excelente",
+      "fcReposo": 48,
+      "bodyBattery": "+81",
+      "spo2Media": "97%",
+      "respiracionMedia": 14,
+      "vfc7dias": "58 ms (media de 7 días)",
+      "nota": "Hora de dormir 0:50, de despertar 9:52 (CSV semanal del 20-10, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-16",
+      "duracion": "6h38",
+      "puntuacion": 77,
+      "calidad": "Aceptable",
+      "fcReposo": 46,
+      "bodyBattery": "+72",
+      "spo2Media": "95%",
+      "respiracionMedia": 14,
+      "vfc7dias": "57 ms (media de 7 días)",
+      "nota": "Hora de dormir 23:51, de despertar 6:35 (CSV semanal del 20-10, sin fases del sueño)."
+    },
+    {
+      "fecha": "2026-10-15",
+      "duracion": "6h32",
+      "puntuacion": 80,
+      "calidad": "Bueno",
+      "fcReposo": 45,
+      "bodyBattery": "+78",
+      "spo2Media": "96%",
+      "respiracionMedia": 14,
+      "vfc7dias": "56 ms (media de 7 días)",
+      "nota": "Hora de dormir 23:49, de despertar 6:21 (CSV semanal del 20-10, sin fases del sueño)."
+    },
+    {
       "fecha": "2026-10-14",
       "duracion": "5h30",
       "puntuacion": 70,
@@ -2020,6 +2211,24 @@
   "necesidadSueno": "8h50",
   "garmin": [
     {
+      "fecha": "2026-10-20",
+      "hora": "capturas de Garmin Connect mandadas el 20-10",
+      "ventanaFocoCarga": "22 sep – 20 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Mantenimiento",
+      "mensajeGarmin": "La carga de entreno actual es suficiente para mantener tu forma física. Para observar mejoras, prueba a variar la intensidad con actividades aeróbicas de baja intensidad, aeróbicas de alta intensidad y anaeróbicas.",
+      "anaerobica": 765,
+      "aerobicaAlta": 503,
+      "aerobicaBaja": 208,
+      "cargaAguda": 441,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.1,
+      "cargaAgudaMensaje": "Tu carga aguda está en el intervalo óptimo para mantener o mejorar tu forma física.",
+      "vo2max": 53,
+      "vfc": "59 ms, Equilibrado",
+      "valoracion": "VFC de 7 días otra vez «Equilibrado» (59), después de una semana en «Desequilibrado» o «Bajo»: las noches del 17 al 19, de 8 a 9 h. Carga aguda de 685 «Alta» (14-10) a 441 «Óptimo». Foco de carga, ventana 22-9 a 20-10 frente a 16-9 a 14-10: entraron el 15 al 20 (rodaje del 17, simulacro del 19); salieron el 16 al 21-9 (rodaje del 16-9 y control del 19-9). Aeróbica baja +26 (el rodaje del 17 entró), aeróbica alta −60 y anaeróbica −23. Sigue «insuficiente»."
+    },
+    {
       "fecha": "2026-10-14",
       "hora": "6:52-6:53, al levantarse, y 20:00 después de las series (capturas de Garmin Connect)",
       "vfc": "54 ms (media de 7 días), Desequilibrada; la noche, 55 ms; máximo de 5 min, 77 ms",
@@ -2361,9 +2570,20 @@
         "3:30",
         "3:38"
       ],
-      "vigente": true,
+      "vigente": false,
       "medido": true,
       "motivo": "MEDIDO, ya no es estimación. Control de 1.000 m en San Cristóbal. La estimación anterior (3:52) falló por 14-22 s y la realidad quedó fuera del rango entero. Lo que falló no fue el 600 de 2:12: fue el modelo que lo convirtió en 3:52."
+    },
+    {
+      "fecha": "2026-10-19",
+      "estimacion": "3:27",
+      "banda": [
+        "3:25",
+        "3:29"
+      ],
+      "vigente": true,
+      "medido": true,
+      "motivo": "MEDIDO en el simulacro, en Arucas con el perfil Pista (distancia sin verificar, ±1 %): unos 3:27, entre 3:26,3 (logro del reloj) y 3:28,3 (vueltas, que empezaron a contar antes de salir). Logro contra logro, 7,8 s mejor que el 19-9: los dos 200 centrales bajan de 46 a 44."
     }
   ],
   "composicion": [

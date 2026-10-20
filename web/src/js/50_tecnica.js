@@ -378,7 +378,7 @@
     if (ctl) {
       var trc = ctl.resultado.parciales200.tramosS.map(Number);
       out.push({ id: 'control', txt: 'Control ' + dm(ctl.fecha), tr: trc, real: true, fecha: ctl.fecha });
-      var cp = (((P.objetivo || {}).objetivoNuevo23sep) || {}).comoSePersigue || '';
+      var cp = ((PC.objetivoNuevo() || {}).o || {}).comoSePersigue || '';
       var ms = cp.match(/\d+(?:,\d)?(?:\s*\/\s*\d+(?:,\d)?){4}/g) || [];
       var alt = null;
       ms.forEach(function (m) {

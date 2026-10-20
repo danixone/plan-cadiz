@@ -680,7 +680,7 @@
     });
     colocar(g, rot, [-24, -10], ctx.iw + ctx.m.r - 4);
     /* referencias: objetivo, suelo y 3:49 */
-    var obj = primerTiempo(((P.objetivo || {}).objetivoNuevo23sep || {}).mil), suelo = primerTiempo(((P.planDeCarrera || {}).examen || {}).suelo);
+    var obj = primerTiempo(((PC.objetivoNuevo() || {}).o || {}).mil), suelo = primerTiempo(((P.planDeCarrera || {}).examen || {}).suelo);
     if (obj !== null) { hl(g, fy(obj), ctx.iw, 'mc-l-obj'); tx(g, 4, fy(obj) - 4, mmss(obj) + ' objetivo', 'lab mc-t-ok'); }
     if (suelo !== null) { hl(g, fy(suelo), ctx.iw, 'mc-l-suelo'); tx(g, 4, fy(suelo) - 4, mmss(suelo) + ' suelo', 'mc-t-3'); }
     PC.chart.umbral1000(ctx, { y: fy(ELIM) });

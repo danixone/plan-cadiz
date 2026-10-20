@@ -571,13 +571,13 @@
     if (e === null) e = PC.fmt.parseT((P.planDeCarrera && P.planDeCarrera.examen && P.planDeCarrera.examen.elimina) || '');
     return e;
   }
-  /* escala del ritmo de 1.000 por bloque, de 3:52 a 3:25 (más rápido a la derecha) */
+  /* escala del ritmo de 1.000 por bloque, de 3:52 a 3:20 (más rápido a la derecha; el objetivo de 3:24 cabe) */
   function dibujarEscala(fig) {
     var B = bloques(); if (!B.length) return;
     var act = PC.cal.bloque(PC.hoyIso());
     var elim = elimSeg();
-    var objetivo = tiempos(((P.objetivo || {}).objetivoNuevo23sep || {}).mil)[0] || null;
-    var S0 = PC.fmt.parseT('3:52'), S1 = PC.fmt.parseT('3:25');
+    var objetivo = tiempos(((PC.objetivoNuevo() || {}).o || {}).mil)[0] || null;
+    var S0 = PC.fmt.parseT('3:52'), S1 = PC.fmt.parseT('3:20');
     var lane = 30, top = 22;
     var ctx = PC.chart.base(fig, { h: top + B.length * lane + 30, m: { t: 0, r: 12, b: 30, l: 12 } });
     var x = PC.chart.lineal(S0, S1, 0, ctx.iw);
@@ -596,7 +596,7 @@
     }
     /* eje */
     PC.svg('line', { 'class': 'eje', x1: 0, x2: ctx.iw, y1: alto + .5, y2: alto + .5 }, g);
-    ['3:50', '3:45', '3:40', '3:35', '3:30', '3:25'].forEach(function (t) {
+    ['3:50', '3:45', '3:40', '3:35', '3:30', '3:25', '3:20'].forEach(function (t) {
       var s = PC.fmt.parseT(t), xx = Math.round(x(s)) + .5;
       PC.svg('line', { 'class': 'eje', x1: xx, x2: xx, y1: alto, y2: alto + 4 }, g);
       PC.svg('text', { x: xx, y: alto + 18, 'text-anchor': s === S1 ? 'end' : 'middle', text: t }, g);
@@ -913,8 +913,8 @@
     }
     grupo('Revisión del ' + fechaDeClave('revision23sep'), P.revision23sep, [['veredicto', 'Veredicto'], ['razones', 'Razones'], ['loQueSiCambia', 'Lo que sí cambia']]);
     grupo('Revisión del ' + fechaDeClave('revision28sep'), P.revision28sep, [['pregunta', 'Pregunta'], ['veredictoDominadas', 'Dominadas'], ['palancaPrincipal', 'Palanca principal'], ['expectativa', 'Expectativa', 'supuesto'], ['sueno', 'Sueño'], ['loQueNoCambia', 'Lo que no cambia']]);
-    var on = (P.objetivo || {}).objetivoNuevo23sep;
-    grupo('Objetivo nuevo del ' + fechaDeClave('objetivoNuevo23sep'), on, [['comoSePersigue', 'Cómo se persigue'], ['condiciones', 'Condiciones'], ['riesgo', 'Riesgo'], ['actualizacion28sep', 'Actualización del ' + fechaDeClave('actualizacion28sep')]]);
+    var on = PC.objetivoNuevo();
+    if (on) grupo('Objetivo nuevo del ' + on.fecha, on.o, [['comoSePersigue', 'Cómo se persigue'], ['condiciones', 'Condiciones'], ['riesgo', 'Riesgo'], ['actualizacion28sep', 'Actualización del ' + fechaDeClave('actualizacion28sep')]]);
     box.innerHTML = G.length ? acc('Por qué el plan es así', G.join(''), { why: false, cls: 'pl-pq-acc', id: 'pl-porque-d' }) : '';
   }
 

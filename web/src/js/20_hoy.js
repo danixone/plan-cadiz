@@ -251,7 +251,8 @@
     return null;
   }
   function elegir(dia, c) {
-    var v = st().get(claveCond(dia, c), null), auto = null;
+    /* condición ya resuelta en los datos (web.condiciones.K.resuelta): manda sobre lo guardado en el móvil */
+    var v = c.src && c.src.resuelta ? c.src.resuelta : st().get(claveCond(dia, c), null), auto = null;
     if (c.tipo === 'compartida' && v !== 'si' && v !== 'no' && v !== 'ninguna') v = null;
     if (v === null || v === undefined) { auto = prellenar(dia, c); if (auto) v = auto.id; }
     c.elegida = v === 'ninguna' ? NINGUNA : ((c.opciones || []).filter(function (o) { return o.id === v; })[0] || null);
@@ -908,6 +909,7 @@
       if (c.tipo === 'prueba') h.push('<p class="hoy-cond-r">' + (c.opciones || []).map(function (o) { return esc(o.txt) + ': ' + esc(o.nombre || ''); }).join(' · ') + '</p>');
       if (elegida === 'ninguna') h.push('<p class="hoy-cond-r"><b>El plan no lo fija: pregúntale al entrenador</b></p>');
       if (c.tipo === 'compartida' && c.desde) h.push('<p class="hoy-cond-r">' + esc(c.desde) + '</p>');
+      if (c.src && c.src.resueltaNota) h.push('<p class="hoy-cond-r"><b>' + esc(c.src.resueltaNota) + '</b></p>');
       if (c.comun) h.push('<p class="hoy-cond-r">' + esc(c.comun) + '</p>');
       if (c.auto && c.auto.de) h.push('<small>rellenado con lo que apuntaste el ' + esc(PC.fmt.dia(c.auto.de, 'dm')) + '</small>');
       if (c.tipo === 'compartida') { var ay = ayuda10(); if (ay) h.push('<small>' + esc(ay) + '</small>'); }

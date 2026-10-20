@@ -30,6 +30,7 @@
     {"ruta": "plan.objetivo.aviso", "usa": ["M4"]},
     {"ruta": "plan.objetivo.objetivosRevisados.*", "usa": []},
     {"ruta": "plan.objetivo.objetivoNuevo23sep.*", "usa": ["M3", "M5"]},
+    {"ruta": "plan.objetivo.objetivoNuevo20oct.*", "usa": ["M3", "M5"]},
 
     {"ruta": "plan.baremo.sexo", "usa": ["M4"]},
     {"ruta": "plan.baremo.fuente", "usa": ["M4"]},

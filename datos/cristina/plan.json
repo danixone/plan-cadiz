@@ -371,10 +371,9 @@
         {
           "fecha": "2026-10-21",
           "dia": "Mié",
-          "tipo": "suave",
-          "titulo": "5 × (4 min corriendo + 1 andando)",
-          "min": 25,
-          "detalle": "Correr y andar: 5 veces 4 min corriendo suave y 1 min andando. Si sale entero y puedes hablar con frases, la próxima vez subes un escalón (ver Reglas)."
+          "tipo": "otro",
+          "titulo": "Sin carrera (regla «Si llegas cargada»)",
+          "detalle": "Cambiado el 20-10: el lunes 19 no salió entero (paró 5 min por cansancio) y llegaba cargada. Con la regla «Si llegas cargada», el miércoles se quita. El 5 × (4 + 1) que tocaba no se recupera, y el 4:1 espera a que el 3:1 salga entero y sin dolor al día siguiente."
         },
         {
           "fecha": "2026-10-22",
@@ -392,9 +391,9 @@
           "fecha": "2026-10-24",
           "dia": "Sáb",
           "tipo": "suave",
-          "titulo": "28 min: correr y andar al escalón que toque",
-          "min": 28,
-          "detalle": "La larga: 28 min con el escalón de correr y andar en el que estés (ver Reglas). Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "24 min: 6 × (3 min corriendo + 1 andando)",
+          "min": 24,
+          "detalle": "La larga, en 3:1 y más corta (cambiado el 20-10: eran 28 min al escalón que tocara, pero el 3:1 del lunes 19 no salió entero). Los tramos, en la mitad lenta del suave de tramos (7:40-8:00) o más despacio, pudiendo hablar con frases: el 17 y el 19 los primeros salieron a 6:56-7:25. Solo si se cumple la regla «Dolor»; si no, sin carrera. Al acabar, 3 × 15 elevaciones de talón a una pierna, si no duelen."
         },
         {
           "fecha": "2026-10-25",
@@ -416,7 +415,7 @@
           "tipo": "suave",
           "titulo": "25 min suave + 4 rectas",
           "min": 25,
-          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 4 rectas."
+          "detalle": "Seguido o, si aún no llegas, con tu escalón (hoy, el 3:1). Al final, 4 rectas, solo si no queda ninguna molestia (añadido el 20-10)."
         },
         {
           "fecha": "2026-10-27",

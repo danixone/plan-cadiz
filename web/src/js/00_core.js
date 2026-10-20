@@ -582,6 +582,19 @@
     return o;
   };
 
+  /* ------------------------------------------------------------------ objetivo del 1.000 vigente
+     plan.objetivo.objetivoNuevo<día><mes> más reciente que no lleve «sustituidoEl» → {clave, fecha:'20-10', o} */
+  PC.objetivoNuevo = function () {
+    var O = ((PC.D && PC.D.plan) || {}).objetivo || {}, MES = { sep: 9, oct: 10, nov: 11 }, mejor = null;
+    Object.keys(O).forEach(function (k) {
+      var m = /^objetivoNuevo(\d{1,2})(sep|oct|nov)$/.exec(k);
+      if (!m || !O[k] || O[k].sustituidoEl) return;
+      var n = MES[m[2]] * 100 + (+m[1]);
+      if (!mejor || n > mejor.n) mejor = { n: n, clave: k, fecha: m[1] + '-' + MES[m[2]], o: O[k] };
+    });
+    return mejor;
+  };
+
   /* ------------------------------------------------------------------ notificación, copiar, vibrar, destello */
   var toastT = null;
   PC.toast = function (txt, ms) {

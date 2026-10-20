@@ -5,6 +5,149 @@
   "controles": [],
   "carrera": [
     {
+      "fecha": "2026-10-19",
+      "sesion": "6 × (3 min corriendo + 1 andando)",
+      "hecho": true,
+      "resumen": "6 × (3 + 1) con una parada de 5 min en el cuarto tramo · corriendo a 6:56-7:48 /km · 3,46 km",
+      "resultado": {
+        "duracion": "36:27 de reloj (31:16 en marcha: parada de 5:10 a los 4 s del cuarto tramo)",
+        "km": 3.46,
+        "ritmoCorriendo": "6:56-7:25 /km los cuatro primeros tramos y 7:46-7:48 los dos últimos (suave de tramos del plan: 7:20-8:00)",
+        "bloquesCorriendo": [
+          {
+            "inicio": "20:47:40",
+            "s": 180,
+            "m": 432,
+            "ritmo": "6:56",
+            "fcMedia": 153,
+            "fcMax": 171
+          },
+          {
+            "inicio": "20:51:41",
+            "s": 180,
+            "m": 406,
+            "ritmo": "7:23",
+            "fcMedia": 155,
+            "fcMax": 169
+          },
+          {
+            "inicio": "20:55:42",
+            "s": 180,
+            "m": 404,
+            "ritmo": "7:25",
+            "fcMedia": 155,
+            "fcMax": 169
+          },
+          {
+            "inicio": "20:59:43",
+            "s": 180,
+            "m": 415,
+            "ritmo": "7:14",
+            "fcMedia": 147,
+            "fcMax": 167
+          },
+          {
+            "inicio": "21:08:54",
+            "s": 180,
+            "m": 386,
+            "ritmo": "7:46",
+            "fcMedia": 155,
+            "fcMax": 170
+          },
+          {
+            "inicio": "21:12:55",
+            "s": 180,
+            "m": 385,
+            "ritmo": "7:48",
+            "fcMedia": 156,
+            "fcMax": 173
+          }
+        ],
+        "medicionBloques": "Por los pasos del entreno de intervalos que guarda Salud: tramos exactos de 3:00 corriendo y 1:01 andando. El cuarto tramo son 4 s, la parada y 2:56 después a 7:04 (151 de media).",
+        "parada": "5:10 parada de verdad (79 m en esos 5 min y el pulso bajó a 97), a los 4 s del cuarto tramo, por cansancio (contado por Daniel); después terminó los seis",
+        "andandoAntesS": 300,
+        "andandoDespuesS": 122,
+        "fcMedia": 143,
+        "fcMax": 173,
+        "fcFinTramo": "166-172 al acabar cada tramo corriendo; 127-137 al acabar cada minuto andando",
+        "fcRecuperacion": "En el minuto andando baja entre 31 y 42 pulsaciones, más que el sábado (27-32), y con pulso más bajo que el sábado a ritmos parecidos.",
+        "tiempo": "21 °C y 68 % de humedad (dato del tiempo que guarda el reloj)",
+        "fuente": "exportación de Salud del Apple Watch (entreno de intervalos del reloj, cada paso con su inicio y su fin), leída en una carpeta temporal; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Hecha, pero no entera: a los 4 s del cuarto tramo paró 5:10 por cansancio y después terminó los seis. El primer tramo salió a 6:56, por delante del suave de tramos (7:20-8:00); tras la parada, el cuarto a 7:04, y los dos últimos a 7:46-7:48 con la cadencia más baja de la sesión (153-155 pasos por minuto frente a 161-166). El pulso fue más bajo que el sábado a ritmos parecidos y bajó mejor andando: lo que se acabó no fue el pulso. A 48 h de una larga que por pulso fue exigente. Escalón: no salió entera, así que el 3:1 no se sube (regla «Correr y andar»). Se aplica la regla «Si llegas cargada» entera (detalle en privado): el miércoles 21 sin carrera y el sábado 24 en 3:1 y más corto."
+    },
+    {
+      "fecha": "2026-10-17",
+      "sesion": "6 × (3 min corriendo + 1 andando)",
+      "hecho": true,
+      "resumen": "6 × (3 + 1) entero, su primer día en 3:1 · corriendo a 7:07-7:45 /km · 3,54 km",
+      "resultado": {
+        "duracion": "47:39 de reloj (37:31 en marcha: una pausa de 10:02 al empezar y otra de 6 s)",
+        "km": 3.54,
+        "ritmoCorriendo": "7:07-7:24 /km los cinco primeros tramos y 7:45 el sexto (suave de tramos del plan: 7:20-8:00)",
+        "bloquesCorriendo": [
+          {
+            "inicio": "20:29:02",
+            "s": 180,
+            "m": 414,
+            "ritmo": "7:15",
+            "fcMedia": 145,
+            "fcMax": 165
+          },
+          {
+            "inicio": "20:33:03",
+            "s": 180,
+            "m": 419,
+            "ritmo": "7:10",
+            "fcMedia": 158,
+            "fcMax": 174
+          },
+          {
+            "inicio": "20:37:04",
+            "s": 180,
+            "m": 405,
+            "ritmo": "7:24",
+            "fcMedia": 163,
+            "fcMax": 176
+          },
+          {
+            "inicio": "20:41:05",
+            "s": 180,
+            "m": 412,
+            "ritmo": "7:17",
+            "fcMedia": 164,
+            "fcMax": 176
+          },
+          {
+            "inicio": "20:45:06",
+            "s": 180,
+            "m": 422,
+            "ritmo": "7:07",
+            "fcMedia": 165,
+            "fcMax": 175
+          },
+          {
+            "inicio": "20:49:13",
+            "s": 180,
+            "m": 387,
+            "ritmo": "7:45",
+            "fcMedia": 163,
+            "fcMax": 173
+          }
+        ],
+        "medicionBloques": "Por los pasos del entreno de intervalos que guarda Salud: tramos exactos de 3:00 corriendo y 1:01 andando, no por cadencia como el 12-10. El sexto tramo no sale como paso propio en la exportación: se saca de los datos segundo a segundo entre el quinto minuto andando y el sexto (20:49:13-20:52:13).",
+        "andandoAntesS": 300,
+        "andandoDespuesS": 505,
+        "fcMedia": 145,
+        "fcMax": 176,
+        "fcFinTramo": "163-176 al acabar cada tramo corriendo (174-176 del segundo al quinto); 132-148 al acabar cada minuto andando",
+        "fcRecuperacion": "En el minuto andando baja entre 27 y 32 pulsaciones (de 171-176 a 140-148), menos que el 12-10 (26-44 en tramos de 2 min). 176 es la más alta que tiene registrada (antes, 175 el 10-10).",
+        "tiempo": "21 °C y 80 % de humedad (dato del tiempo que guarda el reloj)",
+        "fuente": "exportación de Salud del Apple Watch (entreno de intervalos del reloj, cada paso con su inicio y su fin), leída en una carpeta temporal; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Hecha entera, su primer día en 3:1. Los cinco primeros tramos, a 7:07-7:24, algo por delante del suave de tramos (7:20-8:00); el sexto, a 7:45. El pulso subió de tramo en tramo (media de 145 en el primero, 163-165 del tercero al sexto), acabó del segundo al quinto en 174-176, la más alta que tiene registrada, y en el minuto andando solo bajó a 140-148. Para una larga suave, por pulso fue exigente; si podía hablar con frases no consta. Sin su máxima medida no se sabe en qué zona fue, y el pulso de muñeca va con retraso: sirve para la tendencia."
+    },
+    {
       "fecha": "2026-10-14",
       "sesion": "6 × (3 min corriendo + 1 andando)",
       "hecho": false,

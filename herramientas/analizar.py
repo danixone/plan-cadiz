@@ -64,6 +64,12 @@ def lee_fit(ruta):
                     if fr.has_field(k):
                         d[k] = fr.get_value(k)
                 laps.append(d)
+            elif fr.name == "unknown_113":
+                # logro del reloj: «X m en Y s», la ventana más rápida de la actividad (distancia en cm, tiempo en ms)
+                campos = {x.name: x.value for x in fr.fields}
+                dcm, tms = campos.get("unknown_2"), campos.get("unknown_3")
+                if isinstance(dcm, int) and isinstance(tms, int) and dcm > 0 and tms > 0:
+                    ses.setdefault("_logros", []).append((dcm / 100, tms / 1000))
             elif fr.name == "device_info":
                 if fr.has_field("device_type") and fr.get_value("device_type") == "heart_rate":
                     sensores.add(str(fr.get_value("garmin_product") if fr.has_field("garmin_product") else "?"))
@@ -71,9 +77,29 @@ def lee_fit(ruta):
     return rec, ses, sets, sensores
 
 
-def informe_vueltas(laps):
+def parado_al_empezar(lap, rec):
+    """Segundos que pasan desde que empieza la vuelta hasta que la distancia del reloj avanza medio metro.
+    Error del 19-10-2026: el primer 200 del simulacro empezó a contar al acabar un paso de 20 min de espera;
+    las vueltas dieron 3:28,3 y el logro del reloj 3:26,3, que empieza cuando el GPS ve el movimiento
+    (tarde en un arranque de parado: 6,4 m en el primer segundo). Lo más probable, unos 3:27."""
+    st = lap.get("start_time")
+    if not st:
+        return 0
+    serie = [r for r in rec if r.get("timestamp") and r.get("distance") is not None and 0 <= (r["timestamp"] - st).total_seconds() <= 30]
+    if not serie:
+        return 0
+    d0 = serie[0]["distance"]
+    for r in serie:
+        if r["distance"] - d0 >= 0.5:
+            return (r["timestamp"] - st).total_seconds()
+    return 0
+
+
+def informe_vueltas(laps, rec=(), logros=()):
     """Vueltas del reloj: la fuente buena para progresivos, series y controles.
-    Nunca medir una repetición con un umbral de velocidad: usar esto."""
+    Nunca medir una repetición con un umbral de velocidad: usar esto.
+    Avisa si una vuelta de distancia empezó con él parado (la vuelta lleva esos segundos)
+    y saca el logro del reloj para compararlo con la suma de las vueltas."""
     if len(laps) < 2:
         return
     print("\n  VUELTAS DEL RELOJ (la referencia para series y progresivos)")
@@ -84,6 +110,12 @@ def informe_vueltas(laps):
         pausa = f"  (pausa {el - t:.0f} s)" if el - t > 2 else ""
         rit = f"{mmss(t / (d / 1000))}/km" if d > 0 and t > 0 else "—"
         print(f"    {i:2}: {d:7.1f} m  {t:6.1f} s  {rit:>9}  FC med {l.get('avg_heart_rate') or '—'} máx {l.get('max_heart_rate') or '—'}  [{l.get('lap_trigger')}]{pausa}")
+        quieto = parado_al_empezar(l, rec) if l.get('lap_trigger') == 'distance' or (d and t and d / t > 3) else 0
+        if quieto >= 1.5:
+            print(f"        AVISO: la distancia tarda {quieto:.0f} s en avanzar al empezar esta vuelta: o salió tarde (la vuelta empezó antes, por ejemplo al acabar un paso de tiempo) o el GPS registra tarde el arranque. Tiempo corriendo entre {t - quieto:.1f} y {t:.1f} s. En un control, compararlo con el logro del reloj y dar el rango.")
+    for dist, seg in logros:
+        print(f"\n  LOGRO DEL RELOJ: {dist:.0f} m en {seg:.1f} s ({mmss(seg)}): la ventana más rápida de la actividad, contada desde que la distancia del GPS se mueve (en una salida de parado, algo después de salir).")
+        print("        Compararlo SIEMPRE con la suma de las vueltas de ese tramo antes de dar la marca: si no cuadran, explicar por qué.")
 
 
 def informe_carrera(rec, ses, sensores):
@@ -154,7 +186,7 @@ def informe_carrera(rec, ses, sensores):
     temps = [r.get("temperature") for r in rec if r.get("temperature") is not None]
     if temps:
         print(f"\n  SENSOR DE MUÑECA  media {statistics.mean(temps):.1f} °C · máx {max(temps):.0f}  (no es temperatura ambiente: sirve solo para comparar sesiones)")
-    informe_vueltas(ses.get("_laps", []))
+    informe_vueltas(ses.get("_laps", []), rec, ses.get("_logros", []))
 
     # franjas de pulso
     z = {"<130": 0, "130-140": 0, "140-145": 0, "145-155": 0, "155-170": 0, ">170": 0}

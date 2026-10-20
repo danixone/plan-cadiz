@@ -61,11 +61,23 @@
     "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física, y con ella se ordena a los aspirantes para las plazas (base 6.11 del BOE). Corregido el 29-9: la web decía que las físicas no sumaban a la nota final, y era falso.",
     "aviso": "Baremo VERIFICADO el 19-9-2026 en BOE-A-2026-15055 (Resolución de 7 de julio de 2026, BOE núm. 167 de 10-07-2026). Ya no hay tramos interpolados: las tres tablas están completas. Corrige errores del baremo anterior en dominadas.",
     "objetivosRevisados": {
-      "mil": "Bajar de 3:30 (4 puntos) como objetivo; suelo 3:36 (3 puntos). Se persigue con el reparto y un escalón de ritmo condicionado, no con más intensidad.",
+      "mil": "3:24 o menos (5 puntos) como objetivo desde el 20-10; suelo 3:30 (4 puntos, la marca de hoy). Se persigue con el reparto, no con más intensidad.",
       "dominadas": "Asegurar 12 VÁLIDAS con el estándar del BOE (6 puntos) y que no se anule ninguna. Él pide 14 como mínimo (28-9): posible, no garantizable en las cinco semanas que quedan; rango honesto 9-13 válidas, centro 11-12. 15 sigue siendo el deseable (8 puntos).",
       "circuito": "Medido el 1-10: 9,4 en el primer intento (7 puntos) y 9,2 de techo. Llevar el primer intento a 9,3 o menos es +1 punto (8 puntos, tramo 8,9-9,3).",
-      "mediaEsperada": "5,67 con el escenario realista (3:34) · 6,00 si el 1.000 baja de 3:30",
+      "mediaEsperada": "5,67 con las marcas de hoy (3:27) · 6,00 si el 1.000 baja de 3:25",
       "prioridad": "Cronometrar el circuito: el primer intento del jueves 1-10 es la primera medición seria. Todo el escenario descansa sobre ese número."
+    },
+    "objetivoNuevo20oct": {
+      "mil": "3:24 o menos (5 puntos, tramo 3:19-3:24). Decisión de Daniel el 20-10-2026, tras el simulacro del 19.",
+      "loQueVale": "+1 punto de baremo, +0,33 de media. Con las 12 dominadas y el circuito de hoy (9,4): 6,00. Con 3:25 ya no: 4 puntos.",
+      "comoSePersigue": "NO con más intensidad (revisión del 23-9; quedan 13 días): con el reparto. El 19-10 corrió 38,7 / 41,9 / 44,2 / 44,6 / 37,9 = 3:27,3. Con los dos tramos centrales en 43, el mismo día habría sido 38,7 / 41,9 / 43 / 43 / 37,9 = 3:24,5: todavía 4 puntos, porque el baremo no redondea. El 3:24 pide el 800 en 2:44 y un último 200 de 40 o menos: 41 por 200 hasta el 800, sin salir en 38-39. Reparto de examen: 0:41 / 1:22 / 2:03 / 2:44 / meta 3:23-3:24.",
+      "condiciones": [
+        "Los ritmos de entrenamiento no cambian: el bloque C va a 1:25 / 2:07 (resuelto el 20-10). El 3:27 salió entrenando a 1:26 / 2:08: los segundos que faltan están en el reparto, no en ir más rápido en las series.",
+        "Lo que se ensaya es la salida: los 200 del 21-10 (0:41-0:42) y, si la prueba es el 5 o el 6, los 3 × 200 del lunes 2, a 0:41, el paso del examen.",
+        "La pista de Arucas no está verificada: con un 1 % de error, el 3:27 puede ser 3:25 o 3:29. El objetivo solo se da por conseguido en Cádiz o en pista medida u homologada.",
+        "Suelo: 3:30 (4 puntos, la marca de hoy). Y lejos del 3:49, que elimina."
+      ],
+      "riesgo": "El 3:24 está en el borde de lo medido (banda 3:25-3:29): es posible, no lo más probable. El riesgo del reparto nuevo es el contrario al del 19-10: salir a 41 y no tener remate. El 19-10 el último 200 fue de 37,9 con los centrales en 44: había reserva. Si el 800 pasa en 2:44, el último 200 no puede pasar de 40."
     },
     "objetivoNuevo23sep": {
       "mil": "Bajar de 3:30 (4 puntos, tramo 3:25-3:30). Decisión de Daniel el 23-9-2026.",
@@ -78,7 +90,8 @@
         "Suelo que no se negocia: 3:36 (3 puntos) y, sobre todo, lejos del 3:49."
       ],
       "riesgo": "El coste es asimétrico y quedó escrito el 23-9: un cintillo despierto tumba el circuito, que es la palanca barata. Por eso el escalón de ritmo es de 1 s por 400 y condicionado, no de 3 s de golpe.",
-      "actualizacion28sep": "El bloque B se queda en 1:26 / 2:08: el 28 no fue válido ni con sobra, así que el primer escalón no se sube. El C puede seguir llegando a 1:24 / 2:06 si el simulacro del 17-10 da ≤ 3:33 en distancia verificada con los tramos centrales en 43. Pista: la de Arucas, si sus marcas confirman los 400 m."
+      "actualizacion28sep": "El bloque B se queda en 1:26 / 2:08: el 28 no fue válido ni con sobra, así que el primer escalón no se sube. El C puede seguir llegando a 1:24 / 2:06 si el simulacro del 17-10 da ≤ 3:33 en distancia verificada con los tramos centrales en 43. Pista: la de Arucas, si sus marcas confirman los 400 m.",
+      "sustituidoEl": "2026-10-20: el objetivo pasa a 3:24 (objetivoNuevo20oct)."
     }
   },
   "baremo": {
@@ -241,22 +254,22 @@
   },
   "marcasActuales": {
     "mil_metros": {
-      "marca": "3:34",
+      "marca": "3:27",
       "banda": [
-        "3:30",
-        "3:38"
+        "3:25",
+        "3:29"
       ],
-      "medidoEl": "2026-09-19",
-      "puntos": 3,
-      "base": "Control en San Cristóbal. 1010 m en 217,0 s entre dos pulsaciones manuales de vuelta; logro del reloj 1000 m en 214,118 s.",
-      "margen": "±4 s. El margen no es el cronómetro, es la escala de la pista: ±1-2 % sin signo determinado porque el anillo no está homologado ni medido.",
-      "margenALaEliminacion": "11 a 19 s. Para llegar a 3:49 el GPS tendría que errar un 7-8 % en el perímetro; la dispersión entre estimaciones del mismo óvalo es del 1,7-1,8 %.",
-      "supera": "La estimación anterior de 3:52 (rango 3:48-3:56) falló por 14 a 22 s. Salía del 600 de 2:12 del 31-8, una sesión que el Paso 2 del propio plan prohíbe usar para reestimar (4h09 de sueño, 7 h sin comer, tres días tras una doble extracción). Lo que falló no fue el 600: fue el modelo que lo convirtió en 3:52."
+      "medidoEl": "2026-10-19",
+      "puntos": 4,
+      "base": "Simulacro en la pista de Arucas con el perfil Pista del reloj: unos 3:27, entre 3:26,3 (logro del reloj, 206,3 s, que empieza cuando la distancia del GPS se mueve) y 3:28,3 (las cinco vueltas de 200, que empezaron a contar al acabar la espera de 20 min, antes de salir). Sin calentamiento y 20 min después del máximo de dominadas.",
+      "margen": "±2 s: ±1 s por la salida (vueltas 3:28,3, logro 3:26,3) y ±1 % por la pista de Arucas sin verificar (el modo pista da 400 m por vuelta por construcción). Si la pista fuera más de un 1 % corta, podría pasar de 3:30 y serían 3 puntos.",
+      "margenALaEliminacion": "Unos 22 s hasta el 3:49.",
+      "supera": "El 3:34 del 19-9 en San Cristóbal (±1-2 %), que a su vez superó la estimación de 3:52."
     },
     "dominadas": {
-      "marca": "11 autoinformado el 19-9-2026, sin registro en el FIT",
-      "puntos": 5,
-      "maximoRegistrado": "10, el 24-8-2026 (y fueron 4 min después de 8 × 200)",
+      "marca": "12 autoinformado el 19-10-2026, sin vídeo (la 12.ª dudosa según él: pausa larga en la 11 y pie levantado)",
+      "puntos": 6,
+      "maximoRegistrado": "12, el 19-10-2026 (autoinformado, sin vídeo); antes, 11 el 19-9 y 10 el 24-8",
       "aviso": "El «máximo confirmado 12» del plan anterior no aparece en ninguna sesión del historial. La estimación de 13-15 se retira: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza máxima.",
       "protocolo": "Toda serie máxima se graba en vídeo, con una cámara de tres cuartos a la altura de la barra y la barra a la vista, para contarla y para auditar si el tribunal la daría por buena."
     },
@@ -395,7 +408,7 @@
       "cuando": "26 oct - 1 nov y día de la prueba",
       "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5 y el 12-10, 1:22 el 26-10), la siguiente sale más lenta, no se abandona. En los 200 del 19-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
-      "condicion": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor."
+      "condicion": "El escalón (segundo valor) solo si el 19 de octubre dio ≤ 3:33 en distancia verificada con los tramos 400-600 y 600-800 en 43 y si al menos una sesión de series del bloque B (el 12 o el 14; el 5 no fue válida y el 7 no se hizo) fue válida con las repeticiones dentro de 3 s del ritmo. Si no, o si dio 3:34-3:36, el primer valor. RESUELTO el 20-10: el simulacro del 19 dio unos 3:27 (3:28,3 por las vueltas, 3:26,3 por el logro del reloj), pero con los tramos 400-600 y 600-800 en 44,2 y 44,6 (no en 43) y la distancia sin verificar: el C va al primer valor, 1:25 / 2:07."
     },
     {
       "clave": "VEL",
@@ -1630,7 +1643,7 @@
             {
               "dia": "Lun 2",
               "tipo": "carrera",
-              "sesion": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:42-0:43 con 3 min + 3 × 4 dominadas suaves. Si es el 4: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 28"
+              "sesion": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24) + 3 × 4 dominadas suaves. Si es el 4: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 28"
             },
             {
               "dia": "−2 días",
@@ -1656,16 +1669,16 @@
   "planDeCarrera": {
     "examen": {
       "reparto": {
-        "200": "0:42",
-        "400": "1:24",
-        "600": "2:06",
-        "800": "2:48",
-        "meta": "3:29-3:30"
+        "200": "0:41",
+        "400": "1:22",
+        "600": "2:03",
+        "800": "2:44",
+        "meta": "3:23-3:24"
       },
-      "suelo": "3:36. Y el 3:49 elimina.",
+      "suelo": "3:30. Y el 3:49 elimina.",
       "elimina": "3:49",
-      "margenPrevisto": "19 s sobre la eliminación si sale el 3:30; 13 s si sale el suelo de 3:36.",
-      "reglaDeSalida": "Si pasas el 600 por delante de 2:05, has salido demasiado rápido. El primer 200 va en 0:42, no en los 0:40 del 19-9. El objetivo entero está en no perder los tramos 400-600 y 600-800: 43 y 43, no 46 y 46.",
+      "margenPrevisto": "25 s sobre la eliminación si sale el 3:24; 19 s si sale el suelo de 3:30.",
+      "reglaDeSalida": "Si pasas el 600 por delante de 2:02, has salido demasiado rápido. El primer 200 va en 0:41, no en los 0:38,7 del 19-10. El objetivo está en los tramos 400-600 y 600-800: 41 y 41, no 44 y 44.",
       "consejos": [
         "Salir por el interior de la calle 1 y pelear el sitio en los primeros 30 m.",
         "Los primeros 200 m son la trampa: el pelotón sale disparado.",
@@ -1675,22 +1688,22 @@
       "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
       "orden": "circuito → dominadas → 1.000 m",
       "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz.",
-      "nota": "Reparto plano a 42,0 por 200 para bajar de 3:30. Es el reparto que también manda en el simulacro del 19-10 (allí con meta ≤ 3:33, porque está a 16-20 días).",
+      "nota": "Reparto a 41 por 200 hasta el 800 y el último en 40 o menos para el 3:24 (desde el 20-10; antes, 42,0 por 200 para bajar de 3:30).",
       "dominadas": "Hacer 13 por tu cuenta para que el tribunal cuente 12: la repetición de margen es la única cobertura frente al recuento."
     }
   },
   "escenariosNota": [
     {
       "nombre": "Marcas de hoy",
-      "mil": "3:34",
-      "milPuntos": 3,
-      "dominadas": 11,
-      "dominadasPuntos": 5,
+      "mil": "3:27",
+      "milPuntos": 4,
+      "dominadas": 12,
+      "dominadasPuntos": 6,
       "circuito": 9.4,
       "circuitoPuntos": 7,
-      "media": 5.0,
+      "media": 5.67,
       "resultado": "APTO",
-      "nota": "Circuito: primer intento del 1-10 (9,4; techo 9,2). Apto justo, sin margen: el 3:34 lleva ±1-2 % de escala por la pista sin medir y las 11 dominadas son autoinformadas."
+      "nota": "1.000 del simulacro del 19-10 (unos 3:27; Arucas, modo pista, distancia sin verificar), 12 dominadas autoinformadas del mismo día (la 12.ª dudosa) y circuito del 1-10 (9,4). Si la 12.ª no valiera, 11 = 5 puntos y la media 5,33; si la pista fuera más de un 1 % corta, el 1.000 podría pasar de 3:30 (3 puntos) y también 5,33."
     },
     {
       "nombre": "Realista (el suyo, 19-9-2026)",
@@ -1707,16 +1720,16 @@
       "porQueNoEsEstancamiento": "En el historial solo hay DOS tests máximos: 10 el 24 de agosto (y fueron 4 min después de 8 × 200) y 11 el 19 de septiembre. La primera sesión de fuerza específica fue el 15 de septiembre. A 19 de septiembre lleva cuatro días entrenando fuerza. Lo anterior era habituación a peso corporal, que no sube el techo."
     },
     {
-      "nombre": "Objetivo nuevo (23-9): bajar de 3:30",
-      "mil": "3:29",
-      "milPuntos": 4,
+      "nombre": "Objetivo nuevo (20-10): 3:24",
+      "mil": "3:24",
+      "milPuntos": 5,
       "dominadas": 12,
       "dominadasPuntos": 6,
-      "circuito": 9.0,
-      "circuitoPuntos": 8,
+      "circuito": 9.4,
+      "circuitoPuntos": 7,
       "media": 6.0,
       "resultado": "APTO",
-      "nota": "Depende de convertir los dos tramos de 46 en 43. Con el circuito y las dominadas del escenario realista."
+      "nota": "Con las dominadas y el circuito de hoy. Depende del reparto: 41 por 200 hasta el 800, no 38,7 de salida y 44 en los centrales."
     },
     {
       "nombre": "Con el kilómetro bajado",
@@ -1731,13 +1744,13 @@
     },
     {
       "nombre": "Objetivo",
-      "mil": "3:30",
-      "milPuntos": 4,
+      "mil": "3:24",
+      "milPuntos": 5,
       "dominadas": 15,
       "dominadasPuntos": 8,
       "circuito": 9.3,
       "circuitoPuntos": 8,
-      "media": 6.67,
+      "media": 7.0,
       "resultado": "APTO"
     }
   ],
@@ -1868,7 +1881,7 @@
     "cuestaCadaPunto": {
       "circuito": "tramos de 0,3-0,5 s. De 9,9 a 9,7 = +1 punto; de 9,9 a 9,3 = +2",
       "dominadas": "de 11 a 12 = +1 punto (1 repetición). De 12 a 13 = nada. De 13 a 14 = +1. De 14 a 15 = +1",
-      "kilometro": "tramos de 6 s. De 3:34 a 3:30 = +1 punto"
+      "kilometro": "tramos de 6 s. De 3:27 a 3:24 = +1 punto; de 3:27 a 3:31 = −1"
     }
   },
   "revision23sep": {
