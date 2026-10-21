@@ -868,7 +868,9 @@
       if (k === 'H') {
         var gH = '<article class="card te-ej" id="te-ej-gluteo-medio">' + cardH(null, b.ejercicio, sub, k) + chipsMaterial({ material: b.peso ? [b.peso] : [] }) +
           (arr(b.detalle).length ? '<ol class="te-tec">' + arr(b.detalle).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol>' : '') +
-          (b.formato ? p(b.formato, 'te-aviso-ej') : '') + why('Por qué', p(b.porQue) + p(b.orden)) + '</article>';
+          (b.formato ? p(b.formato, 'te-aviso-ej') : '') +
+          (arr(b.alternativaMaquina).length ? why('En máquina', '<ul class="te-tec">' + arr(b.alternativaMaquina).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>') : '') +
+          why('Por qué', p(b.porQue) + p(b.orden)) + '</article>';
         h += gH; return;
       }
       var e = ejDeNombre(b.ejercicio); if (!e) return;

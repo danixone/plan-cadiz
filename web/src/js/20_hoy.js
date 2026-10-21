@@ -967,6 +967,77 @@
       cols.map(function (c) { return '<th scope="col">' + esc(c.t) + '</th>'; }).join('') + '<th scope="col" class="hoy-elim" data-umbral="' + el + '">ritmo del ' + PC.fmt.t(el) + '</th></tr></thead><tbody>' +
       filas.join('') + '</tbody></table></div></div>';
   }
+  /* ---------------------------------------------------------------- paso cada 50 m (desde el 21-10-2026, a petición de Daniel)
+     De cada distancia y objetivo del día, el tiempo acumulado cada 50 m: plano dentro de cada 200; el primer 200 en el suyo
+     si el día lo fija (primer200) y, en el examen, el reparto por 200 del plan. Se calcula desde el objetivo: no hay cifras escritas. */
+  function primerT(txt) { var m = /\d{1,2}:\d{2}(?:,\d+)?/.exec(String(txt || '')); return m ? PC.fmt.parseT(m[0]) : null; }
+  function marcas50(dist, obj, p200, rep) {
+    var cortes = [], d;
+    for (d = 200; d < dist; d += 200) cortes.push(d);
+    cortes.push(dist);
+    var t = cortes.map(function (c, i) {
+      if (rep && i < cortes.length - 1 && rep[i] !== null && rep[i] !== undefined) return rep[i];
+      if (p200 && dist > 200 && p200 < obj) return c === 200 ? p200 : p200 + (obj - p200) * (c - 200) / (dist - 200);
+      return obj * c / dist;
+    });
+    var out = [];
+    for (d = 50; d <= dist; d += 50) {
+      var k = 0; while (cortes[k] < d) k++;
+      var a = k ? cortes[k - 1] : 0, ta = k ? t[k - 1] : 0;
+      out.push({ m: d, s: ta + (t[k] - ta) * (d - a) / (cortes[k] - a), c200: d % 200 === 0 || d === dist });
+    }
+    return out;
+  }
+  /* «10,6 s cada 50 m» o, si cambia por tramos, «10,3 s cada 50 m hasta el 800; 10,0 después» */
+  function cada50Txt(M) {
+    var g = [];
+    M.forEach(function (x, i) {
+      var v = Math.round((x.s - (i ? M[i - 1].s : 0)) * 10) / 10;
+      if (g.length && g[g.length - 1].v === v) g[g.length - 1].hasta = x.m; else g.push({ v: v, desde: x.m - 50, hasta: x.m });
+    });
+    if (g.length === 1) return PC.fmt.num(g[0].v, 1) + ' s cada 50 m';
+    return g.map(function (x, i) {
+      return PC.fmt.num(x.v, 1) + ' s' + (i === 0 ? ' cada 50 m hasta el ' + x.hasta : i === g.length - 1 ? ' desde el ' + x.desde : ' del ' + x.desde + ' al ' + x.hasta);
+    }).join('; ');
+  }
+  /* cada distancia y objetivo distintos del día: {dist, obj (texto), lo/hi o s, p200, rep} */
+  function bloques50(dia, R) {
+    if (perfil() || !R || R.color === 'rojo' || R.color === 'parada') return [];
+    var out = [], vistos = {};
+    if (dia.tipo === 'prueba') {
+      var ex = (plan().planDeCarrera || {}).examen || {}, rp = ex.reparto || {}, meta = rangoT(rp.meta);
+      if (meta) out.push({ dist: 1000, obj: PC.fmt.t(meta.hi), lo: meta.hi, hi: meta.hi, rep: ['200', '400', '600', '800'].map(function (k) { return PC.fmt.parseT(rp[k]); }), examen: true });
+      return out;
+    }
+    var p = R.principal;
+    if (!p) return out;
+    if (p.tipo === 'control1000') {
+      var ro = (p.repartos || {}).objetivo, mt = rangoT(p.meta || p.obj);
+      if (mt) out.push({ dist: 1000, obj: PC.fmt.t(mt.hi), lo: mt.hi, hi: mt.hi, rep: ro ? ro.map(function (x) { return PC.fmt.parseT(x); }) : null });
+      return out;
+    }
+    if (R.tpl !== 'series') return out;
+    SES.secuencia(p, R.color).forEach(function (r) {
+      var rg = rangoT(r.obj); if (!rg || !r.dist) return;
+      var p200 = primerT(r.primer200 || p.primer200);
+      var k = r.dist + '|' + r.obj + '|' + p200; if (vistos[k]) return; vistos[k] = true;
+      out.push({ dist: r.dist, obj: r.obj, lo: rg.lo, hi: rg.hi, p200: rg.lo === rg.hi ? p200 : null });
+    });
+    return out;
+  }
+  function htmlCada50(B) {
+    if (!B.length) return '';
+    return '<div class="hoy-50"><p class="hoy-sub">Paso cada 50 m</p>' + B.map(function (b) {
+      var L = marcas50(b.dist, b.lo, b.p200, b.rep), H = b.hi !== b.lo ? marcas50(b.dist, b.hi, null, b.rep) : null;
+      var p50 = function (M) { return PC.fmt.num(Math.round(M[0].s * 10) / 10, 1); };
+      var tit = '<b>' + (b.examen ? 'Examen: ' : '') + PC.fmt.num(b.dist).replace(/(\d)(\d{3})$/, '$1.$2') + ' m en ' + esc(b.obj) + '</b> · ' + esc(H ? 'de ' + p50(L) + ' a ' + p50(H) + ' s cada 50 m' : cada50Txt(L));
+      return '<div class="hoy-50-b"><p class="hoy-50-t">' + tit + '</p><ol class="hoy-50-g">' + L.map(function (x, i) {
+        var v = PC.fmt.t(x.s, 1) + (H ? '<br>' + PC.fmt.t(H[i].s, 1) : '');
+        return '<li' + (x.c200 ? ' class="m200"' : '') + '><span>' + x.m + ' m</span><b>' + v + '</b></li>';
+      }).join('') + '</ol></div>';
+    }).join('') + '</div>';
+  }
+  SES.cada50 = { bloques: bloques50, marcas: marcas50, html: htmlCada50 };   /* para la QA y la consola */
   function htmlPaso(p, clave, conCk, conTimer, hecho) {
     var tags = (p.tags || []).map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('');
     var d = p.d ? esc(p.d) : '';
@@ -1115,6 +1186,7 @@
     var ch = chipsSesion(dia, R);
     if (R.sinElegir) ch = ch ? ch.replace('</div>', '<span class="chip sup">elige arriba</span></div>') : '<div class="chips"><span class="chip sup">elige arriba</span></div>';
     h.push(ch);
+    if (color !== 'parada') h.push(htmlCada50(bloques50(dia, R)));
     /* M8: si 'hora' trae algo más que la hora («18:00 · acabar antes de las 20:30 · cena terminada a las 20:15…»,
        «09:30-10:00, la misma que el 24 de octubre»), la cabecera solo enseña la hora y el resto se perdía: va literal aquí */
     var hn = String(dia.hora || '').trim();
@@ -1601,6 +1673,8 @@
       var kt = r.km ? 'Kilómetro partido ' + r.km + ' de ' + r.kmN + ' · ' + r.dist + ' m' : 'Repetición ' + (k + 1) + ' de ' + n + ' · ' + r.dist + ' m';
       h.push('<p class="focus-k">' + esc(kt) + '</p><p class="big num' + (r.lo !== r.hi ? ' hoy-rg' : '') + '">' + esc(r.obj) + '</p>');
       var ln = lineaRep(d, R, r); if (ln) h.push('<p class="hoy-fz-l">' + esc(ln) + '</p>');
+      var b50 = bloques50(d, R).filter(function (b) { return b.dist === r.dist && b.obj === r.obj; });
+      if (b50.length) h.push(htmlCada50(b50.slice(0, 1)));
       if (FZ.tarde > 1) h.push('<p class="hoy-fz-l"><b>Terminó hace ' + PC.fmt.t(Math.round(FZ.tarde)) + '</b></p>');
       if (r.criterio) h.push('<div class="rep-btns hoy-fz-tr">' + tramosCriterio(r.criterio).map(function (tr) {
         return '<button type="button" class="' + tr.cls + '" data-z="cat" data-v="' + tr.id + '">' + esc(tr.b) + '<small>' + esc(tr.s) + '</small></button>';
@@ -1655,6 +1729,7 @@
       }
       if (mil) {
         h.push(htmlReparto(d, p));
+        h.push(htmlCada50(bloques50(d, R)));
         if (p.criterios) h.push('<ul class="hoy-fz-crit">' + p.criterios.map(function (c) { return '<li>' + esc(c) + '</li>'; }).join('') + '</ul>');
         var tv = S.mil ? fmtT(S.mil) : '', pts = S.mil ? PC.baremo.pts('mil', S.mil) : null;
         h.push('<label class="tin"><span>Final</span><input inputmode="decimal" autocomplete="off" placeholder="' + esc(p.obj || '') + '" data-z="mil" value="' + esc(tv) + '" aria-label="Tiempo final del 1.000">' +

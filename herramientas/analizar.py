@@ -95,6 +95,53 @@ def parado_al_empezar(lap, rec):
     return 0
 
 
+def parciales50(laps, rec):
+    """Parciales de 50 m de cada repetición (vuelta de 150 a 1.100 m corrida a más de 4 m/s), anclados a la vuelta:
+    la distancia del GPS segundo a segundo se reparte en la distancia de la vuelta y el total es el de la vuelta.
+    Se comparan con la tabla «Paso cada 50 m» de la web (desde el 21-10-2026). Error de GPS: algún segundo en cada 50 m."""
+    rec = [r for r in rec if r.get("distance") is not None and r.get("timestamp")]
+    filas = []
+    for i, l in enumerate(laps, 1):
+        d, t, ini = l.get("total_distance") or 0, l.get("total_timer_time") or 0, l.get("start_time")
+        if not (150 <= d <= 1100 and t > 0 and d / t > 4 and ini):
+            continue
+        P = [((r["timestamp"] - ini).total_seconds(), r["distance"]) for r in rec
+             if -2 <= (r["timestamp"] - ini).total_seconds() <= t + 2]
+        if len(P) < 5:
+            continue
+
+        def d_en(s):
+            for (a, da), (b, db) in zip(P, P[1:]):
+                if a <= s <= b:
+                    return da + (s - a) / (b - a) * (db - da) if b > a else da
+            return P[0][1] if s < P[0][0] else P[-1][1]
+        d0, d1 = d_en(0), d_en(t)
+        if d1 - d0 < 50:
+            continue
+        marcas, objetivo = [], 50
+        while objetivo <= d + 1:
+            dd = d0 + (d1 - d0) * objetivo / d
+            s = None
+            for (a, da), (b, db) in zip(P, P[1:]):
+                if da <= dd <= db and db > da:
+                    s = a + (dd - da) / (db - da) * (b - a)
+                    break
+            marcas.append(min(max(s if s is not None else t, 0), t))
+            objetivo += 50
+        if marcas:
+            marcas[-1] = t if abs(objetivo - 50 - d) < 1 else marcas[-1]
+            filas.append((i, d, t, marcas))
+    if not filas:
+        return
+    print("\n  PARCIALES DE 50 m POR REPETICIÓN (anclados a la vuelta; GPS: algún segundo de error en cada 50 m)")
+    for i, d, t, M in filas:
+        par = [M[0]] + [b - a for a, b in zip(M, M[1:])]
+        mms = lambda x: f"{int(x // 60)}:{x % 60:04.1f}".replace(".", ",")
+        acum = " · ".join(f"{(k + 1) * 50}: {mms(x)}" for k, x in enumerate(M) if (k + 1) % 4 == 0 or k == len(M) - 1)
+        print(f"    vuelta {i:2} ({d:.0f} m en {t:.1f} s): " + " · ".join(f"{x:.1f}" for x in par))
+        print(f"             acumulado {acum}")
+
+
 def informe_vueltas(laps, rec=(), logros=()):
     """Vueltas del reloj: la fuente buena para progresivos, series y controles.
     Nunca medir una repetición con un umbral de velocidad: usar esto.
@@ -113,6 +160,7 @@ def informe_vueltas(laps, rec=(), logros=()):
         quieto = parado_al_empezar(l, rec) if l.get('lap_trigger') == 'distance' or (d and t and d / t > 3) else 0
         if quieto >= 1.5:
             print(f"        AVISO: la distancia tarda {quieto:.0f} s en avanzar al empezar esta vuelta: o salió tarde (la vuelta empezó antes, por ejemplo al acabar un paso de tiempo) o el GPS registra tarde el arranque. Tiempo corriendo entre {t - quieto:.1f} y {t:.1f} s. En un control, compararlo con el logro del reloj y dar el rango.")
+    parciales50(laps, rec)
     for dist, seg in logros:
         print(f"\n  LOGRO DEL RELOJ: {dist:.0f} m en {seg:.1f} s ({mmss(seg)}): la ventana más rápida de la actividad, contada desde que la distancia del GPS se mueve (en una salida de parado, algo después de salir).")
         print("        Compararlo SIEMPRE con la suma de las vueltas de ese tramo antes de dar la marca: si no cuadran, explicar por qué.")

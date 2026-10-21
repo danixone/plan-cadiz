@@ -882,7 +882,7 @@
       ]
     },
     "2026-10-21": {
-      "firma": "f0978d0cdfa9",
+      "firma": "f603d22bcfb2",
       "titulo": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
       "numeros": {
         "verde": [
@@ -892,9 +892,9 @@
             "desde": "2 × 600 m (rec. 3 min)"
           },
           {
-            "v": "2:07 o 2:06",
-            "l": "cada 600",
-            "desde": "600 en 2:07, o 2:06"
+            "v": "2:07",
+            "l": "cada 600 (bloque C)",
+            "desde": "600 en 2:07"
           },
           {
             "v": "2 × 200 m",
@@ -921,26 +921,6 @@
           }
         ],
         "desde": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)"
-      },
-      "condicion": {
-        "compartida": "bloqueC",
-        "base": {
-          "partes": [
-            {
-              "obj": "2:07"
-            },
-            null
-          ]
-        },
-        "si": {
-          "partes": [
-            {
-              "obj": "2:06"
-            },
-            null
-          ]
-        },
-        "desde": "600 en 2:07, o 2:06 si el 19 respaldó el bloque C a 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -1103,7 +1083,7 @@
       ]
     },
     "2026-10-26": {
-      "firma": "1204b7237ddd",
+      "firma": "f5e3d2eb8803",
       "titulo": "4 × 400 m, rec. 2:30",
       "principal": {
         "tipo": "series",
@@ -1115,16 +1095,6 @@
         "freno": "1:22",
         "aviso": "3:30-3:40",
         "desde": "4 × 400 m, rec. 2:30"
-      },
-      "condicion": {
-        "compartida": "bloqueC",
-        "base": {
-          "obj": "1:25"
-        },
-        "si": {
-          "obj": "1:24"
-        },
-        "desde": "1:25 con 2:30; 1:24 si el 19 respaldó el bloque C a 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -1191,7 +1161,7 @@
       ]
     },
     "2026-10-28": {
-      "firma": "b8d1fae79496",
+      "firma": "193e4009e70c",
       "titulo": "600 m + 400 m, rec. 5 min",
       "numeros": {
         "verde": [
@@ -1202,13 +1172,13 @@
           },
           {
             "v": "2:07 y 1:25",
-            "l": "o 2:06 y 1:24 si el 19 respaldó el 3:30",
-            "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 19 respaldó el 3:30"
+            "l": "bloque C, resuelto el 20-10",
+            "desde": "2:07 y 1:25 (bloque C, resuelto el 20-10)"
           },
           {
-            "v": "0:42",
+            "v": "0:42,5",
             "l": "primer 200",
-            "desde": "primer 200 en 0:42"
+            "desde": "primer 200 en 0:42,5"
           }
         ]
       },
@@ -1225,32 +1195,8 @@
           }
         ],
         "rec": "5 min",
-        "primer200": "0:42",
+        "primer200": "0:42,5",
         "desde": "600 m + 400 m, rec. 5 min"
-      },
-      "condicion": {
-        "compartida": "bloqueC",
-        "base": {
-          "partes": [
-            {
-              "obj": "2:07"
-            },
-            {
-              "obj": "1:25"
-            }
-          ]
-        },
-        "si": {
-          "partes": [
-            {
-              "obj": "2:06"
-            },
-            {
-              "obj": "1:24"
-            }
-          ]
-        },
-        "desde": "2:07 y 1:25; o 2:06 y 1:24 si el 19 respaldó el 3:30"
       },
       "calidad": true,
       "fuentes": [
@@ -1259,7 +1205,7 @@
       ]
     },
     "2026-10-30": {
-      "firma": "e2d0514534a4",
+      "firma": "77cbb9c52cb7",
       "titulo": "Simulacro ligero o descanso",
       "versiones": {
         "4-6": "v2:Vie 30"
@@ -1281,7 +1227,7 @@
       ]
     },
     "v1:Mié 28": {
-      "firma": "3cda520eec61",
+      "firma": "e92f43b2abec",
       "titulo": "600 + 400 del bloque C",
       "principal": {
         "tipo": "compuesta",
@@ -1296,30 +1242,6 @@
           }
         ],
         "desde": "600 + 400 del bloque C"
-      },
-      "condicion": {
-        "compartida": "bloqueC",
-        "base": {
-          "partes": [
-            {
-              "obj": "2:07"
-            },
-            {
-              "obj": "1:25"
-            }
-          ]
-        },
-        "si": {
-          "partes": [
-            {
-              "obj": "2:06"
-            },
-            {
-              "obj": "1:24"
-            }
-          ]
-        },
-        "desde": "2:06 + 1:24, o 2:07 + 1:25"
       },
       "calidad": true,
       "fuentes": [
@@ -1348,7 +1270,7 @@
       ]
     },
     "v2:Vie 30": {
-      "firma": "4d83bcd53625",
+      "firma": "7b7233fb2074",
       "numeros": [
         {
           "v": "8",
@@ -1357,8 +1279,8 @@
         },
         {
           "v": "600",
-          "l": "a 2:06 (o 2:07)",
-          "desde": "600 a 2:06 (o 2:07)"
+          "l": "a 2:07",
+          "desde": "600 a 2:07"
         }
       ],
       "pasos": [
@@ -1369,9 +1291,9 @@
           "desde": "serie técnica de 8 dominadas en vídeo (no un máximo)"
         },
         {
-          "t": "600 a 2:06 (o 2:07)",
+          "t": "600 a 2:07",
           "enlace": "#tecnica/mil",
-          "desde": "600 a 2:06 (o 2:07)"
+          "desde": "600 a 2:07"
         }
       ],
       "principal": {
@@ -1379,17 +1301,7 @@
         "n": 1,
         "dist": 600,
         "obj": "2:07",
-        "desde": "600 a 2:06 (o 2:07)"
-      },
-      "condicion": {
-        "compartida": "bloqueC",
-        "base": {
-          "obj": "2:07"
-        },
-        "si": {
-          "obj": "2:06"
-        },
-        "desde": "600 a 2:06 (o 2:07)"
+        "desde": "600 a 2:07"
       },
       "fuentes": [
         "plan.calendario[v2:Vie 30].sesion"
