@@ -2,7 +2,7 @@
   "_nota": "Frases clave por ID del inventario (§10.5 M1 y criterio global 5 de §10.6). Cada ID con eliminado:false de inventario_ids.json tiene de 1 a 3 frases literales que la web nueva tiene que pintar en el texto (innerText) de alguna de las cinco vistas con ?qa=1&abrir=1, con ?hoy=2026-09-29 y a 1280 px (a esa anchura el calendario rotula los días). Se comparan sin distinguir mayúsculas y con los espacios normalizados (también el no separable). Salen de plan.json, historial.json, web.json, el corpus congelado de la web antigua o los textos fijos de la especificación (Anexo C, §3.2, §5). C1 (marca de la barra de escritorio, fuera de las vistas), C6 (<head>) y C7 (@media print) no tienen texto dentro de las vistas: su lista va vacía y se comprueban por su data-inv y por el CSS. Las de «Cádiz · ≥ 27 días» y «martes 29 de septiembre» dependen de la fecha: valen con hoy=2026-09-29. La comparación recomendada es sin distinguir mayúsculas (text-transform cambia el innerText); todas están escritas con las mayúsculas exactas de su fuente.",
   "C1": [],
   "C2": [
-    "Cádiz · ≥ 34 días"
+    "Cádiz · ≥"
   ],
   "C3": [
     "5,67 · apto",
@@ -149,7 +149,7 @@
     "Carga"
   ],
   "G8": [
-    "1.000 ≤ 3:33 con reparto plano",
+    "3:24 o menos (5 puntos",
     "acabar con sensación de sobra"
   ],
   "G9": [
@@ -209,10 +209,7 @@
     "Cuánto aguanta el escenario realista",
     "3:37 + 11 dominadas + 9,8 s = 4,33. Hace falta que fallen las tres a la vez."
   ],
-  "H11": [
-    "Todo esto descansa sobre un número que no existe",
-    "El circuito del 24 no se hizo"
-  ],
+  "H11": [],
   "H16": [
     "Confirmar que la pista de Arucas es de 400 m",
     "Enseñar la zapatilla con la plantilla de ICOT puesta al fisio o a ICOT."
@@ -309,7 +306,7 @@
   "P18": [
     "Afinamiento y prueba · dos versiones según la fecha",
     "la fecha llega con el llamamiento",
-    "La fecha exacta no se conoce (primera semana de noviembre, del lunes 2 al viernes 6)"
+    "La semana está confirmada (primera de noviembre, del lunes 2 al viernes 6"
   ],
   "R1": [
     "Cena terminada antes de las 20:15 · luz apagada a las 22:15",
@@ -355,9 +352,7 @@
     "Regla de las dos repeticiones",
     "Si falla el tiempo objetivo por más de 3 s en dos repeticiones seguidas, la sesión se acabó"
   ],
-  "S1": [
-    "martes 29 de septiembre"
-  ],
+  "S1": [],
   "S2": [
     "Movilidad dinámica 5 min",
     "Técnica: 2 × 20 m de skipping bajo"

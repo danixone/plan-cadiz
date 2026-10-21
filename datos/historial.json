@@ -5,6 +5,12 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-21",
+      "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
+      "hecho": false,
+      "motivo": "Lluvia todo el día: imposible entrenar en pista (dicho por él el 21-10). Pasa al jueves 22 a las 18:00, antes del circuito de las 21:30, decisión suya."
+    },
+    {
       "fecha": "2026-10-19",
       "sesion": "SIMULACRO: dominadas al máximo → 20 min → 1.000 m · pista de Arucas, perfil Pista del reloj",
       "objetivo": "1.000 ≤ 3:33 con reparto plano (0:42 / 1:24 / 2:06 / 2:48) y los tramos 400-600 y 600-800 en 43 · primer 200 entre 0:42 y 0:43, nunca por debajo de 0:42 · dominadas ≥ 12 válidas en vídeo",
@@ -2578,8 +2584,8 @@
       "fecha": "2026-10-19",
       "estimacion": "3:27",
       "banda": [
-        "3:25",
-        "3:29"
+        "3:24",
+        "3:30"
       ],
       "vigente": true,
       "medido": true,

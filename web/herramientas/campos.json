@@ -192,6 +192,10 @@
 
   "interno": [
     "plan.meta.*",
+    "plan.objetivo.pruebasFisicas.confirmacion21oct",
+    "plan.objetivo.pruebasFisicas.avisoOficial20oct",
+    "plan.objetivo.pruebasFisicas.sedeNota",
+    "plan.objetivo.objetivoNuevo23sep.*",
     "plan.atleta.nombre",
     "historial.meta.*",
     "historial.composicion[].bascula"

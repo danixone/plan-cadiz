@@ -52,7 +52,10 @@
     "oposicion": "Policía Nacional · Escala Básica",
     "pruebasFisicas": {
       "lugar": "Cádiz",
-      "fecha": "Primera semana de noviembre de 2026 (del lunes 2 al viernes 6; día exacto sin confirmar)",
+      "fecha": "Primera semana de noviembre de 2026 (del lunes 2 al viernes 6): semana confirmada en el Portal del Aspirante el 21-10-2026; día, hora y lugar, en la convocatoria individualizada que se publicará allí",
+      "confirmacion21oct": "Portal del Aspirante, aviso «BAS43 - PRUEBAS FÍSICAS» del 21-10-2026: «las pruebas físicas tendrán lugar la primera semana del mes de noviembre» y «se publicarán, de forma individualizada, a través del portal del aspirante, el día, hora y lugar». Es lo que el plan suponía desde el 2-10: no cambia ninguna sesión.",
+      "avisoOficial20oct": "Portal del Aspirante, «EE41/EB43 – Recordatorio importante para la prueba de aptitud física», 20-10-2026: certificado médico con número de colegiado, firma, el nombre del aspirante y que reúne las condiciones físicas precisas para las pruebas; memorizar el número de opositor para el llamamiento; usar unas solas zapatillas para todos los ejercicios; no llevar teléfono móvil, porque su uso está prohibido. De relojes no dice nada. Daniel lo tiene todo (dicho el 21-10): certificado y número de opositor.",
+      "sedeNota": "Sede de Daniel: Cádiz, confirmada por él el 21-10-2026. La instalación aún no está publicada para la BAS43; la Escala Ejecutiva (EE41) hizo las suyas de Cádiz en El Puerto de Santa María, Polideportivo Municipal «Ramón Velázquez» (aviso del 1-10-2026): es una pista, no un dato de la BAS43.",
       "fechaReferencia": "2026-11-02",
       "cambio2oct": "El 2-10 Daniel comunicó que las pruebas físicas pasan de la última semana de octubre a la primera de noviembre. Decisión: se añade una semana más del bloque B (del 5 al 11 de octubre, con las mismas sesiones que la siguiente) y todo lo que venía del 5-10 en adelante se corre siete días. Así el simulacro (17-10), la última sesión pesada de lastre (20-10) y la descarga (27-10) quedan a la misma distancia de la prueba que antes: el último esfuerzo máximo a 16-20 días y la descarga a 6-10 días. Ninguna estimación de marca cambia: una semana más no se convierte en segundos ni en repeticiones sin inventarlos. Sesiones cortas de barra: siguen siendo dos (3-10 y 24-10), como fijó la revisión del 28-9.",
       "cambio14oct": "El 14-10 Daniel avisó de que la pista de Arucas no abre los sábados (según él, sin confirmar); entre semana sí, allí se hicieron los 6 × 400 del 28-9 a las 18:00. Decisión suya: el simulacro pasa del sábado 17 al lunes 19 a las 18:00, y el simulacro ligero del sábado 31 (si la prueba es el 4, el 5 o el 6), al viernes 30 a las 18:00. El sábado 17 queda un rodaje de 40 min, el domingo 18 descanso y el 8 × 200 del 19 se pierde; el martes 20 el lastre va al día siguiente del máximo de dominadas y el miércoles 21, a 48 h del 1.000."
@@ -70,14 +73,14 @@
     "objetivoNuevo20oct": {
       "mil": "3:24 o menos (5 puntos, tramo 3:19-3:24). Decisión de Daniel el 20-10-2026, tras el simulacro del 19.",
       "loQueVale": "+1 punto de baremo, +0,33 de media. Con las 12 dominadas y el circuito de hoy (9,4): 6,00. Con 3:25 ya no: 4 puntos.",
-      "comoSePersigue": "NO con más intensidad (revisión del 23-9; quedan 13 días): con el reparto. El 19-10 corrió 38,7 / 41,9 / 44,2 / 44,6 / 37,9 = 3:27,3. Con los dos tramos centrales en 43, el mismo día habría sido 38,7 / 41,9 / 43 / 43 / 37,9 = 3:24,5: todavía 4 puntos, porque el baremo no redondea. El 3:24 pide el 800 en 2:44 y un último 200 de 40 o menos: 41 por 200 hasta el 800, sin salir en 38-39. Reparto de examen: 0:41 / 1:22 / 2:03 / 2:44 / meta 3:23-3:24.",
+      "comoSePersigue": "NO con más intensidad (revisión del 23-9; quedan 13 días): con el reparto. El 19-10 corrió 38,7 / 41,9 / 44,2 / 44,6 / 37,9 = 3:27,3. Con los dos tramos centrales en 43, el mismo día habría sido 38,7 / 41,9 / 43 / 43 / 37,9 = 3:24,5. El BOE solo dice que el tiempo «se medirá en minutos y segundos» y no dice qué se hace con las décimas: un 3:24,5 puede quedar en 3:24 (5 puntos) o en 3:25 (4). Para no depender de eso, la meta es 3:24,0 o menos. El 3:24 pide el 800 en 2:44 y un último 200 de 40 o menos: 41 por 200 hasta el 800, sin salir en 38-39. Reparto de examen: 0:41 / 1:22 / 2:03 / 2:44 / meta 3:23-3:24.",
       "condiciones": [
         "Los ritmos de entrenamiento no cambian: el bloque C va a 1:25 / 2:07 (resuelto el 20-10). El 3:27 salió entrenando a 1:26 / 2:08: los segundos que faltan están en el reparto, no en ir más rápido en las series.",
         "Lo que se ensaya es la salida: los 200 del 21-10 (0:41-0:42) y, si la prueba es el 5 o el 6, los 3 × 200 del lunes 2, a 0:41, el paso del examen.",
         "La pista de Arucas no está verificada: con un 1 % de error, el 3:27 puede ser 3:25 o 3:29. El objetivo solo se da por conseguido en Cádiz o en pista medida u homologada.",
         "Suelo: 3:30 (4 puntos, la marca de hoy). Y lejos del 3:49, que elimina."
       ],
-      "riesgo": "El 3:24 está en el borde de lo medido (banda 3:25-3:29): es posible, no lo más probable. El riesgo del reparto nuevo es el contrario al del 19-10: salir a 41 y no tener remate. El 19-10 el último 200 fue de 37,9 con los centrales en 44: había reserva. Si el 800 pasa en 2:44, el último 200 no puede pasar de 40."
+      "riesgo": "El 3:24 está en el borde de lo medido (banda 3:24-3:30): es posible, no lo más probable. El riesgo del reparto nuevo es el contrario al del 19-10: salir a 41 y no tener remate. El 19-10 el último 200 fue de 37,9 con los centrales en 44: había reserva. Si el 800 pasa en 2:44, el último 200 no puede pasar de 40."
     },
     "objetivoNuevo23sep": {
       "mil": "Bajar de 3:30 (4 puntos, tramo 3:25-3:30). Decisión de Daniel el 23-9-2026.",
@@ -256,13 +259,13 @@
     "mil_metros": {
       "marca": "3:27",
       "banda": [
-        "3:25",
-        "3:29"
+        "3:24",
+        "3:30"
       ],
       "medidoEl": "2026-10-19",
       "puntos": 4,
       "base": "Simulacro en la pista de Arucas con el perfil Pista del reloj: unos 3:27, entre 3:26,3 (logro del reloj, 206,3 s, que empieza cuando la distancia del GPS se mueve) y 3:28,3 (las cinco vueltas de 200, que empezaron a contar al acabar la espera de 20 min, antes de salir). Sin calentamiento y 20 min después del máximo de dominadas.",
-      "margen": "±2 s: ±1 s por la salida (vueltas 3:28,3, logro 3:26,3) y ±1 % por la pista de Arucas sin verificar (el modo pista da 400 m por vuelta por construcción). Si la pista fuera más de un 1 % corta, podría pasar de 3:30 y serían 3 puntos.",
+      "margen": "Entre 3:24,2 y 3:30,4 si las dos dudas van a la vez: ±1 s por la salida (vueltas 3:28,3, logro 3:26,3) y ±1 % (unos ±2 s) por la pista de Arucas sin verificar (el modo pista da 400 m por vuelta por construcción). Lo más probable, 3:27. Si la pista fuera más de un 1 % corta, podría pasar de 3:30 y serían 3 puntos. Corregido el 21-10: antes decía «±2 s» y una banda de 3:25 a 3:29, que no sumaba las dos dudas.",
       "margenALaEliminacion": "Unos 22 s hasta el 3:49.",
       "supera": "El 3:34 del 19-9 en San Cristóbal (±1-2 %), que a su vez superó la estimación de 3:52."
     },
@@ -401,10 +404,10 @@
     {
       "clave": "C",
       "nombre": "Ritmo de prueba",
-      "objetivo1000": "3:32 → 3:30 si el simulacro del 19-10 lo respalda",
-      "m200": "0:42,5 → 0:42",
-      "m400": "1:25 → 1:24",
-      "m600": "2:07 → 2:06",
+      "objetivo1000": "3:32",
+      "m200": "0:42,5",
+      "m400": "1:25",
+      "m600": "2:07",
       "cuando": "26 oct - 1 nov y día de la prueba",
       "avisoReloj": "Programar cada paso de series con rango de ritmo 3:30-3:40 /km para que avise si va rápido. Freno: si un 400 baja del objetivo en más de 3 s (1:24 el 28-9, 1:23 el 5 y el 12-10, 1:22 el 26-10), la siguiente sale más lenta, no se abandona. En los 200 del 19-10 (0:41-0:43), el aviso va a 3:25-3:35: con 3:30-3:40 avisaría en cada repetición.",
       "primer200": "Por reloj: 0:43,5 en el bloque A, 0:43 en el B y 0:42,5-0:43 en el C. Es el mismo patrón que la salida a 0:40 del control.",
@@ -470,7 +473,7 @@
         "Movilidad dinámica 5 min: balanceos de pierna adelante-atrás y lateral (15 por lado), zancadas caminando (10 por pierna), rotaciones de tobillo, círculos de cadera",
         "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso). Antes, 2 suspensiones pasivas de 20 s y 2 × 8 retracciones escapulares",
         "Técnica: 2 × 20 m de skipping bajo, talones al glúteo, zancada y carrera lateral",
-        "5 progresivos de 80 m; los dos últimos terminan a ritmo K = el ritmo del kilómetro de tu bloque: A 3:38 /km · B 3:34 · C 3:32 → 3:30, que en 80 m son unos 17 s (17,4 · 17,1 · 17,0 → 16,8). Los progresivos van de menos a más: no son sprints",
+        "5 progresivos de 80 m; los dos últimos terminan a ritmo K = el ritmo del kilómetro de tu bloque: A 3:38 /km · B 3:34 · C 3:32, que en 80 m son unos 17 s (17,4 · 17,1 · 17,0). Los progresivos van de menos a más: no son sprints",
         "Pausa de 3–4 min y a la primera serie"
       ],
       "obligatorio": "El prep-hombro (2 suspensiones pasivas de 20 s + 2 × 8 retracciones escapulares) es OBLIGATORIO antes de cualquier trabajo en barra, también en los controles. El 19-9 se saltó. En cada repetición: glúteo apretado, piernas juntas o cruzadas y verticales, codos hacia los bolsillos y subida de unos 2 s; si los pies se van por delante, esa repetición no cuenta y la serie se acaba."
@@ -1513,8 +1516,9 @@
           "fecha": "2026-10-22",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable. Último jueves cronometrado en formato entreno",
-          "objetivo": "sin bloque técnico: el 1-10 dio 9,4 en el primer intento (el bloque es para 9,8 o más) · apuntar los tres intentos: el 1-10 el primero fue el más lento"
+          "sesion": "18:00: las series del miércoles 21, que no se hicieron por la lluvia: 3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min) · 21:30 circuito: 3 intentos cronometrados como el BOE, el primero comparable. Último jueves cronometrado en formato entreno",
+          "objetivo": "Series: 600 en 2:07 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · cada 200 a ±1 s de su paso · acabar antes de las 19:15 y comer algo · Circuito: sin bloque técnico · apuntar los tres intentos · con las series 3 h antes y no 25 h, van con asterisco: si salen peor, no bajan nada; si salen mejor, valen · si el jueves también llueve, las series se pierden: no pasan al viernes, que sigue siendo descanso",
+          "hora": "18:00-19:15 series · 21:30 circuito"
         },
         {
           "fecha": "2026-10-23",
@@ -1571,7 +1575,7 @@
           "dia": "Jue",
           "tipo": "circuito",
           "sesion": "21:30 circuito: UN intento cronometrado como el BOE, fresco, y el resto a ritmo sin cronómetro. Último circuito medido antes de Cádiz (el sábado no hay circuito)",
-          "objetivo": "sin bloque técnico ni saltos"
+          "objetivo": "sin bloque técnico ni saltos · con las zapatillas con las que vas a correr el 1.000: el aviso oficial del 20-10 pide unas solas para todos los ejercicios"
         },
         {
           "fecha": "2026-10-30",
@@ -1596,15 +1600,17 @@
         {
           "fecha": "2026-11-01",
           "dia": "Dom",
-          "tipo": "descanso",
-          "sesion": "Descanso"
+          "tipo": "carrera",
+          "sesion": "Depende de la fecha de la prueba (dos versiones)",
+          "siPrueba4a6": "Si es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min + 3 × 4 dominadas suaves (cambiado el 21-10: el lunes 2 viajas). Si es el 4: descanso",
+          "siPrueba2o3": "Descanso, o 15 min muy suaves"
         }
       ]
     },
     {
       "semana": "2026-11-02/2026-11-08",
       "titulo": "Afinamiento y prueba · dos versiones según la fecha",
-      "nota": "La fecha exacta no se conoce (primera semana de noviembre, del lunes 2 al viernes 6). Se elige la versión en cuanto llegue el llamamiento. En las dos: un solo 1.000 a tope en octubre (el 19), el último esfuerzo máximo de carrera a 14-18 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba.",
+      "nota": "La semana está confirmada (primera de noviembre, del lunes 2 al viernes 6; Portal del Aspirante, 21-10); el día, la hora y el lugar llegarán en la convocatoria individualizada, y con eso se elige la versión. En las dos: un solo 1.000 a tope en octubre (el 19), el último esfuerzo máximo de carrera a 14-18 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba. Viaje a Cádiz: el lunes 2 (intención suya, 21-10). Ese día es descanso en todas las versiones; si la convocatoria dijera el lunes 2, el viaje se adelanta al domingo 1 como muy tarde.",
       "versiones": [
         {
           "nombre": "Si la prueba es el lunes 2 o el martes 3",
@@ -1625,9 +1631,14 @@
               "sesion": "Descanso, o 15 min muy suaves"
             },
             {
+              "dia": "Lun 2",
+              "tipo": "descanso",
+              "sesion": "Viaje a Cádiz (intención tuya, 21-10). Si la prueba es el martes 3, es el día −1: descanso, o 15 min muy suaves al llegar. Si la convocatoria dijera el lunes 2, el viaje se adelanta al domingo 1"
+            },
+            {
               "dia": "Prueba",
               "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 19-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5). Sin móvil y con las mismas zapatillas en las tres pruebas. Nada nuevo",
               "clave": true
             }
           ]
@@ -1647,9 +1658,19 @@
               "sesion": "Descanso, o 15 min muy suaves"
             },
             {
-              "dia": "Lun 2",
+              "dia": "Dom 1",
               "tipo": "carrera",
-              "sesion": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24) + 3 × 4 dominadas suaves. Si es el 4: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 28"
+              "sesion": "Si la prueba es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24; cada 50 m: 0:10,3 · 0:20,5 · 0:30,8 · 0:41,0) + 3 × 4 dominadas suaves, en la pista que abra el domingo: sirve para la sensación del paso, no para el cronómetro. Si es el 4: descanso"
+            },
+            {
+              "dia": "Lun 2",
+              "tipo": "descanso",
+              "sesion": "Viaje a Cádiz (intención tuya, 21-10). Si la prueba es el 5 o el 6: descanso; la última calidad pasa al domingo 1. Si es el 4, es el día −2: al llegar, 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50, si hay luz y sitio; si no, descanso"
+            },
+            {
+              "dia": "Mar 3",
+              "tipo": "descanso",
+              "sesion": "Si la prueba es el viernes 6: descanso, o 15 min muy suaves. Si es el 4 o el 5, es el día −1 o −2 (ver abajo)"
             },
             {
               "dia": "−2 días",
@@ -1664,7 +1685,7 @@
             {
               "dia": "Prueba",
               "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Misma posición de piernas y mismo ritmo que el 19-10, pausa abajo y como mucho 3 s colgado. Nada nuevo",
+              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5). Sin móvil y con las mismas zapatillas en las tres pruebas. Nada nuevo",
               "clave": true
             }
           ]
@@ -1932,18 +1953,24 @@
     },
     {
       "id": "pista-arucas",
-      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. Si lo es, el simulacro del lunes 19 va allí (entre semana abre: allí se hicieron los 6 × 400 del 28-9; los sábados no abre, según él).",
+      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. El 3:27 del simulacro del 19-10 se corrió allí y sigue sin distancia verificada (±1 %); el simulacro ligero del 30, si toca, también va allí (entre semana abre; los sábados no, según él).",
       "desde": "2026-09-28"
     },
     {
       "id": "sueno",
-      "texto": "Luz apagada a las 22:15 entre semana y cena terminada 2 h antes. Mandar los CSV de sueño cada mañana la primera semana de trabajo.",
+      "texto": "Luz apagada a las 22:15 entre semana y cena terminada 2 h antes. Mandar el CSV de sueño cuando puedas: faltan noches.",
       "desde": "2026-09-29"
     },
     {
       "id": "llamamiento",
-      "texto": "Fecha exacta, hora y minutos entre pruebas, cuando llegue el llamamiento, y qué día viajas a Cádiz. Decide la versión de la última semana, qué pueden ser los días −2 y −1 y los eventos del calendario de esa semana.",
+      "texto": "Semana confirmada (Portal del Aspirante, 21-10): primera de noviembre, en Cádiz (sede confirmada por ti el 21-10); viaje previsto el lunes 2. Falta la convocatoria individualizada con el día, la hora y la instalación: decide la versión de la última semana y los eventos del calendario de esa semana. Si dijera el lunes 2, el viaje se adelanta.",
       "desde": "2026-09-29"
+    },
+    {
+      "id": "reloj-examen",
+      "texto": "Ni el BOE ni los avisos dicen si se puede correr el 1.000 con reloj. Preguntarlo a la División de Formación (procesos.dfp@policia.es, 913 22 76 00) y, mientras, aprender el paso cada 50 m sin mirarlo: si no dejan el reloj, el reparto va de memoria.",
+      "desde": "2026-10-21",
+      "hasta": "2026-11-06"
     },
     {
       "id": "zapatilla",

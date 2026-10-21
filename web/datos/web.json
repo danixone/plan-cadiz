@@ -1308,18 +1308,18 @@
       ]
     },
     "v2:Lun 2": {
-      "firma": "e3f191acad29",
-      "titulo": "Última calidad o sesión «−2 días»",
+      "firma": "0bfe902e02ca",
+      "titulo": "Viaje a Cádiz",
       "condicion": {
         "pregunta": "¿Cuándo es la prueba?",
         "opciones": [
           {
             "id": "5-6",
-            "txt": "Si la prueba es el 5 o el 6: última calidad, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24) + 3 × 4 dominadas suaves"
+            "txt": "Si la prueba es el 5 o el 6: descanso; la última calidad pasa al domingo 1"
           },
           {
             "id": "4",
-            "txt": "Si es el 4: sesión «−2 días» (15 min + 3 progresivos con tope) y el «−5 días» se suprime, ya lo cubrió el 28"
+            "txt": "Si es el 4, es el día −2: al llegar, 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50, si hay luz y sitio; si no, descanso"
           }
         ]
       },
@@ -1346,11 +1346,90 @@
       "fuentes": [
         "plan.calendario[v2:−2 días].sesion"
       ]
+    },
+    "2026-10-22": {
+      "firma": "ed5afc1d81b0",
+      "titulo": "Series del 21 a las 18:00 y circuito a las 21:30",
+      "plantilla": "series",
+      "numeros": {
+        "verde": [
+          {
+            "v": "2 × 600 m",
+            "l": "rec. 3 min · 18:00",
+            "desde": "2 × 600 m (rec. 3 min)"
+          },
+          {
+            "v": "2:07",
+            "l": "cada 600",
+            "desde": "600 en 2:07"
+          },
+          {
+            "v": "21:30",
+            "l": "circuito, 3 intentos",
+            "desde": "21:30 circuito: 3 intentos cronometrados"
+          }
+        ]
+      },
+      "principal": {
+        "tipo": "compuesta",
+        "partes": [
+          {
+            "n": 2,
+            "dist": 600,
+            "obj": "2:07",
+            "rec": "3 min",
+            "primer200": "0:42,5"
+          },
+          {
+            "n": 2,
+            "dist": 200,
+            "obj": "0:41-0:42",
+            "rec": "2 min"
+          }
+        ],
+        "desde": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)"
+      },
+      "calidad": true,
+      "fuentes": [
+        "plan.calendario[2026-10-22].sesion",
+        "plan.calendario[2026-10-22].objetivo"
+      ]
+    },
+    "2026-11-01": {
+      "firma": "10815bebcdf9",
+      "titulo": "Última calidad o descanso",
+      "versiones": {
+        "4-6": "v2:Dom 1"
+      },
+      "fuentes": [
+        "plan.calendario[2026-11-01].siPrueba4a6",
+        "plan.calendario[2026-11-01].siPrueba2o3"
+      ]
+    },
+    "v2:Dom 1": {
+      "firma": "5a9bf3b377f2",
+      "titulo": "Última calidad antes de viajar o descanso",
+      "condicion": {
+        "pregunta": "¿Cuándo es la prueba?",
+        "opciones": [
+          {
+            "id": "5-6",
+            "txt": "Si la prueba es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24; cada 50 m: 0:10,3 · 0:20,5 · 0:30,8 · 0:41,0) + 3 × 4 dominadas suaves, en la pista que abra el domingo: sirve para la sensación del paso, no para el cronómetro"
+          },
+          {
+            "id": "4",
+            "txt": "Si es el 4: descanso"
+          }
+        ]
+      },
+      "fuentes": [
+        "plan.calendario[v2:Dom 1].sesion"
+      ]
     }
   },
   "condiciones": {
     "bloqueC": {
-      "firma": "16a2abe2a630",
+      "firma": "900955dde76a",
       "firmaDe": [
         "plan.calendario[2026-10-19]",
         "plan.ritmos[C]"

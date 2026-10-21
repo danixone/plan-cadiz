@@ -1196,7 +1196,7 @@
     if (dia.final && !dia.version) h.push(htmlFinal(dia));
     h.push(htmlPlegados(dia, R));
     if (vivo && color !== 'parada') {
-      var mb = /^(carrera|control|prueba)$/.test(dia.tipo || '') ? '<button type="button" class="btn pri lg" data-a="pista">' + PC.icon('play', 'sm') + 'Modo pista</button>' :
+      var mb = /^(carrera|control|prueba)$/.test(dia.tipo || '') || R.tpl === 'series' ? '<button type="button" class="btn pri lg" data-a="pista">' + PC.icon('play', 'sm') + 'Modo pista</button>' :
         (dia.tipo === 'fuerza' ? '<button type="button" class="btn pri lg" data-a="gym">' + PC.icon('fuerza', 'sm') + 'Modo gimnasio</button>' : '');
       h.push('<div class="card-f">' + mb + '<button type="button" class="btn sec" data-a="fue">' + PC.icon('editar', 'sm') + 'Cómo fue</button></div>');
       var fin = PC.cal.horaFin(dia);
