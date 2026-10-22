@@ -38,3 +38,20 @@
 .cr-cl-al button{display:flex;align-items:center;gap:8px;min-height:var(--tap);padding:6px 12px;text-align:left;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--surface);color:var(--text-2);font:inherit;cursor:pointer}
 .cr-cl-al button[aria-pressed="true"]{background:var(--bad-soft);border-color:var(--bad);color:var(--bad);font-weight:var(--fw-semi)}
 .cr-cl-pie{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center;margin-top:var(--sp-4)}
+
+/* «Las tres pruebas» (70_pruebas.js): en Marcas, debajo de la nota */
+.cr-pr-sim{display:grid;gap:var(--sp-2);margin-bottom:var(--sp-3)}
+.cr-pr-in{display:grid;grid-template-columns:minmax(0,1fr) 84px 104px;align-items:center;gap:8px}
+.cr-pr-in span{font-size:var(--fs-sm);font-weight:var(--fw-semi);color:var(--text-2)}
+.cr-pr-in input{min-height:var(--tap);width:100%;padding:0 10px;border:1px solid var(--border-strong);border-radius:var(--r-sm);background:var(--surface);color:var(--text);font:inherit;font-variant-numeric:tabular-nums;text-align:right}
+.cr-pr-in .chip{justify-self:end;white-space:nowrap}
+.cr-pr-res{margin:var(--sp-2) 0 0;padding:var(--sp-3);border-radius:var(--r-sm);background:var(--surface-2)}
+.cr-pr-res.ok{background:var(--ok-soft);color:var(--ok)} .cr-pr-res.warn{background:var(--warn-soft);color:var(--warn)} .cr-pr-res.bad{background:var(--bad-soft);color:var(--bad)}
+.cr-pr-pie{display:flex;justify-content:flex-end}
+.cr-pr-nota{font-size:var(--fs-sm);color:var(--text-2);margin:var(--sp-3) 0}
+.cr-pr{margin-top:var(--sp-4);padding-top:var(--sp-3);border-top:1px solid var(--border)}
+.cr-pr-h{margin:0 0 4px;font-size:var(--fs-md);font-weight:var(--fw-bold)}
+.cr-pr-m{margin:0 0 var(--sp-2);font-size:var(--fs-sm)} .cr-pr-m small{color:var(--text-3)}
+.mc-baremo td.cr-pr-suya{background:var(--primary-soft);color:var(--primary);font-weight:var(--fw-semi)}
+.cr-pr-l{margin:0 0 var(--sp-2);padding-left:1.2em;display:grid;gap:4px;font-size:var(--fs-sm)}
+.cr-pr-fuente{margin:var(--sp-3) 0 0;color:var(--text-3)}

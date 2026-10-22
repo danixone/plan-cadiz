@@ -28,7 +28,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ_PROYECTO = os.environ.get('PLAN_RAIZ', os.path.dirname(AQUI))  # la carpeta que contiene web/
 SRC = os.path.join(AQUI, 'src')
 VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']  # Dieta archivada el 5-10-2026 en archivo/dieta/
-LIMITE_GZIP = 240 * 1024  # subido de 190 a 240 el 29-9 por el entrenador: 225 KB con gzip cargan bien en el móvil
+LIMITE_GZIP = 270 * 1024  # 190 → 240 el 29-9; 240 → 270 el 23-10, decisión de Daniel: cubre hasta Cádiz con los campos técnicos del registro
 
 
 def leer(p):
@@ -325,7 +325,7 @@ def main():
     for x in _MIN_INFO:
         print(x)
     print('vistas: %s' % ', '.join('%s%s' % (v, '' if os.path.exists(os.path.join(SRC, 'views', v + '.html')) else ' (vacía)') for v in VISTAS))
-    print('%s · %.1f KB sin comprimir · %.1f KB con gzip (límite 240 KB)%s' % (
+    print('%s · %.1f KB sin comprimir · %.1f KB con gzip (límite 270 KB)%s' % (
         os.path.relpath(args.salida, AQUI), crudo / 1024, comp / 1024, '' if comp <= LIMITE_GZIP else '  ERROR: pasa del límite'))
     if args.catalogo:
         escribir_catalogo(datos)

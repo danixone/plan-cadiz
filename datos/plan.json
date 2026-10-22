@@ -1530,8 +1530,8 @@
           "fecha": "2026-10-24",
           "dia": "Sáb",
           "tipo": "carrera",
-          "sesion": "Sesión corta de barra ANTES del rodaje (unos 20 min) + rodaje 45 min + 10 min de gemelo, saltos y core",
-          "objetivo": "Barra: prep-hombro · 1 × 3 · serie técnica de (válidas del 19-10 − 4), como mucho 8, en vídeo · 2 × 5 con 4 o más en reserva · solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores; si no, solo la serie técnica. Rodaje: techo 145 · primeros 10 min a 140 · 45 min y NO 55: bajada deliberada antes de «llegar entero» · elevaciones de talón 3 × 15 · comparar deriva con el 16-9 y con el 3-10 y el 10-10 recortados a 45"
+          "sesion": "Sesión corta de barra ANTES del rodaje (unos 20 min) + rodaje de 30 min solo si el gemelo derecho pasa las tres comprobaciones (si no, descanso) + 10 min de gemelo, saltos y core solo si no duelen",
+          "objetivo": "GEMELO DERECHO (22-10), antes de nada: andar sin dolor, 10 elevaciones de talón con la pierna derecha sola sin dolor y 10 saltitos suaves con los dos pies sin dolor; si falla una, hoy ni rodaje ni saltos ni elevaciones, y de la barra solo la serie técnica, bajando sin saltar. Barra: prep-hombro · 1 × 3 · serie técnica de (válidas del 19-10 − 4), como mucho 8, en vídeo · 2 × 5 con 4 o más en reserva · solo si codo y hombro han estado en 2/10 o menos las dos semanas anteriores; si no, solo la serie técnica. Rodaje, si pasa las tres: 30 min y no 45, llano · techo 145, primeros 10 min a 140 · se para si el gemelo molesta · elevaciones de talón 3 × 15, solo si no duelen"
         },
         {
           "fecha": "2026-10-25",
@@ -1551,7 +1551,7 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30",
-          "objetivo": "1:25 con 2:30 (bloque C, resuelto el 20-10) · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
+          "objetivo": "Solo si el gemelo derecho pasó las tres comprobaciones el sábado y hoy, y el rodaje del sábado no le molestó; si no, sin series y se decide el miércoles · 1:25 con 2:30 (bloque C, resuelto el 20-10) · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
           "hora": "18:00-19:00"
         },
         {
@@ -1567,7 +1567,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:07 y 1:25 (bloque C, resuelto el 20-10) · primer 200 en 0:42,5 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10)",
+          "objetivo": "2:07 y 1:25 (bloque C, resuelto el 20-10) · primer 200 en 0:42,5 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
           "hora": "18:00-19:00"
         },
         {
@@ -1845,7 +1845,8 @@
   },
   "lesiones": {
     "cintillo": "Cintillo iliotibial en la rodilla izquierda, resuelto con fisio. Nota tirantez al apretar 10-15 min por encima del umbral. NO se cambian sesiones por esto: el umbral de los miércoles es EN umbral, no por encima. Se añade glúteo medio los martes. Regla de parada: si pasa de 'lo noto' a 'me molesta al correr', esa sesión se acaba.",
-    "pies": "Pies planos y propensión a fascitis plantar. Plantillas 3D de ICOT. Elevaciones de talón a una pierna innegociables los sábados. Señal de alarma: dolor de talón en los primeros pasos de la mañana."
+    "pies": "Pies planos y propensión a fascitis plantar. Plantillas 3D de ICOT. Elevaciones de talón a una pierna innegociables los sábados. Señal de alarma: dolor de talón en los primeros pasos de la mañana.",
+    "gemeloDerecho": "22-10, circuito, cuarto intento (uno más de los tres del protocolo): derribó la última valla y, al apoyar fuerte el pie derecho, dolor en la cara externa del gemelo derecho, parte alta (foto del 23-10). Cojeó unos 5 min y quedó una sensación de dolorido, «como de golpe». Sin diagnóstico. Hasta que lo vea un fisio o un médico: no se corre ni se salta si falla una de tres comprobaciones (andar sin dolor, 10 elevaciones de talón con la pierna derecha sola sin dolor y 10 saltitos suaves con los dos pies sin dolor), y una sesión se para si vuelve a doler. Urgencias si se hincha mucho, sale un moratón grande, no puede apoyar o el dolor va a más."
   },
   "sensibilidad": {
     "nota": "Partiendo del escenario realista (3:34 · 12 dominadas · 9,0 s), cuánto aguanta antes de caer.",
@@ -1946,6 +1947,12 @@
     "loQueNoCambia": "La intensidad de carrera no sube. Circuito los jueves a las 21:30. Lastre solo los martes, subir solo con 2 en reserva, nunca al fallo. Habituación lunes y miércoles. Prep-hombro obligatorio. Viernes y domingo, descanso. Rodajes del sábado y elevaciones de talón. El 3:49 elimina."
   },
   "pendientes": [
+    {
+      "id": "gemelo-derecho",
+      "texto": "Gemelo derecho (22-10, circuito): que lo vea un fisio o un médico cuanto antes. Cada mañana, las tres comprobaciones (andar, 10 elevaciones de talón con la derecha sola y 10 saltitos con los dos pies, todo sin dolor), y me las cuentas. Urgencias si se hincha mucho, sale un moratón grande, no puedes apoyar o el dolor va a más.",
+      "desde": "2026-10-23",
+      "hasta": "2026-11-06"
+    },
     {
       "id": "piernas-dominadas",
       "texto": "Dominadas: en el vídeo del 3-10 las piernas se van por delante en cada subida (cadera a 148-159° arriba, pies 106-141 px por delante). Con el BOE literal, nulas. Grabar de lado cada serie de 3 × 5 hasta que la cadera se quede en 170° o más arriba. Vídeo de lado de la aproximación de 3 sin lastre del 13-10: cadera 171-177° arriba y 177-178° abajo, cumple; los pies, 17-29 cm por delante arriba con el cuerpo recto (se inclina entero, no se dobla). La barbilla no se puede juzgar: la barra va hacia la cámara y la tapa el poste.",

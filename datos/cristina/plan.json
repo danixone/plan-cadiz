@@ -3848,5 +3848,261 @@
       ],
       "reloj": []
     }
-  ]
+  ],
+  "pruebasMujeres": {
+    "fuente": "BOE-A-2026-15055 (convocatoria de la 43.ª), Anexo II, A) descripción y B) calificación, leído del XML oficial de boe.es el 23-10-2026. La convocatoria de 2027 no ha salido: se supone el mismo baremo.",
+    "calificacion": [
+      "La calificación de cada ejercicio será de cero a diez puntos, según lo establecido en dicho anexo, teniendo en cuenta que la obtención de cero puntos en cualquiera de ellos supone la eliminación de la persona aspirante.",
+      "La calificación de la prueba será la media aritmética de las obtenidas en cada ejercicio, debiendo alcanzarse al menos cinco puntos para aprobar. El personal que no supere la prueba quedará excluido del proceso selectivo."
+    ],
+    "orden": "El Anexo II las numera así: primer ejercicio, el circuito; segundo, la barra; tercero, el 1.000 m. Un cero en cualquiera de las tres elimina, y la nota es la media de las tres (base 6.1.2).",
+    "pruebas": [
+      {
+        "id": "cir",
+        "orden": 1,
+        "nombre": "Circuito de agilidad",
+        "unidad": "s",
+        "mejor": "menos",
+        "objetivo": "Objetivo: Medir la agilidad de movimientos del ejecutante.",
+        "posicion": "Posición inicial: Detrás de la línea de partida, en posición de salida de pie. El lugar de salida es opcional a derecha o izquierda de la valla. Es obligatorio el uso de calzado deportivo.",
+        "reglas": [
+          "1. El recorrido debe realizarse de la forma indicada en el gráfico.",
+          "2. Se valorará el tiempo invertido en segundos y décimas de segundo, contando desde la voz de «ya», hasta que el opositor toca el suelo con uno o los dos pies, habiendo superado con la totalidad del cuerpo la última valla.",
+          "3. Se realizará un intento. Únicamente podrá realizar un segundo intento el opositor que haya incurrido en nulo en el primero.",
+          "4. Superar el tiempo máximo establecido (11’7 s ó más para hombres y 12’8 s ó más para mujeres) supone la eliminación."
+        ],
+        "nulo": [
+          "1. Modifique el recorrido señalado en el gráfico.",
+          "2. Derribe o se apoye en alguno de los elementos del circuito, o agarre voluntariamente cualquiera de los elementos."
+        ],
+        "tramos": [
+          {
+            "puntos": 0,
+            "desde": "12,8",
+            "hasta": null
+          },
+          {
+            "puntos": 1,
+            "desde": "12,7",
+            "hasta": "12,6"
+          },
+          {
+            "puntos": 2,
+            "desde": "12,5",
+            "hasta": "12,4"
+          },
+          {
+            "puntos": 3,
+            "desde": "12,3",
+            "hasta": "12,1"
+          },
+          {
+            "puntos": 4,
+            "desde": "12,0",
+            "hasta": "11,7"
+          },
+          {
+            "puntos": 5,
+            "desde": "11,6",
+            "hasta": "11,3"
+          },
+          {
+            "puntos": 6,
+            "desde": "11,2",
+            "hasta": "10,9"
+          },
+          {
+            "puntos": 7,
+            "desde": "10,8",
+            "hasta": "10,4"
+          },
+          {
+            "puntos": 8,
+            "desde": "10,3",
+            "hasta": "9,9"
+          },
+          {
+            "puntos": 9,
+            "desde": "9,8",
+            "hasta": "9,4"
+          },
+          {
+            "puntos": 10,
+            "desde": null,
+            "hasta": "9,3"
+          }
+        ],
+        "marca": {
+          "txt": "sin medir",
+          "valor": null,
+          "fuente": "no hay ningún tiempo suyo del circuito"
+        }
+      },
+      {
+        "id": "barra",
+        "orden": 2,
+        "nombre": "Suspensión en barra con brazos flexionados",
+        "unidad": "s",
+        "mejor": "más",
+        "objetivo": "Objetivo: Medir la fuerza de los principales músculos flexores de los brazos y la cintura escapulo-humeral.",
+        "posicion": "Posición inicial: Suspendida de la barra agarrándose con ambas manos, con palmas hacia atrás (agarre supino), brazos flexionados, barbilla por encima de la barra, cuerpo extendido perpendicular al plano del suelo y totalmente estático.",
+        "ejecucion": "Ejecución: Una vez en la posición inicial, se ordenará el comienzo de la prueba, y la opositora deberá mantenerse el mayor tiempo posible en la posición descrita. Se da por finalizado el ejercicio en el momento que la barbilla se sitúe a la altura de la barra, por debajo o tenga contacto con ella.",
+        "reglas": [
+          "1. El cuerpo debe permanecer totalmente extendido durante la ejecución del ejercicio. No se permite la flexión de cadera.",
+          "2. No se permiten oscilaciones ni balanceos del cuerpo en ningún momento.",
+          "3. La cabeza permanecerá siempre en posición anatómica, no estando permitido extender la cabeza hacia atrás.",
+          "4. La barbilla debe superar claramente la barra de manera visible.",
+          "5. La opositora no podrá soltarse de la barra con ninguna de las manos durante la prueba. Tampoco podrá mover ninguna de las manos de la posición inicial de agarre.",
+          "6. No se permite realizar la prueba descalza ni el uso de guantes, objetos o cualquier sustancia que facilite el agarre.",
+          "7. Se dispone de un intento para superar la prueba."
+        ],
+        "nulo": [
+          "Intento nulo. Será nula toda ejecución que incumpla cualquiera de las reglas expuestas."
+        ],
+        "tramos": [
+          {
+            "puntos": 0,
+            "desde": "0",
+            "hasta": "35"
+          },
+          {
+            "puntos": 1,
+            "desde": "36",
+            "hasta": "40"
+          },
+          {
+            "puntos": 2,
+            "desde": "41",
+            "hasta": "45"
+          },
+          {
+            "puntos": 3,
+            "desde": "46",
+            "hasta": "51"
+          },
+          {
+            "puntos": 4,
+            "desde": "52",
+            "hasta": "56"
+          },
+          {
+            "puntos": 5,
+            "desde": "57",
+            "hasta": "62"
+          },
+          {
+            "puntos": 6,
+            "desde": "63",
+            "hasta": "69"
+          },
+          {
+            "puntos": 7,
+            "desde": "70",
+            "hasta": "77"
+          },
+          {
+            "puntos": 8,
+            "desde": "78",
+            "hasta": "85"
+          },
+          {
+            "puntos": 9,
+            "desde": "86",
+            "hasta": "94"
+          },
+          {
+            "puntos": 10,
+            "desde": "95",
+            "hasta": null
+          }
+        ],
+        "marca": {
+          "txt": "unos 51 s",
+          "valor": 51,
+          "fuente": "comunicado por Daniel el 11-10-2026; sin saber si se cronometró con las reglas del BOE"
+        }
+      },
+      {
+        "id": "mil",
+        "orden": 3,
+        "nombre": "1.000 m",
+        "unidad": "m:ss",
+        "mejor": "menos",
+        "objetivo": "Objetivo: Medir la resistencia orgánica de los opositores.",
+        "posicion": "Posición inicial: De pie, detrás de la línea de salida.",
+        "reglas": [
+          "1. La prueba se realizará en grupo. Sobre superficie lisa, plana y dura.",
+          "2. El tiempo invertido se medirá en minutos y segundos.",
+          "3. Es obligatorio el uso de calzado deportivo, no estando permitido el uso de zapatillas de clavos.",
+          "4. Si el opositor abandona la zona de carrera, será excluido. Igualmente, el opositor que realice cualquier conducta antideportiva durante la prueba quedará eliminado.",
+          "5. Se realizará un solo intento."
+        ],
+        "nulo": [
+          "Intento nulo. Será considerado nulo el intento que vulnere lo dispuesto en las reglas expuestas."
+        ],
+        "tramos": [
+          {
+            "puntos": 0,
+            "desde": "4:46",
+            "hasta": null
+          },
+          {
+            "puntos": 1,
+            "desde": "4:37",
+            "hasta": "4:45"
+          },
+          {
+            "puntos": 2,
+            "desde": "4:28",
+            "hasta": "4:36"
+          },
+          {
+            "puntos": 3,
+            "desde": "4:19",
+            "hasta": "4:27"
+          },
+          {
+            "puntos": 4,
+            "desde": "4:10",
+            "hasta": "4:18"
+          },
+          {
+            "puntos": 5,
+            "desde": "4:01",
+            "hasta": "4:09"
+          },
+          {
+            "puntos": 6,
+            "desde": "3:52",
+            "hasta": "4:00"
+          },
+          {
+            "puntos": 7,
+            "desde": "3:43",
+            "hasta": "3:51"
+          },
+          {
+            "puntos": 8,
+            "desde": "3:34",
+            "hasta": "3:42"
+          },
+          {
+            "puntos": 9,
+            "desde": "3:25",
+            "hasta": "3:33"
+          },
+          {
+            "puntos": 10,
+            "desde": null,
+            "hasta": "3:24"
+          }
+        ],
+        "marca": {
+          "txt": "más de 5:00, que hoy está en el tramo que elimina (4:46 o más)",
+          "valor": null,
+          "fuente": "estimación: nunca cronometrado en serio (comunicado por Daniel el 11-10-2026); el primer control es el sábado 21-11"
+        }
+      }
+    ]
+  }
 }

@@ -5,6 +5,119 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-22",
+      "sesion": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min) · las del miércoles 21 (lluvia), antes del circuito · pista de Arucas, perfil Pista del reloj",
+      "objetivo": "600 en 2:07 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · cada 200 a ±1 s de su paso · acabar antes de las 19:15",
+      "valida": true,
+      "horaInicioLocal": "18:11 la barra, 18:29 el trote, 18:45 los progresivos, 18:59 la primera serie; fin a las 19:17",
+      "resultado": {
+        "tiemposS": [
+          122.4,
+          124.0,
+          39.4,
+          38.0
+        ],
+        "media": "600: 2:02,4 y 2:04,0 (pedía 2:07); 200: 0:39,4 y 0:38,0 (pedía 0:41-0:42)",
+        "parciales200": [
+          [
+            40.0,
+            40.1,
+            42.3
+          ],
+          [
+            40.6,
+            42.2,
+            41.2
+          ],
+          [
+            39.4
+          ],
+          [
+            38.0
+          ]
+        ],
+        "fcMaxPorSerie": [
+          190,
+          194,
+          184,
+          186
+        ],
+        "fcInicioSerie": [
+          140,
+          141,
+          145,
+          153
+        ],
+        "recuperaciones": {
+          "duracionS": [
+            180,
+            180,
+            120
+          ],
+          "tipo": "parado o andando (40-60 m)",
+          "fcFinal": [
+            141,
+            147,
+            153
+          ],
+          "bajadaEn60s": [
+            35,
+            36,
+            33
+          ]
+        },
+        "recuperacionFinal": {
+          "30s": 174,
+          "60s": 165,
+          "90s": 153,
+          "120s": 144,
+          "180s": 138,
+          "240s": 131
+        },
+        "fcMax": 196,
+        "potenciaMediaSerieW": [
+          434,
+          449,
+          435,
+          498
+        ],
+        "contactoMsSerie": [
+          194,
+          195,
+          191,
+          186
+        ],
+        "efectoAerobico": 2.7,
+        "efectoAnaerobico": 3.4,
+        "cargaSesion": 163,
+        "arranque": "La distancia tarda 3 s en avanzar al empezar el primer 600 y el último 200, y 2 s en el segundo 600: el primer 200 corriendo, entre 37,0 y 40,0; el segundo 600, entre 2:02,0 y 2:04,0; el último 200, entre 35,0 y 38,0. Con cualquiera de los dos valores, todo por delante de lo pedido.",
+        "paso50": "Primer 600 por los parciales de 50 m anclados a la vuelta: 10,3 · 9,5 · 10,4 · 9,7 | 10,6 · 9,7 · 9,5 · 10,3 | 10,5 · 10,8 · 10,5 · 10,5. Pasó el 100 en 19,8 (la tabla pedía 21,3), el 200 en 40,0 (42,5), el 400 en 1:20,1 (1:24,8) y el 600 en 2:02,4 (2:07,0). El primer 50 casi clavado (10,3 frente a 10,6): se va en el segundo 50.",
+        "calentamiento": "Barra (18:11-18:24): 2 suspensiones de 20 s, 2 × 8 retracciones y 3 × 5 dominadas con 3 min. Trote 12 min (1.430 m a 8:24 /km, FC 137 de media y 151 de máximo, 26 s por encima de 145). Progresivos 5 × 80 m con 90 s. Vuelta a la calma: 400 m en 4:37. Carga del día, sumando las cuatro actividades: 211 (4 + 7 + 37 + 163).",
+        "progresivos": {
+          "n": 5,
+          "distanciaM": 80,
+          "tiemposS": [
+            14.5,
+            14.8,
+            15.5,
+            14.7,
+            15.0
+          ],
+          "pausasS": 90,
+          "fcMaxPorPaso": [
+            140,
+            158,
+            159,
+            157,
+            162
+          ],
+          "nota": "Los cinco entre 14,5 y 15,5, todos por delante del ritmo K del bloque C (17,0 en 80 m). Los dos últimos, 14,7 y 15,0: cuarta sesión seguida con los dos últimos por delante del ritmo K."
+        },
+        "relojConfigurado": "Perfil Pista del reloj: vueltas de 200 m por distancia y recuperaciones por tiempo. La FC del primer 200 sale con huecos (media de vuelta 56): la banda tardó en coger señal."
+      },
+      "valoracion": "Hecha entera y válida (noche de 5h58, VFC 61 Equilibrado). Todo por delante de lo pedido: los 600 en 2:02,4 y 2:04,0 frente a 2:07 (4,6 y 3,0 s), y los 200 en 39,4 y 38,0 frente a 0:41-0:42. Primer 200 del primer 600 entre 37,0 y 40,0 (pedía 42,5): séptima vez con el primer 200 rápido, el primer día con la tabla de 50 m; el primer 50 salió casi clavado y se fue en el segundo. Cada 200 a ±1 s de su paso: no se cumplió en 4 de los 6 tramos de los 600. El freno funcionó a medias: el segundo 600 salió 1,6 s más lento que el primero, pero aún 3 s por delante. Los 200, que eran para ensayar la salida del examen a 0:41, salieron a 38-39: lo contrario de lo que se ensayaba. Lo bueno, medido: dos 600 a 2:02-2:04 con 3 min, que es el paso del examen de 3:24 (2:03 en el 600), con FC máxima de 194-196 y bajadas de 33-36 pulsaciones en 60 s. Lo que se supone: que eso vale para un 1.000 seguido a 41 por 200; no se ha medido."
+    },
+    {
       "fecha": "2026-10-21",
       "sesion": "3 × 5 dominadas + 2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min)",
       "hecho": false,
@@ -1414,6 +1527,58 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-22",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "lastreKg": 0,
+      "duracionSeriesS": [
+        17,
+        20,
+        18
+      ],
+      "descanso": "180 s (temporizador)",
+      "contexto": "jueves, antes del trote de las series del 21, en Arucas (actividad de fuerza aparte, 18:11), con 2 suspensiones de 20 s y 2 × 8 retracciones antes",
+      "valoracion": "Del FIT: 3 × 5 sin lastre, 17-20 s por serie, 3 min entre series, prep-hombro completo. Sin reserva, sin nota de codo y hombro y sin vídeo."
+    },
+    {
+      "fecha": "2026-10-20",
+      "sesion": "Arsenal · A, B+D y H (sin C, E, F ni G)",
+      "horaLocal": "20:12 a 21:13",
+      "duracion": "57:47 de reloj (60:44 en total), con el entreno del reloj (descansos por temporizador)",
+      "series": [
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "total": 14,
+      "lastreKg": 10,
+      "descanso": "180 s en las cinco series (temporizador)",
+      "duracionSeriesS": [
+        24,
+        24,
+        27,
+        40,
+        34
+      ],
+      "fcMedia": 91,
+      "fcMax": 128,
+      "bloquesHechos": {
+        "calentamiento": "Bici 8 min + 2 suspensiones de 20 s + 2 × 8 retracciones escapulares",
+        "aproximacion": "3 sin lastre (32 s), 180 s",
+        "A": "Dominadas con 10 kg: 2, 3, 3, 3 y 3 (pedía 4 × 3); después, una serie de 6 s sin repeticiones anotadas",
+        "B+D": "Superserie de 4 rondas con 120 s: jalón con 40 kg anotados × 8 (según el plan, la máquina salta de 38 a 45: probablemente los 38) y sentadilla con barra de 20 kg × 6, 8, 8 y 8 (en el reloj, «Siff squat con barra»)",
+        "H": "Con máquinas y no con el circuito del reloj (dicho por él el 23-10): 3 × 10 en la máquina de abductores (abría las piernas hacia fuera: glúteo medio), peso sin dato, y 3 × 10 por pierna en prensa con 20 kg. En el reloj, los ejercicios de la H constan pasados en 1-2 s."
+      },
+      "valoracion": "Del FIT: la última sesión pesada, al día siguiente del máximo de dominadas y del 1.000. La A con 10 kg salió en 2 + 4 × 3 (14 repeticiones, dos más de las 12 pedidas); la cuarta, de 40 s para 3, la más lenta. Reserva de 2-3 en las series de la A (dicho por él el 23-10): ninguna llegó a 1. Sin nota de codo y hombro. La H, después de B+D y no justo después de la A, hecha con máquinas (abductores y prensa a una pierna) en vez del circuito. Sin C, E, F ni G: es la prioridad del plan cuando falta tiempo (A, H, B, D). La descarga del 27 va con estos 10 kg.",
+      "reserva": "2-3 en reserva en las series de la A (dicho por él el 23-10)"
+    },
+    {
       "fecha": "2026-10-19",
       "maximo": 12,
       "series": [
@@ -1761,6 +1926,21 @@
   ],
   "circuito": [
     {
+      "fecha": "2026-10-22",
+      "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE y un cuarto, 3 h después de las series del 21 (movidas por la lluvia)",
+      "intentos": [
+        9.6,
+        9.1,
+        9.2,
+        {
+          "t": null,
+          "nulo": true,
+          "motivo": "Cuarto intento, uno más de los tres del protocolo: derribó la última valla (con el BOE, nulo: «Derribe o se apoye en alguno de los elementos del circuito»). Sin tiempo anotado."
+        }
+      ],
+      "valoracion": "Comunicado por él el 23-10 (corregido el mismo día: el nulo fue el cuarto intento, no el tercero). Primer intento 9,6 (7 puntos, tramo 9,4-9,7), el comparable, con asterisco: las series 3 h antes y no 25 h. No baja nada: la marca sigue en 9,4 del 1-10. Techo 9,1 (8 puntos), el mejor de su historial (antes, 9,2); el tercero, 9,2. El primer intento, otra vez el más lento: segunda vez (1-10: 9,4 · 9,2 · 9,3); a la tercera, regla. El cuarto, fuera del protocolo de tres, nulo por derribar la última valla; al apoyar el pie derecho tras la valla, dolor en el gemelo derecho (ver plan.lesiones.gemeloDerecho)."
+    },
+    {
       "fecha": "2026-10-08",
       "hecho": false,
       "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
@@ -1794,6 +1974,42 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-10-22",
+      "duracion": "5h58",
+      "puntuacion": 76,
+      "calidad": "Aceptable",
+      "fcReposo": 47,
+      "bodyBattery": "+65",
+      "spo2Media": "94%",
+      "respiracionMedia": 13,
+      "vfc7dias": "61 ms (media de 7 días)",
+      "nota": "Hora de dormir 0:46, de despertar 6:45 (CSV semanal del 22-10, sin fases del sueño). Siesta por la tarde, según Garmin."
+    },
+    {
+      "fecha": "2026-10-21",
+      "duracion": "4h51",
+      "puntuacion": 70,
+      "calidad": "Aceptable",
+      "fcReposo": 47,
+      "bodyBattery": "+59",
+      "spo2Media": "94%",
+      "respiracionMedia": 14,
+      "vfc7dias": "61 ms (media de 7 días)",
+      "nota": "Hora de dormir 1:43, de despertar 6:40 (CSV semanal del 22-10, sin fases del sueño). Menos de 5h00."
+    },
+    {
+      "fecha": "2026-10-20",
+      "duracion": "6h12",
+      "puntuacion": 78,
+      "calidad": "Aceptable",
+      "fcReposo": 47,
+      "bodyBattery": "+68",
+      "spo2Media": "98%",
+      "respiracionMedia": 14,
+      "vfc7dias": "59 ms (media de 7 días)",
+      "nota": "Hora de dormir 2:41, de despertar 8:54 (CSV semanal del 22-10, sin fases del sueño)."
+    },
     {
       "fecha": "2026-10-19",
       "duracion": "8h04",
@@ -2216,6 +2432,28 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-22",
+      "hora": "19:17, después de las series (capturas de Garmin Connect)",
+      "ventanaFocoCarga": "24 sep – 22 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Mantenimiento",
+      "anaerobica": 835,
+      "aerobicaAlta": 560,
+      "aerobicaBaja": 181,
+      "cargaAguda": 444,
+      "cargaAgudaEstado": "Óptimo",
+      "vo2max": 53,
+      "vfc": "61 ms, Equilibrado",
+      "predisposicion": {
+        "valor": 16,
+        "nivel": "Deficiente",
+        "hora": "19:17, después de una actividad",
+        "factores": "puntuación de sueño 76 aceptable · tiempo de recuperación 67 h, gran necesidad · VFC 61 ms equilibrada · carga aguda 444 óptima · puntuaciones de sueño recientes aceptables · estrés reciente bajo",
+        "mensaje": "Mejora tras la siesta: la siesta ha mejorado un poco tu puntuación."
+      },
+      "valoracion": "Leída después de las series, así que la predisposición de 16 y las 67 h de recuperación miden el esfuerzo de la tarde, no cómo llegaba. VFC de 7 días «Equilibrado» (61) por segundo registro seguido. Foco de carga, ventana 24-9 a 22-10 frente a 22-9 a 20-10: entraron el 21 (nada) y el 22 (las series y los progresivos); salieron el 22 y el 23-9 (Arsenal y el rodaje de 35 min con 4 progresivos). Anaeróbica +70 y aeróbica alta +57, por las series de hoy; aeróbica baja −27, por el rodaje del 23-9 que salió. Sigue «insuficiente». VO2máx 53, igual."
+    },
     {
       "fecha": "2026-10-20",
       "hora": "capturas de Garmin Connect mandadas el 20-10",

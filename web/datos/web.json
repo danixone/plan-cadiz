@@ -929,7 +929,7 @@
       ]
     },
     "2026-10-24": {
-      "firma": "b9009dcf517c",
+      "firma": "cc9913cf8848",
       "numeros": {
         "verde": [
           {
@@ -938,14 +938,14 @@
             "desde": "serie técnica de (válidas del 19-10 − 4), como mucho 8"
           },
           {
-            "v": "45 min",
-            "l": "rodaje",
-            "desde": "45 min y NO 55"
+            "v": "30 min",
+            "l": "rodaje, si el gemelo pasa las tres comprobaciones",
+            "desde": "30 min y no 45"
           },
           {
             "v": "techo 145",
             "l": "primeros 10 min a 140",
-            "desde": "techo 145 · primeros 10 min a 140"
+            "desde": "techo 145, primeros 10 min a 140"
           }
         ]
       },
@@ -983,6 +983,15 @@
         }
       },
       "pasos": [
+        {
+          "antes": true,
+          "t": "Antes de nada: el gemelo derecho",
+          "d": "Andar sin dolor, 10 elevaciones de talón con la pierna derecha sola sin dolor y 10 saltitos suaves con los dos pies sin dolor. Si falla una, hoy ni rodaje ni saltos ni elevaciones, y de la barra solo la serie técnica, bajando sin saltar.",
+          "desde": [
+            "andar sin dolor, 10 elevaciones de talón con la pierna derecha sola sin dolor y 10 saltitos suaves con los dos pies sin dolor",
+            "si falla una, hoy ni rodaje ni saltos ni elevaciones, y de la barra solo la serie técnica, bajando sin saltar"
+          ]
+        },
         {
           "antes": true,
           "t": "Antes de la barra: codo y hombro en 2/10 o menos las dos semanas anteriores",
@@ -1083,7 +1092,7 @@
       ]
     },
     "2026-10-26": {
-      "firma": "f5e3d2eb8803",
+      "firma": "f37540a37260",
       "titulo": "4 × 400 m, rec. 2:30",
       "principal": {
         "tipo": "series",
@@ -1161,7 +1170,7 @@
       ]
     },
     "2026-10-28": {
-      "firma": "193e4009e70c",
+      "firma": "a5af0192780b",
       "titulo": "600 m + 400 m, rec. 5 min",
       "numeros": {
         "verde": [

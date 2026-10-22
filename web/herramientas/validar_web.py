@@ -34,7 +34,7 @@ sys.path.insert(0, AQUI)
 import construir_web as cw  # noqa: E402
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-LIMITE_GZIP = 240 * 1024
+LIMITE_GZIP = 270 * 1024
 VISTAS = ('hoy', 'plan', 'marcas', 'tecnica')  # Dieta archivada el 5-10-2026 (web/archivo/dieta/)
 # claves de web.json que no son texto de contenido: no se buscan cifras en ellas
 CLAVES_ESTRUCTURA = {'firma', 'firmaDe', 'fuente', 'fuentes', 'corpusSha256', 'prellenar', 'guardar', 'enlace',
@@ -330,7 +330,7 @@ def comprobar_html(inf, html, plan, hist, web, campos):
     # tamaño
     crudo = len(html.encode('utf-8'))
     comp = len(gzip.compress(html.encode('utf-8'), 9))
-    (inf.bien if comp <= LIMITE_GZIP else inf.e)('tamaño: %.1f KB sin comprimir · %.1f KB con gzip (límite 240 KB)' % (crudo / 1024, comp / 1024))
+    (inf.bien if comp <= LIMITE_GZIP else inf.e)('tamaño: %.1f KB sin comprimir · %.1f KB con gzip (límite 270 KB)' % (crudo / 1024, comp / 1024))
     # restos de la web antigua (§5.9 y §8.6.12)
     codigo = '\n'.join(c for a, c in scripts_de(html) if 'application/json' not in a)
     fuera = re.sub(r'<script id="datos"[^>]*>.*?</script>', '', html, flags=re.S)
