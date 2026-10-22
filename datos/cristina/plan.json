@@ -29,6 +29,7 @@
       }
     ],
     "porQue": "Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.",
+    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física (bases 6.1.2 y 6.11 del BOE de la 43.ª; la convocatoria de 2027 no ha salido).",
     "primerControl": "2026-11-21",
     "expectativa": "Sin una marca medida no hay previsión. Hoy solo hay una estimación: más de 5:00. El rodaje del 10-10 apunta a que puede estar bastante por encima, pero eso tampoco es una medida: el punto de partida lo da el primer control, el sábado 21-11. Criterio de entrenador, no dato: si ese control sale entre 5:00 y 5:15 y el año va sin lesiones, lo razonable es acabar entre 4:05 y 4:35; si sale de 5:30 o más, el objetivo del año es alejarse de la eliminación, en torno a 4:30. 4:00 o menos (6 puntos) pide una respuesta muy buena. Se revisa tras el control de diciembre."
   },
@@ -4019,7 +4020,9 @@
         "marca": {
           "txt": "unos 51 s",
           "valor": 51,
-          "fuente": "comunicado por Daniel el 11-10-2026; sin saber si se cronometró con las reglas del BOE"
+          "fuente": "comunicado por Daniel el 11-10-2026; sin saber si se cronometró con las reglas del BOE",
+          "fecha": "2026-10-11",
+          "fiab": "autoinformado"
         }
       },
       {

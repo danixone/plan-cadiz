@@ -18,7 +18,8 @@
   var D = PC.D || {}, P = D.plan || {}, H = D.historial || {}, DV = D.derivados || {}, WJ = D.web || {};
   var esc = PC.esc, fmt = PC.fmt;
   var ELIM = (PC.baremo && PC.baremo.ELIMINA_MIL) || 229;
-  var PF = PC.PERFIL || null;   /* web de Cristina (web/cristina/): solo el 1.000, con el baremo de mujeres */
+  var PF = PC.PERFIL || null;   /* web de Cristina (web/cristina/): las mismas tres pruebas con el baremo de mujeres (barra en segundos) */
+  var CIR0 = PF ? 135 : 125;     /* circuito en el deslizador: de 12,5 s (13,5 en mujeres, que eliminan desde 12,8) a la derecha */
   var ELIM_T = fmt.t(ELIM);
   var raiz = null;
 
@@ -65,10 +66,14 @@
   /* Cada prueba con su regla: v del deslizador (0..N), mejor a la derecha (§6.2 T5) */
   var PR = {
     cir: { n: 'Circuito', N: 47, icono: 'circuito',
-      v2s: function (v) { return Math.round(125 - v) / 10; }, s2v: function (s) { return Math.round((12.5 - s) * 10); },
+      v2s: function (v) { return Math.round(CIR0 - v) / 10; }, s2v: function (s) { return Math.round((CIR0 / 10 - s) * 10); },
       txt: function (s) { return num(s, 1) + ' s'; }, corte: function (s) { return num(s, 1) + ' s o menos'; },
       sig: function (o) { return num(o.objetivo, 1) + ' s (' + dif(o.diferencia, 1, ' s') + ')'; } },
-    dom: { n: 'Dominadas', N: 22, icono: 'fuerza',
+    dom: PF ? { n: 'Barra', N: 120, icono: 'fuerza',            /* mujeres: suspensión con brazos flexionados, en segundos */
+      v2s: function (v) { return v; }, s2v: function (s) { return Math.round(s); },
+      txt: function (s) { return s + ' s'; }, corte: function (s) { return s + ' s o más'; },
+      sig: function (o) { return o.objetivo + ' s (' + dif(o.diferencia, 0, ' s') + ')'; } } :
+    { n: 'Dominadas', N: 22, icono: 'fuerza',
       v2s: function (v) { return v; }, s2v: function (s) { return Math.round(s); },
       txt: function (s) { return String(s); }, corte: function (s) { return s + ' o más'; },
       sig: function (o) { return o.objetivo + ' (' + dif(o.diferencia, 0) + ')'; } },
@@ -77,10 +82,10 @@
       txt: function (s) { return mmss(s); }, corte: function (s) { return mmss(s) + ' o menos'; },
       sig: function (o) { return mmss(o.objetivo) + ' (' + dif(o.diferencia, 0, ' s') + ')'; } }
   };
-  var ORDEN = PF ? ['mil'] : ['cir', 'dom', 'mil'];            /* el orden de la prueba: circuito → dominadas → 1.000 m */
+  var ORDEN = ['cir', 'dom', 'mil'];            /* el orden de la prueba: circuito → dominadas (barra, en la de Cristina) → 1.000 m */
   function elimTxt(k) {
     var t = tramo0(k); if (!t) return '';
-    if (k === 'dom') return t.max + ' o menos elimina';
+    if (k === 'dom') return t.max + (PF ? ' s' : '') + ' o menos elimina';
     if (k === 'cir') return num(t.min, 1) + ' s o más elimina';
     return mmss(t.min) + ' o más elimina';
   }
@@ -106,7 +111,16 @@
   if (M.resultado) NR.txt = M.resultado;
 
   /* estado del simulador (T5) */
-  var ST = { v: { mil: REAL.mil === null && PF ? PF.inicio1000 || ELIM : REAL.mil, dom: REAL.dom, cir: REAL.cir }, base: 'hoy', estado: 'hoy' };
+  /* sin marca (web de Cristina): el simulador arranca en la peor marca que no elimina */
+  function inicial(k) {
+    if (REAL[k] !== null) return REAL[k];
+    if (k === 'mil') return PF && PF.inicio1000 || ELIM;
+    var t = tramo0(k); if (!t) return 0;
+    return k === 'dom' ? t.max + 1 : Math.round((t.min - 0.1) * 10) / 10;
+  }
+  var FALTAN = ORDEN.filter(function (k) { return REAL[k] === null; });
+  if (FALTAN.length) { NR.media = null; NR.txt = null; }
+  var ST = { v: { mil: inicial('mil'), dom: inicial('dom'), cir: inicial('cir') }, base: 'hoy', estado: FALTAN.length ? 'sim' : 'hoy' };
   function valoresBase(base) {
     if (base === 'hoy') return REAL;
     var x = ESC[+String(base).replace('esc', '')]; return x ? x.v : REAL;
@@ -214,8 +228,11 @@
 
   /* ------------------------------------------------------------------ M-1 · tu nota y simulador (T5, G1, G2, G10) */
   function tituloReal() {
-    if (PF) return REAL.mil === null ? 'Tu 1.000 todavía no está medido' + (PF.primerControl ? ': el primer control es el ' + corta(PF.primerControl) : '') :
-      'Con tu 1.000 de hoy: ' + mmss(REAL.mil) + ', ' + (PC.baremo.pts('mil', REAL.mil) === 0 ? 'elimina' : ptsTxt(PC.baremo.pts('mil', REAL.mil)));
+    if (FALTAN.length) {
+      var nom = { cir: 'el circuito', dom: PF ? 'la barra' : 'las dominadas', mil: 'el 1.000' }, L = FALTAN.map(function (k) { return nom[k]; });
+      return 'Tu nota todavía no se puede calcular: falta medir ' + (L.length > 1 ? L.slice(0, -1).join(', ') + ' y ' + L[L.length - 1] : L[0]) +
+        (PF && PF.primerControl && REAL.mil === null ? ' (el primer control del 1.000 es el ' + corta(PF.primerControl) + ')' : '');
+    }
     if (NR.txt === 'APTO') return 'Con las marcas de hoy apruebas: ' + num(NR.media, 2);
     if (NR.txt === 'ELIMINADO') return 'Con las marcas de hoy quedas eliminado por ' + quienElimina(NR.pts);
     return 'Con las marcas de hoy no apruebas: ' + num(NR.media, 2);
@@ -275,7 +292,7 @@
       '<div class="mc-est-r"><span class="chip" data-m="res"></span><span class="chip sup" data-m="sim" hidden></span>' +
       '<button type="button" class="btn sec" data-m="volver" hidden>Volver a hoy</button></div></div>');
     if (P.objetivo && P.objetivo.reglaDeNota) h.push('<p class="mc-regla">' + esc(P.objetivo.reglaDeNota) + '</p>');
-    if (!PF) h.push('<div class="mc-g1" data-m="g1"></div>');
+    h.push('<div class="mc-g1" data-m="g1"></div>');
     h.push('<div class="chips mc-escs" role="group" aria-label="Escenarios del plan">' + ESC.map(function (x) {
       return '<button type="button" class="chip" aria-pressed="false" data-esc="' + x.i + '">' + esc(x.corto) + '</button>';
     }).join('') + '</div>');
@@ -344,7 +361,7 @@
     var fil = {};
     function rangoT(txt) { return String(txt).replace(/(\d)-(\d)/g, '$1–$2'); }
     lista(B.mil_metros).forEach(function (t) {
-      var txt = t.hasta ? (seg(t.desde) === 0 ? t.hasta + ' o menos' : t.desde + '–' + t.hasta) : t.desde + ' o más';
+      var txt = t.hasta ? (t.desde == null || seg(t.desde) === 0 ? t.hasta + ' o menos' : t.desde + '–' + t.hasta) : t.desde + ' o más';
       (fil[t.puntos] = fil[t.puntos] || {}).mil = { txt: txt, elim: !!t.elimina };
     });
     lista(B.dominadas).forEach(function (t) { (fil[t.puntos] = fil[t.puntos] || {}).dom = { txt: rangoT(t.reps) }; });
@@ -355,11 +372,11 @@
     var chip = mB ? '<span class="chip">' + esc(mB[1] + (mV ? ' · verificado el ' + mV[1] : '')) + '</span>' : '';
     var tb = ps.map(function (p) {
       var f = fil[p], cel = function (c, u) { return c ? '<td' + (u && c.elim ? ' class="mc-td-elim" data-umbral="229"' : (p === 0 ? ' class="mc-td-elim"' : '')) + '>' + esc(c.txt) + '</td>' : '<td></td>'; };
-      return '<tr><th scope="row">' + p + '</th>' + cel(f.mil, true) + (PF ? '' : cel(f.dom) + cel(f.cir)) + '</tr>';
+      return '<tr><th scope="row">' + p + '</th>' + cel(f.mil, true) + cel(f.dom) + cel(f.cir) + '</tr>';
     }).join('');
     var d = '<p class="chips">' + chip + '</p>' +
-      '<div class="tscroll"><table class="t mc-baremo"><thead><tr><th scope="col">Puntos</th><th scope="col">1.000 m</th>' + (PF ? '' : '<th scope="col">Dominadas</th><th scope="col">Circuito (s)</th>') + '</tr></thead><tbody>' + tb + '</tbody></table></div>';
-    return acc(PF ? 'Baremo del 1.000, mujeres' : 'Baremo completo, hombres', d, 'mc-bar');
+      '<div class="tscroll"><table class="t mc-baremo"><thead><tr><th scope="col">Puntos</th><th scope="col">1.000 m</th><th scope="col">' + (PF ? 'Barra (s)' : 'Dominadas') + '</th><th scope="col">Circuito (s)</th></tr></thead><tbody>' + tb + '</tbody></table></div>';
+    return acc(PF ? 'Baremo completo, mujeres' : 'Baremo completo, hombres', d, 'mc-bar');
   }
 
   function enlazarNota(sec) {
@@ -373,7 +390,7 @@
     });
     var volver = sec.querySelector('[data-m="volver"]');
     volver.addEventListener('click', function () {
-      ST.base = 'hoy'; ST.v = { mil: REAL.mil, dom: REAL.dom, cir: REAL.cir };
+      ST.base = 'hoy'; ST.v = { mil: inicial('mil'), dom: inicial('dom'), cir: inicial('cir') };
       recalcEstado(); actualizar();
       var c = sec.querySelector('.mc-escs [aria-pressed="true"]'); if (c) c.focus();
     });
@@ -393,29 +410,19 @@
     var v = ST.v[k], real = esReal() && Math.abs(v - REAL[k]) < 1e-6;   /* escenario o simulado: en contorno */
     try {
       if (k === 'mil' && PC.ill.pista1000) PC.ill.pista1000(host, { s: v, real: real });
-      else if (k === 'dom' && PC.ill.barra) PC.ill.barra(host, { reps: v, validado: real && /v[ií]deo|v[aá]lid/.test(FIAB.dom || ''), real: real });
+      else if (k === 'dom' && PC.ill.barra && !PF) PC.ill.barra(host, { reps: v, validado: real && /v[ií]deo|v[aá]lid/.test(FIAB.dom || ''), real: real });
       else if (k === 'cir' && PC.ill.valla) {
         var medido = FIAB.cir === 'medido';
         PC.ill.valla(host, { t: v, real: real && medido, medido: medido ? REAL.cir : null, etiqueta: real ? (medido ? '' : FIAB.cir) : 'simulado' });
       }
     } catch (e) { PC._err('marcas escena', e); }
   }
-  /* web de Cristina: la cifra grande son los puntos del 1.000 (su nota física también lleva barra y circuito, que este plan no mide) */
-  function cabeceraPF(q) {
-    var v = ST.v.mil, pm = PC.baremo.pts('mil', v), sin = REAL.mil === null, suya = !sin && Math.abs(v - REAL.mil) < 1e-6;
-    q('[data-m="media"]').textContent = String(pm);
-    q('[data-m="estado"]').textContent = 'puntos del 1.000 · ' + (suya ? 'tu marca' : 'simulado');
-    var cr = q('[data-m="res"]'); cr.textContent = pm === 0 ? 'ELIMINA' : ptsTxt(pm); cr.className = 'chip ' + (pm === 0 ? 'bad' : pm >= 5 ? 'ok' : 'warn');
-    var cs = q('[data-m="sim"]'); cs.hidden = suya; cs.textContent = 'simulado';
-    q('[data-m="volver"]').hidden = sin || suya;
-  }
   function actualizar(fuente) {
     var sec = raiz && raiz.querySelector('#mc-nota'); if (!sec) return;
     var n = notaDe(ST.v), real = ST.estado === 'hoy';
     var media = real ? NR.media : n.media, res = real ? NR.txt : n.txt;
     var q = function (s) { return sec.querySelector(s); };
-    if (PF) cabeceraPF(q);
-    else {
+    {
     q('[data-m="media"]').textContent = num(media, 2);
     var iEsc = ST.estado.indexOf('esc') === 0 ? +ST.estado.slice(3) : -1;
     if (real) ESC.forEach(function (x) { if (iEsc < 0 && igualV(x.v, REAL)) iEsc = x.i; });
@@ -438,19 +445,18 @@
     }
     /* filas */
     ORDEN.forEach(function (k) {
-      var f = sec.querySelector('.mc-fila[data-k="' + k + '"]'), R = PR[k], v = ST.v[k], p = PF ? PC.baremo.pts(k, v) : n.pts[k];
+      var f = sec.querySelector('.mc-fila[data-k="' + k + '"]'), R = PR[k], v = ST.v[k], p = n.pts[k];
       var esRealK = Math.abs(v - REAL[k]) < 1e-6;
       f.querySelector('[data-f="val"]').textContent = R.txt(v);
       var cp = f.querySelector('[data-f="pts"]');
       cp.textContent = p === 0 ? '0 pts · elimina' : ptsTxt(p); cp.className = 'chip' + (p === 0 ? ' bad' : '');
       var cf = f.querySelector('[data-f="fiab"]');
       if (esRealK) { cf.textContent = FIAB[k] || ''; cf.className = 'chip' + (fiabHueca(k) ? ' sup' : ''); cf.hidden = !FIAB[k]; }
-      else { cf.textContent = ST.estado === 'sim' || PF ? 'simulado' : 'supuesto'; cf.className = 'chip sup'; cf.hidden = false; }
+      else { cf.textContent = ST.estado === 'sim' ? 'simulado' : 'supuesto'; cf.className = 'chip sup'; cf.hidden = false; }
       var inp = f.querySelector('.mc-rango');
       if (fuente !== k) inp.value = clampV(k, R.s2v(v));
       inp.setAttribute('aria-valuetext', R.txt(v) + ', ' + (p === 1 ? '1 punto' : p + ' puntos') + (p === 0 ? ', elimina' : ''));
-      var c = PF ? { tipo: 'todo', txt: '' } : corteVivo(k, ST.v), cm = f.querySelector('[data-f="cmark"]');
-      f.querySelector('.mc-ct').hidden = !!PF;
+      var c = corteVivo(k, ST.v), cm = f.querySelector('[data-f="cmark"]');
       f.querySelector('[data-f="corte"]').textContent = c.txt;
       f.querySelector('.mc-ct').className = 'mc-ct ' + c.tipo;
       if (c.tipo === 'marca') { cm.hidden = false; cm.style.left = pct((clampV(k, R.s2v(c.s)) - 0.5) / R.N); }

@@ -29,13 +29,16 @@
   PC.baremo.ELIMINA_MIL = 286;
 
   /* ---------------------------------------------------------------- chip de nota: el 1.000 */
+  /* chip de nota: la media de las tres, como en la de Daniel; mientras falte una marca, «nota sin medir» */
   PC.notaActual = function () {
-    var M = (der.marcas || {}).mil;
-    if (!M) return { media: null, resultado: null, pts: { mil: null }, txt: '1.000 sin medir', cls: 'warn', sinMarca: true };
-    var p = M.pts;
-    var o = { media: p, resultado: p === 0 ? 'ELIMINA' : null, pts: { mil: p }, marca: M };
-    if (p === 0) { o.txt = M.txt + ' · elimina'; o.cls = 'bad'; }
-    else { o.txt = M.txt + ' · ' + p + (p === 1 ? ' punto' : ' puntos'); o.cls = p >= 5 ? 'ok' : 'warn'; }
+    var M = der.marcas || {}, p = { cir: M.cir && M.cir.pts, dom: M.dom && M.dom.pts, mil: M.mil && M.mil.pts };
+    var faltan = ['cir', 'dom', 'mil'].filter(function (k) { return p[k] === null || p[k] === undefined; });
+    if (faltan.length) return { media: null, resultado: null, pts: p, txt: 'nota sin medir', cls: 'warn', sinMarca: true, faltan: faltan };
+    var r = PC.baremo.resultado([p.cir, p.dom, p.mil]);
+    var o = { media: r.media, resultado: r.txt, pts: p };
+    if (r.txt === 'ELIMINADO') { var cual = p.dom === 0 ? 'barra' : p.mil === 0 ? '1.000 m' : 'circuito'; o.txt = 'eliminada · ' + cual; o.cls = 'bad'; }
+    else if (r.txt === 'APTO') { o.txt = PC.fmt.num(r.media, 2) + ' · apta'; o.cls = 'ok'; }
+    else { o.txt = PC.fmt.num(r.media, 2) + ' · no apta'; o.cls = 'warn'; }
     return o;
   };
 
@@ -68,8 +71,9 @@
     });
     PC.$$('[data-pc="notaChip"]').forEach(function (e) {
       var n = PC.notaActual();
-      if (n && n.sinMarca) e.setAttribute('aria-label', 'Tu 1.000: todavía sin medir; el primer control es el ' + PC.fmt.dia(plan.objetivo.primerControl, 'larga'));
-      else if (n) e.setAttribute('aria-label', 'Tu 1.000: ' + n.txt);
+      var nom = { cir: 'el circuito', dom: 'la barra', mil: 'el 1.000' };
+      if (n && n.sinMarca) e.setAttribute('aria-label', 'Tu nota: sin medir; falta ' + n.faltan.map(function (k) { return nom[k]; }).join(', ') + '. El primer control del 1.000 es el ' + PC.fmt.dia(plan.objetivo.primerControl, 'larga'));
+      else if (n) e.setAttribute('aria-label', 'Tu nota: ' + n.txt);
     });
   };
 

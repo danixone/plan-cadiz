@@ -657,10 +657,34 @@ def construir(plan, hist, hoy):
         ritmos['umbral'] = [mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1])]
 
     # marca del 1.000 para el chip y el simulador
-    marcas = {'mil': None}
+    marcas = {'mil': None, 'dom': None, 'cir': None}
     if controles:
         u = controles[-1]
         marcas['mil'] = {'txt': u['tiempo'], 's': u['s'], 'pts': u['pts'], 'fecha': u['fecha'], 'fiab': 'medido'}
+    # barra y circuito: las marcas de plan.pruebasMujeres (la barra va en «reps», en segundos, para el núcleo de Daniel)
+    PM = {x['id']: x for x in (plan.get('pruebasMujeres') or {}).get('pruebas') or []}
+    def pts_pm(pr, v):
+        if v is None:
+            return None
+        if pr['mejor'] == 'mas':
+            v = int(v)
+            for t in sorted(pr['tramos'], key=lambda t: -t['puntos']):
+                if v >= float(t['desde'].replace(',', '.')):
+                    return t['puntos']
+            return 0
+        for t in sorted(pr['tramos'], key=lambda t: -t['puntos']):
+            lim = [float(x.replace(',', '.')) for x in (t['desde'], t['hasta']) if x]
+            if t['hasta'] is None:
+                return t['puntos']
+            if v <= max(lim) + 1e-9:
+                return t['puntos']
+        return 0
+    mb = (PM.get('barra') or {}).get('marca') or {}
+    if mb.get('valor') is not None:
+        marcas['dom'] = {'reps': mb['valor'], 'pts': pts_pm(dict(PM['barra'], mejor='mas'), mb['valor']), 'fecha': mb.get('fecha'), 'fiab': mb.get('fiab') or 'autoinformado'}
+    mc = (PM.get('cir') or {}).get('marca') or {}
+    if mc.get('valor') is not None:
+        marcas['cir'] = {'s': mc['valor'], 'pts': pts_pm(PM['cir'], mc['valor']), 'fecha': mc.get('fecha'), 'fiab': mc.get('fiab') or 'medido'}
 
     # fechas y avisos
     fechas = [e['fecha'] for e in (hist.get('carrera') or [])] + [c['fecha'] for c in controles]
@@ -681,6 +705,19 @@ def construir(plan, hist, hoy):
     pub['calendario'] = cal
     pub['baremo'] = {'mil_metros': [{'puntos': t['puntos'], 'desde': t['desde'], 'hasta': t['hasta'], 'elimina': bool(t.get('elimina'))}
                                     for t in plan['baremo1000Mujeres']['tramos']]}
+    # circuito y barra de mujeres en la forma del baremo de Daniel («seg» y «reps», de menor a mayor), para su misma pestaña Marcas
+    def rango_txt(t, menos):
+        if t['desde'] is not None and t['hasta'] is None:
+            return '%s o %s' % (t['desde'], 'más')
+        if t['desde'] is None:
+            return '%s o menos' % t['hasta']
+        a, b = sorted([t['desde'], t['hasta']], key=lambda x: float(x.replace(',', '.')))
+        return '%s-%s' % (a, b)
+    if PM.get('cir'):
+        pub['baremo']['circuito_agilidad'] = [{'puntos': t['puntos'], 'seg': rango_txt(t, True)} for t in sorted(PM['cir']['tramos'], key=lambda t: -t['puntos'])]
+    if PM.get('barra'):
+        pub['baremo']['dominadas'] = [{'puntos': t['puntos'], 'reps': rango_txt(t, False)} for t in sorted(PM['barra']['tramos'], key=lambda t: -t['puntos'])]
+    pub['baremo']['fuente'] = 'BOE-A-2026-15055, Anexo II · verificado el 23-10-2026'
     for d in ejercicios_usados(dias):
         if d not in {e['id'] for e in plan.get('ejercicios') or []}:
             avisos.append('ejercicio sin explicar en plan.ejercicios: %s' % d)
