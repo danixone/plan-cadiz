@@ -5,6 +5,12 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-24",
+      "sesion": "Sesión corta de barra + rodaje de 30 min (si el gemelo pasaba las comprobaciones)",
+      "hecho": false,
+      "motivo": "Prefirió descansar (contado por él el 25-10): la fisioterapeuta, el viernes 23, le permitía rodar si se encontraba bien. El rodaje pasa al domingo 25; la barra no se recupera."
+    },
+    {
       "fecha": "2026-10-22",
       "sesion": "2 × 600 m (rec. 3 min) + 2 × 200 m (rec. 2 min) · las del miércoles 21 (lluvia), antes del circuito · pista de Arucas, perfil Pista del reloj",
       "objetivo": "600 en 2:07 · 200 en 0:41-0:42 · primer 200 del 600 en 0:42,5 · cada 200 a ±1 s de su paso · acabar antes de las 19:15",

@@ -1536,8 +1536,10 @@
         {
           "fecha": "2026-10-25",
           "dia": "Dom",
-          "tipo": "descanso",
-          "sesion": "Descanso"
+          "tipo": "carrera",
+          "sesion": "Rodaje de 30 min, el del sábado 24 (no se hizo: prefirió descansar), solo si las dos piernas pasan las tres comprobaciones; si no, descanso",
+          "objetivo": "Antes: andar sin dolor, 10 elevaciones de talón con cada pierna sola y 10 saltitos suaves con los dos pies, todo sin dolor; si falla una, hoy no se corre · 30 min llano y por terreno firme · techo 145, primeros 10 min a 140 · se para si vuelve el dolor en la cara externa de la pierna · sin barra: mañana hay 3 × 4 dominadas y el martes la descarga, y la revisión del 28-9 no deja hacer dominadas tres días seguidos · elevaciones de talón 3 × 15, solo si no duelen",
+          "hora": "por la mañana o por la tarde, sin hora fija"
         }
       ]
     },
@@ -1551,16 +1553,16 @@
           "dia": "Lun",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30",
-          "objetivo": "Solo si el gemelo derecho pasó las tres comprobaciones el sábado y hoy, y el rodaje del sábado no le molestó; si no, sin series y se decide el miércoles · 1:25 con 2:30 (bloque C, resuelto el 20-10) · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
+          "objetivo": "Solo si las dos piernas pasan hoy las tres comprobaciones y el rodaje del domingo no molestó (peroneos inflamados, fisio del 23-10); si no, sin series y se decide el miércoles · 1:25 con 2:30 (bloque C, resuelto el 20-10) · freno si baja de 1:22 · aviso 3:30-3:40 · habituación 3 × 4 · cada 200, a ±1 s de su paso (0:42,5 a 1:25): si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
           "hora": "18:00-19:00"
         },
         {
           "fecha": "2026-10-27",
           "dia": "Mar",
           "tipo": "fuerza",
-          "sesion": "Arsenal: descarga · A, B, D y H",
-          "objetivo": "A en 3 × 2 con el peso del 20-10, 180 s, 3 o más en reserva · descarga: mismo peso, menos volumen (antes decía 4 × 3 con 10 kg, que contradecía la propia regla) · B, D y H a dos rondas · prep-hombro completo",
-          "hora": "18:00-19:30"
+          "sesion": "Arsenal: descarga · A, B, D y H, a primera hora de la mañana · 19:00, práctica del circuito en el Martín Freire",
+          "objetivo": "A en 3 × 2 con el peso del 20-10, 180 s, 3 o más en reserva · descarga: mismo peso, menos volumen (antes decía 4 × 3 con 10 kg, que contradecía la propia regla) · B, D y H a dos rondas · prep-hombro completo · por la mañana, porque a las 15:00 tiene otra sesión y a las 19:00 la práctica del circuito (cambiado el 25-10) · circuito: técnica, sin cronómetro y sin intentos a tope, como mucho 4-6 pasadas, solo si las dos piernas pasan las tres comprobaciones; se para si vuelve el dolor en la cara externa de la pierna · el que se mide es el del jueves 29",
+          "hora": "a primera hora de la mañana, antes del trabajo; circuito a las 19:00"
         },
         {
           "fecha": "2026-10-28",
@@ -1574,8 +1576,9 @@
           "fecha": "2026-10-29",
           "dia": "Jue",
           "tipo": "circuito",
-          "sesion": "21:30 circuito: UN intento cronometrado como el BOE, fresco, y el resto a ritmo sin cronómetro. Último circuito medido antes de Cádiz (el sábado no hay circuito)",
-          "objetivo": "sin bloque técnico ni saltos · con las zapatillas con las que vas a correr el 1.000: el aviso oficial del 20-10 pide unas solas para todos los ejercicios"
+          "sesion": "19:00 circuito (cambiado el 25-10; antes, 21:30): UN intento cronometrado como el BOE, fresco, y el resto a ritmo sin cronómetro. Último circuito medido antes de Cádiz (el sábado no hay circuito)",
+          "objetivo": "sin bloque técnico ni saltos · con las zapatillas con las que vas a correr el 1.000: el aviso oficial del 20-10 pide unas solas para todos los ejercicios · solo si las dos piernas pasan las tres comprobaciones; un intento, sin repetirlo aunque salga lento (el 22-10 se lesionó en un cuarto intento)",
+          "hora": "19:00"
         },
         {
           "fecha": "2026-10-30",
@@ -1846,7 +1849,7 @@
   "lesiones": {
     "cintillo": "Cintillo iliotibial en la rodilla izquierda, resuelto con fisio. Nota tirantez al apretar 10-15 min por encima del umbral. NO se cambian sesiones por esto: el umbral de los miércoles es EN umbral, no por encima. Se añade glúteo medio los martes. Regla de parada: si pasa de 'lo noto' a 'me molesta al correr', esa sesión se acaba.",
     "pies": "Pies planos y propensión a fascitis plantar. Plantillas 3D de ICOT. Elevaciones de talón a una pierna innegociables los sábados. Señal de alarma: dolor de talón en los primeros pasos de la mañana.",
-    "gemeloDerecho": "22-10, circuito, cuarto intento (uno más de los tres del protocolo): derribó la última valla y, al apoyar fuerte el pie derecho, dolor en la cara externa del gemelo derecho, parte alta (foto del 23-10). Cojeó unos 5 min y quedó una sensación de dolorido, «como de golpe». Sin diagnóstico. Hasta que lo vea un fisio o un médico: no se corre ni se salta si falla una de tres comprobaciones (andar sin dolor, 10 elevaciones de talón con la pierna derecha sola sin dolor y 10 saltitos suaves con los dos pies sin dolor), y una sesión se para si vuelve a doler. Urgencias si se hincha mucho, sale un moratón grande, no puede apoyar o el dolor va a más."
+    "gemeloDerecho": "22-10, circuito, cuarto intento (uno más de los tres del protocolo): derribó la última valla y, al apoyar fuerte el pie derecho, dolor en la cara externa del gemelo derecho, parte alta (foto del 23-10). Cojeó unos 5 min y quedó una sensación de dolorido, «como de golpe». Fisioterapeuta, viernes 23-10 (contado por él el 25-10): con ecografía, inflamación de los peroneos de las dos piernas; punción con corriente en los dos peroneos y en el isquiotibial izquierdo. Le permitía rodar el sábado si se encontraba bien; él prefirió descansar. Desde el 25-10: cada día, antes de correr, las tres comprobaciones con las dos piernas (andar sin dolor, 10 elevaciones de talón con cada pierna sola y 10 saltitos suaves con los dos pies, todo sin dolor); si falla una, ese día no se corre ni se salta, y una sesión se para si vuelve el dolor en la cara externa de la pierna. Urgencias si se hincha mucho, sale un moratón grande, no puede apoyar o el dolor va a más."
   },
   "sensibilidad": {
     "nota": "Partiendo del escenario realista (3:34 · 12 dominadas · 9,0 s), cuánto aguanta antes de caer.",
@@ -1949,7 +1952,7 @@
   "pendientes": [
     {
       "id": "gemelo-derecho",
-      "texto": "Gemelo derecho (22-10, circuito): que lo vea un fisio o un médico cuanto antes. Cada mañana, las tres comprobaciones (andar, 10 elevaciones de talón con la derecha sola y 10 saltitos con los dos pies, todo sin dolor), y me las cuentas. Urgencias si se hincha mucho, sale un moratón grande, no puedes apoyar o el dolor va a más.",
+      "texto": "Peroneos de las dos piernas (golpe del 22-10 en el circuito; fisio del 23-10: inflamación en la ecografía, punción con corriente en los dos peroneos y en el isquiotibial izquierdo). Cada mañana, las tres comprobaciones con las dos piernas (andar, 10 elevaciones de talón con cada pierna sola y 10 saltitos con los dos pies, todo sin dolor), y me cuentas cómo responde al rodaje del domingo 25. Si vuelve el dolor corriendo, la sesión se acaba. Urgencias si se hincha mucho, sale un moratón grande, no puedes apoyar o el dolor va a más.",
       "desde": "2026-10-23",
       "hasta": "2026-11-06"
     },
