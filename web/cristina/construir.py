@@ -45,6 +45,7 @@ SALIDA = os.path.join(RAIZ, 'docs', 'cristina', 'index.html')
 VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']
 MOD_DE = {'hoy': '20_hoy.js', 'plan': '30_plan.js', 'marcas': '40_marcas.js', 'tecnica': '50_tecnica.js'}
 DOW = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom']
+TECHO = {'suave': None}     # plan.pulso.techoSuave (desde el 26-10): lo pone construir()
 LIMITE_GZIP = 240 * 1024
 
 
@@ -321,7 +322,27 @@ def ritmo_txt_rep(R, ritmo, dist):
     return t_rep(R[ritmo]['400'] * dist / 400, dist)
 
 
+def paso_marcas(obj, dist):
+    """Paso acumulado de una repetición, plano: cada 50 m hasta 300 m y cada 100 m desde 400 (desde el 26-10, como el «Paso cada 50 m» de Daniel).
+    '1:02,5', 200 → '50 m en 0:15,6 · 100 en 0:31,3 · 150 en 0:46,9 · 200 en 1:02,5'."""
+    s = seg(obj)
+    if not s or not dist:
+        return None
+    paso = 50 if dist <= 300 else 100
+    out = []
+    for d in range(paso, dist + 1, paso):
+        t = obj if d == dist else mmss(s * d / dist, 1)
+        out.append(('%d m en %s' if not out else '%d en %s') % (d, t))
+    return ' · '.join(out)
+
+
 # ---------------------------------------------------------------------------------------------- pasos de cada día
+def hablar():
+    """'Pulso por debajo de 150 y hablando con frases enteras.' (o solo lo de hablar, sin techo en el plan)."""
+    t = TECHO['suave']
+    return ('Pulso por debajo de %d y hablando con frases enteras.' % t) if t else 'Puedes hablar con frases enteras.'
+
+
 def suave_de(RE, p):
     """Ritmo suave que se enseña: en «correr y andar», el de los tramos (ritmosEstimados.suaveTramos, medido el 12-10) si existe."""
     r = RE.get('suaveTramos') if p.get('tipo') == 'correrAndar' and RE.get('suaveTramos') else RE.get('suave')
@@ -347,7 +368,7 @@ def pasos_de(p, R, RE):
         paso('Anda 5 min a paso vivo', 'Para entrar en calor antes de correr. No cuenta en los minutos de la sesión.', 300, 'antes', ej='andar')
     if p.get('calentamiento'):
         c = p['calentamiento']
-        paso('Trote suave %d min' % c['min'], ('A tu ritmo suave (%s): puedes hablar con frases enteras.' % suave) if suave else 'Puedes hablar con frases enteras.',
+        paso('Trote suave %d min' % c['min'], ('A tu ritmo suave (%s). %s' % (suave, hablar())) if suave else hablar(),
              c['min'] * 60, 'calentamiento', ej='suave')
         paso('Movilidad', 'Los ejercicios de movilidad de Técnica › Carrera, unos 5 min.', None, 'calentamiento', ej='movilidad')
         paso('%d rectas de 80 m' % c['rectas'], 'Aceleras poco a poco hasta rápido pero suelto y vuelves andando.', None, 'calentamiento', ej='rectas')
@@ -378,7 +399,7 @@ def pasos_de(p, R, RE):
             paso('%d min alegres' % p['alegreFinal'], 'Los últimos: respiras fuerte pero controlas.', p['alegreFinal'] * 60, 'principal', fase='rapido', ej='alegre')
         else:
             paso('%d min suave%s' % (p['min'], ' · la larga' if p.get('larga') else ''),
-                 ('%s /km. Puedes hablar con frases enteras.' % suave) if suave else 'Puedes hablar con frases enteras.', p['min'] * 60, 'principal',
+                 ('%s /km. %s' % (suave, hablar())) if suave else hablar(), p['min'] * 60, 'principal',
                  ej='larga' if p.get('larga') else 'suave')
         if p.get('rectas'):
             for i in range(p['rectas']):
@@ -415,9 +436,10 @@ def pasos_de(p, R, RE):
     elif tipo == 'series':
         nombre = {'K': 'a ritmo K', 'K+4': 'a ritmo K + 4', 'O': 'a ritmo O', 'rapidos': 'rápidos'}[p['ritmo']]
         rt = ritmo_txt_rep(R, p['ritmo'], p['dist'])
+        pm = paso_marcas(rt, p['dist']) if rt else None
         for i in range(p['n']):
             paso('%d m %s%s' % (p['dist'], nombre, (' · ' + rt) if rt else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
-                 ((' · recuperación %s' % p['recTxt']) if i < p['n'] - 1 else ''),
+                 ((' · recuperación %s' % p['recTxt']) if i < p['n'] - 1 else '') + ((' · paso: ' + pm) if pm else ''),
                  p.get('rec') if i < p['n'] - 1 else None, 'principal', n=i + 1, de=p['n'], dist=p['dist'], obj=rt,
                  recDist=p.get('recDist') if i < p['n'] - 1 else None, ej={'K': 'series-k', 'K+4': 'series-k', 'O': 'series-o', 'rapidos': 'rapidos'}[p['ritmo']])
         if p.get('extra'):
@@ -438,8 +460,14 @@ def pasos_de(p, R, RE):
             if i < p['n'] - 1:
                 paso('Recupera %d min' % (p['recSeries'] // 60), 'Entre los dos kilómetros partidos', p['recSeries'], 'principal')
     elif tipo == 'control1000':
-        paso('1.000 m a tope', 'El primer 200 al mismo ritmo que los demás, no a sprint. Apunta el tiempo y, si puedes, los cinco parciales de 200.',
-             None, 'principal', dist=1000, ej='control')
+        k200 = R['K']['200'] if R else None
+        if k200:
+            txt = ('Los tres primeros 200 a tu ritmo K, cada uno en %s: a los 100 m, %s (si llevas menos, aflojas); 200 en %s · 400 en %s · 600 en %s. '
+                   'Del 600 al 800 aguantas ese ritmo y los últimos 200, todo lo que te quede. Apunta el tiempo y, si puedes, los cinco parciales de 200.'
+                   % (mmss(k200, 1), mmss(k200 / 2, 1), mmss(k200, 1), mmss(2 * k200, 1), mmss(3 * k200, 1)))
+        else:
+            txt = 'El primer 200 al mismo ritmo que los demás, no a sprint. Apunta el tiempo y, si puedes, los cinco parciales de 200.'
+        paso('1.000 m a tope', txt, None, 'principal', dist=1000, ej='control')
     elif tipo == 'simulacro':
         paso('Circuito', 'En el orden del BOE, con los descansos que te den.', None, 'principal')
         paso('Barra', '', None, 'principal')
@@ -479,6 +507,8 @@ def numeros_de(p, R, RE):
             N.append({'v': '%d min' % p['alegreFinal'], 'l': 'últimos, alegres'})
         elif p.get('extra'):
             N.append({'v': '%d × %d m' % (p['extra']['n'], p['extra']['dist']), 'l': 'a ritmo K al final'})
+        if TECHO['suave']:
+            N.append({'v': '< %d' % TECHO['suave'], 'l': 'pulso en lo suave'})
         if suave:
             N.append({'v': suave, 'l': 'ritmo suave /km', 'est': True})
     elif t == 'intervalos':
@@ -547,6 +577,7 @@ def construir(plan, hist, hoy):
     errores, avisos = [], []
     T = tramos_mil(plan)
     RE = plan.get('ritmosEstimados') or {}
+    TECHO['suave'] = (plan.get('pulso') or {}).get('techoSuave')
 
     # controles (de más viejo a más nuevo) con sus puntos
     controles = []

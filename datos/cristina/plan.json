@@ -2,10 +2,10 @@
   "meta": {
     "atleta": "Cristina",
     "creado": "2026-10-11",
-    "version": 3,
+    "version": 4,
     "diasCarrera": "lunes, miércoles y sábado",
-    "nota": "Plan de carrera de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). Solo carrera. Los datos personales (edad, altura, salud) no van aquí; el pulso sí, desde el 12-10-2026: el repositorio es público.",
-    "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre."
+    "nota": "Plan de carrera y de barra de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). El circuito lo lleva Martín Freire. Los datos personales (edad, altura, salud) no van aquí; el pulso sí, desde el 12-10-2026: el repositorio es público.",
+    "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre. Versión 4 del 26-10-2026, tras su primer 1.000 medido (5:13, con la salida demasiado rápida) y a petición de Daniel: entrenador también de la barra (dos sesiones por semana y un test cada cuatro, el martes de la semana de descarga); CrossFit uno o dos días por semana (con uno, el domingo es descanso); series cortas a ritmo K desde el 2-11 (antes, el primer trabajo a ritmo K era el 21-12) y las cuestas pasan a los miércoles; techo de pulso de 150 en lo suave, con su máxima ya medida (188); controles renumerados (el del 26-10 es el 1.º)."
   },
   "objetivo": {
     "prueba": "Pruebas físicas de la Escala Básica, convocatoria de 2027 (44.ª promoción), turno libre",
@@ -30,15 +30,17 @@
     ],
     "porQue": "Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.",
     "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física (bases 6.1.2 y 6.11 del BOE de la 43.ª; la convocatoria de 2027 no ha salido).",
-    "primerControl": "2026-11-21",
-    "expectativa": "Sin una marca medida no hay previsión. Hoy solo hay una estimación: más de 5:00. El rodaje del 10-10 apunta a que puede estar bastante por encima, pero eso tampoco es una medida: el punto de partida lo da el primer control, el sábado 21-11. Criterio de entrenador, no dato: si ese control sale entre 5:00 y 5:15 y el año va sin lesiones, lo razonable es acabar entre 4:05 y 4:35; si sale de 5:30 o más, el objetivo del año es alejarse de la eliminación, en torno a 4:30. 4:00 o menos (6 puntos) pide una respuesta muy buena. Se revisa tras el control de diciembre."
+    "primerControl": "2026-10-26",
+    "expectativa": "Primer 1.000 medido el 26-10-2026: unos 5:13, 27 s por encima del 4:46 que elimina. Criterio de entrenador, no dato: con un año sin lesiones y este plan, lo razonable es dejar de eliminar en invierno y acabar entre 4:05 y 4:35 (es la previsión que se dio el 11-10 para un primer control entre 5:00 y 5:15); 4:00 o menos (6 puntos) pide una respuesta muy buena. Ese control se hizo sin calentamiento, con CrossFit el día antes y saliendo demasiado rápido: el del 21-11, en condiciones, dirá más. Se revisa con cada control."
   },
   "pulso": {
     "reposo": 67,
     "reposoFuente": "Apple Watch, registro del 9-10",
-    "maxima": null,
-    "maximaNota": "Sin medir. La más alta registrada es 175, en el rodaje del 10-10, que no fue a tope: no es su máxima.",
-    "nota": "Público desde el 12-10-2026 (decisión de Daniel). Sin máxima medida no hay zonas: las automáticas del reloj salen de una máxima estimada y pueden fallar. En lo suave manda poder hablar."
+    "maxima": 188,
+    "maximaNota": "188, medida el 26-10-2026 al final del 1.000 a tope, con el reloj de muñeca. Es la más alta que tiene registrada corriendo (antes, 176 el 17-10); su máxima real puede ser algo más alta.",
+    "nota": "Público desde el 12-10-2026 (decisión de Daniel). Desde el 26-10 hay máxima medida: lo suave va por debajo de 150 (zona 2), y además tienes que poder hablar. En las series cortas el pulso de muñeca va con retraso: ahí manda el ritmo.",
+    "zonas": "Por reserva de pulso, con reposo 67 y máxima 188, como las de Daniel: zona 1, 128-140 · zona 2, 140-152 · zona 3, 152-164 · zona 4, 164-176 · zona 5, 176-188.",
+    "techoSuave": 150
   },
   "baremo1000Mujeres": {
     "fuente": "BOE-A-2026-15055 (convocatoria de la 43.ª), Anexo II, tercer ejercicio. Comprobado en boe.es el 11-10-2026. La convocatoria de 2027 no ha salido: se supone el mismo baremo.",
@@ -106,19 +108,19 @@
   "semanaTipo": [
     {
       "dia": "Lun",
-      "que": "Carrera: la sesión de calidad (en las primeras semanas, correr y andar o suave con rectas o cuestas)"
+      "que": "Carrera: la calidad (desde el 2-11, series a ritmo K o K + 4)"
     },
     {
       "dia": "Mar",
-      "que": "Martín Freire: barra y circuito"
+      "que": "Martín Freire: circuito, y barra A (fuerza)"
     },
     {
       "dia": "Mié",
-      "que": "Carrera: suave con rectas, cuestas o 200 a ritmo K"
+      "que": "Carrera: suave con rectas o cuestas"
     },
     {
       "dia": "Jue",
-      "que": "Martín Freire: barra y circuito"
+      "que": "Martín Freire: circuito, y barra B (la del examen)"
     },
     {
       "dia": "Vie",
@@ -130,7 +132,7 @@
     },
     {
       "dia": "Dom",
-      "que": "CrossFit (sin piernas pesadas si puedes: el lunes toca la calidad)"
+      "que": "Descanso, o un segundo día de CrossFit sin piernas pesadas (desde el 21-12, o 25-30 min suaves: regla «Cuarto día»)"
     }
   ],
   "fases": [
@@ -139,14 +141,14 @@
       "nombre": "Evaluación",
       "desde": 1,
       "hasta": 2,
-      "objetivo": "Correr y andar, y tu primer 1.000: saber de dónde partes."
+      "objetivo": "Correr y andar, y tu primer 1.000: 5:13 el 26-10."
     },
     {
       "id": "F1",
       "nombre": "Base: correr seguido",
       "desde": 3,
       "hasta": 10,
-      "objetivo": "Llegar a correr 35-48 min seguidos y suave. Es lo que más mejora el 1.000 al principio."
+      "objetivo": "Llegar a correr 35-48 min seguidos y suave, y desde el 2-11 series cortas a ritmo K para aprender a repartir el 1.000. Barra dos días por semana."
     },
     {
       "id": "F2",
@@ -219,7 +221,8 @@
     {
       "id": "suave",
       "titulo": "Lo suave, suave de verdad",
-      "texto": "Los rodajes suaves son la mayor parte del plan y lo que más te va a mejorar. Si un día vas ahogada, vas demasiado rápido: baja o anda un minuto."
+      "texto": "Los rodajes suaves son la mayor parte del plan y lo que más te va a mejorar. Suave es por debajo de 150 de pulso (zona 2) y pudiendo hablar con frases enteras. Si pasa de 150 o vas ahogada, baja o anda un minuto. Lo duro va en su día (el lunes y, desde marzo, algún miércoles); el resto, suave de verdad.",
+      "origen": "Techo de 150 desde el 26-10-2026, con la máxima medida en el 1.000 (188): los tramos «suaves» del 17 y el 19-10 acabaron en 163-176, zonas 4 y 5."
     },
     {
       "id": "correr-andar",
@@ -229,7 +232,7 @@
     {
       "id": "primer200",
       "titulo": "El primer 200 no se regala",
-      "texto": "En series y controles, el primer 200 sale al ritmo de los demás. Salir a sprint es el error más caro del 1.000."
+      "texto": "En series y controles, el primer 200 sale al ritmo de los demás. El 26-10 saliste en 0:53,7 con una media de 1:02,7 por 200, y lo pagaste: cada 200 más lento hasta el 800 (1:01,6 · 1:06,7 · 1:09,8). A los 100 m mira el reloj: si llevas menos de la mitad de tu 200, aflojas ya."
     },
     {
       "id": "dos-rep",
@@ -239,7 +242,7 @@
     {
       "id": "ritmos",
       "titulo": "Cómo se fijan los ritmos",
-      "texto": "Ritmo K: el mejor de tus dos últimos controles. K + 4: K más 4 s por cada 400. Umbral: K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15). Ritmo O (desde junio): K menos 2 s por cada 400. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada."
+      "texto": "Ritmo K: el mejor de tus dos últimos controles. K + 4: K más 4 s por cada 400. Umbral: K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15). Ritmo O (desde junio): K menos 2 s por cada 400. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada. Tu primer K salió del control del 26-10: 5:13."
     },
     {
       "id": "dolor",
@@ -259,8 +262,21 @@
     },
     {
       "id": "descanso",
-      "titulo": "Sin día libre",
-      "texto": "Decidido el 11-10: el domingo sigue con CrossFit, así que no tienes ningún día sin entrenar. Eso es lo que más riesgo de lesión mete en el año, y se compensa así: el domingo, si puedes, sin piernas pesadas, porque el lunes toca la calidad. El viernes antes de un control, del simulacro o de la prueba, sin CrossFit, o sin piernas ni saltos. Si la larga del sábado es de 50 min o más, el CrossFit del viernes sin saltos. Y la regla «Si llegas cargada» se cumple siempre."
+      "titulo": "Uno o dos días de CrossFit",
+      "texto": "CrossFit uno o dos días por semana. Con uno (el viernes), el domingo es descanso: es lo recomendado. Con dos, el domingo sin piernas pesadas ni saltos, porque el lunes toca la calidad. El viernes antes de un control, del simulacro o de la prueba, sin CrossFit o sin piernas ni saltos. Si la larga del sábado es de 50 min o más, el CrossFit del viernes sin saltos. Y la regla «Si llegas cargada» se cumple siempre.",
+      "origen": "Del 11 al 25-10: domingo con CrossFit y ningún día libre (decisión suya). Desde el 26-10, a petición de Daniel, CrossFit uno o dos días."
+    },
+    {
+      "id": "barra",
+      "titulo": "Barra",
+      "texto": "Dos sesiones por semana, martes y jueves, en Martín Freire en lugar de su parte de barra, no además: la A (fuerza) y la B (la del examen). Un test cada cuatro semanas, el martes de la semana de descarga. Nunca al fallo salvo en el test. Todas las series con la técnica del BOE: agarre supino (palmas hacia ti), barbilla claramente por encima de la barra sin echar la cabeza atrás, cuerpo recto sin doblar la cadera y quieto. Si la serie se rompe (balanceo, cadera, barbilla a la barra), ahí se acaba. Codo u hombro con dolor de 3 o más: ese día sin barra. Progresión: en la B, 2 s más por semana si las cinco series salen limpias; tras cada test, la serie vuelve a la mitad del test nuevo. En la A, una bajada más por serie cuando todas salgan limpias; con 5 × 4 limpias, cada bajada pasa de 5 a 6 s.",
+      "origen": "Creada el 26-10-2026, a petición de Daniel, con su marca medida: 41 s. No hay ensayos que comparen formas de entrenar esta prueba: el método sale de principios generales (la fuerza isométrica sube sobre todo en el ángulo que se entrena, y cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso y más aguantas). Los números (la mitad del test, +2 s por semana) son criterio de entrenador."
+    },
+    {
+      "id": "cuarto-dia",
+      "titulo": "Cuarto día de carrera",
+      "texto": "Desde el 21-12 y opcional: el domingo, 25-30 min suaves en lugar del segundo día de CrossFit, nunca además. Solo si llevas seis semanas sin ningún dolor de 3 o más.",
+      "origen": "Creada el 26-10-2026. Criterio de entrenador: para el 1.000, un día más de carrera suave es más específico que un segundo CrossFit, y sustituirlo no quita ningún día de descanso."
     },
     {
       "id": "gemelo",
@@ -285,7 +301,7 @@
     {
       "id": "datos",
       "titulo": "Qué mandar después de cada sesión",
-      "texto": "El entreno del Apple Watch (ver Reloj) y una línea: cómo te has sentido de 1 a 10 y si algo te ha molestado. También del CrossFit y de Martín Freire: minutos y esfuerzo de 1 a 10. Si un WOD lleva carrera, apúntalo: cuenta como carrera."
+      "texto": "El entreno del Apple Watch (ver Reloj) y una línea: cómo te has sentido de 1 a 10 y si algo te ha molestado. También del CrossFit y de Martín Freire: minutos y esfuerzo de 1 a 10. Si un WOD lleva carrera, apúntalo: cuenta como carrera. De la barra: los segundos de cada serie y si alguna se rompió."
     }
   ],
   "reloj": {
@@ -419,16 +435,17 @@
         {
           "fecha": "2026-10-26",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "25 min suave + 4 rectas",
-          "min": 25,
-          "detalle": "Seguido o, si aún no llegas, con tu escalón (hoy, el 3:1). Al final, 4 rectas, solo si no queda ninguna molestia (añadido el 20-10)."
+          "tipo": "control",
+          "titulo": "Control de 1.000 m (1.º)",
+          "detalle": "No estaba en el plan: ese día tocaban 25 min suaves y 4 rectas, y lo cambió por el 1.000. Pista de Arucas, a las 21:24, sin calentamiento registrado y con CrossFit el día antes.",
+          "objetivo": "Tu primer tiempo medido: fija el ritmo K hasta el control del 21-11."
         },
         {
           "fecha": "2026-10-27",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · 3 × 3 bajadas lentas con agarre supino (subes con un salto o un cajón, barbilla por encima, aguantas 2 s y bajas en 5 s), 2 min entre series · 3 × 10 s colgada con los codos en ángulo recto · 3 × 8 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-10-28",
@@ -436,13 +453,14 @@
           "tipo": "suave",
           "titulo": "25 min suave",
           "min": 25,
-          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "detalle": "Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna."
         },
         {
           "fecha": "2026-10-29",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 4 × 20 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados. Si una serie se rompe antes de tiempo, esa es la última."
         },
         {
           "fecha": "2026-10-30",
@@ -456,13 +474,13 @@
           "tipo": "suave",
           "titulo": "31 min suave",
           "min": 31,
-          "detalle": "La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "detalle": "La larga. Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna."
         },
         {
           "fecha": "2026-11-01",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -475,30 +493,32 @@
         {
           "fecha": "2026-11-02",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "28 min suave + 5 rectas",
-          "min": 28,
-          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al final, 5 rectas."
+          "tipo": "calidad",
+          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
+          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
         },
         {
           "fecha": "2026-11-03",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · 4 × 3 bajadas lentas de 5 s, 2 min entre series · 3 × 12 s colgada con los codos en ángulo recto · 3 × 8 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-11-04",
           "dia": "Mié",
           "tipo": "suave",
-          "titulo": "28 min suave",
-          "min": 28,
-          "detalle": "Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "22 min suave",
+          "min": 22,
+          "detalle": "Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-05",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 × 20 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-11-06",
@@ -510,15 +530,15 @@
           "fecha": "2026-11-07",
           "dia": "Sáb",
           "tipo": "suave",
-          "titulo": "34 min suave",
-          "min": 34,
-          "detalle": "La larga. Seguido o, si aún no llegas, con tu escalón de correr y andar. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "25 min suave",
+          "min": 25,
+          "detalle": "La larga. Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-08",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -531,30 +551,32 @@
         {
           "fecha": "2026-11-09",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "30 min suave + 6 rectas",
-          "min": 30,
-          "detalle": "Al final, 6 rectas."
+          "tipo": "calidad",
+          "titulo": "8 × 200 m a ritmo K, rec. 200 m andando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
+          "objetivo": "Los ocho entre 1:01,5 y 1:03,5."
         },
         {
           "fecha": "2026-11-10",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · 4 × 4 bajadas lentas de 5 s, 2 min entre series · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-11-11",
           "dia": "Mié",
           "tipo": "suave",
-          "titulo": "30 min suave",
-          "min": 30,
-          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "28 min suave",
+          "min": 28,
+          "detalle": "Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-12",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 × 22 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-11-13",
@@ -566,15 +588,15 @@
           "fecha": "2026-11-14",
           "dia": "Sáb",
           "tipo": "suave",
-          "titulo": "37 min suave",
-          "min": 37,
-          "detalle": "La larga: suave de principio a fin. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "32 min suave",
+          "min": 32,
+          "detalle": "La larga. Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-15",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -596,7 +618,8 @@
           "fecha": "2026-11-17",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2026-11-18",
@@ -610,7 +633,8 @@
           "fecha": "2026-11-19",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2026-11-20",
@@ -622,15 +646,15 @@
           "fecha": "2026-11-21",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (1.º)",
-          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
-          "objetivo": "Tu primer tiempo de referencia: fija el ritmo K del bloque siguiente."
+          "titulo": "Control de 1.000 m (2.º)",
+          "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint (el 26-10 saliste en 0:53,7 y el cuarto 200 fue de 1:09,8). Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
+          "objetivo": "Con este control y el del 26-10 se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
         {
           "fecha": "2026-11-22",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -643,30 +667,32 @@
         {
           "fecha": "2026-11-23",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "30 min suave + 6 cuestas de 15 s",
-          "min": 30,
-          "detalle": "Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando."
+          "tipo": "calidad",
+          "titulo": "5 × 400 m a ritmo K + 4, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). El primer 200, en la mitad del tiempo del 400. Después, 10 min muy suave.",
+          "objetivo": "Las cinco dentro de 3 s del objetivo."
         },
         {
           "fecha": "2026-11-24",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-11-25",
           "dia": "Mié",
           "tipo": "suave",
-          "titulo": "32 min suave",
+          "titulo": "32 min suave + 6 cuestas de 15 s",
           "min": 32,
-          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "detalle": "Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando. Las cuestas cargan gemelos y Aquiles: solo si no te molestan; si no, 6 rectas en llano. Al acabar, 3 × 15 elevaciones de talón a una pierna."
         },
         {
           "fecha": "2026-11-26",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-11-27",
@@ -686,7 +712,7 @@
           "fecha": "2026-11-29",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -699,30 +725,32 @@
         {
           "fecha": "2026-11-30",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "32 min suave + 8 cuestas de 15 s",
-          "min": 32,
-          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando."
+          "tipo": "calidad",
+          "titulo": "6 × 400 m a ritmo K + 4, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). El primer 200, en la mitad del tiempo del 400. Después, 10 min muy suave.",
+          "objetivo": "Las seis dentro de 3 s del objetivo."
         },
         {
           "fecha": "2026-12-01",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-12-02",
           "dia": "Mié",
           "tipo": "suave",
-          "titulo": "35 min suave",
+          "titulo": "35 min suave + 8 cuestas de 15 s",
           "min": 35,
-          "detalle": "Suave: puedes hablar con frases enteras. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando. Las cuestas cargan gemelos y Aquiles: solo si no te molestan; si no, 6 rectas en llano. Al acabar, 3 × 15 elevaciones de talón a una pierna."
         },
         {
           "fecha": "2026-12-03",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-12-04",
@@ -742,7 +770,7 @@
           "fecha": "2026-12-06",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -755,16 +783,17 @@
         {
           "fecha": "2026-12-07",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "35 min con 6 × (1 min alegre + 1 min suave)",
-          "min": 35,
-          "detalle": "Fartlek: 10 min suaves, 6 veces 1 min a ritmo alegre (respiras fuerte pero controlas) y 1 min suave, y suave hasta el final."
+          "tipo": "calidad",
+          "titulo": "4 × 600 m a ritmo K + 4, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). El primer 200, en la mitad del tiempo del 400. Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 3 s del objetivo."
         },
         {
           "fecha": "2026-12-08",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-12-09",
@@ -778,7 +807,8 @@
           "fecha": "2026-12-10",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-12-11",
@@ -798,7 +828,7 @@
           "fecha": "2026-12-13",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -820,7 +850,8 @@
           "fecha": "2026-12-15",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2026-12-16",
@@ -834,7 +865,8 @@
           "fecha": "2026-12-17",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2026-12-18",
@@ -846,7 +878,7 @@
           "fecha": "2026-12-19",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (2.º)",
+          "titulo": "Control de 1.000 m (3.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -854,7 +886,7 @@
           "fecha": "2026-12-20",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso"
         }
       ]
     },
@@ -875,7 +907,8 @@
           "fecha": "2026-12-22",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-12-23",
@@ -889,7 +922,8 @@
           "fecha": "2026-12-24",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2026-12-25",
@@ -909,7 +943,7 @@
           "fecha": "2026-12-27",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -930,7 +964,8 @@
           "fecha": "2026-12-29",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2026-12-30",
@@ -944,7 +979,8 @@
           "fecha": "2026-12-31",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-01-01",
@@ -964,7 +1000,7 @@
           "fecha": "2027-01-03",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -985,7 +1021,8 @@
           "fecha": "2027-01-05",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-01-06",
@@ -999,7 +1036,8 @@
           "fecha": "2027-01-07",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-01-08",
@@ -1019,7 +1057,7 @@
           "fecha": "2027-01-10",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1041,7 +1079,8 @@
           "fecha": "2027-01-12",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-01-13",
@@ -1055,7 +1094,8 @@
           "fecha": "2027-01-14",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-01-15",
@@ -1067,7 +1107,7 @@
           "fecha": "2027-01-16",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (3.º)",
+          "titulo": "Control de 1.000 m (4.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -1075,7 +1115,7 @@
           "fecha": "2027-01-17",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1096,7 +1136,8 @@
           "fecha": "2027-01-19",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-01-20",
@@ -1110,7 +1151,8 @@
           "fecha": "2027-01-21",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-01-22",
@@ -1130,7 +1172,7 @@
           "fecha": "2027-01-24",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1151,7 +1193,8 @@
           "fecha": "2027-01-26",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-01-27",
@@ -1165,7 +1208,8 @@
           "fecha": "2027-01-28",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-01-29",
@@ -1185,7 +1229,7 @@
           "fecha": "2027-01-31",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1206,7 +1250,8 @@
           "fecha": "2027-02-02",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-02-03",
@@ -1220,7 +1265,8 @@
           "fecha": "2027-02-04",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-02-05",
@@ -1240,7 +1286,7 @@
           "fecha": "2027-02-07",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1262,7 +1308,8 @@
           "fecha": "2027-02-09",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-02-10",
@@ -1276,7 +1323,8 @@
           "fecha": "2027-02-11",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-02-12",
@@ -1288,7 +1336,7 @@
           "fecha": "2027-02-13",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (4.º)",
+          "titulo": "Control de 1.000 m (5.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -1296,7 +1344,7 @@
           "fecha": "2027-02-14",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1318,7 +1366,8 @@
           "fecha": "2027-02-16",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-02-17",
@@ -1332,7 +1381,8 @@
           "fecha": "2027-02-18",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-02-19",
@@ -1352,7 +1402,7 @@
           "fecha": "2027-02-21",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1373,7 +1423,8 @@
           "fecha": "2027-02-23",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-02-24",
@@ -1387,7 +1438,8 @@
           "fecha": "2027-02-25",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-02-26",
@@ -1407,7 +1459,7 @@
           "fecha": "2027-02-28",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1429,7 +1481,8 @@
           "fecha": "2027-03-02",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-03-03",
@@ -1443,7 +1496,8 @@
           "fecha": "2027-03-04",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-03-05",
@@ -1463,7 +1517,7 @@
           "fecha": "2027-03-07",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1485,7 +1539,8 @@
           "fecha": "2027-03-09",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-03-10",
@@ -1499,7 +1554,8 @@
           "fecha": "2027-03-11",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-03-12",
@@ -1511,7 +1567,7 @@
           "fecha": "2027-03-13",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (5.º)",
+          "titulo": "Control de 1.000 m (6.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -1519,7 +1575,7 @@
           "fecha": "2027-03-14",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1541,7 +1597,8 @@
           "fecha": "2027-03-16",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-03-17",
@@ -1555,7 +1612,8 @@
           "fecha": "2027-03-18",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-03-19",
@@ -1575,7 +1633,7 @@
           "fecha": "2027-03-21",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1597,7 +1655,8 @@
           "fecha": "2027-03-23",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-03-24",
@@ -1610,7 +1669,8 @@
           "fecha": "2027-03-25",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-03-26",
@@ -1630,7 +1690,7 @@
           "fecha": "2027-03-28",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1652,7 +1712,8 @@
           "fecha": "2027-03-30",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-03-31",
@@ -1666,7 +1727,8 @@
           "fecha": "2027-04-01",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-04-02",
@@ -1686,7 +1748,7 @@
           "fecha": "2027-04-04",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1707,7 +1769,8 @@
           "fecha": "2027-04-06",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-04-07",
@@ -1721,7 +1784,8 @@
           "fecha": "2027-04-08",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-04-09",
@@ -1733,7 +1797,7 @@
           "fecha": "2027-04-10",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (6.º)",
+          "titulo": "Control de 1.000 m (7.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -1741,7 +1805,7 @@
           "fecha": "2027-04-11",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1763,7 +1827,8 @@
           "fecha": "2027-04-13",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-04-14",
@@ -1777,7 +1842,8 @@
           "fecha": "2027-04-15",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-04-16",
@@ -1797,7 +1863,7 @@
           "fecha": "2027-04-18",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1818,7 +1884,8 @@
           "fecha": "2027-04-20",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-04-21",
@@ -1831,7 +1898,8 @@
           "fecha": "2027-04-22",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-04-23",
@@ -1851,7 +1919,7 @@
           "fecha": "2027-04-25",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1872,7 +1940,8 @@
           "fecha": "2027-04-27",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-04-28",
@@ -1886,7 +1955,8 @@
           "fecha": "2027-04-29",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-04-30",
@@ -1906,7 +1976,7 @@
           "fecha": "2027-05-02",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1927,7 +1997,8 @@
           "fecha": "2027-05-04",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-05-05",
@@ -1941,7 +2012,8 @@
           "fecha": "2027-05-06",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-05-07",
@@ -1953,7 +2025,7 @@
           "fecha": "2027-05-08",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (7.º)",
+          "titulo": "Control de 1.000 m (8.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -1961,7 +2033,7 @@
           "fecha": "2027-05-09",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -1982,7 +2054,8 @@
           "fecha": "2027-05-11",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-05-12",
@@ -1996,7 +2069,8 @@
           "fecha": "2027-05-13",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-05-14",
@@ -2016,7 +2090,7 @@
           "fecha": "2027-05-16",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2037,7 +2111,8 @@
           "fecha": "2027-05-18",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-05-19",
@@ -2050,7 +2125,8 @@
           "fecha": "2027-05-20",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-05-21",
@@ -2070,7 +2146,7 @@
           "fecha": "2027-05-23",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2091,7 +2167,8 @@
           "fecha": "2027-05-25",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-05-26",
@@ -2105,7 +2182,8 @@
           "fecha": "2027-05-27",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-05-28",
@@ -2125,7 +2203,7 @@
           "fecha": "2027-05-30",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2146,7 +2224,8 @@
           "fecha": "2027-06-01",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-06-02",
@@ -2160,7 +2239,8 @@
           "fecha": "2027-06-03",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-06-04",
@@ -2172,7 +2252,7 @@
           "fecha": "2027-06-05",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (8.º)",
+          "titulo": "Control de 1.000 m (9.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -2180,7 +2260,7 @@
           "fecha": "2027-06-06",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2202,7 +2282,8 @@
           "fecha": "2027-06-08",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-06-09",
@@ -2216,7 +2297,8 @@
           "fecha": "2027-06-10",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-06-11",
@@ -2236,7 +2318,7 @@
           "fecha": "2027-06-13",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2258,7 +2340,8 @@
           "fecha": "2027-06-15",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-06-16",
@@ -2271,7 +2354,8 @@
           "fecha": "2027-06-17",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-06-18",
@@ -2291,7 +2375,7 @@
           "fecha": "2027-06-20",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2312,7 +2396,8 @@
           "fecha": "2027-06-22",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-06-23",
@@ -2326,7 +2411,8 @@
           "fecha": "2027-06-24",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-06-25",
@@ -2346,7 +2432,7 @@
           "fecha": "2027-06-27",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2367,7 +2453,8 @@
           "fecha": "2027-06-29",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-06-30",
@@ -2381,7 +2468,8 @@
           "fecha": "2027-07-01",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-07-02",
@@ -2393,7 +2481,7 @@
           "fecha": "2027-07-03",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (9.º)",
+          "titulo": "Control de 1.000 m (10.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -2401,7 +2489,7 @@
           "fecha": "2027-07-04",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2422,7 +2510,8 @@
           "fecha": "2027-07-06",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-07-07",
@@ -2436,7 +2525,8 @@
           "fecha": "2027-07-08",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-07-09",
@@ -2456,7 +2546,7 @@
           "fecha": "2027-07-11",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2477,7 +2567,8 @@
           "fecha": "2027-07-13",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-07-14",
@@ -2490,7 +2581,8 @@
           "fecha": "2027-07-15",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-07-16",
@@ -2510,7 +2602,7 @@
           "fecha": "2027-07-18",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2531,7 +2623,8 @@
           "fecha": "2027-07-20",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-07-21",
@@ -2545,7 +2638,8 @@
           "fecha": "2027-07-22",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-07-23",
@@ -2565,7 +2659,7 @@
           "fecha": "2027-07-25",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2586,7 +2680,8 @@
           "fecha": "2027-07-27",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-07-28",
@@ -2600,7 +2695,8 @@
           "fecha": "2027-07-29",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-07-30",
@@ -2612,7 +2708,7 @@
           "fecha": "2027-07-31",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (10.º)",
+          "titulo": "Control de 1.000 m (11.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -2620,7 +2716,7 @@
           "fecha": "2027-08-01",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2641,7 +2737,8 @@
           "fecha": "2027-08-03",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-08-04",
@@ -2655,7 +2752,8 @@
           "fecha": "2027-08-05",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-08-06",
@@ -2675,7 +2773,7 @@
           "fecha": "2027-08-08",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2696,7 +2794,8 @@
           "fecha": "2027-08-10",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-08-11",
@@ -2709,7 +2808,8 @@
           "fecha": "2027-08-12",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-08-13",
@@ -2729,7 +2829,7 @@
           "fecha": "2027-08-15",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2750,7 +2850,8 @@
           "fecha": "2027-08-17",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-08-18",
@@ -2764,7 +2865,8 @@
           "fecha": "2027-08-19",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-08-20",
@@ -2784,7 +2886,7 @@
           "fecha": "2027-08-22",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2805,7 +2907,8 @@
           "fecha": "2027-08-24",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Test de barra (antes del circuito): hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
         },
         {
           "fecha": "2027-08-25",
@@ -2819,7 +2922,8 @@
           "fecha": "2027-08-26",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más."
         },
         {
           "fecha": "2027-08-27",
@@ -2831,7 +2935,7 @@
           "fecha": "2027-08-28",
           "dia": "Sáb",
           "tipo": "control",
-          "titulo": "Control de 1.000 m (11.º)",
+          "titulo": "Control de 1.000 m (12.º)",
           "detalle": "En la pista de Arucas, a la misma hora que los demás controles. Calentamiento: 15 min suave + movilidad + 4 rectas. 1.000 m a tope con el reparto más regular posible: el primer 200 al mismo ritmo que los demás, no a sprint. Después, 10 min muy suave. Apunta el tiempo y, si puedes, los cinco parciales de 200.",
           "objetivo": "Con este control y el anterior se fija el ritmo K del bloque siguiente (el mejor de los dos)."
         },
@@ -2839,7 +2943,7 @@
           "fecha": "2027-08-29",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2860,7 +2964,8 @@
           "fecha": "2027-08-31",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-09-01",
@@ -2873,7 +2978,8 @@
           "fecha": "2027-09-02",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-09-03",
@@ -2893,7 +2999,7 @@
           "fecha": "2027-09-05",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2914,7 +3020,8 @@
           "fecha": "2027-09-07",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A, fuerza (20 min; en lugar de la barra de Martín Freire, no además): hombros 5 min · bajadas lentas de 5 s, de 4 × 4 a 5 × 4 (con 5 × 4 limpias, bajas en 6 s; cuando hagas una dominada supina entera, la primera serie son 3 × 1 dominadas) · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra."
         },
         {
           "fecha": "2027-09-08",
@@ -2928,7 +3035,8 @@
           "fecha": "2027-09-09",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados."
         },
         {
           "fecha": "2027-09-10",
@@ -2948,7 +3056,7 @@
           "fecha": "2027-09-12",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -2969,7 +3077,8 @@
           "fecha": "2027-09-14",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A suave (10 min): hombros · 3 × 3 bajadas lentas · 2 × 15 s colgada con los codos en ángulo recto."
         },
         {
           "fecha": "2027-09-15",
@@ -2983,7 +3092,8 @@
           "fecha": "2027-09-16",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad de tu último test, 2 min entre series."
         },
         {
           "fecha": "2027-09-17",
@@ -3003,7 +3113,7 @@
           "fecha": "2027-09-19",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -3024,7 +3134,8 @@
           "fecha": "2027-09-21",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra A suave (10 min): hombros · 3 × 3 bajadas lentas · 2 × 15 s colgada con los codos en ángulo recto."
         },
         {
           "fecha": "2027-09-22",
@@ -3038,7 +3149,8 @@
           "fecha": "2027-09-23",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 2 series de la mitad de tu último test. El sábado, el simulacro."
         },
         {
           "fecha": "2027-09-24",
@@ -3058,7 +3170,7 @@
           "fecha": "2027-09-26",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -3079,7 +3191,8 @@
           "fecha": "2027-09-28",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra (5 min): hombros y 2 series de la mitad de tu último test. Nada más."
         },
         {
           "fecha": "2027-09-29",
@@ -3093,7 +3206,8 @@
           "fecha": "2027-09-30",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra (5 min): hombros y 2 × 15 s en la postura del examen."
         },
         {
           "fecha": "2027-10-01",
@@ -3113,7 +3227,7 @@
           "fecha": "2027-10-03",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     },
@@ -3134,7 +3248,8 @@
           "fecha": "2027-10-05",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Barra (5 min): hombros y 2 × 15 s en la postura del examen. Nada más."
         },
         {
           "fecha": "2027-10-06",
@@ -3148,7 +3263,8 @@
           "fecha": "2027-10-07",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Martín Freire: barra y circuito"
+          "titulo": "Martín Freire: barra y circuito",
+          "objetivo": "Sin barra: el sábado, la prueba."
         },
         {
           "fecha": "2027-10-08",
@@ -3167,21 +3283,31 @@
           "fecha": "2027-10-10",
           "dia": "Dom",
           "tipo": "otro",
-          "titulo": "CrossFit"
+          "titulo": "CrossFit si haces dos días; si no, descanso o 25-30 min suaves (regla «Cuarto día»)"
         }
       ]
     }
   ],
   "pendientes": [
     {
-      "id": "primer-control",
-      "texto": "Primer control de 1.000 m el sábado 21-11 en Arucas: fija el ritmo K. Hasta entonces, todo por sensación.",
-      "desde": "2026-10-11"
-    },
-    {
       "id": "fecha-2027",
       "texto": "Fecha de la prueba de 2027: cuando salga la convocatoria, recolocar las semanas finales.",
       "desde": "2026-10-11"
+    },
+    {
+      "id": "control-21-11",
+      "texto": "Control de 1.000 m el sábado 21-11 en Arucas, con calentamiento y sin CrossFit de piernas el viernes: el primero en condiciones. Con él y el del 26-10 se fija K.",
+      "desde": "2026-10-26"
+    },
+    {
+      "id": "circuito-medir",
+      "texto": "Circuito: no hay ningún tiempo suyo. Pedir a Martín Freire un intento cronometrado con las reglas del BOE (desde la voz de «ya» hasta que toca el suelo tras la última valla). 12,8 s o más elimina.",
+      "desde": "2026-10-26"
+    },
+    {
+      "id": "barra-martin",
+      "texto": "Confirmar con Martín Freire que la barra del plan sustituye a la suya los martes y jueves, y no se suma.",
+      "desde": "2026-10-26"
     }
   ],
   "ritmosEstimados": {
@@ -3199,7 +3325,7 @@
         "4:24"
       ],
       "que": "Los rodajes suaves y la larga, cuando ya corres seguido (el primero, el 26-10).",
-      "comoSaberlo": "Puedes decir frases enteras sin cortarte a mitad. Si a 10:00 el km ya no puedes, ve más despacio o anda un minuto: manda poder hablar, no el reloj.",
+      "comoSaberlo": "Por debajo de 150 de pulso y pudiendo decir frases enteras. Si a 10:00 el km el pulso pasa de 150, ve más despacio o anda un minuto: manda el pulso y poder hablar, no el reloj del ritmo.",
       "nota": "Es más lento que el 10-10 a propósito: aquel ritmo fue duro para ti, y lo suave tiene que ser suave de verdad. El 12-10, en tramos de 2 min con 1 andando, corriste a 7:18-7:57 hablando con frases enteras: para los tramos de «correr y andar» este 10:00-11:00 salió lento (ver «suave en correr y andar»). Para correr seguido no hay dato propio: el 10-10, 55 min a 8:54, fue duro. Se revisa con el primer rodaje seguido."
     },
     "suaveTramos": {
@@ -3212,7 +3338,7 @@
       "que": "Los minutos de correr de «correr y andar» (tramos de 2 a 8 min con 1 andando).",
       "base": "12-10: siete tramos de 2 min a 7:18-7:57 /km, hablando con frases enteras (dicho por Daniel).",
       "comoSaberlo": "Manda poder hablar, no el reloj: si a ese ritmo no puedes decir frases enteras, más despacio. Cuando los tramos se alarguen (3, 4, 6 min), lo normal es que salga algo más lento.",
-      "nota": "Corrige al 10:00-11:00 estimado, que venía del rodaje del 10-10 corrido seguido. Un solo día y en tramos cortos: se revisa con cada sesión."
+      "nota": "Corrige al 10:00-11:00 estimado, que venía del rodaje del 10-10 corrido seguido. Un solo día y en tramos cortos: se revisa con cada sesión. Con la máxima medida el 26-10 (188), los tramos del 17 y el 19-10 acabaron en 163-176 de pulso: zonas 4 y 5, no suave. Desde el 26-10 lo suave lleva techo de 150."
     },
     "andar": {
       "txt": "paso vivo",
@@ -3236,19 +3362,9 @@
       "comoSaberlo": "Fuerte sin llegar a tope, un 8 de 10: la última tiene que salir igual de fuerte que la primera."
     },
     "primerControl": {
-      "txt": "sin estimación fiable",
-      "rango": [
-        "5:00",
-        "8:00"
-      ],
-      "que": "El 1.000 m del sábado 21-11 en la pista de Arucas.",
-      "nota": "Hoy no hay forma de saber tu 1.000 con precisión. Con las cuentas del método (abajo), el 10-10 equivale a un 1.000 en unos 8:00 si aquel día hubieras ido a tope; no fuiste a tope, y el 1.000 depende más de la potencia que trabajas en CrossFit, así que lo esperable es mejor. Daniel calcula que estás por encima de 5:00. Un margen de 5:00 a 8:00 no sirve para fijar ritmos: por eso el primer control se corre por sensación y el reloj solo apunta los tiempos.",
-      "estrategia": [
-        "Los dos primeros 200 m, a un 7 de 10: respiras fuerte pero controlas. Al salir con más gente es fácil ir más rápido de la cuenta: no los sigas.",
-        "Del 400 al 800, aguanta ese ritmo aunque empiece a costar.",
-        "Los últimos 200 m, todo lo que te quede.",
-        "Apunta el tiempo final y, si puedes, los cinco parciales de 200: con ellos se fijan todos tus ritmos."
-      ]
+      "txt": "5:13",
+      "que": "Tu primer 1.000 medido: 26-10-2026, pista de Arucas.",
+      "nota": "Salió en 0:53,7 el primer 200 y después cada 200 más lento hasta el 800 (1:01,6 · 1:06,7 · 1:09,8) y un último 200 en 1:01,7. Sin calentamiento registrado y con CrossFit el día antes. Fija tu ritmo K hasta el control del 21-11."
     },
     "metodo": [
       "El ritmo suave sale de las ecuaciones de Daniels y Gilbert (las de las tablas VDOT del entrenador Jack Daniels), aplicadas a tu rodaje del 10-10. Con ellas, tu ritmo suave sería de 10:13 a 11:12 el km si aquel día hubieras ido al máximo que aguantas 55 min, y de 9:43 a 10:40 si ibas al 95 % de ese máximo. Es la parte alta de la zona suave de esas tablas (del 65 al 74 % de tu nivel).",
@@ -3256,7 +3372,7 @@
       "Con las mismas ecuaciones, el 10-10 equivale a un 1.000 m en 7:58 si hubiera sido a tope.",
       "Son estimaciones, no medidas. Se revisan con tus primeros entrenos y se cambian por números de verdad tras el control del 21-11: desde ahí, todos los ritmos de series salen de tu ritmo K (ver Reglas › Cómo se fijan los ritmos)."
     ],
-    "revisar": "Con los primeros entrenos que mandes y, sobre todo, con el control del 21-11.",
+    "revisar": "Con cada control: el siguiente, el sábado 21-11.",
     "rapidos": {
       "txt": "por sensación",
       "que": "Los 200 m rápidos (desde junio).",
@@ -3559,7 +3675,7 @@
       "icono": "control",
       "enUnaFrase": "Un 1.000 m a tope en la pista, como en la prueba: el tiempo que sale fija todos tus ritmos.",
       "paraQue": "Es tu marca real y la que manda: con ella se calculan los ritmos K, K + 4, O y umbral (regla «Cómo se fijan los ritmos»). Además enseña a repartir el esfuerzo, que en un 1.000 vale casi tanto como estar en forma.",
-      "ritmo": "primerControl",
+      "ritmo": "K",
       "esfuerzo": "10 de 10 al final, no al principio",
       "antes": [
         "En la pista de Arucas y a la misma hora que los demás controles: así se pueden comparar.",
@@ -3573,13 +3689,13 @@
         "Calentamiento completo: 15 min suave, movilidad y 4 rectas.",
         "2-3 min de pausa y a la salida. Corre por la calle 1, la de dentro, y no te abras en las curvas: por fuera son más metros. En una pista de 400 m, 1.000 m son dos vueltas y media.",
         "Salida de pie, con «listo»… «ya», como en la prueba.",
-        "Los dos primeros 200 m, a un 7 de 10: respiras fuerte pero controlas. Si sale alguien más rápido, no le sigas.",
-        "Del 400 al 800, aguanta ese ritmo aunque cueste.",
+        "Los tres primeros 200 m, a tu ritmo K, cada uno igual: a los 100 m mira el reloj y, si llevas menos de la mitad de tu 200, aflojas. El 26-10 saliste 9 s por delante de tu media y lo pagaste del 400 al 800.",
+        "Del 600 al 800 es donde se pierde el 1.000: aguanta el ritmo aunque cueste.",
         "Los últimos 200 m, todo lo que te quede.",
         "El tiempo se para al cruzar la línea, no antes. Anda un par de minutos y apunta el tiempo y, si puedes, los cinco parciales de 200.",
         "10 min de trote muy suave para acabar."
       ],
-      "sensacion": "Los primeros 200 parecen fáciles: es la trampa. Del 600 al 800 es lo más duro. Al acabar no puedes hablar.",
+      "sensacion": "Los primeros 200 parecen fáciles: es la trampa (el 26-10, 0:53,7). Del 600 al 800 es lo más duro. Al acabar no puedes hablar.",
       "errores": [
         "Salir a sprint: es el error más caro del 1.000 (regla «El primer 200 no se regala»).",
         "Abrirte en las curvas.",
@@ -3848,6 +3964,42 @@
         "Dolor: regla «Dolor»."
       ],
       "reloj": []
+    },
+    {
+      "id": "barra",
+      "nombre": "Barra: suspensión con los brazos flexionados",
+      "icono": "fuerza",
+      "enUnaFrase": "Aguantar colgada con la barbilla por encima de la barra el mayor tiempo posible: se entrena con fuerza (sesión A) y con series en la misma postura (sesión B).",
+      "paraQue": "Es la segunda prueba. Hoy, 41 s: 2 puntos (de 41 a 45). Cada punto más son 5-9 s (46, 52, 57, 63, 70, 78, 86 y 95; 35 o menos elimina). Cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso, y el tiempo que aguantas suele crecer más deprisa que la fuerza: la relación entre los dos no es una línea recta.",
+      "esfuerzo": "la serie de la B, un 7-8 de 10; el test, a tope",
+      "antes": [
+        "Hombros, 5 min: círculos de brazos, 10 aperturas con goma si hay, y 2 × 8 colgada con los brazos estirados subiendo y bajando solo los hombros.",
+        "Sin guantes ni magnesio: el BOE no los deja, y así se entrena el agarre que vas a tener.",
+        "Si en Martín Freire ya hacéis barra ese día, esta la sustituye: no se suman."
+      ],
+      "pasos": [
+        "La postura del examen (BOE): agarre supino, con las palmas hacia ti; brazos flexionados y la barbilla por encima de la barra; cuerpo recto, perpendicular al suelo y quieto.",
+        "Se acaba cuando la barbilla baja a la altura de la barra, por debajo o la toca.",
+        "Sesión A, fuerza (martes): bajadas lentas: subes con un salto o un cajón hasta tener la barbilla por encima, aguantas 2 s y bajas en 5 s hasta los brazos estirados. Después, colgada con los codos en ángulo recto y remo invertido.",
+        "Sesión B, la del examen (jueves): cinco series en la postura del examen de la mitad de tu último test, con 2 min entre series. Al final, 2 × 30 s colgada con los brazos estirados para el agarre.",
+        "Test (martes de la semana de descarga): una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado."
+      ],
+      "sensacion": "En la B, la última serie cuesta pero sale limpia. Si tiemblas al final del test, es normal; si la barbilla toca la barra, se acabó.",
+      "errores": [
+        "Echar la cabeza atrás para que la barbilla «pase»: el BOE lo prohíbe.",
+        "Doblar la cadera o subir las rodillas: el cuerpo va recto.",
+        "Balancearse para aguantar.",
+        "Mover una mano o soltarla: es nulo.",
+        "Hacer series hasta no poder más todos los días: solo en el test."
+      ],
+      "siAlgoVaMal": [
+        "Codo u hombro con dolor de 3 o más: ese día sin barra (regla «Barra»).",
+        "Si una serie se rompe antes de tiempo, esa es la última del día."
+      ],
+      "reloj": [
+        "Cronómetro, no el reloj del entreno: el pulso de muñeca no vale en la barra."
+      ],
+      "video": "flexed arm hang técnica"
     }
   ],
   "pruebasMujeres": {
@@ -4018,11 +4170,11 @@
           }
         ],
         "marca": {
-          "txt": "unos 51 s",
-          "valor": 51,
-          "fuente": "comunicado por Daniel el 11-10-2026; sin saber si se cronometró con las reglas del BOE",
-          "fecha": "2026-10-11",
-          "fiab": "autoinformado"
+          "txt": "41 s",
+          "valor": 41,
+          "fecha": "2026-10-26",
+          "fiab": "medido",
+          "fuente": "comunicado por Daniel el 26-10-2026: «ese sí está medido bien»; la fecha exacta de la medición no la tengo. Antes, unos 51 s (11-10), sin saber si se cronometró con las reglas del BOE."
         }
       },
       {
@@ -4101,9 +4253,11 @@
           }
         ],
         "marca": {
-          "txt": "más de 5:00, que hoy está en el tramo que elimina (4:46 o más)",
-          "valor": null,
-          "fuente": "estimación: nunca cronometrado en serio (comunicado por Daniel el 11-10-2026); el primer control es el sábado 21-11"
+          "txt": "5:13 el 26-10-2026, en el tramo que elimina (4:46 o más)",
+          "valor": 313,
+          "fecha": "2026-10-26",
+          "fiab": "medido",
+          "fuente": "control del 26-10-2026 en la pista de Arucas (historial › controles)"
         }
       }
     ]

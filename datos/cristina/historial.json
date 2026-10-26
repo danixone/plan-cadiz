@@ -2,7 +2,101 @@
   "meta": {
     "nota": "Historial de carrera de Cristina. Público: entrenos, tiempos, pulso y valoraciones de entrenamiento (el pulso es público desde el 12-10-2026, decisión de Daniel). Sueño, molestias y datos personales van a privado.json (fuera del repositorio)."
   },
-  "controles": [],
+  "controles": [
+    {
+      "fecha": "2026-10-26",
+      "tiempo": "5:13",
+      "tiempoS": 313.5,
+      "banda": "5:10-5:16 (lo más probable, 5:13). El entreno del reloj dura 5:18 porque incluye unos 3 s antes de arrancar y unos 2 s después de cruzar.",
+      "valida": true,
+      "asterisco": "Sin calentamiento registrado (pulso de 89 al salir), con 56 min de CrossFit el día antes y a las 21:24, después de trabajar. No estaba en el plan: ese día tocaban 25 min suaves y 4 rectas.",
+      "lugar": "Pista de Arucas: el recorrido del GPS coincide con el del simulacro de Daniel del 19-10.",
+      "hora": "21:24",
+      "tiempoAmbiente": "23 °C y 70 % de humedad (dato del tiempo que guarda el reloj)",
+      "parciales200": [
+        53.7,
+        61.6,
+        66.7,
+        69.8,
+        61.7
+      ],
+      "pasos200": [
+        "0:53.7",
+        "1:55.3",
+        "3:02.0",
+        "4:11.8",
+        "5:13.5"
+      ],
+      "parciales100": [
+        26.5,
+        27.2,
+        31.3,
+        30.2,
+        33.6,
+        33.1,
+        37.2,
+        32.6,
+        32.8,
+        28.9
+      ],
+      "parciales50": [
+        14.4,
+        12.1,
+        13.2,
+        14.1,
+        15.0,
+        16.3,
+        14.6,
+        15.7,
+        17.5,
+        16.1,
+        16.0,
+        17.1,
+        18.4,
+        18.8,
+        15.9,
+        16.8,
+        17.6,
+        15.2,
+        14.2,
+        14.7
+      ],
+      "acumulado50": [
+        14.4,
+        26.5,
+        39.6,
+        53.7,
+        68.7,
+        85.0,
+        99.6,
+        115.3,
+        132.8,
+        148.8,
+        164.9,
+        182.0,
+        200.3,
+        219.2,
+        235.0,
+        251.8,
+        269.4,
+        284.5,
+        298.8,
+        313.5
+      ],
+      "fcAl200": [
+        178,
+        183,
+        184,
+        186,
+        188
+      ],
+      "fcSalida": 89,
+      "fcMax": 188,
+      "fcRecuperacion": "188 al cruzar · unos 157 al minuto · unos 125 a los dos minutos",
+      "medicion": "Del GPS de la ruta que guarda Salud (un punto por segundo). La forma de la pista se ajustó con el GPS de Daniel del 19-10 (perfil Pista) y con el suyo propio: los dos dan una vuelta de unos 400 m (399 y 401). Cada punto se proyectó sobre la calle 1 y los 1.000 m se contaron como dos vueltas y media desde donde arrancó (segundo 2,5 del entreno): cruzó a los 316 s del reloj y paró el entreno 2 s después, a 2,52 vueltas. Cada parcial de 50 m lleva medio segundo arriba o abajo de error de GPS. La distancia del propio reloj (972 m) se queda corta: no sirve para el tiempo.",
+      "valoracion": "Su primer 1.000 medido: unos 5:13, 27 s por encima del 4:46 que elimina (0 puntos). Salió demasiado rápido: el primer 200 en 53,7, 9 s por delante de su media (62,7), y desde ahí cada 200 más lento que el anterior hasta el 800 (61,6 · 66,7 · 69,8); el último, en 61,7. El peor tramo, del 600 al 700 (37,2 s, a 6:12 el km). El pulso pasó de 89 a 178 en el primer 200 y desde el 400 se quedó en 183-188: más de tres minutos al máximo. Cuenta, no predicción: con el tercer y el cuarto 200 al ritmo del segundo (61,6) habría hecho 5:00. Con asterisco (sin calentamiento, CrossFit el día antes, de noche): es su primera marca y fija K = 5:13 hasta el control del 21-11."
+    }
+  ],
   "carrera": [
     {
       "fecha": "2026-10-19",

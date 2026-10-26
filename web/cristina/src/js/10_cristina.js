@@ -72,7 +72,8 @@
     PC.$$('[data-pc="notaChip"]').forEach(function (e) {
       var n = PC.notaActual();
       var nom = { cir: 'el circuito', dom: 'la barra', mil: 'el 1.000' };
-      if (n && n.sinMarca) e.setAttribute('aria-label', 'Tu nota: sin medir; falta ' + n.faltan.map(function (k) { return nom[k]; }).join(', ') + '. El primer control del 1.000 es el ' + PC.fmt.dia(plan.objetivo.primerControl, 'larga'));
+      if (n && n.sinMarca) e.setAttribute('aria-label', 'Tu nota: sin medir; falta ' + n.faltan.map(function (k) { return nom[k]; }).join(', ') +
+        (n.faltan.indexOf('mil') >= 0 && plan.objetivo.primerControl ? '. El primer control del 1.000 es el ' + PC.fmt.dia(plan.objetivo.primerControl, 'larga') : ''));
       else if (n) e.setAttribute('aria-label', 'Tu nota: ' + n.txt);
     });
   };
