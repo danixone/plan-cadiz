@@ -17,8 +17,6 @@
 #v-plan .pl-gt{font-size:var(--fs-sm);font-weight:var(--fw-bold);color:var(--primary);margin:0 0 var(--sp-2);letter-spacing:.01em}
 
 /* ---------- P-1 · calendario (T9) ---------- */
-.pl-mac{display:flex;gap:var(--sp-2);align-items:flex-start;margin:0 0 var(--sp-3);padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);background:var(--primary-soft);color:var(--text);font-size:var(--fs-sm)}
-.pl-mac .icon{color:var(--primary);margin-top:1px}
 .pl-leyenda{margin-bottom:var(--sp-3)}
 .pl-ley{list-style:none;margin:0 0 var(--sp-3);padding:0;display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);font-size:var(--fs-sm);color:var(--text-2)}
 .pl-ley li{display:inline-flex;align-items:center;gap:6px}

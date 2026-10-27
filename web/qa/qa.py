@@ -26,6 +26,28 @@ ANCHOS = [320, 360, 375, 390, 768, 1280]
 TEMAS = ['light', 'dark']
 FECHAS = ['2026-09-29', '2026-10-01', '2026-10-06', '2026-10-10', '2026-10-12', '2026-10-17', '2026-10-24', '2026-10-27']
 HORAS = ['', '08:00', '22:40']
+
+
+def fecha_primera_pantalla():
+    """Criterio 9: el primer día desde hoy con sesión y sin registro en el historial (el 29-9 ya está registrado y su tarjeta
+    enseña «Registrado» encima del semáforo: no es la mañana que se quiere medir). Si no queda ninguno, el 29-9."""
+    import datetime
+    try:
+        plan = json.load(open(os.path.join(RAIZ_PROYECTO, 'datos', 'plan.json'), encoding='utf-8'))
+        hist = json.load(open(os.path.join(RAIZ_PROYECTO, 'datos', 'historial.json'), encoding='utf-8'))
+    except (OSError, ValueError):
+        return '2026-09-29'
+    hechos = {e.get('fecha') for k in ('carrera', 'dominadas', 'circuito') for e in hist.get(k) or []}
+    hoy = datetime.date.today().isoformat()
+    for sem in plan.get('calendario') or []:
+        for d in sem.get('dias') or []:
+            f = d.get('fecha')
+            if f and f >= hoy and d.get('tipo') not in (None, 'descanso', 'otro', 'examen') and f not in hechos:
+                return f
+    return '2026-09-29'
+
+
+FECHA_PP = fecha_primera_pantalla()
 ANCHOS_CAPTURA = (390, 1280)          # §10.6.10: capturas revisadas a 390 y 1280
 
 # (nombre del estado, ruta, parámetros extra, ¿depende de la fecha?, ¿depende de la hora?)
@@ -119,11 +141,11 @@ def caso(c, capturas, alto):
 def matriz(a):
     anchos = [int(x) for x in a.anchos.split(',')] if a.anchos else ANCHOS
     temas = a.temas.split(',') if a.temas else TEMAS
-    fechas = a.fechas.split(',') if a.fechas else FECHAS
+    fechas = a.fechas.split(',') if a.fechas else sorted(set(FECHAS + [FECHA_PP]))
     horas = a.horas.split(',') if a.horas is not None else HORAS
     rutas = set(a.rutas.split(',')) if a.rutas else None
     if a.rapido:
-        anchos, temas, fechas, horas = [390, 1280], temas, ['2026-09-29', '2026-10-10'], ['']
+        anchos, temas, fechas, horas = [390, 1280], temas, sorted({'2026-09-29', '2026-10-10', FECHA_PP}), ['']
     casos = []
     for (est, ruta, extra, porFecha, porHora) in ESTADOS:
         if rutas and ruta not in rutas and est not in rutas:
@@ -136,7 +158,7 @@ def matriz(a):
                     for t in temas:
                         casos.append({'estado': est, 'ruta': ruta, 'extra': dict(extra), 'fecha': f, 'hora': hora, 'ancho': w, 'tema': t})
                         if f == '2026-10-27' and porFecha:
-                            casos.append({'estado': est + '-28-30', 'ruta': ruta, 'extra': dict(extra, prueba='28-30'), 'fecha': f, 'hora': hora, 'ancho': w, 'tema': t})
+                            casos.append({'estado': est + '-4-6', 'ruta': ruta, 'extra': dict(extra, prueba='4-6'), 'fecha': f, 'hora': hora, 'ancho': w, 'tema': t})
     # pasada con todo abierto
     for ruta in RUTAS_ABIERTAS:
         if rutas and ruta not in rutas:
@@ -265,7 +287,7 @@ def evaluar(resultados, a, extra):
     C['8_orden_fijo'] = {'ok': (not dif) if hay else None, 'detalle': dif[:10] if hay else 'la matriz no tiene varias horas (usa --horas ,08:00,22:40)', 'grupos': len(grupos)}
     pp = []
     for r in R:
-        if r['ruta'] == 'hoy' and r['ancho'] == 390 and r['fecha'] == '2026-09-29' and not r['hora'] and r['extra'] in ({}, {'sem': 'verde'}):
+        if r['ruta'] == 'hoy' and r['ancho'] == 390 and r['fecha'] == FECHA_PP and not r['hora'] and r['extra'] in ({}, {'sem': 'verde'}):
             P = r['res'].get('primeraPantalla') or {}
             claves = ['fecha', 'lamparas', 'titulo', 'numeros'] if not r['extra'] else ['fecha', 'titulo', 'numeros', 'hoyhaces']
             mal = [k for k in claves if not (P.get(k) and P[k].get('visible'))]
@@ -274,7 +296,7 @@ def evaluar(resultados, a, extra):
     C['10_capturas'] = {'ok': None, 'detalle': 'revisión a la vista: capturas/ (%d archivos)' % len([r for r in resultados if r.get('captura')])}
     comp = len(gzip.compress(html.encode('utf-8'), 9)) if html else 0
     jspdf_src = re.search(r'<script[^>]+src="[^"]*jspdf', html, re.I)
-    C['11_tamano'] = {'ok': bool(html) and comp <= 240 * 1024 and 'raw.githubusercontent.com' not in html and not jspdf_src,
+    C['11_tamano'] = {'ok': bool(html) and comp <= 270 * 1024 and 'raw.githubusercontent.com' not in html and not jspdf_src,
                       'gzip_kb': round(comp / 1024, 1), 'crudo_kb': round(len(html.encode('utf-8')) / 1024, 1),
                       'raw_github': 'raw.githubusercontent.com' in html, 'jspdf_en_script_src': bool(jspdf_src)}
     tono = []

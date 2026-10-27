@@ -950,7 +950,8 @@
     var A = P.atleta || {}, ZF = P.zonasFC || {};
     var h = '<div class="te-g2"><div class="card" id="te-reloj-conf">' + cardH('reloj', A.reloj ? 'Configuración del ' + A.reloj : 'Configuración del reloj', 'Lo que tiene puesto ahora') +
       (A.relojConfigurado ? p(A.relojConfigurado) : '') + (A.fcMaximaNota ? '<h4>FC máxima</h4>' + p(A.fcMaximaNota) : '') +
-      (ZF.configurarEnGarmin ? '<h4>Zonas por FCR en el reloj</h4><p>' + esc(ZF.configurarEnGarmin) + ' ' + sup('ruta sin verificar') + '</p>' : '') + '</div>';
+      (ZF.configurarEnGarmin ? '<h4>Zonas por FCR en el reloj</h4><p>' + esc(ZF.configurarEnGarmin) + ' ' + sup('ruta sin verificar') + '</p>' : '') +
+      ((P.contextoDelUsuario || {}).calendarioMac ? '<h4>Los entrenos, en el Calendario del Mac</h4>' + p(P.contextoDelUsuario.calendarioMac) : '') + '</div>';
     /* qué programar: generado con PC.sesion.reloj (M2) sobre un día real de cada tipo */
     var tipos = [
       ['Series', function (d, x) { return d.tipo === 'carrera' && x.principal && !/kil[oó]metro partido|600 m \+ 400/i.test(d.sesion || ''); }],

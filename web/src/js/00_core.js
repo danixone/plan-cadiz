@@ -530,11 +530,14 @@
         H.sort(function (a, b) { return a.fecha < b.fecha ? -1 : a.fecha > b.fecha ? 1 : 0; });
         return H[0] || null;
       },
+      /* la versión elegida de la semana final: una de las claves de derivados.final.versiones («2-3», «4-6» desde el 21-10).
+         Hasta el 27-10 las claves estaban escritas a mano aquí («26-27», «28-30») y, desde el cambio a noviembre, lo elegido en Hoy no se aplicaba */
+      claves: function () { var F = PC.cal.final(); return ((F && F.versiones) || []).map(function (v) { return v.clave; }); },
       version: function () {
-        var q = Q.prueba;
-        if (q === '26-27' || q === '28-30') return q;
+        var ok = PC.cal.claves(), q = Q.prueba;
+        if (q && ok.indexOf(q) >= 0) return q;
         var v = PC.store.get('prueba', null);
-        return v === '26-27' || v === '28-30' ? v : null;
+        return v && ok.indexOf(v) >= 0 ? v : null;
       },
       final: function () { return PC.D.derivados.final || null; },
       claveVersion: claveVersion,

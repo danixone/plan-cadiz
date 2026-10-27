@@ -87,7 +87,7 @@
     {"ruta": "plan.contextoDelUsuario.dieta", "usa": []},
     {"ruta": "plan.contextoDelUsuario.preparadorJueves", "usa": ["M5"]},
     {"ruta": "plan.contextoDelUsuario.barraArucas", "usa": ["M5"]},
-    {"ruta": "plan.contextoDelUsuario.calendarioMac", "usa": ["M3"]},
+    {"ruta": "plan.contextoDelUsuario.calendarioMac", "usa": ["M3", "M5"]},
 
     {"ruta": "plan.lesiones.*", "usa": ["M2", "M3", "M5"]},
     {"ruta": "plan.sensibilidad.*", "usa": ["M4"]},

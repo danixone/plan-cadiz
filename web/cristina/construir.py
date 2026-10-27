@@ -483,6 +483,46 @@ def pasos_de(p, R, RE):
     return P
 
 
+def barra_dia(spec, test):
+    """Pasos y números de un día de barra (plan.calendario[].dias[].barra, desde el 26-10) para la tarjeta y el modo paso a paso.
+    «seg: 'mitad'» es la mitad del último test (pruebasMujeres.barra.marca.valor)."""
+    mitad = int(test // 2) if test else None
+    P, N = [], []
+
+    def paso(t, d='', seg=None, **kw):
+        x = {'t': t, 'parte': 'principal'}
+        if d:
+            x['d'] = d
+        if seg:
+            x['seg'] = seg
+        x.update({k: v for k, v in kw.items() if v is not None})
+        P.append(x)
+
+    for i, it in enumerate(spec):
+        seg = mitad if it.get('seg') == 'mitad' else it.get('seg')
+        if it.get('seg') == 'mitad' and seg is None:
+            raise SystemExit('ERROR: barra con «la mitad del test» y sin marca de barra en pruebasMujeres')
+        n = it.get('n') or 1
+        nota = (' · la mitad de tu último test (%d s)' % test) if it.get('seg') == 'mitad' else ''
+        if n == 1 and not it.get('reps'):
+            paso(it['t'] + ((' · %d min' % (seg // 60)) if seg and seg >= 60 and seg % 60 == 0 else (' · %d s' % seg) if seg else ''), it.get('d', ''), seg,
+                 ej='barra' if i == 0 else None)
+            continue
+        cuanto = ('%d s' % seg) if seg else ('%d repeticiones' % it['reps'])
+        for k in range(n):
+            paso('%s · %s' % (it['t'], cuanto), ('Serie %d de %d%s' % (k + 1, n, nota)) + ((' · ' + it['d']) if it.get('d') and k == 0 else ''), seg,
+                 n=k + 1, de=n, fase='rapido')
+            if k < n - 1 and it.get('rec'):
+                r = it['rec']
+                paso('Descansa %s' % (('%d min' % (r // 60)) if r % 60 == 0 else ('%d s' % r)), '', r, n=k + 1, de=n, fase='rec')
+        N.append({'v': '%d × %s' % (n, ('%d s' % seg) if seg else it['reps']), 'l': it['t'].lower()})
+    if test:
+        N.append({'v': '%d s' % test, 'l': 'tu último test'})
+    if any(it.get('t', '').startswith('Test') for it in spec):
+        N = [{'v': 'a tope', 'l': 'una suspensión'}, {'v': '%d s' % test, 'l': 'el último test'}] if test else [{'v': 'a tope', 'l': 'una suspensión'}]
+    return P, N[:3]
+
+
 def numeros_de(p, R, RE):
     """Los tres números grandes del día (como «stats» en la web de Daniel)."""
     suave = suave_de(RE, p)
@@ -578,6 +618,7 @@ def construir(plan, hist, hoy):
     T = tramos_mil(plan)
     RE = plan.get('ritmosEstimados') or {}
     TECHO['suave'] = (plan.get('pulso') or {}).get('techoSuave')
+    test_barra = next((((x.get('marca') or {}).get('valor')) for x in ((plan.get('pruebasMujeres') or {}).get('pruebas') or []) if x.get('id') == 'barra'), None)
 
     # controles (de más viejo a más nuevo) con sus puntos
     controles = []
@@ -658,6 +699,13 @@ def construir(plan, hist, hoy):
                     dd['K'] = {'s': K, 'txt': mmss(K), 'de': deK}
                 if d.get('min'):
                     min_plan += d['min']
+            elif d.get('barra'):
+                # días de Martín Freire con la barra del plan (desde el 26-10): pasos con temporizador, como los de carrera
+                pb, nb = barra_dia(d['barra'], test_barra)
+                web_dias[f] = {'plantilla': 'cr', 'numeros': nb, 'pasos': pasos_web(pb)}
+                if d.get('objetivo'):
+                    web_dias[f]['variantes'] = {'verde': d['objetivo']}
+                dd['barra'] = True
             dias.append(dd)
         sem['minPlan'] = min_plan
         cal.append(sem)

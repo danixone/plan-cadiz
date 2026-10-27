@@ -5,6 +5,126 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-26",
+      "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30 · pista de Arucas, perfil Pista del reloj",
+      "objetivo": "1:25 con 2:30 (bloque C) · freno si baja de 1:22 · cada 200 a ±1 s de su paso (0:42,5) · control a los 100 m: 0:21; con 0:20 o menos, aflojar · habituación 3 × 4 dominadas antes · solo si las dos piernas pasan las comprobaciones",
+      "valida": true,
+      "horaInicioLocal": "20:41 el trote, 21:02 la primera serie (fin a las 21:15), 21:43 las dominadas, después de las series",
+      "resultado": {
+        "tiemposS": [
+          81.6,
+          82.7,
+          79.2,
+          82.8
+        ],
+        "media": "81,6 s (1:21,6), pedía 1:25",
+        "parciales200": [
+          [
+            40.3,
+            41.3
+          ],
+          [
+            41.3,
+            41.4
+          ],
+          [
+            38.4,
+            40.8
+          ],
+          [
+            40.7,
+            42.1
+          ]
+        ],
+        "fcMaxPorSerie": [
+          185,
+          188,
+          193,
+          193
+        ],
+        "fcInicioSerie": [
+          121,
+          132,
+          135,
+          142
+        ],
+        "recuperaciones": {
+          "duracionS": [
+            150,
+            150,
+            150
+          ],
+          "tipo": "andando (50-60 m)",
+          "fcFinal": [
+            134,
+            134,
+            143
+          ],
+          "bajadaEn60s": [
+            50,
+            43,
+            32
+          ]
+        },
+        "fcMax": 193,
+        "potenciaMediaSerieW": [
+          423,
+          445,
+          441,
+          448
+        ],
+        "contactoMsSerie": [
+          202,
+          199,
+          188,
+          198
+        ],
+        "efectoAerobico": 2.6,
+        "efectoAnaerobico": 3.0,
+        "cargaSesion": 125,
+        "arranque": "La distancia tarda 3 s en avanzar al empezar la segunda repetición y 2 s en la tercera: la segunda, entre 1:19,7 y 1:22,7; la tercera, entre 1:17,2 y 1:19,2. Con cualquiera de los dos valores, las cuatro por delante de lo pedido. Sin recuperación final: el reloj se paró 18 s después de la cuarta.",
+        "paso50": "Parciales de 50 m anclados a la vuelta. 1.ª: 10,5 · 9,6 · 10,2 · 10,0 | 11,1 · 11,2 · 10,4 · 8,7. 2.ª: 11,1 · 9,4 · 10,8 · 10,1 | 11,3 · 10,1 · 10,1 · 9,9. 3.ª: 10,3 · 8,2 · 9,6 · 10,3 | 10,7 · 10,4 · 10,1 · 9,7. 4.ª: 10,7 · 8,7 · 10,9 · 10,3 | 10,0 · 11,3 · 10,4 · 10,4. Paso por el 100 (pedía 0:21,3; el control, 0:21): 20,1 · 20,5 · 18,5 · 19,4. Ninguna llegó a 0:21; en la 2.ª y la 3.ª el primer 50 lleva el retraso del GPS al arrancar.",
+        "calentamiento": "Trote 12 min (1.240 m a 9:41 /km, FC 134 de media y 146 de máximo, 3 s por encima de 145). Sin progresivos: no los hizo (dicho por él el 27-10). Dominadas después de las series (21:43-21:56): 2 suspensiones de 20 s, 2 × 8 retracciones y 3 series con 3 min. Carga del día, sumando las tres actividades: 145 (7 + 125 + 13).",
+        "relojConfigurado": "Perfil Pista del reloj: vueltas de 200 m por distancia y recuperaciones de 2:30 por tiempo."
+      },
+      "valoracion": "Hecha entera y válida (noche de 6h18, VFC 62 Equilibrado), a las 21:02 y no a las 18:00 del plan. Los cuatro 400 por delante de 1:25: 1:21,6 · 1:22,7 · 1:19,2 · 1:22,8 (media 1:21,6). El freno de 1:22 saltó en la 1.ª y en la 3.ª, y tras cada una la siguiente salió más lenta, como pide la regla, pero sin volver a 1:25. Primer 200 de la primera en 40,3 (pedía 42,5): octava vez con el primer 200 rápido. Control a los 100 m: 20,1 · 20,5 · 18,5 · 19,4, ninguna en 0:21: el remedio del 22-10, en su primer día, no ha funcionado. Cada 200 a ±1 s de 42,5: 1 de 8. Lo bueno, medido: la media de 400 más rápida del historial (1:23,7 el 5-10 con 5 × 400 y 2 min; 1:26,9 el 28-9 con 6 × 400 y 90 s; hoy una repetición menos y más recuperación) y bajadas de 32-50 pulsaciones en 60 s. 1:21,6 son 40,8 por 200: el paso del 3:24 es 41. Lo que se supone: que vale para un 1.000 seguido a 41 por 200; no se ha medido. Las dominadas, después de las series y no antes. Las piernas pasaron las comprobaciones (dicho por él el 27-10). Sin progresivos: el remedio del primer 200 que ya estaba en el plan no se aplicó. Codo y hombro: sin dato."
+    },
+    {
+      "fecha": "2026-10-25",
+      "sesion": "Rodaje de 30 min, el del sábado 24, sin barra",
+      "objetivo": "techo 145 · primeros 10 min a 140 · llano y por terreno firme · solo si las dos piernas pasan las tres comprobaciones · se para si vuelve el dolor en la cara externa de la pierna",
+      "valida": true,
+      "horaInicioLocal": "18:55",
+      "resultado": {
+        "duracion": "30:00",
+        "km": 3.95,
+        "ritmo": "7:35/km",
+        "fcMedia": 144,
+        "fcMax": 154,
+        "cadencia": 156,
+        "zancadaMm": 837,
+        "contactoMs": 299,
+        "franjas": {
+          "<130": "5%",
+          "130-140": "7%",
+          "140-145": "25%",
+          "145-155": "62%"
+        },
+        "primeros10min": "media 137,4, máximo 151, 343 s por encima de 140",
+        "sobreTecho": "Desde el minuto 10, 858 s de 1.202 por encima de 145 (71 %), máximo 154",
+        "deriva": {
+          "analizador": "+44 s/km (min 3-8 a 7:26 y 141 ppm; últimos 8 a 8:10 y 148)",
+          "referenciaBaseAsentada": "por debajo del 5 %",
+          "mitadesDesdeMin15": "+8,9 % (Pa:HR: 7:30 a 146 → 8:10 a 148)"
+        },
+        "desnivel": "D+ 21 m, D− 12 m; los tres últimos minutos suben unos 7 m",
+        "efectoAerobico": 2.0,
+        "efectoAnaerobico": 0.0,
+        "cargaSesion": 27
+      },
+      "valoracion": "VÁLIDO. Primeros 10 min con techo 140: no (media 137, pero 343 s por encima de 140 y máximo 151). Desde el minuto 10, el 71 % del tiempo por encima de 145 (máximo 154): su zona 2 (139-155), no el techo del plan; el 17-10 fue el 55 %. Deriva por mitades +8,9 %: la primera por encima del 5 % desde el 3-10 (+4,0 · +1,5 · −1,1). En los cinco últimos minutos el ritmo cayó de 7:25 a 8:05-9:32 con el pulso en 146-149, y los tres últimos suben unos 7 m. Son mitades de 7,5 min en un rodaje de 30: medida corta. Primer rodaje tras tres días sin correr y con los peroneos inflamados (fisio del 23). Una vez: no es patrón. Las piernas pasaron las comprobaciones (dicho por él el 27-10)."
+    },
+    {
       "fecha": "2026-10-24",
       "sesion": "Sesión corta de barra + rodaje de 30 min (si el gemelo pasaba las comprobaciones)",
       "hecho": false,
@@ -1533,6 +1653,24 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-26",
+      "series": [
+        5,
+        5,
+        5
+      ],
+      "total": 15,
+      "lastreKg": 0,
+      "duracionSeriesS": [
+        32,
+        19,
+        28
+      ],
+      "descanso": "180 s (temporizador)",
+      "contexto": "lunes, después de las 4 × 400 (actividad de fuerza aparte, 21:43, entreno «Dominadas día de correr»), con 2 suspensiones de 20 s y 2 × 8 retracciones antes",
+      "valoracion": "Del FIT: 3 × 5 sin lastre, 19-32 s por serie, 3 min entre series; 3 × 5 confirmado por él el 27-10 (el plan pedía 3 × 4, antes de las series, y se hicieron después). Sin reserva, sin nota de codo y hombro y sin vídeo."
+    },
+    {
       "fecha": "2026-10-22",
       "series": [
         5,
@@ -1980,6 +2118,53 @@
     }
   ],
   "sueno": [
+    {
+      "fecha": "2026-10-26",
+      "duracion": "6h18",
+      "puntuacion": 80,
+      "calidad": "Bueno",
+      "fcReposo": 48,
+      "bodyBattery": "+7",
+      "spo2Media": "93%",
+      "respiracionMedia": 13,
+      "vfc7dias": "62 ms (media de 7 días)",
+      "nota": "Hora de dormir 0:08, de despertar 6:30 (CSV semanal del 27-10, sin fases del sueño). VFC de la noche 63 (referencia 54-67)."
+    },
+    {
+      "fecha": "2026-10-25",
+      "duracion": "6h37",
+      "puntuacion": 82,
+      "calidad": "Bueno",
+      "fcReposo": 52,
+      "spo2Media": "98%",
+      "respiracionMedia": 14,
+      "vfc7dias": "61 ms (media de 7 días)",
+      "nota": "Hora de dormir 23:55, de despertar 6:33 (CSV semanal del 27-10, sin fases del sueño). VFC de la noche 59 (referencia 54-68). Body Battery sin dato en el CSV."
+    },
+    {
+      "fecha": "2026-10-24",
+      "duracion": "5h35",
+      "puntuacion": 71,
+      "calidad": "Aceptable",
+      "fcReposo": 50,
+      "bodyBattery": "+57",
+      "spo2Media": "95%",
+      "respiracionMedia": 14,
+      "vfc7dias": "61 ms (media de 7 días)",
+      "nota": "Hora de dormir 0:54, de despertar 6:40 (CSV semanal del 27-10, sin fases del sueño). VFC de la noche 57 (referencia 54-68)."
+    },
+    {
+      "fecha": "2026-10-23",
+      "duracion": "5h15",
+      "puntuacion": 67,
+      "calidad": "Aceptable",
+      "fcReposo": 48,
+      "bodyBattery": "+69",
+      "spo2Media": "95%",
+      "respiracionMedia": 14,
+      "vfc7dias": "61 ms (media de 7 días)",
+      "nota": "Hora de dormir 1:24, de despertar 6:40 (CSV semanal del 27-10, sin fases del sueño). VFC de la noche 62 (referencia 54-68)."
+    },
     {
       "fecha": "2026-10-22",
       "duracion": "5h58",
@@ -2438,6 +2623,24 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-27",
+      "hora": "capturas de Garmin Connect mandadas el 27-10, antes de que el reloj sincronizara la noche del 26 al 27",
+      "ventanaFocoCarga": "29 sep – 27 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Mantenimiento",
+      "mensajeGarmin": "La carga de entreno actual es suficiente para mantener tu forma física. Para observar mejoras, prueba a variar la intensidad con actividades aeróbicas de baja intensidad, aeróbicas de alta intensidad y anaeróbicas.",
+      "anaerobica": 814,
+      "aerobicaAlta": 503,
+      "aerobicaBaja": 214,
+      "cargaAguda": 396,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1,
+      "cargaAgudaMensaje": "Tu carga aguda está en el intervalo óptimo para mantener o mejorar tu forma física.",
+      "vo2max": 52,
+      "vfc": "62 ms de media de 7 días, dentro de su referencia (54-67), según el CSV del 27-10",
+      "valoracion": "Ventana 29-9 a 27-10 frente a 24-9 a 22-10: salieron el 24 al 28-9 (las 6 × 400 del 28-9, carga 234, efecto aeróbico 4,0 y anaeróbico 3,4; el circuito del 24-9 y el rodaje del 27-9 no se hicieron); entraron el 23 al 27-10 (rodaje del 25, carga 27; series del 26, 125, con 7 del trote y 13 de las dominadas; el Arsenal de hoy, sin archivo). Aeróbica alta −57 y anaeróbica −21, por el 28-9 que salió; aeróbica baja +33, por el rodaje del 25. Sigue «insuficiente», que es mal termómetro de la base (ver 20-10). Carga aguda de 444 a 396, «Óptimo»; la esfera marca 1. VO2máx 52 (53 desde el 3-10): lo calcula el reloj y no se usa para nada; el día anterior hizo la media de 400 más rápida del historial."
+    },
     {
       "fecha": "2026-10-22",
       "hora": "19:17, después de las series (capturas de Garmin Connect)",

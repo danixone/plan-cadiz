@@ -202,7 +202,7 @@
     }).join('') + '</div></div>';
   }
   function conmutadorHtml(ver) {
-    var ops = [['', 'sin confirmar'], ['26-27', '26–27'], ['28-30', '28–30']];
+    var ops = [['', 'sin confirmar']].concat(PC.cal.claves().map(function (c) { return [c, c.replace('-', '–')]; }));
     return '<div class="pl-prueba"><p class="pl-rot" id="pl-prueba-t">La prueba es:</p><div class="seg" role="group" aria-labelledby="pl-prueba-t">' +
       ops.map(function (o) { return '<button type="button" data-prueba="' + o[0] + '" aria-pressed="' + ((ver || '') === o[0] ? 'true' : 'false') + '">' + esc(o[1]) + '</button>'; }).join('') +
       '</div></div>';
@@ -212,12 +212,6 @@
     var h = '<ul class="pl-ley">' + est.map(function (e) { return '<li><span class="cal-d mini ' + e[0] + '" aria-hidden="true"></span>' + esc(e[1]) + '</li>'; }).join('') + '</ul>';
     h += '<ul class="pl-ley">' + bloques().map(function (b) { return '<li><span class="pl-banda b-' + bloqueColor(b.clave) + '" aria-hidden="true"></span>' + esc('bloque ' + b.clave + ' · ' + dm(b.desde) + ' al ' + dm(b.hasta)) + '</li>'; }).join('') + '</ul>';
     return acc('Qué significa cada color', h, { cls: 'pl-leyenda' });
-  }
-  function macHtml() {
-    var t = (P.contextoDelUsuario || {}).calendarioMac;
-    if (!t) return '';
-    var f = frases(t);
-    return '<p class="pl-mac">' + PC.icon('plan', 'sm') + '<span>' + esc(f[0]) + '</span></p>';
   }
   function pintarCalendario() {
     var box = root.querySelector('.pl-cal-in'); if (!box) return;
@@ -230,7 +224,7 @@
     var resto = S.filter(function (s) { return s.hasta >= lun; });
     var dows = ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'];
     var cab = '<div class="cal-g cal-dows" aria-hidden="true">' + dows.map(function (d) { return '<span>' + d + '</span>'; }).join('') + '</div>';
-    var h = macHtml() + leyendaHtml().replace('<details class="acc', '<details data-k="ley" class="acc');
+    var h = leyendaHtml().replace('<details class="acc', '<details data-k="ley" class="acc');
     if (pasadas.length) {
       h += '<details class="pl-pas" data-k="pas"><summary><span class="pl-sum">Semanas pasadas (' + pasadas.length + ')</span>' + PC.icon('chev', 'sm chev') + '</summary><div class="pl-pas-in">' +
         cab + pasadas.map(function (s) { return semanaHtml(s, H, vent, ver); }).join('') + '</div></details>';
@@ -253,7 +247,7 @@
     if (si) { var b = root.querySelector('.cal-d[data-f="' + iso + '"]'); if (b) b.setAttribute('aria-pressed', 'true'); }
   }
   function ponerVersion(v) {
-    if (v === '26-27' || v === '28-30') PC.store.set('prueba', v); else PC.store.del('prueba');
+    if (v && PC.cal.claves().indexOf(v) >= 0) PC.store.set('prueba', v); else PC.store.del('prueba');
     pintarCalendario();
     var b = root.querySelector('.pl-prueba button[data-prueba="' + (v || '') + '"]');
     if (b) { try { b.focus({ preventScroll: true }); } catch (e) {} }
@@ -817,7 +811,7 @@
   var CASAS = [
     { re: /protocoloDominadas\.reglas/, href: '#tecnica/dominada', txt: 'Reglas de la barra', corte: 'frase' },
     { re: /reglas\[dia-torcido\]/, href: '#plan/reglas', txt: 'cómo cuenta en el semáforo de la mañana', corte: 'dospuntos' },
-    { re: /contextoDelUsuario\.calendarioMac/, href: '#plan/calendario', txt: 'Los entrenos, en el Calendario del Mac', corte: 'nada' },
+    { re: /contextoDelUsuario\.calendarioMac/, href: '#tecnica/reloj', txt: 'Los entrenos, en el Calendario del Mac', corte: 'nada' },
     /* la condición de cada bloque vive en su tarjeta de Ritmos (B plegada, C en la compuerta): aquí no se repite el porqué */
     { re: /ritmos\[([A-Z]+)\]\.condicion/, href: '#plan/ritmos', txt: 'Escalera de ritmos', corte: 'corta', sinPor: true }
   ];

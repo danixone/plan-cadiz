@@ -906,7 +906,7 @@
         return '<button type="button" data-a="cond" data-ci="' + i + '" data-v="' + esc(o.id) + '" aria-pressed="' + (elegida === o.id ? 'true' : 'false') + '">' + esc(o.txt) + '</button>';
       }).join('') + '</div>');
       if (c.tipo === 'prueba' && c.elegida && c.elegida.nombre) h.push('<p class="hoy-cond-r">' + esc(c.elegida.nombre) + '</p>');
-      if (c.tipo === 'prueba') h.push('<p class="hoy-cond-r">' + (c.opciones || []).map(function (o) { return esc(o.txt) + ': ' + esc(o.nombre || ''); }).join(' · ') + '</p>');
+      if (c.tipo === 'prueba') h.push('<p class="hoy-cond-r">' + (c.opciones || []).map(function (o) { return esc(o.txt) + ': ' + esc(String(o.nombre || '').replace(/^Si la prueba es /, '')); }).join(' · ') + '</p>');
       if (elegida === 'ninguna') h.push('<p class="hoy-cond-r"><b>El plan no lo fija: pregúntale al entrenador</b></p>');
       if (c.tipo === 'compartida' && c.desde) h.push('<p class="hoy-cond-r">' + esc(c.desde) + '</p>');
       if (c.src && c.src.resueltaNota) h.push('<p class="hoy-cond-r"><b>' + esc(c.src.resueltaNota) + '</b></p>');
@@ -930,7 +930,8 @@
     if (!nums || !nums.length) return '';
     var largo = nums.slice(0, 3).some(function (n) { return String(n.v).length > 8; });
     return '<div class="stats" data-qa-clave="numeros">' + nums.slice(0, 3).map(function (n) {
-      return '<div class="stat' + (largo ? ' largo' : '') + '"><b>' + esc(n.v) + '</b><span>' + esc(n.l || '') + '</span></div>';
+      /* el número y su unidad no se separan de línea («600 m + 400 m» partía «400 / m») */
+      return '<div class="stat' + (largo ? ' largo' : '') + '"><b>' + esc(String(n.v).replace(/(\d) (m|s|min|kg|km)(?=$|[^\wáéíóúñ])/g, '$1\u00a0$2')) + '</b><span>' + esc(n.l || '') + '</span></div>';
     }).join('') + '</div>';
   }
   function chipsSesion(dia, R) {
@@ -1031,10 +1032,15 @@
       var L = marcas50(b.dist, b.lo, b.p200, b.rep), H = b.hi !== b.lo ? marcas50(b.dist, b.hi, null, b.rep) : null;
       var p50 = function (M) { return PC.fmt.num(Math.round(M[0].s * 10) / 10, 1); };
       var tit = '<b>' + (b.examen ? 'Examen: ' : '') + PC.fmt.num(b.dist).replace(/(\d)(\d{3})$/, '$1.$2') + ' m en ' + esc(b.obj) + '</b> · ' + esc(H ? 'de ' + p50(L) + ' a ' + p50(H) + ' s cada 50 m' : cada50Txt(L));
-      return '<div class="hoy-50-b"><p class="hoy-50-t">' + tit + '</p><ol class="hoy-50-g">' + L.map(function (x, i) {
-        var v = PC.fmt.t(x.s, 1) + (H ? '<br>' + PC.fmt.t(H[i].s, 1) : '');
-        return '<li' + (x.c200 ? ' class="m200"' : '') + '><span>' + x.m + ' m</span><b>' + v + '</b></li>';
-      }).join('') + '</ol></div>';
+      /* 27-10: una fila por cada 200 (antes, una casilla por cada 50 con su rótulo: cinco filas de casillas el 28-10) */
+      var filas = [];
+      L.forEach(function (x, i) { var k = Math.ceil(x.m / 200) - 1; (filas[k] = filas[k] || []).push({ x: x, h: H ? H[i] : null }); });
+      var celda = function (o) { return '<td' + (o.x.c200 || o.x.m === b.dist ? ' class="m200"' : '') + '>' + PC.fmt.t(o.x.s, 1) + (o.h ? '<br>' + PC.fmt.t(o.h.s, 1) : '') + '</td>'; };
+      return '<div class="hoy-50-b"><p class="hoy-50-t">' + tit + '</p><table class="hoy-50-g"><thead><tr><th scope="col"><span class="sr">tramo</span></th><th scope="col">+50</th><th scope="col">+100</th><th scope="col">+150</th><th scope="col">+200</th></tr></thead><tbody>' +
+        filas.map(function (F, k) {
+          var tds = F.map(celda); while (tds.length < 4) tds.push('<td></td>');
+          return '<tr><th scope="row">' + (k * 200) + '–' + Math.min((k + 1) * 200, b.dist) + '</th>' + tds.join('') + '</tr>';
+        }).join('') + '</tbody></table></div>';
     }).join('') + '</div>';
   }
   SES.cada50 = { bloques: bloques50, marcas: marcas50, html: htmlCada50 };   /* para la QA y la consola */
@@ -1164,8 +1170,10 @@
     var R = SES.contexto(dia, color === 'parada' ? 'verde' : color);
     R.color = color;
     var h = [], qa = modo === 'hoy';
+    /* 27-10: con la fila «¿Cómo has dormido?» abierta justo debajo, el chip «noche sin anotar» repetía lo mismo y empujaba los números fuera de la primera pantalla */
+    var vc = vivo && !reposo && !sal ? '' : chipCab(dia, rel, sal), vchip = vc ? '<div class="hoy-vchip">' + vc + '</div>' : '';
     h.push('<div class="card-h"><div class="ic">' + PC.icon(ICONO[dia.tipo] || (dia.final ? 'prueba' : 'plan')) + '</div><div class="t"><h2' + (qa ? ' data-qa-clave="titulo"' : '') + '>' +
-      esc(tituloDe(dia) || 'Sin sesión') + '</h2><small>' + esc(metaTxt(dia, rel)) + '</small><div class="hoy-vchip">' + chipCab(dia, rel, sal) + '</div></div></div>');
+      esc(tituloDe(dia) || 'Sin sesión') + '</h2><small>' + esc(metaTxt(dia, rel)) + '</small>' + vchip + '</div></div>');
     h.push(avisoConflicto(dia));
     if (rel === 'hoy' && (dia.hist || []).length) h.push(htmlRegistrado(dia));   /* registrada el mismo día */
     if (vivo) h.push(htmlSem(dia));
@@ -1174,7 +1182,9 @@
       h.push(htmlRegistrado(dia));
       return h.join('');
     }
-    if (reposo) { h.push(htmlDescanso(dia, rel, modo)); return h.join(''); }
+    /* web de Cristina: los días de Martín Freire con la barra del plan (desde el 26-10) traen pasos con temporizador y se pintan como una sesión */
+    var conBarra = !!(perfil() && reposo && R.tpl === 'cr' && dia.extra && (dia.extra.pasos || []).length);
+    if (reposo && !conBarra) { h.push(htmlDescanso(dia, rel, modo)); return h.join(''); }
     if (R.conds.length && color !== 'parada') h.push(htmlConds(dia, R));
     if (!dia.tipo && dia.final) { h.push(htmlFinal(dia)); h.push(htmlPlegados(dia, R)); return h.join(''); }
     h.push(htmlStats(SES.numeros(dia, color, R)).replace(qa ? '' : ' data-qa-clave="numeros"', ''));
@@ -1196,7 +1206,8 @@
     if (dia.final && !dia.version) h.push(htmlFinal(dia));
     h.push(htmlPlegados(dia, R));
     if (vivo && color !== 'parada') {
-      var mb = /^(carrera|control|prueba)$/.test(dia.tipo || '') || R.tpl === 'series' ? '<button type="button" class="btn pri lg" data-a="pista">' + PC.icon('play', 'sm') + 'Modo pista</button>' :
+      var mb = conBarra ? '<button type="button" class="btn pri lg" data-a="pista">' + PC.icon('play', 'sm') + 'Modo barra</button>' :
+        /^(carrera|control|prueba)$/.test(dia.tipo || '') || R.tpl === 'series' ? '<button type="button" class="btn pri lg" data-a="pista">' + PC.icon('play', 'sm') + 'Modo pista</button>' :
         (dia.tipo === 'fuerza' ? '<button type="button" class="btn pri lg" data-a="gym">' + PC.icon('fuerza', 'sm') + 'Modo gimnasio</button>' : '');
       h.push('<div class="card-f">' + mb + '<button type="button" class="btn sec" data-a="fue">' + PC.icon('editar', 'sm') + 'Cómo fue</button></div>');
       var fin = PC.cal.horaFin(dia);
@@ -1575,7 +1586,7 @@
     var gym = dia.tipo === 'fuerza';
     FZ = { f: dia.fecha, color: color };
     cargarFZ();
-    var b = PC.focus.abrir({ titulo: tituloFocus(FZ.dia, FZ.R, color), gimnasio: gym, etiqueta: gym ? 'Modo gimnasio' : 'Modo pista', alCerrar: alCerrarModo });
+    var b = PC.focus.abrir({ titulo: tituloFocus(FZ.dia, FZ.R, color), gimnasio: gym, etiqueta: gym ? 'Modo gimnasio' : (perfil() && dia.tipo === 'otro' ? 'Modo barra' : 'Modo pista'), alCerrar: alCerrarModo });
     if (!b) { FZ = null; return; }
     if (!b.__hoy) { b.__hoy = true; b.addEventListener('click', function (e) { try { clickFocus(e); } catch (x) { PC._err('hoy · modo', x); } }); b.addEventListener('change', changeFocus); }
     pintarFocus();
@@ -1945,6 +1956,23 @@
     }
     return mezclar(o, S.fue || {});
   }
+  /* desde el 27-10: lo que el entrenador pregunta siempre después de correr (progresivos, piernas, dominadas del día) */
+  function domDia(dia) { var m = /(\d+)\s*×\s*(\d+)\s*dominadas/i.exec(dia.sesion || ''); return m ? { n: +m[1], reps: +m[2] } : null; }
+  function conPiernas() { return !!((plan().lesiones || {}).gemeloDerecho); }
+  function lineasExtra(dia, tipo, fu) {
+    var L = [];
+    if (tipo === 'series' || tipo === 'control') L.push((perfil() ? 'Rectas' : 'Progresivos') + ': ' + (fu.prog === 'si' ? 'sí' + (fu.progT ? ' (' + fu.progT + ')' : '') : fu.prog === 'no' ? 'no' : 'sin apuntar'));
+    var dd = tipo === 'control' ? null : domDia(dia);
+    if (dd) {
+      var r = (fu.domReps || []).slice(0, dd.n);
+      while (r.length < dd.n) r.push('');
+      L.push('Dominadas: ' + (r.some(function (x) { return x !== '' && x !== null; }) ? r.map(function (x) { return x === '' || x === null ? '?' : x; }).join('-') : 'sin apuntar') +
+        ' (pedía ' + dd.n + ' × ' + dd.reps + ') · codo ' + (+fu.codo || 0) + '/10 · hombro ' + (+fu.hombro || 0) + '/10');
+    }
+    if (conPiernas() && tipo !== 'fuerza' && tipo !== 'otro') L.push('Piernas: ' + (fu.piernas === 'pasan' ? 'pasan las tres comprobaciones' : fu.piernas === 'falla' ? 'falla alguna comprobación' : 'comprobaciones sin apuntar') +
+      ' · cara externa: ' + ({ nada: 'nada', noto: 'la noto', duele: 'duele' }[fu.externa] || 'sin apuntar'));
+    return L;
+  }
   function guardarFue(f, cambio) {
     var S = ses(f), fu = mezclar(S.fue || {}, cambio); fu.t = Date.now();
     guardarSes(f, { fue: fu });
@@ -1978,6 +2006,7 @@
       L.push(mayus(semTxt(f)));
       var ts = X.reps.filter(function (x) { return x.t; });
       if (ts.length) L.push('Tiempos: ' + X.reps.map(function (x) { return x.t ? fmtT(x.t) : '—'; }).join(' · '));
+      L = L.concat(lineasExtra(dia, tipo, fu));
       if (dolor) L.push(mayus(dolor));
     } else {
       L.push(cab);
@@ -1988,13 +2017,16 @@
         if (fu.bloques && fu.bloques.length) L.push('Hecho: ' + fu.bloques.join(', '));
       } else if (tipo === 'rodaje') {
         L.push('Rodaje: ' + (fu.min ? fu.min + ' min' : 'sin apuntar los minutos'));
+        L = L.concat(lineasExtra(dia, tipo, fu));
         if (dolor) L.push(mayus(dolor));
       } else if (tipo === 'circuito') {
         var cr = PC.herr && PC.herr.cirResumen ? PC.herr.cirResumen(f) : null;
         L.push(cr && cr.texto ? cr.texto : 'Circuito: sin registro de intentos');
+        L = L.concat(lineasExtra(dia, tipo, fu));
       } else if (tipo === 'control') {
         var dm2 = PC.herr && PC.herr.dom ? PC.herr.dom(f) : null;
         if (dm2) L.push('Dominadas: contadas ' + dm2.contadas + ' · válidas ' + dm2.validas + (dm2.pts !== undefined && dm2.pts !== null ? ' (' + dm2.pts + ' pts)' : ''));
+        L = L.concat(lineasExtra(dia, tipo, fu));
         if (fu.mil) L.push('1.000: ' + fmtT(fu.mil) + ' (' + PC.baremo.pts('mil', fu.mil) + ' pts)' + ((fu.parciales || []).some(function (x) { return x; }) ? ' · parciales ' + fu.parciales.map(function (x) { return x ? PC.fmt.num(x) : '—'; }).join(' · ') : ''));
       }
     }
@@ -2013,10 +2045,23 @@
   function htmlFue(dia) {
     var R = ctxFue(dia), tipo = tipoFue(dia, R), fu = datosFue(dia, R), f = dia.fecha, h = [];
     if (dia.registro) h.push('<div class="aviso info" role="note">' + PC.icon('info') + '<div><b>Qué apuntar</b> ' + esc(dia.registro) + '</div></div>');
-    var dolor = campo('Talón al dar los primeros pasos', segFue('talon', fu.talon, [['nada', 'Nada'], ['duele', 'Duele']], 'Talón')) +
+    var piernas = conPiernas() ? campo('Comprobaciones de las piernas (antes de correr)', segFue('piernas', fu.piernas, [['pasan', 'Pasan las tres'], ['falla', 'Falla alguna']], 'Comprobaciones de las piernas')) +
+      campo('Cara externa de la pierna', segFue('externa', fu.externa, [['nada', 'Nada'], ['noto', 'La noto'], ['duele', 'Duele']], 'Cara externa de la pierna')) : '';
+    var dolor = piernas + campo('Talón al dar los primeros pasos', segFue('talon', fu.talon, [['nada', 'Nada'], ['duele', 'Duele']], 'Talón')) +
       campo('Cintillo (rodilla izquierda)', segFue('cintillo', fu.cintillo, [['nada', 'Nada'], ['noto', 'Lo noto'], ['molesta', 'Molesta al correr']], 'Cintillo'));
+    var prog = campo((perfil() ? 'Rectas' : 'Progresivos') + ' del calentamiento', segFue('prog', fu.prog, [['si', perfil() ? 'Hechas' : 'Hechos'], ['no', 'No']], perfil() ? 'Rectas' : 'Progresivos') +
+      (fu.prog === 'si' ? '<input type="text" inputmode="decimal" autocomplete="off" data-fi="progT" value="' + esc(fu.progT || '') + '" placeholder="tiempos, si los tienes: 15,2 · 15,0 …" aria-label="Tiempos de los progresivos, opcional">' : ''));
+    var dd = tipo === 'control' ? null : domDia(dia), dom = '';
+    if (dd) {
+      var dr = (fu.domReps || []).slice(0, dd.n); while (dr.length < dd.n) dr.push('');
+      dom = campo('Dominadas por serie (pedía ' + dd.n + ' × ' + dd.reps + ')', '<div class="hoy-fue-a">' + dr.map(function (v, i) {
+        return '<input type="text" inputmode="numeric" autocomplete="off" data-fi="domR" data-i="' + i + '" value="' + esc(v) + '" aria-label="Dominadas, serie ' + (i + 1) + '">';
+      }).join('') + '</div>') +
+        '<div class="hoy-fue-st"><div>Codo al terminar (0–10)' + stFue('codo', fu.codo, 'Codo, de 0 a 10') + '</div><div>Hombro al terminar (0–10)' + stFue('hombro', fu.hombro, 'Hombro, de 0 a 10') + '</div></div>';
+    }
     if (tipo === 'series') {
       var X = repsDe(dia, R), n = Math.max(X.reps.length, X.seq.length);
+      h.push(prog);
       h.push('<div class="hoy-fue-c"><span class="hoy-fue-t">Cada repetición</span>');
       for (var i = 0; i < n; i++) {
         var r = X.seq[i] || X.seq[X.seq.length - 1], x = X.reps[i] || {};
@@ -2027,9 +2072,11 @@
       }
       h.push('<p class="hoy-linea">' + esc(resumenCats(X.reps, X.crit) + (X.crit ? '' : ' · dos repeticiones: ' + (dosSeguidas(X.reps) || ses(f).aviso2 ? 'sí' : 'no'))) + '</p></div>');
       if (R.principal && R.principal.tipo === 'series' && !X.crit && PC.graf && PC.graf.series && X.reps.length) h.push('<div class="hoy-fue-g"></div>');
+      h.push(dom);
       h.push(dolor);
     } else if (tipo === 'rodaje') {
       h.push(campo('Minutos reales', '<input type="text" inputmode="numeric" autocomplete="off" data-fi="min" value="' + esc(fu.min || '') + '" placeholder="' + esc(durRodaje(dia, R, R.color).txt) + '" aria-label="Minutos reales">'));
+      h.push(dom);
       h.push(dolor);
     } else if (tipo === 'fuerza') {
       h.push(campo('Repeticiones por serie de A', '<div class="hoy-fue-a">' + (fu.repsA || []).map(function (v, i) {
@@ -2044,8 +2091,10 @@
     } else if (tipo === 'circuito') {
       var cr = PC.herr && PC.herr.cirResumen ? PC.herr.cirResumen(f) : null;
       h.push(campo('Intentos', '<p class="hoy-linea">' + (cr && cr.texto ? esc(cr.texto) : 'Los intentos se apuntan en la tarjeta del día.') + '</p>'));
+      h.push(piernas);
     } else if (tipo === 'control') {
       var dm2 = PC.herr && PC.herr.dom ? PC.herr.dom(f) : null;
+      h.push(prog);
       h.push(campo('Dominadas', '<p class="hoy-linea">' + (dm2 ? 'contadas ' + dm2.contadas + ' · válidas ' + dm2.validas : 'Sin contar todavía.') + ' <a href="#tecnica/dominada">Contador de válidas →</a></p>'));
       var pts = fu.mil ? PC.baremo.pts('mil', fu.mil) : null;
       h.push(campo('Tiempo del 1.000', '<label class="tin"><span>1.000</span><input inputmode="decimal" autocomplete="off" data-fi="mil" value="' + esc(fu.mil ? fmtT(fu.mil) : '') + '" placeholder="' + esc((R.principal || {}).obj || '') + '" aria-label="Tiempo del 1.000">' +
@@ -2054,6 +2103,7 @@
         var v = (fu.parciales || [])[j];
         return '<label>' + TRAMO200[j] + ' m<input inputmode="decimal" autocomplete="off" data-fi="par" data-j="' + j + '" value="' + esc(v ? PC.fmt.num(v) : '') + '" placeholder="' + ph200(R.principal) + '"></label>';
       }).join('') + '</div>'));
+      h.push(piernas);
     }
     h.push('<div class="hoy-fue-c"><label for="hoy-fue-nota">Nota</label><textarea id="hoy-fue-nota" rows="2" data-fi="nota">' + esc(fu.nota || '') + '</textarea></div>');
     h.push('<button type="button" class="btn pri block" data-fa="copiar">' + PC.icon('copiar', 'sm') + 'Copiar para el entrenador</button>');
@@ -2128,6 +2178,8 @@
     else if (k === 'min') guardarFue(f, { min: parseInt(v, 10) || null });
     else if (k === 'lastre') guardarFue(f, { lastre: v.trim() });
     else if (k === 'repA') { var ra = (fu.repsA || []).slice(); ra[+t.getAttribute('data-i')] = v.trim(); guardarFue(f, { repsA: ra }); }
+    else if (k === 'domR') { var dr = (fu.domReps || []).slice(); dr[+t.getAttribute('data-i')] = v.trim(); guardarFue(f, { domReps: dr }); }
+    else if (k === 'progT') guardarFue(f, { progT: v.trim() });
     else if (k === 'mil') { var m = PC.fmt.parseT(v); guardarSes(f, { mil: m }); guardarFue(f, { mil: m }); pintarFue(box); return; }
     else if (k === 'par') { var p = (fu.parciales || [null, null, null, null, null]).slice(); p[+t.getAttribute('data-j')] = PC.fmt.parseT(v); guardarSes(f, { parciales: p }); guardarFue(f, { parciales: p }); }
     else if (k === 't') {
