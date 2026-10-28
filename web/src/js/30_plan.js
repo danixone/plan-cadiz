@@ -256,7 +256,7 @@
   }
 
   /* ------------------------------------------------------------------ hoja del día (modo lectura) */
-  var CAMPOS_HOJA = [['objetivo', 'Objetivo'], ['hora', 'Hora'], ['lugar', 'Lugar'], ['protocolo', 'Protocolo'], ['decide', 'Decide'],
+  var CAMPOS_HOJA = [['objetivo', 'Objetivo'], ['hora', 'Hora'], ['lugar', 'Lugar'], ['noche', 'Esta noche'], ['protocolo', 'Protocolo'], ['decide', 'Decide'],
     ['semaforo', 'Semáforo del día'], ['regla', 'Regla'], ['medir', 'Medir'], ['registro', 'Qué apuntar'], ['nota', 'Nota'], ['porQue', 'Por qué']];
   function chipsDia(dia) {
     var c = [];

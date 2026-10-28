@@ -636,6 +636,13 @@
     return null;
   }
   function tramosCir(fecha) { var d = decideCir(fecha); return d ? tramosDeBarra(d.barra) : tramosCircuito(); }
+  /* el siguiente día de circuito después de «fecha» (sin contarla). Sin ninguno, el primer intento ya no decide nada:
+     el 29-10 es el último antes de la prueba y los efectos de decisionSegunEl24 («jueves con técnica», «jueves 8 y 22») caducaron */
+  function circuitoTras(fecha) {
+    var L = arr(DV.dias);
+    for (var i = 0; i < L.length; i++) { if (L[i].fecha <= fecha) continue; var d = PC.cal.dia(L[i].fecha); if (d && d.tipo === 'circuito') return d; }
+    return null;
+  }
 
   herr.circuito = function (host, op) {
     if (!host) return;
@@ -691,7 +698,7 @@
         (n > 1 ? '<div class="stat"><b>' + (C.techo === null ? '—' : esc(PC.fmt.s(C.techo))) + '</b><span>mejor, el techo' + (C.techo === null ? '' : ' · ' + C.ptsTecho + ' pts') + '</span></div>' : '') + '</div>';
       h += '<p class="te-cir-sue">' + ic('sueno', 'sm') + '<span>Sueño de anoche: ' + (S ? (S.min !== null ? esc(PC.fmt.sueno(S.min)) + ' · ' : '') + esc(NBANDA[S.banda] || S.banda || '') : 'sin anotar en el semáforo de hoy') + '</span>' +
         (S && S.banda && S.banda !== 'verde' ? '<span class="chip warn">con asterisco</span>' : '') + '</p>';
-      var tr = tramosCir(fecha);
+      var tr = decideCir(fecha) || circuitoTras(fecha) ? tramosCir(fecha) : [];
       if (tr.length) h += umb('Qué decide el primer intento', tr, C.comparable);
       h += '<div class="te-acc"><button type="button" class="btn sec" data-a="copiar"' + (herr.cir(fecha) ? '' : ' disabled') + '>' + ic('copiar', 'sm') + 'Copiar</button></div>';
       var out = host.querySelector('.te-cir-out');
@@ -818,7 +825,8 @@
     }).join('');
     var prox = proximoCircuito();
     var enlace = prox ? '<p class="te-link"><a class="btn sec" href="#hoy' + (prox.fecha === PC.hoyIso() ? '' : '/' + prox.fecha) + '">' + ic('hoy', 'sm') + 'Se registra el jueves en Hoy →</a></p>' : '';
-    var tr = tramosCir(null), dc = decideCir(null);
+    var dc = decideCir(null), pxc = proximoCircuito();
+    var tr = (dc && dc.fecha >= PC.hoyIso()) || (pxc && circuitoTras(pxc.fecha)) ? tramosCir(null) : [];
     var etq = dc && dc.fecha >= PC.hoyIso() ? dc.titulo : 'Qué decide el primer intento';
     h += '<div class="card" id="te-cir-ult">' + cardH('lista', titulo, 'Último registro del jueves, en lectura') +
       (rows ? '<ul class="te-cir-sec">' + rows + '</ul>' : '<p class="faint">Sin registros.</p>') + enlace +

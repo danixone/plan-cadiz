@@ -48,6 +48,18 @@ def fecha_primera_pantalla():
 
 
 FECHA_PP = fecha_primera_pantalla()
+
+
+def fecha_prueba():
+    """El día de la prueba (objetivo.pruebasFisicas.fechaReferencia): la tarjeta de Hoy de ese día se mide en cada pasada."""
+    try:
+        plan = json.load(open(os.path.join(RAIZ_PROYECTO, 'datos', 'plan.json'), encoding='utf-8'))
+        return ((plan.get('objetivo') or {}).get('pruebasFisicas') or {}).get('fechaReferencia') or '2026-11-03'
+    except (OSError, ValueError):
+        return '2026-11-03'
+
+
+FECHA_PRUEBA = fecha_prueba()
 ANCHOS_CAPTURA = (390, 1280)          # §10.6.10: capturas revisadas a 390 y 1280
 
 # (nombre del estado, ruta, parámetros extra, ¿depende de la fecha?, ¿depende de la hora?)
@@ -157,8 +169,8 @@ def matriz(a):
                 for w in anchos:
                     for t in temas:
                         casos.append({'estado': est, 'ruta': ruta, 'extra': dict(extra), 'fecha': f, 'hora': hora, 'ancho': w, 'tema': t})
-                        if f == '2026-10-27' and porFecha:
-                            casos.append({'estado': est + '-4-6', 'ruta': ruta, 'extra': dict(extra, prueba='4-6'), 'fecha': f, 'hora': hora, 'ancho': w, 'tema': t})
+                        if f == FECHA_PP and porFecha:
+                            casos.append({'estado': est + '-prueba', 'ruta': ruta, 'extra': dict(extra), 'fecha': FECHA_PRUEBA, 'hora': hora, 'ancho': w, 'tema': t})
     # pasada con todo abierto
     for ruta in RUTAS_ABIERTAS:
         if rutas and ruta not in rutas:

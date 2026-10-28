@@ -472,29 +472,39 @@
    "esperado": true
   },
   {
-   "nombre": "3-11 está en la semana final",
-   "expr": "PC.cal.dia('2026-11-03').final.enSemanaFinal",
-   "esperado": true
+   "nombre": "3-11 es el día de la prueba (convocatoria del 28-10)",
+   "expr": "PC.cal.dia('2026-11-03').tipo",
+   "esperado": "prueba"
   },
   {
-   "nombre": "28-10: la versión 2-3 tiene una entrada con esa fecha",
-   "expr": "PC.cal.dia('2026-10-28').final.entradas.length",
-   "esperado": 1
+   "nombre": "ventana de la prueba de un solo día, el 3-11",
+   "expr": "JSON.stringify(PC.D.derivados.ventanaPrueba)",
+   "esperado": "{\"desde\":\"2026-11-03\",\"hasta\":\"2026-11-03\"}"
   },
   {
-   "nombre": "31-10: las dos versiones tienen entrada",
-   "expr": "PC.cal.dia('2026-10-31').final.entradas.length",
-   "esperado": 2
+   "nombre": "28-10: sin versiones de la semana final (fecha confirmada)",
+   "expr": "PC.cal.dia('2026-10-28').final",
+   "esperado": null
   },
   {
-   "nombre": "31-10 sin versión elegida: sesión base del calendario",
-   "expr": "PC.cal.dia('2026-10-31').version === undefined && PC.cal.dia('2026-10-31').tipo",
+   "nombre": "31-10: descanso fijo",
+   "expr": "PC.cal.dia('2026-10-31').tipo",
+   "esperado": "descanso"
+  },
+  {
+   "nombre": "1-11: sesión «−2 días» (carrera)",
+   "expr": "PC.cal.dia('2026-11-01').tipo",
    "esperado": "carrera"
   },
   {
-   "nombre": "entradas sin fecha fija (Prueba, −2 días, −1 día)",
-   "expr": "PC.cal.sinFecha().length >= 3",
+   "nombre": "2-11: noche en hora de Cádiz",
+   "expr": "/23:15/.test(PC.cal.dia('2026-11-02').noche)",
    "esperado": true
+  },
+  {
+   "nombre": "ninguna entrada sin fecha fija",
+   "expr": "PC.cal.sinFecha().length",
+   "esperado": 0
   },
   {
    "nombre": "19-10: reparto único del simulacro (K5 resuelto el 29-9)",

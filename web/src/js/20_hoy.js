@@ -579,9 +579,13 @@
   function pasosSeries(dia, color, R) {
     if (color === 'rojo') return [{ t: mayus((dia.variantes || {}).rojo || genTxt('carrera', 'rojo')) }];
     var out = [calentamiento(dia)], seq = SES.secuencia(R.principal, color);
-    seq.forEach(function (r) {
+    /* la recuperación va en su propio paso, entre una repetición y la siguiente, con su temporizador
+       (28-10: colgada del 600 como subtítulo parecía el tiempo del 600 y no se veía entre el 600 y el 400) */
+    seq.forEach(function (r, i) {
       var d = r.km ? 'Kilómetro partido ' + r.km + ' de ' + r.kmN : 'Repetición ' + r.k + ' de ' + r.n;
-      out.push({ t: r.dist + ' m · ' + r.obj, d: d + (r.rec ? (r.pausa ? ' · pausa ' : ' · recuperación ') + r.rec : ''), timer: r.rec ? segDe(r.rec) : null, rep: true });
+      out.push({ t: r.dist + ' m · ' + r.obj, d: d, rep: true });
+      var sig = seq[i + 1];
+      if (r.rec && sig) out.push({ t: (r.pausa ? 'Pausa · ' : 'Recuperación · ') + r.rec, d: 'luego ' + sig.dist + ' m en ' + sig.obj, timer: segDe(r.rec) });
     });
     if (color === 'ambar') { var m = /(\d+-\d+ min con techo \d+)/.exec(genTxt('carrera', 'ambar')); if (m) out.push({ t: mayus(m[1]) }); }
     out.push(vueltaCalma());
@@ -728,7 +732,10 @@
     var w = Math.floor(host.clientWidth || (host.parentNode && host.parentNode.clientWidth) || 320), h = 56, y = 40;
     var faltan = PC.dias(hoy, L.desde);
     var meta = (perfil() || {}).meta || 'Cádiz';
-    var flagTxt = hoy < L.desde ? meta + ' · ≥ ' + faltan + (faltan === 1 ? ' día' : ' días') : meta + ' · semana de la prueba';
+    /* con la fecha confirmada (ventana de un solo día) la cuenta es exacta; con una semana, «≥».
+       La de Cristina es de un día pero supuesta (objetivo.fechaSupuesta): sigue con «≥» */
+    var exacta = L.desde === L.fin && !perfil();
+    var flagTxt = hoy < L.desde ? meta + ' · ' + (exacta ? '' : '≥ ') + faltan + (faltan === 1 ? ' día' : ' días') : meta + (exacta ? ' · hoy' : ' · semana de la prueba');
     var flagW = Math.ceil(flagTxt.length * 6.6) + 16;
     var id = 'hoy-cm-' + (++nCamino);
     var x0 = 6, x1 = w - flagW - 4, total = PC.dias(L.ini, L.fin) || 1;
@@ -1087,7 +1094,8 @@
     [['porQue', 'Por qué'], ['regla', 'Regla'], ['protocolo', 'Protocolo'], ['decide', 'Qué decide'], ['medir', 'Qué medir'], ['registro', 'Qué apuntar'], ['nota', 'Nota']].forEach(function (k) {
       if (dia[k[0]]) q.push('<dt>' + k[1] + '</dt><dd>' + esc(dia[k[0]]) + '</dd>');
     });
-    if (dia.lugar && / si /.test(dia.lugar)) q.push('<dt>Lugar</dt><dd>' + esc(dia.lugar) + '</dd>');
+    /* el lugar entero cuando la cabecera solo enseña su primer trozo (las dos instalaciones de la prueba) o lleva una condición */
+    if (dia.lugar && (/ si /.test(dia.lugar) || dia.lugar.trim() !== lugarCorto(dia))) q.push('<dt>Lugar</dt><dd>' + esc(dia.lugar) + '</dd>');
     if (R.tpl === 'fuerza') {
       var pr = frases(((plan().sesionesTipo || {}).martesFuerza || {}).prioridad);
       if (pr.length > 1) q.push('<dt>Prioridad</dt><dd>' + esc(pr.slice(0, -1).join(' ')) + '</dd>');
@@ -1465,6 +1473,9 @@
   /* H-3 · esta noche (cena = luz − 2 h, de reglas[dormir] y atleta.horaApagarLuz) */
   function minDe(txt) { var m = /(\d{1,2}):(\d{2})/.exec(txt || ''); return m ? (+m[1]) * 60 + (+m[2]) : null; }
   function lineaNoche(iso) {
+    /* un día con «noche» propia en el plan (la víspera de la prueba, en hora de Cádiz) manda sobre la regla general */
+    var dn = PC.cal.dia(iso);
+    if (dn && dn.noche) return dn.noche;
     var txt = reglaTxt('dormir'), dow = PC.fecha(iso).getDay(), m;
     if (dow === 4 && (m = /del circuito a la cama/i.exec(txt))) return mayus(m[0]);
     if ((dow === 5 || dow === 6) && (m = /El fin de semana, [^.]*/.exec(txt))) return m[0];

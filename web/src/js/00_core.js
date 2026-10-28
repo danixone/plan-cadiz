@@ -366,7 +366,7 @@
       (PC.D.derivados.dias || []).forEach(function (d) { if (d && d.fecha) idx[d.fecha] = d; });
       return idx;
     }
-    var CAMPOS = ['sesion', 'objetivo', 'hora', 'lugar', 'regla', 'protocolo', 'decide', 'semaforo', 'medir', 'nota', 'porQue', 'registro', 'hecho', 'preparatorio'];
+    var CAMPOS = ['sesion', 'objetivo', 'hora', 'lugar', 'noche', 'regla', 'protocolo', 'decide', 'semaforo', 'medir', 'nota', 'porQue', 'registro', 'hecho', 'preparatorio'];
     function semanaDe(ref) {
       var cal = PC.D.plan.calendario || [];
       return ref && cal[ref[0]] ? cal[ref[0]] : null;

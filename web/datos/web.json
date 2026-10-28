@@ -1170,7 +1170,7 @@
       ]
     },
     "2026-10-28": {
-      "firma": "a5af0192780b",
+      "firma": "5f93ec0b0a50",
       "titulo": "600 m + 400 m, rec. 5 min",
       "numeros": {
         "verde": [
@@ -1211,149 +1211,6 @@
       "fuentes": [
         "plan.calendario[2026-10-28].sesion",
         "plan.calendario[2026-10-28].objetivo"
-      ]
-    },
-    "2026-10-30": {
-      "firma": "77cbb9c52cb7",
-      "titulo": "Simulacro ligero o descanso",
-      "versiones": {
-        "4-6": "v2:Vie 30"
-      },
-      "fuentes": [
-        "plan.calendario[2026-10-30].siPrueba4a6",
-        "plan.calendario[2026-10-30].siPrueba2o3"
-      ]
-    },
-    "2026-10-31": {
-      "firma": "728522dfd6d9",
-      "titulo": "Sesión «−2 días» o descanso",
-      "versiones": {
-        "2-3": "v1:Sáb 31"
-      },
-      "fuentes": [
-        "plan.calendario[2026-10-31].siPrueba4a6",
-        "plan.calendario[2026-10-31].siPrueba2o3"
-      ]
-    },
-    "v1:Mié 28": {
-      "firma": "e92f43b2abec",
-      "titulo": "600 + 400 del bloque C",
-      "principal": {
-        "tipo": "compuesta",
-        "partes": [
-          {
-            "dist": 600,
-            "obj": "2:07"
-          },
-          {
-            "dist": 400,
-            "obj": "1:25"
-          }
-        ],
-        "desde": "600 + 400 del bloque C"
-      },
-      "calidad": true,
-      "fuentes": [
-        "plan.calendario[v1:Mié 28].sesion"
-      ]
-    },
-    "v1:Sáb 31": {
-      "firma": "cda50fce4a3d",
-      "pasos": [
-        {
-          "t": "15 min suaves",
-          "desde": "15 min suaves"
-        },
-        {
-          "t": "3 progresivos de 100 m",
-          "d": "con tope 3:20-3:50",
-          "desde": "3 progresivos de 100 m con tope 3:20-3:50"
-        },
-        {
-          "t": "3 × 4 dominadas muy suaves",
-          "desde": "3 × 4 dominadas muy suaves"
-        }
-      ],
-      "fuentes": [
-        "plan.calendario[v1:Sáb 31].sesion"
-      ]
-    },
-    "v2:Vie 30": {
-      "firma": "7b7233fb2074",
-      "numeros": [
-        {
-          "v": "8",
-          "l": "serie técnica de dominadas en vídeo",
-          "desde": "serie técnica de 8 dominadas en vídeo"
-        },
-        {
-          "v": "600",
-          "l": "a 2:07",
-          "desde": "600 a 2:07"
-        }
-      ],
-      "pasos": [
-        {
-          "t": "Serie técnica de 8 dominadas en vídeo",
-          "d": "no un máximo",
-          "enlace": "#tecnica/dominada",
-          "desde": "serie técnica de 8 dominadas en vídeo (no un máximo)"
-        },
-        {
-          "t": "600 a 2:07",
-          "enlace": "#tecnica/mil",
-          "desde": "600 a 2:07"
-        }
-      ],
-      "principal": {
-        "tipo": "series",
-        "n": 1,
-        "dist": 600,
-        "obj": "2:07",
-        "desde": "600 a 2:07"
-      },
-      "fuentes": [
-        "plan.calendario[v2:Vie 30].sesion"
-      ]
-    },
-    "v2:Lun 2": {
-      "firma": "0bfe902e02ca",
-      "titulo": "Viaje a Cádiz",
-      "condicion": {
-        "pregunta": "¿Cuándo es la prueba?",
-        "opciones": [
-          {
-            "id": "5-6",
-            "txt": "Si la prueba es el 5 o el 6: descanso; la última calidad pasa al domingo 1"
-          },
-          {
-            "id": "4",
-            "txt": "Si es el 4, es el día −2: al llegar, 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50, si hay luz y sitio; si no, descanso"
-          }
-        ]
-      },
-      "fuentes": [
-        "plan.calendario[v2:Lun 2].sesion"
-      ]
-    },
-    "v2:−2 días": {
-      "firma": "67169bd15f22",
-      "pasos": [
-        {
-          "t": "15 min suaves",
-          "desde": "15 min suaves"
-        },
-        {
-          "t": "3 progresivos de 100 m por mecánica (20-23 s)",
-          "d": "con tope 3:20-3:50 en el reloj",
-          "desde": [
-            "3 progresivos de 100 m por mecánica (20-23 s)",
-            "con tope 3:20-3:50 en el reloj"
-          ]
-        }
-      ],
-      "fuentes": [
-        "plan.calendario[v2:−2 días].sesion"
       ]
     },
     "2026-10-22": {
@@ -1405,34 +1262,93 @@
       ]
     },
     "2026-11-01": {
-      "firma": "10815bebcdf9",
-      "titulo": "Última calidad o descanso",
-      "versiones": {
-        "4-6": "v2:Dom 1"
-      },
+      "firma": "61b59794e791",
+      "titulo": "Sesión «−2 días» a la hora de la prueba",
+      "pasos": [
+        {
+          "t": "15 min suaves",
+          "desde": "15 min suaves"
+        },
+        {
+          "t": "3 progresivos de 100 m por mecánica (20-23 s)",
+          "d": "con tope 3:20-3:50",
+          "desde": [
+            "3 progresivos de 100 m por mecánica (20-23 s)",
+            "con tope 3:20-3:50"
+          ]
+        },
+        {
+          "t": "3 × 4 dominadas muy suaves",
+          "d": "prep-hombro antes de la barra",
+          "enlace": "#tecnica/dominada",
+          "desde": [
+            "3 × 4 dominadas muy suaves",
+            "prep-hombro antes de la barra"
+          ]
+        }
+      ],
       "fuentes": [
-        "plan.calendario[2026-11-01].siPrueba4a6",
-        "plan.calendario[2026-11-01].siPrueba2o3"
+        "plan.calendario[2026-11-01].sesion",
+        "plan.calendario[2026-11-01].objetivo"
       ]
     },
-    "v2:Dom 1": {
-      "firma": "5a9bf3b377f2",
-      "titulo": "Última calidad antes de viajar o descanso",
-      "condicion": {
-        "pregunta": "¿Cuándo es la prueba?",
-        "opciones": [
-          {
-            "id": "5-6",
-            "txt": "Si la prueba es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24; cada 50 m: 0:10,3 · 0:20,5 · 0:30,8 · 0:41,0) + 3 × 4 dominadas suaves, en la pista que abra el domingo: sirve para la sensación del paso, no para el cronómetro"
-          },
-          {
-            "id": "4",
-            "txt": "Si es el 4: descanso"
-          }
-        ]
-      },
+    "2026-11-03": {
+      "firma": "96d4978dba0e",
+      "titulo": "Prueba · 11:30 de Cádiz",
+      "pasos": [
+        {
+          "t": "Despertar a las 7:00 de Cádiz",
+          "d": "tus 6:00 de Canarias",
+          "desde": "despertar a las 7:00 de Cádiz (tus 6:00 de Canarias)"
+        },
+        {
+          "t": "Desayuno de tu pauta terminado entre las 8:00 y las 8:30",
+          "d": "3-3,5 h antes",
+          "desde": "desayuno de tu pauta terminado entre las 8:00 y las 8:30, 3-3,5 h antes"
+        },
+        {
+          "t": "Antes de las 11:30: el calentamiento estándar completo sin barra",
+          "d": "trote por pulso, movilidad, técnica y progresivos; después, abrigado: no se sabe cuánto se espera tras el llamamiento",
+          "desde": [
+            "antes de las 11:30, el calentamiento estándar completo sin barra (trote por pulso, movilidad, técnica y progresivos)",
+            "y después abrigado: no se sabe cuánto se espera tras el llamamiento"
+          ]
+        },
+        {
+          "t": "Antes de cada prueba, lo que dejen hacer lo más cerca de ella",
+          "d": "unos minutos de trote y 2-3 progresivos antes del circuito y del 1.000",
+          "desde": [
+            "antes de cada prueba, lo que dejen hacer lo más cerca de ella",
+            "unos minutos de trote y 2-3 progresivos antes del circuito y del 1.000"
+          ]
+        },
+        {
+          "t": "Antes de la barra: prep-hombro",
+          "d": "y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo",
+          "desde": "prep-hombro antes de la barra, con una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo"
+        },
+        {
+          "t": "Dominadas: piernas juntas y verticales como en el vídeo de lado del 13-10",
+          "d": "ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5)",
+          "enlace": "#tecnica/dominada",
+          "desde": "piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5)"
+        },
+        {
+          "t": "Tentempié ligero de tu pauta a 45-60 min del 1.000",
+          "desde": "tentempié ligero de tu pauta a 45-60 min del 1.000"
+        },
+        {
+          "t": "Sin móvil y con las mismas zapatillas en las tres pruebas",
+          "d": "nada nuevo",
+          "desde": [
+            "sin móvil y con las mismas zapatillas en las tres pruebas",
+            "nada nuevo"
+          ]
+        }
+      ],
       "fuentes": [
-        "plan.calendario[v2:Dom 1].sesion"
+        "plan.calendario[2026-11-03].sesion",
+        "plan.calendario[2026-11-03].objetivo"
       ]
     }
   },

@@ -571,7 +571,7 @@
   function controlHtml(c, hoy) {
     var h = [], dia = c.ref ? PC.cal.dia(c.fecha) : null, ok = hecho(c);
     var cls = (c.fecha === hoy || (c.hasta && c.fecha <= hoy && hoy <= c.hasta)) ? 'hoy' : ok ? 'hecho' : (c.hasta || c.fecha) < hoy ? '' : 'futuro';
-    var fechaT = c.hasta ? dm(c.fecha).split('-')[0] + '–' + dm(c.hasta) : corta(c.fecha);
+    var fechaT = c.hasta && c.hasta !== c.fecha ? dm(c.fecha).split('-')[0] + '–' + dm(c.hasta) : corta(c.fecha);
     h.push('<li class="' + cls + '"><span class="dot" aria-hidden="true"></span><b>' + esc(fechaT + ' · ' + (c.titulo || 'Control')) + '</b>');
     if (ok) {
       var e = histDe(String(c.hist).split(':')[0], c.fecha) || {};
@@ -615,7 +615,7 @@
     var hechos = CT.filter(hecho), ult = null;
     hechos.forEach(function (c) { var ev = evolDe(c.fecha); if (ev && ev.medido) ult = { c: c, t: ev.estimacion }; });
     var sig = CT.filter(function (c) { return !hecho(c) && c.fecha >= hoy; })[0];
-    var tit = (ult ? 'Último control del 1.000: ' + ult.t + ' el ' + corta(ult.c.fecha) : 'Controles') + (sig ? ' · siguiente: ' + (sig.hasta ? dm(sig.fecha) + ' a ' + dm(sig.hasta) : corta(sig.fecha)) : '');
+    var tit = (ult ? 'Último control del 1.000: ' + ult.t + ' el ' + corta(ult.c.fecha) : 'Controles') + (sig ? ' · siguiente: ' + (sig.hasta && sig.hasta !== sig.fecha ? dm(sig.fecha) + ' a ' + dm(sig.hasta) : corta(sig.fecha)) : '');
     var h = [];
     h.push('<header class="section-t mc-st"><h2 id="mc-controles-t">' + esc(tit) + '</h2></header>');
     h.push('<div class="card mc-card">');

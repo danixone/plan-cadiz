@@ -51,12 +51,13 @@
   "objetivo": {
     "oposicion": "Policía Nacional · Escala Básica",
     "pruebasFisicas": {
-      "lugar": "Cádiz",
-      "fecha": "Primera semana de noviembre de 2026 (del lunes 2 al viernes 6): semana confirmada en el Portal del Aspirante el 21-10-2026; día, hora y lugar, en la convocatoria individualizada que se publicará allí",
+      "lugar": "El Puerto de Santa María (Cádiz)",
+      "fecha": "Martes 3 de noviembre de 2026, 11:30 hora peninsular (10:30 en Canarias)",
       "confirmacion21oct": "Portal del Aspirante, aviso «BAS43 - PRUEBAS FÍSICAS» del 21-10-2026: «las pruebas físicas tendrán lugar la primera semana del mes de noviembre» y «se publicarán, de forma individualizada, a través del portal del aspirante, el día, hora y lugar». Es lo que el plan suponía desde el 2-10: no cambia ninguna sesión.",
+      "convocatoria28oct": "Convocatoria individualizada, dicha por Daniel el 28-10-2026: «03/11/2026 11:30h CÁDIZ», en el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n), las dos en El Puerto de Santa María. Las 11:30 son hora peninsular: las 10:30 en Canarias. Lo que no dice: qué prueba va en cada instalación, cuánto se espera tras el llamamiento ni si se puede calentar dentro. En la convocatoria de 2023 las pruebas «de interior» fueron en el pabellón Ramón Velázquez y las «de exterior» en la Ciudad Deportiva (Diario Bahía de Cádiz, 15-10-2023): lo probable es el 1.000 en la pista, sin confirmar. La pista es de 400 m y seis calles, y la entrega de su renovación pedía un informe de homologación de la Federación Andaluza de Atletismo (Diario Bahía de Cádiz). Según OpenStreetMap, el pabellón cubierto y la pista están a unos 450-500 m en línea recta (identificados por su posición: en el mapa no llevan esos nombres). Con la fecha se eligió la versión del 2-3 de la última semana, con la sesión «−2 días» corrida del sábado 31 al domingo 1. Viaje (dicho por Daniel el 28-10): vuelo a Sevilla el sábado 31, con llegada a las 20:00 peninsulares, y a Jerez hacia las 23:00; antes estaba previsto el lunes 2.",
       "avisoOficial20oct": "Portal del Aspirante, «EE41/EB43 – Recordatorio importante para la prueba de aptitud física», 20-10-2026: certificado médico con número de colegiado, firma, el nombre del aspirante y que reúne las condiciones físicas precisas para las pruebas; memorizar el número de opositor para el llamamiento; usar unas solas zapatillas para todos los ejercicios; no llevar teléfono móvil, porque su uso está prohibido. De relojes no dice nada. Daniel lo tiene todo (dicho el 21-10): certificado y número de opositor.",
-      "sedeNota": "Sede de Daniel: Cádiz, confirmada por él el 21-10-2026. La instalación aún no está publicada para la BAS43; la Escala Ejecutiva (EE41) hizo las suyas de Cádiz en El Puerto de Santa María, Polideportivo Municipal «Ramón Velázquez» (aviso del 1-10-2026): es una pista, no un dato de la BAS43.",
-      "fechaReferencia": "2026-11-02",
+      "sedeNota": "Sede de Daniel: Cádiz, confirmada por él el 21-10-2026. Instalaciones, en la convocatoria del 28-10 (convocatoria28oct): El Puerto de Santa María, en el mismo Polideportivo «Ramón Velázquez» donde la Escala Ejecutiva (EE41) hizo las suyas de Cádiz (aviso del 1-10-2026).",
+      "fechaReferencia": "2026-11-03",
       "cambio2oct": "El 2-10 Daniel comunicó que las pruebas físicas pasan de la última semana de octubre a la primera de noviembre. Decisión: se añade una semana más del bloque B (del 5 al 11 de octubre, con las mismas sesiones que la siguiente) y todo lo que venía del 5-10 en adelante se corre siete días. Así el simulacro (17-10), la última sesión pesada de lastre (20-10) y la descarga (27-10) quedan a la misma distancia de la prueba que antes: el último esfuerzo máximo a 16-20 días y la descarga a 6-10 días. Ninguna estimación de marca cambia: una semana más no se convierte en segundos ni en repeticiones sin inventarlos. Sesiones cortas de barra: siguen siendo dos (3-10 y 24-10), como fijó la revisión del 28-9.",
       "cambio14oct": "El 14-10 Daniel avisó de que la pista de Arucas no abre los sábados (según él, sin confirmar); entre semana sí, allí se hicieron los 6 × 400 del 28-9 a las 18:00. Decisión suya: el simulacro pasa del sábado 17 al lunes 19 a las 18:00, y el simulacro ligero del sábado 31 (si la prueba es el 4, el 5 o el 6), al viernes 30 a las 18:00. El sábado 17 queda un rodaje de 40 min, el domingo 18 descanso y el 8 × 200 del 19 se pierde; el martes 20 el lastre va al día siguiente del máximo de dominadas y el miércoles 21, a 48 h del 1.000."
     },
@@ -76,7 +77,7 @@
       "comoSePersigue": "NO con más intensidad (revisión del 23-9; quedan 13 días): con el reparto. El 19-10 corrió 38,7 / 41,9 / 44,2 / 44,6 / 37,9 = 3:27,3. Con los dos tramos centrales en 43, el mismo día habría sido 38,7 / 41,9 / 43 / 43 / 37,9 = 3:24,5. El BOE solo dice que el tiempo «se medirá en minutos y segundos» y no dice qué se hace con las décimas: un 3:24,5 puede quedar en 3:24 (5 puntos) o en 3:25 (4). Para no depender de eso, la meta es 3:24,0 o menos. El 3:24 pide el 800 en 2:44 y un último 200 de 40 o menos: 41 por 200 hasta el 800, sin salir en 38-39. Reparto de examen: 0:41 / 1:22 / 2:03 / 2:44 / meta 3:23-3:24.",
       "condiciones": [
         "Los ritmos de entrenamiento no cambian: el bloque C va a 1:25 / 2:07 (resuelto el 20-10). El 3:27 salió entrenando a 1:26 / 2:08: los segundos que faltan están en el reparto, no en ir más rápido en las series.",
-        "Lo que se ensaya es la salida: los 200 del 21-10 (0:41-0:42) y, si la prueba es el 5 o el 6, los 3 × 200 del lunes 2, a 0:41, el paso del examen.",
+        "Lo que se ensaya es la salida: los 200 del 21-10 (0:41-0:42), que se corrieron el 22-10 en 39,4 y 38,0. Con la prueba el martes 3 ya no hay 3 × 200 a 0:41 antes del examen (eran de la versión del 5 o el 6): el paso de 0:41 (20,5 s por 100) cae dentro de los progresivos del domingo 1 (100 m en 20-23 s), y la tabla de 50 m se aprende de memoria.",
         "La pista de Arucas no está verificada: con un 1 % de error, el 3:27 puede ser 3:25 o 3:29. El objetivo solo se da por conseguido en Cádiz o en pista medida u homologada.",
         "Suelo: 3:30 (4 puntos, la marca de hoy). Y lejos del 3:49, que elimina."
       ],
@@ -471,7 +472,7 @@
       "pasos": [
         "Trote suave 12-15 min GOBERNADO POR PULSO: techo 145 ppm, saldrá a 6:45-7:30 /km. Respirando por la nariz. (Antes decía 5:45-6:15 /km: era más rápido de lo que rueda y lo ponía por encima del techo antes de empezar.)",
         "Movilidad dinámica 5 min: balanceos de pierna adelante-atrás y lateral (15 por lado), zancadas caminando (10 por pierna), rotaciones de tobillo, círculos de cadera",
-        "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso). Antes, 2 suspensiones pasivas de 20 s y 2 × 8 retracciones escapulares",
+        "Dominadas del día (lunes y miércoles: 3 × 5 con 3 min de descanso; 3 × 4 la semana del 26-10). Antes, 2 suspensiones pasivas de 20 s y 2 × 8 retracciones escapulares",
         "Técnica: 2 × 20 m de skipping bajo, talones al glúteo, zancada y carrera lateral",
         "5 progresivos de 80 m; los dos últimos terminan a ritmo K = el ritmo del kilómetro de tu bloque: A 3:38 /km · B 3:34 · C 3:32, que en 80 m son unos 17 s (17,4 · 17,1 · 17,0). Los progresivos van de menos a más: no son sprints",
         "Pausa de 3–4 min y a la primera serie"
@@ -712,12 +713,12 @@
         "dia": "Sábado",
         "tipo": "técnica + volumen corto, SOLO 3-10 y 24-10",
         "prescripcion": "Unos 20 min ANTES del rodaje: prep-hombro; 1 × 3 de aproximación y 3 min; serie técnica grabada de tres cuartos (7 el 3-10; el 24-10, las válidas del 19-10 menos 4, como mucho 8; si una repetición sale lenta, se para ahí y se anota); 3 min y 2 × 5 con 4 o más en reserva. Solo con codo y hombro en 2/10 o menos desde el martes",
-        "nota": "Cambia de forma expresa la regla anterior «sábado: sin dominadas» (revisión del 28-9). El 19-10 (lunes) es el simulacro y el 31-10 no lleva máximo"
+        "nota": "Cambia de forma expresa la regla anterior «sábado: sin dominadas» (revisión del 28-9). El 19-10 (lunes) fue el simulacro. El sábado 31 es de viaje, sin barra; la última barra antes de la prueba es el 3 × 4 muy suave del domingo 1"
       },
       {
         "dia": "Domingo",
         "tipo": "ninguna",
-        "nota": "Descanso completo. No se recuperan sesiones"
+        "nota": "Descanso completo. No se recuperan sesiones. Excepción: el domingo 1-11, sesión «−2 días» con 3 × 4 muy suaves"
       }
     ],
     "porQueAntesDeCorrer": "Es el orden del examen: llegas a la carrera con dorsales y antebrazo cargados, igual que en Cádiz. Son 15 repeticiones fáciles que no quitan nada a la sesión de series.",
@@ -771,7 +772,7 @@
       "Nunca al fallo con lastre: ahí se lesionan el codo y el hombro, no el músculo.",
       "Toda serie máxima se graba en vídeo. Con una sola cámara (no se pueden grabar dos tomas a la vez, 14-10): de tres cuartos, a unos 45° del lateral, a la altura de la barra y a 3-4 m, con la barra a la vista (no detrás del poste) y el cuerpo entero; así se ven la barbilla frente a la barra, la cadera y las piernas. Un 11 contado por ti puede ser un 9 para el tribunal.",
       "El prep-hombro es obligatorio antes de la barra, también en controles. El 19-9 se saltó y el relato fue «no supe activar los omóplatos» con los bíceps hinchados: patrón de tirar con el codo en vez de con la escápula.",
-      "Test máximo solo el 19-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre.",
+      "Test máximo solo el 19-10 y en la prueba. El 31-10 no lleva máximo: serie técnica de 8 en vídeo (cambio del 28-9; después del 31 ningún número cambia ninguna decisión). Fechas corridas una semana el 2-10, al pasar la prueba a noviembre. Desde el 28-10 (prueba el martes 3) tampoco hay serie técnica de 8: el 31 es de viaje y la última barra es el 3 × 4 muy suave del domingo 1.",
       "Solo cuentan las repeticiones VÁLIDAS al revisar el vídeo con las nueve reglas del BOE. Las que cuentes tú se anotan aparte y no deciden nada.",
       "Sesión extra de barra solo los sábados 3-10 y 24-10, antes del rodaje. Nunca después de series, nunca en jueves, viernes o domingo. Si se pierde, no se suma a otra sesión. Nada de dominadas diarias, repartidas por el día ni excéntricas: con el lastre subiendo, más volumen de golpe es la vía típica al dolor de codo.",
       "Mala noche en día de fuerza: se hace con el peso ya dominado y se pierde la subida, no el día.",
@@ -1546,7 +1547,7 @@
     {
       "semana": "2026-10-26/2026-11-01",
       "titulo": "Llegar entero",
-      "nota": "Nada de 1.000 a tope esta semana. El objetivo ya no es medir, es llegar entero.",
+      "nota": "Nada de 1.000 a tope esta semana. El objetivo ya no es medir, es llegar entero. Desde el 28-10 se sabe la fecha (martes 3 de noviembre a las 11:30) y el viaje (sábado 31): el miércoles 28 es la última sesión de calidad, el viernes 30 descanso, el sábado 31 viaje y el domingo 1, ya allí, la sesión «−2 días» a la hora de la prueba.",
       "dias": [
         {
           "fecha": "2026-10-26",
@@ -1569,7 +1570,7 @@
           "dia": "Mié",
           "tipo": "carrera",
           "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min",
-          "objetivo": "2:07 y 1:25 (bloque C, resuelto el 20-10) · primer 200 en 0:42,5 · si la prueba es el 2 o el 3, ÚLTIMA sesión de calidad · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
+          "objetivo": "solo si las dos piernas pasan hoy las tres comprobaciones; se para si vuelve el dolor en la cara externa de la pierna · 2:07 y 1:25 (bloque C, resuelto el 20-10) · primer 200 en 0:42,5 · ÚLTIMA sesión de calidad: la prueba es el martes 3 · cada 200, a ±1 s de su paso: si uno sale lento, el siguiente no lo compensa; la repetición sale lenta y se anota (regla del 12-10) · control a los 100 m de cada repetición: el reloj tiene que marcar 0:21; si marca 0:20 o menos, afloja ya (el 22-10 pasó el 100 en 19,8 y el 200 en 40,0 con la tabla delante: el primer 50 salió bien y se fue en el segundo)",
           "hora": "18:00-19:00"
         },
         {
@@ -1583,115 +1584,54 @@
         {
           "fecha": "2026-10-30",
           "dia": "Vie",
-          "tipo": "control",
-          "sesion": "Depende de la fecha de la prueba (dos versiones)",
-          "objetivo": "acabar con sensación de sobra",
-          "clave": true,
-          "hora": "18:00, después del trabajo: la misma hora que el simulacro del lunes 19",
-          "protocolo": "Sin máximo de dominadas: serie técnica de 8 en vídeo con prep-hombro (cambio del 28-9: los máximos quedan en el 19-10 y la prueba).",
-          "siPrueba4a6": "SIMULACRO LIGERO: serie técnica de 8 dominadas en vídeo (prep-hombro obligatorio), NO un máximo, + 600 m a 2:07 (bloque C, resuelto el 20-10). A las 18:00 en Arucas. Sin circuito: se hizo el jueves 29.",
-          "siPrueba2o3": "Descanso"
+          "tipo": "descanso",
+          "sesion": "Descanso",
+          "objetivo": "nada: lo último antes de Cádiz es el 600 + 400 del miércoles 28 y el circuito del jueves 29",
+          "nota": "Hasta el 28-10 dependía de la fecha: simulacro ligero (serie técnica de 8 dominadas en vídeo y 600 a 2:07) con la prueba del 4 al 6, descanso con la prueba el 2 o el 3. La convocatoria dice martes 3: descanso."
         },
         {
           "fecha": "2026-10-31",
           "dia": "Sáb",
-          "tipo": "carrera",
-          "sesion": "Depende de la fecha de la prueba (dos versiones)",
-          "siPrueba4a6": "Descanso, o 15 min muy suaves: el simulacro ligero pasó al viernes 30 a las 18:00 (14-10)",
-          "siPrueba2o3": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. SIN test máximo de dominadas ni 600: el último test fue el 19."
+          "tipo": "descanso",
+          "sesion": "Viaje: vuelo a Sevilla (llegada a las 20:00 peninsulares) y a Jerez hacia las 23:00 · descanso, o 15 min muy suaves por la mañana, antes del vuelo",
+          "nota": "Hasta el 28-10, con la prueba el lunes 2 o el martes 3, aquí iba la sesión «−2 días»; con la prueba el martes 3, el día −2 es el domingo 1, y la sesión pasó allí. El viaje, que estaba previsto el lunes 2, pasó aquí el 28-10 (dicho por ti).",
+          "noche": "Llegas a Jerez hacia las 23:00, hora peninsular (una hora más que en Canarias): a la cama en cuanto llegues. Desde esta noche, todas las horas del plan son las de allí"
         },
         {
           "fecha": "2026-11-01",
           "dia": "Dom",
           "tipo": "carrera",
-          "sesion": "Depende de la fecha de la prueba (dos versiones)",
-          "siPrueba4a6": "Si es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min + 3 × 4 dominadas suaves (cambiado el 21-10: el lunes 2 viajas). Si es el 4: descanso",
-          "siPrueba2o3": "Descanso, o 15 min muy suaves"
+          "sesion": "Sesión «−2 días» a la hora de la prueba: 15 min suaves + 3 progresivos de 100 m por mecánica (20-23 s) con tope 3:20-3:50 + 3 × 4 dominadas muy suaves",
+          "objetivo": "ensayar la mañana del martes, ya en hora peninsular: desayuno de tu pauta terminado entre las 8:00 y las 8:30 y la sesión a las 11:30 · progresivos de menos a más, sin bajar de 3:20 /km · prep-hombro antes de la barra · sin test máximo de dominadas ni 600: el último test fue el 19-10 · solo con las dos piernas pasando las tres comprobaciones; se para en cuanto vuelva el dolor",
+          "hora": "11:30, hora peninsular (la hora de la prueba)",
+          "lugar": "Donde estés, en Jerez o en El Puerto: no hace falta pista; para las dominadas, una barra. Si es en El Puerto, de paso ves las dos instalaciones",
+          "nota": "Hasta el 28-10 este día dependía de la fecha. Con la prueba el martes 3, es el día −2; con el viaje el sábado 31, ya lo haces allí.",
+          "noche": "Cena terminada antes de las 21:15 y luz apagada a las 23:15, hora peninsular"
         }
       ]
     },
     {
       "semana": "2026-11-02/2026-11-08",
-      "titulo": "Afinamiento y prueba · dos versiones según la fecha",
-      "nota": "La semana está confirmada (primera de noviembre, del lunes 2 al viernes 6; Portal del Aspirante, 21-10); el día, la hora y el lugar llegarán en la convocatoria individualizada, y con eso se elige la versión. En las dos: un solo 1.000 a tope en octubre (el 19), el último esfuerzo máximo de carrera a 14-18 días, la descarga de fuerza a 6-10 días, y la hora fija de los controles hasta saber la hora real. Si la hora de Cádiz es de tarde, se adelanta la comida principal (3-3,5 h antes de la primera prueba) y se prueba ese horario en la sesión «−2 días», no el día de la prueba. Viaje a Cádiz: el lunes 2 (intención suya, 21-10). Ese día es descanso en todas las versiones; si la convocatoria dijera el lunes 2, el viaje se adelanta al domingo 1 como muy tarde.",
-      "versiones": [
+      "titulo": "Prueba · martes 3 a las 11:30",
+      "nota": "Convocatoria individualizada (dicha por ti el 28-10): martes 3 de noviembre a las 11:30, hora peninsular (10:30 en Canarias), en El Puerto de Santa María. Viaje (dicho por ti el 28-10): vuelo a Sevilla el sábado 31, con llegada a las 20:00 peninsulares, y a Jerez hacia las 23:00; antes estaba previsto el lunes 2. Hasta ese día el plan tenía dos versiones de esta semana, una para el 2-3 y otra para el 4-6: se quedó la del 2-3, con la sesión «−2 días» corrida del sábado 31 al domingo 1. Se mantiene lo común a las dos: un solo 1.000 a tope en octubre (el 19, a 15 días de la prueba), la descarga de fuerza el 27-10 (a 7 días) y nada nuevo el día de la prueba.",
+      "dias": [
         {
-          "nombre": "Si la prueba es el lunes 2 o el martes 3",
-          "dias": [
-            {
-              "dia": "Mié 28",
-              "tipo": "carrera",
-              "sesion": "600 + 400 del bloque C (2:07 + 1:25): ÚLTIMA sesión de calidad. Sustituye al «−5 días»"
-            },
-            {
-              "dia": "Sáb 31",
-              "tipo": "carrera",
-              "sesion": "Sesión «−2 días»: 15 min suaves + 3 progresivos de 100 m con tope 3:20-3:50 + 3 × 4 dominadas muy suaves. Sin test máximo"
-            },
-            {
-              "dia": "Dom 1",
-              "tipo": "descanso",
-              "sesion": "Descanso, o 15 min muy suaves"
-            },
-            {
-              "dia": "Lun 2",
-              "tipo": "descanso",
-              "sesion": "Viaje a Cádiz (intención tuya, 21-10). Si la prueba es el martes 3, es el día −1: descanso, o 15 min muy suaves al llegar. Si la convocatoria dijera el lunes 2, el viaje se adelanta al domingo 1"
-            },
-            {
-              "dia": "Prueba",
-              "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5). Sin móvil y con las mismas zapatillas en las tres pruebas. Nada nuevo",
-              "clave": true
-            }
-          ]
+          "fecha": "2026-11-02",
+          "dia": "Lun",
+          "tipo": "descanso",
+          "sesion": "Día −1, ya en Cádiz: descanso, o 15 min muy suaves",
+          "objetivo": "ver las dos instalaciones andando, si no lo hiciste el domingo, para saber por dónde se entra y cuánto se tarda desde donde duermas: el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n); según OpenStreetMap están a unos 500 m en línea recta · la bolsa: certificado médico, el número de opositor memorizado y unas solas zapatillas (aviso del 20-10)",
+          "noche": "Cena terminada antes de las 21:15 y luz apagada a las 23:15, hora peninsular"
         },
         {
-          "nombre": "Si la prueba es el miércoles 4, el jueves 5 o el viernes 6",
-          "dias": [
-            {
-              "dia": "Vie 30",
-              "tipo": "control",
-              "sesion": "Simulacro ligero: serie técnica de 8 dominadas en vídeo (no un máximo) + 600 a 2:07. A las 18:00 en Arucas. El circuito, el jueves 29",
-              "clave": true
-            },
-            {
-              "dia": "Sáb 31",
-              "tipo": "descanso",
-              "sesion": "Descanso, o 15 min muy suaves"
-            },
-            {
-              "dia": "Dom 1",
-              "tipo": "carrera",
-              "sesion": "Si la prueba es el 5 o el 6: última calidad antes de viajar, 3 × 200 a 0:41 con 3 min (el paso de salida del examen, objetivo 3:24; cada 50 m: 0:10,3 · 0:20,5 · 0:30,8 · 0:41,0) + 3 × 4 dominadas suaves, en la pista que abra el domingo: sirve para la sensación del paso, no para el cronómetro. Si es el 4: descanso"
-            },
-            {
-              "dia": "Lun 2",
-              "tipo": "descanso",
-              "sesion": "Viaje a Cádiz (intención tuya, 21-10). Si la prueba es el 5 o el 6: descanso; la última calidad pasa al domingo 1. Si es el 4, es el día −2: al llegar, 15 min suaves + 3 progresivos de 100 m por mecánica con tope 3:20-3:50, si hay luz y sitio; si no, descanso"
-            },
-            {
-              "dia": "Mar 3",
-              "tipo": "descanso",
-              "sesion": "Si la prueba es el viernes 6: descanso, o 15 min muy suaves. Si es el 4 o el 5, es el día −1 o −2 (ver abajo)"
-            },
-            {
-              "dia": "−2 días",
-              "tipo": "carrera",
-              "sesion": "15 min suaves + 3 progresivos de 100 m por mecánica (20-23 s), con tope 3:20-3:50 en el reloj"
-            },
-            {
-              "dia": "−1 día",
-              "tipo": "descanso",
-              "sesion": "Descanso, o 15 min muy suaves"
-            },
-            {
-              "dia": "Prueba",
-              "tipo": "prueba",
-              "sesion": "Calentamiento estándar completo con trote por pulso y prep-hombro antes de la barra, y una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo. Piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5). Sin móvil y con las mismas zapatillas en las tres pruebas. Nada nuevo",
-              "clave": true
-            }
-          ]
+          "fecha": "2026-11-03",
+          "dia": "Mar",
+          "tipo": "prueba",
+          "clave": true,
+          "sesion": "PRUEBA a las 11:30 de Cádiz: circuito, dominadas y 1.000 m",
+          "objetivo": "despertar a las 7:00 de Cádiz (tus 6:00 de Canarias) · desayuno de tu pauta terminado entre las 8:00 y las 8:30, 3-3,5 h antes · antes de las 11:30, el calentamiento estándar completo sin barra (trote por pulso, movilidad, técnica y progresivos), y después abrigado: no se sabe cuánto se espera tras el llamamiento · antes de cada prueba, lo que dejen hacer lo más cerca de ella: unos minutos de trote y 2-3 progresivos antes del circuito y del 1.000, y prep-hombro antes de la barra, con una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo · tentempié ligero de tu pauta a 45-60 min del 1.000 · piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5) · sin móvil y con las mismas zapatillas en las tres pruebas · nada nuevo",
+          "hora": "11:30, hora peninsular (10:30 en Canarias)",
+          "lugar": "El Puerto de Santa María, Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n)"
         }
       ]
     }
@@ -1717,7 +1657,7 @@
       ],
       "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
       "orden": "circuito → dominadas → 1.000 m",
-      "pendiente": "Fecha exacta, hora y minutos entre pruebas. No hay ningún dato verificado de hora ni de temperatura en Cádiz.",
+      "pendiente": "Minutos entre pruebas y qué prueba va en cada instalación: la convocatoria del 28-10 no lo dice. Temperatura y viento: la previsión de AEMET para El Puerto se mira el domingo 1 y el lunes 2.",
       "nota": "Reparto a 41 por 200 hasta el 800 y el último en 40 o menos para el 3:24 (desde el 20-10; antes, 42,0 por 200 para bajar de 3:30).",
       "dominadas": "Hacer 13 por tu cuenta para que el tribunal cuente 12: la repetición de margen es la única cobertura frente al recuento."
     }
@@ -1818,7 +1758,7 @@
     {
       "id": "no-testear",
       "titulo": "No testear de más",
-      "texto": "Solo los controles marcados: el simulacro del 19 de octubre y la prueba. El 31 de octubre no lleva máximo de dominadas (serie técnica de 8) y su carrera depende de la fecha de la prueba. Testear cada semana desgasta y no informa. Actualizado el 29-9 (K6) y el 2-10 (la prueba pasa a noviembre)."
+      "texto": "Solo los controles marcados: el simulacro del 19 de octubre y la prueba. Antes de la prueba no hay más tests: el 31 de octubre es de viaje y el domingo 1 solo lleva 3 × 4 dominadas muy suaves. Testear cada semana desgasta y no informa. Actualizado el 29-9 (K6) el 2-10 (la prueba pasa a noviembre) y el 28-10 (convocatoria: martes 3)."
     },
     {
       "id": "dos-repeticiones",
@@ -1963,7 +1903,7 @@
     },
     {
       "id": "pista-arucas",
-      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. El 3:27 del simulacro del 19-10 se corrió allí y sigue sin distancia verificada (±1 %); el simulacro ligero del 30, si toca, también va allí (entre semana abre; los sábados no, según él).",
+      "texto": "Confirmar que la pista de Arucas es de 400 m: foto de las salidas escalonadas o de la salida del 1.000. El 3:27 del simulacro del 19-10 se corrió allí y sigue sin distancia verificada (±1 %); ya no hay más 1.000 cronometrados antes de Cádiz.",
       "desde": "2026-09-28"
     },
     {
@@ -1972,9 +1912,10 @@
       "desde": "2026-09-29"
     },
     {
-      "id": "llamamiento",
-      "texto": "Semana confirmada (Portal del Aspirante, 21-10): primera de noviembre, en Cádiz (sede confirmada por ti el 21-10); viaje previsto el lunes 2. Falta la convocatoria individualizada con el día, la hora y la instalación: decide la versión de la última semana y los eventos del calendario de esa semana. Si dijera el lunes 2, el viaje se adelanta.",
-      "desde": "2026-09-29"
+      "id": "cadiz-llegada",
+      "texto": "La convocatoria no dice qué prueba va en cada instalación, cuánto se espera tras el llamamiento de las 11:30 ni si se puede calentar dentro. Llega con margen el martes 3 y pregúntalo al llegar; el domingo 1 o el lunes 2, ve a ver las dos instalaciones.",
+      "desde": "2026-10-28",
+      "hasta": "2026-11-03"
     },
     {
       "id": "reloj-examen",
