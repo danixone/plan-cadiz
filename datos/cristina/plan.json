@@ -2,10 +2,10 @@
   "meta": {
     "atleta": "Cristina",
     "creado": "2026-10-11",
-    "version": 4,
+    "version": 5,
     "diasCarrera": "lunes, miércoles y sábado",
     "nota": "Plan de carrera y de barra de Cristina para las pruebas físicas de la Escala Básica de 2027 (turno libre). El circuito lo lleva Martín Freire. Los datos personales (edad, altura, salud) no van aquí; el pulso sí, desde el 12-10-2026: el repositorio es público.",
-    "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre. Versión 4 del 26-10-2026, tras su primer 1.000 medido (5:13, con la salida demasiado rápida) y a petición de Daniel: entrenador también de la barra (dos sesiones por semana y un test cada cuatro, el martes de la semana de descarga); CrossFit uno o dos días por semana (con uno, el domingo es descanso); series cortas a ritmo K desde el 2-11 (antes, el primer trabajo a ritmo K era el 21-12) y las cuestas pasan a los miércoles; techo de pulso de 150 en lo suave, con su máxima ya medida (188); controles renumerados (el del 26-10 es el 1.º)."
+    "revision": "Versión 2 del 11-10-2026: aplicados un diagnóstico de eficacia y otro de riesgo, hechos por separado sobre la versión 1. Cambios: correr y andar al principio, larga que sube poco a poco, intervalos cerca del ritmo de la prueba desde diciembre, tope de metros a ritmo K, rodajes de entre semana más largos, regla del dolor completa, día libre recomendado, calor y energía. Versión 3 del mismo día, a petición de Daniel: corre lunes, miércoles y sábado, como él; martes y jueves Martín Freire; el domingo sigue con CrossFit (sin día libre, decidido por ellos); no hay test el 17-10 (el primer control es el 21-11); se quita el cuarto rodaje opcional, que pedía el domingo libre. Versión 4 del 26-10-2026, tras su primer 1.000 medido (5:13, con la salida demasiado rápida) y a petición de Daniel: entrenador también de la barra (dos sesiones por semana y un test cada cuatro, el martes de la semana de descarga); CrossFit uno o dos días por semana (con uno, el domingo es descanso); series cortas a ritmo K desde el 2-11 (antes, el primer trabajo a ritmo K era el 21-12) y las cuestas pasan a los miércoles; techo de pulso de 150 en lo suave, con su máxima ya medida (188); controles renumerados (el del 26-10 es el 1.º). Versión 5 del 28-10-2026, revisión de ritmos y tiempos: las series de 2-3 min, de 800 y de 1.000 pasan de K + 4 a K + 10 (su ritmo de máximo consumo de oxígeno por las tablas de Daniels; K + 4 es su ritmo de 1.500); tope de 2.400 m a ritmo K (los 5 × 600 pasan a 4 × 600) y menos 800 (3 y 4 en lugar de 4 y 5); umbral por pulso, con el ritmo de la tabla como tope; los 200 rápidos llevan tiempo (ritmo O menos 2 s); la barra B escribe los 2 s por semana en sus números. 28-10-2026, a petición de Daniel: la meta es rondar 21-22 puntos entre las tres (media 7-7,3), no el apto; se añaden objetivo.metaPuntos, la línea de los tests de barra con una tercera sesión si uno se queda corto y un circuito cronometrado cada cuatro semanas (pendiente). Meta de 21-22 puntos."
   },
   "objetivo": {
     "prueba": "Pruebas físicas de la Escala Básica, convocatoria de 2027 (44.ª promoción), turno libre",
@@ -28,10 +28,73 @@
         "que": "6 puntos, y desde ahí cada punto son 8-9 s"
       }
     ],
-    "porQue": "Va por turno libre: la nota física suma para la plaza. El 1.000 es lo que hoy la elimina, así que es lo primero.",
-    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física (bases 6.1.2 y 6.11 del BOE de la 43.ª; la convocatoria de 2027 no ha salido).",
+    "porQue": "Va por turno libre: la nota física suma para la plaza. La meta, dicha por Daniel el 28-10-2026, es rondar 21-22 puntos entre las tres pruebas (una media de 7 a 7,3), no el apto: cada punto de cualquiera de las tres vale lo mismo. El 1.000 va primero porque hoy la elimina (un cero tumba la nota entera); después se busca el máximo en las tres.",
+    "reglaDeNota": "La nota física es la media de las tres pruebas. Hace falta un 5 de media y ningún cero. Y suma: la nota final de la oposición es la suma de la prueba de conocimientos y la de aptitud física (bases 6.1.2 y 6.11 del BOE de la 43.ª; la convocatoria de 2027 no ha salido). Tu meta: 21-22 puntos entre las tres, una media de 7 a 7,3.",
     "primerControl": "2026-10-26",
-    "expectativa": "Primer 1.000 medido el 26-10-2026: unos 5:13, 27 s por encima del 4:46 que elimina. Criterio de entrenador, no dato: con un año sin lesiones y este plan, lo razonable es dejar de eliminar en invierno y acabar entre 4:05 y 4:35 (es la previsión que se dio el 11-10 para un primer control entre 5:00 y 5:15); 4:00 o menos (6 puntos) pide una respuesta muy buena. Ese control se hizo sin calentamiento, con CrossFit el día antes y saliendo demasiado rápido: el del 21-11, en condiciones, dirá más. Se revisa con cada control."
+    "expectativa": "Primer 1.000 medido el 26-10-2026: unos 5:13, 27 s por encima del 4:46 que elimina. Criterio de entrenador, no dato (revisado el 28-10): 5:00-5:08 en el control del 21-11, si sale con calentamiento y reparto regular; dejar de eliminar (4:45) hacia febrero o marzo; y en septiembre de 2027, entre 4:10 y 4:32, con el centro hacia 4:20 (3 puntos; 4 puntos desde 4:18). 4:09 (5 puntos) pide una respuesta muy buena y ninguna lesión; 4:00 (6 puntos), poco probable. La mejora va rápida al principio y después se frena. Se revisa con cada control: con dos o tres, la estimación pasa a salir de tus datos. En puntos (28-10): la meta es 21-22 entre las tres; con el 1.000 en 4 puntos, la barra tiene que llegar a 78 s y el circuito a 9,8 s o menos; con 3 puntos, una de las dos un tramo más (ver metaPuntos).",
+    "metaPuntos": {
+      "meta": "21-22 puntos entre las tres (media 7-7,3)",
+      "fuente": "Dicho por Daniel el 28-10-2026: va por turno libre y la física suma para la plaza. No tengo datos de qué nota final da plaza.",
+      "hoy": "1.000 en 5:13 = 0 (elimina) · barra 41 s = 2 · circuito sin medir: hoy no hay total.",
+      "combinaciones": [
+        "1.000 en 4:19-4:27 (3 puntos): para 21 hacen falta 18 entre barra y circuito: barra de 86 a 94 s (9) y circuito de 9,4 a 9,8 s (9), o barra de 78 a 85 s (8) y circuito en 9,3 s o menos (10).",
+        "1.000 en 4:10-4:18 (4): hacen falta 17: barra de 78 a 85 s (8) y circuito de 9,4 a 9,8 s (9), o barra de 86 a 94 s (9) y circuito de 9,9 a 10,3 s (8).",
+        "1.000 en 4:01-4:09 (5): hacen falta 16: barra de 78 a 85 s (8) y circuito de 9,9 a 10,3 s (8), o barra de 70 a 77 s (7) y circuito de 9,4 a 9,8 s (9).",
+        "1.000 en 3:52-4:00 (6): hacen falta 15: barra de 70 a 77 s (7) y circuito de 9,9 a 10,3 s (8).",
+        "Para 22, un punto más en cualquiera de las tres."
+      ],
+      "precioDelPunto": "1.000: 9 s por punto. Barra: de 5 a 9 s por punto (de 41 s a 78 s hay 6 puntos). Circuito: de 2 a 5 décimas por punto (4 o 5 entre los 6 y los 9 puntos).",
+      "veredicto": "Criterio de entrenador, revisado el 28-10-2026: la estimación del 1.000 tiene el centro hacia 4:20 (3 puntos). Con el 1.000 en 4 puntos, la meta pide la barra en 78 s o más y el circuito en 9,8 s o menos; con 3 puntos, una de las dos un tramo más arriba. Con lo medido hoy no se puede decir que sea lo probable: depende sobre todo de la barra, que es donde más puntos caben, y del circuito, que no tiene ni un tiempo. Se revisa con cada test de barra y con el primer circuito cronometrado.",
+      "lineaBarra": {
+        "texto": "La línea que lleva a 85 s el 24-8-2027 (8 puntos, a 1 s del 9): 4 s más en cada test. Es lo que hace falta, no una previsión.",
+        "tests": [
+          [
+            "2026-11-17",
+            45
+          ],
+          [
+            "2026-12-15",
+            49
+          ],
+          [
+            "2027-01-12",
+            53
+          ],
+          [
+            "2027-02-09",
+            57
+          ],
+          [
+            "2027-03-09",
+            61
+          ],
+          [
+            "2027-04-06",
+            65
+          ],
+          [
+            "2027-05-04",
+            69
+          ],
+          [
+            "2027-06-01",
+            73
+          ],
+          [
+            "2027-06-29",
+            77
+          ],
+          [
+            "2027-07-27",
+            81
+          ],
+          [
+            "2027-08-24",
+            85
+          ]
+        ]
+      }
+    }
   },
   "pulso": {
     "reposo": 67,
@@ -206,7 +269,11 @@
     },
     {
       "t": "Ritmo K + 4",
-      "d": "4 s más lento por cada 400 que el ritmo K. Para series de 2-4 min."
+      "d": "4 s más lento por cada 400 que el ritmo K. Para series de 400 y 600 m."
+    },
+    {
+      "t": "Ritmo K + 10",
+      "d": "10 s más lento por cada 400 que el ritmo K. Para series de 2 y 3 min, 800 y 1.000 m: es, más o menos, el ritmo que aguantarías unos 10 min a tope."
     },
     {
       "t": "Ritmo O",
@@ -215,6 +282,10 @@
     {
       "t": "Descarga",
       "d": "La cuarta semana de cada bloque: menos carrera para llegar fresca al control del sábado."
+    },
+    {
+      "t": "Rápidos",
+      "d": "200 m 2 s más rápidos que el ritmo O, sueltos y con la vuelta andando."
     }
   ],
   "reglas": [
@@ -242,7 +313,8 @@
     {
       "id": "ritmos",
       "titulo": "Cómo se fijan los ritmos",
-      "texto": "Ritmo K: el mejor de tus dos últimos controles. K + 4: K más 4 s por cada 400. Umbral: K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15). Ritmo O (desde junio): K menos 2 s por cada 400. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada. Tu primer K salió del control del 26-10: 5:13."
+      "texto": "Ritmo K: el mejor de tus dos últimos controles; es el de las series de 200 a 600 m que buscan el ritmo de la prueba. K + 4: K más 4 s por cada 400, para series de 400 y 600 m. K + 10: K más 10 s por cada 400, para las de 2 y 3 min, 800 y 1.000 m. Ritmo O (desde junio): K menos 2 s por cada 400. Rápidos: 2 s más rápidos que el ritmo O cada 200. Umbral: por pulso (160-170) y frases cortas; K más un 20-25 % por kilómetro (con K a 5:00/km, de 6:00 a 6:15) es solo el tope, no el objetivo. Como mucho, 2.400 m a ritmo K por sesión. Todo se recalcula en cada control. Un control malo con asterisco (mala noche, enferma, calor, CrossFit de piernas el día antes) se apunta pero no baja nada. Tu primer K salió del control del 26-10: 5:13.",
+      "origen": "Revisado el 28-10-2026 (versión 5). Con las ecuaciones de Daniels y Gilbert, tu 5:13 equivale a un ritmo de máximo consumo de oxígeno de 5:35-5:42 el km (400 en 2:14-2:17: K + 9 a K + 12) y a un 1.500 en 8:09 (400 en 2:10: K + 5). K + 4 es tu ritmo de 1.500: vale para 400 y 600, pero para 2-3 min, 800 y 1.000 es demasiado rápido; ahí va K + 10. El umbral de la tabla (6:16-6:31 con K 5:13) sale de tu velocidad, y tu base aeróbica va muy por detrás: el 10-10 corriste 55 min a 8:54 con 163 de pulso y fue duro. Por eso el umbral se gobierna por pulso."
     },
     {
       "id": "dolor",
@@ -269,8 +341,8 @@
     {
       "id": "barra",
       "titulo": "Barra",
-      "texto": "Dos sesiones por semana, martes y jueves, en Martín Freire en lugar de su parte de barra, no además: la A (fuerza) y la B (la del examen). Un test cada cuatro semanas, el martes de la semana de descarga. Nunca al fallo salvo en el test. Todas las series con la técnica del BOE: agarre supino (palmas hacia ti), barbilla claramente por encima de la barra sin echar la cabeza atrás, cuerpo recto sin doblar la cadera y quieto. Si la serie se rompe (balanceo, cadera, barbilla a la barra), ahí se acaba. Codo u hombro con dolor de 3 o más: ese día sin barra. Progresión: en la B, 2 s más por semana si las cinco series salen limpias; tras cada test, la serie vuelve a la mitad del test nuevo. En la A, una bajada más por serie cuando todas salgan limpias; con 5 × 4 limpias, cada bajada pasa de 5 a 6 s.",
-      "origen": "Creada el 26-10-2026, a petición de Daniel, con su marca medida: 41 s. No hay ensayos que comparen formas de entrenar esta prueba: el método sale de principios generales (la fuerza isométrica sube sobre todo en el ángulo que se entrena, y cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso y más aguantas). Los números (la mitad del test, +2 s por semana) son criterio de entrenador."
+      "texto": "Dos sesiones por semana, martes y jueves, en Martín Freire en lugar de su parte de barra, no además: la A (fuerza) y la B (la del examen). Un test cada cuatro semanas, el martes de la semana de descarga. Nunca al fallo salvo en el test. Todas las series con la técnica del BOE: agarre supino (palmas hacia ti), barbilla claramente por encima de la barra sin echar la cabeza atrás, cuerpo recto sin doblar la cadera y quieto. Si la serie se rompe (balanceo, cadera, barbilla a la barra), ahí se acaba. Codo u hombro con dolor de 3 o más: ese día sin barra. Progresión: en la B, 2 s más por semana si las cinco series salen limpias; tras cada test, la serie vuelve a la mitad del test nuevo. En la A, una bajada más por serie cuando todas salgan limpias; con 5 × 4 limpias, cada bajada pasa de 5 a 6 s. Línea de los tests (meta de 21-22 puntos): 4 s más en cada uno, de 41 s a 85 s el 24-8 (45, 49, 53, 57, 61, 65, 69, 73, 77, 81 y 85). Si un test sube menos de 4 s sobre el anterior, desde esa semana hay una tercera sesión corta, el sábado después de correr: la B con 3 series en lugar de 5 (10 min), salvo el sábado del control y siempre con codo y hombro por debajo de 3.",
+      "origen": "Creada el 26-10-2026, a petición de Daniel, con su marca medida: 41 s. No hay ensayos que comparen formas de entrenar esta prueba: el método sale de principios generales (la fuerza isométrica sube sobre todo en el ángulo que se entrena, y cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso y más aguantas). Los números (la mitad del test, +2 s por semana) son criterio de entrenador. La línea de los tests y la tercera sesión condicionada se añadieron el 28-10-2026, con la meta de 21-22 puntos: de 41 s a 78 s hay 6 puntos, más que en ninguna otra prueba. El +4 s por test es lo que hace falta para llegar, no una previsión."
     },
     {
       "id": "cuarto-dia",
@@ -472,8 +544,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -512,8 +584,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -585,8 +657,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -625,8 +697,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -698,8 +770,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -738,8 +810,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -796,8 +868,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -829,8 +901,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -902,8 +974,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -942,8 +1014,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1015,8 +1087,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1033,7 +1105,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1043,7 +1115,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -1055,8 +1127,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1128,8 +1200,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1146,7 +1218,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1156,7 +1228,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -1168,8 +1240,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1226,8 +1298,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1259,8 +1331,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1296,8 +1368,9 @@
           "fecha": "2026-12-21",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "6 × 2 min a ritmo K + 4, rec. 2 min trotando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "6 × 2 min a ritmo K + 10, rec. 2 min trotando",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Todas al mismo ritmo, dentro de 3 s por 400 del objetivo; la primera, no más rápida."
         },
         {
           "fecha": "2026-12-22",
@@ -1331,8 +1404,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1371,8 +1444,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1409,7 +1482,7 @@
           "dia": "Lun",
           "tipo": "calidad",
           "titulo": "4 × 5 min a umbral, rec. 1 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después, 10 min muy suave."
         },
         {
           "fecha": "2026-12-29",
@@ -1443,8 +1516,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1461,7 +1534,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1471,7 +1544,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -1483,8 +1556,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1520,8 +1593,9 @@
           "fecha": "2027-01-04",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "8 × 2 min a ritmo K + 4, rec. 2 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "8 × 2 min a ritmo K + 10, rec. 2 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Todas al mismo ritmo, dentro de 3 s por 400 del objetivo; la primera, no más rápida."
         },
         {
           "fecha": "2027-01-05",
@@ -1555,8 +1629,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1573,7 +1647,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1583,7 +1657,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -1595,8 +1669,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1653,8 +1727,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1686,8 +1760,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1723,8 +1797,9 @@
           "fecha": "2027-01-18",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "5 × 3 min a ritmo K + 4, rec. 2 min 30 s",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "5 × 3 min a ritmo K + 10, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Todas al mismo ritmo, dentro de 3 s por 400 del objetivo; la primera, no más rápida."
         },
         {
           "fecha": "2027-01-19",
@@ -1758,8 +1833,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1798,8 +1873,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1836,7 +1911,7 @@
           "dia": "Lun",
           "tipo": "calidad",
           "titulo": "3 × 8 min a umbral, rec. 2 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-01-26",
@@ -1870,8 +1945,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1888,7 +1963,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1898,7 +1973,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -1910,8 +1985,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -1947,8 +2022,9 @@
           "fecha": "2027-02-01",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "6 × 3 min a ritmo K + 4, rec. 2 min 30 s",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "6 × 3 min a ritmo K + 10, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Todas al mismo ritmo, dentro de 3 s por 400 del objetivo; la primera, no más rápida."
         },
         {
           "fecha": "2027-02-02",
@@ -1982,8 +2058,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2000,7 +2076,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -2010,7 +2086,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -2022,8 +2098,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2080,8 +2156,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2113,8 +2189,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2186,8 +2262,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2226,8 +2302,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2264,7 +2340,7 @@
           "dia": "Lun",
           "tipo": "calidad",
           "titulo": "2 × 12 min a umbral, rec. 2 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-02-23",
@@ -2298,8 +2374,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2316,7 +2392,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -2326,7 +2402,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -2338,8 +2414,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2411,8 +2487,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2429,7 +2505,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -2439,7 +2515,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -2451,8 +2527,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2509,8 +2585,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2542,8 +2618,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2615,8 +2691,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2655,8 +2731,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2728,8 +2804,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2738,14 +2814,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "2 × 8 min a umbral + 15 min suave",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-03-25",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -2755,7 +2831,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -2767,8 +2843,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2804,9 +2880,9 @@
           "fecha": "2027-03-29",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "4 × 800 m a ritmo K + 4, rec. 3 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
-          "objetivo": "Las cuatro dentro de 4 s del objetivo."
+          "titulo": "3 × 800 m a ritmo K + 10, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las tres dentro de 4 s del objetivo."
         },
         {
           "fecha": "2027-03-30",
@@ -2840,8 +2916,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2858,7 +2934,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -2868,7 +2944,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -2880,8 +2956,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2937,8 +3013,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -2970,8 +3046,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3043,8 +3119,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3083,8 +3159,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3120,8 +3196,9 @@
           "fecha": "2027-04-19",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "5 × 600 m a ritmo K, rec. 3 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "4 × 600 m a ritmo K, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 3 s del objetivo: 2.400 m a ritmo K, el tope por sesión."
         },
         {
           "fecha": "2027-04-20",
@@ -3155,8 +3232,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3165,14 +3242,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "2 × 8 min a umbral + 15 min suave",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-04-22",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -3182,7 +3259,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -3194,8 +3271,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3231,8 +3308,9 @@
           "fecha": "2027-04-26",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "5 × 800 m a ritmo K + 4, rec. 3 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "4 × 800 m a ritmo K + 10, rec. 3 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 4 s del objetivo."
         },
         {
           "fecha": "2027-04-27",
@@ -3266,8 +3344,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3284,7 +3362,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -3294,7 +3372,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -3306,8 +3384,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3363,8 +3441,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3396,8 +3474,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3433,8 +3511,9 @@
           "fecha": "2027-05-10",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "3 × 1.000 m a ritmo K + 4, rec. 4 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 4: 4 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "3 × 1.000 m a ritmo K + 10, rec. 4 min",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K + 10: 10 s más lento por cada 400 que el ritmo K (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las tres dentro de 5 s del objetivo."
         },
         {
           "fecha": "2027-05-11",
@@ -3468,8 +3547,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3508,8 +3587,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3580,8 +3659,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3590,14 +3669,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "2 × 10 min a umbral + 15 min suave",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: el ritmo de la tabla de Ritmos; puedes decir frases cortas, pero no conversar. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Umbral: frases cortas, no conversación, y pulso de 160 a 170; el ritmo de la tabla de Ritmos es el tope: aunque te sobre, no vas más rápido. Después de la parte de umbral, 15 min suaves. Solo si el lunes salió sin dolor y no llegas cargada; si no, 50 min suave. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-05-20",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -3607,7 +3686,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -3619,8 +3698,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3656,8 +3735,9 @@
           "fecha": "2027-05-24",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "5 × 600 m a ritmo K, rec. 3 min",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave."
+          "titulo": "4 × 600 m a ritmo K, rec. 2 min 30 s",
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el mejor de tus dos últimos controles (ver Ritmos). Después, 10 min muy suave.",
+          "objetivo": "Las cuatro dentro de 3 s del objetivo: 2.400 m a ritmo K, el tope por sesión."
         },
         {
           "fecha": "2027-05-25",
@@ -3691,8 +3771,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3709,7 +3789,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -3719,7 +3799,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -3731,8 +3811,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3788,8 +3868,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3821,8 +3901,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3894,8 +3974,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -3934,8 +4014,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4007,8 +4087,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4017,14 +4097,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "8 × 200 m rápidos, rec. 200 m andando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. 2 s más rápidos que el ritmo O cada 200 (ver Ritmos), sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-06-17",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4034,7 +4114,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -4046,8 +4126,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4118,8 +4198,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4136,7 +4216,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4146,7 +4226,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -4158,8 +4238,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4215,8 +4295,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4248,8 +4328,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4320,8 +4400,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4360,8 +4440,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4398,7 +4478,7 @@
           "dia": "Lun",
           "tipo": "calidad",
           "titulo": "3 × 600 m a ritmo O, rec. 2 min 30 s + 2 × 200 m rápidos",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Los 200 rápidos, 2 s más rápidos que el ritmo O cada 200, tras 3 min de pausa y con la vuelta andando. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-07-13",
@@ -4432,8 +4512,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4442,14 +4522,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "8 × 200 m rápidos, rec. 200 m andando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. 2 s más rápidos que el ritmo O cada 200 (ver Ritmos), sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-07-15",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4459,7 +4539,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -4471,8 +4551,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4543,8 +4623,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4561,7 +4641,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4571,7 +4651,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -4583,8 +4663,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4640,8 +4720,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4673,8 +4753,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4745,8 +4825,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4785,8 +4865,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4823,7 +4903,7 @@
           "dia": "Lun",
           "tipo": "calidad",
           "titulo": "2 × 600 m a ritmo O, rec. 3 min + 3 × 200 m rápidos",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo O: el del objetivo del próximo control (ver Ritmos). Los 200 rápidos, 2 s más rápidos que el ritmo O cada 200, tras 3 min de pausa y con la vuelta andando. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-08-10",
@@ -4857,8 +4937,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4867,14 +4947,14 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "8 × 200 m rápidos, rec. 200 m andando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. 2 s más rápidos que el ritmo O cada 200 (ver Ritmos), sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-08-12",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4884,7 +4964,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -4896,8 +4976,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4968,8 +5048,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -4986,7 +5066,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -4996,7 +5076,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+4",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -5008,8 +5088,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5065,8 +5145,8 @@
               "d": "Con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5098,8 +5178,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5170,8 +5250,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5180,7 +5260,7 @@
           "dia": "Mié",
           "tipo": "calidad",
           "titulo": "8 × 200 m rápidos, rec. 200 m andando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Más rápidos que el ritmo O pero sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
+          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. 2 s más rápidos que el ritmo O cada 200 (ver Ritmos), sueltos, sin llegar a sprint. Recuperación completa: andando. Al acabar, 3 × 15 elevaciones de talón a una pierna. Después, 10 min muy suave."
         },
         {
           "fecha": "2027-09-02",
@@ -5209,8 +5289,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5281,8 +5361,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5299,7 +5379,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Martín Freire: barra y circuito",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -5309,7 +5389,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": "mitad+2",
               "rec": 120,
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
@@ -5321,8 +5401,8 @@
               "d": "Para el agarre."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5387,8 +5467,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5420,8 +5500,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5486,8 +5566,8 @@
               "rec": 60
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5519,8 +5599,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5579,8 +5659,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5612,8 +5692,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5672,8 +5752,8 @@
               "d": "Agarre supino, barbilla por encima de la barra, cuerpo recto y quieto."
             },
             {
-              "t": "Circuito con Martín Freire",
-              "d": "Lo que toque con él."
+              "t": "Circuito en el Martín Freire",
+              "d": "Lo que toque allí."
             }
           ]
         },
@@ -5727,7 +5807,7 @@
     },
     {
       "id": "circuito-medir",
-      "texto": "Circuito: no hay ningún tiempo suyo. Pedir a Martín Freire un intento cronometrado con las reglas del BOE (desde la voz de «ya» hasta que toca el suelo tras la última valla). 12,8 s o más elimina.",
+      "texto": "Circuito: no hay ningún tiempo suyo, y con la meta de 21-22 puntos tiene que estar en 9,8 s o menos (9 puntos). Pedir en el Martín Freire un intento cronometrado con las reglas del BOE (desde la voz de «ya» hasta que toca el suelo tras la última valla) y después uno cada cuatro semanas, el jueves de la semana de descarga: el primero es el que cuenta, como en el examen. 12,8 s o más elimina.",
       "desde": "2026-10-26"
     },
     {
@@ -5796,7 +5876,8 @@
       "El ritmo suave sale de las ecuaciones de Daniels y Gilbert (las de las tablas VDOT del entrenador Jack Daniels), aplicadas a tu rodaje del 10-10. Con ellas, tu ritmo suave sería de 10:13 a 11:12 el km si aquel día hubieras ido al máximo que aguantas 55 min, y de 9:43 a 10:40 si ibas al 95 % de ese máximo. Es la parte alta de la zona suave de esas tablas (del 65 al 74 % de tu nivel).",
       "Se redondea a la franja que comparten los dos casos: 10:00-11:00 el km.",
       "Con las mismas ecuaciones, el 10-10 equivale a un 1.000 m en 7:58 si hubiera sido a tope.",
-      "Son estimaciones, no medidas. Se revisan con tus primeros entrenos y se cambian por números de verdad tras el control del 21-11: desde ahí, todos los ritmos de series salen de tu ritmo K (ver Reglas › Cómo se fijan los ritmos)."
+      "Son estimaciones, no medidas. Se revisan con tus primeros entrenos y se cambian por números de verdad tras el control del 21-11: desde ahí, todos los ritmos de series salen de tu ritmo K (ver Reglas › Cómo se fijan los ritmos).",
+      "El 26-10 corriste el 1.000 en 5:13, 2:45 más rápido que los 7:58 que daban esas ecuaciones con el 10-10: tu velocidad va muy por delante de tu base aeróbica. Por eso los ritmos de las series salen de tu ritmo K, y lo suave y el umbral se gobiernan por pulso."
     ],
     "revisar": "Con cada control: el siguiente, el sábado 21-11.",
     "rapidos": {
@@ -6100,7 +6181,7 @@
       "nombre": "Control de 1.000 m",
       "icono": "control",
       "enUnaFrase": "Un 1.000 m a tope en la pista, como en la prueba: el tiempo que sale fija todos tus ritmos.",
-      "paraQue": "Es tu marca real y la que manda: con ella se calculan los ritmos K, K + 4, O y umbral (regla «Cómo se fijan los ritmos»). Además enseña a repartir el esfuerzo, que en un 1.000 vale casi tanto como estar en forma.",
+      "paraQue": "Es tu marca real y la que manda: con ella se calculan los ritmos K, K + 4, K + 10, O, los rápidos y el tope del umbral (regla «Cómo se fijan los ritmos»). Además enseña a repartir el esfuerzo, que en un 1.000 vale casi tanto como estar en forma.",
       "ritmo": "K",
       "esfuerzo": "10 de 10 al final, no al principio",
       "antes": [
@@ -6193,19 +6274,19 @@
       "video": "fartlek para principiantes"
     },
     {
-      "id": "intervalos-k4",
-      "nombre": "Intervalos a ritmo K + 4",
+      "id": "intervalos",
+      "nombre": "Intervalos a ritmo K + 10",
       "icono": "carrera",
-      "enUnaFrase": "Repeticiones de 2-3 min algo más lentas que tu ritmo del 1.000, con la recuperación trotando.",
+      "enUnaFrase": "Repeticiones de 2 a 3 min, o de 800 y 1.000 m, algo más lentas que tu ritmo del 1.000, con la recuperación trotando.",
       "paraQue": "Trabajan cerca del ritmo de la prueba pero durante más tiempo: suben el techo de tu corazón y tus pulmones. Son el puente entre lo suave y las series de pista.",
-      "ritmo": "K+4",
+      "ritmo": "K+10",
       "esfuerzo": "7-8 de 10",
       "antes": [
         "En llano: la pista o un paseo sin cruces."
       ],
       "pasos": [
         "Calentamiento completo (15 min suave, movilidad y 4 rectas).",
-        "Corre los minutos de la repetición a ritmo K + 4: 4 s más lento por cada 400 m que tu ritmo K. Mira el reloj al principio para coger el ritmo y después ve por sensación.",
+        "Corre cada repetición a ritmo K + 10: 10 s más lento por cada 400 m que tu ritmo K. Mira el reloj al principio para coger el ritmo y después ve por sensación.",
         "Recupera trotando muy suave el tiempo de la sesión. No te pares.",
         "Repite. Todas al mismo ritmo: la primera no es más rápida.",
         "10 min muy suaves para acabar."
@@ -6234,7 +6315,7 @@
       ],
       "pasos": [
         "Calentamiento completo.",
-        "Cada bloque a ritmo de umbral, constante de principio a fin (sale de tu ritmo K: de K × 1,20 a K × 1,25 por km).",
+        "Cada bloque a umbral, constante de principio a fin: pulso de 160 a 170 y frases cortas. El ritmo de la tabla (de K × 1,20 a K × 1,25 por km) es el tope: aunque te sobre, no vas más rápido.",
         "Entre bloques, lo que diga la sesión, trotando suave.",
         "Si la sesión lo dice, 15 min suaves después.",
         "10 min muy suaves para acabar."
@@ -6311,7 +6392,7 @@
       "id": "rapidos",
       "nombre": "200 m rápidos",
       "icono": "carrera",
-      "enUnaFrase": "200 m más rápidos que tu ritmo O pero sueltos, con la vuelta andando.",
+      "enUnaFrase": "200 m 2 s más rápidos que tu ritmo O, sueltos, con la vuelta andando.",
       "paraQue": "Dan velocidad y soltura para el final del 1.000 sin cansar demasiado, porque la recuperación es completa.",
       "ritmo": "rapidos",
       "esfuerzo": "8-9 de 10",
@@ -6320,7 +6401,7 @@
       ],
       "pasos": [
         "Calentamiento completo.",
-        "200 m rápidos: más rápido que tu ritmo O, pero suelta, sin apretar los dientes.",
+        "200 m rápidos: 2 s más rápido que tu ritmo O (ver Ritmos), pero suelta, sin apretar los dientes.",
         "Recupera andando 200 m hasta la salida.",
         "Repite las que diga la sesión.",
         "10 min muy suaves para acabar."

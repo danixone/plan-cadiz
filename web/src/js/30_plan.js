@@ -432,8 +432,13 @@
     var rk = regla('ritmos');
     h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>' + esc(rk ? rk.titulo : 'Ritmos K, K + 4 y O') + '</h3><small>' +
       esc(RD.K ? 'K = ' + RD.K.txt + ', el mejor de los dos últimos controles' : 'Salen del primer control: hasta entonces, por sensación') + '</small></div></div>' +
-      (RD.tabla ? '<div class="tscroll"><table class="t"><thead><tr><th scope="col">Distancia</th><th scope="col">K</th><th scope="col">K + 4</th><th scope="col">O</th></tr></thead><tbody>' +
-        RD.tabla.map(function (f) { return '<tr><th scope="row">' + f.dist + ' m</th><td>' + esc(f.K) + '</td><td>' + esc(f['K+4']) + '</td><td>' + esc(f.O) + '</td></tr>'; }).join('') + '</tbody></table></div>' : '') +
+      (RD.tabla ? '<div class="tscroll"><table class="t"><thead><tr><th scope="col">Distancia</th><th scope="col">O</th><th scope="col">K</th><th scope="col">K + 4</th>' +
+        (RD.tabla[0]['K+10'] ? '<th scope="col">K + 10</th>' : '') + '</tr></thead><tbody>' +
+        RD.tabla.map(function (f) {
+          return '<tr><th scope="row">' + (f.dist >= 1000 ? '1.000' : f.dist) + ' m</th><td>' + esc(f.O) + '</td><td>' + esc(f.K) + '</td><td>' + esc(f['K+4']) + '</td>' + (f['K+10'] ? '<td>' + esc(f['K+10']) + '</td>' : '') + '</tr>';
+        }).join('') + '</tbody></table></div>' +
+        (RD.tabla[0].rapidos ? '<p class="faint">200 rápidos: ' + esc(RD.tabla[0].rapidos) + ' (2 s más rápidos que el ritmo O).' +
+          (RD.umbral ? ' Umbral: pulso 160-170; no más rápido de ' + esc(RD.umbral[0]) + ' el km.' : '') + '</p>' : '') : '') +
       (rk ? enParrafos(rk.texto) : '') + '</article>';
     if (RE.metodo || RE.base) h += '<article class="card pl-rb"><div class="card-h"><div class="t"><h3>De dónde salen</h3><small>' + esc(RE.fecha ? 'estimación del ' + dm(RE.fecha) : '') + '</small></div></div>' +
       (RE.base ? '<p>' + esc(RE.base) + '</p>' : '') + (RE.metodo ? acc('El método', parrafos(RE.metodo)) : '') + (RE.revisar ? '<p class="faint">Se revisa: ' + esc(RE.revisar) + '</p>' : '') + '</article>';

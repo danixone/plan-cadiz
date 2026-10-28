@@ -95,6 +95,11 @@ def mmss(s, dec=0):
     return '%d:%02d' % (m, r)
 
 
+def miles(n):
+    """1000 → '1.000' (como se escribe en el plan)."""
+    return '{:,}'.format(n).replace(',', '.')
+
+
 def t_rep(s, dist):
     """Tiempo de una repetición: medio segundo en 200 y 300, segundo entero desde 400."""
     if dist <= 300:
@@ -182,10 +187,10 @@ def parsear(d, sem):
         if m:
             p = {'tipo': 'rodaje', 'min': int(m.group(1)), 'alegreFinal': int(m.group(2))}
     if not p:
-        m = re.match(r'^(\d+) × (\d+) min a (ritmo K \+ 4|umbral)(?:, rec\. ([\d a-z]+?)( trotando)?| \+ (\d+) min suave)$', t)
+        m = re.match(r'^(\d+) × (\d+) min a (ritmo K \+ 10|ritmo K \+ 4|umbral)(?:, rec\. ([\d a-z]+?)( trotando)?| \+ (\d+) min suave)$', t)
         if m:
             p = {'tipo': 'intervalos', 'n': int(m.group(1)), 'dur': int(m.group(2)) * 60,
-                 'ritmo': 'K+4' if 'K' in m.group(3) else 'umbral'}
+                 'ritmo': {'ritmo K + 10': 'K+10', 'ritmo K + 4': 'K+4'}.get(m.group(3), 'umbral')}
             if m.group(4):
                 p['rec'] = rec_seg(m.group(4))
                 p['recTxt'] = m.group(4) + (' trotando' if m.group(5) else '')
@@ -194,9 +199,9 @@ def parsear(d, sem):
             if m.group(6):
                 p['despues'] = int(m.group(6))
     if not p:
-        m = re.match(r'^(\d+) × (\d+(?:\.\d{3})?) m (?:a ritmo (K \+ 4|K|O)|(rápidos)), rec\. (.+?)(?: \+ (\d+) × (\d+) m rápidos)?$', t)
+        m = re.match(r'^(\d+) × (\d+(?:\.\d{3})?) m (?:a ritmo (K \+ 10|K \+ 4|K|O)|(rápidos)), rec\. (.+?)(?: \+ (\d+) × (\d+) m rápidos)?$', t)
         if m:
-            ritmo = {'K + 4': 'K+4', 'K': 'K', 'O': 'O'}.get(m.group(3)) if m.group(3) else 'rapidos'
+            ritmo = {'K + 10': 'K+10', 'K + 4': 'K+4', 'K': 'K', 'O': 'O'}.get(m.group(3)) if m.group(3) else 'rapidos'
             rec = m.group(5)
             p = {'tipo': 'series', 'n': int(m.group(1)), 'dist': int(m.group(2).replace('.', '')), 'ritmo': ritmo}
             mr = re.match(r'^(\d+) m andando$', rec)
@@ -265,11 +270,11 @@ def ejercicios_de(p):
         if p.get('extra'):
             out += ['series-k']
     elif t == 'intervalos':
-        out += ['umbral' if p['ritmo'] == 'umbral' else 'intervalos-k4']
+        out += ['umbral' if p['ritmo'] == 'umbral' else 'intervalos']
         if p.get('despues'):
             out += ['suave']
     elif t == 'series':
-        out += {'K': ['series-k'], 'K+4': ['series-k'], 'O': ['series-o'], 'rapidos': ['rapidos']}[p['ritmo']]
+        out += {'K': ['series-k'], 'K+4': ['series-k'], 'K+10': ['intervalos'], 'O': ['series-o'], 'rapidos': ['rapidos']}[p['ritmo']]
         if p.get('extra'):
             out += ['rapidos']
     elif t == 'kmPartido':
@@ -300,8 +305,10 @@ def ritmos_de_k(k):
     return {
         'K': {'km': k, '400': k400, '200': k * 0.2},
         'K+4': {'km': (k400 + 4) * 2.5, '400': k400 + 4, '200': (k400 + 4) / 2},
+        'K+10': {'km': (k400 + 10) * 2.5, '400': k400 + 10, '200': (k400 + 10) / 2},
         'O': {'km': (k400 - 2) * 2.5, '400': k400 - 2, '200': (k400 - 2) / 2},
-        'umbral': {'km': [k * 1.20, k * 1.25]},
+        'rapidos': {'400': k400 - 6, '200': (k400 - 6) / 2},          # 2 s más rápidos que O cada 200
+        'umbral': {'km': [k * 1.20, k * 1.25]},                       # desde el 28-10, solo el tope: manda el pulso (160-170)
     }
 
 
@@ -317,7 +324,7 @@ def k_en(controles, fecha, incluir=False):
 
 def ritmo_txt_rep(R, ritmo, dist):
     """'2:24' para un 400 a ritmo K (None si no hay K o el ritmo va por sensación)."""
-    if not R or ritmo not in ('K', 'K+4', 'O'):
+    if not R or ritmo not in ('K', 'K+4', 'K+10', 'O', 'rapidos'):
         return None
     return t_rep(R[ritmo]['400'] * dist / 400, dist)
 
@@ -416,16 +423,17 @@ def pasos_de(p, R, RE):
                 paso('%d m a ritmo K%s' % (x['dist'], (' · ' + rt) if rt else ''), 'Repetición %d de %d · %s entre cada uno' % (i + 1, x['n'], x['rec']),
                      None, 'final', n=i + 1, de=x['n'], dist=x['dist'], obj=rt, ej='series-k')
     elif tipo == 'intervalos':
-        ritmo = 'umbral' if p['ritmo'] == 'umbral' else 'ritmo K + 4'
+        ritmo = {'umbral': 'umbral', 'K+4': 'ritmo K + 4', 'K+10': 'ritmo K + 10'}[p['ritmo']]
         for i in range(p['n']):
             obj = None
-            if R:
-                if p['ritmo'] == 'umbral':
-                    obj = '%s-%s /km' % (mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1]))
-                else:
-                    obj = '%s /km' % mmss(R['K+4']['km'])
-            paso('%d min a %s%s' % (p['dur'] // 60, ritmo, (' · ' + obj) if obj else ''), 'Repetición %d de %d' % (i + 1, p['n']),
-                 p['dur'], 'principal', n=i + 1, de=p['n'], fase='rapido', obj=obj, ej='umbral' if p['ritmo'] == 'umbral' else 'intervalos-k4')
+            if p['ritmo'] == 'umbral':
+                obj = 'pulso 160-170' + ((', no más rápido de %s /km' % mmss(R['umbral']['km'][0])) if R else '')
+            elif R:
+                obj = '%s /km' % mmss(R[p['ritmo']]['km'])
+            dist = int(round(p['dur'] / R[p['ritmo']]['km'] * 1000, -1)) if R and p['ritmo'] != 'umbral' else None
+            paso('%d min a %s%s' % (p['dur'] // 60, ritmo, (' · ' + obj) if obj else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
+                 ((' · unos %d m' % dist) if dist else ''),
+                 p['dur'], 'principal', n=i + 1, de=p['n'], fase='rapido', obj=obj, ej='umbral' if p['ritmo'] == 'umbral' else 'intervalos')
             if i < p['n'] - 1 and p.get('rec'):
                 paso('Recupera %s' % p['recTxt'], '', p['rec'], 'principal', n=i + 1, de=p['n'], fase='rec')
             elif i < p['n'] - 1 and p['ritmo'] == 'umbral' and not p.get('rec'):
@@ -434,20 +442,22 @@ def pasos_de(p, R, RE):
         if p.get('despues'):
             paso('%d min suaves' % p['despues'], (suave + ' /km') if suave else '', p['despues'] * 60, 'principal', ej='suave')
     elif tipo == 'series':
-        nombre = {'K': 'a ritmo K', 'K+4': 'a ritmo K + 4', 'O': 'a ritmo O', 'rapidos': 'rápidos'}[p['ritmo']]
+        nombre = {'K': 'a ritmo K', 'K+4': 'a ritmo K + 4', 'K+10': 'a ritmo K + 10', 'O': 'a ritmo O', 'rapidos': 'rápidos'}[p['ritmo']]
         rt = ritmo_txt_rep(R, p['ritmo'], p['dist'])
         pm = paso_marcas(rt, p['dist']) if rt else None
         for i in range(p['n']):
-            paso('%d m %s%s' % (p['dist'], nombre, (' · ' + rt) if rt else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
+            paso('%s m %s%s' % (miles(p['dist']), nombre, (' · ' + rt) if rt else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
                  ((' · recuperación %s' % p['recTxt']) if i < p['n'] - 1 else '') + ((' · paso: ' + pm) if pm else ''),
                  p.get('rec') if i < p['n'] - 1 else None, 'principal', n=i + 1, de=p['n'], dist=p['dist'], obj=rt,
-                 recDist=p.get('recDist') if i < p['n'] - 1 else None, ej={'K': 'series-k', 'K+4': 'series-k', 'O': 'series-o', 'rapidos': 'rapidos'}[p['ritmo']])
+                 recDist=p.get('recDist') if i < p['n'] - 1 else None,
+                 ej={'K': 'series-k', 'K+4': 'series-k', 'K+10': 'intervalos', 'O': 'series-o', 'rapidos': 'rapidos'}[p['ritmo']])
         if p.get('extra'):
             x = p['extra']
             paso('Pausa de 3 min', 'Antes de los %d × %d m rápidos.' % (x['n'], x['dist']), 180, 'principal', sinPlan=True)
+            rr = ritmo_txt_rep(R, 'rapidos', x['dist'])
             for i in range(x['n']):
-                paso('%d m rápidos' % x['dist'], 'Repetición %d de %d · vuelves andando' % (i + 1, x['n']), None, 'principal', n=i + 1, de=x['n'],
-                     dist=x['dist'], ej='rapidos')
+                paso('%d m rápidos%s' % (x['dist'], (' · ' + rr) if rr else ''), 'Repetición %d de %d · vuelves andando' % (i + 1, x['n']), None,
+                     'principal', n=i + 1, de=x['n'], dist=x['dist'], obj=rr, ej='rapidos')
     elif tipo == 'kmPartido':
         a, b = p['partes']
         for i in range(p['n']):
@@ -499,11 +509,12 @@ def barra_dia(spec, test):
         P.append(x)
 
     for i, it in enumerate(spec):
-        seg = mitad if it.get('seg') == 'mitad' else it.get('seg')
-        if it.get('seg') == 'mitad' and seg is None:
+        mm = re.match(r'^mitad(?:\+(\d+))?$', str(it.get('seg') or ''))      # «mitad» o «mitad+2»: +2 s por semana (versión 5)
+        seg = (mitad + int(mm.group(1) or 0) if mitad is not None else None) if mm else it.get('seg')
+        if mm and seg is None:
             raise SystemExit('ERROR: barra con «la mitad del test» y sin marca de barra en pruebasMujeres')
         n = it.get('n') or 1
-        nota = (' · la mitad de tu último test (%d s)' % test) if it.get('seg') == 'mitad' else ''
+        nota = ((' · la mitad de tu último test (%d s)' % test) + ((' más %s s' % mm.group(1)) if mm.group(1) else '')) if mm else ''
         if n == 1 and not it.get('reps'):
             paso(it['t'] + ((' · %d min' % (seg // 60)) if seg and seg >= 60 and seg % 60 == 0 else (' · %d s' % seg) if seg else ''), it.get('d', ''), seg,
                  ej='barra' if i == 0 else None)
@@ -552,12 +563,13 @@ def numeros_de(p, R, RE):
         if suave:
             N.append({'v': suave, 'l': 'ritmo suave /km', 'est': True})
     elif t == 'intervalos':
-        N = [{'v': '%d × %d min' % (p['n'], p['dur'] // 60), 'l': 'a umbral' if p['ritmo'] == 'umbral' else 'a ritmo K + 4'}]
-        if R:
-            if p['ritmo'] == 'umbral':
-                N.append({'v': '%s-%s' % (mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1])), 'l': 'por km'})
-            else:
-                N.append({'v': mmss(R['K+4']['km']), 'l': 'por km'})
+        N = [{'v': '%d × %d min' % (p['n'], p['dur'] // 60), 'l': {'umbral': 'a umbral', 'K+4': 'a ritmo K + 4', 'K+10': 'a ritmo K + 10'}[p['ritmo']]}]
+        if p['ritmo'] == 'umbral':
+            N.append({'v': '160-170', 'l': 'pulso'})
+            if R:
+                N.append({'v': mmss(R['umbral']['km'][0]), 'l': 'tope por km'})
+        elif R:
+            N.append({'v': mmss(R[p['ritmo']]['km']), 'l': 'por km'})
         else:
             N.append({'v': 'tras el control', 'l': 'el ritmo sale de K', 'pend': True})
         if p.get('rec'):
@@ -565,12 +577,14 @@ def numeros_de(p, R, RE):
         elif p.get('despues'):
             N.append({'v': '%d min' % p['despues'], 'l': 'suaves después'})
     elif t == 'series':
-        N = [{'v': '%d × %d m' % (p['n'], p['dist']), 'l': 'series'}]
+        N = [{'v': '%d × %s m' % (p['n'], miles(p['dist'])), 'l': 'series'}]
         rt = ritmo_txt_rep(R, p['ritmo'], p['dist'])
-        if p['ritmo'] == 'rapidos':
+        if p['ritmo'] == 'rapidos' and rt:
+            N.append({'v': rt, 'l': 'cada %s · O menos 2 s' % miles(p['dist'])})
+        elif p['ritmo'] == 'rapidos':
             N.append({'v': 'rápidos', 'l': 'sueltos, sin sprint'})
         elif rt:
-            N.append({'v': rt, 'l': 'cada %d · ritmo %s' % (p['dist'], p['ritmo'].replace('+', ' + '))})
+            N.append({'v': rt, 'l': 'cada %s · ritmo %s' % (miles(p['dist']), p['ritmo'].replace('+', ' + '))})
         else:
             N.append({'v': 'tras el control', 'l': 'el ritmo sale de K', 'pend': True})
         N.append({'v': p['recTxt'].replace(' andando', '').replace(' trotando', ''), 'l': 'recuperación' + (' andando' if 'andando' in p['recTxt'] else '')})
@@ -732,7 +746,8 @@ def construir(plan, hist, hoy):
     if R:
         ritmos['K'] = {'s': K, 'txt': mmss(K), 'de': deK}
         ritmos['tabla'] = [{'dist': d, 'K': t_rep(R['K']['400'] * d / 400, d), 'K+4': t_rep(R['K+4']['400'] * d / 400, d),
-                            'O': t_rep(R['O']['400'] * d / 400, d)} for d in (200, 300, 400, 600, 800, 1000)]
+                            'K+10': t_rep(R['K+10']['400'] * d / 400, d), 'O': t_rep(R['O']['400'] * d / 400, d),
+                            'rapidos': t_rep(R['rapidos']['400'] * d / 400, d) if d == 200 else None} for d in (200, 300, 400, 600, 800, 1000)]
         ritmos['umbral'] = [mmss(R['umbral']['km'][0]), mmss(R['umbral']['km'][1])]
 
     # marca del 1.000 para el chip y el simulador
