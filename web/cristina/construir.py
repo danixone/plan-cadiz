@@ -669,7 +669,7 @@ def construir(plan, hist, hoy):
         fase = fases[w['fase']]
         sem = {'semana': '%s/%s' % (a, b), 'n': w['n'], 'fase': w['fase'], 'descarga': bool(w.get('descarga')),
                'titulo': 'Semana %d · %s' % (w['n'], fase['nombre']) + (' · descarga' if w.get('descarga') else ''),
-               'nota': 'Semana de descarga: menos carrera para llegar fresca al control del sábado.' if w.get('descarga') else None, 'dias': []}
+               'nota': 'Semana de descarga: menos carrera para llegar fresca al control del lunes siguiente.' if w.get('descarga') else None, 'dias': []}
         if F(a).weekday() != 0:
             errores.append('calendario: la semana %d no empieza en lunes (%s)' % (w['n'], a))
         min_plan = 0
@@ -683,7 +683,7 @@ def construir(plan, hist, hoy):
             if d['dia'] != DOW[F(f).weekday()]:
                 errores.append('calendario: %s dice «%s» y es %s' % (f, d['dia'], DOW[F(f).weekday()]))
             tipo = {'suave': 'carrera', 'calidad': 'carrera', 'control': 'control', 'prueba': 'prueba', 'otro': 'otro'}[d['tipo']]
-            sub = d['tipo'] if d['tipo'] != 'otro' else ('martin' if 'Martín Freire' in d['titulo'] else 'crossfit' if 'CrossFit' in d['titulo'] else 'otro')
+            sub = d['tipo'] if d['tipo'] != 'otro' else ('martin' if 'Martín Freire' in d['titulo'] else 'barra' if d.get('barra') else 'crossfit' if 'CrossFit' in d['titulo'] else 'otro')
             base = {'fecha': f, 'dia': d['dia'], 'tipo': tipo, 'sub': sub, 'sesion': d['titulo']}
             for k in ('objetivo', 'min'):
                 if d.get(k) not in (None, ''):
@@ -720,6 +720,11 @@ def construir(plan, hist, hoy):
                 if d.get('objetivo'):
                     web_dias[f]['variantes'] = {'verde': d['objetivo']}
                 dd['barra'] = True
+            elif d.get('opciones'):
+                # domingos desde el 21-12: dos opciones (CrossFit o carrera suave); al elegir una, la tarjeta dice qué cambia en el entreno
+                web_dias[f] = {'plantilla': 'cr', 'variantes': {'verde': d.get('objetivo') or d['titulo']},
+                               'condicion': {'pregunta': '¿Qué haces hoy?', 'comun': 'Si no haces ninguna, descanso.',
+                                             'opciones': [{k: o[k] for k in ('id', 'txt', 'consecuencia', 'numeros') if o.get(k)} for o in d['opciones']]}}
             dias.append(dd)
         sem['minPlan'] = min_plan
         cal.append(sem)

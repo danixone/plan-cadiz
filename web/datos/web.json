@@ -1262,7 +1262,7 @@
       ]
     },
     "2026-11-01": {
-      "firma": "61b59794e791",
+      "firma": "3e3e41fe26aa",
       "titulo": "Sesión «−2 días» a la hora de la prueba",
       "pasos": [
         {
@@ -1293,7 +1293,7 @@
       ]
     },
     "2026-11-03": {
-      "firma": "96d4978dba0e",
+      "firma": "1c18958c0de2",
       "titulo": "Prueba · 11:30 de Cádiz",
       "pasos": [
         {
@@ -1305,6 +1305,11 @@
           "t": "Desayuno de tu pauta terminado entre las 8:00 y las 8:30",
           "d": "3-3,5 h antes",
           "desde": "desayuno de tu pauta terminado entre las 8:00 y las 8:30, 3-3,5 h antes"
+        },
+        {
+          "t": "Salir de Jerez con margen",
+          "d": "unos 18 km y 18 min en coche sin tráfico, del centro de Jerez al pabellón",
+          "desde": "salir de Jerez con margen: unos 18 km y 18 min en coche sin tráfico, del centro de Jerez al pabellón"
         },
         {
           "t": "Antes de las 11:30: el calentamiento estándar completo sin barra",
@@ -1336,6 +1341,19 @@
         {
           "t": "Tentempié ligero de tu pauta a 45-60 min del 1.000",
           "desde": "tentempié ligero de tu pauta a 45-60 min del 1.000"
+        },
+        {
+          "t": "1.000: con el reloj y el primer 200 en 0:41",
+          "d": "el reloj está permitido: lo preguntaste (dicho el 28-10)",
+          "desde": "en el 1.000, con el reloj (está permitido: lo preguntaste, dicho el 28-10) y el primer 200 en 0:41"
+        },
+        {
+          "t": "Si sopla: la recta con el viento de cara, por esfuerzo y detrás de otro corredor",
+          "d": "no por reloj; el paso se mira en el 400 (1:22) y en el 800 (2:44), no en cada 200",
+          "desde": [
+            "si sopla, la recta con el viento de cara se corre por esfuerzo y detrás de otro corredor, no por reloj",
+            "y el paso se mira en el 400 (1:22) y en el 800 (2:44), no en cada 200"
+          ]
         },
         {
           "t": "Sin móvil y con las mismas zapatillas en las tres pruebas",

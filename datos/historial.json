@@ -5,6 +5,71 @@
   },
   "carrera": [
     {
+      "fecha": "2026-10-28",
+      "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min · bucle del parque San Cristóbal (sin modo pista)",
+      "objetivo": "2:07 y 1:25 (bloque C) · primer 200 en 0:42,5 · cada 200 a ±1 s de su paso · control a los 100 m: 0:21; con 0:20 o menos, aflojar · ÚLTIMA sesión de calidad · solo si las dos piernas pasan las tres comprobaciones",
+      "valida": true,
+      "horaInicioLocal": "21:14 el trote, 21:30 las dominadas, 21:44 los progresivos, 21:56 el 600 y 22:03 el 400 (el plan decía 18:00-19:00)",
+      "lugar": "Bucle de atletismo del parque San Cristóbal (NO homologado). Perfil «Carrera» del reloj, no «Pista»: los 200 son distancia GPS sin ajustar. El GPS de hoy da 397 m por vuelta (vuelve al mismo punto a 0,5 m); el ajuste del 19-9 daba 392-400. Las dos rectas suben hacia el noroeste un 1 %.",
+      "condiciones": "Viento de norte-noroeste, 5-7 nudos en el aeropuerto (METAR de las 21:30 y las 22:00) y 8-9 km/h en el modelo de Open-Meteo para el parque; 24 °C y punto de rocío de 20-21 °C en el aeropuerto (unos 80 % de humedad).",
+      "resultado": {
+        "tiemposS": [
+          113.2,
+          77.5
+        ],
+        "media": "600 en 1:53,2 (pedía 2:07) y 400 en 1:17,5 (pedía 1:25), por GPS",
+        "parciales200": [
+          [
+            38.9,
+            35.7,
+            38.6
+          ],
+          [
+            39.2,
+            38.3
+          ]
+        ],
+        "fcMaxPorSerie": [
+          191,
+          188
+        ],
+        "fcInicioSerie": [
+          136,
+          131
+        ],
+        "recuperaciones": {
+          "duracionS": [
+            300
+          ],
+          "tipo": "andando (unos 200 m)",
+          "fcFinal": [
+            128
+          ],
+          "bajadaEn60s": [
+            30
+          ]
+        },
+        "fcMax": 191,
+        "potenciaMediaSerieW": [
+          477,
+          460
+        ],
+        "contactoMsSerie": [
+          186,
+          185
+        ],
+        "efectoAerobico": 2.0,
+        "efectoAnaerobico": 3.2,
+        "cargaSesion": 111,
+        "paso50": "Parciales de 50 m anclados a la vuelta. 600: 10,6 · 9,4 · 9,4 · 9,5 | 8,5 · 8,9 · 9,2 · 9,1 | 9,4 · 10,0 · 9,5 · 9,8. 400: 10,6 · 9,1 · 9,8 · 9,6 | 9,4 · 9,3 · 9,6 · 10,0. Paso por el 100 (el control pedía 0:21): 20,0 en el 600 y 19,7 en el 400.",
+        "progresivos": "5 × 80 m con 90 s andando: 16,8 · 15,5 · 16,1 · 15,6 · 15,0 (el último, entre 13,0 y 15,0: la distancia tardó 2 s en moverse). El ritmo K del bloque C son 17,0 s: los cinco por delante.",
+        "calentamiento": "Trote 12 min (1.363 m a 8:48 /km, FC 132 de media y 146 de máximo, 2 s por encima de 145). Dominadas antes de las series, como pedía el plan (21:30): 2 suspensiones de 20 s, 2 × 8 retracciones y 3 × 4. Carga del día, sumando las cuatro actividades: 186 (7 + 3 + 65 + 111).",
+        "relojConfigurado": "Perfil «Carrera», no «Pista»: vueltas de 200 m por distancia GPS y recuperación de 5 min por tiempo.",
+        "analisisPista": "Pregunta suya: por qué en este bucle le cuestan el primer 200 y el tercero, y en Arucas no. El primer 200 y el tercero de cada repetición (y el primero del 400) son la misma recta, la del lado noreste, que se corre hacia el noroeste; el segundo, la del lado suroeste, hacia el sureste. MEDIDO: las dos rectas suben hacia el noroeste un 1 % (altitud del barómetro en 63 pasadas de 8 sesiones en este bucle, del 19-9 al 28-10: 1,14 % y 0,94 % de media, desviación 0,2; las pasadas en los dos sentidos dan lo mismo, así que no es deriva del barómetro): unos 1,7-1,9 m de desnivel en cada recta de unos 170 m. Curvas de unos 9-10 m de radio por el GPS (en una pista reglamentaria, 36,5 m). Velocidad en el centro de las rectas hoy: 4,93-5,36 m/s en la que sube y 5,37-5,65 en la que baja. VIENTO esta noche de norte-noroeste: METAR del aeropuerto, 010° a 7 nudos a las 21:30 y 340° a 5 nudos a las 22:00 (a 18 km); modelo de Open-Meteo en el parque, 8-9 km/h de 329-333°. De cara en la recta que sube. CALCULADO, no medido: con la fórmula de Minetti (2002) del coste de correr en pendiente, un 1 % de subida cuesta un 5-6 % más de energía por metro y la bajada un 5 % menos; con el mismo esfuerzo, unos 1,5 s más lento en el 200 que sube y 1,5 s más rápido en el que baja: unos 3 s entre los dos. Hoy, 3,2 (38,9 y 38,6 frente a 35,7). En una vuelta entera la pendiente casi se anula; el viento no (se pierde más de cara que lo que se gana de espaldas). La potencia del reloj, que mete el viento de la previsión y la pendiente del barómetro (no publica la fórmula), dio en la recta que sube un 25-30 % más de vatios por cada m/s que en la que baja; las otras noches en este bucle, un 5-8 %. Humedad: punto de rocío de 20-21 °C (METAR), el más alto de sus sesiones aquí; el 19-10 en Arucas, unos 14 °C (modelo). Y salió a 38,9 en la recta que sube, contra el viento, 3,6 s por delante de lo pedido."
+      },
+      "valoracion": "VÁLIDA, con los tiempos por GPS en un bucle sin medir: no son marca y no se comparan con Arucas. Hecha a las 21:56 y no a las 18:00, en San Cristóbal y no en Arucas. MEDIDO por GPS: 600 en 1:53,2 (38,9 · 35,7 · 38,6), 13,8 s por delante de 2:07; 400 en 1:17,5 (39,2 · 38,3), 7,5 s por delante de 1:25. Si la distancia es buena, es su 600 más rápido con diferencia (2:02,4 el 22-10 en Arucas), con la FC máxima de entonces (191 frente a 190-194). PRIMER 200: 38,9 (pedía 42,5) y 20,0 a los 100 m: novena vez con el primer 200 rápido y segunda sesión seguida con el control de los 100 m sin cumplir. Cada 200 a ±1 s de 42,5: 0 de 5. Recuperación: de 190 a 160 en 60 s y 128 al empezar el 400. LA PISTA: el primer 200 y el tercero son la recta que sube un 1 %, esta noche con viento de cara; el segundo baja con el viento a favor (detalle en analisisPista). RECTIFICADO: el 5-10 y el 12-10 (5 × 400 en este bucle) los primeros 200 salieron más lentos que los segundos y lo conté como «corrige de más»; esos primeros 200 eran la recta que sube, con viento del norte las dos noches según el modelo. Las piernas pasaron las tres comprobaciones; codo y hombro, 0 (dicho por él el 28-10). No cambia nada: era la última calidad antes de Cádiz."
+    },
+    {
       "fecha": "2026-10-26",
       "sesion": "3 × 4 dominadas + 4 × 400 m, rec. 2:30 · pista de Arucas, perfil Pista del reloj",
       "objetivo": "1:25 con 2:30 (bloque C) · freno si baja de 1:22 · cada 200 a ±1 s de su paso (0:42,5) · control a los 100 m: 0:21; con 0:20 o menos, aflojar · habituación 3 × 4 dominadas antes · solo si las dos piernas pasan las comprobaciones",
@@ -1653,6 +1718,30 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-10-28",
+      "series": [
+        4,
+        4,
+        4
+      ],
+      "total": 12,
+      "lastreKg": 0,
+      "duracionSeriesS": [
+        23,
+        16,
+        21
+      ],
+      "descanso": "180 s (temporizador)",
+      "contexto": "miércoles, antes de las series (actividad de fuerza aparte, 21:30, entreno «Dominadas día de correr»), con 2 suspensiones de 20 s y 2 × 8 retracciones antes",
+      "valoracion": "Del FIT: 3 × 4 sin lastre, 16-23 s por serie, 3 min entre series, antes de las series como pedía el plan (el 26 se hicieron después). Las repeticiones las cuenta el reloj, sin confirmar. Reserva: «muchas»; codo y hombro, 0 (dicho por él el 28-10). Sin vídeo."
+    },
+    {
+      "fecha": "2026-10-27",
+      "sesion": "Arsenal: descarga, sin la parte de piernas",
+      "horaLocal": "17:00 (dicho por él el 28-10; el plan decía a primera hora de la mañana)",
+      "valoracion": "Hecha a las 17:00 y sin la parte de piernas (H), porque ese día tuvo fisio y prefirió descansar las piernas (dicho por él el 28-10). Sin archivo del reloj: no hay series, peso ni descansos medidos; el plan pedía A en 3 × 2 con el peso del 20-10 y B, D y H a dos rondas."
+    },
+    {
       "fecha": "2026-10-26",
       "series": [
         5,
@@ -2070,6 +2159,13 @@
   ],
   "circuito": [
     {
+      "fecha": "2026-10-27",
+      "hecho": false,
+      "sesion": "Práctica técnica del circuito en el Martín Freire (sin cronómetro)",
+      "motivo": "No se hizo: tuvo fisio ese día y prefirió descansar las piernas (dicho por él el 28-10).",
+      "valoracion": "El circuito que se mide es el del jueves 29, el último antes de Cádiz."
+    },
+    {
       "fecha": "2026-10-22",
       "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE y un cuarto, 3 h después de las series del 21 (movidas por la lluvia)",
       "intentos": [
@@ -2083,6 +2179,13 @@
         }
       ],
       "valoracion": "Comunicado por él el 23-10 (corregido el mismo día: el nulo fue el cuarto intento, no el tercero). Primer intento 9,6 (7 puntos, tramo 9,4-9,7), el comparable, con asterisco: las series 3 h antes y no 25 h. No baja nada: la marca sigue en 9,4 del 1-10. Techo 9,1 (8 puntos), el mejor de su historial (antes, 9,2); el tercero, 9,2. El primer intento, otra vez el más lento: segunda vez (1-10: 9,4 · 9,2 · 9,3); a la tercera, regla. El cuarto, fuera del protocolo de tres, nulo por derribar la última valla; al apoyar el pie derecho tras la valla, dolor en el gemelo derecho (ver plan.lesiones.gemeloDerecho)."
+    },
+    {
+      "fecha": "2026-10-15",
+      "hecho": false,
+      "sesion": "Circuito del simulacro: UN intento cronometrado como el BOE",
+      "motivo": "No se hizo (dicho por él el 28-10).",
+      "valoracion": "Sin tiempo del simulacro: el último circuito medido sigue siendo el del 22-10 (9,6 · 9,1 · 9,2 y un nulo)."
     },
     {
       "fecha": "2026-10-08",
@@ -2107,6 +2210,13 @@
       "sesion": "Circuito con el preparador: 3 intentos cronometrados como el BOE",
       "motivo": "No se hizo: estudiaba para el examen escrito del 26.",
       "valoracion": "El número que decidía el bloque técnico pasa al jueves 1-10. El circuito sigue sin medición seria desde el 10-9 (9,9 s al 60 %); el del 17-9 tampoco consta."
+    },
+    {
+      "fecha": "2026-09-17",
+      "hecho": false,
+      "sesion": "Circuito cronometrado",
+      "motivo": "No se hizo (dicho por él el 28-10).",
+      "valoracion": "Cierra la duda de si se hizo: no consta porque no se hizo."
     },
     {
       "fecha": "2026-09-10",
@@ -2623,6 +2733,24 @@
   ],
   "necesidadSueno": "8h50",
   "garmin": [
+    {
+      "fecha": "2026-10-28",
+      "hora": "capturas de Garmin Connect mandadas el 28-10 por la noche, después de las series",
+      "ventanaFocoCarga": "30 sep – 28 oct",
+      "focoCarga": "Aeróbica baja insuficiente",
+      "estadoEntreno": "Productivo",
+      "mensajeGarmin": "Tu carga de entreno actual es óptima. Sigue variando la intensidad con actividades aeróbicas de baja intensidad, aeróbicas de alta intensidad y anaeróbicas.",
+      "anaerobica": 871,
+      "aerobicaAlta": 456,
+      "aerobicaBaja": 232,
+      "cargaAguda": 566,
+      "cargaAgudaEstado": "Óptimo",
+      "ratioCargaAguda": 1.3,
+      "cargaAgudaMensaje": "Tu carga aguda está en el límite superior del intervalo óptimo para mejorar tu forma física.",
+      "vo2max": 52,
+      "vfc": "62 ms, «Equilibrado» (captura del 28-10)",
+      "valoracion": "Ventana 30-9 a 28-10 frente a 29-9 a 27-10: salió el 29-9 (Arsenal, fuerza); entró hoy (trote, dominadas, progresivos y 600 + 400: carga 186; efecto anaeróbico 2,6 en los progresivos y 3,2 en las series) y lo que el reloj registrase el 27 después de la captura anterior. Anaeróbica +57 (871), aeróbica alta −47 (456) y aeróbica baja +18 (232): la bajada de la aeróbica alta no sale de lo que entró y salió; Garmin no publica cómo reparte, y no se interpreta. Carga aguda de 396 a 566 (relación 1,3, «límite superior del intervalo óptimo») y estado de «Mantenimiento» a «Productivo». No cambia nada: no hay más calidad hasta el martes 3, y la carga aguda bajará sola con el circuito de un intento, el descanso del viernes y el viaje. VO2 máx 52 (lo calcula el reloj y no se usa); VFC 62, Equilibrado."
+    },
     {
       "fecha": "2026-10-27",
       "hora": "capturas de Garmin Connect mandadas el 27-10, antes de que el reloj sincronizara la noche del 26 al 27",

@@ -1,7 +1,7 @@
 /* 10_cristina.js · ajusta el núcleo de Daniel (web/src/js/00_core.js) a la web de Cristina y ofrece PC.CR,
    las utilidades comunes de sus cuatro pestañas. Va detrás del núcleo y delante de los módulos.
    · Solo carrera: el 1.000 m con el baremo de mujeres (BOE-A-2026-15055): elimina desde 4:46.
-   · Los días de Martín Freire y de CrossFit tienen tipo «otro»: no se registran aquí y no salen como «sin registrar».
+   · Los días de barra y de CrossFit (y los de Martín Freire, hasta el 27-10) tienen tipo «otro»: no se registran aquí y no salen como «sin registrar».
    · El almacenamiento local usa el prefijo «cr-» (lo cambia construir.py en el núcleo): no se mezcla con el de Daniel.
    PC.CR:
    · dia(iso) → el día compuesto (PC.cal.dia) con .der (derivado: cr = estructura de la sesión, ej, K…)
@@ -11,7 +11,7 @@
    · suave() → plan.ritmosEstimados.suave (estimación vigente del ritmo suave) o null
    · pts(s) → puntos del 1.000 con el baremo de mujeres · ELIMINA = 286 (4:46) · tramoTxt(t) → '4:01–4:09'
    · semana(n) → derivados.semanas[n-1] · proxima(desde) → el siguiente día de carrera (excluido «desde»)
-   · tipoTxt(dia) → 'carrera suave', 'series', 'control', 'Martín Freire', 'CrossFit'… · icono(dia) → nombre de icono */
+   · tipoTxt(dia) → 'carrera suave', 'series', 'control', 'barra', 'CrossFit'… · icono(dia) → nombre de icono */
 (function () {
   'use strict';
   var PC = window.PC;
@@ -111,7 +111,7 @@
     tipoTxt: function (dia) {
       if (!dia) return '';
       var p = dia.der && dia.der.cr, sub = (dia.plan && dia.plan.sub) || (dia.der && dia.der.sub);
-      if (dia.tipo === 'otro') return sub === 'martin' ? 'Martín Freire' : sub === 'crossfit' ? 'CrossFit' : 'otro entreno';
+      if (dia.tipo === 'otro') return sub === 'martin' ? 'Martín Freire' : sub === 'barra' ? 'barra' : sub === 'crossfit' ? 'CrossFit' : 'otro entreno';
       if (dia.tipo === 'control') return p && p.tipo === 'simulacro' ? 'simulacro' : 'control';
       if (dia.tipo === 'prueba') return 'prueba';
       if (!p) return 'carrera';

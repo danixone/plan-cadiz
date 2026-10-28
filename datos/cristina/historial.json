@@ -99,6 +99,13 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-10-24",
+      "sesion": "24 min: 6 × (3 min corriendo + 1 andando)",
+      "hecho": false,
+      "motivo": "No corrió (dicho por Daniel el 28-10).",
+      "resumen": "No corrió"
+    },
+    {
       "fecha": "2026-10-19",
       "sesion": "6 × (3 min corriendo + 1 andando)",
       "hecho": true,
@@ -373,7 +380,16 @@
         "fuente": "exportación de Salud del Apple Watch (distancia del entreno; el GPS bruto da 6,4 km)",
         "fcMedia": 163,
         "fcMax": 175,
-        "fcPrimeros10min": 157
+        "fcPrimeros10min": 157,
+        "franjas": {
+          "<140": "3%",
+          "140-150": "13%",
+          "150-160": "7%",
+          "160-170": "51%",
+          "170-180": "27%"
+        },
+        "derivaMitadesDesdeMin15": "+2,6 % (Pa:HR; 8:56 a 163 → 8:42 a 163)",
+        "vo2maxApple": "32,7 (estimación del reloj tras este entreno; no se usa para fijar nada)"
       },
       "valoracion": "Primer dato. Al ritmo de un rodaje suave de Daniel (él, 8:26/km), para ella fue un esfuerzo alto de principio a fin: no era suave. Ritmo irregular (de 7:57 a 9:35 por bloques de 5 min) y unos 2 min andando o parada. Confirma el arranque del plan: correr y andar, más despacio que este día. Los rodajes juntos, al ritmo de ella. Pulso medio 163 (el más alto de la sesión, 175): el 78 % del tiempo por encima de 160. Daniel, en el mismo rodaje, 137 de media. Sin máxima medida, el porcentaje de su máxima no se sabe."
     }

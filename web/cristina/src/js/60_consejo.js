@@ -97,19 +97,19 @@
       out.que.push('Nada nuevo hoy. Si algo de lo marcado te preocupa, díselo al entrenador antes de salir.');
       return out;
     }
-    if (I.otro && I.sub !== 'martin' && I.sub !== 'crossfit') {
+    if (I.otro && I.sub !== 'martin' && I.sub !== 'barra' && I.sub !== 'crossfit') {
       out.nivel = F >= 2 ? 'freno' : 'verde'; out.titulo = 'Hoy no corres';
       out.que.push(F >= 2 ? 'Descanso de verdad: nada de piernas ni saltos.' : 'Descanso.');
       return out;
     }
     if (I.otro) {
-      var nombre = I.sub === 'martin' ? 'Martín Freire' : I.sub === 'crossfit' ? 'CrossFit' : 'el entreno';
+      var nombre = I.sub === 'martin' ? 'Martín Freire' : I.sub === 'barra' ? 'La barra' : I.sub === 'crossfit' ? 'CrossFit' : 'el entreno';
       if (F >= 3) { out.nivel = 'sin'; out.titulo = 'Descanso, o solo movilidad'; out.que.push('Hoy, sin ' + nombre + ' o solo movilidad suave.'); }
       else if (pierna || r.rigidez === 'si') { out.nivel = 'suave'; out.titulo = nombre + ': sin saltos, comba ni carrera'; out.que.push('El resto, normal. Díselo a quien te entrene hoy.'); }
       else if (F === 2) { out.nivel = 'suave'; out.titulo = nombre + ': sin piernas pesadas ni saltos'; out.que.push('Tren superior, core y técnica, sí.'); }
       else { out.nivel = F ? 'freno' : 'verde'; out.titulo = nombre + ', normal'; }
       if (I.dow === 0 && I.mananaCorre) out.que.push(frase('descanso', /el domingo, si puedes, sin piernas pesadas[^.]*\./) || 'El domingo, sin piernas pesadas: mañana corres.');
-      if (I.mananaControl) out.que.push(frase('descanso', /El viernes antes de un control[^.]*\./) || 'Mañana hay control: sin piernas ni saltos.');
+      if (I.mananaControl) out.que.push(frase('descanso', /El día antes de un control[^.]*\./) || 'Mañana hay control: sin piernas ni saltos.');
       return out;
     }
     if (I.control) {
@@ -213,7 +213,7 @@
     h.push(fila('Sueño de anoche', segHTML('sueno', r.sueno, SUENO, 'Sueño')));
     h.push(fila('Estrés del día', segHTML('estres', r.estres, ESTRES, 'Estrés'), 'Trabajo, casa: lo que te tenga cargada de cabeza'));
     h.push(fila('Energía', segHTML('energia', r.energia, ENERGIA, 'Energía'), 'Floja: comiste poco o es un día malo de regla'));
-    if ((I.correr || I.control) && I.ayerOtro) h.push(fila('Ayer, piernas o saltos', segHTML('ayer', r.ayer, SINO, 'Ayer, piernas o saltos'), 'En CrossFit o con Martín Freire'));
+    if ((I.correr || I.control) && I.ayerOtro) h.push(fila('Ayer, piernas o saltos', segHTML('ayer', r.ayer, SINO, 'Ayer, piernas o saltos'), 'En el CrossFit o en el circuito'));
     h.push('<div class="cr-cl-q"><span class="cr-cl-t">Alarmas</span><div class="cr-cl-al" role="group" aria-label="Alarmas">' + ALARMAS.map(function (a) {
       var on = !!(r.alarmas || {})[a[0]];
       return '<button type="button" data-cal="' + a[0] + '" aria-pressed="' + on + '">' + PC.icon(on ? 'check' : 'alerta', 'sm') + '<span>' + esc(a[1]) + '</span></button>';

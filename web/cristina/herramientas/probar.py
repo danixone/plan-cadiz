@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prueba la web de Cristina en Chrome sin cabecera (con el marco de QA de Daniel, web/qa/marco.html).
 
-  python3 web/cristina/herramientas/probar.py [--pagina web/cristina/out/prueba.html] [--ruta hoy] [--hoy 2026-10-12]
+  python3 web/cristina/herramientas/probar.py [--pagina docs/cristina/index.html] [--ruta hoy] [--hoy 2026-10-12]
                                               [--ancho 390] [--alto 844] [--tema light] [--captura salida.png] [--abrir 1]
                                               [--extra clave=valor ...]
 
@@ -25,7 +25,7 @@ def chrome(args, timeout=90):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--pagina', default='web/cristina/out/prueba.html')
+    ap.add_argument('--pagina', default='docs/cristina/index.html')
     ap.add_argument('--ruta', default='hoy')
     ap.add_argument('--hoy', default='2026-10-12')
     ap.add_argument('--ancho', type=int, default=390)

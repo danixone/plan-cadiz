@@ -54,7 +54,7 @@
       "lugar": "El Puerto de Santa María (Cádiz)",
       "fecha": "Martes 3 de noviembre de 2026, 11:30 hora peninsular (10:30 en Canarias)",
       "confirmacion21oct": "Portal del Aspirante, aviso «BAS43 - PRUEBAS FÍSICAS» del 21-10-2026: «las pruebas físicas tendrán lugar la primera semana del mes de noviembre» y «se publicarán, de forma individualizada, a través del portal del aspirante, el día, hora y lugar». Es lo que el plan suponía desde el 2-10: no cambia ninguna sesión.",
-      "convocatoria28oct": "Convocatoria individualizada, dicha por Daniel el 28-10-2026: «03/11/2026 11:30h CÁDIZ», en el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n), las dos en El Puerto de Santa María. Las 11:30 son hora peninsular: las 10:30 en Canarias. Lo que no dice: qué prueba va en cada instalación, cuánto se espera tras el llamamiento ni si se puede calentar dentro. En la convocatoria de 2023 las pruebas «de interior» fueron en el pabellón Ramón Velázquez y las «de exterior» en la Ciudad Deportiva (Diario Bahía de Cádiz, 15-10-2023): lo probable es el 1.000 en la pista, sin confirmar. La pista es de 400 m y seis calles, y la entrega de su renovación pedía un informe de homologación de la Federación Andaluza de Atletismo (Diario Bahía de Cádiz). Según OpenStreetMap, el pabellón cubierto y la pista están a unos 450-500 m en línea recta (identificados por su posición: en el mapa no llevan esos nombres). Con la fecha se eligió la versión del 2-3 de la última semana, con la sesión «−2 días» corrida del sábado 31 al domingo 1. Viaje (dicho por Daniel el 28-10): vuelo a Sevilla el sábado 31, con llegada a las 20:00 peninsulares, y a Jerez hacia las 23:00; antes estaba previsto el lunes 2.",
+      "convocatoria28oct": "Convocatoria individualizada, dicha por Daniel el 28-10-2026: «03/11/2026 11:30h CÁDIZ», en el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n), las dos en El Puerto de Santa María. Las 11:30 son hora peninsular: las 10:30 en Canarias. Lo que no dice: qué prueba va en cada instalación, cuánto se espera tras el llamamiento ni si se puede calentar dentro. En la convocatoria de 2023 las pruebas «de interior» fueron en el pabellón Ramón Velázquez y las «de exterior» en la Ciudad Deportiva (Diario Bahía de Cádiz, 15-10-2023): lo probable es el 1.000 en la pista, sin confirmar. La pista es de 400 m y seis calles, y la entrega de su renovación pedía un informe de homologación de la Federación Andaluza de Atletismo (Diario Bahía de Cádiz). Según OpenStreetMap, el pabellón cubierto y la pista están a unos 450-500 m en línea recta (identificados por su posición: en el mapa no llevan esos nombres). Con la fecha se eligió la versión del 2-3 de la última semana, con la sesión «−2 días» corrida del sábado 31 al domingo 1. Viaje (dicho por Daniel el 28-10): vuelo a Sevilla el sábado 31, con llegada a las 20:00 peninsulares, y a Jerez hacia las 23:00; antes estaba previsto el lunes 2. Reloj: se puede llevar en el 1.000 (lo preguntó él; dicho el 28-10). Duerme en Jerez (dicho el 28-10): del centro de Jerez (plaza del Arenal) al pabellón, 18,2 km y 18 min en coche sin tráfico según OSRM (OpenStreetMap).",
       "avisoOficial20oct": "Portal del Aspirante, «EE41/EB43 – Recordatorio importante para la prueba de aptitud física», 20-10-2026: certificado médico con número de colegiado, firma, el nombre del aspirante y que reúne las condiciones físicas precisas para las pruebas; memorizar el número de opositor para el llamamiento; usar unas solas zapatillas para todos los ejercicios; no llevar teléfono móvil, porque su uso está prohibido. De relojes no dice nada. Daniel lo tiene todo (dicho el 21-10): certificado y número de opositor.",
       "sedeNota": "Sede de Daniel: Cádiz, confirmada por él el 21-10-2026. Instalaciones, en la convocatoria del 28-10 (convocatoria28oct): El Puerto de Santa María, en el mismo Polideportivo «Ramón Velázquez» donde la Escala Ejecutiva (EE41) hizo las suyas de Cádiz (aviso del 1-10-2026).",
       "fechaReferencia": "2026-11-03",
@@ -1604,7 +1604,7 @@
           "sesion": "Sesión «−2 días» a la hora de la prueba: 15 min suaves + 3 progresivos de 100 m por mecánica (20-23 s) con tope 3:20-3:50 + 3 × 4 dominadas muy suaves",
           "objetivo": "ensayar la mañana del martes, ya en hora peninsular: desayuno de tu pauta terminado entre las 8:00 y las 8:30 y la sesión a las 11:30 · progresivos de menos a más, sin bajar de 3:20 /km · prep-hombro antes de la barra · sin test máximo de dominadas ni 600: el último test fue el 19-10 · solo con las dos piernas pasando las tres comprobaciones; se para en cuanto vuelva el dolor",
           "hora": "11:30, hora peninsular (la hora de la prueba)",
-          "lugar": "Donde estés, en Jerez o en El Puerto: no hace falta pista; para las dominadas, una barra. Si es en El Puerto, de paso ves las dos instalaciones",
+          "lugar": "En Jerez, donde duermes: no hace falta pista; para las dominadas, una barra. Si vas a El Puerto, de paso ves las dos instalaciones",
           "nota": "Hasta el 28-10 este día dependía de la fecha. Con la prueba el martes 3, es el día −2; con el viaje el sábado 31, ya lo haces allí.",
           "noche": "Cena terminada antes de las 21:15 y luz apagada a las 23:15, hora peninsular"
         }
@@ -1620,7 +1620,7 @@
           "dia": "Lun",
           "tipo": "descanso",
           "sesion": "Día −1, ya en Cádiz: descanso, o 15 min muy suaves",
-          "objetivo": "ver las dos instalaciones andando, si no lo hiciste el domingo, para saber por dónde se entra y cuánto se tarda desde donde duermas: el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n); según OpenStreetMap están a unos 500 m en línea recta · la bolsa: certificado médico, el número de opositor memorizado y unas solas zapatillas (aviso del 20-10)",
+          "objetivo": "ver las dos instalaciones andando, si no lo hiciste el domingo, para saber por dónde se entra y cuánto se tarda desde Jerez (unos 18 km y 18 min en coche sin tráfico, del centro de Jerez al pabellón): el Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n); según OpenStreetMap están a unos 500 m en línea recta · la bolsa: certificado médico, el número de opositor memorizado y unas solas zapatillas (aviso del 20-10)",
           "noche": "Cena terminada antes de las 21:15 y luz apagada a las 23:15, hora peninsular"
         },
         {
@@ -1629,7 +1629,7 @@
           "tipo": "prueba",
           "clave": true,
           "sesion": "PRUEBA a las 11:30 de Cádiz: circuito, dominadas y 1.000 m",
-          "objetivo": "despertar a las 7:00 de Cádiz (tus 6:00 de Canarias) · desayuno de tu pauta terminado entre las 8:00 y las 8:30, 3-3,5 h antes · antes de las 11:30, el calentamiento estándar completo sin barra (trote por pulso, movilidad, técnica y progresivos), y después abrigado: no se sabe cuánto se espera tras el llamamiento · antes de cada prueba, lo que dejen hacer lo más cerca de ella: unos minutos de trote y 2-3 progresivos antes del circuito y del 1.000, y prep-hombro antes de la barra, con una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo · tentempié ligero de tu pauta a 45-60 min del 1.000 · piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5) · sin móvil y con las mismas zapatillas en las tres pruebas · nada nuevo",
+          "objetivo": "despertar a las 7:00 de Cádiz (tus 6:00 de Canarias) · desayuno de tu pauta terminado entre las 8:00 y las 8:30, 3-3,5 h antes · salir de Jerez con margen: unos 18 km y 18 min en coche sin tráfico, del centro de Jerez al pabellón · antes de las 11:30, el calentamiento estándar completo sin barra (trote por pulso, movilidad, técnica y progresivos), y después abrigado: no se sabe cuánto se espera tras el llamamiento · antes de cada prueba, lo que dejen hacer lo más cerca de ella: unos minutos de trote y 2-3 progresivos antes del circuito y del 1.000, y prep-hombro antes de la barra, con una aproximación de 1 × 3 y 1 × 2 si hay barra y tiempo · tentempié ligero de tu pauta a 45-60 min del 1.000 · piernas juntas y verticales como en el vídeo de lado del 13-10, ritmo constante, la pausa mínima abajo y como mucho 3 s colgado (el BOE permite 5) · en el 1.000, con el reloj (está permitido: lo preguntaste, dicho el 28-10) y el primer 200 en 0:41 · si sopla, la recta con el viento de cara se corre por esfuerzo y detrás de otro corredor, no por reloj, y el paso se mira en el 400 (1:22) y en el 800 (2:44), no en cada 200 · sin móvil y con las mismas zapatillas en las tres pruebas · nada nuevo",
           "hora": "11:30, hora peninsular (10:30 en Canarias)",
           "lugar": "El Puerto de Santa María, Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n)"
         }
@@ -1653,11 +1653,12 @@
         "Salir por el interior de la calle 1 y pelear el sitio en los primeros 30 m.",
         "Los primeros 200 m son la trampa: el pelotón sale disparado.",
         "Desde el 800, todo lo que quede. El 19-9 el último 200 fue el segundo más rápido de la carrera: hay remate.",
-        "Al cruzar la meta, colocarse en fila: el tribunal asigna los tiempos por orden de llegada."
+        "Al cruzar la meta, colocarse en fila: el tribunal asigna los tiempos por orden de llegada.",
+        "Si sopla: la recta con el viento de cara, por esfuerzo y detrás de otro corredor, no por reloj; el primer 200 sigue en 0:41 y después el paso se mira en el 400 (1:22) y el 800 (2:44), no en cada 200. Lo aprendido en San Cristóbal el 28-10: de cara se pierde más de lo que se gana de espaldas."
       ],
       "comida": "3 a 3,5 h antes de la PRIMERA prueba, y el tentempié ligero a 45-60 min del 1.000, no a 90-105 min como el 19-9.",
       "orden": "circuito → dominadas → 1.000 m",
-      "pendiente": "Minutos entre pruebas y qué prueba va en cada instalación: la convocatoria del 28-10 no lo dice. Temperatura y viento: la previsión de AEMET para El Puerto se mira el domingo 1 y el lunes 2.",
+      "pendiente": "Minutos entre pruebas y qué prueba va en cada instalación: la convocatoria del 28-10 no lo dice. Temperatura y viento: la previsión de AEMET para El Puerto se mira el domingo 1 y el lunes 2; si sopla, manda el consejo del viento. El reloj está permitido (28-10).",
       "nota": "Reparto a 41 por 200 hasta el 800 y el último en 40 o menos para el 3:24 (desde el 20-10; antes, 42,0 por 200 para bajar de 3:30).",
       "dominadas": "Hacer 13 por tu cuenta para que el tribunal cuente 12: la repetición de margen es la única cobertura frente al recuento."
     }
@@ -1913,15 +1914,9 @@
     },
     {
       "id": "cadiz-llegada",
-      "texto": "La convocatoria no dice qué prueba va en cada instalación, cuánto se espera tras el llamamiento de las 11:30 ni si se puede calentar dentro. Llega con margen el martes 3 y pregúntalo al llegar; el domingo 1 o el lunes 2, ve a ver las dos instalaciones.",
+      "texto": "La convocatoria no dice qué prueba va en cada instalación, cuánto se espera tras el llamamiento de las 11:30 ni si se puede calentar dentro. Duermes en Jerez: del centro de Jerez al pabellón, unos 18 km y 18 min en coche sin tráfico; sal con margen el martes 3 y pregúntalo al llegar. El domingo 1 o el lunes 2, ve a ver las dos instalaciones.",
       "desde": "2026-10-28",
       "hasta": "2026-11-03"
-    },
-    {
-      "id": "reloj-examen",
-      "texto": "Ni el BOE ni los avisos dicen si se puede correr el 1.000 con reloj. Preguntarlo a la División de Formación (procesos.dfp@policia.es, 913 22 76 00) y, mientras, aprender el paso cada 50 m sin mirarlo: si no dejan el reloj, el reparto va de memoria.",
-      "desde": "2026-10-21",
-      "hasta": "2026-11-06"
     },
     {
       "id": "zapatilla",

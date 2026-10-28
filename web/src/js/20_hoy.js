@@ -71,7 +71,7 @@
   var ICONO = { carrera: 'carrera', fuerza: 'fuerza', circuito: 'circuito', descanso: 'descanso', control: 'control', examen: 'examen', prueba: 'prueba', otro: 'fuerza' };
   /* web de Cristina (web/cristina/): PC.PERFIL lo pone su 10_cristina.js; en la de Daniel no existe */
   function perfil() { return PC.PERFIL || null; }
-  /* días sin sesión que hacer aquí: descanso, examen y, en la web de Cristina, «otro» (Martín Freire, CrossFit) */
+  /* días sin sesión que hacer aquí: descanso, examen y, en la web de Cristina, «otro» (CrossFit) */
   function sinSesion(dia) { return dia.tipo === 'descanso' || dia.tipo === 'examen' || dia.tipo === 'otro'; }
   var LETRA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
   var NCOLOR = { verde: 'Sesión escrita', ambar: 'Sesión escrita', rojo: 'Sesión escrita', parada: 'No se entrena' };
@@ -913,6 +913,8 @@
         return '<button type="button" data-a="cond" data-ci="' + i + '" data-v="' + esc(o.id) + '" aria-pressed="' + (elegida === o.id ? 'true' : 'false') + '">' + esc(o.txt) + '</button>';
       }).join('') + '</div>');
       if (c.tipo === 'prueba' && c.elegida && c.elegida.nombre) h.push('<p class="hoy-cond-r">' + esc(c.elegida.nombre) + '</p>');
+      /* lo que cambia en el entreno con la opción elegida (domingos de Cristina) */
+      if (c.elegida && c.elegida.consecuencia) h.push('<p class="hoy-cond-r"><b>' + esc(c.elegida.consecuencia) + '</b></p>');
       if (c.tipo === 'prueba') h.push('<p class="hoy-cond-r">' + (c.opciones || []).map(function (o) { return esc(o.txt) + ': ' + esc(String(o.nombre || '').replace(/^Si la prueba es /, '')); }).join(' · ') + '</p>');
       if (elegida === 'ninguna') h.push('<p class="hoy-cond-r"><b>El plan no lo fija: pregúntale al entrenador</b></p>');
       if (c.tipo === 'compartida' && c.desde) h.push('<p class="hoy-cond-r">' + esc(c.desde) + '</p>');
@@ -1190,9 +1192,11 @@
       h.push(htmlRegistrado(dia));
       return h.join('');
     }
-    /* web de Cristina: los días de Martín Freire con la barra del plan (desde el 26-10) traen pasos con temporizador y se pintan como una sesión */
+    /* web de Cristina: los días de barra (desde el 26-10) traen pasos con temporizador y se pintan como una sesión */
     var conBarra = !!(perfil() && reposo && R.tpl === 'cr' && dia.extra && (dia.extra.pasos || []).length);
-    if (reposo && !conBarra) { h.push(htmlDescanso(dia, rel, modo)); return h.join(''); }
+    /* y los domingos con dos opciones (desde el 21-12): botones para elegir y lo que cambia según la elegida */
+    var conOpc = !!(perfil() && reposo && dia.condicion && R.conds.length);
+    if (reposo && !conBarra && !conOpc) { h.push(htmlDescanso(dia, rel, modo)); return h.join(''); }
     if (R.conds.length && color !== 'parada') h.push(htmlConds(dia, R));
     if (!dia.tipo && dia.final) { h.push(htmlFinal(dia)); h.push(htmlPlegados(dia, R)); return h.join(''); }
     h.push(htmlStats(SES.numeros(dia, color, R)).replace(qa ? '' : ' data-qa-clave="numeros"', ''));
