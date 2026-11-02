@@ -560,6 +560,7 @@
     var o = { t: x.t, d: x.d || '', timer: x.timer ? segDe(x.timer) : null, enlace: x.enlace ? tecnica(x.enlace, x.enlaceTxt) : null };
     if (x.grupo) { o.grupo = true; o.meta = x.meta || ''; o.pasos = (x.pasos || []).map(pasoWeb); }
     if (x.tras) o.tras = true;   /* el temporizador va DESPUÉS del paso (recuperación de una repetición) */
+    if (x.guia) o.guia = x.guia; /* web de Cristina: cómo, descanso y truco del ejercicio, la primera vez que sale en el día */
     return o;
   }
   function calentamiento(dia) {
@@ -1060,7 +1061,49 @@
     var ck = conCk ? '<button type="button" class="ck" data-ck="' + clave + '" aria-pressed="' + (hecho ? 'true' : 'false') + '" aria-label="Hecho: ' + esc(p.t) + '"><svg viewBox="0 0 26 26" aria-hidden="true"><rect class="cbox" x="2" y="2" width="22" height="22" rx="6"/><path class="tick" d="M7.5 13.5l4 4 7-8.5"/></svg></button>' : '';
     var tm = conTimer && p.timer ? '<button type="button" class="timer" data-tm="' + clave + '" data-t="' + p.timer + '" aria-label="' + (perfil() ? 'Temporizador de ' : 'Descanso de ') + PC.fmt.t(p.timer) + '">' + PC.icon('temporizador', 'sm') + '<span>' + PC.fmt.t(p.timer) + '</span></button>' : (conTimer ? '<span></span>' : '');
     return '<div class="ex' + (hecho ? ' done' : '') + (conCk ? '' : ' hoy-ex-sin') + '">' + ck + '<div class="nm">' + esc(p.t) + (d ? '<small>' + d + '</small>' : '') +
-      (tags ? '<div class="tags">' + tags + '</div>' : '') + '</div>' + tm + '</div>';
+      (tags ? '<div class="tags">' + tags + '</div>' : '') + '</div>' + tm + htmlGuia(p.guia) + '</div>';
+  }
+  /* «Hoy haces» de la web de Cristina: el texto del día («Título: a · b · c. Nunca…») en una lista numerada que se lee de un vistazo,
+     con el título arriba, las cifras en negrita y las reglas («Si…», «Nunca…», «Sin…») aparte, en un recuadro de aviso. No se pierde nada del texto. */
+  var REGLA_HX = /^(Si |Si,|Nunca|Solo si|Sin |Ni uno|Codo|Se acaba|Se para|Elige una)/;
+  function titHx(c) {
+    var m = /^([A-ZÁÉÍÓÚÑ][^:]{2,45}):\s+(.+)$/.exec(c);
+    return m && !/\d$/.test(m[1]) ? { t: m[1], resto: m[2] } : null;
+  }
+  function cifras(t) {
+    return esc(t).replace(/(\d+(?:[.,]\d+)?\s*×\s*\d+(?:[.,]\d+)?(?:\s*(?:min|s|m)\b)?|\d{1,2}:\d{2}(?:,\d)?|\d+(?:[.,]\d+)?(?:\s*[-–]\s*\d+(?:[.,]\d+)?)?\s*(?:min|s|m|%)(?![\wáéíóúñ]))/g, '<b>$1</b>');
+  }
+  function mayus(t) { return t ? t.charAt(0).toUpperCase() + t.slice(1) : t; }
+  function htmlHacesLista(txt, etiqueta, qa) {
+    var filas = [], reglas = [];
+    String(txt).split(' · ').forEach(function (c, i) {
+      var th = titHx(c.trim());
+      if (th) { filas.push({ sub: th.t, primero: i === 0 }); c = th.resto; }
+      c.replace(/\.\s+(?=[A-ZÁÉÍÓÚÑ¿«])/g, '.\u0001').split('\u0001').forEach(function (f) {
+        f = f.trim();
+        if (!f) return;
+        var th2 = titHx(f);                       /* «Con CrossFit: …», «Corriendo: …»: grupo con su título */
+        if (th2 && !REGLA_HX.test(f)) { filas.push({ sub: th2.t }); f = th2.resto; }
+        (REGLA_HX.test(f) ? reglas : filas).push({ t: mayus(f) });
+      });
+    });
+    var h = ['<div class="hh"' + (qa ? ' data-qa-clave="hoyhaces"' : '') + '><p class="hh-k">' + esc(etiqueta) + '</p>'];
+    var lista = [];
+    function cerrar() { if (lista.length) { h.push('<ol class="hh-l">' + lista.join('') + '</ol>'); lista = []; } }
+    filas.forEach(function (f) {
+      if (f.sub) { cerrar(); h.push('<p class="hh-t">' + esc(f.sub) + '</p>'); }
+      else lista.push('<li><span>' + cifras(f.t) + '</span></li>');
+    });
+    cerrar();
+    if (reglas.length) h.push('<ul class="hh-r">' + reglas.map(function (r) { return '<li>' + PC.icon('alerta', 'sm') + '<span>' + cifras(r.t) + '</span></li>'; }).join('') + '</ul>');
+    h.push('</div>');
+    return h.join('');
+  }
+  /* cómo, descanso y truco de un ejercicio (web de Cristina): tres líneas cortas con su etiqueta */
+  function htmlGuia(g) {
+    if (!g) return '';
+    return '<div class="hoy-guia">' + [['como', 'Cómo'], ['descanso', 'Descanso'], ['truco', 'Truco']].filter(function (k) { return g[k[0]]; })
+      .map(function (k) { return '<p><b>' + k[1] + '</b> ' + esc(g[k[0]]) + '</p>'; }).join('') + '</div>';
   }
   function htmlPasos(dia, pasos, interactivo, R) {
     if (!pasos.length) return '';
@@ -1201,7 +1244,8 @@
     if (!dia.tipo && dia.final) { h.push(htmlFinal(dia)); h.push(htmlPlegados(dia, R)); return h.join(''); }
     h.push(htmlStats(SES.numeros(dia, color, R)).replace(qa ? '' : ' data-qa-clave="numeros"', ''));
     var hx = SES.haces(dia, color, R);
-    if (hx) {
+    if (hx && perfil()) h.push(htmlHacesLista(hx, rel === 'hoy' ? 'Hoy haces' : 'Toca', qa));   /* web de Cristina: lista numerada, sin «más» */
+    else if (hx) {
       h.push('<p class="hoy-haces"' + (qa ? ' data-qa-clave="hoyhaces"' : '') + '><b>' + (rel === 'hoy' ? 'Hoy haces:' : 'Toca:') + '</b> ' + esc(hx) + '</p>');
       if (hx.length > 110) h.push('<button type="button" class="btn ghost hoy-mas" data-a="mas" aria-expanded="false">más</button>');
     }
@@ -1778,7 +1822,7 @@
     if (!q) return '<p class="focus-k">Sesión terminada</p><p class="big num" data-z="big">' + L.length + ' / ' + L.length + '</p>' +
       '<button type="button" class="btn pri lg block" data-z="fue">Apuntar cómo fue</button><button type="button" class="btn ghost" data-z="pprev">Paso anterior</button>';
     var t = FZ.t && FZ.t.clave === 'hoy-pas-' + FZ.f ? FZ.t : null;
-    h.push('<p class="focus-k">Paso ' + (i + 1) + ' de ' + L.length + '</p><section class="hoy-fz-card act"><h3>' + esc(q.t) + '</h3>' + (q.d ? '<p>' + esc(q.d) + '</p>' : ''));
+    h.push('<p class="focus-k">Paso ' + (i + 1) + ' de ' + L.length + '</p><section class="hoy-fz-card act"><h3>' + esc(q.t) + '</h3>' + (q.d ? '<p>' + esc(q.d) + '</p>' : '') + htmlGuia(q.guia));
     if (q.timer && q.tras && !t) h.push('<button type="button" class="btn pri lg block" data-z="pempieza">Hecho: recuperación de ' + PC.fmt.t(q.timer) + '</button>');
     else if (q.timer) {
       if (q.tras) h.push('<p class="hoy-fz-l">Recuperación</p>');

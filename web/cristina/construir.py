@@ -372,13 +372,13 @@ def pasos_de(p, R, RE):
 
     tipo = p['tipo']
     if tipo in ('correrAndar', 'rodaje'):
-        paso('Anda 5 min a paso vivo', 'Para entrar en calor antes de correr. No cuenta en los minutos de la sesión.', 300, 'antes', ej='andar')
+        paso('Anda 5 min a paso vivo', '', 300, 'antes', ej='andar')
     if p.get('calentamiento'):
         c = p['calentamiento']
-        paso('Trote suave %d min' % c['min'], ('A tu ritmo suave (%s). %s' % (suave, hablar())) if suave else hablar(),
+        paso('Trote suave %d min' % c['min'], ('A tu ritmo suave (%s /km).' % suave) if suave else '',
              c['min'] * 60, 'calentamiento', ej='suave')
-        paso('Movilidad', 'Los ejercicios de movilidad de Técnica › Carrera, unos 5 min.', None, 'calentamiento', ej='movilidad')
-        paso('%d rectas de 80 m' % c['rectas'], 'Aceleras poco a poco hasta rápido pero suelto y vuelves andando.', None, 'calentamiento', ej='rectas')
+        paso('Movilidad · unos 5 min', '', None, 'calentamiento', ej='movilidad')
+        paso('%d rectas de 80 m' % c['rectas'], '', None, 'calentamiento', ej='rectas')
         paso('Pausa de 2-3 min y empiezas', '', 150, 'calentamiento')
     if tipo == 'correrAndar':
         if p.get('escalon'):
@@ -406,22 +406,22 @@ def pasos_de(p, R, RE):
             paso('%d min alegres' % p['alegreFinal'], 'Los últimos: respiras fuerte pero controlas.', p['alegreFinal'] * 60, 'principal', fase='rapido', ej='alegre')
         else:
             paso('%d min suave%s' % (p['min'], ' · la larga' if p.get('larga') else ''),
-                 ('%s /km. %s' % (suave, hablar())) if suave else hablar(), p['min'] * 60, 'principal',
+                 ('%s /km.' % suave) if suave else '', p['min'] * 60, 'principal',
                  ej='larga' if p.get('larga') else 'suave')
         if p.get('rectas'):
             for i in range(p['rectas']):
-                paso('Recta de 80 m', 'Recta %d de %d · vuelves andando' % (i + 1, p['rectas']), None, 'final', n=i + 1, de=p['rectas'], ej='rectas')
+                paso('Recta de 80 m', 'Recta %d de %d' % (i + 1, p['rectas']), None, 'final', n=i + 1, de=p['rectas'], ej='rectas')
         if p.get('cuestas'):
             c = p['cuestas']
             for i in range(c['n']):
-                paso('Cuesta de %d s' % c['s'], 'Cuesta %d de %d · subes fuerte sin llegar a tope y bajas andando' % (i + 1, c['n']), c['s'], 'final',
+                paso('Cuesta de %d s' % c['s'], 'Cuesta %d de %d' % (i + 1, c['n']), c['s'], 'final',
                      n=i + 1, de=c['n'], ej='cuestas')
         if p.get('extra'):
             x = p['extra']
             rt = ritmo_txt_rep(R, 'K', x['dist'])
             for i in range(x['n']):
                 paso('%d m a ritmo K%s' % (x['dist'], (' · ' + rt) if rt else ''), 'Repetición %d de %d · %s entre cada uno' % (i + 1, x['n'], x['rec']),
-                     None, 'final', n=i + 1, de=x['n'], dist=x['dist'], obj=rt, ej='series-k')
+                     None, 'final', n=i + 1, de=x['n'], dist=x['dist'], obj=rt, ej='series-k', desc=x['rec'])
     elif tipo == 'intervalos':
         ritmo = {'umbral': 'umbral', 'K+4': 'ritmo K + 4', 'K+10': 'ritmo K + 10'}[p['ritmo']]
         for i in range(p['n']):
@@ -433,7 +433,8 @@ def pasos_de(p, R, RE):
             dist = int(round(p['dur'] / R[p['ritmo']]['km'] * 1000, -1)) if R and p['ritmo'] != 'umbral' else None
             paso('%d min a %s%s' % (p['dur'] // 60, ritmo, (' · ' + obj) if obj else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
                  ((' · unos %d m' % dist) if dist else ''),
-                 p['dur'], 'principal', n=i + 1, de=p['n'], fase='rapido', obj=obj, ej='umbral' if p['ritmo'] == 'umbral' else 'intervalos')
+                 p['dur'], 'principal', n=i + 1, de=p['n'], fase='rapido', obj=obj, ej='umbral' if p['ritmo'] == 'umbral' else 'intervalos',
+                 desc=p.get('recTxt') or ('2 min trotando suave' if p['ritmo'] == 'umbral' else None))
             if i < p['n'] - 1 and p.get('rec'):
                 paso('Recupera %s' % p['recTxt'], '', p['rec'], 'principal', n=i + 1, de=p['n'], fase='rec')
             elif i < p['n'] - 1 and p['ritmo'] == 'umbral' and not p.get('rec'):
@@ -449,14 +450,14 @@ def pasos_de(p, R, RE):
             paso('%s m %s%s' % (miles(p['dist']), nombre, (' · ' + rt) if rt else ''), 'Repetición %d de %d' % (i + 1, p['n']) +
                  ((' · recuperación %s' % p['recTxt']) if i < p['n'] - 1 else '') + ((' · paso: ' + pm) if pm else ''),
                  p.get('rec') if i < p['n'] - 1 else None, 'principal', n=i + 1, de=p['n'], dist=p['dist'], obj=rt,
-                 recDist=p.get('recDist') if i < p['n'] - 1 else None,
+                 recDist=p.get('recDist') if i < p['n'] - 1 else None, desc=p.get('recTxt'),
                  ej={'K': 'series-k', 'K+4': 'series-k', 'K+10': 'intervalos', 'O': 'series-o', 'rapidos': 'rapidos'}[p['ritmo']])
         if p.get('extra'):
             x = p['extra']
             paso('Pausa de 3 min', 'Antes de los %d × %d m rápidos.' % (x['n'], x['dist']), 180, 'principal', sinPlan=True)
             rr = ritmo_txt_rep(R, 'rapidos', x['dist'])
             for i in range(x['n']):
-                paso('%d m rápidos%s' % (x['dist'], (' · ' + rr) if rr else ''), 'Repetición %d de %d · vuelves andando' % (i + 1, x['n']), None,
+                paso('%d m rápidos%s' % (x['dist'], (' · ' + rr) if rr else ''), 'Repetición %d de %d' % (i + 1, x['n']), None,
                      'principal', n=i + 1, de=x['n'], dist=x['dist'], obj=rr, ej='rapidos')
     elif tipo == 'kmPartido':
         a, b = p['partes']
@@ -464,7 +465,7 @@ def pasos_de(p, R, RE):
             for j, dist in enumerate((a, b)):
                 rt = ritmo_txt_rep(R, 'O', dist)
                 paso('%d m a ritmo O%s' % (dist, (' · ' + rt) if rt else ''), 'Kilómetro partido %d de %d' % (i + 1, p['n']), None, 'principal',
-                     n=i + 1, de=p['n'], dist=dist, obj=rt, ej='km-partido')
+                     n=i + 1, de=p['n'], dist=dist, obj=rt, ej='km-partido', desc=dur_txt(p['recEntre']))
                 if j == 0:
                     paso('Pausa de %d min' % (p['recEntre'] // 60), 'Entre el %d y el %d' % (a, b), p['recEntre'], 'principal')
             if i < p['n'] - 1:
@@ -485,12 +486,44 @@ def pasos_de(p, R, RE):
     elif tipo == 'prueba':
         paso('Prueba', 'La fecha la fija la convocatoria de 2027.', None, 'principal')
     if p.get('calma'):
-        paso('Vuelta a la calma · %d min' % p['calma'], 'Trote muy suave. Si no puedes trotar, andando.', p['calma'] * 60, 'calma', ej='vuelta-calma')
+        paso('Vuelta a la calma · %d min' % p['calma'], '', p['calma'] * 60, 'calma', ej='vuelta-calma')
     if tipo in ('correrAndar', 'rodaje'):
-        paso('Anda 3-5 min para acabar', 'Hasta que respires normal.', None, 'calma', ej='vuelta-calma')
+        paso('Anda 3-5 min para acabar', '', None, 'calma', ej='vuelta-calma')
     if p.get('talon'):
-        paso('Elevaciones de talón · 3 × 15 por pierna', 'A una pierna, lentas: 2 s arriba y 2 s abajo.', None, 'calma', ej='talon')
+        paso('Elevaciones de talón · 3 × 15 por pierna', '', None, 'calma', ej='talon')
     return P
+
+
+GUIAS = {}          # plan.guias: lo pone construir()
+GID_BARRA = {'Hombros': 'hombros', 'Bajadas lentas': 'bajadas', 'Colgada con los codos en ángulo recto': 'colgada90', 'Remo invertido': 'remo',
+             'Postura del examen': 'postura', 'Colgada con los brazos estirados': 'colgadaEstirados', 'Test: una suspensión a tope': 'testBarra',
+             'Calentamiento': 'calCircuito', 'Circuito entero': 'circuitoEntero', 'Test de circuito': 'testCircuito'}
+
+
+def dur_txt(s):
+    """120 → «2 min»; 150 → «2 min 30 s»; 90 → «1 min 30 s»; 45 → «45 s»."""
+    m, r = divmod(int(s), 60)
+    return ('%d min' % m if m else '') + (' ' if m and r else '') + ('%d s' % r if r else '')
+
+
+def con_circuito(d, kit):
+    """Con el kit disponible, el circuito guardado del día («circuito») entra en los pasos, el título y el objetivo; sin él, el día es solo barra."""
+    c = d.get('circuito')
+    if not c:
+        return d
+    d = dict(d)
+    d.pop('circuito')
+    if not kit:
+        return d
+    if c.get('despues'):
+        d['barra'] = (d.get('barra') or []) + c['pasos']
+        d['titulo'] = '%s y %s' % (d['titulo'], c['titulo'])
+        d['objetivo'] = '%s %s' % (d.get('objetivo', ''), c['texto'])
+    else:
+        d['barra'] = c['pasos'] + (d.get('barra') or [])
+        d['titulo'] = '%s y %s' % (c['titulo'], d['titulo'][0].lower() + d['titulo'][1:])
+        d['objetivo'] = '%s · %s' % (c['texto'], d.get('objetivo', ''))
+    return d
 
 
 def barra_dia(spec, test):
@@ -508,7 +541,11 @@ def barra_dia(spec, test):
         x.update({k: v for k, v in kw.items() if v is not None})
         P.append(x)
 
+    def gid_de(t):
+        return 'tramo' if t.startswith('Tramo') else GID_BARRA.get(t)
+
     for i, it in enumerate(spec):
+        gid, desc = gid_de(it['t']), (dur_txt(it['rec']) if it.get('rec') else None)
         mm = re.match(r'^mitad(?:\+(\d+))?$', str(it.get('seg') or ''))      # «mitad» o «mitad+2»: +2 s por semana (versión 5)
         seg = (mitad + int(mm.group(1) or 0) if mitad is not None else None) if mm else it.get('seg')
         if mm and seg is None:
@@ -517,14 +554,14 @@ def barra_dia(spec, test):
         nota = ((' · la mitad de tu último test (%d s)' % test) + ((' más %s s' % mm.group(1)) if mm.group(1) else '')) if mm else ''
         if n == 1 and not it.get('reps'):
             paso(it['t'] + ((' · %d min' % (seg // 60)) if seg and seg >= 60 and seg % 60 == 0 else (' · %d s' % seg) if seg else ''), it.get('d', ''), seg,
-                 ej={'Hombros': 'barra', 'Calentamiento': 'circuito'}.get(it['t']))
+                 ej={'Hombros': 'barra', 'Calentamiento': 'circuito'}.get(it['t']), gid=gid, desc=desc)
             continue
         # circuito (desde el 28-10): pasadas o intentos sin tiempo fijo («cuanto»: «a tope», «al 80 %»…)
         cuanto = ('%d s' % seg) if seg else ('%d repeticiones' % it['reps']) if it.get('reps') else it.get('cuanto', '')
         for k in range(n):
             lab = 'Intento' if it.get('unidad') == 'intentos' else 'Pasada' if it.get('cuanto') else 'Serie'
             paso('%s · %s' % (it['t'], cuanto), ('%s %d de %d%s' % (lab, k + 1, n, nota)) + ((' · ' + it['d']) if it.get('d') and k == 0 else ''), seg,
-                 n=k + 1, de=n, fase='rapido')
+                 n=k + 1, de=n, fase='rapido', gid=gid, desc=desc)
             if k < n - 1 and it.get('rec'):
                 r = it['rec']
                 paso('Descansa %s' % (('%d min' % (r // 60)) if r % 60 == 0 else ('%d s' % r)), '', r, n=k + 1, de=n, fase='rec')
@@ -638,6 +675,9 @@ def construir(plan, hist, hoy):
     T = tramos_mil(plan)
     RE = plan.get('ritmosEstimados') or {}
     TECHO['suave'] = (plan.get('pulso') or {}).get('techoSuave')
+    GUIAS.clear()
+    GUIAS.update(plan.get('guias') or {})
+    kit = bool((plan.get('circuitoKit') or {}).get('disponible'))
     test_barra = next((((x.get('marca') or {}).get('valor')) for x in ((plan.get('pruebasMujeres') or {}).get('pruebas') or []) if x.get('id') == 'barra'), None)
 
     # controles (de más viejo a más nuevo) con sus puntos
@@ -680,6 +720,7 @@ def construir(plan, hist, hoy):
             errores.append('calendario: la semana %d no empieza en lunes (%s)' % (w['n'], a))
         min_plan = 0
         for di, d in enumerate(w['dias']):
+            w['dias'][di] = d = con_circuito(d, kit)
             f = d['fecha']
             if f in vistos:
                 errores.append('calendario: %s repetido' % f)
@@ -846,11 +887,18 @@ def ejercicios_usados(dias):
 
 def pasos_web(P):
     """Pasos de pasos_de() en la forma de web.dias[f].pasos de Daniel: {t, d, timer (s), enlace}; el calentamiento, en un grupo plegable."""
-    out, grupo, cal, vistos = [], None, [], set()
+    out, grupo, cal, vistos, vistosG = [], None, [], set(), set()
     for x in P:
         o = {'t': x['t']}
         if x.get('d'):
             o['d'] = x['d']
+        g = x.get('gid') or x.get('ej')
+        if g and g in GUIAS and g not in vistosG:        # «Cómo · Descanso · Truco», la primera vez que sale cada ejercicio
+            vistosG.add(g)
+            G = GUIAS[g]
+            desc = G['descanso'].replace('{rec}', x['desc']) if '{rec}' in G['descanso'] and x.get('desc') else (
+                G['descanso'] if '{rec}' not in G['descanso'] else 'El que marque la sesión.')
+            o['guia'] = {'como': G['como'], 'descanso': desc[0].upper() + desc[1:], 'truco': G['truco']}
         if x.get('seg'):
             o['timer'] = x['seg']
             if x.get('dist'):

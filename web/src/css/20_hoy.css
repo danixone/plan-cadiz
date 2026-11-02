@@ -264,3 +264,22 @@
 .hoy-50-g td:empty{background:none}
 .hoy-50-g td.m200{background:var(--primary-soft);color:var(--primary);font-weight:var(--fw-bold)}
 .hoy-50-g .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* cómo · descanso · truco de cada ejercicio (web de Cristina): a lo ancho de la fila, una línea por etiqueta */
+.hoy-guia{grid-column:2/-1;margin:0 0 4px;padding:6px 10px;border-radius:8px;background:var(--primary-soft);font-size:var(--fs-sm);line-height:1.4}
+.hoy-ex-sin .hoy-guia{grid-column:1/-1}
+.hoy-guia p{margin:2px 0;color:var(--text)}
+.hoy-guia b{color:var(--primary-strong);font-weight:var(--fw-bold)}
+.hoy-fz-card .hoy-guia{text-align:left;margin-top:var(--sp-2)}
+/* «Hoy haces» de la web de Cristina: lista numerada con título, cifras en negrita y reglas aparte */
+.hh{margin:var(--sp-3) 0 0;padding:var(--sp-3);border-radius:var(--r-md);background:var(--primary-soft);border-left:4px solid var(--primary)}
+.hh-k{margin:0;font-size:var(--fs-sm);font-weight:var(--fw-bold);letter-spacing:.06em;text-transform:uppercase;color:var(--primary-strong)}
+.hh-t{margin:var(--sp-2) 0 2px;font-size:var(--fs-md);font-weight:var(--fw-bold);color:var(--text)}
+.hh-l{list-style:none;margin:var(--sp-1,4px) 0 0;padding:0;counter-reset:hh}
+.hh-l li{counter-increment:hh;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;padding:6px 0;line-height:1.4;color:var(--text)}
+.hh-l li+li{border-top:1px solid var(--border)}
+.hh-l li::before{content:counter(hh);display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--primary);color:var(--on-primary);font-size:13px;font-weight:var(--fw-bold)}
+.hh-l b,.hh-r b{color:var(--primary-strong);font-weight:var(--fw-bold)}
+.hh-r{list-style:none;margin:var(--sp-2) 0 0;padding:6px 10px;border-radius:var(--r-sm);background:var(--warn-soft)}
+.hh-r li{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:start;padding:3px 0;line-height:1.4;color:var(--warn)}
+.hh-r li .ic,.hh-r li svg{margin-top:2px}
+.hh-r b{color:var(--warn)}
