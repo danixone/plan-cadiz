@@ -103,10 +103,10 @@
       return out;
     }
     if (I.otro) {
-      var nombre = I.sub === 'martin' ? 'Martín Freire' : I.sub === 'barra' ? 'La barra' : I.sub === 'crossfit' ? 'CrossFit' : 'el entreno';
+      var nombre = I.sub === 'martin' ? 'Martín Freire' : I.sub === 'barra' ? 'Circuito y barra' : I.sub === 'crossfit' ? 'CrossFit' : 'el entreno';
       if (F >= 3) { out.nivel = 'sin'; out.titulo = 'Descanso, o solo movilidad'; out.que.push('Hoy, sin ' + nombre + ' o solo movilidad suave.'); }
-      else if (pierna || r.rigidez === 'si') { out.nivel = 'suave'; out.titulo = nombre + ': sin saltos, comba ni carrera'; out.que.push('El resto, normal. Díselo a quien te entrene hoy.'); }
-      else if (F === 2) { out.nivel = 'suave'; out.titulo = nombre + ': sin piernas pesadas ni saltos'; out.que.push('Tren superior, core y técnica, sí.'); }
+      else if (pierna || r.rigidez === 'si') { out.nivel = 'suave'; out.titulo = I.sub === 'barra' ? 'Sin circuito: solo la barra' : nombre + ': sin saltos, comba ni carrera'; out.que.push(I.sub === 'barra' ? 'La barra, normal.' : 'El resto, normal. Díselo a quien te entrene hoy.'); }
+      else if (F === 2) { out.nivel = 'suave'; out.titulo = I.sub === 'barra' ? 'Circuito al 80 % y la barra' : nombre + ': sin piernas pesadas ni saltos'; out.que.push(I.sub === 'barra' ? 'Sin pasadas a tope ni test de circuito.' : 'Tren superior, core y técnica, sí.'); }
       else { out.nivel = F ? 'freno' : 'verde'; out.titulo = nombre + ', normal'; }
       if (I.dow === 0 && I.mananaCorre) out.que.push(frase('descanso', /el domingo, si puedes, sin piernas pesadas[^.]*\./) || 'El domingo, sin piernas pesadas: mañana corres.');
       if (I.mananaControl) out.que.push(frase('descanso', /El día antes de un control[^.]*\./) || 'Mañana hay control: sin piernas ni saltos.');

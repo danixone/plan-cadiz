@@ -517,19 +517,25 @@ def barra_dia(spec, test):
         nota = ((' · la mitad de tu último test (%d s)' % test) + ((' más %s s' % mm.group(1)) if mm.group(1) else '')) if mm else ''
         if n == 1 and not it.get('reps'):
             paso(it['t'] + ((' · %d min' % (seg // 60)) if seg and seg >= 60 and seg % 60 == 0 else (' · %d s' % seg) if seg else ''), it.get('d', ''), seg,
-                 ej='barra' if i == 0 else None)
+                 ej={'Hombros': 'barra', 'Calentamiento': 'circuito'}.get(it['t']))
             continue
-        cuanto = ('%d s' % seg) if seg else ('%d repeticiones' % it['reps'])
+        # circuito (desde el 28-10): pasadas o intentos sin tiempo fijo («cuanto»: «a tope», «al 80 %»…)
+        cuanto = ('%d s' % seg) if seg else ('%d repeticiones' % it['reps']) if it.get('reps') else it.get('cuanto', '')
         for k in range(n):
-            paso('%s · %s' % (it['t'], cuanto), ('Serie %d de %d%s' % (k + 1, n, nota)) + ((' · ' + it['d']) if it.get('d') and k == 0 else ''), seg,
+            lab = 'Intento' if it.get('unidad') == 'intentos' else 'Pasada' if it.get('cuanto') else 'Serie'
+            paso('%s · %s' % (it['t'], cuanto), ('%s %d de %d%s' % (lab, k + 1, n, nota)) + ((' · ' + it['d']) if it.get('d') and k == 0 else ''), seg,
                  n=k + 1, de=n, fase='rapido')
             if k < n - 1 and it.get('rec'):
                 r = it['rec']
                 paso('Descansa %s' % (('%d min' % (r // 60)) if r % 60 == 0 else ('%d s' % r)), '', r, n=k + 1, de=n, fase='rec')
+        if it.get('cuanto') and not seg and not it.get('reps'):
+            if not it.get('sinNumero'):
+                N.append({'v': '%d %s' % (n, it.get('unidad', 'pasadas')), 'l': ('circuito ' + it['cuanto']) if it['t'] == 'Circuito entero' else it['t'].lower()})
+            continue
         N.append({'v': '%d × %s' % (n, ('%d s' % seg) if seg else it['reps']), 'l': it['t'].lower()})
     if test:
         N.append({'v': '%d s' % test, 'l': 'tu último test'})
-    if any(it.get('t', '').startswith('Test') for it in spec):
+    if any(it.get('t', '').startswith('Test:') for it in spec):
         N = [{'v': 'a tope', 'l': 'una suspensión'}, {'v': '%d s' % test, 'l': 'el último test'}] if test else [{'v': 'a tope', 'l': 'una suspensión'}]
     return P, N[:3]
 

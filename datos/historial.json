@@ -5,6 +5,23 @@
   },
   "carrera": [
     {
+      "fecha": "2026-11-02",
+      "sesion": "Día −1: 10 min de trote + 3 progresivos de 100 m (rec. 90 s) · en Jerez, perfil Pista del reloj",
+      "objetivo": "día −1: descanso, o 15 min muy suaves (los 3 progresivos de 100 m por mecánica, en 20-23 s, eran de la sesión «−2 días» del domingo)",
+      "valida": true,
+      "horaInicioLocal": "13:52 peninsular el trote y 14:04 los progresivos",
+      "resultado": {
+        "calentamiento": "Trote 10:26 (1.130 m a 9:14 /km, FC 135 de media y 153 de máximo; 30 s por encima de 145).",
+        "progresivos": "3 × 100 m con 90 s: 16,5 · entre 17,4 y 19,4 (la distancia tardó 2 s en moverse al empezar) · 16,9; FC hasta 175. Pedían 20-23 s por mecánica, con tope de 3:20-3:50 /km: 16,5 s por 100 son 2:45 /km, más rápido que el paso del 1.000 del examen (20,5 por 100).",
+        "fcMax": 175,
+        "efectoAerobico": 1.1,
+        "efectoAnaerobico": 2.2,
+        "cargaSesion": 52,
+        "relojConfigurado": "Perfil Pista: vueltas de 100 m por distancia y recuperaciones de 90 s por tiempo."
+      },
+      "valoracion": "VÁLIDA. Parece la sesión «−2 días» del domingo (trote y 3 × 100), hecha el lunes: del domingo no hay archivo. Para el día −1 el plan pedía descanso o 15 min muy suaves. Los progresivos salieron como sprints: 16,5 y 16,9 s cuando pedían 20-23 (patrón «progresivos como sprints», otra vez). Volumen pequeño (carga 52, 3 × 100 con 90 s): no debería quitar nada para el martes (supuesto). Lo que sí dice: las piernas te salen solas a 16-17 s por 100 m, y el primer 200 del examen va en 0:41, 20,5 por 100."
+    },
+    {
       "fecha": "2026-10-28",
       "sesion": "3 × 4 dominadas + 600 m + 400 m, rec. 5 min · bucle del parque San Cristóbal (sin modo pista)",
       "objetivo": "2:07 y 1:25 (bloque C) · primer 200 en 0:42,5 · cada 200 a ±1 s de su paso · control a los 100 m: 0:21; con 0:20 o menos, aflojar · ÚLTIMA sesión de calidad · solo si las dos piernas pasan las tres comprobaciones",

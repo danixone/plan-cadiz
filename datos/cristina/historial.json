@@ -99,6 +99,78 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-01",
+      "sesion": "31 min suave (la larga del sábado 31, hecha el domingo 1)",
+      "hecho": true,
+      "resumen": "31 min seguidos · 10:27 /km · 2,92 km · pulso 117 de media",
+      "resultado": {
+        "duracion": "31:16 de reloj (30:31 en marcha: una pausa de 45 s en el minuto 17, por el perro, dicho por ella el 2-11)",
+        "km": 2.92,
+        "ritmo": "10:27/km",
+        "bloques5min": {
+          "ritmos": [
+            "12:34",
+            "10:45",
+            "9:59",
+            "11:24",
+            "10:21",
+            "10:20"
+          ],
+          "fc": [
+            108,
+            112,
+            123,
+            119,
+            121,
+            117
+          ]
+        },
+        "fcMedia": 117,
+        "fcMax": 134,
+        "fcPrimeros10min": 110,
+        "porEncimaDe150": "0 %",
+        "minuto12": "6,2 km/h (9:41 /km) con 129 de pulso: el tramo más rápido",
+        "deriva": "Mitades desde el minuto 15, sin la pausa: 9:58 /km a 120 y 10:26 a 119 (Pa:HR) = +3,2 %, por debajo del 5 %. A un pulso tan bajo y con el perro marcando el paso a ratos, dice poco.",
+        "nota": "Corriendo todo el rato: el reloj registra velocidad de carrera durante todo el entreno. Corrió con el perro (dicho por ella el 2-11).",
+        "fuente": "exportación de Salud del Apple Watch (2-11), leída del zip sin extraerla; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Hecha entera, un día tarde (domingo en lugar de sábado). A 10:27 el km con 117 de pulso de media y 134 de máximo: el techo de 150 no se tocó, y ella se sintió bastante bien. Con este dato y el del 28-10, el suave estimado (10:00-11:00) le queda corto: a ese ritmo va a 117-123, por debajo incluso de su zona 1. Desde el 2-11, el suave pasa a 9:30-10:00 orientativo, con el pulso entre 130 y 145 como guía y 150 de techo."
+    },
+    {
+      "fecha": "2026-10-28",
+      "sesion": "25 min suave",
+      "hecho": true,
+      "resumen": "25 min seguidos · 10:26 /km · 2,40 km · pulso 120 de media",
+      "resultado": {
+        "duracion": "25:39 de reloj (24:59 en marcha: una pausa de 40 s en el minuto 13)",
+        "km": 2.4,
+        "ritmo": "10:26/km",
+        "bloques5min": {
+          "ritmos": [
+            "10:17",
+            "11:03",
+            "12:14",
+            "10:44",
+            "10:46"
+          ],
+          "fc": [
+            118,
+            120,
+            118,
+            122,
+            121
+          ]
+        },
+        "fcMedia": 120,
+        "fcMax": 133,
+        "fcPrimeros10min": 119,
+        "porEncimaDe150": "0 %",
+        "nota": "Corriendo todo el rato: el reloj registra velocidad de carrera durante todo el entreno (no hubo tramos andando).",
+        "fuente": "exportación de Salud del Apple Watch (2-11), leída del zip sin extraerla; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Su primer rodaje seguido del plan, entero. A 10:26 el km, dentro del suave estimado (10:00-11:00), con el pulso en 120 de media y 133 de máximo: muy por debajo del techo de 150. Para ella fue muy suave: más de lo que hace falta."
+    },
+    {
       "fecha": "2026-10-24",
       "sesion": "24 min: 6 × (3 min corriendo + 1 andando)",
       "hecho": false,

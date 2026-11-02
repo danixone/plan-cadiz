@@ -111,7 +111,7 @@
     tipoTxt: function (dia) {
       if (!dia) return '';
       var p = dia.der && dia.der.cr, sub = (dia.plan && dia.plan.sub) || (dia.der && dia.der.sub);
-      if (dia.tipo === 'otro') return sub === 'martin' ? 'Martín Freire' : sub === 'barra' ? 'barra' : sub === 'crossfit' ? 'CrossFit' : 'otro entreno';
+      if (dia.tipo === 'otro') return sub === 'martin' ? 'Martín Freire' : sub === 'barra' ? 'barra' : sub === 'crossfit' ? 'CrossFit' : 'descanso';
       if (dia.tipo === 'control') return p && p.tipo === 'simulacro' ? 'simulacro' : 'control';
       if (dia.tipo === 'prueba') return 'prueba';
       if (!p) return 'carrera';
@@ -119,7 +119,7 @@
     },
     icono: function (dia) {
       if (!dia) return 'descanso';
-      if (dia.tipo === 'otro') return (dia.plan && dia.plan.sub) === 'crossfit' || (dia.der && dia.der.sub) === 'crossfit' ? 'fuerza' : 'circuito';
+      if (dia.tipo === 'otro') { var sb = (dia.plan && dia.plan.sub) || (dia.der && dia.der.sub); return sb === 'crossfit' ? 'fuerza' : sb === 'otro' ? 'descanso' : 'circuito'; }
       if (dia.tipo === 'control') return 'control';
       if (dia.tipo === 'prueba') return 'prueba';
       return 'carrera';
