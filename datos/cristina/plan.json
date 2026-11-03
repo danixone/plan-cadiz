@@ -645,71 +645,8 @@
           "fecha": "2026-11-03",
           "dia": "Mar",
           "tipo": "otro",
-          "titulo": "Barra A (fuerza)",
-          "objetivo": "Barra A, fuerza (20 min): hombros 5 min · 4 × 3 bajadas lentas de 5 s, 2 min entre series · 3 × 12 s colgada con los codos en ángulo recto · 3 × 8 remo invertido, 1 min entre series. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra.",
-          "barra": [
-            {
-              "t": "Hombros",
-              "seg": 300
-            },
-            {
-              "t": "Bajadas lentas",
-              "n": 4,
-              "reps": 3,
-              "rec": 120
-            },
-            {
-              "t": "Colgada con los codos en ángulo recto",
-              "n": 3,
-              "seg": 12,
-              "rec": 60
-            },
-            {
-              "t": "Remo invertido",
-              "n": 3,
-              "reps": 8,
-              "rec": 60
-            }
-          ],
-          "circuito": {
-            "titulo": "Circuito (técnica)",
-            "texto": "Circuito, técnica (25 min, antes de la barra): calentamiento 12 min · los tres tramos sueltos, 2 veces cada uno al 80 %, 1 min entre ellos · 5 pasadas enteras al 80-90 %, 2 min entre pasadas.",
-            "pasos": [
-              {
-                "t": "Calentamiento",
-                "seg": 720
-              },
-              {
-                "t": "Tramo 1: salida y pieza lateral izquierda",
-                "n": 2,
-                "rec": 60,
-                "cuanto": "al 80 %",
-                "sinNumero": true
-              },
-              {
-                "t": "Tramo 2: por debajo de la valla del fondo y su pica derecha",
-                "n": 2,
-                "rec": 60,
-                "cuanto": "al 80 %",
-                "sinNumero": true
-              },
-              {
-                "t": "Tramo 3: pieza lateral derecha y la última valla por encima",
-                "n": 2,
-                "rec": 60,
-                "cuanto": "al 80 %",
-                "sinNumero": true
-              },
-              {
-                "t": "Circuito entero",
-                "n": 5,
-                "rec": 120,
-                "cuanto": "al 80-90 %",
-                "unidad": "pasadas"
-              }
-            ],
-            "despues": false
-          }
+          "titulo": "Descanso (la barra A de hoy se quita)",
+          "objetivo": "Hoy llegas cargada y «Cómo llegas hoy» dice descanso o solo movilidad: la barra A se quita y no se recupera otro día (regla «Si llegas cargada»). Si te apetece, 5-10 min muy suaves, sin barra: círculos de brazos, abrir y cerrar los brazos y a cuatro patas, arquear y redondear la espalda despacio. Si algo molesta más al moverlo, lo dejas y descansas sin más. Cena pronto y a dormir temprano."
         },
         {
           "fecha": "2026-11-04",
@@ -806,7 +743,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Barra A (fuerza)",
-          "objetivo": "Barra A, fuerza (20 min): hombros 5 min · 4 × 4 bajadas lentas de 5 s, 2 min entre series · 3 × 15 s colgada con los codos en ángulo recto · 3 × 10 remo invertido, 1 min entre series. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra.",
+          "objetivo": "Barra A, fuerza (20 min): hombros 5 min · 4 × 3 bajadas lentas de 5 s, 2 min entre series · 3 × 12 s colgada con los codos en ángulo recto · 3 × 8 remo invertido, 1 min entre series. Son los números del martes 3, que no se hizo: se sube cuando salgan limpios. Nunca al fallo; codo u hombro con dolor de 3 o más, sin barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -815,19 +752,19 @@
             {
               "t": "Bajadas lentas",
               "n": 4,
-              "reps": 4,
+              "reps": 3,
               "rec": 120
             },
             {
               "t": "Colgada con los codos en ángulo recto",
               "n": 3,
-              "seg": 15,
+              "seg": 12,
               "rec": 60
             },
             {
               "t": "Remo invertido",
               "n": 3,
-              "reps": 10,
+              "reps": 8,
               "rec": 60
             }
           ],

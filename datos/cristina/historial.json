@@ -99,6 +99,13 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-03",
+      "sesion": "Barra A (fuerza)",
+      "hecho": false,
+      "motivo": "Descanso en su lugar: llegó cargada después de un día de trabajo muy intenso y «Cómo llegas hoy» le dio descanso o solo movilidad (dicho por ella el 3-11). No se recupera otro día (regla «Si llegas cargada»): el martes 10 repite los números de hoy.",
+      "resumen": "No hecha: descanso y, si le apetecía, movilidad suave"
+    },
+    {
       "fecha": "2026-11-01",
       "sesion": "31 min suave (la larga del sábado 31, hecha el domingo 1)",
       "hecho": true,
