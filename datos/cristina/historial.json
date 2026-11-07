@@ -99,6 +99,27 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-06",
+      "sesion": "22 min suave",
+      "hecho": false,
+      "motivo": "Esta semana no hizo ninguna sesión del plan (dicho por ella el 7-11).",
+      "resumen": "No corrió"
+    },
+    {
+      "fecha": "2026-11-05",
+      "sesion": "Barra B (la del examen)",
+      "hecho": false,
+      "motivo": "Fue a CrossFit en su lugar (dicho por ella el 7-11): 3 rondas de resistencia, 400, 600 y 600 m de carrera, con 40, 32 y 24 wall balls y 24, 32 y 40 kettlebell swings por encima de la cabeza; en total, 1.600 m corriendo, 96 wall balls y 96 swings. Faltan los minutos, el ritmo y el esfuerzo de 1 a 10. El jueves 12 repite los números de la barra B de este día.",
+      "resumen": "No hecha: CrossFit en su lugar (1.600 m de carrera, 96 wall balls, 96 swings)"
+    },
+    {
+      "fecha": "2026-11-04",
+      "sesion": "6 × 200 m a ritmo K, rec. 200 m andando",
+      "hecho": false,
+      "motivo": "Esta semana no hizo ninguna sesión del plan (dicho por ella el 7-11). No se recupera: el lunes 9 repite esta serie en lugar de los 8 × 200.",
+      "resumen": "No corrió"
+    },
+    {
       "fecha": "2026-11-03",
       "sesion": "Barra A (fuerza)",
       "hecho": false,

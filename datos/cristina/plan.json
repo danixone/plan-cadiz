@@ -327,6 +327,12 @@
       "texto": "Primero se toca el miércoles: todo suave, sin rectas ni cuestas; y si además hay molestia o dormiste mal, se quita. Si hace falta, el lunes se queda en 30 min suaves. Lo que se pierde no se recupera."
     },
     {
+      "id": "sin-tiempo",
+      "titulo": "Si no te da tiempo",
+      "texto": "Dormir lo suficiente va antes que cualquier sesión. Si una semana no te da para todo, se hace en este orden: 1) la serie del lunes y la larga del sábado; 2) la barra B (la del examen); 3) el suave del miércoles; 4) la barra A. Lo que se cae no se recupera otro día, y la semana siguiente repite los números que no hiciste antes de subir.",
+      "origen": "Creada el 7-11-2026: la semana del 2-11 no le dio tiempo a ninguna sesión entre semana. Ella decidió mantener la semana tipo (correr lunes, miércoles y sábado; barra martes y jueves; CrossFit el domingo) porque así manda la carrera. El orden es criterio del entrenador: el 1.000 es la prueba que hoy la elimina (5:13, el corte es 4:46) y la barra B es la postura del examen."
+    },
+    {
       "id": "como-llegas",
       "titulo": "Cómo llegas hoy",
       "texto": "Cada día, en Hoy, marcas cómo llegas y la web te dice qué hacer con la sesión. Manda en este orden. 1) Alarmas: si te duele un punto del hueso al apretarlo, al saltar a la pata coja o al andar, o en reposo o de noche, no corres ni saltas y vas al médico (regla «Dolor»). Con fiebre, pecho cargado o tos, ese día no se entrena. 2) Dolor de 4 o más, o peor que ayer: sin carrera ni circuito, y en el CrossFit, ni piernas ni saltos. 3) Si no, se suman factores: piernas cargadas (1; muy cargadas, 2), menos de 6 h de sueño (1), mucho estrés (1), energía floja, porque comiste poco o es un día malo de regla (1), piernas o saltos el día antes de correr (1), dolor de 1 a 3 que no va a más (1) y talón o Aquiles rígidos al levantarte (1). Con 0, la sesión tal cual; con 1, tal cual y con los frenos; con 2, más suave y más corta (unos dos tercios, en la mitad lenta de tu ritmo y sin rectas ni cuestas); con 3 o más, sin carrera. La rigidez al levantarte deja siempre la carrera suave y más corta. El miércoles se toca primero (regla «Si llegas cargada»): con las piernas cargadas, todo suave; si además hay molestia o dormiste mal, se quita. Lo que marcas se queda en tu móvil: no se publica.",
@@ -734,9 +740,9 @@
           "fecha": "2026-11-09",
           "dia": "Lun",
           "tipo": "calidad",
-          "titulo": "8 × 200 m a ritmo K, rec. 200 m andando",
-          "detalle": "Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
-          "objetivo": "Los ocho entre 1:01,5 y 1:03,5."
+          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
+          "detalle": "La serie del miércoles 4, que no se hizo: se repite antes de subir a 8. Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
+          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
         },
         {
           "fecha": "2026-11-10",
@@ -821,7 +827,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 × 22 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 × 20 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos. Son los números del jueves 5, que no se hizo: los 2 s más llegan cuando las cinco salgan limpias.",
           "barra": [
             {
               "t": "Hombros",
@@ -830,7 +836,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": 22,
+              "seg": 20,
               "rec": 120
             },
             {
@@ -8867,6 +8873,11 @@
       "id": "circuito-medir",
       "texto": "Circuito: Daniel compra un kit de vallas y picas (28-10) y lo monta en San Cristóbal. Cuando llegue: comprobar con el kit montado que el recorrido coincide con el gráfico del BOE (ficha «Circuito de agilidad»), dos semanas de técnica al 70-80 % y después el primer test (3 intentos cronometrados como el BOE, el jueves de la semana de descarga). No hay ningún tiempo suyo; con la meta de 21-22 puntos tiene que estar en 9,8 s o menos (9 puntos). 12,8 s o más elimina.",
       "desde": "2026-10-26"
+    },
+    {
+      "id": "barra-casa",
+      "texto": "Barra en casa: comprar una barra de puerta para hacer la barra de los martes y jueves sin salir (12-20 min). Que deje colgarse con las palmas hacia ti y que aguante en el marco. Hasta entonces, en un parque o un gimnasio. El test del martes 17 necesita barra, alguien que cronometre y vídeo de lado.",
+      "desde": "2026-11-07"
     }
   ],
   "ritmosEstimados": {
