@@ -99,6 +99,43 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-07",
+      "sesion": "25 min suave (la larga)",
+      "hecho": true,
+      "resumen": "32 min seguidos · 10:16 /km · 3,09 km · pulso 128 de media",
+      "resultado": {
+        "duracion": "31:42 de reloj (de 12:56 a 13:28)",
+        "km": 3.09,
+        "ritmo": "10:16/km",
+        "bloques5min": {
+          "ritmos": [
+            "10:40",
+            "10:06",
+            "9:52",
+            "9:57",
+            "9:45",
+            "10:25"
+          ],
+          "fc": [
+            113,
+            131,
+            129,
+            133,
+            135,
+            126
+          ]
+        },
+        "fcMedia": 128,
+        "fcMax": 143,
+        "fcPrimeros10min": 121,
+        "porEncimaDe150": "0 %",
+        "deriva": "Mitades desde el minuto 15: 9:54 /km a 134 y 10:47 a 129 (Pa:HR) = +4,0 %, por debajo del 5 %. La segunda mitad pierde velocidad en los últimos minutos (de 6,1 a 4,9 km/h) y el último minuto y medio es casi andando.",
+        "nota": "Recorrido de ida y vuelta casi llano (de 8 a 18 m de altura, según el GPS). 26 °C y 64 % de humedad a las 13:00 (dato del tiempo que guarda el reloj).",
+        "fuente": "exportación de Salud del Apple Watch (7-11), leída del zip sin extraerla; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Hecha y más larga de lo escrito (32 min por 25), como la del domingo 1 (31 min), y a mediodía con 26 °C. Suave de verdad: 128 de media, 143 de máximo y nunca por encima de 150; de los minutos 5 al 25, a 9:45-10:06 el km con 129-135 de pulso, dentro del suave revisado el 2-11 (9:30-10:00, pulso 130-145). No cambia nada del plan: el lunes 9, el 6 × 200."
+    },
+    {
       "fecha": "2026-11-06",
       "sesion": "22 min suave",
       "hecho": false,
@@ -109,7 +146,7 @@
       "fecha": "2026-11-05",
       "sesion": "Barra B (la del examen)",
       "hecho": false,
-      "motivo": "Fue a CrossFit en su lugar (dicho por ella el 7-11): 3 rondas de resistencia, 400, 600 y 600 m de carrera, con 40, 32 y 24 wall balls y 24, 32 y 40 kettlebell swings por encima de la cabeza; en total, 1.600 m corriendo, 96 wall balls y 96 swings. Tiempo límite de 22 min: lo terminó en 24-25 min, con un esfuerzo de 8 de 10. El jueves 12 repite los números de la barra B de este día.",
+      "motivo": "Fue a CrossFit en su lugar (dicho por ella el 7-11): 3 rondas de resistencia, 400, 600 y 600 m de carrera, con 40, 32 y 24 wall balls y 24, 32 y 40 kettlebell swings por encima de la cabeza; en total, 1.600 m corriendo, 96 wall balls y 96 swings. Tiempo límite de 22 min: lo terminó en 24-25 min, con un esfuerzo de 8 de 10. El reloj: 37 min de entreno contando el calentamiento (de 20:19 a 20:56), pulso 158 de media y 184 de máximo (su máxima medida es 188). El jueves 12 repite los números de la barra B de este día.",
       "resumen": "No hecha: CrossFit en su lugar (1.600 m de carrera, 96 wall balls y 96 swings en 24-25 min, esfuerzo 8 de 10)",
       "valoracion": "Sesión dura: esfuerzo de 8 y pasada del tiempo límite. Los 1.600 m cuentan como carrera, pero no como suave. No cambia nada del plan: fue el jueves, con el viernes de descanso antes de la larga del sábado."
     },
