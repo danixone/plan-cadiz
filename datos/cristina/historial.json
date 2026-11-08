@@ -99,6 +99,13 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-08",
+      "sesion": "CrossFit, sin piernas pesadas ni saltos (el lunes toca la calidad)",
+      "hecho": false,
+      "motivo": "No hizo ejercicio (dicho por ella el 8-11). No se recupera; el lunes 9, el 6 × 200 como está escrito, con las piernas descansadas.",
+      "resumen": "No hecho"
+    },
+    {
       "fecha": "2026-11-07",
       "sesion": "25 min suave (la larga)",
       "hecho": true,
