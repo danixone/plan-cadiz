@@ -739,10 +739,10 @@
         {
           "fecha": "2026-11-09",
           "dia": "Lun",
-          "tipo": "calidad",
-          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
-          "detalle": "La serie del miércoles 4, que no se hizo: se repite antes de subir a 8. Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
-          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
+          "tipo": "suave",
+          "titulo": "28 min suave",
+          "min": 28,
+          "detalle": "Cambiado con el miércoles 11: hoy hiciste este rodaje en lugar del 6 × 200, que pasa al miércoles (dicho por ti el 9-11). Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-10",
@@ -817,10 +817,10 @@
         {
           "fecha": "2026-11-11",
           "dia": "Mié",
-          "tipo": "suave",
-          "titulo": "28 min suave",
-          "min": 28,
-          "detalle": "Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
+          "tipo": "calidad",
+          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
+          "detalle": "Cambiada con el lunes 9: el lunes hiciste el rodaje de este día (dicho por ti el 9-11). Es la serie del miércoles 4, que no se hizo: se repite antes de subir a 8, y es la única sesión a ritmo K antes del control del lunes 23. Sin el perro. Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
+          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
         },
         {
           "fecha": "2026-11-12",

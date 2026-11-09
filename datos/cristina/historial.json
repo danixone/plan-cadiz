@@ -99,6 +99,43 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-09",
+      "sesion": "28 min suave (el del miércoles, cambiado con el 6 × 200)",
+      "hecho": true,
+      "resumen": "28 min seguidos · 10:04 /km · 2,78 km · pulso 124 de media · con el perro",
+      "resultado": {
+        "duracion": "28:00 corriendo (de 21:12 a 21:40) y 12 min andando después. El entreno del reloj marca 40:35 en marcha: empezó a las 20:58, estuvo 13 min 30 s en pausa (anduvo unos 320 m mientras) y siguió hasta las 21:52 andando",
+        "km": 2.78,
+        "ritmo": "10:04/km",
+        "bloques5min": {
+          "ritmos": [
+            "11:19",
+            "10:02",
+            "9:33",
+            "9:41",
+            "9:55",
+            "10:06"
+          ],
+          "fc": [
+            110,
+            118,
+            129,
+            131,
+            129,
+            132
+          ]
+        },
+        "fcMedia": 124,
+        "fcMax": 149,
+        "fcPrimeros10min": 114,
+        "porEncimaDe150": "0 %",
+        "deriva": "Mitades desde el minuto 15 hasta el 28 (seis minutos y medio cada una, cortas): 9:45 /km a 130 y 9:58 a 131 (Pa:HR) = +2,5 %, por debajo del 5 %. El 149 de máximo es de los últimos 30 s, con un repecho de unos 2,5 m y ya parando: no es un pico en mitad del rodaje.",
+        "nota": "Sin ninguna parada en los 28 min (el GPS no tiene ningún tramo lento), con el perro: el 1-11 hubo una pausa de 45 s por él. Recorrido llano (de 7 a 10 m de altura según el GPS mientras corría). 21 °C y 83 % de humedad a las 21:00 (dato del tiempo que guarda el reloj). Los 3,21 km del reloj son los 2,78 corriendo y unos 0,43 andando al final.",
+        "fuente": "exportación de Salud del Apple Watch (9-11), leída del zip sin extraerla; el archivo no entra en el proyecto"
+      },
+      "valoracion": "Suave bien hecho: 124 de media, 149 de máximo y nunca por encima de 150; los primeros 5 min a 11:19 con 110 de pulso y, del 10 al 28, a 9:33-10:06 el km con 129-132, dentro del suave revisado el 2-11 (9:30-10:00, pulso 130-145). Parecido al del sábado 7 (9:45-10:06 con 129-135), pero aquel fue a mediodía con 26 °C y este de noche con 21 °C: no se puede decir que haya mejorado. Cambia el orden de la semana, no la carga: el 6 × 200 pasa al miércoles 11 y es la única sesión a ritmo K antes del control del lunes 23."
+    },
+    {
       "fecha": "2026-11-08",
       "sesion": "CrossFit, sin piernas pesadas ni saltos (el lunes toca la calidad)",
       "hecho": false,
