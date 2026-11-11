@@ -817,10 +817,9 @@
         {
           "fecha": "2026-11-11",
           "dia": "Mié",
-          "tipo": "calidad",
-          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
-          "detalle": "Cambiada con el lunes 9: el lunes hiciste el rodaje de este día (dicho por ti el 9-11). Es la serie del miércoles 4, que no se hizo: se repite antes de subir a 8, y es la única sesión a ritmo K antes del control del lunes 23. Sin el perro. Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
-          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
+          "tipo": "otro",
+          "titulo": "CrossFit (en lugar del 6 × 200)",
+          "objetivo": "Fuiste a CrossFit en lugar del 6 × 200 (dicho por ti el 11-11). Cuenta como entreno, no como la serie: el 6 × 200 pasa al lunes 16."
         },
         {
           "fecha": "2026-11-12",
@@ -860,10 +859,10 @@
         {
           "fecha": "2026-11-16",
           "dia": "Lun",
-          "tipo": "suave",
-          "titulo": "25 min suave + 4 rectas",
-          "min": 25,
-          "detalle": "Semana de descarga. Al final, 4 rectas."
+          "tipo": "calidad",
+          "titulo": "6 × 200 m a ritmo K, rec. 200 m andando",
+          "detalle": "Semana de descarga: en lugar de los 25 min suaves con 4 rectas, el 6 × 200 que no hiciste el miércoles 11, para llegar al control del lunes 23 habiendo corrido a ritmo K (regla «Si no te da tiempo»: la semana siguiente repite los números que no hiciste). Solo si estás bien del todo; si no, lo que estaba escrito: 25 min suaves y 4 rectas. Sin el perro. Calentamiento: 15 min suave + movilidad + 4 rectas. Ritmo K: el de tu control del 26-10 (5:13), 1:02,5 cada 200 y 0:31 a los 100 m. El primero, igual que los demás: en el control saliste en 0:53,7. Recuperación: 200 m andando. Si te duele algo de 3 o más o el talón está rígido al levantarte, 25 min suaves en su lugar (regla «Dolor»). Después, 10 min muy suave.",
+          "objetivo": "Los seis entre 1:01,5 y 1:03,5: aprender el ritmo."
         },
         {
           "fecha": "2026-11-17",
