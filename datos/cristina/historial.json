@@ -99,6 +99,21 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-11",
+      "sesion": "6 × 200 m a ritmo K, rec. 200 m andando",
+      "hecho": false,
+      "motivo": "Fue a CrossFit en su lugar (dicho por ella el 11-11): time cap de 12 min con 3 rondas de 400 m de carrera (ella hizo 400, 300 y 300), 12 power snatch y 12 dominadas con kipping. Lo terminó pasado del tiempo límite: 15-18 min según ella; por el pulso, de 10:47 a 11:03, unos 16-17 min. El reloj: 52 min de entreno contando el calentamiento (de 10:13 a 11:05), pulso 144 de media y 196 de máximo, con 185-196 en los dos minutos y medio finales, por encima de los 188 de su 1.000 del 26-10. Con pesas en las manos y colgada de la barra el pulso de muñeca puede fallar: la máxima no se cambia con este dato. No se recupera: el 6 × 200 era la única sesión a ritmo K antes del control del lunes 23.",
+      "resumen": "No hecha: CrossFit en su lugar (time cap de 12 min, terminado en unos 16-17; pulso hasta 196)",
+      "valoracion": "Sesión a tope, con el pulso más alto que ha marcado su reloj, y en lugar de la serie. El jueves 12 pasa a descanso, sin barra; la larga del sábado 14 y el test del martes 17, solo si se encuentra bien del todo."
+    },
+    {
+      "fecha": "2026-11-10",
+      "sesion": "Barra A (fuerza)",
+      "hecho": false,
+      "motivo": "No fue (dicho por ella el 11-11). No se recupera.",
+      "resumen": "No hecha"
+    },
+    {
       "fecha": "2026-11-09",
       "sesion": "28 min suave (el del miércoles, cambiado con el 6 × 200)",
       "hecho": true,

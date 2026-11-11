@@ -370,7 +370,7 @@
     {
       "id": "energia",
       "titulo": "Comer y descansar",
-      "texto": "Come lo suficiente para entrenar; las calidades no se hacen en ayunas. Si la regla se vuelve irregular o falta tres meses, no es «normal por entrenar»: vas al médico. Si el cansancio no se va al descansar, también; que sea el médico quien decida si te pide una analítica. No tomes hierro por tu cuenta. Un día de regla malo cuenta como día malo: el control lleva asterisco."
+      "texto": "Come lo suficiente para entrenar; las calidades no se hacen en ayunas. Si la regla se vuelve irregular o falta tres meses, no es «normal por entrenar»: vas al médico. Si el cansancio no se va al descansar, también; que sea el médico quien decida si te pide una analítica. No tomes hierro por tu cuenta. Si en un entreno te mareas, tienes náuseas o empiezas a temblar, paras ahí aunque no hayas terminado: nada se termina a la fuerza. Un día de regla malo cuenta como día malo: el control lleva asterisco."
     },
     {
       "id": "calor",
@@ -826,45 +826,8 @@
           "fecha": "2026-11-12",
           "dia": "Jue",
           "tipo": "otro",
-          "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 × 20 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos. Son los números del jueves 5, que no se hizo: los 2 s más llegan cuando las cinco salgan limpias.",
-          "barra": [
-            {
-              "t": "Hombros",
-              "seg": 300
-            },
-            {
-              "t": "Postura del examen",
-              "n": 5,
-              "seg": 20,
-              "rec": 120
-            },
-            {
-              "t": "Colgada con los brazos estirados",
-              "n": 2,
-              "seg": 30,
-              "rec": 60
-            }
-          ],
-          "circuito": {
-            "titulo": "Circuito (rápido)",
-            "texto": "Circuito, rápido (antes de la barra): calentamiento 12 min · 5 pasadas enteras a tope, 2 min 30 s entre pasadas; la primera es la que se apunta, porque en el examen hay un solo intento. Si un tiempo sube 3 décimas sobre el mejor del día, se acabó el circuito.",
-            "pasos": [
-              {
-                "t": "Calentamiento",
-                "seg": 720
-              },
-              {
-                "t": "Circuito entero",
-                "n": 5,
-                "rec": 150,
-                "cuanto": "a tope",
-                "unidad": "pasadas",
-                "d": "La primera es la que se apunta: en el examen hay un solo intento. Cronometrada por otra persona."
-              }
-            ],
-            "despues": false
-          }
+          "titulo": "Descanso (la barra B de hoy se quita)",
+          "objetivo": "Después del CrossFit a tope del miércoles, hoy descansas: sin barra y sin entrenar. La barra B no se recupera otro día (regla «Si no te da tiempo»). Come bien, bebe y a dormir temprano."
         },
         {
           "fecha": "2026-11-13",
@@ -878,7 +841,7 @@
           "tipo": "suave",
           "titulo": "32 min suave",
           "min": 32,
-          "detalle": "La larga. Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
+          "detalle": "Solo si ya te encuentras bien del todo; si no, descanso (y si vas al médico, manda lo que diga). La larga. Suave de verdad: pulso por debajo de 150 y hablando con frases enteras; si pasa de 150, más despacio o anda 1 min. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 26-10: estas semanas has corrido menos de lo escrito, y se sube poco a poco.)"
         },
         {
           "fecha": "2026-11-15",
@@ -907,7 +870,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra. Si ese día no estás bien del todo, no hay test: avisas y se mueve.",
           "barra": [
             {
               "t": "Hombros",
