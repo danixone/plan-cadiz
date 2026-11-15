@@ -7,7 +7,7 @@ Lo más importante, antes de nada:
 - **No es un Artifact de claude.ai.** Es una página estática en GitHub Pages, generada por un programa en Python.
 - **El repositorio y la página son públicos.** Un calendario de estudio sería un dato personal nuevo, que hoy no está publicado. Antes del primer `git push` con él, hace falta el sí expreso de Daniel y de Cristina.
 - **La página está casi en su límite de tamaño:** 236,9 KB con gzip de 240 KB. Ver 5.4.
-- **Las dos sesiones trabajarían sobre la misma carpeta de git.** Ver 5.5 antes de tocar nada.
+- **Las dos sesiones publican en el mismo repositorio,** cada una desde su propio clon. Ver 5.5 antes de subir nada.
 
 ---
 
@@ -550,8 +550,8 @@ También está aparte, en `web/cristina/doc/plan-cristina-dias.json`.
 
 - `docs/cristina/index.html` y `docs/index.html`. Se generan; **nunca a mano**.
 - `datos/cristina/plan.json`, `historial.json` y `privado.json`. Si necesitas algo de ellos, se lee; si hay que cambiarlo, me lo pides.
-- `web/src/**`: plantilla, CSS y JS **compartidos con la página de Daniel.** Cualquier cambio ahí cambia las dos páginas y tiene que pasar `sh web/instalar.sh` y `sh web/comprobar_docs.sh` de Daniel. Eso incluye la barra de pestañas (`20_shell.html`): **una quinta pestaña «Estudio» pasa por mí.**
-- `web/cristina/construir.py`, `web/cristina/src/js/10_cristina.js`, `60_consejo.js` y `web/cristina/src/css/90_cristina.css`.
+- `web/src/**`: plantilla, CSS y JS **compartidos con la página de Daniel.** Cualquier cambio ahí cambia las dos páginas y tiene que pasar `sh web/instalar.sh` y `sh web/comprobar_docs.sh` de Daniel. Eso incluye la barra de pestañas (`20_shell.html`): la pestaña «Estudio» de Cristina va en tu bloque `pestana_estudio` de `construir.py`, no ahí.
+- `web/cristina/construir.py`, salvo el bloque `pestana_estudio`, que es tuyo; `web/cristina/src/js/10_cristina.js`, `60_consejo.js` y `web/cristina/src/css/90_cristina.css`.
 - `CLAUDE.md`, `.gitignore` y los archivos de la preparación de Daniel (`datos/plan.json`, `datos/historial.json`, `web/datos/`, `herramientas/`).
 
 ### 5.2 Lo que sería tuyo (propuesta)
@@ -561,6 +561,7 @@ También está aparte, en `web/cristina/doc/plan-cristina-dias.json`.
 | `datos/cristina/estudio.json` | El plan de estudio (público, ver 5.6) |
 | `web/cristina/src/js/70_estudio.js` | Tu módulo |
 | `web/cristina/src/css/91_estudio.css` | Tu CSS |
+| El bloque `pestana_estudio` de `web/cristina/construir.py` | La pestaña de estudio |
 
 Lo que ya hace el constructor, sin tocarlo:
 - **JS:** mete cualquier `.js` de `web/cristina/src/js/`, ordenado por nombre, detrás de los módulos de Daniel y delante de `99_arranque.js`.
@@ -604,26 +605,23 @@ python3 web/cristina/herramientas/probar.py --ruta hoy --hoy 2026-11-16
 - **Subirlo lo decide Daniel.** Para su página lo subió de 240 a 270 KB el 23-10.
 - Cargar `estudio.json` como archivo aparte también rompería otra regla de la especificación: la página es un único archivo autónomo. También lo decide Daniel.
 
-### 5.5 Git y publicación
+### 5.5 Git y publicación (acordado el 15-11-2026)
 
-**El riesgo:** las dos sesiones comparten la carpeta y la rama `main`.
-- Cualquier `construir.py`, tuyo o mío, mete en `docs/cristina/index.html` lo que haya en `src/` en ese momento, aunque esté a medias.
-- Un `git add -A` publicaría lo que el otro tiene a medias.
+La sesión del estudio trabaja en **otro usuario del Mac, con su propio clon** de `danixone/plan-cadiz` y su propia clave de despliegue, y publica ella misma. No compartimos carpeta: el riesgo ya no es llevarse el trabajo a medias del otro, sino chocar en `main`. Reglas:
 
-**Propuesta:**
-1. **Trabaja en un worktree de git con tu rama** (por ejemplo `git worktree add ../plan-cadiz-estudio -b estudio`). Así tu trabajo a medias no está en mi carpeta.
-2. **Cuando esté listo, se fusiona en `main`.** Quien fusione:
-   - reconstruye desde un árbol limpio;
-   - prueba;
-   - hace commit **con rutas explícitas**, nunca `git add -A`;
-   - y hace `git push`.
-3. **Nunca `git push --force`,** nunca enmendar commits del otro y nunca hacer commit de archivos del otro.
-4. **Se publica solo cuando Daniel o Cristina lo piden,** como hasta ahora.
-5. **Antes de publicar:**
-   - `git status`, para no llevarse nada ajeno;
-   - `git log origin/main..`, para ver qué commits sin subir hay y de quién son;
-   - y avisar en la respuesta de que se publica también lo del otro, si lo hay.
-6. **Yo dejo de usar `git add -A` desde ya.** El Paso 6 del `CLAUDE.md` todavía lo dice. Si las dos sesiones comparten la carpeta, Daniel tendría que cambiar esa línea.
+1. **Antes de subir, `git fetch`;** si `main` ha avanzado, `git pull --rebase`.
+2. **`docs/cristina/index.html` no se fusiona a mano.** Si choca, se reconstruye con `construir.py`, se prueba y se añade.
+3. **Nunca `--force` ni `git add -A`.** Commits con rutas explícitas.
+4. **Cada una toca solo lo suyo.**
+   - La del estudio: `70_estudio.js`, `91_estudio.css`, `datos/cristina/estudio.json` y el bloque `pestana_estudio` de `construir.py`.
+   - La de la preparación física: todo lo demás (5.1).
+5. **Si una subida lleva commits de la otra sesión, se avisa.**
+
+Cómo publica cada una:
+- **La del estudio** publica el plan de estudio actualizado cada vez que lo rehace, y avisa antes de cualquier cambio de código en la página.
+- **La de la preparación física** publica cuando lo piden Daniel o Cristina, como hasta ahora.
+
+**Ojo con la comprobación de privacidad:** `vigilar` solo funciona en el clon que tiene `datos/cristina/privado.json`, que es el de la preparación física. En el clon del estudio no se comprueba nada, así que `estudio.json` no puede llevar nada personal (ver 5.6). Cada vez que yo reconstruyo la página, `vigilar` también revisa `estudio.json`.
 
 ### 5.6 Privacidad
 
