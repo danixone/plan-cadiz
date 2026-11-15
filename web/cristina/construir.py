@@ -46,7 +46,7 @@ VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']
 MOD_DE = {'hoy': '20_hoy.js', 'plan': '30_plan.js', 'marcas': '40_marcas.js', 'tecnica': '50_tecnica.js'}
 DOW = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom']
 TECHO = {'suave': None}     # plan.pulso.techoSuave (desde el 26-10): lo pone construir()
-LIMITE_GZIP = 240 * 1024
+LIMITE_GZIP = 270 * 1024   # 240 → 270 KB el 15-11-2026, para la pestaña «Estudio» (pedido por Daniel y Cristina)
 
 
 def leer(p):
@@ -932,6 +932,30 @@ def sustituir(txt, viejo, nuevo, donde, veces=None):
     return txt.replace(viejo, nuevo)
 
 
+# ---- Pestaña «Estudio» (la lleva la sesión del estudio: web/cristina/doc/integracion-estudio.md, §5; pedida por Daniel y
+# Cristina el 15-11-2026). Solo entra si hay datos/cristina/estudio.json: quinta pestaña arriba y abajo, su icono y su vista,
+# copiada de la de Técnica. La página de Daniel no cambia (todo es sustitución en la copia de Cristina).
+ICONO_ESTUDIO = ('<symbol id="i-estudio" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.6 3.5 5v13.5c3.5-.4 6.5 0 8.5 1.5 '
+                 '2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5V20"/></symbol>')
+
+
+def pestana_estudio(shell):
+    shell = sustituir(shell, '</svg>\n<div class="sb-fondo"', ICONO_ESTUDIO + '</svg>\n<div class="sb-fondo"', '20_shell.html', veces=1)
+    for pre in ('ab', 't'):
+        m = re.search(r'<button type="button" role="tab" id="%s-tecnica".*?</button>' % pre, shell)
+        if not m:
+            raise SystemExit('ERROR: no encuentro la pestaña %s-tecnica para poner «Estudio» detrás' % pre)
+        nuevo = (m.group(0).replace('-tecnica', '-estudio').replace('data-v="tecnica"', 'data-v="estudio"')
+                 .replace('#i-tecnica', '#i-estudio').replace('Técnica</button>', 'Estudio</button>'))
+        shell = shell[:m.end()] + '\n    ' + nuevo + shell[m.end():]
+    m = re.search(r'<section class="view" id="v-tecnica".*?</section>', shell, re.S)
+    if not m or '<!--__VISTA:tecnica-->' not in m.group(0):
+        raise SystemExit('ERROR: no encuentro la vista de Técnica para copiar la de Estudio')
+    sec = (m.group(0).replace('v-tecnica', 'v-estudio').replace('t-tecnica', 't-estudio').replace('>Técnica</h1>', '>Estudio</h1>')
+           .replace('<!--__VISTA:tecnica-->', '<div id="es-raiz"></div>'))
+    return sustituir(shell, '</main>', sec + '\n</main>', '20_shell.html', veces=1)
+
+
 def ensamblar(datos, B, modulos):
     head = leer(os.path.join(SRC_D, '00_head.html'))
     head = sustituir(head, '<title data-inv="C1">Plan Cádiz</title>', '<title>Plan 2027</title>', '00_head.html')
@@ -944,6 +968,9 @@ def ensamblar(datos, B, modulos):
     shell = sustituir(shell, '<span class="brand-t">Plan Cádiz</span>', '<span class="brand-t">Plan 2027</span>', '20_shell.html')
     shell = sustituir(shell, '<a aria-current="page">Daniel</a><a href="cristina/">Cristina</a>', '<a href="../">Daniel</a><a aria-current="page">Cristina</a>',
                       '20_shell.html', veces=2)
+    hay_estudio = 'estudio' in datos
+    if hay_estudio:
+        shell = pestana_estudio(shell)
 
     # CSS: los de Daniel en sus capas y los de Cristina en la capa «cristina», detrás
     dcss = os.path.join(SRC_D, 'css')
@@ -970,6 +997,8 @@ def ensamblar(datos, B, modulos):
     # JS: núcleo de Daniel (con el prefijo de almacenamiento de Cristina), los de Cristina y el arranque de Daniel
     core = leer(os.path.join(SRC_D, 'js', '00_core.js'))
     core = sustituir(core, "function k(c) { return /^pc-/.test(c) ? c : 'pc-' + c; }", "function k(c) { return /^cr-/.test(c) ? c : 'cr-' + c; }", '00_core.js', veces=1)
+    if hay_estudio:
+        core = sustituir(core, "var VISTAS = ['hoy', 'plan', 'marcas', 'tecnica'];", "var VISTAS = ['hoy', 'plan', 'marcas', 'tecnica', 'estudio'];", '00_core.js', veces=1)
     # detrás del núcleo, los ajustes de Cristina (10_cristina.js); después TODOS los módulos de Daniel, sin copiarlos
     archivos = [('00_core.js', core), ('10_cristina.js', leer(os.path.join(SRC_C, 'js', '10_cristina.js')))]
     djs = os.path.join(SRC_D, 'js')
