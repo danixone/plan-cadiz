@@ -1022,6 +1022,15 @@ def main():
     hist = leer_json(os.path.join(DATOS, 'historial.json'), {'carrera': [], 'controles': []})
     privado = leer_json(os.path.join(DATOS, 'privado.json'), {})
     datos, errores, avisos = construir(plan, hist, hoy)
+    # El estudio de Cristina lo lleva otra sesión (web/cristina/doc/integracion-estudio.md, apartado 5).
+    # Si existe datos/cristina/estudio.json, entra tal cual en PC.D.estudio; si no existe, PC.D.estudio no está.
+    # Es público como el resto de los datos y pasa por la misma comprobación de privacidad.
+    ruta_est = os.path.join(DATOS, 'estudio.json')
+    if os.path.exists(ruta_est):
+        try:
+            datos['estudio'] = leer_json(ruta_est)
+        except ValueError as x:
+            errores.append('datos/cristina/estudio.json no es un JSON válido: %s' % x)
     for x in avisos:
         print('AVISO:', x)
     if errores:
