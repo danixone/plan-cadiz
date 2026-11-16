@@ -102,7 +102,7 @@
     "maxima": 188,
     "maximaNota": "188, medida el 26-10-2026 al final del 1.000 a tope, con el reloj de muñeca. Es la más alta que tiene registrada corriendo (antes, 176 el 17-10); su máxima real puede ser algo más alta.",
     "nota": "Público desde el 12-10-2026 (decisión de Daniel). Desde el 26-10 hay máxima medida: lo suave va por debajo de 150 (zona 2), y además tienes que poder hablar. En las series cortas el pulso de muñeca va con retraso: ahí manda el ritmo.",
-    "zonas": "Por reserva de pulso, con reposo 67 y máxima 188, como las de Daniel: zona 1, 128-140 · zona 2, 140-152 · zona 3, 152-164 · zona 4, 164-176 · zona 5, 176-188.",
+    "zonas": "Por reserva de pulso, con reposo 67 y máxima 188, como las de Daniel: zona 1, 128-140 · zona 2, 140-152 · zona 3, 152-164 · zona 4, 164-176 · zona 5, 176-188. El Garmin de Daniel, que usas desde el 16-11, lleva las zonas de Daniel: 124-140 · 140-155 · 155-171 · 171-186 · 186-202. Hasta 140 coinciden con las tuyas; por encima, las suyas van de 3 a 14 de pulso más altas: su «zona 2» llega a 155, por encima de tu techo de 150. Con ese reloj, mira el número de pulso, no el nombre ni el color de la zona.",
     "techoSuave": 150
   },
   "baremo1000Mujeres": {

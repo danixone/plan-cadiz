@@ -99,6 +99,52 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-16",
+      "sesion": "6 × 200 m a ritmo K, rec. 200 m andando",
+      "hecho": true,
+      "resumen": "6 × 200 en 61,3 · 61,7 · 62,4 · 62,3 · 58,8 · 56,6 s (pedía 1:01,5–1:03,5) · pulso hasta 181 · con el Garmin de Daniel",
+      "resultado": {
+        "duracion": "Calentamiento de 9 min trotando (de 20:58 a 21:07), 10 min sin grabar y la serie de 21:17 a 21:36. La vuelta a la calma no está grabada",
+        "tiemposS": [
+          61.3,
+          61.7,
+          62.4,
+          62.3,
+          58.8,
+          56.6
+        ],
+        "tiemposPistaS": [
+          60.4,
+          62.1,
+          62.0,
+          61.7,
+          58.8,
+          56.0
+        ],
+        "recuperacionesS": [
+          162,
+          156,
+          146,
+          144,
+          142
+        ],
+        "fcMaxPorSerie": [
+          159,
+          171,
+          175,
+          173,
+          165,
+          178
+        ],
+        "fcMedia": 146,
+        "fcMax": 181,
+        "calentamiento": "9 min, 0,98 km a 9:12 /km, pulso 133 de media y 153 de máximo",
+        "nota": "En la pista de Arucas, pero sin el modo pista: cada vuelta es de 200 m por el GPS. Proyectadas sobre la calle 1 (sacada del simulacro de Daniel del 19-10, grabado en modo pista), las vueltas miden entre 198 y 206 m de pista, y los 200 m quedan en 60,4 · 62,1 · 62,0 · 61,7 · 58,8 · 56,0 s: lo mismo que el GPS con ±1 s. El entreno cargado en el reloj avisaba fuera de 58,0–63,6 s por 200 (4:50–5:18 /km), más ancho que el del plan (1:01,5–1:03,5, que son 5:08–5:17 /km). Pulso de muñeca, sin banda: en series de 1 min va con retraso.",
+        "fuente": "Garmin Forerunner 265 de Daniel, con el perfil, las zonas y la máxima de Daniel; actividades 25101918498 y 25102127624 de Garmin Connect"
+      },
+      "valoracion": "Las cuatro primeras, en el ritmo K: 61,3 · 61,7 · 62,4 · 62,3 s por el GPS. La primera sin salir disparada, al contrario que en el control del 26-10. Las dos últimas, por delante: 58,8 y 56,6, entre 3 y 5 s más rápidas de lo pedido. El ritmo lo has aprendido; al final se te escapó. No cambia el plan: el ritmo K nuevo sale del control del lunes 23. Pulso hasta 181 al acabar, por debajo de tu máxima de 188."
+    },
+    {
       "fecha": "2026-11-11",
       "sesion": "CrossFit (en lugar del 6 × 200)",
       "hecho": true,
