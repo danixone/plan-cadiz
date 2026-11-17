@@ -621,6 +621,8 @@ Cómo publica cada una:
 - **La del estudio** publica el plan de estudio actualizado cada vez que lo rehace, y avisa antes de cualquier cambio de código en la página.
 - **La de la preparación física** publica cuando lo piden Daniel o Cristina, como hasta ahora.
 
+**Desde el 17-11-2026 la preparación física también tiene una copia en el usuario de Cristina** (carpeta propia, distinta de la del estudio), gemela de la del usuario de Daniel. Lo privado de la preparación física vive en `/Users/Shared/plan-cadiz-privado`, enlazado desde esas dos copias: **la sesión del estudio no lo lee, no lo copia y no lo enlaza.** Las reglas de arriba valen igual para las tres copias.
+
 **Ojo con la comprobación de privacidad:** `vigilar` solo funciona en el clon que tiene `datos/cristina/privado.json`, que es el de la preparación física. En el clon del estudio no se comprueba nada, así que `estudio.json` no puede llevar nada personal (ver 5.6). Cada vez que yo reconstruyo la página, `vigilar` también revisa `estudio.json`.
 
 ### 5.6 Privacidad

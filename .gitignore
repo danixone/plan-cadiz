@@ -1,15 +1,19 @@
 .DS_Store
 node_modules/
 *.zip
-archivos-garmin/
+archivos-garmin
 web/out/
 web/capturas/
 web/qa/resultado.json
 __pycache__/
 web/herramientas/centinelas.local.json
-herramientas/modelos/
+herramientas/modelos
 
 # Datos personales de Cristina: no se publican
 datos/cristina/privado.json
-datos/cristina/privado/
+datos/cristina/privado
 web/cristina/out/
+
+# Claude Code: la configuración de cada copia (los agentes de .claude/agents sí van al repositorio)
+.claude/launch.json
+.claude/settings.local.json
