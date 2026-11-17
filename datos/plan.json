@@ -427,41 +427,51 @@
     {
       "dia": "Lunes",
       "tipo": "carrera",
-      "contenido": "Series (calidad 1). 3 × 5 dominadas dentro del calentamiento",
-      "hora": "18:00-19:00 desde el 28-9"
+      "contenido": "Correr con Cristina: su sesión de calidad, a su ritmo; le haces de liebre",
+      "hora": "la de Cristina"
     },
     {
       "dia": "Martes",
       "tipo": "fuerza",
-      "contenido": "Gimnasio del Arsenal: tirón, piernas y core. Único día con lastre (~85 min con superseries). H justo después de A",
-      "hora": "18:00-19:30 (el Arsenal abre hasta las 22:00)"
+      "sesionTipo": "torsoA",
+      "contenido": "Torso A: pecho y espalda, con abdomen (unos 70 min)",
+      "hora": "15:00-16:15",
+      "nota": "Gimnasio del Arsenal al salir del trabajo"
     },
     {
       "dia": "Miércoles",
       "tipo": "carrera",
-      "contenido": "Calidad 2: kilómetro partido o series largas. 3 × 5 dominadas dentro del calentamiento",
-      "nota": "Antes se llamaba «umbral por pulsaciones», pero desde el 21 de septiembre y hasta la prueba no hay ninguna sesión de umbral programada. La banda 166-172 se conserva documentada como techo para los días en que aplique. NO se añade umbral: el déficit medido es aeróbica baja (182 frente a 736 de alta), y más aeróbica alta empeora el agujero.",
-      "hora": "18:00-19:00 desde el 28-9"
+      "contenido": "Correr con Cristina: su suave",
+      "hora": "la de Cristina"
     },
     {
       "dia": "Jueves",
-      "tipo": "circuito",
-      "contenido": "Circuito con el preparador a las 21:30 (solo circuito, sin fuerza). INAMOVIBLE: no se mueve a otro día. Mañana libre, nada de piernas"
+      "tipo": "fuerza",
+      "sesionTipo": "piernaA",
+      "contenido": "Pierna A: sentadilla y rumano, con abdomen (unos 70 min)",
+      "hora": "15:00-16:15",
+      "nota": "Gimnasio del Arsenal al salir del trabajo"
     },
     {
       "dia": "Viernes",
-      "tipo": "descanso",
-      "contenido": "Descanso"
+      "tipo": "fuerza",
+      "sesionTipo": "torsoB",
+      "contenido": "Torso B: dominadas, hombro y brazos, con abdomen (unos 70 min)",
+      "hora": "15:00-16:15",
+      "nota": "Gimnasio del Arsenal al salir del trabajo"
     },
     {
       "dia": "Sábado",
       "tipo": "carrera",
-      "contenido": "Rodaje largo, control o simulacro. 10 min de gemelo, saltos y core al terminar. El 3-10 y el 24-10, sesión corta de barra (unos 20 min) ANTES del rodaje"
+      "contenido": "Correr con Cristina: su larga",
+      "hora": "la de Cristina"
     },
     {
       "dia": "Domingo",
-      "tipo": "descanso",
-      "contenido": "Descanso"
+      "tipo": "fuerza",
+      "sesionTipo": "piernaB",
+      "contenido": "Pierna B: peso muerto y glúteo, con abdomen (unos 70 min)",
+      "nota": "Gimnasio del Arsenal, a la hora que te venga bien (abre los domingos, dicho por ti el 17-11)"
     }
   ],
   "sesionesTipo": {
@@ -674,6 +684,469 @@
         }
       ],
       "nota": "Sin dominadas los sábados, SALVO el 3-10 y el 24-10: sesión corta de barra antes del rodaje (revisión del 28-9). Resuelto el 29-9 (K4)."
+    },
+    "gimnasio": {
+      "torsoA": {
+        "lugar": "Gimnasio del Arsenal",
+        "duracionMin": 70,
+        "calentamiento": "5-8 min de remo o bici suave + 2 series de aproximación del primer ejercicio con poco peso",
+        "prioridad": "Si falta tiempo: el primer ejercicio, los dos siguientes y el abdomen, y a casa.",
+        "titulo": "Torso A: pecho y espalda",
+        "bloques": [
+          {
+            "clave": "A",
+            "ejercicio": "Press de banca con barra",
+            "series": 4,
+            "reps": "6-10",
+            "descanso": "2–3 min",
+            "detalle": "Agarre algo más ancho que los hombros; omóplatos juntos y bajados; la barra baja a la parte baja del pecho y sube sin rebotar."
+          },
+          {
+            "clave": "B",
+            "ejercicio": "Remo en T con apoyo de pecho",
+            "series": 4,
+            "reps": "8-12",
+            "descanso": "2 min",
+            "detalle": "Pecho pegado al apoyo; tira con los codos hacia atrás y aprieta la espalda un segundo arriba."
+          },
+          {
+            "clave": "C",
+            "ejercicio": "Press inclinado con mancuernas",
+            "series": 3,
+            "reps": "8-12",
+            "descanso": "2 min",
+            "detalle": "Banco a unos 30°; las mancuernas bajan a la altura del pecho, con los codos a unos 45° del cuerpo."
+          },
+          {
+            "clave": "D",
+            "ejercicio": "Jalón al pecho",
+            "series": 3,
+            "reps": "10-12",
+            "descanso": "90 s",
+            "detalle": "Agarre algo más ancho que los hombros; la barra va a la parte alta del pecho, sin echarte atrás."
+          },
+          {
+            "clave": "E",
+            "ejercicio": "Elevaciones laterales con mancuernas",
+            "series": 3,
+            "reps": "12-20",
+            "descanso": "60 s",
+            "detalle": "Codos un poco doblados; sube hasta la altura de los hombros, sin impulso."
+          },
+          {
+            "clave": "F",
+            "ejercicio": "Curl en el banco Scott",
+            "series": 3,
+            "reps": "10-15",
+            "detalle": "Brazos apoyados en el cojín; baja casi hasta estirar, sin soltar abajo."
+          },
+          {
+            "clave": "G",
+            "ejercicio": "Extensión de tríceps en polea con cuerda",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "90 s",
+            "detalle": "Codos pegados al cuerpo y quietos; abre la cuerda al final."
+          },
+          {
+            "clave": "H",
+            "ejercicio": "Elevación de rodillas en la silla romana",
+            "series": 3,
+            "reps": "10-15",
+            "detalle": "Antebrazos apoyados; sube las rodillas metiendo la pelvis y baja despacio, sin balanceo."
+          },
+          {
+            "clave": "I",
+            "ejercicio": "Crunch en la máquina de abdominales",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "60 s",
+            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos."
+          }
+        ],
+        "orden": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "D"
+          ],
+          [
+            "E"
+          ],
+          [
+            "F",
+            "G"
+          ],
+          [
+            "H",
+            "I"
+          ]
+        ],
+        "superseries": {
+          "pares": [
+            {
+              "par": "F + G",
+              "descanso": "90 s"
+            },
+            {
+              "par": "H + I",
+              "descanso": "60 s"
+            }
+          ]
+        }
+      },
+      "piernaA": {
+        "lugar": "Gimnasio del Arsenal",
+        "duracionMin": 70,
+        "calentamiento": "5-8 min de remo o bici suave + 2 series de aproximación del primer ejercicio con poco peso",
+        "prioridad": "Si falta tiempo: el primer ejercicio, los dos siguientes y el abdomen, y a casa.",
+        "titulo": "Pierna A: sentadilla y rumano",
+        "bloques": [
+          {
+            "clave": "A",
+            "ejercicio": "Sentadilla en la máquina de palanca",
+            "series": 4,
+            "reps": "6-10",
+            "descanso": "2–3 min",
+            "detalle": "Pies a la anchura de los hombros; baja hasta que los muslos queden al menos paralelos, con las rodillas en la línea de los pies."
+          },
+          {
+            "clave": "B",
+            "ejercicio": "Peso muerto rumano con barra",
+            "series": 3,
+            "reps": "8-10",
+            "descanso": "2 min",
+            "detalle": "Rodillas un poco dobladas y fijas; la barra baja pegada a las piernas echando la cadera atrás, con la espalda recta, hasta notar los isquios."
+          },
+          {
+            "clave": "C",
+            "ejercicio": "Zancada búlgara con mancuernas",
+            "series": 3,
+            "reps": "8-12 por pierna",
+            "descanso": "90 s",
+            "detalle": "Pie de atrás sobre el banco; baja recto hasta que la rodilla de atrás casi toque el suelo."
+          },
+          {
+            "clave": "D",
+            "ejercicio": "Extensión de cuádriceps",
+            "series": 3,
+            "reps": "12-15",
+            "descanso": "60 s",
+            "detalle": "Rodilla alineada con el eje de la máquina; arriba, un segundo con el muslo apretado."
+          },
+          {
+            "clave": "E",
+            "ejercicio": "Curl femoral tumbado",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "60 s",
+            "detalle": "Cadera pegada al banco; sube y baja despacio."
+          },
+          {
+            "clave": "F",
+            "ejercicio": "Gemelo sentado",
+            "series": 3,
+            "reps": "12-15",
+            "descanso": "60 s",
+            "detalle": "Baja el talón todo lo posible y sube hasta la punta; un segundo arriba."
+          },
+          {
+            "clave": "G",
+            "ejercicio": "Elevación de talón a una pierna",
+            "series": 2,
+            "reps": "15",
+            "descanso": "45 s",
+            "detalle": "En un escalón y con la plantilla puesta: por tus pies planos."
+          },
+          {
+            "clave": "H",
+            "ejercicio": "Crunch en la máquina de abdominales",
+            "series": 3,
+            "reps": "10-15",
+            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos."
+          },
+          {
+            "clave": "I",
+            "ejercicio": "Pallof en polea",
+            "series": 3,
+            "reps": "10 por lado",
+            "descanso": "60 s",
+            "detalle": "De lado a la polea, con los brazos estirados delante del pecho: aguanta sin que el tronco gire."
+          }
+        ],
+        "orden": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "D"
+          ],
+          [
+            "E"
+          ],
+          [
+            "F"
+          ],
+          [
+            "G"
+          ],
+          [
+            "H",
+            "I"
+          ]
+        ],
+        "superseries": {
+          "pares": [
+            {
+              "par": "H + I",
+              "descanso": "60 s"
+            }
+          ]
+        }
+      },
+      "torsoB": {
+        "lugar": "Gimnasio del Arsenal",
+        "duracionMin": 70,
+        "calentamiento": "5-8 min de remo o bici suave + 2 series de aproximación del primer ejercicio con poco peso",
+        "prioridad": "Si falta tiempo: el primer ejercicio, los dos siguientes y el abdomen, y a casa.",
+        "titulo": "Torso B: dominadas, hombro y brazos",
+        "bloques": [
+          {
+            "clave": "A",
+            "ejercicio": "Dominadas lastradas",
+            "series": 4,
+            "reps": "5-8",
+            "descanso": "2–3 min",
+            "detalle": "Con el cinturón de lastre, el peso que deje 1-2 repeticiones en reserva; la misma técnica que en el examen."
+          },
+          {
+            "clave": "B",
+            "ejercicio": "Press militar en la máquina de palanca",
+            "series": 3,
+            "reps": "8-12",
+            "descanso": "2 min",
+            "detalle": "Espalda pegada al respaldo; empuja hasta casi estirar los brazos, sin bloquear."
+          },
+          {
+            "clave": "C",
+            "ejercicio": "Remo en polea baja",
+            "series": 3,
+            "reps": "10-12",
+            "descanso": "90 s",
+            "detalle": "Espalda recta y quieta; lleva el agarre al ombligo y junta los omóplatos."
+          },
+          {
+            "clave": "D",
+            "ejercicio": "Press inclinado en la máquina de discos",
+            "series": 3,
+            "reps": "8-12",
+            "descanso": "90 s",
+            "detalle": "Asiento a la altura que deje los agarres a la altura del pecho; baja controlado."
+          },
+          {
+            "clave": "E",
+            "ejercicio": "Fondos en paralelas",
+            "series": 3,
+            "reps": "8-12",
+            "descanso": "90 s",
+            "detalle": "Cuerpo un poco inclinado adelante; baja hasta que los hombros queden a la altura de los codos. Con más de 12, con lastre."
+          },
+          {
+            "clave": "F",
+            "ejercicio": "Face pull en polea con cuerda",
+            "series": 3,
+            "reps": "12-20",
+            "descanso": "60 s",
+            "detalle": "Polea a la altura de la cara; tira hacia la frente abriendo la cuerda y separando los codos."
+          },
+          {
+            "clave": "G",
+            "ejercicio": "Curl inclinado con mancuernas",
+            "series": 3,
+            "reps": "10-12",
+            "detalle": "Banco a 45-60°; brazos colgando y codos quietos."
+          },
+          {
+            "clave": "H",
+            "ejercicio": "Extensión de tríceps sobre la cabeza en polea",
+            "series": 3,
+            "reps": "10-12",
+            "descanso": "90 s",
+            "detalle": "De espaldas a la polea, con los codos arriba y quietos; estira del todo."
+          },
+          {
+            "clave": "I",
+            "ejercicio": "Elevación de piernas colgado de la barra",
+            "series": 3,
+            "reps": "8-15",
+            "descanso": "60 s",
+            "detalle": "Sin balanceo; sube las piernas metiendo la pelvis. Si no salen 8 con las piernas estiradas, con las rodillas dobladas."
+          }
+        ],
+        "orden": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "D"
+          ],
+          [
+            "E"
+          ],
+          [
+            "F"
+          ],
+          [
+            "G",
+            "H"
+          ],
+          [
+            "I"
+          ]
+        ],
+        "superseries": {
+          "pares": [
+            {
+              "par": "G + H",
+              "descanso": "90 s"
+            }
+          ]
+        }
+      },
+      "piernaB": {
+        "lugar": "Gimnasio del Arsenal",
+        "duracionMin": 70,
+        "calentamiento": "5-8 min de remo o bici suave + 2 series de aproximación del primer ejercicio con poco peso",
+        "prioridad": "Si falta tiempo: el primer ejercicio, los dos siguientes y el abdomen, y a casa.",
+        "titulo": "Pierna B: peso muerto y glúteo",
+        "bloques": [
+          {
+            "clave": "A",
+            "ejercicio": "Peso muerto con barra hexagonal",
+            "series": 4,
+            "reps": "5-8",
+            "descanso": "2–3 min",
+            "detalle": "Dentro de la barra y con los agarres en el centro; espalda recta, empuja el suelo con las piernas y termina de pie sin echarte atrás."
+          },
+          {
+            "clave": "B",
+            "ejercicio": "Hip thrust con barra",
+            "series": 3,
+            "reps": "8-12",
+            "descanso": "2 min",
+            "detalle": "Espalda alta apoyada en el banco y la barra sobre la cadera con almohadilla; sube hasta que el cuerpo quede recto y aprieta el glúteo."
+          },
+          {
+            "clave": "C",
+            "ejercicio": "Prensa de trineo",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "2 min",
+            "detalle": "Baja hasta que las rodillas formen un ángulo recto, sin que la cadera se despegue del respaldo."
+          },
+          {
+            "clave": "D",
+            "ejercicio": "Sentadilla sissy en su máquina",
+            "series": 2,
+            "reps": "10-15",
+            "descanso": "90 s",
+            "detalle": "Talones sujetos; baja llevando las rodillas adelante, con el cuerpo recto de las rodillas a los hombros."
+          },
+          {
+            "clave": "E",
+            "ejercicio": "Extensión lumbar en el banco de 45°",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "60 s",
+            "detalle": "Baja con la espalda recta y sube hasta que el cuerpo quede en línea, sin pasarte."
+          },
+          {
+            "clave": "F",
+            "ejercicio": "Abductor en máquina",
+            "series": 3,
+            "reps": "12-15",
+            "descanso": "60 s",
+            "detalle": "Abre las piernas contra los cojines y vuelve despacio: es el glúteo medio, el que protege el cintillo."
+          },
+          {
+            "clave": "G",
+            "ejercicio": "Elevación de talón a una pierna",
+            "series": 3,
+            "reps": "12-15",
+            "descanso": "45 s",
+            "detalle": "En un escalón y con la plantilla puesta."
+          },
+          {
+            "clave": "H",
+            "ejercicio": "Leñador en polea",
+            "series": 3,
+            "reps": "12 por lado",
+            "detalle": "Polea alta; baja en diagonal hasta la cadera contraria girando el tronco, con los brazos estirados."
+          },
+          {
+            "clave": "I",
+            "ejercicio": "Crunch en el banco declinado con disco",
+            "series": 3,
+            "reps": "10-15",
+            "descanso": "60 s",
+            "detalle": "Disco sobre el pecho; sube enrollando la espalda, sin llegar a sentarte del todo."
+          }
+        ],
+        "orden": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "D"
+          ],
+          [
+            "E"
+          ],
+          [
+            "F"
+          ],
+          [
+            "G"
+          ],
+          [
+            "H",
+            "I"
+          ]
+        ],
+        "superseries": {
+          "pares": [
+            {
+              "par": "H + I",
+              "descanso": "60 s"
+            }
+          ]
+        }
+      }
     }
   },
   "protocoloDominadas": {
@@ -1633,6 +2106,581 @@
           "lugar": "El Puerto de Santa María, Polideportivo Ramón Velázquez (calle Crucero Baleares, 5) y pistas de atletismo de la Ciudad Deportiva Municipal Rafael Sánchez (avenida Menesteo, s/n)"
         }
       ]
+    },
+    {
+      "semana": "2026-11-16/2026-11-22",
+      "titulo": "Transición: correr con Cristina",
+      "nota": "Después del examen. El plan de gimnasio empieza el lunes 23; esta semana, solo las carreras con Cristina (dicho por ti el 17-11).",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-18",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-11-19",
+          "dia": "Jue",
+          "tipo": "descanso",
+          "sesion": "Libre: el gimnasio empieza el martes 24"
+        },
+        {
+          "fecha": "2026-11-20",
+          "dia": "Vie",
+          "tipo": "descanso",
+          "sesion": "Libre: el gimnasio empieza el martes 24"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-21",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-11-22",
+          "dia": "Dom",
+          "tipo": "descanso",
+          "sesion": "Libre: el gimnasio empieza el martes 24"
+        }
+      ]
+    },
+    {
+      "semana": "2026-11-23/2026-11-29",
+      "titulo": "Gimnasio · semana 1 de 8 · adaptación",
+      "nota": "Adaptación: una serie menos por ejercicio y 3 repeticiones en reserva, para encontrar los pesos y que las agujetas no estorben a las carreras. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-23",
+          "dia": "Lun",
+          "objetivo": "Su 2.º control de 1.000 m, en Arucas: le haces de liebre en los tres primeros 200 a su ritmo K y la dejas terminar sola. Para ti, un trote."
+        },
+        {
+          "fecha": "2026-11-24",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Semana de adaptación: una serie menos en cada ejercicio y 3 repeticiones en reserva. Busca el peso de cada ejercicio y apúntalo.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-25",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-11-26",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Semana de adaptación: una serie menos en cada ejercicio y 3 repeticiones en reserva. Busca el peso de cada ejercicio y apúntalo.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2026-11-27",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Semana de adaptación: una serie menos en cada ejercicio y 3 repeticiones en reserva. Busca el peso de cada ejercicio y apúntalo.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-28",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-11-29",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Semana de adaptación: una serie menos en cada ejercicio y 3 repeticiones en reserva. Busca el peso de cada ejercicio y apúntalo.",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2026-11-30/2026-12-06",
+      "titulo": "Gimnasio · semana 2 de 8 · adaptación",
+      "nota": "Adaptación: una serie menos y 3 en reserva, con los pesos de la semana pasada. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-11-30",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-01",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Segunda semana de adaptación: una serie menos y 3 en reserva, con los pesos de la semana pasada; sube solo los que salieron sobrados.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-02",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-03",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Segunda semana de adaptación: una serie menos y 3 en reserva, con los pesos de la semana pasada; sube solo los que salieron sobrados.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2026-12-04",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Segunda semana de adaptación: una serie menos y 3 en reserva, con los pesos de la semana pasada; sube solo los que salieron sobrados.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-05",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-06",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Segunda semana de adaptación: una serie menos y 3 en reserva, con los pesos de la semana pasada; sube solo los que salieron sobrados.",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2026-12-07/2026-12-13",
+      "titulo": "Gimnasio · semana 3 de 8",
+      "nota": "Progresión: sube el peso de cada ejercicio cuando salgan todas las series con las repeticiones de arriba. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-07",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-08",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-09",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-10",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2026-12-11",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-12",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-13",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2026-12-14/2026-12-20",
+      "titulo": "Gimnasio · semana 4 de 8",
+      "nota": "Progresión: sube el peso de cada ejercicio cuando salgan todas las series con las repeticiones de arriba. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-14",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-15",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-16",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-17",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2026-12-18",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-19",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-20",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2026-12-21/2026-12-27",
+      "titulo": "Gimnasio · semana 5 de 8",
+      "nota": "Progresión: sube el peso de cada ejercicio cuando salgan todas las series con las repeticiones de arriba. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-21",
+          "dia": "Lun",
+          "objetivo": "Su 3.º control de 1.000 m, en Arucas: le haces de liebre en los tres primeros 200 a su ritmo K y la dejas terminar sola. Para ti, un trote."
+        },
+        {
+          "fecha": "2026-12-22",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-23",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-24",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2026-12-25",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-26",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-27",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2026-12-28/2027-01-03",
+      "titulo": "Gimnasio · semana 6 de 8",
+      "nota": "Progresión: sube el peso de cada ejercicio cuando salgan todas las series con las repeticiones de arriba. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-28",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-29",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2026-12-30",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2026-12-31",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2027-01-01",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-02",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-03",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2027-01-04/2027-01-10",
+      "titulo": "Gimnasio · semana 7 de 8",
+      "nota": "Progresión: sube el peso de cada ejercicio cuando salgan todas las series con las repeticiones de arriba. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-04",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-05",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-06",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-07",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2027-01-08",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-09",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-10",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Cuando todas las series salgan con las repeticiones de arriba, la próxima vez sube el peso (regla «Cuándo subir el peso»).",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
+    },
+    {
+      "semana": "2027-01-11/2027-01-17",
+      "titulo": "Gimnasio · semana 8 de 8 · descarga",
+      "nota": "Descarga: la mitad de las series con el mismo peso. Tanita con el dietista y fotos (mismo sitio, misma luz, por la mañana) para comparar. Si el Arsenal cierra un festivo, esa sesión se cae y no se recupera.",
+      "dias": [
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-11",
+          "dia": "Lun",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-12",
+          "dia": "Mar",
+          "tipo": "fuerza",
+          "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+          "sesionTipo": "torsoA",
+          "objetivo": "Descarga: la mitad de las series (redondeando hacia arriba) con el mismo peso. Esta semana, Tanita con el dietista y fotos.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-13",
+          "dia": "Mié",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-14",
+          "dia": "Jue",
+          "tipo": "fuerza",
+          "sesion": "Pierna A, sentadilla y rumano · gimnasio, con abdomen",
+          "sesionTipo": "piernaA",
+          "objetivo": "Descarga: la mitad de las series (redondeando hacia arriba) con el mismo peso. Esta semana, Tanita con el dietista y fotos.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "fecha": "2027-01-15",
+          "dia": "Vie",
+          "tipo": "fuerza",
+          "sesion": "Torso B, dominadas, hombro y brazos · gimnasio, con abdomen",
+          "sesionTipo": "torsoB",
+          "objetivo": "Descarga: la mitad de las series (redondeando hacia arriba) con el mismo peso. Esta semana, Tanita con el dietista y fotos.",
+          "lugar": "Gimnasio del Arsenal",
+          "hora": "15:00-16:15"
+        },
+        {
+          "tipo": "carrera",
+          "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+          "fecha": "2027-01-16",
+          "dia": "Sáb",
+          "objetivo": "La sesión es la de Cristina (su página, pestaña Hoy), a su ritmo. Para ti es suave: no hace falta calentamiento ni vuelta a la calma aparte. En sus series, le haces de liebre."
+        },
+        {
+          "fecha": "2027-01-17",
+          "dia": "Dom",
+          "tipo": "fuerza",
+          "sesion": "Pierna B, peso muerto y glúteo · gimnasio, con abdomen",
+          "sesionTipo": "piernaB",
+          "objetivo": "Descarga: la mitad de las series (redondeando hacia arriba) con el mismo peso. Esta semana, Tanita con el dietista y fotos.",
+          "lugar": "Gimnasio del Arsenal"
+        }
+      ]
     }
   ],
   "planDeCarrera": {
@@ -1770,6 +2818,30 @@
       "titulo": "Medir las distancias con el reloj",
       "texto": "La pista del parque tiene rectas largas y curvas cortas, sin marcas fiables. Programar las sesiones en Garmin Connect con las repeticiones por distancia y desactivar el Auto Lap.",
       "origen": "Los 41 segundos del 24/08 eran en realidad unos 175 metros, no 200."
+    },
+    {
+      "id": "gimnasio-progresion",
+      "titulo": "Cuándo subir el peso",
+      "texto": "El mismo peso en todas las series de un ejercicio. Cuando completes TODAS las series con las repeticiones de arriba del rango (por ejemplo, press de banca 4 × 10 en un rango de 6-10), la próxima vez que toque ese ejercicio (la semana siguiente) subes: 2,5 kg en barras y máquinas de discos, el siguiente par de mancuernas o una placa en las máquinas de placas. Con el peso nuevo saldrán menos repeticiones (por ejemplo, 4 × 7) y las vuelves a subir semana a semana. Dentro de la misma sesión no se sube. Si una serie se queda por debajo del número de abajo del rango, el peso es demasiado: bájalo. Deja 1-2 repeticiones en reserva en el primer ejercicio de cada día; en las máquinas y los de brazos y abdomen, la última serie puede quedarse en 0-1. Apunta el peso de cada ejercicio.",
+      "origen": "Pregunta de Daniel del 17-11-2026: si se sube al completar una serie o al completar todas. Se sube cuando salen todas, y la sesión siguiente."
+    },
+    {
+      "id": "abdomen",
+      "titulo": "El abdomen",
+      "texto": "Dos ejercicios de abdomen en cada sesión de gimnasio, con peso que sube como el resto: cuando salgan todas las series en el número de arriba, más peso o la variante más difícil. Las elevaciones de rodillas y de piernas trabajan más la parte baja si metes la pelvis al subir, sin balancearte. Los abdominales hacen crecer el músculo; no quitan la grasa que hay encima. Eso depende de la grasa total, que lleva el dietista.",
+      "origen": "Objetivo de Daniel desde el 17-11-2026: definir, sobre todo la parte baja del abdomen. Tanita del 23-9: de 7,3 kg de grasa, 4,5 están en el tronco."
+    },
+    {
+      "id": "correr-con-cristina",
+      "titulo": "Correr con Cristina",
+      "texto": "Lunes, miércoles y sábado corres con Cristina su sesión, a su ritmo: la tienes en su página. Para ti es suave, así que no hace falta calentamiento ni vuelta a la calma aparte. En sus series y controles le haces de liebre con el reloj, a su ritmo. Si ella no corre, tú tampoco hace falta: no se recupera. No mantiene tu 1.000: si algún día lo necesitas, habrá que volver a meter series.",
+      "origen": "Decidido el 17-11-2026: su suave (9:30-10:00 /km) va muy por debajo del tuyo (7:36-8:26 con 137-145 de pulso), y sus series a 1:02,5 cada 200 son un trote para ti. Te sirve como cardio suave que no le quita nada al gimnasio, no para correr más rápido."
+    },
+    {
+      "id": "comidas-gimnasio",
+      "titulo": "Comidas y gimnasio",
+      "texto": "La dieta es la del dietista y no se cambia; solo el momento. Los días de gimnasio a las 15:00, la media mañana hacia las 12:00 y la comida al salir; los domingos, una comida 2-3 h antes. La merienda, antes de correr con Cristina. Sin gluten: el pan, la pasta, la avena y los picatostes, en su versión sin gluten.",
+      "origen": "Dieta nueva del 17-11-2026, la misma que la de Cristina; Daniel sigue sin gluten (dicho por él el 17-11)."
     }
   ],
   "contextoDelUsuario": {

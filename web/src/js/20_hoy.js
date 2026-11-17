@@ -366,9 +366,15 @@
 
   /* ---------------------------------------------------------------- fuerza (martes) */
   var ORDEN_F = [['A'], ['H'], ['B', 'D'], ['C', 'F'], ['E', 'G'], ['I']];
+  /* fase 2 (desde el 23-11-2026): cada día de gimnasio lleva su sesión en plan.calendario[].dias[].sesionTipo,
+     que apunta a plan.sesionesTipo.gimnasio[clave] (con «orden» propio y sin rondas). Sin ella, la del martes de siempre. */
+  function sesionFuerza(dia) {
+    var st = plan().sesionesTipo || {}, k = dia && dia.plan && dia.plan.sesionTipo;
+    return (k && (st.gimnasio || {})[k]) || st.martesFuerza || {};
+  }
   function fuerzaDe(dia, color, R) {
-    var mf = (plan().sesionesTipo || {}).martesFuerza || {};
-    var B = {}; (mf.bloques || []).forEach(function (b) { B[b.clave] = clon(b); });
+    var mf = sesionFuerza(dia);
+    var B = {}; (mf.bloques || []).forEach(function (b) { B[b.clave] = clon(b); B[b.clave]._ronda = !mf.orden && /^[HI]$/.test(b.clave); });
     var fz = (dia.extra && dia.extra.fuerza) || {};
     var ov = fz[color] || (color !== 'verde' ? fz.verde : null) || null;
     function aplicar(o) {
@@ -381,7 +387,7 @@
     if (R && R.opF) aplicar(R.opF);
     var pares = {}; ((mf.superseries || {}).pares || []).forEach(function (p) { pares[p.par.replace(/\s/g, '')] = p; });
     var grupos = [];
-    ORDEN_F.forEach(function (g) {
+    (mf.orden || ORDEN_F).forEach(function (g) {
       var ks = g.filter(function (k) { return B[k]; });
       if (!ks.length) return;
       var par = ks.length === 2 ? pares[ks.join('+')] : null;
@@ -467,6 +473,11 @@
   }
   function numsFuerza(F, extra) {
     if (!F || !F.bloques.A) return extra || [];
+    if (F.mf.orden) {
+      var A0 = F.bloques.A, nb = Object.keys(F.bloques).length;
+      return [{ v: A0.series + ' × ' + A0.reps, l: A0.ejercicio.charAt(0).toLowerCase() + A0.ejercicio.slice(1) }, { v: nb + ' ejercicios', l: 'con el abdomen' },
+        F.mf.duracionMin ? { v: F.mf.duracionMin + ' min', l: 'más o menos' } : null].filter(Boolean);
+    }
     var A = F.bloques.A, pc = pesoCorto(A.peso), out = [{ v: A.series + ' × ' + A.reps, l: 'lastradas' }];
     if (pc) out.push({ v: pc, l: 'lastre' }); else if (extra && extra[0]) out.push(extra[0]);
     if (A.descanso) out.push({ v: A.descanso, l: 'descanso' });
@@ -641,12 +652,13 @@
     F.grupos.forEach(function (g) {
       var tit = g.claves.join(' + ') + ' · ' + g.bloques.map(function (b) { return b.ejercicio; }).join(' + ');
       var tags = g.bloques.map(function (b) {
-        var ronda = /^[HI]$/.test(b.clave);
+        var ronda = b._ronda;
         return (g.claves.length > 1 ? b.clave + ' ' : '') + (ronda ? b.series + ' rondas' : b.series + ' × ' + b.reps) + (b.peso && !/peso corporal|banda/.test(b.peso) ? ' · ' + (pesoCorto(b.peso) || b.peso) : '');
       });
       var d = g.bloques.map(function (b) { return b.detalle ? [].concat(b.detalle).join(' · ') : (b.clave === 'A' ? b.tecnica : ''); }).filter(Boolean).join(' · ');
       var id = ejId(g.bloques[0].ejercicio);
-      out.push({ t: tit, d: d, tags: tags, timer: g.descanso, enlace: tecnica(id && g.claves[0] !== 'H' ? '#tecnica/ej/' + id : '#tecnica/gimnasio'), bloque: g.claves.join('+') });
+      var enl = mf.orden ? (g.bloques[0].ej ? tecnica('#tecnica/ej/' + g.bloques[0].ej) : null) : tecnica(id && g.claves[0] !== 'H' ? '#tecnica/ej/' + id : '#tecnica/gimnasio');
+      out.push({ t: tit, d: d, tags: tags, timer: g.descanso, enlace: enl, bloque: g.claves.join('+') });
     });
     return out;
   }
@@ -1119,7 +1131,7 @@
         if (p.registro && R.color !== 'rojo') h.push('<div class="hoy-t8" data-t8="' + i + '"></div>');
       }
     });
-    if (R.tpl === 'fuerza') { var pr = frases(((plan().sesionesTipo || {}).martesFuerza || {}).prioridad); if (pr.length) h.push('<p class="hoy-pie-f">' + esc(pr[pr.length - 1]) + '</p>'); }
+    if (R.tpl === 'fuerza') { var pr = frases(sesionFuerza(dia).prioridad); if (pr.length) h.push('<p class="hoy-pie-f">' + esc(pr[pr.length - 1]) + '</p>'); }
     h.push('</div>');
     return h.join('');
   }
@@ -1142,7 +1154,7 @@
     /* el lugar entero cuando la cabecera solo enseña su primer trozo (las dos instalaciones de la prueba) o lleva una condición */
     if (dia.lugar && (/ si /.test(dia.lugar) || dia.lugar.trim() !== lugarCorto(dia))) q.push('<dt>Lugar</dt><dd>' + esc(dia.lugar) + '</dd>');
     if (R.tpl === 'fuerza') {
-      var pr = frases(((plan().sesionesTipo || {}).martesFuerza || {}).prioridad);
+      var pr = frases(sesionFuerza(dia).prioridad);
       if (pr.length > 1) q.push('<dt>Prioridad</dt><dd>' + esc(pr.slice(0, -1).join(' ')) + '</dd>');
     }
     var F = PC.cal.final() || {};
@@ -1855,7 +1867,7 @@
   function circulos(g) {
     var out = [], bs = g.bloques, n = Math.max.apply(null, bs.map(function (b) { return parseInt(b.series, 10) || 1; }));
     for (var i = 0; i < n; i++) bs.forEach(function (b, j) {
-      if (i < (parseInt(b.series, 10) || 1)) out.push({ k: b.clave + '-' + i, lab: (/^[HI]$/.test(b.clave) ? 'R' : b.clave) + (i + 1), clave: b.clave, i: i, timer: j === bs.length - 1 });
+      if (i < (parseInt(b.series, 10) || 1)) out.push({ k: b.clave + '-' + i, lab: (b._ronda ? 'R' : b.clave) + (i + 1), clave: b.clave, i: i, timer: j === bs.length - 1 });
     });
     return out;
   }
@@ -1870,7 +1882,7 @@
       var tit = g.claves.join(' + ') + ' · ' + g.bloques.map(function (b) { return b.ejercicio; }).join(' + ');
       h.push('<section class="hoy-gb" data-g="' + gi + '"><h3>' + esc(tit) + '</h3><div class="chips">');
       g.bloques.forEach(function (b) {
-        var ronda = /^[HI]$/.test(b.clave), pc = pesoCorto(b.peso);
+        var ronda = b._ronda, pc = pesoCorto(b.peso);
         h.push('<span class="chip">' + esc((g.claves.length > 1 ? b.clave + ' ' : '') + (ronda ? b.series + ' rondas' : b.series + ' × ' + b.reps)) + '</span>' + (pc ? '<span class="chip">' + esc(pc) + '</span>' : ''));
       });
       if (g.descanso) h.push('<span class="chip">descanso ' + esc(PC.fmt.t(g.descanso)) + '</span>');
@@ -1879,7 +1891,7 @@
       h.push('<div class="hoy-circ" role="group" aria-label="Series de ' + esc(g.claves.join(' y ')) + '">' + circulos(g).map(function (c) {
         return '<button type="button" data-z="serie" data-k="' + c.k + '" data-g="' + gi + '" data-tm="' + (c.timer ? 1 : 0) + '" aria-pressed="' + (G.series[c.k] ? 'true' : 'false') + '" aria-label="' + esc(c.lab) + '">' + esc(c.lab) + '</button>';
       }).join('') + '</div>');
-      var A = g.claves[0] === 'A' ? g.bloques[0] : null, nA = A ? parseInt(A.series, 10) : 0;
+      var A = g.claves[0] === 'A' && !F.mf.orden ? g.bloques[0] : null, nA = A ? parseInt(A.series, 10) : 0;
       if (A && G.series['A-' + (nA - 1)]) {
         h.push('<div class="hoy-rec"><span class="hoy-opt-t">Reserva de la 5.ª</span>' + segHTML('reserva5', G.reserva5 === null || G.reserva5 === undefined ? null : String(G.reserva5), [['0', '0'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4']], 'Reserva de la quinta serie').replace(/data-s=/g, 'data-z="res" data-s=') + '</div>');
         if (G.reserva5 !== null && G.reserva5 !== undefined && +G.reserva5 <= 1 && res) h.push('<p class="hoy-rec"><b>' + esc(res[0]) + '</b></p>');
@@ -2069,7 +2081,13 @@
       if (dolor) L.push(mayus(dolor));
     } else {
       L.push(cab);
-      if (tipo === 'fuerza') {
+      if (tipo === 'fuerza' && R.fuerza && R.fuerza.mf.orden) {
+        /* fase 2: lo que decide subir el peso es el peso de cada ejercicio (regla «Cuándo subir el peso») */
+        var ps = String(fu.pesos || '').split(/\n+/).map(function (x) { return x.trim(); }).filter(Boolean);
+        L.push('Pesos: ' + (ps.length ? ps.join(' · ') : 'sin apuntar'));
+        L.push('Codo ' + (+fu.codo || 0) + '/10 · hombro ' + (+fu.hombro || 0) + '/10 al terminar');
+        if (fu.bloques && fu.bloques.length) L.push('Hecho: ' + fu.bloques.join(', '));
+      } else if (tipo === 'fuerza') {
         var rA = (fu.repsA || []).map(function (x) { return x === '' || x === null || x === undefined ? '?' : x; });
         if (rA.some(function (x) { return x !== '?'; }) || fu.lastre) L.push('A: ' + (rA.length ? rA.join('-') : '?') + (fu.lastre ? ' con ' + fu.lastre : '') + (fu.reserva5 !== null && fu.reserva5 !== undefined ? ' · reserva de la 5.ª: ' + fu.reserva5 : ''));
         L.push('Codo ' + (+fu.codo || 0) + '/10 · hombro ' + (+fu.hombro || 0) + '/10 al terminar');
@@ -2137,6 +2155,12 @@
       h.push(campo('Minutos reales', '<input type="text" inputmode="numeric" autocomplete="off" data-fi="min" value="' + esc(fu.min || '') + '" placeholder="' + esc(durRodaje(dia, R, R.color).txt) + '" aria-label="Minutos reales">'));
       h.push(dom);
       h.push(dolor);
+    } else if (tipo === 'fuerza' && R.fuerza && R.fuerza.mf.orden) {
+      h.push(campo('Peso de cada ejercicio', '<textarea data-fi="pesos" rows="5" autocomplete="off" aria-label="Peso de cada ejercicio" placeholder="Una línea por ejercicio: press de banca 40 kg 10-10-9-8">' + esc(fu.pesos || '') + '</textarea>'));
+      h.push('<div class="hoy-fue-st"><div>Codo al terminar (0–10)' + stFue('codo', fu.codo, 'Codo, de 0 a 10') + '</div><div>Hombro al terminar (0–10)' + stFue('hombro', fu.hombro, 'Hombro, de 0 a 10') + '</div></div>');
+      h.push(campo('Bloques hechos', '<div class="chips">' + R.fuerza.grupos.map(function (g) {
+        var k = g.claves.join('+'); return '<button type="button" class="chip" data-fb="' + k + '" aria-pressed="' + ((fu.bloques || []).indexOf(k) >= 0 ? 'true' : 'false') + '">' + esc(k) + '</button>';
+      }).join('') + '</div>'));
     } else if (tipo === 'fuerza') {
       h.push(campo('Repeticiones por serie de A', '<div class="hoy-fue-a">' + (fu.repsA || []).map(function (v, i) {
         return '<input type="text" inputmode="numeric" autocomplete="off" data-fi="repA" data-i="' + i + '" value="' + esc(v) + '" aria-label="Serie ' + (i + 1) + ' de A">';
@@ -2236,6 +2260,7 @@
     if (k === 'nota') guardarFue(f, { nota: v });
     else if (k === 'min') guardarFue(f, { min: parseInt(v, 10) || null });
     else if (k === 'lastre') guardarFue(f, { lastre: v.trim() });
+    else if (k === 'pesos') guardarFue(f, { pesos: v });
     else if (k === 'repA') { var ra = (fu.repsA || []).slice(); ra[+t.getAttribute('data-i')] = v.trim(); guardarFue(f, { repsA: ra }); }
     else if (k === 'domR') { var dr = (fu.domReps || []).slice(); dr[+t.getAttribute('data-i')] = v.trim(); guardarFue(f, { domReps: dr }); }
     else if (k === 'progT') guardarFue(f, { progT: v.trim() });

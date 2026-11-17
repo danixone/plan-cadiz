@@ -472,7 +472,8 @@
     var box = root.querySelector('.pl-semana-in'); if (!box) return;
     if (PF) { semanaPF(box); return; }
     var E = P.estructuraSemanal || [];
-    var C = (P.protocoloDominadas || {}).cuando || [];
+    /* fase 2 (desde el 23-11-2026): la semana de gimnasio ya no lleva las dominadas de la época del examen */
+    var C = E.some(function (d) { return d.sesionTipo; }) ? [] : ((P.protocoloDominadas || {}).cuando || []);
     var jc = ((P.sesionesTipo || {}).juevesCircuito || {}).hora || null;
     var h = '<p class="pl-lead">' + esc(resumenSemana(E)) + '</p><ol class="pl-st">';
     E.forEach(function (d) {
