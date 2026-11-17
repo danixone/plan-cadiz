@@ -1051,7 +1051,56 @@
   var SECC = [['simulacro', pintarSimulacro], ['dominada', pintarDominada], ['mil', pintarMil], ['circuito', pintarCircuito], ['gimnasio', pintarGimnasio], ['carrera', pintarCarrera], ['reloj', pintarReloj], ['material', pintarMaterial]];
   /* web de Cristina: fuera lo que solo es de Daniel (dominada, circuito, gimnasio, material) */
   var SOLO_DANIEL = ['dominada', 'circuito', 'gimnasio', 'material'];
+  /* ------------------------------------------------------------------ fase 2 (desde el 17-11-2026, pedido por Daniel):
+     Técnica = las máquinas del Arsenal con lo que hay que mirar marcado. Fichas en plan.tecnicaGimnasio (fotos recortadas,
+     sin caras ni emblemas, en docs/img/tecnica/); el orden y las series salen de plan.sesionesTipo.gimnasio. Solo en su página. */
+  var ORDEN_G = ['torsoA', 'piernaA', 'torsoB', 'piernaB'];
+  function fichaG(e, b) {
+    var h = '<article class="card te-gf" id="te-ej-' + esc(e.id) + '"><h3 class="te-card-h3">' + esc(e.nombre) + '</h3>' +
+      (b ? '<p class="faint">' + esc(b.series + ' × ' + b.reps + (b.descanso ? ' · descanso ' + b.descanso : '')) + '</p>' : '');
+    if (e.foto) {
+      h += '<figure class="te-gf-fig"><img src="' + esc(e.foto) + '" alt="' + esc(e.nombre + ': la máquina del Arsenal con ' + arr(e.marcas).length + ' puntos marcados') + '" loading="lazy" decoding="async"' +
+        (e.ancho ? ' width="' + e.ancho + '" height="' + e.alto + '"' : '') + '><figcaption><ol class="te-gf-m">' +
+        arr(e.marcas).map(function (m) { return '<li>' + esc(m) + '</li>'; }).join('') + '</ol></figcaption></figure>';
+    }
+    h += '<h4>Cómo</h4><ol class="te-gf-c">' + arr(e.como).map(function (m) { return '<li>' + esc(m) + '</li>'; }).join('') + '</ol>';
+    if (arr(e.ojo).length) h += '<p class="te-gf-ojo"><b>Ojo:</b> ' + esc(arr(e.ojo).join(' ')) + '</p>';
+    return h + '</article>';
+  }
+  function pintarGimnasioFotos() {
+    var G = (P.sesionesTipo || {}).gimnasio || {}, F = {}, vistas = {};
+    arr(P.tecnicaGimnasio).forEach(function (e) { F[e.id] = e; });
+    var dias = {}; arr(P.estructuraSemanal).forEach(function (d) { if (d.sesionTipo) dias[d.sesionTipo] = d.dia; });
+    var cab = DOC.getElementById('vt-tecnica');
+    if (cab) cab.innerHTML = '<p class="te-pr-n">Las máquinas del Arsenal con lo que hay que mirar: cada número de la foto es el de la lista de debajo.</p>';
+    Array.prototype.forEach.call(root.querySelectorAll('.te-sec'), function (sec) { if (!/^te-g-/.test(sec.id)) sec.hidden = true; });
+    var nav = DOC.querySelector('#v-tecnica .subnav') || DOC.querySelector('.subnav[aria-label="En esta pestaña"]');
+    if (nav && !nav.querySelector('[data-te-g]')) {
+      Array.prototype.forEach.call(nav.querySelectorAll('a'), function (a) { a.hidden = true; });
+      ORDEN_G.forEach(function (k) { if (G[k]) nav.insertAdjacentHTML('beforeend', '<a href="#tecnica/' + k + '" data-te-g>' + esc(String(G[k].titulo || k).split(':')[0]) + '</a>'); });
+    }
+    ORDEN_G.forEach(function (k) {
+      var s = G[k]; if (!s) return;
+      var sec = DOC.getElementById('te-g-' + k);
+      if (!sec) {
+        sec = el('section', 'te-sec'); sec.id = 'te-g-' + k; sec.setAttribute('data-ancla', k);
+        var cont = root.querySelector('#te-root') || root, viejo = cont.querySelector('.te-sec:not([id^="te-g-"])');
+        cont.insertBefore(sec, viejo || null);
+      }
+      var tit = String(s.titulo || k).split(':');
+      var h = '<header class="te-st"><h2>' + esc(tit[0]) + (dias[k] ? ' · ' + esc(dias[k].toLowerCase()) : '') + '</h2>' + (tit[1] ? '<p>' + esc(tit[1].trim()) + ' · ' + esc(s.lugar || '') + '</p>' : '') + '</header><div class="te-c">';
+      arr(s.bloques).forEach(function (b) {
+        var e = F[b.ej];
+        if (!e) return;
+        if (vistas[e.id]) { h += '<p class="te-gf-ya"><b>' + esc(b.clave + ' · ' + e.nombre) + '</b> · ' + esc(b.series + ' × ' + b.reps) + ' · <a href="#tecnica/ej/' + esc(e.id) + '">la ficha está en ' + esc(vistas[e.id]) + ' →</a></p>'; return; }
+        vistas[e.id] = tit[0];
+        h += fichaG(e, b);
+      });
+      sec.innerHTML = h + '</div>';
+    });
+  }
   function pintarTodo() {
+    if (!PF && arr(P.tecnicaGimnasio).length) { try { pintarGimnasioFotos(); } catch (e) { PC._err('técnica · gimnasio', e); } return; }
     if (PF) SOLO_DANIEL.forEach(function (s) {
       var sec = root.querySelector('#te-' + s), a = DOC.querySelector('.subnav a[href="#tecnica/' + s + '"]');
       if (sec) sec.hidden = true;

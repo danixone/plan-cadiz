@@ -58,6 +58,7 @@
     {"ruta": "plan.sesionesTipo.vueltaALaCalma.*", "usa": ["M2", "M5"]},
     {"ruta": "plan.sesionesTipo.martesFuerza.*", "usa": ["M2", "M5"]},
     {"ruta": "plan.sesionesTipo.gimnasio.*", "usa": ["M2", "M3", "M5"]},
+    {"ruta": "plan.tecnicaGimnasio[].*", "usa": ["M5"]},
     {"ruta": "plan.sesionesTipo.juevesCircuito.*", "usa": ["M0", "M2", "M5"]},
     {"ruta": "plan.sesionesTipo.sabadoComplemento.*", "usa": ["M2", "M5"]},
 

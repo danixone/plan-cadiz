@@ -699,7 +699,8 @@
             "series": 4,
             "reps": "6-10",
             "descanso": "2–3 min",
-            "detalle": "Agarre algo más ancho que los hombros; omóplatos juntos y bajados; la barra baja a la parte baja del pecho y sube sin rebotar."
+            "detalle": "Agarre algo más ancho que los hombros; omóplatos juntos y bajados; la barra baja a la parte baja del pecho y sube sin rebotar.",
+            "ej": "press-banca"
           },
           {
             "clave": "B",
@@ -707,7 +708,8 @@
             "series": 4,
             "reps": "8-12",
             "descanso": "2 min",
-            "detalle": "Pecho pegado al apoyo; tira con los codos hacia atrás y aprieta la espalda un segundo arriba."
+            "detalle": "Pecho pegado al apoyo; tira con los codos hacia atrás y aprieta la espalda un segundo arriba.",
+            "ej": "remo-t"
           },
           {
             "clave": "C",
@@ -715,7 +717,8 @@
             "series": 3,
             "reps": "8-12",
             "descanso": "2 min",
-            "detalle": "Banco a unos 30°; las mancuernas bajan a la altura del pecho, con los codos a unos 45° del cuerpo."
+            "detalle": "Banco a unos 30°; las mancuernas bajan a la altura del pecho, con los codos a unos 45° del cuerpo.",
+            "ej": "press-inclinado-mancuernas"
           },
           {
             "clave": "D",
@@ -723,7 +726,8 @@
             "series": 3,
             "reps": "10-12",
             "descanso": "90 s",
-            "detalle": "Agarre algo más ancho que los hombros; la barra va a la parte alta del pecho, sin echarte atrás."
+            "detalle": "Agarre algo más ancho que los hombros; la barra va a la parte alta del pecho, sin echarte atrás.",
+            "ej": "jalon"
           },
           {
             "clave": "E",
@@ -731,14 +735,16 @@
             "series": 3,
             "reps": "12-20",
             "descanso": "60 s",
-            "detalle": "Codos un poco doblados; sube hasta la altura de los hombros, sin impulso."
+            "detalle": "Codos un poco doblados; sube hasta la altura de los hombros, sin impulso.",
+            "ej": "elevaciones-laterales"
           },
           {
             "clave": "F",
             "ejercicio": "Curl en el banco Scott",
             "series": 3,
             "reps": "10-15",
-            "detalle": "Brazos apoyados en el cojín; baja casi hasta estirar, sin soltar abajo."
+            "detalle": "Brazos apoyados en el cojín; baja casi hasta estirar, sin soltar abajo.",
+            "ej": "curl-scott"
           },
           {
             "clave": "G",
@@ -746,14 +752,16 @@
             "series": 3,
             "reps": "10-15",
             "descanso": "90 s",
-            "detalle": "Codos pegados al cuerpo y quietos; abre la cuerda al final."
+            "detalle": "Codos pegados al cuerpo y quietos; abre la cuerda al final.",
+            "ej": "triceps-cuerda"
           },
           {
             "clave": "H",
             "ejercicio": "Elevación de rodillas en la silla romana",
             "series": 3,
             "reps": "10-15",
-            "detalle": "Antebrazos apoyados; sube las rodillas metiendo la pelvis y baja despacio, sin balanceo."
+            "detalle": "Antebrazos apoyados; sube las rodillas metiendo la pelvis y baja despacio, sin balanceo.",
+            "ej": "rodillas-silla"
           },
           {
             "clave": "I",
@@ -761,7 +769,8 @@
             "series": 3,
             "reps": "10-15",
             "descanso": "60 s",
-            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos."
+            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos.",
+            "ej": "crunch-maquina"
           }
         ],
         "orden": [
@@ -815,7 +824,8 @@
             "series": 4,
             "reps": "6-10",
             "descanso": "2–3 min",
-            "detalle": "Pies a la anchura de los hombros; baja hasta que los muslos queden al menos paralelos, con las rodillas en la línea de los pies."
+            "detalle": "Pies a la anchura de los hombros; baja hasta que los muslos queden al menos paralelos, con las rodillas en la línea de los pies.",
+            "ej": "sentadilla-palanca"
           },
           {
             "clave": "B",
@@ -823,7 +833,8 @@
             "series": 3,
             "reps": "8-10",
             "descanso": "2 min",
-            "detalle": "Rodillas un poco dobladas y fijas; la barra baja pegada a las piernas echando la cadera atrás, con la espalda recta, hasta notar los isquios."
+            "detalle": "Rodillas un poco dobladas y fijas; la barra baja pegada a las piernas echando la cadera atrás, con la espalda recta, hasta notar los isquios.",
+            "ej": "peso-muerto-rumano"
           },
           {
             "clave": "C",
@@ -831,7 +842,8 @@
             "series": 3,
             "reps": "8-12 por pierna",
             "descanso": "90 s",
-            "detalle": "Pie de atrás sobre el banco; baja recto hasta que la rodilla de atrás casi toque el suelo."
+            "detalle": "Pie de atrás sobre el banco; baja recto hasta que la rodilla de atrás casi toque el suelo.",
+            "ej": "bulgara"
           },
           {
             "clave": "D",
@@ -839,7 +851,8 @@
             "series": 3,
             "reps": "12-15",
             "descanso": "60 s",
-            "detalle": "Rodilla alineada con el eje de la máquina; arriba, un segundo con el muslo apretado."
+            "detalle": "Rodilla alineada con el eje de la máquina; arriba, un segundo con el muslo apretado.",
+            "ej": "extension-cuadriceps"
           },
           {
             "clave": "E",
@@ -847,7 +860,8 @@
             "series": 3,
             "reps": "10-15",
             "descanso": "60 s",
-            "detalle": "Cadera pegada al banco; sube y baja despacio."
+            "detalle": "Cadera pegada al banco; sube y baja despacio.",
+            "ej": "curl-femoral"
           },
           {
             "clave": "F",
@@ -855,7 +869,8 @@
             "series": 3,
             "reps": "12-15",
             "descanso": "60 s",
-            "detalle": "Baja el talón todo lo posible y sube hasta la punta; un segundo arriba."
+            "detalle": "Baja el talón todo lo posible y sube hasta la punta; un segundo arriba.",
+            "ej": "gemelo-sentado"
           },
           {
             "clave": "G",
@@ -863,14 +878,16 @@
             "series": 2,
             "reps": "15",
             "descanso": "45 s",
-            "detalle": "En un escalón y con la plantilla puesta: por tus pies planos."
+            "detalle": "En un escalón y con la plantilla puesta: por tus pies planos.",
+            "ej": "talon-una-pierna"
           },
           {
             "clave": "H",
             "ejercicio": "Crunch en la máquina de abdominales",
             "series": 3,
             "reps": "10-15",
-            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos."
+            "detalle": "Enrolla la espalda llevando el pecho hacia la cadera; no tires con los brazos.",
+            "ej": "crunch-maquina"
           },
           {
             "clave": "I",
@@ -878,7 +895,8 @@
             "series": 3,
             "reps": "10 por lado",
             "descanso": "60 s",
-            "detalle": "De lado a la polea, con los brazos estirados delante del pecho: aguanta sin que el tronco gire."
+            "detalle": "De lado a la polea, con los brazos estirados delante del pecho: aguanta sin que el tronco gire.",
+            "ej": "pallof"
           }
         ],
         "orden": [
@@ -930,7 +948,8 @@
             "series": 4,
             "reps": "5-8",
             "descanso": "2–3 min",
-            "detalle": "Con el cinturón de lastre, el peso que deje 1-2 repeticiones en reserva; la misma técnica que en el examen."
+            "detalle": "Con el cinturón de lastre, el peso que deje 1-2 repeticiones en reserva; la misma técnica que en el examen.",
+            "ej": "dominadas-lastradas"
           },
           {
             "clave": "B",
@@ -938,7 +957,8 @@
             "series": 3,
             "reps": "8-12",
             "descanso": "2 min",
-            "detalle": "Espalda pegada al respaldo; empuja hasta casi estirar los brazos, sin bloquear."
+            "detalle": "Espalda pegada al respaldo; empuja hasta casi estirar los brazos, sin bloquear.",
+            "ej": "press-militar"
           },
           {
             "clave": "C",
@@ -946,15 +966,17 @@
             "series": 3,
             "reps": "10-12",
             "descanso": "90 s",
-            "detalle": "Espalda recta y quieta; lleva el agarre al ombligo y junta los omóplatos."
+            "detalle": "Espalda recta y quieta; lleva el agarre al ombligo y junta los omóplatos.",
+            "ej": "remo-polea-baja"
           },
           {
             "clave": "D",
-            "ejercicio": "Press inclinado en la máquina de discos",
+            "ejercicio": "Press de banca inclinado en máquina",
             "series": 3,
             "reps": "8-12",
             "descanso": "90 s",
-            "detalle": "Asiento a la altura que deje los agarres a la altura del pecho; baja controlado."
+            "detalle": "Asiento a la altura que deje los agarres a la altura del pecho; espalda pegada y baja controlado.",
+            "ej": "press-inclinado-maquina"
           },
           {
             "clave": "E",
@@ -962,7 +984,8 @@
             "series": 3,
             "reps": "8-12",
             "descanso": "90 s",
-            "detalle": "Cuerpo un poco inclinado adelante; baja hasta que los hombros queden a la altura de los codos. Con más de 12, con lastre."
+            "detalle": "Cuerpo un poco inclinado adelante; baja hasta que los hombros queden a la altura de los codos. Con más de 12, con lastre.",
+            "ej": "fondos"
           },
           {
             "clave": "F",
@@ -970,14 +993,16 @@
             "series": 3,
             "reps": "12-20",
             "descanso": "60 s",
-            "detalle": "Polea a la altura de la cara; tira hacia la frente abriendo la cuerda y separando los codos."
+            "detalle": "Polea a la altura de la cara; tira hacia la frente abriendo la cuerda y separando los codos.",
+            "ej": "face-pull"
           },
           {
             "clave": "G",
             "ejercicio": "Curl inclinado con mancuernas",
             "series": 3,
             "reps": "10-12",
-            "detalle": "Banco a 45-60°; brazos colgando y codos quietos."
+            "detalle": "Banco a 45-60°; brazos colgando y codos quietos.",
+            "ej": "curl-inclinado"
           },
           {
             "clave": "H",
@@ -985,7 +1010,8 @@
             "series": 3,
             "reps": "10-12",
             "descanso": "90 s",
-            "detalle": "De espaldas a la polea, con los codos arriba y quietos; estira del todo."
+            "detalle": "De espaldas a la polea, con los codos arriba y quietos; estira del todo.",
+            "ej": "triceps-sobre-cabeza"
           },
           {
             "clave": "I",
@@ -993,7 +1019,8 @@
             "series": 3,
             "reps": "8-15",
             "descanso": "60 s",
-            "detalle": "Sin balanceo; sube las piernas metiendo la pelvis. Si no salen 8 con las piernas estiradas, con las rodillas dobladas."
+            "detalle": "Sin balanceo; sube las piernas metiendo la pelvis. Si no salen 8 con las piernas estiradas, con las rodillas dobladas.",
+            "ej": "piernas-colgado"
           }
         ],
         "orden": [
@@ -1045,7 +1072,8 @@
             "series": 4,
             "reps": "5-8",
             "descanso": "2–3 min",
-            "detalle": "Dentro de la barra y con los agarres en el centro; espalda recta, empuja el suelo con las piernas y termina de pie sin echarte atrás."
+            "detalle": "Dentro de la barra y con los agarres en el centro; espalda recta, empuja el suelo con las piernas y termina de pie sin echarte atrás.",
+            "ej": "peso-muerto-hexagonal"
           },
           {
             "clave": "B",
@@ -1053,15 +1081,17 @@
             "series": 3,
             "reps": "8-12",
             "descanso": "2 min",
-            "detalle": "Espalda alta apoyada en el banco y la barra sobre la cadera con almohadilla; sube hasta que el cuerpo quede recto y aprieta el glúteo."
+            "detalle": "Espalda alta apoyada en el banco y la barra sobre la cadera con almohadilla; sube hasta que el cuerpo quede recto y aprieta el glúteo.",
+            "ej": "hip-thrust"
           },
           {
             "clave": "C",
-            "ejercicio": "Prensa de trineo",
+            "ejercicio": "Sentadilla hack en la máquina de trineo",
             "series": 3,
             "reps": "10-15",
             "descanso": "2 min",
-            "detalle": "Baja hasta que las rodillas formen un ángulo recto, sin que la cadera se despegue del respaldo."
+            "detalle": "Hombros bajo las hombreras y espalda pegada; baja hasta que los muslos queden paralelos a la plataforma, sin despegar la cadera.",
+            "ej": "sentadilla-hack"
           },
           {
             "clave": "D",
@@ -1069,7 +1099,8 @@
             "series": 2,
             "reps": "10-15",
             "descanso": "90 s",
-            "detalle": "Talones sujetos; baja llevando las rodillas adelante, con el cuerpo recto de las rodillas a los hombros."
+            "detalle": "Talones sujetos; baja llevando las rodillas adelante, con el cuerpo recto de las rodillas a los hombros.",
+            "ej": "sissy"
           },
           {
             "clave": "E",
@@ -1077,7 +1108,8 @@
             "series": 3,
             "reps": "10-15",
             "descanso": "60 s",
-            "detalle": "Baja con la espalda recta y sube hasta que el cuerpo quede en línea, sin pasarte."
+            "detalle": "Baja con la espalda recta y sube hasta que el cuerpo quede en línea, sin pasarte.",
+            "ej": "extension-lumbar"
           },
           {
             "clave": "F",
@@ -1085,7 +1117,8 @@
             "series": 3,
             "reps": "12-15",
             "descanso": "60 s",
-            "detalle": "Abre las piernas contra los cojines y vuelve despacio: es el glúteo medio, el que protege el cintillo."
+            "detalle": "Abre las piernas contra los cojines y vuelve despacio: es el glúteo medio, el que protege el cintillo.",
+            "ej": "abductor"
           },
           {
             "clave": "G",
@@ -1093,14 +1126,16 @@
             "series": 3,
             "reps": "12-15",
             "descanso": "45 s",
-            "detalle": "En un escalón y con la plantilla puesta."
+            "detalle": "En un escalón y con la plantilla puesta.",
+            "ej": "talon-una-pierna"
           },
           {
             "clave": "H",
             "ejercicio": "Leñador en polea",
             "series": 3,
             "reps": "12 por lado",
-            "detalle": "Polea alta; baja en diagonal hasta la cadera contraria girando el tronco, con los brazos estirados."
+            "detalle": "Polea alta; baja en diagonal hasta la cadera contraria girando el tronco, con los brazos estirados.",
+            "ej": "lenador"
           },
           {
             "clave": "I",
@@ -1108,7 +1143,8 @@
             "series": 3,
             "reps": "10-15",
             "descanso": "60 s",
-            "detalle": "Disco sobre el pecho; sube enrollando la espalda, sin llegar a sentarte del todo."
+            "detalle": "Disco sobre el pecho; sube enrollando la espalda, sin llegar a sentarte del todo.",
+            "ej": "crunch-declinado"
           }
         ],
         "orden": [
@@ -3000,5 +3036,653 @@
       "desde": "2026-09-15"
     }
   ],
-  "resueltos29sep": "Contradicciones del plan detectadas en el diagnóstico de la web (K1-K18) y resueltas el 29-9: reloj ya configurado (K1), FC máx ≥203 (K2), miércoles 30 acaba antes de las 20:30 (K3), barra de los sábados 3 y 17 (K4), reparto del simulacro 0:42/1:24/2:06/2:48 (K5), sin máximo el 24-10 (K6), simulacro en jueves + sábado (K7), pista de Arucas (K8), recuperación andando (K9), síntomas por encima del cuello = rojo como mínimo (K10), bloque A desde el 28-9 (K13), deriva por mitades guardada (K14), umbral sin sesiones (K15), lista de pendientes en plan.json (K16), 12-10 con el semáforo (K18). K11 (carga del 12-9 sin fuente), K12 (relatos personales, no se publican) y K17 (recorrido del circuito: el BOE solo lo da en un gráfico) se quedan fuera de la web."
+  "resueltos29sep": "Contradicciones del plan detectadas en el diagnóstico de la web (K1-K18) y resueltas el 29-9: reloj ya configurado (K1), FC máx ≥203 (K2), miércoles 30 acaba antes de las 20:30 (K3), barra de los sábados 3 y 17 (K4), reparto del simulacro 0:42/1:24/2:06/2:48 (K5), sin máximo el 24-10 (K6), simulacro en jueves + sábado (K7), pista de Arucas (K8), recuperación andando (K9), síntomas por encima del cuello = rojo como mínimo (K10), bloque A desde el 28-9 (K13), deriva por mitades guardada (K14), umbral sin sesiones (K15), lista de pendientes en plan.json (K16), 12-10 con el semáforo (K18). K11 (carga del 12-9 sin fuente), K12 (relatos personales, no se publican) y K17 (recorrido del circuito: el BOE solo lo da en un gráfico) se quedan fuera de la web.",
+  "tecnicaGimnasio": [
+    {
+      "id": "press-banca",
+      "nombre": "Press de banca con barra",
+      "foto": "img/tecnica/press-banca.jpg",
+      "ancho": 618,
+      "alto": 750,
+      "marcas": [
+        "Agarre: un poco más ancho que los hombros, con las muñecas rectas encima de los codos.",
+        "Banco: cabeza, espalda alta y glúteo apoyados, y los pies firmes en el suelo.",
+        "Soportes: sacas la barra con los brazos estirados y la devuelves igual."
+      ],
+      "como": [
+        "Junta y baja los omóplatos antes de sacar la barra.",
+        "Bájala controlada hasta rozar la parte baja del pecho.",
+        "Empuja hacia arriba sin despegar el glúteo del banco."
+      ],
+      "ojo": [
+        "Sin rebotar en el pecho.",
+        "Los codos, a unos 45° del cuerpo, no abiertos en cruz."
+      ]
+    },
+    {
+      "id": "remo-t",
+      "nombre": "Remo en T con apoyo de pecho",
+      "foto": "img/tecnica/remo-t.jpg",
+      "ancho": 618,
+      "alto": 800,
+      "marcas": [
+        "Apoyo: el pecho pegado durante toda la serie.",
+        "Agarres: con cualquiera, muñecas rectas; el más ancho abre más los codos.",
+        "Plataforma: los pies aquí, a la distancia que deje el pecho justo en el apoyo."
+      ],
+      "como": [
+        "Empieza con los brazos estirados y la espalda recta.",
+        "Tira llevando los codos hacia atrás y aprieta la espalda un segundo arriba.",
+        "Baja despacio hasta estirar los brazos."
+      ],
+      "ojo": [
+        "No despegues el pecho del apoyo para tirar con impulso."
+      ]
+    },
+    {
+      "id": "press-inclinado-mancuernas",
+      "nombre": "Press inclinado con mancuernas",
+      "foto": "img/tecnica/banco-inclinado.jpg",
+      "ancho": 468,
+      "alto": 610,
+      "marcas": [
+        "Respaldo: a unos 30°, pocas muescas por encima de plano.",
+        "Asiento: un punto subido para no resbalar.",
+        "Aquí se cambia la inclinación."
+      ],
+      "como": [
+        "Túmbate con las mancuernas apoyadas en los muslos y súbelas al pecho.",
+        "Bájalas hasta la altura del pecho, con los codos a unos 45° del cuerpo.",
+        "Empuja hasta casi estirar, sin chocarlas arriba."
+      ],
+      "ojo": [
+        "Con el respaldo muy vertical trabaja sobre todo el hombro."
+      ]
+    },
+    {
+      "id": "jalon",
+      "nombre": "Jalón al pecho",
+      "foto": "img/tecnica/jalon.jpg",
+      "ancho": 618,
+      "alto": 1020,
+      "marcas": [
+        "Barra: agarre algo más ancho que los hombros, palmas al frente.",
+        "Rodillos: que sujeten los muslos sin holgura.",
+        "Asiento: siéntate al fondo, con los pies en el suelo.",
+        "Clavija: el peso."
+      ],
+      "como": [
+        "Empieza con los brazos estirados y el pecho alto.",
+        "Lleva la barra a la parte alta del pecho bajando los codos hacia los costados.",
+        "Sube despacio hasta estirar."
+      ],
+      "ojo": [
+        "No te eches hacia atrás para bajarla.",
+        "Nunca por detrás de la nuca."
+      ]
+    },
+    {
+      "id": "elevaciones-laterales",
+      "nombre": "Elevaciones laterales con mancuernas",
+      "como": [
+        "De pie, con las mancuernas a los lados y los codos un poco doblados.",
+        "Sube los brazos hacia los lados hasta la altura de los hombros.",
+        "Baja en dos o tres segundos."
+      ],
+      "ojo": [
+        "Sin balancear el cuerpo: mejor menos peso.",
+        "Los hombros, abajo y lejos de las orejas."
+      ]
+    },
+    {
+      "id": "curl-scott",
+      "nombre": "Curl en el banco Scott",
+      "foto": "img/tecnica/scott.jpg",
+      "ancho": 618,
+      "alto": 760,
+      "marcas": [
+        "Cojín: los brazos apoyados enteros y las axilas en el borde.",
+        "Asiento: a la altura que deje las axilas justo en el borde del cojín.",
+        "Agarres: con las palmas hacia arriba.",
+        "Discos aquí."
+      ],
+      "como": [
+        "Empieza con los brazos casi estirados.",
+        "Sube doblando solo los codos.",
+        "Baja despacio hasta casi estirar."
+      ],
+      "ojo": [
+        "No sueltes el peso abajo de golpe: es donde se resiente el codo."
+      ]
+    },
+    {
+      "id": "triceps-cuerda",
+      "nombre": "Extensión de tríceps en polea con cuerda",
+      "foto": "img/tecnica/polea.jpg",
+      "ancho": 618,
+      "alto": 940,
+      "marcas": [
+        "Polea: arriba del todo; se sube o se baja por el carril.",
+        "Aquí se engancha la cuerda."
+      ],
+      "como": [
+        "De pie frente a la polea, con los codos pegados al cuerpo.",
+        "Estira los brazos hacia abajo y abre la cuerda al final.",
+        "Sube hasta que los antebrazos pasen un poco de la horizontal."
+      ],
+      "ojo": [
+        "Los codos no se mueven hacia delante."
+      ]
+    },
+    {
+      "id": "rodillas-silla",
+      "nombre": "Elevación de rodillas en la silla romana",
+      "foto": "img/tecnica/silla-rodillas.jpg",
+      "ancho": 618,
+      "alto": 820,
+      "marcas": [
+        "Respaldo: la espalda pegada todo el rato.",
+        "Apoyos: los antebrazos enteros encima.",
+        "Agarres: cógete aquí."
+      ],
+      "como": [
+        "Empieza con las piernas colgando y quietas.",
+        "Sube las rodillas hacia el pecho y, al final, enrolla la pelvis hacia arriba.",
+        "Baja en dos o tres segundos, sin balancearte."
+      ],
+      "ojo": [
+        "Si subes las rodillas sin enrollar la pelvis, trabaja más la cadera que el abdomen."
+      ]
+    },
+    {
+      "id": "crunch-maquina",
+      "nombre": "Crunch en la máquina de abdominales",
+      "foto": "img/tecnica/abdominales.jpg",
+      "ancho": 618,
+      "alto": 800,
+      "marcas": [
+        "Agarres: por encima de los hombros.",
+        "Asiento: la cadera al fondo.",
+        "Rodillos: los pies debajo."
+      ],
+      "como": [
+        "Coge los agarres sin tirar con los brazos.",
+        "Enrolla la espalda llevando el pecho hacia la cadera y suelta el aire.",
+        "Vuelve despacio, sin dejar caer las placas."
+      ],
+      "ojo": [
+        "El movimiento es corto: si doblas la cadera, trabajan las piernas y no el abdomen."
+      ]
+    },
+    {
+      "id": "sentadilla-palanca",
+      "nombre": "Sentadilla en la máquina de palanca",
+      "foto": "img/tecnica/sentadilla-palanca.jpg",
+      "ancho": 618,
+      "alto": 800,
+      "marcas": [
+        "Almohadillas: sobre los hombros, ajustadas.",
+        "Agarres: cógete aquí para ir estable.",
+        "Plataforma: pies a la anchura de los hombros, en el centro.",
+        "Discos aquí."
+      ],
+      "como": [
+        "Colócate debajo con la espalda recta.",
+        "Baja doblando rodillas y cadera hasta que los muslos queden al menos paralelos al suelo.",
+        "Sube empujando con toda la planta del pie."
+      ],
+      "ojo": [
+        "Las rodillas van en la línea de los pies, sin meterse hacia dentro.",
+        "Los talones no se levantan."
+      ]
+    },
+    {
+      "id": "peso-muerto-rumano",
+      "nombre": "Peso muerto rumano con barra",
+      "como": [
+        "De pie con la barra, agarre a la anchura de los hombros.",
+        "Con las rodillas un poco dobladas y fijas, echa la cadera atrás bajando la barra pegada a las piernas.",
+        "Baja hasta notar estirar los isquios y sube apretando el glúteo."
+      ],
+      "ojo": [
+        "La espalda no se redondea.",
+        "No es una sentadilla: las rodillas casi no se doblan más."
+      ]
+    },
+    {
+      "id": "bulgara",
+      "nombre": "Zancada búlgara con mancuernas",
+      "como": [
+        "De espaldas a un banco, con el empeine del pie de atrás encima.",
+        "Baja recto hasta que la rodilla de atrás casi toque el suelo.",
+        "Sube empujando con el pie de delante."
+      ],
+      "ojo": [
+        "La rodilla de delante, en la línea del pie."
+      ]
+    },
+    {
+      "id": "extension-cuadriceps",
+      "nombre": "Extensión de cuádriceps",
+      "foto": "img/tecnica/extension.jpg",
+      "ancho": 560,
+      "alto": 680,
+      "marcas": [
+        "Asiento: la espalda apoyada y la rodilla justo en el borde.",
+        "Rodillo: delante de los tobillos.",
+        "Pasadores amarillos: los ajustes."
+      ],
+      "como": [
+        "Alinea la rodilla con el eje de giro de la máquina.",
+        "Estira las piernas hasta arriba y aprieta un segundo.",
+        "Baja despacio."
+      ],
+      "ojo": [
+        "Sin dar patadas: el peso no se lanza."
+      ]
+    },
+    {
+      "id": "curl-femoral",
+      "nombre": "Curl femoral tumbado",
+      "foto": "img/tecnica/femoral.jpg",
+      "ancho": 618,
+      "alto": 950,
+      "marcas": [
+        "Rodillo: detrás de los tobillos, por encima del talón.",
+        "Banco: boca abajo, con la cadera pegada.",
+        "Eje: la rodilla, a su altura."
+      ],
+      "como": [
+        "Túmbate con las rodillas justo pasado el borde del banco.",
+        "Sube los talones hacia el glúteo sin despegar la cadera.",
+        "Baja despacio hasta casi estirar."
+      ],
+      "ojo": [
+        "Si la cadera se levanta, el peso es demasiado."
+      ]
+    },
+    {
+      "id": "gemelo-sentado",
+      "nombre": "Gemelo sentado",
+      "foto": "img/tecnica/gemelo.jpg",
+      "ancho": 468,
+      "alto": 850,
+      "marcas": [
+        "Almohadillas: sobre los muslos, justo encima de las rodillas.",
+        "Plataforma: la parte de delante del pie; los talones, en el aire.",
+        "Pasador amarillo: la altura de las almohadillas."
+      ],
+      "como": [
+        "Baja los talones todo lo que puedas.",
+        "Sube hasta la punta y aguanta un segundo arriba.",
+        "Baja despacio."
+      ],
+      "ojo": [
+        "Recorrido completo: a medias no sirve."
+      ]
+    },
+    {
+      "id": "talon-una-pierna",
+      "nombre": "Elevación de talón a una pierna",
+      "como": [
+        "En un escalón, con la parte de delante de un pie y la plantilla puesta.",
+        "Baja el talón por debajo del escalón y sube hasta la punta.",
+        "Agárrate a algo solo para el equilibrio."
+      ],
+      "ojo": [
+        "Lento: dos segundos abajo y uno arriba."
+      ]
+    },
+    {
+      "id": "pallof",
+      "nombre": "Pallof en polea",
+      "foto": "img/tecnica/polea-doble.jpg",
+      "ancho": 618,
+      "alto": 940,
+      "marcas": [
+        "Polea: a la altura del pecho; se mueve por el carril.",
+        "Los números del carril: apunta en cuál la pones.",
+        "Agarre de una mano."
+      ],
+      "como": [
+        "De lado a la polea, a un paso o dos, con los pies a la anchura de la cadera.",
+        "Con el agarre en las dos manos pegado al pecho, estira los brazos al frente.",
+        "Aguanta un segundo sin que el tronco gire y vuelve."
+      ],
+      "ojo": [
+        "Se mueven los brazos; la cadera y los hombros no giran."
+      ]
+    },
+    {
+      "id": "dominadas-lastradas",
+      "nombre": "Dominadas lastradas",
+      "foto": "img/tecnica/lastre.jpg",
+      "ancho": 368,
+      "alto": 980,
+      "marcas": [
+        "Cinturón de lastre: a la cadera.",
+        "Cadena: pasa por el agujero del disco y se engancha al cinturón."
+      ],
+      "como": [
+        "Agarre prono, algo más ancho que los hombros, como en el examen.",
+        "Desde los brazos estirados, sube hasta pasar la barbilla de la barra.",
+        "Baja controlado hasta estirar del todo."
+      ],
+      "ojo": [
+        "El disco cuelga quieto: sin balanceo.",
+        "Deja 1-2 repeticiones en reserva."
+      ]
+    },
+    {
+      "id": "press-militar",
+      "nombre": "Press militar en la máquina de palanca",
+      "foto": "img/tecnica/press-militar.jpg",
+      "ancho": 618,
+      "alto": 770,
+      "marcas": [
+        "Agarres: a la altura de los hombros al empezar.",
+        "Asiento: súbelo o bájalo hasta que los agarres queden ahí.",
+        "Discos aquí."
+      ],
+      "como": [
+        "Espalda pegada al respaldo.",
+        "Empuja hasta casi estirar los brazos.",
+        "Baja hasta que las manos queden a la altura de los hombros."
+      ],
+      "ojo": [
+        "No arquees la zona lumbar para empujar."
+      ]
+    },
+    {
+      "id": "remo-polea-baja",
+      "nombre": "Remo en polea baja",
+      "foto": "img/tecnica/remo-polea.jpg",
+      "ancho": 618,
+      "alto": 650,
+      "marcas": [
+        "Asiento.",
+        "Plataforma: los pies apoyados, con las rodillas un poco dobladas.",
+        "Aquí se engancha el agarre (el triángulo, de manos juntas)."
+      ],
+      "como": [
+        "Espalda recta y quieta.",
+        "Lleva el agarre al ombligo juntando los omóplatos.",
+        "Vuelve hasta estirar los brazos sin redondear la espalda."
+      ],
+      "ojo": [
+        "El tronco no se balancea adelante y atrás."
+      ]
+    },
+    {
+      "id": "press-inclinado-maquina",
+      "nombre": "Press de banca inclinado en máquina",
+      "foto": "img/tecnica/press-inclinado.jpg",
+      "ancho": 578,
+      "alto": 640,
+      "marcas": [
+        "Agarres.",
+        "Respaldo: la espalda pegada.",
+        "Asiento: que los agarres queden a la altura del pecho.",
+        "Discos aquí."
+      ],
+      "como": [
+        "Ajusta el asiento antes de cargar.",
+        "Empuja hasta casi estirar los brazos.",
+        "Baja controlado hasta notar estirar el pecho."
+      ],
+      "ojo": [
+        "Los omóplatos, juntos y apoyados."
+      ]
+    },
+    {
+      "id": "fondos",
+      "nombre": "Fondos en paralelas",
+      "foto": "img/tecnica/silla-fondos.jpg",
+      "ancho": 618,
+      "alto": 820,
+      "marcas": [
+        "Agarres de fondos: empiezas arriba, con los brazos estirados.",
+        "Escalones: subes por aquí."
+      ],
+      "como": [
+        "Con el cuerpo un poco inclinado adelante, baja hasta que los hombros queden a la altura de los codos.",
+        "Sube hasta estirar los brazos.",
+        "Con más de 12, con el cinturón de lastre."
+      ],
+      "ojo": [
+        "Si molesta el hombro, baja menos."
+      ]
+    },
+    {
+      "id": "face-pull",
+      "nombre": "Face pull en polea con cuerda",
+      "foto": "img/tecnica/polea.jpg",
+      "ancho": 618,
+      "alto": 940,
+      "marcas": [
+        "Polea: a la altura de la cara.",
+        "Aquí se engancha la cuerda."
+      ],
+      "como": [
+        "Coge la cuerda con las palmas hacia dentro y da un paso atrás.",
+        "Tira hacia la frente separando las manos y los codos.",
+        "Aguanta un segundo y vuelve despacio."
+      ],
+      "ojo": [
+        "Los codos, altos, a la altura de los hombros."
+      ]
+    },
+    {
+      "id": "curl-inclinado",
+      "nombre": "Curl inclinado con mancuernas",
+      "foto": "img/tecnica/banco-inclinado.jpg",
+      "ancho": 468,
+      "alto": 610,
+      "marcas": [
+        "Respaldo: a 45-60°.",
+        "Asiento: un punto subido.",
+        "Aquí se cambia la inclinación."
+      ],
+      "como": [
+        "Sentado con la espalda apoyada y los brazos colgando.",
+        "Sube las mancuernas doblando solo los codos.",
+        "Baja despacio hasta estirar."
+      ],
+      "ojo": [
+        "Los codos se quedan quietos, colgando."
+      ]
+    },
+    {
+      "id": "triceps-sobre-cabeza",
+      "nombre": "Extensión de tríceps sobre la cabeza en polea",
+      "foto": "img/tecnica/polea.jpg",
+      "ancho": 618,
+      "alto": 940,
+      "marcas": [
+        "Polea: a la altura de la cabeza o algo más abajo.",
+        "Aquí se engancha la cuerda."
+      ],
+      "como": [
+        "De espaldas a la polea, con la cuerda detrás de la cabeza y un pie adelantado.",
+        "Con los codos arriba y quietos, estira los brazos del todo.",
+        "Vuelve despacio hasta notar estirar el tríceps."
+      ],
+      "ojo": [
+        "Los codos no se abren."
+      ]
+    },
+    {
+      "id": "piernas-colgado",
+      "nombre": "Elevación de piernas colgado de la barra",
+      "foto": "img/tecnica/barra.jpg",
+      "ancho": 250,
+      "alto": 570,
+      "marcas": [
+        "Barra: agarre a la anchura de los hombros, con los brazos estirados."
+      ],
+      "como": [
+        "Cuelga quieto, con los hombros activos.",
+        "Sube las piernas (o las rodillas) enrollando la pelvis hacia arriba.",
+        "Baja despacio, sin balancearte."
+      ],
+      "ojo": [
+        "Si empiezas a balancearte, para y vuelve a empezar desde quieto."
+      ]
+    },
+    {
+      "id": "peso-muerto-hexagonal",
+      "nombre": "Peso muerto con barra hexagonal",
+      "foto": "img/tecnica/hexagonal.jpg",
+      "ancho": 230,
+      "alto": 630,
+      "marcas": [
+        "Agarres: en el centro, dentro de la barra."
+      ],
+      "como": [
+        "Ponte dentro de la barra, con los pies a la anchura de la cadera.",
+        "Baja con la espalda recta, coge los agarres y saca el pecho.",
+        "Empuja el suelo con las piernas hasta quedar de pie, y baja igual."
+      ],
+      "ojo": [
+        "La espalda no se redondea.",
+        "Arriba, de pie: sin echarte atrás."
+      ]
+    },
+    {
+      "id": "hip-thrust",
+      "nombre": "Hip thrust con barra",
+      "como": [
+        "Espalda alta apoyada en el borde de un banco y la barra sobre la cadera, con una almohadilla.",
+        "Pies apoyados, a la anchura de la cadera.",
+        "Sube hasta que el cuerpo quede recto de rodillas a hombros y aprieta el glúteo un segundo."
+      ],
+      "ojo": [
+        "Barbilla hacia el pecho: no arquees la zona lumbar arriba."
+      ]
+    },
+    {
+      "id": "sentadilla-hack",
+      "nombre": "Sentadilla hack en la máquina de trineo",
+      "foto": "img/tecnica/hack.jpg",
+      "ancho": 458,
+      "alto": 740,
+      "marcas": [
+        "Hombreras: debajo de ellas, ajustadas.",
+        "Respaldo: la espalda pegada.",
+        "Plataforma: pies a la anchura de los hombros."
+      ],
+      "como": [
+        "Suelta el seguro con la espalda ya apoyada.",
+        "Baja hasta que los muslos queden paralelos a la plataforma.",
+        "Sube empujando con toda la planta."
+      ],
+      "ojo": [
+        "La cadera no se despega del respaldo abajo.",
+        "Las rodillas, en la línea de los pies."
+      ]
+    },
+    {
+      "id": "sissy",
+      "nombre": "Sentadilla sissy en su máquina",
+      "foto": "img/tecnica/sissy.jpg",
+      "ancho": 480,
+      "alto": 470,
+      "marcas": [
+        "Rodillos de abajo: sujetan los tobillos, con los pies en las placas.",
+        "Rodillos de arriba: la parte alta de las pantorrillas.",
+        "Pomo amarillo: la altura.",
+        "Agarres."
+      ],
+      "como": [
+        "Cógete a los agarres.",
+        "Baja llevando las rodillas adelante, con el cuerpo recto de las rodillas a los hombros.",
+        "Sube hasta quedar de pie."
+      ],
+      "ojo": [
+        "Empieza con poco recorrido; si molesta la rodilla, menos."
+      ]
+    },
+    {
+      "id": "extension-lumbar",
+      "nombre": "Extensión lumbar en el banco de 45°",
+      "foto": "img/tecnica/lumbar.jpg",
+      "ancho": 570,
+      "alto": 500,
+      "marcas": [
+        "Almohadillas: el borde, a la altura de la cadera, por debajo del ombligo.",
+        "Rodillos: los talones debajo.",
+        "Plataforma: los pies.",
+        "Pasador amarillo: la altura de las almohadillas."
+      ],
+      "como": [
+        "Brazos cruzados sobre el pecho, o un disco para cargar.",
+        "Baja con la espalda recta hasta notar estirar los isquios.",
+        "Sube hasta que el cuerpo quede en línea con las piernas."
+      ],
+      "ojo": [
+        "Arriba, sin pasarte arqueando la espalda."
+      ]
+    },
+    {
+      "id": "abductor",
+      "nombre": "Abductor en máquina",
+      "foto": "img/tecnica/abductor.jpg",
+      "ancho": 618,
+      "alto": 700,
+      "marcas": [
+        "Cojines: por fuera de las rodillas.",
+        "Respaldo: la espalda pegada.",
+        "Rueda: la apertura de salida; empieza con poca.",
+        "Clavija: el peso."
+      ],
+      "como": [
+        "Siéntate con la espalda apoyada y las piernas juntas.",
+        "Abre las piernas contra los cojines.",
+        "Vuelve despacio, sin que choquen las placas."
+      ],
+      "ojo": [
+        "La espalda no se despega del respaldo."
+      ]
+    },
+    {
+      "id": "lenador",
+      "nombre": "Leñador en polea",
+      "foto": "img/tecnica/polea-doble.jpg",
+      "ancho": 618,
+      "alto": 940,
+      "marcas": [
+        "Polea: arriba del todo.",
+        "Los números del carril.",
+        "Agarre de una mano (o la cuerda)."
+      ],
+      "como": [
+        "De lado a la polea, coge el agarre con las dos manos por encima del hombro.",
+        "Baja en diagonal hasta la cadera contraria girando el tronco, con los brazos estirados.",
+        "Vuelve despacio."
+      ],
+      "ojo": [
+        "El giro sale del tronco: los pies no se mueven."
+      ]
+    },
+    {
+      "id": "crunch-declinado",
+      "nombre": "Crunch en el banco declinado con disco",
+      "foto": "img/tecnica/declinado.jpg",
+      "ancho": 518,
+      "alto": 420,
+      "marcas": [
+        "Rodillos: las piernas sujetas.",
+        "Banco: la espalda apoyada al bajar.",
+        "Pasador amarillo: la inclinación."
+      ],
+      "como": [
+        "Disco sobre el pecho, sujeto con los brazos cruzados.",
+        "Sube enrollando la espalda, sin llegar a sentarte del todo.",
+        "Baja despacio hasta casi apoyar la espalda."
+      ],
+      "ojo": [
+        "No tires del cuello."
+      ]
+    }
+  ]
 }

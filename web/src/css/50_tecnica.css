@@ -241,3 +241,18 @@ ol.te-tec li>b{font-weight:var(--fw-bold)}
 @media print{
   .te-fant-b,.te-dom-b,.te-dom-n,.te-acc,.te-pm{display:none!important}
 }
+
+/* ---------- fase 2 (17-11-2026): fichas del gimnasio con foto marcada (solo la página de Daniel) ---------- */
+.te-gf{margin-bottom:var(--sp-4)}
+.te-gf .faint{margin:2px 0 0}
+.te-gf-fig{margin:var(--sp-3) 0 0}
+.te-gf-fig img{display:block;width:100%;max-width:520px;height:auto;border-radius:var(--r-sm);background:var(--surface-2)}
+.te-gf-m,.te-gf-c{margin:var(--sp-3) 0 0;padding:0;list-style:none;counter-reset:tgf}
+.te-gf-m li,.te-gf-c li{position:relative;padding-left:36px;margin:0 0 var(--sp-2);line-height:var(--lh-body)}
+.te-gf-m li::before,.te-gf-c li::before{counter-increment:tgf;content:counter(tgf);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-weight:var(--fw-bold);font-size:var(--fs-sm);font-variant-numeric:tabular-nums}
+.te-gf-m li::before{background:var(--st-warn);color:#0F1822}
+.te-gf-c li::before{background:var(--primary-soft);color:var(--primary)}
+.te-gf-ojo{margin:var(--sp-2) 0 0;padding:var(--sp-2) var(--sp-3);border-radius:var(--r-sm);background:var(--warn-soft);color:var(--text)}
+.te-gf-ya{margin:0 0 var(--sp-3);color:var(--text-2);font-size:var(--fs-sm)}
+.te-gf-ya a{color:var(--primary)}
