@@ -21,6 +21,7 @@
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
     if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', (t[1] && t[1].length ? 'Temas ' + t[1].join(', ') : 'Las materias donde más puntos se van') + '.', t[2], 'temporizador'];
     if (c === 'h') return [t[1], t[2] || 'Apuntado con tu parte diario.', t[3] || 0, 'check'];
+    if (c === 'o') return [t[1], t[2] || '', t[3] || 0, 'lista'];
     if (c === 'p') return ['Psicotécnicos' + (t[1] ? ', semana ' + t[1] : ''), t[2] === 'v' ? 'Los 3 vídeos de la semana.' : 'Ómnibus cronometrado.', t[2] === 'v' ? 90 : 45, 'reloj'];
     if (c === 'v') return ['Segunda vuelta del tema ' + t[1], tema(t[1]) + '. Resumen, ley literal y esquema.', 90, 'lista'];
     if (c === 's') return ['Simulacro de 100 preguntas', '50 minutos, con ? en las dudas.', 60, 'examen'];
