@@ -19,7 +19,8 @@
     if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ' (' + t[2] + '/' + t[3] + ')' : ''), tema(t[1]) + '. Mejor a 1,5x.', 90, 'video'];
     if (c === 'e') return ['Estudio activo del tema ' + t[1], 'Esquema propio, ley literal y lo que más cae.', t[2], 'editar'];
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
-    if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', 'Desafíos: ' + (t[1] && t[1].length ? 'temas ' + t[1].join(', ') : 'las materias donde más puntos se van') + '.', t[2], 'temporizador'];
+    if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', (t[1] && t[1].length ? 'Temas ' + t[1].join(', ') : 'Las materias donde más puntos se van') + '.', t[2], 'temporizador'];
+    if (c === 'h') return [t[1], t[2] || 'Apuntado con tu parte diario.', t[3] || 0, 'check'];
     if (c === 'p') return ['Psicotécnicos' + (t[1] ? ', semana ' + t[1] : ''), t[2] === 'v' ? 'Los 3 vídeos de la semana.' : 'Ómnibus cronometrado.', t[2] === 'v' ? 90 : 45, 'reloj'];
     if (c === 'v') return ['Segunda vuelta del tema ' + t[1], tema(t[1]) + '. Resumen, ley literal y esquema.', 90, 'lista'];
     if (c === 's') return ['Simulacro de 100 preguntas', '50 minutos, con ? en las dudas.', 60, 'examen'];
@@ -29,17 +30,19 @@
     return [c, '', 0, 'info'];
   }
   function extra(t) { return t[0].charAt(0) === '+'; }
+  function fijo(t) { return t[0] === 'h'; }   /* «h»: ya hecho, apuntado por el tutor con el parte diario */
   function tareas(f) { var T = (E.dias || {})[f] || []; return T.length && T[0][0] === 'x' ? [] : T; }
   function bloqueado(f) { var T = (E.dias || {})[f] || []; return !!(T.length && T[0][0] === 'x'); }
   function hechas(f) { var h = PC.store.get('estudio-' + f, null); return Array.isArray(h) ? h : []; }
-  function marcar(f, i) { var h = hechas(f), k = h.indexOf(i); if (k < 0) h.push(i); else h.splice(k, 1); PC.store.set('estudio-' + f, h); }
+  function hecho(f, i, H) { var t = tareas(f)[i]; return !!t && (fijo(t) || (H || hechas(f)).indexOf(i) >= 0); }
+  function marcar(f, i) { if (fijo(tareas(f)[i] || ['x'])) return; var h = hechas(f), k = h.indexOf(i); if (k < 0) h.push(i); else h.splice(k, 1); PC.store.set('estudio-' + f, h); }
   function minimas(f) { return tareas(f).map(function (t, i) { return extra(t) ? -1 : i; }).filter(function (i) { return i >= 0; }); }
   function lunesDe(f) { return PC.sumarDias(f, -((PC.fecha(f).getDay() + 6) % 7)); }
   function semanaDe(f) { var l = lunesDe(f); return (E.sem || []).filter(function (s) { return s[0] === l; })[0] || null; }
   function faseDe(f) { var s = semanaDe(f); return s ? FASE[s[1]] : ''; }
   function cuenta(dias) {
     var m = 0, h = 0;
-    dias.forEach(function (f) { var H = hechas(f); minimas(f).forEach(function (i) { m++; if (H.indexOf(i) >= 0) h++; }); });
+    dias.forEach(function (f) { var H = hechas(f); minimas(f).forEach(function (i) { m++; if (hecho(f, i, H)) h++; }); });
     return { m: m, h: h };
   }
   function minTxt(n) { return n >= 60 ? Math.floor(n / 60) + ' h' + (n % 60 ? ' ' + (n % 60) + ' min' : '') : n + ' min'; }
@@ -51,7 +54,7 @@
     root.querySelector('#es-sem-t').textContent = 'Del ' + PC.fmt.dia(l, 'dm') + ' al ' + PC.fmt.dia(dias[6], 'dm') + (S ? ' · ' + FASE[S[1]] : '');
     root.querySelector('#es-sem-c').textContent = c.m ? c.h + ' de ' + c.m + ' tareas hechas' : 'sin tareas';
     root.querySelector('#es-week').innerHTML = dias.map(function (f, i) {
-      var m = minimas(f), H = hechas(f), cls = [], ok = m.length && m.every(function (x) { return H.indexOf(x) >= 0; });
+      var m = minimas(f), H = hechas(f), cls = [], ok = m.length && m.every(function (x) { return hecho(f, x, H); });
       if (f === hoy) cls.push('today'); else if (!m.length) cls.push('rest'); else if (ok) cls.push('done'); else if (f < hoy) cls.push('miss');
       var lab = PC.fmt.dia(f, 'larga') + (bloqueado(f) ? ', sin estudio' : (m.length ? ', ' + m.length + ' tareas' : ', descanso')) + (ok ? ', hecho' : '');
       return '<button type="button" class="' + cls.join(' ') + '" data-f="' + f + '" aria-pressed="' + (f === UI.sel) + '"' + (f === hoy ? ' aria-current="date"' : '') +
@@ -70,7 +73,7 @@
     if (bloqueado(f)) { tit = cuando + ': sin estudio'; sub = 'Día libre en el plan.'; }
     else if (!T.length) { tit = cuando + ': descanso'; sub = 'No hay nada de estudio.'; }
     else {
-      var pri = T.filter(function (t) { return !extra(t); })[0] || T[0];
+      var pri = T.filter(function (t) { return !extra(t) && !fijo(t); })[0] || T.filter(function (t) { return !extra(t); })[0] || T[0];
       tit = cuando + ': ' + desc(pri)[0].replace(/^./, function (x) { return x.toLowerCase(); });
       sub = minTxt(mins) + ' de mínimo' + (T.length > 1 ? ' · ' + T.length + ' tareas' : '');
     }
@@ -78,11 +81,11 @@
     if (T.length) {
       var orden = T.map(function (t, i) { return i; }).sort(function (a, b) { return (extra(T[a]) - extra(T[b])) || (a - b); });
       h.push('<ul class="es-l">' + orden.map(function (i) {
-        var t = T[i], d = desc(t), on = H.indexOf(i) >= 0;
+        var t = T[i], d = desc(t), on = hecho(f, i, H);
         return '<li><button type="button" class="es-t' + (on ? ' on' : '') + '" data-i="' + i + '" aria-pressed="' + on + '">' +
           '<span class="es-c" aria-hidden="true">' + (on ? PC.icon('check', 'sm') : '') + '</span>' +
           '<span class="es-tx"><b>' + esc(d[0]) + '</b><small>' + esc(d[1]) + '</small></span>' +
-          '<span class="es-m"><span class="num">' + d[2] + ' min</span>' + (extra(t) ? '<span class="chip sup">si da tiempo</span>' : '') + '</span></button></li>';
+          '<span class="es-m">' + (d[2] ? '<span class="num">' + d[2] + ' min</span>' : (fijo(t) ? '<span class="chip ok">hecho</span>' : '')) + (extra(t) ? '<span class="chip sup">si da tiempo</span>' : '') + '</span></button></li>';
       }).join('') + '</ul>');
       h.push('<div class="es-pie"><button type="button" class="btn sec" data-es="copiar">' + PC.icon('copiar', 'sm') + 'Copiar para el tutor</button>' +
         '<small class="muted">Lo que marcas se queda en este móvil.</small></div>');
@@ -120,7 +123,7 @@
 
   function parte(f) {
     var T = tareas(f), H = hechas(f), si = [], no = [];
-    T.forEach(function (t, i) { var d = desc(t)[0] + (extra(t) ? ' (si da tiempo)' : ''); (H.indexOf(i) >= 0 ? si : no).push(d); });
+    T.forEach(function (t, i) { var d = desc(t)[0] + (extra(t) ? ' (si da tiempo)' : ''); (hecho(f, i, H) ? si : no).push(d); });
     var c = cuenta(semana(lunesDe(f)));
     return 'Estudio, ' + PC.fmt.dia(f) + '\nHecho: ' + (si.join('; ') || 'nada') + '\nSin hacer: ' + (no.join('; ') || 'nada') +
       '\nSemana: ' + c.h + ' de ' + c.m + ' tareas mínimas.';
