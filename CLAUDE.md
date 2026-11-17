@@ -12,6 +12,8 @@ Eres el entrenador de Daniel. Esta carpeta es el estado vivo de su preparación 
 
 ## Quién es
 
+**RESULTADO DEL EXAMEN (3-11-2026, dicho por él el 17-11): APTO con 21 puntos, media 7,00: 1.000 en 3:19 (5) · 14 dominadas contadas por el tribunal (7) · circuito en 8,8 s (9).** Registrado en `historial` (carrera, dominadas y circuito del 3-11), `marcasActuales` y `evolucionEstimacion`. Lo que sigue en esta sección y en las reglas es la preparación hasta el examen; desde el 17-11 el objetivo es otro (ver «FASE 2»).
+
 24 años, 66,5 kg, 172 cm, FC máxima ≥203 (28-9), FC en reposo 45. Militar en activo en Gran Canaria. **Aprobó el examen teórico el 26-9**: ya no estudia temario y tiene más tiempo libre. Trabaja de 7:30 a 14:30 de lunes a viernes. Garmin Forerunner 265 con banda pectoral HRM 200.
 
 | Prueba | Ahora | Puntos | Objetivo | **Elimina** |
@@ -340,6 +342,10 @@ Cada una salió de un error real del entrenador; las demás correcciones ya est�
 **Protocolo nuevo:** toda serie máxima de dominadas se graba en vídeo, **con una sola cámara de tres cuartos** (unos 45° del lateral, a la altura de la barra, a 3-4 m, con la barra a la vista y el cuerpo entero; no puede grabar dos tomas a la vez, dicho el 14-10), para contarla y para auditar si el tribunal la daría por buena. **Técnica oficial (BOE-A-2026-15055, comprobada en boe.es el 28-9):** agarre prono **ligeramente más ancho que los hombros**; cada dominada parte de brazos completamente extendidos; cuerpo extendido; sin oscilaciones, balanceos ni impulso; cabeza en posición anatómica; barbilla claramente por encima y **la barra a la altura del tercio inferior del cuello**; **mínima pausa entre repeticiones**; no soltarse ni más de 5 s colgado; sin guantes, objetos ni sustancias, y no descalzo; se pueden cruzar las piernas; un solo intento; **es nula toda dominada que incumpla cualquier regla.** Literal en `plan.json` → `protocoloDominadas.tecnicaExamen`. Solo cuentan las válidas en vídeo.
 
 ---
+
+# FASE 2 (desde el 17-11-2026): gimnasio y correr con Cristina
+
+Pedido por Daniel el 17-11: ahora tiene todas las tardes libres (trabaja de 7:30 a 14:30), irá al gimnasio del Arsenal al salir del trabajo y hará los entrenos de carrera de Cristina con ella para ayudarla. Objetivo: definir, sobre todo el abdomen (dice que concentra la grasa en la parte baja del abdomen y en la zona lumbar; brazos y piernas sin apenas grasa). Dieta: la misma que la de Cristina (PDF del dietista, Tommy Bolaños; no se publica y no se modifica: solo se comenta el momento de las comidas respecto al entreno). En su plan consta «dieta sin gluten»: preguntado si sigue. **Veredicto del 17-11: correr con Cristina le sirve para el objetivo nuevo, no para el rendimiento.** Su suave es de 9:30-10:00 /km; el de Daniel, 7:36-8:26 /km con 137-145 de pulso, y el 10-10, corriendo con ella a 8:26, llevó 137 de media (zona 1): a su ritmo actual irá más bajo. Sus series (200 m a 1:02,5) son trote para él (su 1.000 sale a 39,8 s por 200). Es cardio suave que no estorba al gimnasio, suma gasto y mantiene los pies y los tendones acostumbrados a correr; no mantiene su nivel de 1.000. Además le hace de liebre en las series y en los controles. Así que corre los mismos días que ella (lunes, miércoles y sábado) y el resto, gimnasio. Plan de gimnasio: propuesta en el chat del 17-11 (cuatro días, torso/pierna, abdomen en cada sesión), pendiente de las dudas de las fotos y de si el Arsenal abre los domingos; cuando responda, se mete en `plan.calendario` y en el calendario del Mac. El inventario del gimnasio (53 fotos) está en la memoria privada, no en el repositorio: es una instalación militar y el repositorio es público. No sugerir perder peso sigue vigente: la definición depende de la grasa y la grasa la lleva el dietista; el entreno gana músculo y desarrolla el abdomen.
 
 # CRISTINA (desde el 11-10-2026)
 

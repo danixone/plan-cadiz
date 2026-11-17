@@ -258,31 +258,30 @@
   },
   "marcasActuales": {
     "mil_metros": {
-      "marca": "3:27",
+      "marca": "3:19",
       "banda": [
-        "3:24",
-        "3:30"
+        "3:19",
+        "3:19"
       ],
-      "medidoEl": "2026-10-19",
-      "puntos": 4,
-      "base": "Simulacro en la pista de Arucas con el perfil Pista del reloj: unos 3:27, entre 3:26,3 (logro del reloj, 206,3 s, que empieza cuando la distancia del GPS se mueve) y 3:28,3 (las cinco vueltas de 200, que empezaron a contar al acabar la espera de 20 min, antes de salir). Sin calentamiento y 20 min después del máximo de dominadas.",
-      "margen": "Entre 3:24,2 y 3:30,4 si las dos dudas van a la vez: ±1 s por la salida (vueltas 3:28,3, logro 3:26,3) y ±1 % (unos ±2 s) por la pista de Arucas sin verificar (el modo pista da 400 m por vuelta por construcción). Lo más probable, 3:27. Si la pista fuera más de un 1 % corta, podría pasar de 3:30 y serían 3 puntos. Corregido el 21-10: antes decía «±2 s» y una banda de 3:25 a 3:29, que no sumaba las dos dudas.",
-      "margenALaEliminacion": "Unos 22 s hasta el 3:49.",
-      "supera": "El 3:34 del 19-9 en San Cristóbal (±1-2 %), que a su vez superó la estimación de 3:52."
+      "medidoEl": "2026-11-03",
+      "puntos": 5,
+      "base": "Tiempo oficial del examen del 3-11-2026 en El Puerto de Santa María (dicho por Daniel el 17-11-2026). Sin archivo del reloj.",
+      "margen": "Es el tiempo del tribunal: no hay margen de medición que sumar.",
+      "margenALaEliminacion": "30 s hasta el 3:49.",
+      "supera": "El 3:27 del simulacro del 19-10 (8 s) y el 3:34 del control del 19-9 (15 s)."
     },
     "dominadas": {
-      "marca": "12 autoinformado el 19-10-2026, sin vídeo (la 12.ª dudosa según él: pausa larga en la 11 y pie levantado)",
-      "puntos": 6,
-      "maximoRegistrado": "12, el 19-10-2026 (autoinformado, sin vídeo); antes, 11 el 19-9 y 10 el 24-8",
-      "aviso": "El «máximo confirmado 12» del plan anterior no aparece en ninguna sesión del historial. La estimación de 13-15 se retira: salía de una escalera con 30 s de descanso, que mide densidad y no fuerza máxima.",
+      "marca": "14 el 3-11-2026, en el examen, contadas por el tribunal",
+      "puntos": 7,
+      "maximoRegistrado": "14, el 3-11-2026 en el examen (contadas por el tribunal); antes, 12 el 19-10 (autoinformado), 11 el 19-9 y 10 el 24-8",
+      "aviso": "Contadas por el tribunal con la técnica del BOE: es la primera marca de dominadas que no es autoinformada.",
       "protocolo": "Toda serie máxima se graba en vídeo, con una cámara de tres cuartos a la altura de la barra y la barra a la vista, para contarla y para auditar si el tribunal la daría por buena."
     },
     "circuito": {
-      "marca": "9,4 s",
-      "fecha": "2026-10-01",
-      "puntos": 7,
-      "condiciones": "medido, primer intento como el BOE con el preparador (intentos 9,4 · 9,2 · 9,3; techo 9,2). Horas de sueño de la noche anterior sin dato",
-      "urgente": "El primer intento fue el más lento de los tres. En el examen solo cuenta uno: bajarlo a 9,3 o menos es +1 punto, la décima más barata del plan."
+      "marca": "8,8 s",
+      "fecha": "2026-11-03",
+      "puntos": 9,
+      "condiciones": "oficial, en el examen del 3-11-2026 en El Puerto de Santa María (dicho por Daniel el 17-11-2026)"
     },
     "notaImportante": "CON LAS MARCAS DE HOY (3:34 = 3 puntos, 11 dominadas = 5, circuito 9,4 = 7) la media es 5,00: APTO JUSTO, sin ningún punto de margen. Cualquier punto que se pierda tumba el apto, y las 11 dominadas son autoinformadas. Los puntos más baratos: una dominada más (11→12 = +1), una décima en el primer intento del circuito (9,4→9,3 = +1) o cuatro segundos en el kilómetro (3:34→3:30 = +1)."
   },

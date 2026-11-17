@@ -5,6 +5,16 @@
   },
   "carrera": [
     {
+      "fecha": "2026-11-03",
+      "sesion": "PRUEBA: 1.000 m del examen (El Puerto de Santa María)",
+      "objetivo": "3:24 o menos (5 puntos); suelo 3:30; el 3:49 elimina",
+      "valida": true,
+      "resultado": {
+        "tiempo": "3:19"
+      },
+      "valoracion": "APTO. Tiempo oficial 3:19 (dicho por Daniel el 17-11-2026): 5 puntos, el objetivo del 20-10 cumplido con 5 s de margen. 8 s mejor que el simulacro del 19-10 (unos 3:27) y 15 s mejor que el control del 19-9 (3:34). No hay archivo del reloj: sin parciales."
+    },
+    {
       "fecha": "2026-11-02",
       "sesion": "Día −1: 10 min de trote + 3 progresivos de 100 m (rec. 90 s) · en Jerez, perfil Pista del reloj",
       "objetivo": "día −1: descanso, o 15 min muy suaves (los 3 progresivos de 100 m por mecánica, en 20-23 s, eran de la sesión «−2 días» del domingo)",
@@ -1735,6 +1745,18 @@
   ],
   "dominadas": [
     {
+      "fecha": "2026-11-03",
+      "maximo": 14,
+      "validas": 14,
+      "series": [
+        14
+      ],
+      "total": 14,
+      "lastreKg": 0,
+      "contexto": "PRUEBA del examen, en El Puerto de Santa María, contadas por el tribunal con la técnica del BOE (dicho por Daniel el 17-11-2026).",
+      "valoracion": "14 válidas para el tribunal: 7 puntos. Es su mejor marca y la primera que no es autoinformada: 2 más que las 12 del 19-10 y 4 más que las 10 del 24-8."
+    },
+    {
       "fecha": "2026-10-28",
       "series": [
         4,
@@ -2175,6 +2197,14 @@
     }
   ],
   "circuito": [
+    {
+      "fecha": "2026-11-03",
+      "sesion": "PRUEBA: circuito de agilidad del examen",
+      "intentos": [
+        8.8
+      ],
+      "valoracion": "8,8 s en el examen (dicho por Daniel el 17-11-2026): 9 puntos. 0,6 s mejor que el primer intento del 1-10 (9,4) y 0,3 s mejor que su techo del 22-10 (9,1)."
+    },
     {
       "fecha": "2026-10-27",
       "hecho": false,
@@ -3144,22 +3174,26 @@
     {
       "fecha": "2026-08-21",
       "estimacion": "≈4:00",
-      "motivo": "Primera lectura sobre las series de 1.000, que resultaron no ser válidas"
+      "motivo": "Primera lectura sobre las series de 1.000, que resultaron no ser válidas",
+      "vigente": false
     },
     {
       "fecha": "2026-08-24",
       "estimacion": "3:45-3:55",
-      "motivo": "Corregida por el estado de ayuno y fatiga de aquel día"
+      "motivo": "Corregida por el estado de ayuno y fatiga de aquel día",
+      "vigente": false
     },
     {
       "fecha": "2026-08-26",
       "estimacion": "4:05-4:20",
-      "motivo": "Sobrecorrección: la sesión de umbral se hizo con 3h17 de sueño"
+      "motivo": "Sobrecorrección: la sesión de umbral se hizo con 3h17 de sueño",
+      "vigente": false
     },
     {
       "fecha": "2026-08-31",
       "estimacion": "3:48-3:56",
-      "motivo": "Sobre el 600 de 2:12. Era una sesión que el Paso 2 del propio plan prohíbe usar para reestimar: 4h09 de sueño, 7 h sin comer y tres días tras una doble extracción."
+      "motivo": "Sobre el 600 de 2:12. Era una sesión que el Paso 2 del propio plan prohíbe usar para reestimar: 4h09 de sueño, 7 h sin comer y tres días tras una doble extracción.",
+      "vigente": false
     },
     {
       "fecha": "2026-09-19",
@@ -3179,9 +3213,20 @@
         "3:24",
         "3:30"
       ],
-      "vigente": true,
+      "vigente": false,
       "medido": true,
       "motivo": "MEDIDO en el simulacro, en Arucas con el perfil Pista (distancia sin verificar, ±1 %): unos 3:27, entre 3:26,3 (logro del reloj) y 3:28,3 (vueltas, que empezaron a contar antes de salir). Logro contra logro, 7,8 s mejor que el 19-9: los dos 200 centrales bajan de 46 a 44."
+    },
+    {
+      "fecha": "2026-11-03",
+      "estimacion": "3:19",
+      "banda": [
+        "3:19",
+        "3:19"
+      ],
+      "vigente": true,
+      "medido": true,
+      "motivo": "EXAMEN: tiempo oficial del 1.000 en El Puerto de Santa María (dicho por Daniel el 17-11-2026). 8 s mejor que el simulacro del 19-10 y 15 s mejor que el control del 19-9."
     }
   ],
   "composicion": [
