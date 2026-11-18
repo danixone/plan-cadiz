@@ -551,7 +551,7 @@ def barra_dia(spec, test):
         if mm and seg is None:
             raise SystemExit('ERROR: barra con «la mitad del test» y sin marca de barra en pruebasMujeres')
         n = it.get('n') or 1
-        nota = ((' · la mitad de tu último test (%d s)' % test) + ((' más %s s' % mm.group(1)) if mm.group(1) else '')) if mm else ''
+        nota = ((' · la mitad de tu marca (%d s)' % test) + ((' más %s s' % mm.group(1)) if mm.group(1) else '')) if mm else ''
         if n == 1 and not it.get('reps'):
             paso(it['t'] + ((' · %d min' % (seg // 60)) if seg and seg >= 60 and seg % 60 == 0 else (' · %d s' % seg) if seg else ''), it.get('d', ''), seg,
                  ej={'Hombros': 'barra', 'Calentamiento': 'circuito'}.get(it['t']), gid=gid, desc=desc)
@@ -571,9 +571,9 @@ def barra_dia(spec, test):
             continue
         N.append({'v': '%d × %s' % (n, ('%d s' % seg) if seg else it['reps']), 'l': it['t'].lower()})
     if test:
-        N.append({'v': '%d s' % test, 'l': 'tu último test'})
+        N.append({'v': '%d s' % test, 'l': 'tu marca'})      # 18-11: la marca (pruebasMujeres), no siempre el último test (el del 17-11 no se compara)
     if any(it.get('t', '').startswith('Test:') for it in spec):
-        N = [{'v': 'a tope', 'l': 'una suspensión'}, {'v': '%d s' % test, 'l': 'el último test'}] if test else [{'v': 'a tope', 'l': 'una suspensión'}]
+        N = [{'v': 'a tope', 'l': 'una suspensión'}, {'v': '%d s' % test, 'l': 'tu marca'}] if test else [{'v': 'a tope', 'l': 'una suspensión'}]
     return P, N[:3]
 
 

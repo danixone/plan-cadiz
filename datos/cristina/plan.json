@@ -353,8 +353,8 @@
     {
       "id": "barra",
       "titulo": "Barra",
-      "texto": "Dos sesiones por semana, martes y jueves: la A (fuerza) y la B (la del examen). Un test cada cuatro semanas, el martes de la semana de descarga. Nunca al fallo salvo en el test. Todas las series con la técnica del BOE: agarre supino (palmas hacia ti), barbilla claramente por encima de la barra sin echar la cabeza atrás, cuerpo recto sin doblar la cadera y quieto. Si la serie se rompe (balanceo, cadera, barbilla a la barra), ahí se acaba. Codo u hombro con dolor de 3 o más: ese día sin barra. Progresión: en la B, 2 s más por semana si las cinco series salen limpias; tras cada test, la serie vuelve a la mitad del test nuevo. En la A, una bajada más por serie cuando todas salgan limpias; con 5 × 4 limpias, cada bajada pasa de 5 a 6 s. Línea de los tests (meta de 21-22 puntos): 4 s más en cada uno, de 41 s a 85 s el 24-8 (45, 49, 53, 57, 61, 65, 69, 73, 77, 81 y 85). Si un test sube menos de 4 s sobre el anterior, desde esa semana hay una tercera sesión corta, el sábado después de correr: la B con 3 series en lugar de 5 (10 min), siempre con codo y hombro por debajo de 3.",
-      "origen": "Creada el 26-10-2026, a petición de Daniel, con su marca medida: 41 s. No hay ensayos que comparen formas de entrenar esta prueba: el método sale de principios generales (la fuerza isométrica sube sobre todo en el ángulo que se entrena, y cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso y más aguantas). Los números (la mitad del test, +2 s por semana) son criterio de entrenador. La línea de los tests y la tercera sesión condicionada se añadieron el 28-10-2026, con la meta de 21-22 puntos: de 41 s a 78 s hay 6 puntos, más que en ninguna otra prueba. El +4 s por test es lo que hace falta para llegar, no una previsión."
+      "texto": "Dos sesiones por semana, martes y jueves: la A (fuerza) y la B (la del examen). Un test cada cuatro semanas, el martes de la semana de descarga. Nunca al fallo salvo en el test. Sin guantes ni magnesio: el BOE no los deja. Los tests, siempre en la misma barra, y se apunta cuál: un test en otra barra no se compara con el anterior. La de casa cuando la haya; hasta entonces, mejor la de Arucas que la de San Cristóbal. Todas las series con la técnica del BOE: agarre supino (palmas hacia ti), barbilla claramente por encima de la barra sin echar la cabeza atrás, cuerpo recto sin doblar la cadera y quieto. Si la serie se rompe (balanceo, pies por delante de la barra, barbilla a la barra), ahí se acaba. La primera serie de la B, grabada de lado. Codo u hombro con dolor de 3 o más: ese día sin barra. Progresión: en la B, 2 s más por semana si las cinco series salen limpias; tras cada test, la serie vuelve a la mitad del test nuevo. En la A, una bajada más por serie cuando todas salgan limpias; con 5 × 4 limpias, cada bajada pasa de 5 a 6 s. Línea de los tests (meta de 21-22 puntos): 4 s más en cada uno, de 41 s a 85 s el 24-8 (45, 49, 53, 57, 61, 65, 69, 73, 77, 81 y 85). Si un test sube menos de 4 s sobre el anterior, desde esa semana hay una tercera sesión corta, el sábado después de correr: la B con 3 series en lugar de 5 (10 min), siempre con codo y hombro por debajo de 3.",
+      "origen": "Creada el 26-10-2026, a petición de Daniel, con su marca medida: 41 s. No hay ensayos que comparen formas de entrenar esta prueba: el método sale de principios generales (la fuerza isométrica sube sobre todo en el ángulo que se entrena, y cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso y más aguantas). Los números (la mitad del test, +2 s por semana) son criterio de entrenador. La línea de los tests y la tercera sesión condicionada se añadieron el 28-10-2026, con la meta de 21-22 puntos: de 41 s a 78 s hay 6 puntos, más que en ninguna otra prueba. El +4 s por test es lo que hace falta para llegar, no una previsión. El 18-11, tras el test del 17-11 (unos 30,6 s en la barra de San Cristóbal, con la cadera doblada y tres semanas sin barra del plan): tests siempre en la misma barra, sin guantes, la serie se acaba si los pies se adelantan y la primera de la B se graba de lado. Ese test no se compara con el de 41 s; la B vuelve a la mitad de lo que aguantó (15 s)."
     },
     {
       "id": "cuarto-dia",
@@ -908,7 +908,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de la mitad del test del martes, 2 min entre series. Nada más.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 3 series de 15 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; 15 s es la mitad de lo que aguantaste el martes (unos 30 s en otra barra; tu marca sigue en 41). La primera, grabada de lado con el móvil apoyado. Si los pies se van hacia delante, esa serie se acaba. Nada más.",
           "barra": [
             {
               "t": "Hombros",
@@ -917,7 +917,7 @@
             {
               "t": "Postura del examen",
               "n": 3,
-              "seg": "mitad",
+              "seg": 15,
               "rec": 120
             }
           ],
@@ -1060,7 +1060,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de 15 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1069,7 +1069,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad",
+              "seg": 15,
               "rec": 120
             },
             {
@@ -1219,7 +1219,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 2 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de 17 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1228,7 +1228,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad+2",
+              "seg": 17,
               "rec": 120
             },
             {
@@ -1378,7 +1378,7 @@
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de la mitad de tu último test más 4 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de 19 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; si la semana pasada alguna se rompió, repites el tiempo de la semana pasada · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
           "barra": [
             {
               "t": "Hombros",
@@ -1387,7 +1387,7 @@
             {
               "t": "Postura del examen",
               "n": 5,
-              "seg": "mitad+4",
+              "seg": 19,
               "rec": 120
             },
             {
@@ -1458,7 +1458,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -2133,7 +2133,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -2837,7 +2837,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -3541,7 +3541,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -4244,7 +4244,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -4947,7 +4947,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -5649,7 +5649,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -6351,7 +6351,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -7052,7 +7052,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -7753,7 +7753,7 @@
           "dia": "Mar",
           "tipo": "otro",
           "titulo": "Test de barra",
-          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado. Ese día, nada más de barra.",
+          "objetivo": "Test de barra: hombros 5 min y una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo (ver la guía). Ese día, nada más de barra.",
           "barra": [
             {
               "t": "Hombros",
@@ -8838,7 +8838,7 @@
     },
     {
       "id": "barra-casa",
-      "texto": "Barra en casa: comprar una barra de puerta para hacer la barra de los martes y jueves sin salir (12-20 min). Que deje colgarse con las palmas hacia ti y que aguante en el marco. Hasta entonces, en un parque o un gimnasio. El test del martes 17 necesita barra, alguien que cronometre y vídeo de lado.",
+      "texto": "Barra en casa, lo primero de la barra desde el 18-11: una barra de puerta para hacer la A y la B sin salir (12-20 min) y los tests siempre en la misma barra. Que deje colgarse con las palmas hacia ti, que aguante en el marco, redonda y de grosor normal (sin espuma gruesa) y lo bastante alta para colgarte con el cuerpo recto y la barbilla por encima sin tocar el suelo con los pies. Si es de madera, mejor (la del examen de Daniel en Cádiz lo era), pero no hace falta. Hasta tenerla, mejor la barra de Arucas que la de San Cristóbal (gruesa y resbaladiza).",
       "desde": "2026-11-07"
     }
   ],
@@ -9503,7 +9503,7 @@
       "nombre": "Barra: suspensión con los brazos flexionados",
       "icono": "fuerza",
       "enUnaFrase": "Aguantar colgada con la barbilla por encima de la barra el mayor tiempo posible: se entrena con fuerza (sesión A) y con series en la misma postura (sesión B).",
-      "paraQue": "Es la segunda prueba. Hoy, 41 s: 2 puntos (de 41 a 45). Cada punto más son 5-9 s (46, 52, 57, 63, 70, 78, 86 y 95; 35 o menos elimina). Cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso, y el tiempo que aguantas suele crecer más deprisa que la fuerza: la relación entre los dos no es una línea recta.",
+      "paraQue": "Es la segunda prueba. Tu marca, 41 s (26-10): 2 puntos (de 41 a 45). El test del 17-11, unos 30,6 s en otra barra y con la cadera doblada, no se compara. Cada punto más son 5-9 s (46, 52, 57, 63, 70, 78, 86 y 95; 35 o menos elimina). Cuanta más fuerza máxima tienes, menor parte de ella te cuesta sostener tu peso, y el tiempo que aguantas suele crecer más deprisa que la fuerza: la relación entre los dos no es una línea recta.",
       "esfuerzo": "la serie de la B, un 7-8 de 10; el test, a tope",
       "antes": [
         "Hombros, 5 min: círculos de brazos, 10 aperturas con goma si hay, y 2 × 8 colgada con los brazos estirados subiendo y bajando solo los hombros.",
@@ -9513,13 +9513,13 @@
         "La postura del examen (BOE): agarre supino, con las palmas hacia ti; brazos flexionados y la barbilla por encima de la barra; cuerpo recto, perpendicular al suelo y quieto.",
         "Se acaba cuando la barbilla baja a la altura de la barra, por debajo o la toca.",
         "Sesión A, fuerza (martes): bajadas lentas: subes con un salto o un cajón hasta tener la barbilla por encima, aguantas 2 s y bajas en 5 s hasta los brazos estirados. Después, colgada con los codos en ángulo recto y remo invertido.",
-        "Sesión B, la del examen (jueves): cinco series en la postura del examen de la mitad de tu último test, con 2 min entre series. Al final, 2 × 30 s colgada con los brazos estirados para el agarre.",
-        "Test (martes de la semana de descarga): una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado."
+        "Sesión B, la del examen (jueves): cinco series en la postura del examen, con 2 min entre series; empiezan en la mitad de tu último test y suben 2 s por semana si salen limpias. Al final, 2 × 30 s colgada con los brazos estirados para el agarre.",
+        "Test (martes de la semana de descarga): una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona, siempre en la misma barra y grabada de lado con el móvil fijo."
       ],
       "sensacion": "En la B, la última serie cuesta pero sale limpia. Si tiemblas al final del test, es normal; si la barbilla toca la barra, se acabó.",
       "errores": [
         "Echar la cabeza atrás para que la barbilla «pase»: el BOE lo prohíbe.",
-        "Doblar la cadera o subir las rodillas: el cuerpo va recto.",
+        "Doblar la cadera o subir las rodillas: el cuerpo va recto (el 17-11, los pies iban por delante de la barra todo el test: con el BOE, nulo).",
         "Balancearse para aguantar.",
         "Mover una mano o soltarla: es nulo.",
         "Hacer series hasta no poder más todos los días: solo en el test."
@@ -9744,7 +9744,7 @@
           "valor": 41,
           "fecha": "2026-10-26",
           "fiab": "medido",
-          "fuente": "comunicado por Daniel el 26-10-2026: «ese sí está medido bien»; la fecha exacta de la medición no la tengo. Antes, unos 51 s (11-10), sin saber si se cronometró con las reglas del BOE."
+          "fuente": "comunicado por Daniel el 26-10-2026: «ese sí está medido bien». Según ella (18-11): fue en el Martín Freire (Ciudad Deportiva Gran Canaria), en una sesión de 3 rondas que le mandó el entrenador de allí, no en un test de un solo intento; la fecha exacta no consta. Antes, 52 s en un test en el parque de Telde, antes del verano de 2026, cronometrado por un entrenador (dicho por ella el 18-11; aquí constaba como unos 51 s el 11-10). Ninguno de los dos tiene vídeo ni postura registrados. El test del 17-11 dio unos 30,6 s en la barra de San Cristóbal y con la cadera doblada: no se compara con este (otra barra). El test del 15-12 lo sustituye."
         }
       },
       {
@@ -9945,7 +9945,7 @@
     "postura": {
       "como": "La del examen: palmas hacia ti, barbilla por encima de la barra, cuerpo recto y quieto. Aguantas los segundos que marca.",
       "descanso": "{rec} entre series.",
-      "truco": "Mira al frente, sin echar la cabeza atrás. Si te balanceas o la barbilla toca la barra, esa serie se acaba."
+      "truco": "Mira al frente, sin echar la cabeza atrás. Piernas juntas y estiradas, glúteos y abdomen apretados y los pies debajo de la barra: si se van hacia delante, te balanceas o la barbilla toca la barra, esa serie se acaba."
     },
     "colgadaEstirados": {
       "como": "Colgada con los brazos estirados, quieta, los segundos que marca. Es para el agarre.",
@@ -9953,9 +9953,9 @@
       "truco": "Agarra fuerte con toda la mano y no dejes los hombros muertos: bájalos un poco, lejos de las orejas."
     },
     "testBarra": {
-      "como": "Una sola suspensión a tope con las reglas del BOE, cronometrada por otra persona y grabada de lado.",
+      "como": "Una sola suspensión a tope con las reglas del BOE, siempre en la misma barra. Móvil fijo de lado, a la altura de la barra y a 3-4 m, con el cuerpo entero, grabando desde antes de subirte. Quien cronometra dice «ya» cuando estás quieta y recta, y para el cronómetro cuando la barbilla llega a la altura de la barra, no cuando sueltas.",
       "descanso": "No hay: es una sola, y ese día nada más de barra.",
-      "truco": "Se acaba cuando la barbilla llega a la altura de la barra o la toca. No eches la cabeza atrás: el BOE lo prohíbe."
+      "truco": "Se acaba cuando la barbilla llega a la altura de la barra o la toca. No eches la cabeza atrás y lleva los pies debajo de la barra todo el rato: con la cadera doblada, el BOE lo da por nulo."
     },
     "calCircuito": {
       "como": "6 min de trote suave, movilidad de tobillo y cadera, 3 rectas de 30 m y 2 pasadas del recorrido al trote.",

@@ -99,6 +99,19 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-17",
+      "sesion": "Test de barra",
+      "hecho": true,
+      "resumen": "Unos 30,6 s contados como el BOE (30,4-31,2; el cronómetro marcó 31,6) · barra de San Cristóbal · cadera doblada · no se compara con los 41 s del 26-10",
+      "resultado": {
+        "duracion": "Una suspensión. Ya estaba colgada en posición al empezar el vídeo; la salida, a los 3,4 s (clic del cronómetro), y la barbilla a la altura de la barra, a los 33,9 s. El cronómetro se paró 1,05 s tarde: 31,6 s (Daniel dijo 32).",
+        "lugar": "Barra del parque de San Cristóbal: según Daniel, más gruesa, resbaladiza y pellizca, y da inseguridad; a él le pasaba lo mismo. La barra del examen de Daniel en Cádiz (3-11) era de madera, de grosor normal y agarraba bien (dicho por él el 18-11).",
+        "nota": "Acabó por la barbilla, no por el agarre: las manos siguieron agarradas más de 1 s después, sin resbalar ni recolocarse en lo que se ve. Agarre supino. Cadera doblada unos 15-35°, con los pies por delante de la barra en toda la vista de lado (7-13 s): con el BOE literal (regla 1), el intento sería nulo. Barbilla por encima, pero justa: apoyada sobre los dedos. Sin balanceo ni cabeza atrás visibles. Grabado con el móvil en la mano, de lado solo 6 s. Antes, los 5 min de hombros (dicho por ella el 18-11).",
+        "fuente": "Vídeo IMG_0240 del iPhone (17-11, 21:47), analizado fotograma a fotograma y por el audio; los 32 s, dichos por Daniel el 18-11."
+      },
+      "valoracion": "No se compara con los 41 s del 26-10: otra barra (los 41 fueron en el Martín Freire, en una sesión de 3 rondas; antes del verano, 52 s en el parque de Telde) y de esas marcas no hay vídeo ni postura. La marca sigue en 41 hasta el test del 15-12, que la sustituye dé lo que dé si se hace con el cuerpo recto, en la barra de siempre y grabado de lado con el móvil fijo. Pero el número pesa: 30,6 s son 0 puntos y eliminan (hace falta 36), y lo que la paró fue la fuerza de los brazos doblados, no la barra. Desde el 26-10 no se había hecho ninguna sesión de barra del plan. La B vuelve a la mitad de este test, 15 s, y sube 2 s por semana si las series salen limpias. La tercera sesión del sábado no se activa: este test no se compara; se mira con el del 15-12."
+    },
+    {
       "fecha": "2026-11-16",
       "sesion": "6 × 200 m a ritmo K, rec. 200 m andando",
       "hecho": true,
