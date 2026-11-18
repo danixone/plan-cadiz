@@ -64,7 +64,7 @@ Acepta `.fit`, `.tcx`, `.zip` y el `.csv` de sueño, y admite varios a la vez. L
 
 Si falta la dependencia: `pip install fitdecode --break-system-packages`
 
-El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`, en el repositorio desde el 17-11): devuelve el informe y la validez, y el registro y la decisión de cambiar el plan (Pasos 3 y 4) se quedan en la conversación principal. **Cada vez que termine `analista-fit`, se le pasa su informe al subagente `entrenador`**, que propone si cambia el entrenamiento, instrucciones para mejorar y un mensaje para Daniel (de ánimo o duro, según los datos). La decisión sigue siendo de la conversación principal, y el mensaje del entrenador se le transmite tal cual.
+El análisis se puede delegar en el subagente `analista-fit` (`.claude/agents/`, en el repositorio desde el 17-11): devuelve el informe y la validez, y el registro y la decisión de cambiar el plan (Pasos 3 y 4) se quedan en la conversación principal. Desde el 18-11 analiza también los archivos de Cristina (sus FIT, sus exportaciones de Salud y `pista_arucas.py`) y el gimnasio de la fase 2 de Daniel. **Cuando `analista-fit` termina con una sesión de entrenamiento o un control, su informe se le pasa al subagente `entrenador`** (con un CSV de sueño, VFC o VO2max, no), que propone si cambia el entrenamiento, instrucciones para mejorar y un mensaje para quien entrenó (de ánimo o duro, según los datos). **Desde el 17-11 el `entrenador` valora a Daniel (FASE 2) y a Cristina, cada uno con su plan, su historial y sus reglas**; el encargo dice de quién es la sesión (los archivos de `archivos-garmin/cristina/` son de ella). La decisión sigue siendo de la conversación principal, y el mensaje del entrenador se le transmite tal cual.
 
 **Si te pasa un TCX, avísale.** Recorta la cadencia y las dinámicas de carrera. El original se saca en Garmin Connect: actividad → engranaje → **Exportar original**.
 
@@ -107,6 +107,8 @@ El historial vive **solo** en `historial.json`. No copies sesiones, sueño, lect
 - Cambie una circunstancia suya: horario, material, disponibilidad.
 
 Si cambias algo, **arrastra el cambio hasta el día de la prueba**, no solo a la sesión siguiente.
+
+**Un cambio grande de plan** (una versión nueva del de Cristina, la revisión del gimnasio de Daniel al acabar las 8 semanas, el plan final cuando salga la fecha de 2027) pasa antes de publicarse por el subagente `revisor-plan` (desde el 18-11): una pasada de eficacia y otra de riesgo, seguidas, contra las reglas del propio plan y lo hecho de verdad. Sustituye a las revisiones con muchos agentes en paralelo. Un día suelto no lo necesita.
 
 **Patrones que se cuentan en cada sesión** (tres seguidas = regla, no consejo):
 - **Salida rápida en rodajes:** 7:08-7:10 los cinco primeros minutos el 12, 16 y 23. Regla desde el 23-9: primeros 10 min con techo 140. Cumplida el 3-10 y el 10-10 (media 131,7, 8 s por encima de 140).
@@ -157,7 +159,9 @@ Errores típicos:
 
 **Cuando Daniel escriba «editor web»**, su petición se pasa literal al subagente `editor-web`, que hace ese cambio concreto en la web, la instala y comprueba que no rompe nada. No toca `datos/` ni publica: lo que necesite de `plan.json` o `historial.json` lo devuelve como propuesta.
 
-**Subagente `comprobador-funcional-web`**: revisa que la web funcione y cumpla los principios de `web/doc/especificacion.md` (§0, §2, §3.3, §3.4, §4.6, §4.7). Se llama cuando Daniel escribe «comprobador funcional de web», después de instalar la web con una sesión que analizó `analista-fit` y después de cada auditoría de `auditor-web`, diciéndole qué ha cambiado. Solo revisa: los fallos que devuelve los arregla la conversación principal o el `editor-web`.
+**Subagente `comprobador-funcional-web`**: revisa que la web funcione y cumpla los principios de `web/doc/especificacion.md` (§0, §2, §3.3, §3.4, §4.6, §4.7). Se llama cuando Daniel escribe «comprobador funcional de web», cuando cambia el código de `web/` y después de cada auditoría de `auditor-web`, diciéndole qué ha cambiado. **No se llama cuando solo cambian datos** (una sesión registrada): eso lo cubren `instalar.sh`, el validador y `comprobar_docs.sh` (desde el 18-11). Solo revisa: los fallos que devuelve los arregla la conversación principal o el `editor-web`.
+
+**Reparto de los agentes de la web (desde el 18-11):** `auditor-web` comprueba datos, reglas, scripts y privacidad; `comprobador-funcional-web` solo mira la pantalla y no repite los pasos del auditor; `editor-web` cambia y prueba. Los tres trabajan con las dos páginas, la de Daniel y la de Cristina, y comprueban que haya Node antes de construir. El auditor y el comprobador corren con `model: sonnet` (siguen listas fijas); los demás, con el modelo de la conversación. **Ningún agente lleva `memory`:** lo que se aprenda va a este archivo o a los datos, para que no haya dos sitios con lo mismo.
 
 Comprobaciones más completas cuando cambia algo gordo (o delegadas en el subagente `auditor-web`, que las ejecuta y devuelve los fallos sin arreglarlos):
 
