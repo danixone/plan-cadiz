@@ -24,6 +24,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -32,6 +33,11 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 IMPL = os.path.dirname(AQUI)
 sys.path.insert(0, AQUI)
 import construir_web as cw  # noqa: E402
+
+# 18-11-2026: sin Node en el PATH fallan la comprobación de sintaxis y la de pictogramas. Node está en ~/.local/node/bin
+# en los dos usuarios del Mac; lo mismo hace node_al_path() en web/build.py.
+if shutil.which('node') is None and os.access(os.path.expanduser('~/.local/node/bin/node'), os.X_OK):
+    os.environ['PATH'] = os.path.expanduser('~/.local/node/bin') + os.pathsep + os.environ.get('PATH', '')
 
 CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 LIMITE_GZIP = 270 * 1024

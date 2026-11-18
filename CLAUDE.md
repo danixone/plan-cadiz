@@ -182,6 +182,7 @@ El primero tarda unos 10 s. El segundo, unos 5 min. Sale con 0 aunque falle algo
 - **Láminas técnicas:** si cambian los textos de técnica de `plan.json` (`ejercicios[].tecnica`, `protocoloDominadas.tecnicaExamen`), hay que regenerar los dibujos con `python3 web/herramientas/ilus/exportar.py` (se para si una marca del dibujo ya no casa con su texto) y después `sh web/instalar.sh`, que NO comprueba las láminas por su cuenta.
 - **Dieta: retirada de la web el 5-10-2026 a petición suya, para ahorrar espacio** (23,9 KB con gzip). La copia y los pasos para reintegrarla están en `web/archivo/dieta/README.md`; la referencia de paridad es `docs/anterior/index.html`, que por eso no se borra y donde la dieta sigue visible (/plan-cadiz/anterior/). Desde el mismo día el constructor minifica también el HTML (`--sin-minificar` para depurar).
 - **Tamaño:** límite de 270 KB con gzip desde el 23-10 (decisión suya; antes 240, y 214,5 al quitar Dieta el 5-10).
+- **Node hace falta para no pasarse del límite:** acorta los nombres del JS (263,6 KB; sin él, 272,5 y la construcción se para, y la página de Cristina cambia entera). Está en `~/.local/node/bin` en los dos usuarios del Mac. Desde el 18-11 `web/build.py` (y con él `web/cristina/construir.py`), `validar_web.py` y `qa.py` lo buscan también ahí cuando la sesión arrancó sin él en el PATH: no hace falta ningún `export`.
 - `herramientas/calendario_web.py` está retirado en `herramientas/antiguos/`: no sirve para la web nueva.
 
 ## Paso 6 · Publicar

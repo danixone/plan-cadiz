@@ -20,6 +20,11 @@ REDISENO = os.path.dirname(IMPL)
 RAIZ_PROYECTO = os.environ.get('PLAN_RAIZ', REDISENO)  # la carpeta que contiene web/
 CHROME = os.environ.get('CHROME', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
 OUT = os.path.join(IMPL, 'out', 'index.html')
+
+# 18-11-2026: sin Node en el PATH falla la comprobación de pictogramas. Node está en ~/.local/node/bin en los dos
+# usuarios del Mac; lo mismo hace node_al_path() en web/build.py.
+if shutil.which('node') is None and os.access(os.path.expanduser('~/.local/node/bin/node'), os.X_OK):
+    os.environ['PATH'] = os.path.expanduser('~/.local/node/bin') + os.pathsep + os.environ.get('PATH', '')
 CAPTURAS = os.path.join(IMPL, 'capturas')
 
 ANCHOS = [320, 360, 375, 390, 768, 1280]

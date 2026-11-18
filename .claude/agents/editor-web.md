@@ -31,7 +31,7 @@ Se genera desde los datos: `sh web/instalar.sh` construye, valida y copia a `doc
 
 ## Comprobación, después de cada cambio
 
-0. Antes de construir, `command -v node`. Sin Node las dos páginas salen sin acortar los nombres del JS y la de Cristina cambia entera y crece unos 10 KB: si no está, no construyas y dilo.
+0. Antes de construir, que haya Node: `command -v node || ls ~/.local/node/bin/node`. Desde el 18-11 `build.py`, `validar_web.py` y `qa.py` lo buscan también en `~/.local/node/bin` si no está en el PATH. Sin Node en ningún sitio, las dos páginas salen sin acortar los nombres del JS: la de Daniel pasa del límite (272,5 KB) y la de Cristina cambia entera. Si no está, no construyas y dilo.
 1. `sh web/instalar.sh` hasta que termine con «ERRORES (0)». Si los AVISOS cambian, léelos con `python3 web/herramientas/validar_web.py | sed -n '/^AVISOS/,$p'`.
 2. `python3 web/herramientas/validar_web.py --render`. Desde la fase 2 (17-11) fallan a propósito las frases clave del inventario del examen («5,67 · apto», «Tres días de carrera, uno de fuerza y uno de circuito»…): esos fallos no son tuyos. Cualquier otro, sí.
 3. Si el cambio toca el diseño o varias pestañas: `python3 web/qa/qa.py --rapido --paralelo 6`. Sale con 0 aunque falle algo, así que lee la tabla entera. Lo esperado está en el Paso 5 del CLAUDE.md (todo PASA salvo «1», «8» y «10» MANUAL o PENDIENTE; «9_primera_pantalla» pasa desde el 27-10); cualquier otro fallo es tuyo y lo arreglas.

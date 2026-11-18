@@ -31,6 +31,19 @@ VISTAS = ['hoy', 'plan', 'marcas', 'tecnica']  # Dieta archivada el 5-10-2026 en
 LIMITE_GZIP = 270 * 1024  # 190 → 240 el 29-9; 240 → 270 el 23-10, decisión de Daniel: cubre hasta Cádiz con los campos técnicos del registro
 
 
+def node_al_path():
+    """18-11-2026: una sesión que arrancó sin Node en el PATH construía sin acortar el JS, y la página de Daniel se paraba
+    en 272,5 KB, por encima del límite. Node está en ~/.local/node/bin en los dos usuarios del Mac: si no está en el PATH,
+    se añade esa carpeta al PATH de este proceso y de lo que lance. Lo mismo hacen validar_web.py y qa/qa.py."""
+    if shutil.which('node') is None:
+        d = os.path.expanduser('~/.local/node/bin')
+        if os.access(os.path.join(d, 'node'), os.X_OK):
+            os.environ['PATH'] = d + os.pathsep + os.environ.get('PATH', '')
+
+
+node_al_path()  # también al cargarlo web/cristina/construir.py
+
+
 def leer(p):
     with open(p, encoding='utf-8') as f:
         return f.read()

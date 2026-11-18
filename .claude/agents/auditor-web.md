@@ -24,7 +24,7 @@ Si para comprobar algo haría falta reconstruir lo publicado, dilo y para.
 
 ## Qué ejecutas, en este orden
 
-0. `command -v node`. Sin Node, las construcciones de prueba salen sin acortar el JS y no coinciden con lo publicado: si falta, dilo antes de dar por malo un `cmp`.
+0. Que haya Node: `command -v node || ls ~/.local/node/bin/node` (desde el 18-11 los scripts lo buscan también en esa carpeta si no está en el PATH). Sin Node en ningún sitio, las construcciones de prueba salen sin acortar el JS, la de Daniel pasa del límite y ninguna coincide con lo publicado: si falta, dilo antes de dar por malo un `cmp`.
 1. `sh web/comprobar_docs.sh`: si `docs/index.html` no coincide con los datos, ese es el primer fallo.
 2. `python3 web/herramientas/validar_web.py`. Lee los ERRORES y también los AVISOS: días pasados sin registro, noches sin CSV, «si …» sin condición, días con series sin `principal`, avisos caducados.
 3. `python3 web/herramientas/validar_web.py --render`. Desde la fase 2 (17-11) fallan a propósito las frases clave del inventario del examen («5,67 · apto», «Tres días de carrera, uno de fuerza y uno de circuito»…): no son hallazgos. Cualquier otro fallo, sí.
