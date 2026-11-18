@@ -5,6 +5,12 @@
   },
   "carrera": [
     {
+      "fecha": "2026-11-18",
+      "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+      "hecho": false,
+      "motivo": "Ni él ni Cristina pudieron entrenar hoy (dicho el 18-11). No se recupera (regla «Correr con Cristina»: si ella no corre, él tampoco hace falta)."
+    },
+    {
       "fecha": "2026-11-03",
       "sesion": "PRUEBA: 1.000 m del examen (El Puerto de Santa María)",
       "objetivo": "3:24 o menos (5 puntos); suelo 3:30; el 3:49 elimina",

@@ -99,6 +99,13 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-18",
+      "sesion": "20 min suave + 3 rectas",
+      "hecho": false,
+      "motivo": "Ni ella ni Daniel pudieron entrenar hoy (dicho el 18-11). No se recupera (regla «Si no te da tiempo»): era la sesión de menos prioridad de una semana de descarga, y el viernes es descanso.",
+      "resumen": "No corrió"
+    },
+    {
       "fecha": "2026-11-17",
       "sesion": "Test de barra",
       "hecho": true,
