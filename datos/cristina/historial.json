@@ -99,6 +99,13 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-19",
+      "sesion": "Barra B (la del examen)",
+      "hecho": false,
+      "motivo": "No hizo nada ese día (dicho por ella el 20-11). No se recupera (regla «Si no te da tiempo»): el jueves 26 la B ya va a 15 s, el mismo tiempo que tocaba, así que no cambia nada; los 17 s del 3-12 siguen dependiendo de que el 26 salgan limpias las cinco series.",
+      "resumen": "No hecha"
+    },
+    {
       "fecha": "2026-11-18",
       "sesion": "20 min suave + 3 rectas",
       "hecho": false,
