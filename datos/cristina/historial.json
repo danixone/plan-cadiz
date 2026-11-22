@@ -99,6 +99,39 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-22",
+      "sesion": "20 min suave (el del sábado 21, hecho el domingo 22)",
+      "hecho": true,
+      "resumen": "20 min seguidos · 9:27 /km · 2,14 km · pulso 142 de media · con el Garmin de Daniel",
+      "resultado": {
+        "duracion": "20:12 de reloj (de 12:25 a 12:45), sin pausas. Grabado con el perfil «Caminar» del reloj, no con el de carrera",
+        "km": 2.14,
+        "ritmo": "9:27/km",
+        "bloques5min": {
+          "ritmos": [
+            "9:27",
+            "9:28",
+            "9:27",
+            "9:26"
+          ],
+          "fc": [
+            133,
+            142,
+            142,
+            147
+          ]
+        },
+        "fcMedia": 142,
+        "fcMax": 151,
+        "fcPrimeros10min": 140,
+        "porEncimaDe150": "2 % (21 s a 151, en tres picos: min 6, min 18 y el final)",
+        "deriva": "Clásica: minutos 3-8 a 9:21 /km con 143 y últimos 8 min a 9:31 con 142 (+9 s/km). Mitades desde el minuto 15: solo hay 5 min: +1,5 % (Pa:HR), demasiado corto para fiarse. Mitades desde el minuto 3: +2,7 %. Ritmo plano (9:26-9:28 cada 5 min) y el pulso sube de 142 a 147 en el último bloque.",
+        "nota": "No fue en Arucas: recorrido de ida, llano. Franjas: <130 1:03, 130-140 3:18, 140-145 7:34, 145-155 6:53. Por encima de 145, el 39 % del tiempo. El pulso pasa de 113 en el minuto 1 a 146 en el minuto 3.",
+        "fuente": "FIT del Garmin Forerunner 265 de Daniel (perfil de Daniel), pulso de muñeca"
+      },
+      "valoracion": "Los 20 min del sábado 21, hechos el domingo 22, víspera del control: muy regulares (9:26-9:28 cada 5 min), con 142 de pulso de media. Primera vez por encima del techo de 150 en un suave: 21 s en tres picos, con 146 ya en el minuto 3; con el Garmin de Daniel en el perfil «Caminar» y a mediodía, no se compara con sus rodajes del Apple Watch. Hablaba con frases enteras sin problema (dicho por ella). Es un cambio de día dentro del fin de semana (no hizo CrossFit), no una recuperación, y no cambia el control del lunes."
+    },
+    {
       "fecha": "2026-11-19",
       "sesion": "Barra B (la del examen)",
       "hecho": false,
