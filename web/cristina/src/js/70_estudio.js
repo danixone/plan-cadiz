@@ -16,7 +16,7 @@
   /* tarea → [título, detalle, minutos, icono] */
   function desc(t) {
     var c = t[0].replace('+', '');
-    if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ' (' + t[2] + '/' + t[3] + ')' : ''), tema(t[1]) + '. Mejor a 1,5x.', 90, 'video'];
+    if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '. A 1,5x.', t[4] || 90, 'video'];
     if (c === 'e') return ['Estudio activo del tema ' + t[1], 'Esquema propio, ley literal y lo que más cae.', t[2], 'editar'];
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
     if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', (t[1] && t[1].length ? 'Temas ' + t[1].join(', ') : 'Las materias donde más puntos se van') + '.', t[2], 'temporizador'];
