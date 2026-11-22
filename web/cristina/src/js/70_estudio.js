@@ -16,7 +16,8 @@
   /* tarea → [título, detalle, minutos, icono] */
   function desc(t) {
     var c = t[0].replace('+', '');
-    if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '. A 1,5x.', t[4] || 90, 'video'];
+    if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '.', t[4] || 90, 'video'];
+    if (c === 'l') return ['Estudia el tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '. Sin clase: con tu material.', t[4] || 50, 'editar'];
     if (c === 'e') return ['Estudio activo del tema ' + t[1], 'Esquema propio, ley literal y lo que más cae.', t[2], 'editar'];
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
     if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', (t[1] && t[1].length ? 'Temas ' + t[1].join(', ') : 'Las materias donde más puntos se van') + '.', t[2], 'temporizador'];
@@ -99,7 +100,7 @@
     Object.keys(E.dias || {}).forEach(function (f) {
       if (f > hoy) return;
       var H = hechas(f);
-      tareas(f).forEach(function (t, i) { if (t[0] === 'c' && t[2] === t[3] && H.indexOf(i) >= 0) vistos++; });
+      tareas(f).forEach(function (t, i) { if ((t[0] === 'c' || t[0] === 'l') && t[2] === t[3] && H.indexOf(i) >= 0) vistos++; });
     });
     var sl = (E.sem || []).filter(function (s) { return s[0] > lunesDe(hoy) && s[2].length; }).slice(0, 6);
     var fases = (E.fases || []).map(function (x) {
