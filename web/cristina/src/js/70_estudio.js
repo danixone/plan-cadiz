@@ -11,19 +11,21 @@
   var E = PC.D.estudio, esc = PC.esc, LETRA = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
   var NIV = { f: 'fácil', m: 'medio', a: 'alto' }, FASE = { '1': '1.ª vuelta', '2': '2.ª vuelta', f: 'Simulacros' };
   var UI = { sel: null };
+  var DIAS = Object.keys(E.dias || {}).sort(), PRIMERO = DIAS[0] || E.desde, ULTIMO = E.hasta;
 
   function tema(n) { return (E.temas || {})[n] || ''; }
   /* tarea → [título, detalle, minutos, icono] */
   function desc(t) {
     var c = t[0].replace('+', '');
     if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '.', t[4] || 90, 'video'];
+    if (c === 'l' && t[5]) return ['Tema ' + t[1] + ' con el resumen: ' + t[5], 'Lee, subraya y haz tu esquema. Lo que no entiendas, míralo en ese trozo de la clase.', t[4] || 50, 'editar'];
     if (c === 'l') return ['Estudia el tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '. Sin clase: con tu material.', t[4] || 50, 'editar'];
     if (c === 'e') return ['Estudio activo del tema ' + t[1], 'Esquema propio, ley literal y lo que más cae.', t[2], 'editar'];
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
     if (c === 'r') return ['Reto de ' + t[2] + ' preguntas', (t[1] && t[1].length ? 'Temas ' + t[1].join(', ') : 'Las materias donde más puntos se van') + '.', t[2], 'temporizador'];
     if (c === 'h') return [t[1], t[2] || 'Apuntado con tu parte diario.', t[3] || 0, 'check'];
     if (c === 'o') return [t[1], t[2] || '', t[3] || 0, 'lista'];
-    if (c === 'p') return ['Psicotécnicos' + (t[1] ? ', semana ' + t[1] : ''), t[2] === 'v' ? 'Los 3 vídeos de la semana.' : 'Ómnibus cronometrado.', t[2] === 'v' ? 90 : 45, 'reloj'];
+    if (c === 'p') return ['Psicotécnicos' + (t[1] ? ', semana ' + t[1] : ''), t[2] === 'v' ? 'Los 3 vídeos de la semana.' : 'Ómnibus cronometrado.', t[2] === 'v' ? 50 : 60, 'reloj'];
     if (c === 'v') return ['Segunda vuelta del tema ' + t[1], tema(t[1]) + '. Resumen, ley literal y esquema.', 90, 'lista'];
     if (c === 's') return ['Simulacro de 100 preguntas', '50 minutos, con ? en las dudas.', 60, 'examen'];
     if (c === 'k') return ['Colchón', 'Lo que no salió esta semana. Si no queda nada, libre.', 60, 'descanso'];
@@ -63,7 +65,7 @@
         ' aria-label="' + esc(lab) + '"><span aria-hidden="true">' + LETRA[i] + '</span><b aria-hidden="true">' + (+f.slice(8)) + '</b>' +
         PC.icon(ok ? 'check' : (m.length ? 'examen' : 'descanso')) + '</button>';
     }).join('');
-    root.querySelector('[data-es="ant"]').disabled = l <= lunesDe(E.desde);
+    root.querySelector('[data-es="ant"]').disabled = l <= lunesDe(PRIMERO);
     root.querySelector('[data-es="sig"]').disabled = l >= lunesDe(E.hasta);
   }
 
@@ -79,7 +81,9 @@
       tit = cuando + ': ' + desc(pri)[0].replace(/^./, function (x) { return x.toLowerCase(); });
       sub = minTxt(mins) + ' de mínimo' + (T.length > 1 ? ' · ' + T.length + ' tareas' : '');
     }
-    var h = ['<div class="card-h"><div class="ic">' + PC.icon('lista') + '</div><div class="t"><h2>' + esc(tit) + '</h2><small>' + esc(sub) + '</small></div></div>'];
+    var h = ['<div class="es-dcab"><button type="button" class="icon-btn es-ant" data-es="dant" aria-label="Día anterior"' + (f <= PRIMERO ? ' disabled' : '') + '>' + PC.icon('flecha') + '</button>' +
+      '<div class="card-h"><div class="t"><h2>' + esc(tit) + '</h2><small>' + esc(sub) + '</small></div></div>' +
+      '<button type="button" class="icon-btn" data-es="dsig" aria-label="Día siguiente"' + (f >= ULTIMO ? ' disabled' : '') + '>' + PC.icon('flecha') + '</button></div>'];
     if (T.length) {
       var orden = T.map(function (t, i) { return i; }).sort(function (a, b) { return (extra(T[a]) - extra(T[b])) || (a - b); });
       h.push('<ul class="es-l">' + orden.map(function (i) {
@@ -131,11 +135,27 @@
       '\nSemana: ' + c.h + ' de ' + c.m + ' tareas mínimas.';
   }
 
+  /* lo mínimo sin marcar de los 14 días anteriores a hoy; cada fila lleva a su día */
+  function pintarPendiente(root, hoy) {
+    var lista = [], f = PC.sumarDias(hoy, -14);
+    if (f < PRIMERO) f = PRIMERO;
+    for (; f < hoy; f = PC.sumarDias(f, 1)) {
+      var T = tareas(f), H = hechas(f);
+      minimas(f).forEach(function (i) { if (!hecho(f, i, H)) lista.push([f, desc(T[i])[0]]); });
+    }
+    var host = root.querySelector('#es-pend');
+    host.innerHTML = '<div class="card-h"><div class="ic">' + PC.icon(lista.length ? 'alerta' : 'check') + '</div><div class="t"><h2>' +
+      (lista.length ? 'Te quedan ' + lista.length + ' tarea' + (lista.length > 1 ? 's' : '') + ' de días anteriores' : 'Nada pendiente de días anteriores') +
+      '</h2><small>' + (lista.length ? 'Toca una para ir a su día y marcarla si ya la hiciste.' : 'Últimos 14 días, según lo que has marcado.') + '</small></div></div>' +
+      (lista.length ? '<ul class="es-pl">' + lista.map(function (x) {
+        return '<li><button type="button" data-ir="' + x[0] + '"><span class="num">' + esc(PC.fmt.dia(x[0])) + '</span>' + esc(x[1]) + '</button></li>'; }).join('') + '</ul>' : '');
+  }
+
   function pintar(root) {
     var hoy = PC.hoyIso();
-    if (!UI.sel || UI.sel < E.desde || UI.sel > E.hasta) UI.sel = hoy < E.desde ? E.desde : (hoy > E.hasta ? E.hasta : hoy);
+    if (!UI.sel || UI.sel < PRIMERO || UI.sel > ULTIMO) UI.sel = hoy < PRIMERO ? PRIMERO : (hoy > ULTIMO ? ULTIMO : hoy);
     root.querySelector('#vt-estudio').textContent = PC.fmt.dia(hoy, 'larga') + (faseDe(hoy) ? ' · ' + faseDe(hoy) : '');
-    pintarSemana(root, hoy); pintarDia(root, hoy); pintarCamino(root, hoy);
+    pintarSemana(root, hoy); pintarDia(root, hoy); pintarPendiente(root, hoy); pintarCamino(root, hoy);
   }
 
   function init(root) {
@@ -146,6 +166,7 @@
       '<button type="button" class="icon-btn" data-es="sig" aria-label="Semana siguiente">' + PC.icon('flecha') + '</button></div>' +
       '<div class="week" id="es-week" role="group" aria-label="Días de la semana"></div></section>' +
       '<section class="card es-dia" id="es-dia" aria-live="polite"></section>' +
+      '<section class="card es-pend" id="es-pend"></section>' +
       '<section class="card es-camino" id="es-camino"></section>';
     raiz.addEventListener('click', function (e) {
       try {
@@ -153,6 +174,9 @@
         if ((b = e.target.closest('#es-week button'))) { UI.sel = b.getAttribute('data-f'); }
         else if ((b = e.target.closest('[data-es="ant"]'))) { UI.sel = PC.sumarDias(lunesDe(UI.sel), -7); }
         else if ((b = e.target.closest('[data-es="sig"]'))) { UI.sel = PC.sumarDias(lunesDe(UI.sel), 7); }
+        else if ((b = e.target.closest('[data-es="dant"]'))) { UI.sel = PC.sumarDias(UI.sel, -1); }
+        else if ((b = e.target.closest('[data-es="dsig"]'))) { UI.sel = PC.sumarDias(UI.sel, 1); }
+        else if ((b = e.target.closest('[data-ir]'))) { UI.sel = b.getAttribute('data-ir'); try { root.querySelector('#es-dia').scrollIntoView({ block: 'start', behavior: PC.reduceMotion() ? 'auto' : 'smooth' }); } catch (x) {} }
         else if ((b = e.target.closest('.es-t'))) { marcar(UI.sel, +b.getAttribute('data-i')); }
         else if ((b = e.target.closest('[data-es="copiar"]'))) { PC.copiar(parte(UI.sel)); return; }
         else return;
