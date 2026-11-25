@@ -11,6 +11,12 @@
       "motivo": "Cristina no hizo el control. No se recupera (regla «Correr con Cristina»)."
     },
     {
+      "fecha": "2026-11-21",
+      "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+      "hecho": true,
+      "valoracion": "Corrió con Cristina su rodaje suave (dicho por ella el 25-11). Sin archivo suyo. Ella dijo el 22-11 que el rodaje del sábado lo hizo el domingo 22: si fue ese día, se cambia la fecha."
+    },
+    {
       "fecha": "2026-11-18",
       "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
       "hecho": false,
@@ -1756,6 +1762,12 @@
     }
   ],
   "dominadas": [
+    {
+      "fecha": "2026-11-24",
+      "sesion": "Torso A, pecho y espalda · gimnasio, con abdomen",
+      "hecho": false,
+      "motivo": "No lo hizo (dicho por Cristina el 25-11). Primera sesión del plan de gimnasio: la semana 1 de adaptación empieza con la siguiente (pierna A, el jueves 26)."
+    },
     {
       "fecha": "2026-11-03",
       "maximo": 14,
