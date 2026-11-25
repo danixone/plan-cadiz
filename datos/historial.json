@@ -5,6 +5,12 @@
   },
   "carrera": [
     {
+      "fecha": "2026-11-23",
+      "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+      "hecho": false,
+      "motivo": "Cristina no hizo el control. No se recupera (regla «Correr con Cristina»)."
+    },
+    {
       "fecha": "2026-11-18",
       "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
       "hecho": false,

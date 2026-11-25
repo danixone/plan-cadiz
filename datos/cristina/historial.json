@@ -99,6 +99,20 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-24",
+      "sesion": "Barra A (fuerza)",
+      "hecho": false,
+      "motivo": "No hizo nada ese día (dicho por ella el 25-11). No se recupera.",
+      "resumen": "No hecha"
+    },
+    {
+      "fecha": "2026-11-23",
+      "sesion": "Control de 1.000 m (2.º)",
+      "hecho": false,
+      "motivo": "No lo corrió (dicho por ella el 25-11). No se recupera: K sigue en 5:13 y el próximo control es el lunes 21-12 en Arucas.",
+      "resumen": "No corrió"
+    },
+    {
       "fecha": "2026-11-22",
       "sesion": "20 min suave (el del sábado 21, hecho el domingo 22)",
       "hecho": true,

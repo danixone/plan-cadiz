@@ -949,16 +949,16 @@
         {
           "fecha": "2026-11-21",
           "dia": "Sáb",
-          "tipo": "suave",
-          "titulo": "20 min suave",
-          "min": 20,
-          "detalle": "Suave de principio a fin, más corta que la larga de la semana pasada: el lunes, el control en Arucas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "tipo": "otro",
+          "titulo": "Descanso: el rodaje pasó al domingo 22"
         },
         {
           "fecha": "2026-11-22",
           "dia": "Dom",
-          "tipo": "otro",
-          "titulo": "CrossFit sin piernas ni saltos (mañana, el control)"
+          "tipo": "suave",
+          "titulo": "20 min suave",
+          "min": 20,
+          "detalle": "El del sábado 21, hecho hoy en lugar del CrossFit (dicho por ti el 22-11). Suave de principio a fin: mañana, el control en Arucas. Al acabar, 3 × 15 elevaciones de talón a una pierna."
         }
       ]
     },
@@ -1050,17 +1050,16 @@
         {
           "fecha": "2026-11-25",
           "dia": "Mié",
-          "tipo": "suave",
-          "titulo": "28 min suave + 6 cuestas de 15 s",
-          "min": 28,
-          "detalle": "Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando. Las cuestas cargan gemelos y Aquiles: solo si no te molestan; si no, 6 rectas en llano. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 18-11 de 32 a 28 min: desde el 26-10 has corrido menos de lo escrito, y el miércoles va por debajo de la larga.)"
+          "tipo": "otro",
+          "titulo": "CrossFit (en lugar de los 28 min suave + 6 cuestas)",
+          "objetivo": "Clase de CrossFit a las 20:00 en lugar del rodaje (decisión tuya del 25-11: te quedan clases por gastar): 6 rondas de 2 min de trabajo y 1 de descanso con comba, toes to bar y power snatch. Cuenta como entreno, no como el rodaje. Esta semana es una excepción a la regla «CrossFit, el domingo». Si los saltos de comba te cargan el gemelo o el talón, cambia la comba por otra cosa. Si te falta el aire más de lo normal para el esfuerzo, te mareas, tienes náuseas o tiemblas, paras ahí (regla «Energía»)."
         },
         {
           "fecha": "2026-11-26",
           "dia": "Jue",
           "tipo": "otro",
           "titulo": "Barra B (la del examen)",
-          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de 15 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos.",
+          "objetivo": "Barra B, la del examen (15 min): hombros 5 min · 5 series de 15 s en la postura del examen (agarre supino, barbilla por encima de la barra, cuerpo recto con los pies debajo de la barra y quieto), 2 min entre series; si las cinco salen limpias, la semana siguiente 2 s más · 2 × 30 s colgada con los brazos estirados, 1 min entre las dos. En las barras del box, en el open (dicho por ti el 25-11): no es un test, así que otra barra vale. Después de los toes to bar y los power snatch del miércoles, el agarre irá cansado: si una serie se rompe, esa es la última, y la semana siguiente repites 15 s.",
           "barra": [
             {
               "t": "Hombros",
@@ -1103,7 +1102,8 @@
           "fecha": "2026-11-27",
           "dia": "Vie",
           "tipo": "otro",
-          "titulo": "Descanso"
+          "titulo": "CrossFit (clase, en lugar del descanso)",
+          "objetivo": "Clase de CrossFit (decisión tuya del 25-11: te quedan clases por gastar). Mañana corres: si la clase trae mucho salto o piernas pesadas, escala los saltos y baja el peso. Si no te encuentras bien, descanso, como estaba. Esta semana es una excepción a la regla «CrossFit, el domingo» (CrossFit el miércoles, el viernes y el domingo, para gastar las clases que te quedan); la semana que viene vuelve a ser solo el domingo."
         },
         {
           "fecha": "2026-11-28",
@@ -1210,9 +1210,9 @@
           "fecha": "2026-12-02",
           "dia": "Mié",
           "tipo": "suave",
-          "titulo": "35 min suave + 8 cuestas de 15 s",
-          "min": 35,
-          "detalle": "Suave y, al final, 8 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando. Las cuestas cargan gemelos y Aquiles: solo si no te molestan; si no, 6 rectas en llano. Al acabar, 3 × 15 elevaciones de talón a una pierna."
+          "titulo": "28 min suave + 6 cuestas de 15 s",
+          "min": 28,
+          "detalle": "Suave y, al final, 6 cuestas: en una subida del 5 al 8 %, 15 s subiendo fuerte sin llegar a tope; bajas andando. Las cuestas cargan gemelos y Aquiles: solo si no te molestan; si no, 6 rectas en llano. Al acabar, 3 × 15 elevaciones de talón a una pierna. (Bajado el 25-11 de 35 min + 8 cuestas a 28 + 6: el miércoles 25 no se corrió, y la semana siguiente repite los números antes de subir, regla «Si no te da tiempo». Serán tus primeras cuestas.)"
         },
         {
           "fecha": "2026-12-03",
@@ -8828,7 +8828,7 @@
     },
     {
       "id": "control-21-11",
-      "texto": "Control de 1.000 m el lunes 23-11 en Arucas (los sábados no abre), con calentamiento y sin CrossFit de piernas el domingo: el primero en condiciones. Con él y el del 26-10 se fija K.",
+      "texto": "Control de 1.000 m: el del lunes 23-11 no se hizo (dicho por ella el 25-11) y no se recupera. El siguiente, el lunes 21-12 en Arucas, con calentamiento y sin CrossFit de piernas el domingo: será el primero en condiciones. Hasta entonces, K sigue en 5:13.",
       "desde": "2026-10-26"
     },
     {
