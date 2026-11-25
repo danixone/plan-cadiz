@@ -18,7 +18,9 @@
   function desc(t) {
     var c = t[0].replace('+', '');
     if (c === 'c') return ['Clase del tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '.', t[4] || 90, 'video'];
-    if (c === 'l' && t[5]) return ['Tema ' + t[1] + ' con el resumen: ' + t[5], 'Lee, subraya y haz tu esquema. Lo que no entiendas, míralo en ese trozo de la clase.', t[4] || 50, 'editar'];
+    if (c === 'l' && t[5]) return /clase/.test(t[5])
+      ? ['Tema ' + t[1] + ': ' + t[5], 'Mira solo los trozos de la clase que no entendiste con el resumen.', t[4] || 50, 'video']
+      : ['Tema ' + t[1] + ': ' + t[5], 'Lee el resumen, subraya y haz tu esquema. Lo que no entiendas, apúntalo para verlo en la clase.', t[4] || 50, 'editar'];
     if (c === 'l') return ['Estudia el tema ' + t[1] + (t[3] > 1 ? ', parte ' + t[2] + ' de ' + t[3] : ''), tema(t[1]) + '. Sin clase: con tu material.', t[4] || 50, 'editar'];
     if (c === 'e') return ['Estudio activo del tema ' + t[1], 'Esquema propio, ley literal y lo que más cae.', t[2], 'editar'];
     if (c === 't') return ['Test ' + NIV[t[2]] + ' del tema ' + t[1], 'ACRAPOL, 50 preguntas. Marca con ? las que dudes.', 45, 'examen'];
