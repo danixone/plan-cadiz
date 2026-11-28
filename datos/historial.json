@@ -5,16 +5,43 @@
   },
   "carrera": [
     {
+      "fecha": "2026-11-28",
+      "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+      "hecho": false,
+      "motivo": "Cristina fue a CrossFit en lugar de la larga (dicho por ella el 28-11). No se recupera (regla «Correr con Cristina»)."
+    },
+    {
+      "fecha": "2026-11-25",
+      "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
+      "hecho": false,
+      "motivo": "Cristina no entrenó ese día (dicho por ella el 28-11). No se recupera (regla «Correr con Cristina»)."
+    },
+    {
       "fecha": "2026-11-23",
       "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
       "hecho": false,
       "motivo": "Cristina no hizo el control. No se recupera (regla «Correr con Cristina»)."
     },
     {
+      "fecha": "2026-11-22",
+      "sesion": "Correr con Cristina: su rodaje del sábado 21, hecho el domingo 22",
+      "hecho": true,
+      "resumen": "20 min con Cristina a su ritmo (9:27 /km en el Garmin de ella) · pulso 107 de media con el Apple Watch de ella",
+      "resultado": {
+        "duracion": "20 min (de 12:25 a 12:45)",
+        "km": 2.18,
+        "fcMedia": 107,
+        "fcMax": 121,
+        "fuente": "Apple Watch de Cristina en la muñeca de Daniel (dicho por ella el 28-11: ella llevaba el Garmin), entreno «Caminar» de su exportación de Salud. Pulso de muñeca",
+        "nota": "Los 2,18 km son del Apple Watch (que llevaba él); el Garmin de ella dio 2,14 km en el mismo rato."
+      },
+      "valoracion": "Corrió con Cristina su rodaje suave, que pasó del sábado al domingo (aclarado por ella el 28-11; el 25-11 se había apuntado el 21). A 9:27 /km fue para él cardio muy suave: 107 de media y 121 de máximo, por debajo de su zona 1 (124). No cambia nada del gimnasio."
+    },
+    {
       "fecha": "2026-11-21",
       "sesion": "Correr con Cristina: su sesión de hoy, a su ritmo",
-      "hecho": true,
-      "valoracion": "Corrió con Cristina su rodaje suave (dicho por ella el 25-11). Sin archivo suyo. Ella dijo el 22-11 que el rodaje del sábado lo hizo el domingo 22: si fue ese día, se cambia la fecha."
+      "hecho": false,
+      "motivo": "El rodaje de Cristina pasó al domingo 22 y lo corrió con ella ese día (aclarado por ella el 28-11)."
     },
     {
       "fecha": "2026-11-18",

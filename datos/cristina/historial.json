@@ -99,6 +99,79 @@
   ],
   "carrera": [
     {
+      "fecha": "2026-11-28",
+      "sesion": "CrossFit (en lugar de los 32 min suave)",
+      "hecho": true,
+      "motivo": "Fue a CrossFit en lugar de la larga, «para compensar» que el viernes no fue (dicho por ella el 28-11). No sustituye a la larga: no se recupera, y la del 5-12 repite los 32 min.",
+      "resumen": "CrossFit en lugar de la larga: dos bloques duros de unos 20 y 16 min, pulso hasta 188",
+      "resultado": {
+        "duracion": "159:53 de reloj (de 10:15 a 12:55), sin pausas; la clase se ve en el pulso hasta las 11:47 y la última hora va con pulso de reposo (el entreno seguramente siguió abierto, supuesto)",
+        "bloques5min": {
+          "fc": [
+            126,
+            125,
+            127,
+            121,
+            131,
+            138,
+            133,
+            133,
+            170,
+            168,
+            168,
+            176,
+            144,
+            173,
+            174,
+            174,
+            142,
+            132,
+            121,
+            113,
+            109,
+            107,
+            105,
+            101,
+            96,
+            98,
+            106,
+            108,
+            110,
+            109,
+            100,
+            107
+          ]
+        },
+        "fcMedia": 129,
+        "fcMax": 188,
+        "nota": "Fases por el pulso: 10:15-10:54 calentamiento y técnica (117-145); 10:54-11:15 primer bloque duro (media de unos 170); 5 min de pausa; 11:20-11:36 segundo bloque (media de unos 173), con 188 a las 11:10, 11:26 y 11:30. 13,8 min entre 164 y 175 y 15,3 entre 176 y 188. La media de 129 está rebajada por la última hora.",
+        "fuente": "Exportación de Salud del Apple Watch, pulso de muñeca"
+      },
+      "valoracion": "Clase larga y a tope: el 188 iguala la máxima de su 1.000 y no la sube. Cuenta como entreno, no como la larga, que se cae por segunda vez (14-11 y 28-11). Con dos CrossFit en tres días, el domingo 29 pasa a descanso y la semana del 30-11 se recorta: 4 × 400 en lugar de 6, sin barra A, sin el suave del miércoles, B a 15 s y larga de 32; el 9-12 va a 20 min + 6 cuestas y la larga del 12-12 a 36 min."
+    },
+    {
+      "fecha": "2026-11-27",
+      "sesion": "CrossFit (clase extra de esta semana)",
+      "hecho": false,
+      "motivo": "No fue (dicho por ella el 28-11). Era una clase extra de esta semana: el día queda como descanso.",
+      "resumen": "No fue"
+    },
+    {
+      "fecha": "2026-11-26",
+      "sesion": "CrossFit (en lugar de la barra B)",
+      "hecho": true,
+      "motivo": "Fue a la clase de CrossFit en lugar de la barra B (dicho por ella el 28-11), sin reloj: endurance de 10 rondas con dos ventanas; en la A, en pareja, 20 cal y 6 burpees; en la B, 200 m corriendo y una ida y vuelta de empuje de trineo. No hay datos de pulso.",
+      "resumen": "CrossFit en lugar de la barra B: 10 rondas de 20 cal + 6 burpees y 200 m + trineo, sin reloj",
+      "valoracion": "Cuenta como entreno, no como la barra B: la B de 15 s sigue sin hacerse (19 y 26-11), y la del 3-12 la repite. Los 10 × 200 m van dentro de una clase y no enseñan el ritmo K."
+    },
+    {
+      "fecha": "2026-11-25",
+      "sesion": "CrossFit (clase extra de esta semana, en lugar de los 28 min suave + 6 cuestas)",
+      "hecho": false,
+      "motivo": "No hizo nada ese día (dicho por ella el 28-11). No se recupera (regla «Si no te da tiempo»).",
+      "resumen": "No hecho"
+    },
+    {
       "fecha": "2026-11-24",
       "sesion": "Barra A (fuerza)",
       "hecho": false,
@@ -141,7 +214,7 @@
         "porEncimaDe150": "2 % (21 s a 151, en tres picos: min 6, min 18 y el final)",
         "deriva": "Clásica: minutos 3-8 a 9:21 /km con 143 y últimos 8 min a 9:31 con 142 (+9 s/km). Mitades desde el minuto 15: solo hay 5 min: +1,5 % (Pa:HR), demasiado corto para fiarse. Mitades desde el minuto 3: +2,7 %. Ritmo plano (9:26-9:28 cada 5 min) y el pulso sube de 142 a 147 en el último bloque.",
         "nota": "No fue en Arucas: recorrido de ida, llano. Franjas: <130 1:03, 130-140 3:18, 140-145 7:34, 145-155 6:53. Por encima de 145, el 39 % del tiempo. El pulso pasa de 113 en el minuto 1 a 146 en el minuto 3.",
-        "fuente": "FIT del Garmin Forerunner 265 de Daniel (perfil de Daniel), pulso de muñeca"
+        "fuente": "FIT del Garmin Forerunner 265 de Daniel (perfil de Daniel), pulso de muñeca. Ella llevaba el Garmin y Daniel su Apple Watch (dicho por ella el 28-11): el pulso de este registro es suyo"
       },
       "valoracion": "Los 20 min del sábado 21, hechos el domingo 22, víspera del control: muy regulares (9:26-9:28 cada 5 min), con 142 de pulso de media. Primera vez por encima del techo de 150 en un suave: 21 s en tres picos, con 146 ya en el minuto 3; con el Garmin de Daniel en el perfil «Caminar» y a mediodía, no se compara con sus rodajes del Apple Watch. Hablaba con frases enteras sin problema (dicho por ella). Es un cambio de día dentro del fin de semana (no hizo CrossFit), no una recuperación, y no cambia el control del lunes."
     },
